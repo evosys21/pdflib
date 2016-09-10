@@ -1748,6 +1748,10 @@ class Pdf_Table
     public function setTableConfig( $aConfig )
     {
         $this->aConfiguration[ 'TABLE' ] = array_merge( $this->aConfiguration[ 'TABLE' ], $aConfig );
+
+        // update the Margin X
+        // @see https://tracker.interpid.eu/issues/896
+        $this->markMarginX();
     }
 
     /**
