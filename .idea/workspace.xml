@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-multicell-1-overview.pdf" afterPath="$PROJECT_DIR$/tests/data/example-multicell-1-overview.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-multicell-2-overview-page-break.pdf" afterPath="$PROJECT_DIR$/tests/data/example-multicell-2-overview-page-break.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-multicell-3-line-breaking.pdf" afterPath="$PROJECT_DIR$/tests/data/example-multicell-3-line-breaking.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-multicell-4-page-break.pdf" afterPath="$PROJECT_DIR$/tests/data/example-multicell-4-page-break.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-table-1-overview.pdf" afterPath="$PROJECT_DIR$/tests/data/example-table-1-overview.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-table-2-overview.pdf" afterPath="$PROJECT_DIR$/tests/data/example-table-2-overview.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-table-3-detailed.pdf" afterPath="$PROJECT_DIR$/tests/data/example-table-3-detailed.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-table-4-override.pdf" afterPath="$PROJECT_DIR$/tests/data/example-table-4-override.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/table-code-example-alignments.pdf" afterPath="$PROJECT_DIR$/tests/data/table-code-example-alignments.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/table-code-example-transparent.pdf" afterPath="$PROJECT_DIR$/tests/data/table-code-example-transparent.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/table-code-example1.pdf" afterPath="$PROJECT_DIR$/tests/data/table-code-example1.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/table-code-example2.pdf" afterPath="$PROJECT_DIR$/tests/data/table-code-example2.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/table-code-example3.pdf" afterPath="$PROJECT_DIR$/tests/data/table-code-example3.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/testDisablePageBreak.pdf" afterPath="$PROJECT_DIR$/tests/data/testDisablePageBreak.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/testTableModel1.pdf" afterPath="$PROJECT_DIR$/tests/data/testTableModel1.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/testTableModel2.pdf" afterPath="$PROJECT_DIR$/tests/data/testTableModel2.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/testTableModel3.pdf" afterPath="$PROJECT_DIR$/tests/data/testTableModel3.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/pdf.php" afterPath="$PROJECT_DIR$/classes/pdf.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example-multicell-1-overview.php" afterPath="$PROJECT_DIR$/example-multicell-1-overview.php" />
     </list>
     <ignored path="fpdf.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +23,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pdf.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pdf.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/pdf.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="788">
@@ -93,6 +75,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="example-multicell-1-overview.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/example-multicell-1-overview.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="533">
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="code-example1.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/table/code-example1.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -115,7 +107,6 @@
         <option value="$PROJECT_DIR$/version_multicell" />
         <option value="$PROJECT_DIR$/version_table" />
         <option value="$PROJECT_DIR$/mypdf.php" />
-        <option value="$PROJECT_DIR$/example-multicell-1-overview.php" />
         <option value="$PROJECT_DIR$/pdfFactory.php" />
         <option value="$PROJECT_DIR$/fpdf.php" />
         <option value="$PROJECT_DIR$/ss.php" />
@@ -135,6 +126,7 @@
         <option value="$PROJECT_DIR$/examples/table/code-example1.php" />
         <option value="$PROJECT_DIR$/classes/Pdf/Table.php" />
         <option value="$PROJECT_DIR$/classes/pdf.php" />
+        <option value="$PROJECT_DIR$/example-multicell-1-overview.php" />
       </list>
     </option>
   </component>
@@ -248,7 +240,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.phpunit" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/bootstrap-gen.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tcpdf" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
   </component>
@@ -348,7 +340,7 @@
       <option name="presentableId" value="Default" />
       <updated>1473501640764</updated>
       <workItem from="1473501641973" duration="6647000" />
-      <workItem from="1473510232803" duration="8950000" />
+      <workItem from="1473510232803" duration="10159000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
@@ -403,7 +395,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15597000" />
+    <option name="totallyTimeSpent" value="16806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1035" extended-state="6" />
@@ -616,14 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example-multicell-1-overview.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/Pdf/Table/Cell/Abstract.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -785,6 +769,14 @@
           <folding>
             <element signature="e#6#977#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example-multicell-1-overview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

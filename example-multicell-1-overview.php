@@ -48,7 +48,7 @@ $sTxt1 = file_get_contents( __DIR__ . '/content/createdby.txt' );
 $sTxt2 = file_get_contents( __DIR__ . '/content/multicell.txt' );
 
 //create an advanced multicell
-#$oMulticell->multiCell( 150, 5, $sTxt1, 1, "L", 1, 5, 5, 5, 5 );
+$oMulticell->multiCell( 150, 5, $sTxt1, 1, "L", 1, 5, 5, 5, 5 );
 $oPdf->Ln( 10 ); //new line
 
 
