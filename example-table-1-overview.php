@@ -28,8 +28,8 @@ $factory->initPdfObject( $oPdf );
  * @example : $oTable = PdfTable::getInstance($oPdf);
  */
 $oMulticell = new PdfMulticell( $oPdf );
-$oMulticell->SetStyle( "p", $oPdf->getDefaultFontName(), "", 7, "130,0,30" );
-$oMulticell->SetStyle( "b", $oPdf->getDefaultFontName(), "B", 7, "130,0,30" );
+$oMulticell->setStyle( "p", $oPdf->getDefaultFontName(), "", 7, "130,0,30" );
+$oMulticell->setStyle( "b", $oPdf->getDefaultFontName(), "B", 7, "130,0,30" );
 
 //simple table
 $oMulticell->multiCell( 0, 5, "<p size='10' > ~~~Simple table:</p>" );

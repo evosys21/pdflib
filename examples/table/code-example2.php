@@ -4,8 +4,8 @@ require( 'settings.php' );
 
 $oTable = new Pdf_Table( $oPdf );
 
-$oTable->SetStyle( "p", $oPdf->getDefaultFontName(), "", 7, "130,0,30" );
-$oTable->SetStyle( "b", $oPdf->getDefaultFontName(), "B", 7, "130,0,30" );
+$oTable->setStyle( "p", $oPdf->getDefaultFontName(), "", 7, "130,0,30" );
+$oTable->setStyle( "b", $oPdf->getDefaultFontName(), "B", 7, "130,0,30" );
 $oTable->setStyle( "bi", $oPdf->getDefaultFontName(), "BI", 7, "0,0,120" );
 
 $nColumns = 3;

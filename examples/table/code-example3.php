@@ -9,8 +9,8 @@ if ( !isset( $oPdf ) )
 
 $oTable = new PdfTable( $oPdf );
 
-$oTable->SetStyle( "p", $oPdf->getDefaultFontName(), "", 6, "130,0,30" );
-$oTable->SetStyle( "b", $oPdf->getDefaultFontName(), "B", 6, "130,0,30" );
+$oTable->setStyle( "p", $oPdf->getDefaultFontName(), "", 6, "130,0,30" );
+$oTable->setStyle( "b", $oPdf->getDefaultFontName(), "B", 6, "130,0,30" );
 $oTable->setStyle( "bi", $oPdf->getDefaultFontName(), "BI", 6, "0,0,120" );
 $oTable->setStyle( "s1", $oPdf->getDefaultFontName(), "I", 6, "0,0,120" );
 $oTable->setStyle( "s2", $oPdf->getDefaultFontName(), "", 7, "110,50,120" );

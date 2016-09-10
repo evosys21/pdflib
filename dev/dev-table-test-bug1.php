@@ -10,7 +10,6 @@ $oPdf = new myPdfTable( 'P', 'mm', array(
     100, 100
 ) );
 
-$oPdf->Open();
 $oPdf->SetAutoPageBreak( true, 20 );
 $oPdf->SetMargins( 20, 20, 20 );
 $oPdf->AddPage();

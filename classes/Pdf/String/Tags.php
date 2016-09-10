@@ -47,7 +47,6 @@ class Pdf_String_Tags
      * Constructor
      *
      * @param int|number $p_tagmax number - the number of characters allowed in a tag
-     * @return \Pdf_String_Tags
      */
     public function __construct( $p_tagmax = 10 )
     {
@@ -138,7 +137,7 @@ class Pdf_String_Tags
     /**
      * Expands the paramteres that are kept in Href field
      *
-     * @param $pResult struct
+     * @param $pResult
      * @return string
      */
     protected function expand_parameters( $pResult )

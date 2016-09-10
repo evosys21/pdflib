@@ -36,15 +36,15 @@ $oTable->setStyle( "p", $oPdf->getDefaultFontName(), "", 10, "130,0,30" );
 $oTable->setStyle( "b", $oPdf->getDefaultFontName(), "", 9, "80,80,260" );
 $oTable->setStyle( "h1", $oPdf->getDefaultFontName(), "", 10, "0,151,200" );
 $oTable->setStyle( "bi", $oPdf->getDefaultFontName(), "BI", 12, "0,0,120" );
-$oTable->SetStyle( "size", $oPdf->getDefaultFontName(), "BI", 13, "0,0,120" );
+$oTable->setStyle( "size", $oPdf->getDefaultFontName(), "BI", 13, "0,0,120" );
 
 //default text color
 $oPdf->SetTextColor( 118, 0, 3 );
 
 //create an advanced multicell    
 $oMulticell = PdfMulticell::getInstance( $oPdf );
-$oMulticell->SetStyle( "s1", $oPdf->getDefaultFontName(), "", 8, "118,0,3" );
-$oMulticell->SetStyle( "s2", $oPdf->getDefaultFontName(), "", 6, "0,49,159" );
+$oMulticell->setStyle( "s1", $oPdf->getDefaultFontName(), "", 8, "118,0,3" );
+$oMulticell->setStyle( "s2", $oPdf->getDefaultFontName(), "", 6, "0,49,159" );
 $oMulticell->multiCell( 100, 4, "<s1>Example - Override Default Configuration Values</s1>", 0 );
 
 $nColumns = 3;

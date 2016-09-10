@@ -21,6 +21,18 @@
 
 require_once( dirname( __FILE__ ) . '/Abstract.php' );
 
+/**
+ * @property string TEXT
+  * @property mixed|null TEXT_ALIGN
+ * @property mixed|null TEXT_STRLINES
+ * @property mixed|null LINE_SIZE
+ * @property mixed|null TEXT_SIZE
+ * @property mixed|null TEXT_TYPE
+ * @property mixed|null TEXT_FONT
+ * @property mixed|null TEXT_COLOR
+ * @property float|int V_OFFSET
+ * @property int nLines
+ */
 class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
 {
 
@@ -77,6 +89,7 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
      * Horizontal values: LRC
      *
      * @see Pdf_Table_Cell_Abstract::setAlign()
+     * @param string $alignment
      */
     public function setAlign( $alignment )
     {
@@ -118,6 +131,7 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
      * (non-PHPdoc)
      *
      * @see Pdf_Table_Cell_Abstract::setCellDrawWidth()
+     * @param $value
      */
     public function setCellDrawWidth( $value )
     {
@@ -338,18 +352,13 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
         //Set the font, font type and size
         $this->oPdf->SetFont( $this->TEXT_FONT, $this->TEXT_TYPE, $this->TEXT_SIZE );
 
-        //DebugBreak();
-
-
         //print the text
         $this->multiCellTbl(
             $this->getCellWidth(),
             $this->LINE_SIZE,
             $this->TEXT_STRLINES,
-            $this->getBorderType(),
             $this->TEXT_ALIGN,
             $this->getAlignVertical(),
-            1,
             //@todo: check this one
             $this->getCellDrawHeight() - $this->getCellHeight(),
             0,
@@ -361,7 +370,7 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
     }
 
 
-    function multiCellTbl( $w, $h, $txtData, $border = 0, $align = 'J', $valign = 'T', $fill = 0, $vh = 0, $vtop = 0, $pad_left = 0, $pad_top = 0, $pad_right = 0,
+    function multiCellTbl( $w, $h, $txtData, $align = 'J', $valign = 'T', $vh = 0, $vtop = 0, $pad_left = 0, $pad_top = 0, $pad_right = 0,
                            $pad_bottom = 0 )
     {
 

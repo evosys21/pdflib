@@ -194,7 +194,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
         //$this->assertEquals($aProps['ALIGN'], $o->getAlignVertical())
         $this->assertEquals( $aProps[ 'VERTICAL_ALIGN' ], $o->getAlignVertical() );
         $this->assertEquals( $aProps[ 'COLSPAN' ], $o->getColSpan() );
-        $this->assertEquals( $aProps[ 'ROWSPAN' ], $o->getRowspan() );
+        $this->assertEquals( $aProps[ 'ROWSPAN' ], $o->getRowSpan() );
         $this->assertEquals( $aProps[ 'PADDING' ][ 0 ], $o->getPaddingTop() );
         $this->assertEquals( $aProps[ 'PADDING' ][ 1 ], $o->getPaddingRight() );
         $this->assertEquals( $aProps[ 'PADDING' ][ 2 ], $o->getPaddingBottom() );
@@ -249,7 +249,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
         //$this->assertEquals($aProps['ALIGN'], $o->getAlignVertical())
         $this->assertEquals( $aProps[ 'VERTICAL_ALIGN' ], $o->getAlignVertical() );
         $this->assertEquals( $aProps[ 'COLSPAN' ], $o->getColSpan() );
-        $this->assertEquals( $aProps[ 'ROWSPAN' ], $o->getRowspan() );
+        $this->assertEquals( $aProps[ 'ROWSPAN' ], $o->getRowSpan() );
         $this->assertEquals( $aDefault[ 'PADDING' ][ 1 ], $o->getPaddingRight() );
         $this->assertEquals( $aDefault[ 'PADDING' ][ 2 ], $o->getPaddingBottom() );
         $this->assertEquals( $aDefault[ 'PADDING' ][ 3 ], $o->getPaddingLeft() );
@@ -392,7 +392,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
 
         $this->assertEquals( $aProps[ 'VERTICAL_ALIGN' ], $o->getAlignVertical() );
         $this->assertEquals( $aProps[ 'COLSPAN' ], $o->getColSpan() );
-        $this->assertEquals( $aProps[ 'ROWSPAN' ], $o->getRowspan() );
+        $this->assertEquals( $aProps[ 'ROWSPAN' ], $o->getRowSpan() );
         $this->assertEquals( $aProps[ 'PADDING' ][ 0 ], $o->getPaddingTop() );
         $this->assertEquals( $aProps[ 'PADDING' ][ 1 ], $o->getPaddingRight() );
         $this->assertEquals( $aProps[ 'PADDING' ][ 2 ], $o->getPaddingBottom() );

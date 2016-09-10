@@ -25,8 +25,8 @@ class myPdf extends Pdf
          */
         $oMulticell = PdfMulticell::getInstance( $this );
 
-        $oMulticell->SetStyle( "h1", $this->getDefaultFontName(), "", 6, "160,160,160" );
-        $oMulticell->SetStyle( "h2", $this->getDefaultFontName(), "", 6, "0,119,220" );
+        $oMulticell->setStyle( "h1", $this->getDefaultFontName(), "", 6, "160,160,160" );
+        $oMulticell->setStyle( "h2", $this->getDefaultFontName(), "", 6, "0,119,220" );
 
         $oMulticell->multiCell( 100, 3, file_get_contents( __DIR__ . '/content/' . $this->headerSource ) );
 

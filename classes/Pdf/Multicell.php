@@ -122,7 +122,6 @@ class Pdf_Multicell
      * Class constructor.
      *
      * @param Pdf $oPdf Instance of the pdf class
-     * @return Pdf_Multicell
      */
     public function __construct( $oPdf )
     {
@@ -233,7 +232,7 @@ class Pdf_Multicell
      * @param $fontsize number font size
      * @param $color mixed font color
      */
-    public function SetStyle( $tag, $fontfamily, $fontstyle, $fontsize, $color )
+    public function setStyle( $tag, $fontfamily, $fontstyle, $fontsize, $color )
     {
 
         if ( $tag == "ttags" )
@@ -308,6 +307,7 @@ class Pdf_Multicell
      *
      * @param string $sTag tag name
      * @param string $sAttribute attribute name
+     * @return mixed
      */
     protected function getTagAttribute( $sTag, $sAttribute )
     {
@@ -447,6 +447,8 @@ class Pdf_Multicell
             $last_sepwidth = 0;
             $last_sepch_width = 0;
             $ante_last_sep = -1; //ante last separator position
+            $ante_last_sepch = '';
+            $ante_last_sepwidth = 0;
             $nSpaces = 0;
 
             $aString = $this->oPdfi->stringToArray( $s );
@@ -669,11 +671,9 @@ class Pdf_Multicell
      * @param int|number $nPaddingTop Top padding
      * @param int|number $nPaddingRight Right padding
      * @param int|number $nPaddingBottom Bottom padding
-     * @param boolean $bDataIsString true if $pData is a string - false if $pData is an array containing lines formatted with $this->makeLine($nWidth) function (the false option is used in relation
-     * with stringToLines, to avoid double formatting of a string
      */
     public function multiCell( $nWidth, $nHeight, $pData, $border = 0, $align = 'J', $fill = 0, $nPaddingLeft = 0, $nPaddingTop = 0, $nPaddingRight = 0,
-                               $nPaddingBottom = 0, $bDataIsString = true )
+                               $nPaddingBottom = 0 )
     {
         //get the available width for the text
         $w_text = $this->mt_getAvailableTextWidth( $nWidth, $nPaddingLeft, $nPaddingRight );
@@ -802,7 +802,7 @@ class Pdf_Multicell
                  */
                 $x = $this->oPdf->GetX();
                 $y = $this->oPdf->GetY();
-                $this->oPdfi->Cell( $nWidth, $nPaddingTop, '', $b1, 0, $align, $this->bFill, '', 0, true );
+                $this->oPdfi->Cell( $nWidth, $nPaddingTop, '', $b1, 0, $align, $this->bFill, '' );
                 $b1 = str_replace( 'T', '', $b1 );
                 $b = str_replace( 'T', '', $b );
                 $this->oPdf->SetXY( $x, $y + $nPaddingTop );
@@ -967,6 +967,7 @@ class Pdf_Multicell
         //default
         $w_first = 0;
         $extra_space = 0;
+        $lastY = 0;
 
         switch ( $align ) {
             case 'J':

@@ -203,6 +203,14 @@ class Pdf_Interface
 
     /**
      * Wrapper for the cell function
+     * @param $w
+     * @param int $h
+     * @param string $txt
+     * @param int $border
+     * @param int $ln
+     * @param string $align
+     * @param bool $fill
+     * @param string $link
      */
     public function Cell( $w, $h = 0, $txt = '', $border = 0, $ln = 0, $align = '', $fill = false, $link = '' )
     {

@@ -46,7 +46,6 @@ $bg_color7 = array(
 
 //create the pdf object and do some initialization
 $oPdf = new myPdfTable();
-$oPdf->Open();
 $oPdf->SetAutoPageBreak( true, 20 );
 $oPdf->SetMargins( 20, 20, 20 );
 $oPdf->AddPage();
@@ -73,8 +72,8 @@ $oPdf->SetTextColor( 118, 0, 3 );
 
 //create an advanced multicell
 $oMulticell = PdfMulticell::getInstance( $oPdf );
-$oMulticell->SetStyle( "s1", $oPdf->getDefaultFontName(), "", 8, "118,0,3" );
-$oMulticell->SetStyle( "s2", $oPdf->getDefaultFontName(), "", 6, "0,49,159" );
+$oMulticell->setStyle( "s1", $oPdf->getDefaultFontName(), "", 8, "118,0,3" );
+$oMulticell->setStyle( "s2", $oPdf->getDefaultFontName(), "", 6, "0,49,159" );
 
 $oMulticell->multiCell( 100, 4, "<s1>Example 1 - Very Simple Table</s1>", 0 );
 $oPdf->Ln( 1 );

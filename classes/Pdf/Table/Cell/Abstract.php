@@ -20,6 +20,9 @@
 
 require_once( dirname( __FILE__ ) . '/Interface.php' );
 
+/**
+ * @property mixed|null HEIGHT_LEFT_RW
+ */
 abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
 {
 
@@ -238,13 +241,13 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
     }
 
 
-    public function setRowspan( $value )
+    public function setRowSpan( $value )
     {
         $this->rowSpan = Pdf_Validate::intPositive( $value );
     }
 
 
-    public function getRowspan()
+    public function getRowSpan()
     {
         return $this->rowSpan;
     }
@@ -428,7 +431,7 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
 
     public function copyProperties( Pdf_Table_Cell_Abstract $oSource )
     {
-        $this->rowSpan = $oSource->getRowspan();
+        $this->rowSpan = $oSource->getRowSpan();
         $this->colSpan = $oSource->getColSpan();
 
         $this->paddingTop = $oSource->getPaddingTop();

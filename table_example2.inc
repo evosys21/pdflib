@@ -84,9 +84,9 @@ for ( $j = 1; $j <= 15; $j++ )
     if ( $j == 9 )
     {
 
-        $oTable->SetStyle( "sd1", "helvetica", "", 6, "0,49,159" );
-        $oTable->SetStyle( "sd2", "helvetica", "", 5, "140,12,12" );
-        $oTable->SetStyle( "sd3", "helvetica", "", 6, "0,5,90" );
+        $oTable->setStyle( "sd1", "helvetica", "", 6, "0,49,159" );
+        $oTable->setStyle( "sd2", "helvetica", "", 5, "140,12,12" );
+        $oTable->setStyle( "sd3", "helvetica", "", 6, "0,5,90" );
 
         $aRow[ 1 ][ 'TEXT' ] = "<sd1>This is just a longer text, justified align, middle vertical align to demonstrate some other capabilities. Test text. Test text.</sd1>
 <sd3>\tSettings:</sd3>

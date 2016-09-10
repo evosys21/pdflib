@@ -327,8 +327,7 @@ class Pdf_Table
     /**
      * Class constructor.
      *
-     * @param $oPdf object Instance of the PDF class
-     * @return Pdf_Table
+     * @param Pdf $oPdf object Instance of the PDF class
      */
     public function __construct( $oPdf )
     {
@@ -345,7 +344,7 @@ class Pdf_Table
     /**
      * Returnes the Singleton Instance of this class.
      *
-     * @param $oPdf object the pdf Object
+     * @param Pdf $oPdf object the pdf Object
      * @return Pdf_Table
      */
     static function getInstance( $oPdf )
@@ -983,7 +982,7 @@ class Pdf_Table
             }
 
             //add the cells that are with rowspan to the rowspan array - this is used later
-            if ( $oCell->getRowspan() > 1 )
+            if ( $oCell->getRowSpan() > 1 )
             {
                 $aRowSpan[ ] = $i;
             }
@@ -995,7 +994,7 @@ class Pdf_Table
              * IF THERE IS ROWSPAN ACTIVE Don't include this cell Height in the calculation.
              * This will be calculated later with the sum of all heights
              */
-            if ( 1 == $oCell->getRowspan() )
+            if ( 1 == $oCell->getRowSpan() )
             {
                 $hm = max( $hm, $oCell->getCellDrawHeight() ); //this would be the normal height
             }
@@ -1079,10 +1078,9 @@ class Pdf_Table
                 //@formatter:off
                 $aRowSpans[ ] = array(
                     'row_id' => $ix,
-                    'cell_id' => &$cell
+                    'reference_cell' => $cell
                 );
                 //@formatter:on
-
 
                 $h_rows = 0;
 
@@ -1126,15 +1124,19 @@ class Pdf_Table
 
         foreach ( $aRowSpans as $val1 )
         {
+
+            /** @var Pdf_Table_Cell_Abstract $cell */
+            $cell = $val1[ 'reference_cell' ];
+
             $h_rows = 0;
             //calculate the sum of the Heights for the lines that are included in the rowspan
-            for ( $i = 0; $i < $val1[ 'cell_id' ]->getRowSpan(); $i++ )
+            for ( $i = 0; $i < $cell->getRowSpan(); $i++ )
             {
                 if ( isset( $aRefCache[ $val1[ 'row_id' ] + $i ] ) )
                     $h_rows += $aRefCache[ $val1[ 'row_id' ] + $i ][ 'HEIGHT' ];
             }
 
-            $val1[ 'cell_id' ]->setCellDrawHeight( $h_rows );
+            $cell->setCellDrawHeight( $h_rows );
 
             if ( false == $this->bTableSplit )
             {
@@ -1319,8 +1321,8 @@ class Pdf_Table
                             for ( $j = 0; $j < $this->nColumns; $j++ )
                             {
 
-                                /** @var $cell Pdf_Table_Cell_Interface */
-                                /** @var $cellSplit Pdf_Table_Cell_Interface */
+                                /** @var $cell Pdf_Table_Cell_Abstract */
+                                /** @var $cellSplit Pdf_Table_Cell_Abstract */
 
                                 $aTData[ $j ] = $aData[ $j ];
                                 $cellSplit = &$aTData[ $j ];
@@ -1371,7 +1373,7 @@ class Pdf_Table
                             {
 
                                 $rData = &$aDC[ $rws[ 0 ] ][ 'DATA' ][ $rws[ 1 ] ];
-                                /** @var $rData Pdf_Table_Cell_Interface */
+                                /** @var $rData Pdf_Table_Cell_Abstract */
 
                                 if ( $rData->isPropertySet( 'HEIGHT_LEFT_RW' ) && $rData->getCellDrawHeight() > $rData->HEIGHT_LEFT_RW )
                                 {
@@ -1441,7 +1443,7 @@ class Pdf_Table
                             {
 
                                 $rData = &$aDC[ $rws[ 0 ] ][ 'DATA' ][ $rws[ 1 ] ];
-                                /** @var $rData Pdf_Table_Cell_Interface */
+                                /** @var $rData Pdf_Table_Cell_Abstract */
 
                                 if ( $rws[ 0 ] == $i )
                                     continue; //means that this was added at the last line, that will not appear on this page
@@ -1644,7 +1646,7 @@ class Pdf_Table
                 $this->oPdf->SetXY( $x + $this->getColumnWidth( $i ), $y );
 
                 //if we have colspan, just ignore the next cells
-                if ( $cell->getColspan() > 1 )
+                if ( $cell->getColSpan() > 1 )
                 {
                     //$i = $i + (int)$cell->getColspan() - 1;
                 }
@@ -1678,7 +1680,7 @@ class Pdf_Table
     /**
      * Adds a new page in the pdf document and initializes the table and the header if necessary.
      */
-    protected function addPage( $bHeader = true )
+    protected function addPage( )
     {
         $this->drawBorder(); //draw the table border
         $this->_tbEndPageBorder(); //if there is a special handling for end page??? this is specific for me

@@ -21,6 +21,9 @@
 
 require_once( dirname( __FILE__ ) . '/Abstract.php' );
 
+/**
+ * @property array aDefaultValues
+ */
 class Pdf_Table_Cell_Empty extends Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
 {
 

@@ -42,7 +42,6 @@ $bg_color7 = array(
 $oPdf = new myPdfTable( 'P', 'mm', array(
     130, 180
 ) );
-$oPdf->Open();
 $oPdf->SetAutoPageBreak( true, 20 );
 $oPdf->SetMargins( 20, 20, 20 );
 $oPdf->AddPage();
@@ -74,8 +73,8 @@ $oPdf->SetTextColor( 118, 0, 3 );
 
 //create an advanced multicell
 $oMulticell = PdfMulticell::getInstance( $oPdf );
-$oMulticell->SetStyle( "s1", $oPdf->getDefaultFontName(), "", 8, "118,0,3" );
-$oMulticell->SetStyle( "s2", $oPdf->getDefaultFontName(), "", 6, "0,49,159" );
+$oMulticell->setStyle( "s1", $oPdf->getDefaultFontName(), "", 8, "118,0,3" );
+$oMulticell->setStyle( "s2", $oPdf->getDefaultFontName(), "", 6, "0,49,159" );
 
 $oMulticell->multiCell( 100, 4, "<s1>Example 1 - Very Simple Table</s1>", 0 );
 
@@ -131,7 +130,7 @@ for ( $j = 1; $j < 5; $j++ )
         //$o = new Pdf_Table_Cell_Image($oPdf, "pic1.jpg");
         $o = new Pdf_Table_Cell_Image( $oPdf, "pic1.jpg", 20, 10 );
         $o->setAlign( 'MC' );
-        $o->setRowspan( 2 );
+        $o->setRowSpan( 2 );
         $o->setColSpan( 2 );
         //$o = new Pdf_Table_Cell_Image("pic1.jpg");
         //$o->setPadding(10, 5, 5, 5);
@@ -142,7 +141,7 @@ for ( $j = 1; $j < 5; $j++ )
         $o->setAlign( 'MC' );
 
 //                 $o = new Pdf_Table_Cell_Image("pic1.jpg", 10, 10);
-//                 $o->setRowspan(2);
+//                 $o->setRowSpan(2);
 //                 $o->setColSpan(2);
 //                 //$o = new Pdf_Table_Cell_Image("pic1.jpg");
 //                 //$o->setPadding(10, 5, 5, 5);

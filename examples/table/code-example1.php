@@ -2,8 +2,8 @@
 
 $oTable = new Pdf_Table( $oPdf );
 
-$oTable->SetStyle( "p", $oPdf->getDefaultFontName(), "", 7, "130,0,30" );
-$oTable->SetStyle( "b", $oPdf->getDefaultFontName(), "B", 7, "130,0,30" );
+$oTable->setStyle( "p", $oPdf->getDefaultFontName(), "", 7, "130,0,30" );
+$oTable->setStyle( "b", $oPdf->getDefaultFontName(), "B", 7, "130,0,30" );
 
 $nColumns = 3;
 
