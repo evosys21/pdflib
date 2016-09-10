@@ -7,7 +7,7 @@
 /Contents 4 0 R>>
 endobj
 4 0 obj
-<</Length 17444>>
+<</Length 15184>>
 stream
 2 J
 0.57 w
@@ -20,6 +20,8 @@ BT /F1 11.00 Tf ET
 BT /F1 6.00 Tf ET
 0.000 Tw
 q 0.627 0.627 0.627 rg BT 56.69 807.49 Td (FPDF Advanced Table) Tj ET Q
+
+
 0 Tw
 q 0.627 0.627 0.627 rg BT 56.69 798.99 Td (Author:) Tj ET Q
 BT /F1 11.00 Tf ET
@@ -28,6 +30,8 @@ q 0.784 0.039 0.039 rg BT 76.04 797.49 Td ( ) Tj ET Q
 BT /F1 6.00 Tf ET
 0 Tw
 q 0.000 0.467 0.863 rg BT 79.09 798.99 Td (Andrei Bintintan) Tj ET Q
+
+
 BT /F1 11.00 Tf ET
 q 113.39 0 0 14.29 453.54 799.26 cm /I1 Do Q
 BT /F1 8.00 Tf ET
@@ -35,6 +39,8 @@ BT /F1 11.00 Tf ET
 BT /F1 8.00 Tf ET
 0 Tw
 q 0.463 0.000 0.012 rg BT 56.69 777.13 Td (Example 1 - Very Simple Table) Tj ET Q
+
+
 BT /F1 11.00 Tf ET
 BT /F2 8.00 Tf ET
 BT /F1 6.00 Tf ET
@@ -43,105 +49,169 @@ BT /F1 6.00 Tf ET
 0.000 0.361 0.694 RG
 85.04 771.02 113.39 -11.34 re B 
 BT /F2 8.00 Tf ET
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 122.61 762.95 Td (Header #1) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 198.43 771.02 141.73 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 250.17 762.95 Td (Header #2) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 340.16 771.02 85.04 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 363.56 762.95 Td (Header #3) Tj ET Q
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 759.69 113.39 -17.01 re B 
 BT /F1 6.00 Tf ET
+
+
 0 Tw
 q 0.000 g BT 87.87 749.38 Td (Line 1 Text 1) Tj ET Q
-q 0.000 g BT 87.87 742.29 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 759.69 141.73 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 251.95 749.38 Td (Line 1 Text 2) Tj ET Q
-q 0.000 g BT 269.29 742.29 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 759.69 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 387.68 749.38 Td (Line 1 Text 3) Tj ET Q
-q 0.000 g BT 422.36 742.29 Td () Tj ET Q
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 742.68 113.39 -17.01 re B 
+
+
 0 Tw
 q 0.000 g BT 87.87 732.37 Td (Line 2 Text 1) Tj ET Q
-q 0.000 g BT 87.87 725.29 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 742.68 141.73 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 251.95 732.37 Td (Line 2 Text 2) Tj ET Q
-q 0.000 g BT 269.29 725.29 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 742.68 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 387.68 732.37 Td (Line 2 Text 3) Tj ET Q
-q 0.000 g BT 422.36 725.29 Td () Tj ET Q
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 725.67 113.39 -17.01 re B 
+
+
 0 Tw
 q 0.000 g BT 87.87 715.37 Td (Line 3 Text 1) Tj ET Q
-q 0.000 g BT 87.87 708.28 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 725.67 141.73 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 251.95 715.37 Td (Line 3 Text 2) Tj ET Q
-q 0.000 g BT 269.29 708.28 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 725.67 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 387.68 715.37 Td (Line 3 Text 3) Tj ET Q
-q 0.000 g BT 422.36 708.28 Td () Tj ET Q
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 708.66 113.39 -17.01 re B 
+
+
 0 Tw
 q 0.000 g BT 87.87 698.36 Td (Line 4 Text 1) Tj ET Q
-q 0.000 g BT 87.87 691.27 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 708.66 141.73 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 251.95 698.36 Td (Line 4 Text 2) Tj ET Q
-q 0.000 g BT 269.29 691.27 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 708.66 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 387.68 698.36 Td (Line 4 Text 3) Tj ET Q
-q 0.000 g BT 422.36 691.27 Td () Tj ET Q
+
+
 0.000 0.361 0.694 RG
 0.85 w
 85.04 771.02 340.16 -79.37 re S
@@ -151,30 +221,44 @@ BT /F1 8.00 Tf ET
 0.000 Tw
 q 0.463 0.000 0.012 rg BT 170.08 657.36 Td (Example 2 - More detailed Table) Tj ET Q
 BT /F1 6.00 Tf ET
+
+
 0.000 Tw
-q 0.000 g BT 184.25 650.88 Td () Tj ET Q
+
 0.000 Tw
 q 0.000 0.192 0.624 rg BT 198.43 650.88 Td (- Table Align = Center) Tj ET Q
+
+
 0.000 Tw
-q 0.000 g BT 184.25 643.79 Td () Tj ET Q
+
 0.000 Tw
 q 0.000 0.192 0.624 rg BT 198.43 643.79 Td (- The header has multiple lines) Tj ET Q
+
+
 0.000 Tw
-q 0.000 g BT 184.25 636.70 Td () Tj ET Q
+
 0.000 Tw
 q 0.000 0.192 0.624 rg BT 198.43 636.70 Td (- Colspanning Example) Tj ET Q
+
+
 0.000 Tw
-q 0.000 g BT 184.25 629.62 Td () Tj ET Q
+
 0.000 Tw
 q 0.000 0.192 0.624 rg BT 198.43 629.62 Td (- Rowspanning Example) Tj ET Q
+
+
 0.000 Tw
-q 0.000 g BT 184.25 622.53 Td () Tj ET Q
+
 0.000 Tw
 q 0.000 0.192 0.624 rg BT 198.43 622.53 Td (- Text Alignments) Tj ET Q
+
+
 0 Tw
-q 0.000 g BT 184.25 615.44 Td () Tj ET Q
+
 0 Tw
 q 0.000 0.192 0.624 rg BT 198.43 615.44 Td (- Properties overwriting) Tj ET Q
+
+
 BT /F2 8.00 Tf ET
 BT /F1 6.00 Tf ET
 BT /F1 10.00 Tf ET
@@ -191,203 +275,360 @@ BT /F1 6.00 Tf ET
 0.000 0.361 0.694 RG
 85.04 610.87 113.39 -11.34 re B 
 BT /F2 8.00 Tf ET
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 122.61 602.80 Td (Header #1) Tj ET Q
+
+
 0.57 w
 0.337 0.608 0.882 rg
 0.000 0.361 0.694 RG
 198.43 610.87 226.77 -22.68 re B 
+
+
+
 0 Tw
 q 0.000 g BT 215.56 597.13 Td (Rowspan/Colspan can be made also in the header.) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 85.04 599.53 113.39 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 122.61 591.46 Td (Header #1) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 85.04 588.19 113.39 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 122.61 580.12 Td (Header #1) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 198.43 588.19 141.73 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 250.17 580.12 Td (Header #2) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 340.16 588.19 85.04 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 363.56 580.12 Td (Header #3) Tj ET Q
+
+
 0.28 w
 0.812 0.969 0.937 rg
 0.000 0.361 0.694 RG
 85.04 576.85 255.12 -17.01 re B 
 BT /F1 6.00 Tf ET
+
+
+
 0 Tw
 q 0.000 g BT 189.09 566.55 Td (Colspan Example) Tj ET Q
-q 0.000 g BT 212.60 559.46 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 576.85 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 365.33 566.55 Td (Line 1 Text 3) Tj ET Q
-q 0.000 g BT 382.68 559.46 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 559.84 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 124.39 549.54 Td (Line 2 Text 1) Tj ET Q
-q 0.000 g BT 141.73 542.45 Td () Tj ET Q
+
+
+
 0.28 w
 0.965 0.827 0.812 rg
 0.000 0.361 0.694 RG
 198.43 559.84 141.73 -34.02 re B 
+
+
+
 0 Tw
 q 0.000 g BT 244.28 541.03 Td (Rowspan Example) Tj ET Q
-q 0.000 g BT 269.29 533.95 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 559.84 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 365.33 549.54 Td (Line 2 Text 3) Tj ET Q
-q 0.000 g BT 382.68 542.45 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 542.83 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 124.39 532.53 Td (Line 3 Text 1) Tj ET Q
-q 0.000 g BT 141.73 525.44 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 542.83 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 365.33 532.53 Td (Line 3 Text 3) Tj ET Q
-q 0.000 g BT 382.68 525.44 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 525.83 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 124.39 515.52 Td (Line 4 Text 1) Tj ET Q
-q 0.000 g BT 141.73 508.44 Td () Tj ET Q
+
+
+
 0.28 w
 0.847 0.953 0.894 rg
 0.000 0.361 0.694 RG
 198.43 525.83 226.77 -34.02 re B 
+
+
+
 0 Tw
 q 0.000 g BT 270.13 507.02 Td (Rowspan && Colspan Example) Tj ET Q
-q 0.000 g BT 311.81 499.93 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 508.82 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 124.39 498.52 Td (Line 5 Text 1) Tj ET Q
-q 0.000 g BT 141.73 491.43 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 491.81 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 124.39 481.51 Td (Line 6 Text 1) Tj ET Q
-q 0.000 g BT 141.73 474.42 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 491.81 141.73 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 251.95 481.51 Td (Line 6 Text 2) Tj ET Q
-q 0.000 g BT 269.29 474.42 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 491.81 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 365.33 481.51 Td (Line 6 Text 3) Tj ET Q
-q 0.000 g BT 382.68 474.42 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 474.80 113.39 -39.69 re B 
+
+
+
 0 Tw
 q 0.000 g BT 125.39 464.50 Td (More lines...) Tj ET Q
+
+
+
+
 0 Tw
 q 0.000 g BT 134.39 453.16 Td (Line2) Tj ET Q
+
+
+
+
 0 Tw
 q 0.000 g BT 134.39 441.82 Td (Line3) Tj ET Q
-q 0.000 g BT 141.73 434.74 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 474.80 141.73 -39.69 re B 
+
+
 0 Tw
 q 0.000 g BT 201.26 464.50 Td (Top Left Align) Tj ET Q
-q 0.000 g BT 201.26 457.41 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 474.80 85.04 -39.69 re B 
+
+
+
 0 Tw
 q 0.000 g BT 372.68 441.82 Td (Bottom Right Align) Tj ET Q
-q 0.000 g BT 422.36 434.74 Td () Tj ET Q
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 435.12 113.39 -39.69 re B 
+
+
+
 0 Tw
 q 0.000 g BT 125.39 424.81 Td (More lines...) Tj ET Q
+
+
+
+
 0 Tw
 q 0.000 g BT 134.39 413.48 Td (Line2) Tj ET Q
+
+
+
+
 0 Tw
 q 0.000 g BT 134.39 402.14 Td (Line3) Tj ET Q
-q 0.000 g BT 141.73 395.05 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 435.12 141.73 -39.69 re B 
+
+
+
 0 Tw
 q 0.000 g BT 246.78 424.81 Td (Top Center Align) Tj ET Q
-q 0.000 g BT 269.29 417.73 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 435.12 85.04 -39.69 re B 
+
+
+
 0 Tw
 q 0.000 g BT 355.83 402.14 Td (Bottom Center Align) Tj ET Q
-q 0.000 g BT 382.68 395.05 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 395.43 113.39 -39.69 re B 
+
+
+
 0 Tw
 q 0.000 g BT 125.39 385.13 Td (More lines...) Tj ET Q
+
+
+
+
 0 Tw
 q 0.000 g BT 134.39 373.79 Td (Line2) Tj ET Q
+
+
+
+
 0 Tw
 q 0.000 g BT 134.39 362.45 Td (Line3) Tj ET Q
-q 0.000 g BT 141.73 355.37 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 395.43 226.77 -90.71 re B 
+
+
 0.463 Tw
 q 0.000 0.192 0.624 rg BT 201.26 361.32 Td (This is just a longer text, justified align, middle vertical align to demonstrate some) Tj ET Q
+
+
 0.000 Tw
 q 0.000 0.192 0.624 rg BT 201.26 354.80 Td (other capabilities. Test text. Test text.) Tj ET Q
+
+
+
 0.000 Tw
-q 0.000 g BT 215.43 348.28 Td () Tj ET Q
+
 0.000 Tw
 q 0.000 0.020 0.353 rg BT 229.61 348.28 Td (Settings:) Tj ET Q
+
+
+
 BT /F1 10.00 Tf ET
 0.000 Tw
 q 0.510 0.000 0.118 rg BT 201.26 340.56 Td ( ) Tj ET Q
@@ -398,6 +639,9 @@ BT /F1 5.00 Tf ET
 0.000 Tw
 q 0.549 0.047 0.047 rg BT 243.78 342.06 Td (- Rowspan=4) Tj ET Q
 BT /F1 6.00 Tf ET
+
+
+
 BT /F1 10.00 Tf ET
 0 Tw
 q 0.510 0.000 0.118 rg BT 201.26 334.04 Td ( ) Tj ET Q
@@ -408,93 +652,155 @@ BT /F1 5.00 Tf ET
 0 Tw
 q 0.549 0.047 0.047 rg BT 243.78 335.54 Td (- Colspan=2) Tj ET Q
 BT /F1 6.00 Tf ET
-q 0.000 g BT 201.26 330.56 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 355.75 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 345.44 Td (Line 10 Text 1) Tj ET Q
-q 0.000 g BT 141.73 338.36 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 338.74 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 328.44 Td (Line 11 Text 1) Tj ET Q
-q 0.000 g BT 141.73 321.35 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 321.73 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 311.43 Td (Line 12 Text 1) Tj ET Q
-q 0.000 g BT 141.73 304.34 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 304.72 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 294.42 Td (Line 13 Text 1) Tj ET Q
-q 0.000 g BT 141.73 287.33 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 304.72 141.73 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 250.28 294.42 Td (Line 13 Text 2) Tj ET Q
-q 0.000 g BT 269.29 287.33 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 304.72 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 363.67 294.42 Td (Line 13 Text 3) Tj ET Q
-q 0.000 g BT 382.68 287.33 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 287.72 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 277.41 Td (Line 14 Text 1) Tj ET Q
-q 0.000 g BT 141.73 270.33 Td () Tj ET Q
+
+
+
 0.28 w
 0.941 0.941 0.820 rg
 0.392 0.392 0.784 RG
 198.43 287.72 141.73 -17.01 re B 
 BT /F3 7.00 Tf ET
+
+
+
 0 Tw
 q 0.000 g BT 213.40 277.11 Td (Cell Properties Overwriting Example) Tj ET Q
-q 0.000 g BT 269.29 270.03 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 287.72 85.04 -17.01 re B 
 BT /F1 6.00 Tf ET
+
+
+
 0 Tw
 q 0.000 g BT 363.67 277.41 Td (Line 14 Text 3) Tj ET Q
-q 0.000 g BT 382.68 270.33 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 270.71 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 260.40 Td (Line 15 Text 1) Tj ET Q
-q 0.000 g BT 141.73 253.32 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 270.71 141.73 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 250.28 260.40 Td (Line 15 Text 2) Tj ET Q
-q 0.000 g BT 269.29 253.32 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 270.71 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 363.67 260.40 Td (Line 15 Text 3) Tj ET Q
-q 0.000 g BT 382.68 253.32 Td () Tj ET Q
+
+
+
 0.000 0.361 0.694 RG
 0.85 w
 85.04 610.87 340.16 -357.17 re S
@@ -504,14 +810,20 @@ BT /F1 8.00 Tf ET
 0.000 Tw
 q 0.463 0.000 0.012 rg BT 170.08 226.50 Td (Example 3 - Table split end of the page) Tj ET Q
 BT /F1 6.00 Tf ET
+
+
 0.000 Tw
-q 0.000 g BT 184.25 220.01 Td () Tj ET Q
+
 0.000 Tw
 q 0.000 0.192 0.624 rg BT 198.43 220.01 Td (- This is the table from Example 2 at the end of the page) Tj ET Q
+
+
 0 Tw
-q 0.000 g BT 184.25 212.92 Td () Tj ET Q
+
 0 Tw
 q 0.000 0.192 0.624 rg BT 198.43 212.92 Td (- Splitting mode = ON, you can see that the cells are splitted) Tj ET Q
+
+
 BT /F2 8.00 Tf ET
 BT /F1 6.00 Tf ET
 BT /F1 10.00 Tf ET
@@ -528,142 +840,241 @@ BT /F2 8.00 Tf ET
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 85.04 208.35 113.39 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 122.61 200.28 Td (Header #1) Tj ET Q
+
+
 0.57 w
 0.337 0.608 0.882 rg
 0.000 0.361 0.694 RG
 198.43 208.35 226.77 -22.68 re B 
+
+
+
 0 Tw
 q 0.000 g BT 215.56 194.61 Td (Rowspan/Colspan can be made also in the header.) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 85.04 197.01 113.39 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 122.61 188.94 Td (Header #1) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 85.04 185.67 113.39 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 122.61 177.60 Td (Header #1) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 198.43 185.67 141.73 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 250.17 177.60 Td (Header #2) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 340.16 185.67 85.04 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 363.56 177.60 Td (Header #3) Tj ET Q
+
+
 0.28 w
 0.812 0.969 0.937 rg
 0.000 0.361 0.694 RG
 85.04 174.33 255.12 -17.01 re B 
 BT /F1 6.00 Tf ET
+
+
+
 0 Tw
 q 0.000 g BT 189.09 164.03 Td (Colspan Example) Tj ET Q
-q 0.000 g BT 212.60 156.94 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 174.33 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 365.33 164.03 Td (Line 1 Text 3) Tj ET Q
-q 0.000 g BT 382.68 156.94 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 157.32 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 124.39 147.02 Td (Line 2 Text 1) Tj ET Q
-q 0.000 g BT 141.73 139.93 Td () Tj ET Q
+
+
+
 0.28 w
 0.965 0.827 0.812 rg
 0.000 0.361 0.694 RG
 198.43 157.32 141.73 -34.02 re B 
+
+
+
 0 Tw
 q 0.000 g BT 244.28 138.52 Td (Rowspan Example) Tj ET Q
-q 0.000 g BT 269.29 131.43 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 157.32 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 365.33 147.02 Td (Line 2 Text 3) Tj ET Q
-q 0.000 g BT 382.68 139.93 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 140.32 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 124.39 130.01 Td (Line 3 Text 1) Tj ET Q
-q 0.000 g BT 141.73 122.92 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 140.32 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 365.33 130.01 Td (Line 3 Text 3) Tj ET Q
-q 0.000 g BT 382.68 122.92 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 123.31 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 124.39 113.00 Td (Line 4 Text 1) Tj ET Q
-q 0.000 g BT 141.73 105.92 Td () Tj ET Q
+
+
+
 0.28 w
 0.847 0.953 0.894 rg
 0.000 0.361 0.694 RG
 198.43 123.31 226.77 -34.02 re B 
+
+
+
 0 Tw
 q 0.000 g BT 270.13 104.50 Td (Rowspan && Colspan Example) Tj ET Q
-q 0.000 g BT 311.81 97.41 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 106.30 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 124.39 96.00 Td (Line 5 Text 1) Tj ET Q
-q 0.000 g BT 141.73 88.91 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 89.29 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 124.39 78.99 Td (Line 6 Text 1) Tj ET Q
-q 0.000 g BT 141.73 71.90 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 89.29 141.73 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 251.95 78.99 Td (Line 6 Text 2) Tj ET Q
-q 0.000 g BT 269.29 71.90 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 89.29 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 365.33 78.99 Td (Line 6 Text 3) Tj ET Q
-q 0.000 g BT 382.68 71.90 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 72.28 113.39 -15.58 re B 
+
+
+
 0 Tw
 q 0.000 g BT 125.39 60.57 Td (More lines...) Tj ET Q
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 72.28 141.73 -15.58 re B 
+
+
 0 Tw
 q 0.000 g BT 201.26 61.98 Td (Top Left Align) Tj ET Q
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
@@ -684,7 +1095,7 @@ endobj
 /Contents 6 0 R>>
 endobj
 6 0 obj
-<</Length 10301>>
+<</Length 9154>>
 stream
 2 J
 0.85 w
@@ -693,60 +1104,97 @@ BT /F1 6.00 Tf ET
 1.000 1.000 1.000 rg
 0.000 Tw
 q 0.627 0.627 0.627 rg BT 56.69 807.49 Td (FPDF Advanced Table) Tj ET Q
+
+
 0 Tw
 q 0.627 0.627 0.627 rg BT 56.69 798.99 Td (Author:) Tj ET Q
 0 Tw
 q 0.000 g BT 76.04 798.99 Td ( ) Tj ET Q
 0 Tw
 q 0.000 0.467 0.863 rg BT 77.70 798.99 Td (Andrei Bintintan) Tj ET Q
+
+
 q 113.39 0 0 14.29 453.54 799.26 cm /I1 Do Q
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 85.04 785.20 113.39 -11.34 re B 
 BT /F2 8.00 Tf ET
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 122.61 777.13 Td (Header #1) Tj ET Q
+
+
 0.57 w
 0.337 0.608 0.882 rg
 0.000 0.361 0.694 RG
 198.43 785.20 226.77 -22.68 re B 
+
+
+
 0 Tw
 q 0.000 g BT 215.56 771.46 Td (Rowspan/Colspan can be made also in the header.) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 85.04 773.86 113.39 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 122.61 765.79 Td (Header #1) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 85.04 762.52 113.39 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 122.61 754.45 Td (Header #1) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 198.43 762.52 141.73 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 250.17 754.45 Td (Header #2) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 340.16 762.52 85.04 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 363.56 754.45 Td (Header #3) Tj ET Q
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 751.18 113.39 -25.51 re B 
 BT /F1 6.00 Tf ET
+
+
 0 Tw
 q 0.000 g BT 134.39 743.71 Td (Line2) Tj ET Q
+
+
+
+
 0 Tw
 q 0.000 g BT 134.39 732.37 Td (Line3) Tj ET Q
-q 0.000 g BT 141.73 725.29 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
@@ -755,57 +1203,107 @@ q 0.000 g BT 141.73 725.29 Td () Tj ET Q
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 751.18 85.04 -25.51 re B 
+
+
+
 0 Tw
 q 0.000 g BT 372.68 732.37 Td (Bottom Right Align) Tj ET Q
-q 0.000 g BT 422.36 725.29 Td () Tj ET Q
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 725.67 113.39 -39.69 re B 
+
+
+
 0 Tw
 q 0.000 g BT 125.39 715.37 Td (More lines...) Tj ET Q
+
+
+
+
 0 Tw
 q 0.000 g BT 134.39 704.03 Td (Line2) Tj ET Q
+
+
+
+
 0 Tw
 q 0.000 g BT 134.39 692.69 Td (Line3) Tj ET Q
-q 0.000 g BT 141.73 685.60 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 725.67 141.73 -39.69 re B 
+
+
+
 0 Tw
 q 0.000 g BT 246.78 715.37 Td (Top Center Align) Tj ET Q
-q 0.000 g BT 269.29 708.28 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 725.67 85.04 -39.69 re B 
+
+
+
 0 Tw
 q 0.000 g BT 355.83 692.69 Td (Bottom Center Align) Tj ET Q
-q 0.000 g BT 382.68 685.60 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 685.98 113.39 -39.69 re B 
+
+
+
 0 Tw
 q 0.000 g BT 125.39 675.68 Td (More lines...) Tj ET Q
+
+
+
+
 0 Tw
 q 0.000 g BT 134.39 664.34 Td (Line2) Tj ET Q
+
+
+
+
 0 Tw
 q 0.000 g BT 134.39 653.00 Td (Line3) Tj ET Q
-q 0.000 g BT 141.73 645.92 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 685.98 226.77 -90.71 re B 
+
+
 0.463 Tw
 q 0.000 0.192 0.624 rg BT 201.26 651.87 Td (This is just a longer text, justified align, middle vertical align to demonstrate some) Tj ET Q
+
+
 0.000 Tw
 q 0.000 0.192 0.624 rg BT 201.26 645.35 Td (other capabilities. Test text. Test text.) Tj ET Q
+
+
+
 0.000 Tw
-q 0.000 g BT 215.43 638.83 Td () Tj ET Q
+
 0.000 Tw
 q 0.000 0.020 0.353 rg BT 229.61 638.83 Td (Settings:) Tj ET Q
+
+
+
 BT /F1 10.00 Tf ET
 0.000 Tw
 q 0.510 0.000 0.118 rg BT 201.26 631.11 Td ( ) Tj ET Q
@@ -816,6 +1314,9 @@ BT /F1 5.00 Tf ET
 0.000 Tw
 q 0.549 0.047 0.047 rg BT 243.78 632.61 Td (- Rowspan=4) Tj ET Q
 BT /F1 6.00 Tf ET
+
+
+
 BT /F1 10.00 Tf ET
 0 Tw
 q 0.510 0.000 0.118 rg BT 201.26 624.59 Td ( ) Tj ET Q
@@ -826,93 +1327,155 @@ BT /F1 5.00 Tf ET
 0 Tw
 q 0.549 0.047 0.047 rg BT 243.78 626.09 Td (- Colspan=2) Tj ET Q
 BT /F1 6.00 Tf ET
-q 0.000 g BT 201.26 621.11 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 646.30 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 636.00 Td (Line 10 Text 1) Tj ET Q
-q 0.000 g BT 141.73 628.91 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 629.29 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 618.99 Td (Line 11 Text 1) Tj ET Q
-q 0.000 g BT 141.73 611.90 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 612.28 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 601.98 Td (Line 12 Text 1) Tj ET Q
-q 0.000 g BT 141.73 594.89 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 595.28 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 584.97 Td (Line 13 Text 1) Tj ET Q
-q 0.000 g BT 141.73 577.89 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 595.28 141.73 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 250.28 584.97 Td (Line 13 Text 2) Tj ET Q
-q 0.000 g BT 269.29 577.89 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 595.28 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 363.67 584.97 Td (Line 13 Text 3) Tj ET Q
-q 0.000 g BT 382.68 577.89 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 578.27 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 567.96 Td (Line 14 Text 1) Tj ET Q
-q 0.000 g BT 141.73 560.88 Td () Tj ET Q
+
+
+
 0.28 w
 0.941 0.941 0.820 rg
 0.392 0.392 0.784 RG
 198.43 578.27 141.73 -17.01 re B 
 BT /F3 7.00 Tf ET
+
+
+
 0 Tw
 q 0.000 g BT 213.40 567.66 Td (Cell Properties Overwriting Example) Tj ET Q
-q 0.000 g BT 269.29 560.58 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 578.27 85.04 -17.01 re B 
 BT /F1 6.00 Tf ET
+
+
+
 0 Tw
 q 0.000 g BT 363.67 567.96 Td (Line 14 Text 3) Tj ET Q
-q 0.000 g BT 382.68 560.88 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 561.26 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 550.96 Td (Line 15 Text 1) Tj ET Q
-q 0.000 g BT 141.73 543.87 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 561.26 141.73 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 250.28 550.96 Td (Line 15 Text 2) Tj ET Q
-q 0.000 g BT 269.29 543.87 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 561.26 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 363.67 550.96 Td (Line 15 Text 3) Tj ET Q
-q 0.000 g BT 382.68 543.87 Td () Tj ET Q
+
+
+
 0.000 0.361 0.694 RG
 0.85 w
 85.04 785.20 340.16 -240.94 re S
@@ -922,14 +1485,20 @@ BT /F1 8.00 Tf ET
 0.000 Tw
 q 0.463 0.000 0.012 rg BT 170.08 226.50 Td (Example 4 - Table split end of the page) Tj ET Q
 BT /F1 6.00 Tf ET
+
+
 0.000 Tw
-q 0.000 g BT 184.25 220.01 Td () Tj ET Q
+
 0.000 Tw
 q 0.000 0.192 0.624 rg BT 198.43 220.01 Td (- This is the table from Example 2 at the end of the page) Tj ET Q
+
+
 0 Tw
-q 0.000 g BT 184.25 212.92 Td () Tj ET Q
+
 0 Tw
 q 0.000 0.192 0.624 rg BT 198.43 212.92 Td (- Splitting mode = OFF. In this case the cells are NOT splitted) Tj ET Q
+
+
 BT /F2 8.00 Tf ET
 BT /F1 6.00 Tf ET
 BT /F1 10.00 Tf ET
@@ -946,130 +1515,220 @@ BT /F2 8.00 Tf ET
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 85.04 208.35 113.39 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 122.61 200.28 Td (Header #1) Tj ET Q
+
+
 0.57 w
 0.337 0.608 0.882 rg
 0.000 0.361 0.694 RG
 198.43 208.35 226.77 -22.68 re B 
+
+
+
 0 Tw
 q 0.000 g BT 215.56 194.61 Td (Rowspan/Colspan can be made also in the header.) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 85.04 197.01 113.39 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 122.61 188.94 Td (Header #1) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 85.04 185.67 113.39 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 122.61 177.60 Td (Header #1) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 198.43 185.67 141.73 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 250.17 177.60 Td (Header #2) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 340.16 185.67 85.04 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 363.56 177.60 Td (Header #3) Tj ET Q
+
+
 0.28 w
 0.812 0.969 0.937 rg
 0.000 0.361 0.694 RG
 85.04 174.33 255.12 -17.01 re B 
 BT /F1 6.00 Tf ET
+
+
+
 0 Tw
 q 0.000 g BT 189.09 164.03 Td (Colspan Example) Tj ET Q
-q 0.000 g BT 212.60 156.94 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 174.33 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 365.33 164.03 Td (Line 1 Text 3) Tj ET Q
-q 0.000 g BT 382.68 156.94 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 157.32 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 124.39 147.02 Td (Line 2 Text 1) Tj ET Q
-q 0.000 g BT 141.73 139.93 Td () Tj ET Q
+
+
+
 0.28 w
 0.965 0.827 0.812 rg
 0.000 0.361 0.694 RG
 198.43 157.32 141.73 -34.02 re B 
+
+
+
 0 Tw
 q 0.000 g BT 244.28 138.52 Td (Rowspan Example) Tj ET Q
-q 0.000 g BT 269.29 131.43 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 157.32 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 365.33 147.02 Td (Line 2 Text 3) Tj ET Q
-q 0.000 g BT 382.68 139.93 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 140.32 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 124.39 130.01 Td (Line 3 Text 1) Tj ET Q
-q 0.000 g BT 141.73 122.92 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 140.32 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 365.33 130.01 Td (Line 3 Text 3) Tj ET Q
-q 0.000 g BT 382.68 122.92 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 123.31 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 124.39 113.00 Td (Line 4 Text 1) Tj ET Q
-q 0.000 g BT 141.73 105.92 Td () Tj ET Q
+
+
+
 0.28 w
 0.847 0.953 0.894 rg
 0.000 0.361 0.694 RG
 198.43 123.31 226.77 -34.02 re B 
+
+
+
 0 Tw
 q 0.000 g BT 270.13 104.50 Td (Rowspan && Colspan Example) Tj ET Q
-q 0.000 g BT 311.81 97.41 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 106.30 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 124.39 96.00 Td (Line 5 Text 1) Tj ET Q
-q 0.000 g BT 141.73 88.91 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 89.29 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 124.39 78.99 Td (Line 6 Text 1) Tj ET Q
-q 0.000 g BT 141.73 71.90 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 89.29 141.73 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 251.95 78.99 Td (Line 6 Text 2) Tj ET Q
-q 0.000 g BT 269.29 71.90 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 89.29 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 365.33 78.99 Td (Line 6 Text 3) Tj ET Q
-q 0.000 g BT 382.68 71.90 Td () Tj ET Q
+
+
+
 0.000 0.361 0.694 RG
 0.85 w
 85.04 208.35 340.16 -136.06 re S
@@ -1086,7 +1745,7 @@ endobj
 /Contents 8 0 R>>
 endobj
 8 0 obj
-<</Length 6351>>
+<</Length 5672>>
 stream
 2 J
 0.85 w
@@ -1095,124 +1754,220 @@ BT /F1 6.00 Tf ET
 1.000 1.000 1.000 rg
 0.000 Tw
 q 0.627 0.627 0.627 rg BT 56.69 807.49 Td (FPDF Advanced Table) Tj ET Q
+
+
 0 Tw
 q 0.627 0.627 0.627 rg BT 56.69 798.99 Td (Author:) Tj ET Q
 0 Tw
 q 0.000 g BT 76.04 798.99 Td ( ) Tj ET Q
 0 Tw
 q 0.000 0.467 0.863 rg BT 77.70 798.99 Td (Andrei Bintintan) Tj ET Q
+
+
 q 113.39 0 0 14.29 453.54 799.26 cm /I1 Do Q
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 85.04 785.20 113.39 -11.34 re B 
 BT /F2 8.00 Tf ET
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 122.61 777.13 Td (Header #1) Tj ET Q
+
+
 0.57 w
 0.337 0.608 0.882 rg
 0.000 0.361 0.694 RG
 198.43 785.20 226.77 -22.68 re B 
+
+
+
 0 Tw
 q 0.000 g BT 215.56 771.46 Td (Rowspan/Colspan can be made also in the header.) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 85.04 773.86 113.39 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 122.61 765.79 Td (Header #1) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 85.04 762.52 113.39 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 122.61 754.45 Td (Header #1) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 198.43 762.52 141.73 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 250.17 754.45 Td (Header #2) Tj ET Q
+
+
 0.57 w
 0.161 0.314 0.518 rg
 0.000 0.361 0.694 RG
 340.16 762.52 85.04 -11.34 re B 
+
+
 0 Tw
 q 0.863 0.902 0.941 rg BT 363.56 754.45 Td (Header #3) Tj ET Q
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 751.18 113.39 -39.69 re B 
 BT /F1 6.00 Tf ET
+
+
+
 0 Tw
 q 0.000 g BT 125.39 740.88 Td (More lines...) Tj ET Q
+
+
+
+
 0 Tw
 q 0.000 g BT 134.39 729.54 Td (Line2) Tj ET Q
+
+
+
+
 0 Tw
 q 0.000 g BT 134.39 718.20 Td (Line3) Tj ET Q
-q 0.000 g BT 141.73 711.11 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 751.18 141.73 -39.69 re B 
+
+
 0 Tw
 q 0.000 g BT 201.26 740.88 Td (Top Left Align) Tj ET Q
-q 0.000 g BT 201.26 733.79 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 751.18 85.04 -39.69 re B 
+
+
+
 0 Tw
 q 0.000 g BT 372.68 718.20 Td (Bottom Right Align) Tj ET Q
-q 0.000 g BT 422.36 711.11 Td () Tj ET Q
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 711.50 113.39 -39.69 re B 
+
+
+
 0 Tw
 q 0.000 g BT 125.39 701.19 Td (More lines...) Tj ET Q
+
+
+
+
 0 Tw
 q 0.000 g BT 134.39 689.85 Td (Line2) Tj ET Q
+
+
+
+
 0 Tw
 q 0.000 g BT 134.39 678.52 Td (Line3) Tj ET Q
-q 0.000 g BT 141.73 671.43 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 711.50 141.73 -39.69 re B 
+
+
+
 0 Tw
 q 0.000 g BT 246.78 701.19 Td (Top Center Align) Tj ET Q
-q 0.000 g BT 269.29 694.11 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 711.50 85.04 -39.69 re B 
+
+
+
 0 Tw
 q 0.000 g BT 355.83 678.52 Td (Bottom Center Align) Tj ET Q
-q 0.000 g BT 382.68 671.43 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 671.81 113.39 -39.69 re B 
+
+
+
 0 Tw
 q 0.000 g BT 125.39 661.51 Td (More lines...) Tj ET Q
+
+
+
+
 0 Tw
 q 0.000 g BT 134.39 650.17 Td (Line2) Tj ET Q
+
+
+
+
 0 Tw
 q 0.000 g BT 134.39 638.83 Td (Line3) Tj ET Q
-q 0.000 g BT 141.73 631.74 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 671.81 226.77 -90.71 re B 
+
+
 0.463 Tw
 q 0.000 0.192 0.624 rg BT 201.26 637.70 Td (This is just a longer text, justified align, middle vertical align to demonstrate some) Tj ET Q
+
+
 0.000 Tw
 q 0.000 0.192 0.624 rg BT 201.26 631.18 Td (other capabilities. Test text. Test text.) Tj ET Q
+
+
+
 0.000 Tw
-q 0.000 g BT 215.43 624.66 Td () Tj ET Q
+
 0.000 Tw
 q 0.000 0.020 0.353 rg BT 229.61 624.66 Td (Settings:) Tj ET Q
+
+
+
 BT /F1 10.00 Tf ET
 0.000 Tw
 q 0.510 0.000 0.118 rg BT 201.26 616.94 Td ( ) Tj ET Q
@@ -1223,6 +1978,9 @@ BT /F1 5.00 Tf ET
 0.000 Tw
 q 0.549 0.047 0.047 rg BT 243.78 618.44 Td (- Rowspan=4) Tj ET Q
 BT /F1 6.00 Tf ET
+
+
+
 BT /F1 10.00 Tf ET
 0 Tw
 q 0.510 0.000 0.118 rg BT 201.26 610.42 Td ( ) Tj ET Q
@@ -1233,93 +1991,155 @@ BT /F1 5.00 Tf ET
 0 Tw
 q 0.549 0.047 0.047 rg BT 243.78 611.92 Td (- Colspan=2) Tj ET Q
 BT /F1 6.00 Tf ET
-q 0.000 g BT 201.26 606.94 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 632.13 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 621.82 Td (Line 10 Text 1) Tj ET Q
-q 0.000 g BT 141.73 614.74 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 615.12 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 604.81 Td (Line 11 Text 1) Tj ET Q
-q 0.000 g BT 141.73 597.73 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 598.11 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 587.81 Td (Line 12 Text 1) Tj ET Q
-q 0.000 g BT 141.73 580.72 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 581.10 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 570.80 Td (Line 13 Text 1) Tj ET Q
-q 0.000 g BT 141.73 563.71 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 581.10 141.73 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 250.28 570.80 Td (Line 13 Text 2) Tj ET Q
-q 0.000 g BT 269.29 563.71 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 581.10 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 363.67 570.80 Td (Line 13 Text 3) Tj ET Q
-q 0.000 g BT 382.68 563.71 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 564.09 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 553.79 Td (Line 14 Text 1) Tj ET Q
-q 0.000 g BT 141.73 546.70 Td () Tj ET Q
+
+
+
 0.28 w
 0.941 0.941 0.820 rg
 0.392 0.392 0.784 RG
 198.43 564.09 141.73 -17.01 re B 
 BT /F3 7.00 Tf ET
+
+
+
 0 Tw
 q 0.000 g BT 213.40 553.49 Td (Cell Properties Overwriting Example) Tj ET Q
-q 0.000 g BT 269.29 546.40 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 564.09 85.04 -17.01 re B 
 BT /F1 6.00 Tf ET
+
+
+
 0 Tw
 q 0.000 g BT 363.67 553.79 Td (Line 14 Text 3) Tj ET Q
-q 0.000 g BT 382.68 546.70 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 85.04 547.09 113.39 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 122.72 536.78 Td (Line 15 Text 1) Tj ET Q
-q 0.000 g BT 141.73 529.70 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 198.43 547.09 141.73 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 250.28 536.78 Td (Line 15 Text 2) Tj ET Q
-q 0.000 g BT 269.29 529.70 Td () Tj ET Q
+
+
+
 0.28 w
 1.000 1.000 1.000 rg
 0.000 0.361 0.694 RG
 340.16 547.09 85.04 -17.01 re B 
+
+
+
 0 Tw
 q 0.000 g BT 363.67 536.78 Td (Line 15 Text 3) Tj ET Q
-q 0.000 g BT 382.68 529.70 Td () Tj ET Q
+
+
+
 0.000 0.361 0.694 RG
 0.85 w
 85.04 785.20 340.16 -255.12 re S
@@ -1336,39 +2156,94 @@ endobj
 >>
 endobj
 9 0 obj
+<</Length 675>>
+stream
+/CIDInit /ProcSet findresource begin
+12 dict begin
+begincmap
+/CIDSystemInfo
+<</Registry (Adobe)
+/Ordering (UCS)
+/Supplement 0
+>> def
+/CMapName /Adobe-Identity-UCS def
+/CMapType 2 def
+1 begincodespacerange
+<00> <FF>
+endcodespacerange
+6 beginbfrange
+<00> <7F> <0000>
+<86> <87> <2020>
+<91> <92> <2018>
+<93> <94> <201C>
+<96> <97> <2013>
+<A0> <FF> <00A0>
+endbfrange
+19 beginbfchar
+<80> <20AC>
+<82> <201A>
+<83> <0192>
+<84> <201E>
+<85> <2026>
+<88> <02C6>
+<89> <2030>
+<8A> <0160>
+<8B> <2039>
+<8C> <0152>
+<8E> <017D>
+<95> <2022>
+<98> <02DC>
+<99> <2122>
+<9A> <0161>
+<9B> <203A>
+<9C> <0153>
+<9E> <017E>
+<9F> <0178>
+endbfchar
+endcmap
+CMapName currentdict /CMap defineresource pop
+end
+end
+endstream
+endobj
+10 0 obj
 <</Type /Font
 /BaseFont /Helvetica
 /Subtype /Type1
 /Encoding /WinAnsiEncoding
->>
-endobj
-10 0 obj
-<</Type /Font
-/BaseFont /Helvetica-Bold
-/Subtype /Type1
-/Encoding /WinAnsiEncoding
+/ToUnicode 9 0 R
 >>
 endobj
 11 0 obj
 <</Type /Font
-/BaseFont /Times-Bold
+/BaseFont /Helvetica-Bold
 /Subtype /Type1
 /Encoding /WinAnsiEncoding
+/ToUnicode 9 0 R
 >>
 endobj
 12 0 obj
 <</Type /Font
-/BaseFont /Helvetica-Oblique
+/BaseFont /Times-Bold
 /Subtype /Type1
 /Encoding /WinAnsiEncoding
+/ToUnicode 9 0 R
 >>
 endobj
 13 0 obj
+<</Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/ToUnicode 9 0 R
+>>
+endobj
+14 0 obj
 <</Type /XObject
 /Subtype /Image
 /Width 1000
 /Height 126
-/ColorSpace [/Indexed /DeviceRGB 139 14 0 R]
+/ColorSpace [/Indexed /DeviceRGB 139 15 0 R]
 /BitsPerComponent 8
 /Filter /FlateDecode
 /DecodeParms <</Predictor 15 /Colors 1 /BitsPerComponent 8 /Columns 1000>>
@@ -1386,7 +2261,7 @@ xÚìİçCÛHğñX–eåŒ.øL sd!@\ ô¶%»É–$»Ù½m·½·Ûëmşés±¥yUF£øy>ã‘Ğøg•™yÅ„¿T¶/m
 Ğ}@§IôÃUkıëYîC—>¥‡ıÙºĞÉ“ßİtÒ0 P¾<°¢å>tq5jèW…¦Ğ©“ßİtŠt@ß+}™1êÖöB¯lE}«¢/tZ•)@÷0Ìèí3ùŠéV»¶ºØæQBç„ÆĞI“ßİ'tyéCİ0&2³aå$v¹º¸Ëeò_*ôW¤š½+´†N™üè~¡K¨ôÖJ¶&ï•Vú:a—™Ğ:òoÛ­.T–üû4}gŠÄ·’÷ÏÉş*•“êsŞGRÒåšüßïwó«é+¸¯¥eJg÷¸é7«ºÇ]ş¿  ?«Š
 endstream
 endobj
-14 0 obj
+15 0 obj
 <</Length 420>>
 stream
 ?˜¹ÁÁÁn±ÊqqqÛëòïïïöúü­Óáşşş°¯¯ÈÈÈ###şÿÿöööXXXËËËûûûÃ×ËÜÇàêÛÛÛÿÿÿışşºĞ¯¯¯AAAúüıëôøˆˆˆœœœæææ???ãğõÎÎÎaaaıııŸËÜõõõtttQQQŞŞŞÑæî   ºÚæçççš¶ÀóóóšššJJJ×××¦¦¦ñ÷ú!N^øøø@@@ååå111µ´´êêêáááÓÓÓĞĞĞnnn^^^WWWÇÇÇñññµµµ÷÷÷uttòòò"""ñğğgggìììîîî   ÏÏÏ|||}||,,,```äää÷öö322úùùººº:::999¾½½***”””İİİÀÀÀ444mmm»ººº¹¹III™™™ùùùüûû¾¾¾·¶¶üüüÚÚÚğïï===ŒŒŒÃÃÃ“Å×òññRRRÿşşFFFYYY·Øå¾Õİ¸¸¸‡´Ä$$$ôôôiii(Uehhh---ÃßéÔÓÓ¯¼Àÿÿÿ
@@ -1396,51 +2271,52 @@ endobj
 <<
 /ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
 /Font <<
-/F1 9 0 R
-/F2 10 0 R
-/F3 11 0 R
-/F4 12 0 R
+/F1 10 0 R
+/F2 11 0 R
+/F3 12 0 R
+/F4 13 0 R
 >>
 /XObject <<
-/I1 13 0 R
+/I1 14 0 R
 >>
->>
-endobj
-15 0 obj
-<<
 >>
 endobj
 16 0 obj
+<<
+>>
+endobj
+17 0 obj
 <<
 /Type /Catalog
 /Pages 1 0 R
 >>
 endobj
 xref
-0 17
+0 18
 0000000000 65535 f 
-0000036081 00000 n 
-0000040907 00000 n 
+0000031994 00000 n 
+0000037613 00000 n 
 0000000009 00000 n 
 0000000617 00000 n 
-0000018112 00000 n 
-0000018720 00000 n 
-0000029072 00000 n 
-0000029680 00000 n 
-0000036180 00000 n 
-0000036276 00000 n 
-0000036378 00000 n 
-0000036476 00000 n 
-0000036581 00000 n 
-0000040437 00000 n 
-0000041055 00000 n 
-0000041077 00000 n 
+0000015852 00000 n 
+0000016460 00000 n 
+0000025664 00000 n 
+0000026272 00000 n 
+0000032093 00000 n 
+0000032817 00000 n 
+0000032931 00000 n 
+0000033050 00000 n 
+0000033165 00000 n 
+0000033287 00000 n 
+0000037143 00000 n 
+0000037762 00000 n 
+0000037784 00000 n 
 trailer
 <<
-/Size 17
-/Root 16 0 R
-/Info 15 0 R
+/Size 18
+/Root 17 0 R
+/Info 16 0 R
 >>
 startxref
-41127
+37834
 %%EOF
