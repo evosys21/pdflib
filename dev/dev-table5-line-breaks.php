@@ -1,7 +1,7 @@
 <?php
 /**
  * Pdf Advanced Table - Example
- * Copyright (c) 2005-2013, Andrei Bintintan, http://www.interpid.eu
+ * Copyright (c), Andrei Bintintan, http://www.interpid.eu
  */
 
 //include pdf class

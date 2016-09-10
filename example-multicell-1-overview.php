@@ -1,7 +1,7 @@
 <?php
 /**
  * Pdf Advanced Multicell - Example
- * Copyright (c) 2014, Andrei Bintintan, http://www.interpid.eu
+ * Copyright (c), Andrei Bintintan, http://www.interpid.eu
  */
 
 // include the pdf factory
@@ -31,8 +31,8 @@ $oMulticell = new PdfMulticell( $oPdf );
  */
 $oMulticell->SetStyle( "p", $oPdf->getDefaultFontName(), "", 11, "130,0,30" );
 $oMulticell->SetStyle( "b", $oPdf->getDefaultFontName(), "B", 11, "130,0,30" );
-$oMulticell->setStyle( "i", $oPdf->getDefaultFontName(), "I", 11, "80,80,260" );
-$oMulticell->setStyle( "u", $oPdf->getDefaultFontName(), "U", 11, "80,80,260" );
+$oMulticell->SetStyle( "i", $oPdf->getDefaultFontName(), "I", 11, "80,80,260" );
+$oMulticell->SetStyle( "u", $oPdf->getDefaultFontName(), "U", 11, "80,80,260" );
 $oMulticell->SetStyle( "h1", $oPdf->getDefaultFontName(), "", 11, "80,80,260" );
 $oMulticell->SetStyle( "h3", $oPdf->getDefaultFontName(), "B", 12, "203,0,48" );
 $oMulticell->SetStyle( "h4", $oPdf->getDefaultFontName(), "BI", 11, "0,151,200" );
@@ -48,7 +48,7 @@ $sTxt1 = file_get_contents( __DIR__ . '/content/createdby.txt' );
 $sTxt2 = file_get_contents( __DIR__ . '/content/multicell.txt' );
 
 //create an advanced multicell
-$oMulticell->multiCell( 150, 5, $sTxt1, 1, "L", 1, 5, 5, 5, 5 );
+#$oMulticell->multiCell( 150, 5, $sTxt1, 1, "L", 1, 5, 5, 5, 5 );
 $oPdf->Ln( 10 ); //new line
 
 

@@ -28,7 +28,7 @@ class myPdf extends Pdf
         $oMulticell->SetStyle( "h1", $this->getDefaultFontName(), "", 6, "160,160,160" );
         $oMulticell->SetStyle( "h2", $this->getDefaultFontName(), "", 6, "0,119,220" );
 
-        $oMulticell->multiCell( 100, 3, file_get_contents( __DIR__ . '/content/' . $this->headerSource ) );
+//        $oMulticell->multiCell( 100, 3, file_get_contents( __DIR__ . '/content/' . $this->headerSource ) );
 
         $this->Image( __DIR__ . '/images/interpid_logo.png', 160, 10, 40, 0, '', 'http://www.interpid.eu' );
         $this->SetY( $this->tMargin );

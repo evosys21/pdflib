@@ -13,9 +13,9 @@
  * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
- * @version   : 5.1.0
+ * @version   : 5.3.0
  * @author    : Andrei Bintintan <andy@interpid.eu>
- * @copyright : Copyright (c) 2014, Andrei Bintintan, http://www.interpid.eu
+ * @copyright : Andrei Bintintan, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
 class Pdf_Interface
@@ -82,24 +82,6 @@ class Pdf_Interface
             $n = 0;
 
         return $n;
-    }
-
-
-    /**
-     * Returns the character width for the specified input parameters
-     *
-     * @param $char string
-     * @param $fontfamily string
-     * @param $fontstyle string
-     * @param $fontsize string
-     * @return number The character width
-     */
-    public function getCharStringWidth( $char, $fontfamily, $fontstyle, $fontsize )
-    {
-
-        return $this->oPdf->GetArrStringWidth( array(
-            $char
-        ), $fontfamily, $fontstyle, $fontsize );
     }
 
 

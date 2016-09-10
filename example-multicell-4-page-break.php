@@ -1,7 +1,7 @@
 <?php
 /**
  * Pdf Advanced Multicell - Example
- * Copyright (c) 2014, Andrei Bintintan, http://www.interpid.eu
+ * Copyright (c), Andrei Bintintan, http://www.interpid.eu
  */
 
 // include the pdf factory

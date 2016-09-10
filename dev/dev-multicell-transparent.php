@@ -2,7 +2,7 @@
 
 /**
  * Pdf Advanced Multicell - Example
- * Copyright (c) 2005-2013, Andrei Bintintan, http://www.interpid.eu
+ * Copyright (c), Andrei Bintintan, http://www.interpid.eu
  */
 
 require 'dev-includes.php';
