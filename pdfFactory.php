@@ -41,7 +41,6 @@ class pdfFactory
      */
     public function initPdfObject( $pdf )
     {
-        $pdf->Open();
         $pdf->SetMargins( 20, 20, 20 );
 
         //set default font/colors

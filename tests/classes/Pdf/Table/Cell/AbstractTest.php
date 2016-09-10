@@ -359,7 +359,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
 
         $filename = tempnam( sys_get_temp_dir(), 'fpdf' );
 
-        $pdf->output( $filename );
+        $pdf->output( "F", $filename );
 
         $finfo = finfo_open( FILEINFO_MIME_TYPE );
 

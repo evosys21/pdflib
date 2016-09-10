@@ -275,7 +275,6 @@ class Pdf_Multicell
      */
     public function getTagFontStyle( $tag )
     {
-
         return $this->getTagAttribute( $tag, 'style' );
     }
 
@@ -288,7 +287,6 @@ class Pdf_Multicell
      */
     public function getTagSize( $tag )
     {
-
         return $this->getTagAttribute( $tag, 'size' );
     }
 
@@ -301,7 +299,6 @@ class Pdf_Multicell
      */
     public function getTagColor( $tag )
     {
-
         return $this->getTagAttribute( $tag, 'color' );
     }
 
@@ -314,7 +311,6 @@ class Pdf_Multicell
      */
     protected function getTagAttribute( $sTag, $sAttribute )
     {
-
         //tags are saved uppercase!
         $sTag = strtoupper( $sTag );
 
@@ -348,7 +344,6 @@ class Pdf_Multicell
      */
     protected function applyStyle( $tag )
     {
-
         //use case insensitive tags
         $tag = trim( strtoupper( $tag ) );
 
@@ -394,7 +389,6 @@ class Pdf_Multicell
      */
     protected function saveCurrentStyle()
     {
-
         $this->TagStyle[ 'DEFAULT' ][ 'family' ] = $this->oPdfi->getFontFamily();
         $this->TagStyle[ 'DEFAULT' ][ 'style' ] = $this->oPdfi->getFontStyle();
         $this->TagStyle[ 'DEFAULT' ][ 'size' ] = $this->oPdfi->getFontSizePt();
@@ -412,7 +406,6 @@ class Pdf_Multicell
      */
     protected function makeLine( $nWidth )
     {
-
         //last line break >> current line break
         $this->aDataExtraInfo[ 'LAST_LINE_BR' ] = $this->aDataExtraInfo[ 'CURRENT_LINE_BR' ];
         $this->aDataExtraInfo[ 'CURRENT_LINE_BR' ] = "";
@@ -682,7 +675,6 @@ class Pdf_Multicell
     public function multiCell( $nWidth, $nHeight, $pData, $border = 0, $align = 'J', $fill = 0, $nPaddingLeft = 0, $nPaddingTop = 0, $nPaddingRight = 0,
                                $nPaddingBottom = 0, $bDataIsString = true )
     {
-
         //get the available width for the text
         $w_text = $this->mt_getAvailableTextWidth( $nWidth, $nPaddingLeft, $nPaddingRight );
 

@@ -31,7 +31,6 @@ class Pdf_Interface
 
     public function __construct( $pdf )
     {
-
         $this->oPdf = $pdf;
     }
 
@@ -51,8 +50,7 @@ class Pdf_Interface
      */
     public function getPageWidth()
     {
-
-        return (int) $this->oPdf->w - $this->oPdf->rMargin - $this->oPdf->lMargin;
+        return (int)$this->oPdf->w - $this->oPdf->rMargin - $this->oPdf->lMargin;
     }
 
 
@@ -63,7 +61,6 @@ class Pdf_Interface
      */
     public function getX()
     {
-
         return $this->oPdf->GetX();
     }
 
@@ -75,7 +72,6 @@ class Pdf_Interface
      */
     public function getRemainingWidth()
     {
-
         $n = $this->getPageWidth() - $this->getX();
 
         if ( $n < 0 )
@@ -96,9 +92,8 @@ class Pdf_Interface
         // split string into array of equivalent codes
         $aResult = array();
         $strlen = strlen( $str );
-        for ( $i = 0; $i < $strlen; $i++ )
-        {
-            $aResult[ ] = ord( $str[ $i ] );
+        for ( $i = 0; $i < $strlen; $i++ ) {
+            $aResult[] = ord( $str[ $i ] );
         }
 
         return $aResult;
@@ -112,7 +107,6 @@ class Pdf_Interface
      */
     public function getFontFamily()
     {
-
         return $this->oPdf->FontFamily;
     }
 
@@ -124,7 +118,6 @@ class Pdf_Interface
      */
     public function getFontStyle()
     {
-
         return $this->oPdf->FontStyle;
     }
 
@@ -136,7 +129,6 @@ class Pdf_Interface
      */
     public function getFontSizePt()
     {
-
         return $this->oPdf->FontSizePt;
     }
 
@@ -171,30 +163,25 @@ class Pdf_Interface
     {
 
         // Put an image on the page
-        if ( !isset( $this->oPdf->images[ $file ] ) )
-        {
+        if ( !isset( $this->oPdf->images[ $file ] ) ) {
             $pos = strrpos( $file, '.' );
             $type = substr( $file, $pos + 1 );
             $type = strtolower( $type );
             if ( $type == 'jpeg' )
                 $type = 'jpg';
             $mtd = '_parse' . $type;
-            if ( !method_exists( $this->oPdf, $mtd ) )
-            {
+            if ( !method_exists( $this->oPdf, $mtd ) ) {
                 $this->oPdf->Error( 'Unsupported image type: ' . $type );
             }
             $info = $this->oPdf->$mtd( $file );
             $info[ 'i' ] = count( $this->oPdf->images ) + 1;
             $this->oPdf->images[ $file ] = $info;
-        }
-        else
-        {
+        } else {
             $info = $this->oPdf->images[ $file ];
         }
 
         // Automatic width and height calculation if needed
-        if ( $w == 0 && $h == 0 )
-        {
+        if ( $w == 0 && $h == 0 ) {
             // Put image at 96 dpi
             $w = -96;
             $h = -96;
@@ -219,7 +206,7 @@ class Pdf_Interface
      */
     public function Cell( $w, $h = 0, $txt = '', $border = 0, $ln = 0, $align = '', $fill = false, $link = '' )
     {
-        $this->oPdf->Cell( $w, $h, $txt, $border, $ln, $align, $fill, $link, 0, false );
+        $this->oPdf->Cell( $w, $h, $txt, $border, $ln, $align, $fill, $link );
     }
 }
 

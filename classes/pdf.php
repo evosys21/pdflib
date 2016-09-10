@@ -24,6 +24,47 @@ require_once( dirname( __FILE__ ) . '/../fpdf.php' );
 
 class Pdf extends FPDF
 {
+    public $images;
+    public $w;
+    public $tMargin;
+    public $bMargin;
+    public $lMargin;
+    public $rMargin;
+    public $k;
+    public $h;
+    public $x;
+    public $y;
+    public $ws;
+    public $FontFamily;
+    public $FontStyle;
+    public $FontSize;
+    public $FontSizePt;
+    public $CurrentFont;
+    public $TextColor;
+    public $FillColor;
+    public $ColorFlag;
+    public $AutoPageBreak;
+    public $CurOrientation;
+
+    public function _out( $s )
+    {
+        return parent::_out( $s );
+    }
+
+    public function _parsejpg( $file )
+    {
+        return parent::_parsejpg( $file );
+    }
+
+    public function _parsegif( $file )
+    {
+        return parent::_parsegif( $file );
+    }
+
+    public function _parsepng( $file )
+    {
+        return parent::_parsepng( $file );
+    }
 
 }
 
