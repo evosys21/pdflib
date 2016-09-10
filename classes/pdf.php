@@ -66,5 +66,14 @@ class Pdf extends FPDF
         return parent::_parsepng( $file );
     }
 
+    public function Cell( $w, $h = 0, $txt = '', $border = 0, $ln = 0, $align = '', $fill = false, $link = '' )
+    {
+        /**
+         * AB 10.09.2016 - for "some" reason(haven't investigated the TXT
+         */
+        $txt = strval( $txt );
+        parent::Cell( $w, $h, $txt, $border, $ln, $align, $fill, $link );
+    }
+
 }
 
