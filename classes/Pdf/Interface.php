@@ -146,7 +146,6 @@ class Pdf_Interface
      */
     public function Image( $file, $x = null, $y = null, $w = 0, $h = 0, $type = '', $link = '' )
     {
-
         $this->oPdf->Image( $file, $x, $y, $w, $h, $type, $link );
     }
 
@@ -161,7 +160,6 @@ class Pdf_Interface
      */
     public function getImageParams( $file, $w = 0, $h = 0 )
     {
-
         // Put an image on the page
         if ( !isset( $this->oPdf->images[ $file ] ) ) {
             $pos = strrpos( $file, '.' );

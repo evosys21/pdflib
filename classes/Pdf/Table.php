@@ -680,10 +680,8 @@ class Pdf_Table
     {
         if ( '' != $this->getTableConfig( 'BRD_TYPE_END_PAGE' ) )
         {
-
             if ( strpos( $this->getTableConfig( 'BRD_TYPE_END_PAGE' ), 'B' ) >= 0 )
             {
-
                 //set the colors
                 list ( $r, $g, $b ) = $this->getTableConfig( 'BORDER_COLOR' );
                 $this->oPdf->SetDrawColor( $r, $g, $b );
@@ -834,7 +832,6 @@ class Pdf_Table
         }
         else
         {
-
             $type = isset( $data[ 'TYPE' ] ) ? $data[ 'TYPE' ] : 'MULTICELL';
             $type = strtoupper( $type );
 
@@ -903,7 +900,6 @@ class Pdf_Table
         //calculate the maximum height of the cells
         for ( $i = 0; $i < $this->nColumns; $i++ )
         {
-
             if ( isset( $data[ $i ] ) )
             {
                 $oCell = $this->getCellObject( $data[ $i ] );
@@ -928,7 +924,6 @@ class Pdf_Table
 
             if ( !empty( $aLastDataCache ) )
             {
-
                 //there was at least one row before and was data or header
                 $cell = &$aLastDataCache[ 'DATA' ][ $i ];
                 /** @var $cell Pdf_Table_Cell_Interface */
@@ -972,7 +967,6 @@ class Pdf_Table
              */
             if ( $oCell->getColSpan() > 1 )
             {
-
                 for ( $j = 1; $j < $oCell->getColSpan(); $j++ )
                 {
                     //if there is a colspan, then calculate the number of lines also with the with of the next cell
@@ -1051,7 +1045,6 @@ class Pdf_Table
 
         for ( $ix = $iStartIndex; $ix < $iItems; $ix++ )
         {
-
             $val = &$aRefCache[ $ix ];
 
             if ( !in_array( $val[ 'DATATYPE' ], array(
@@ -1067,7 +1060,6 @@ class Pdf_Table
 
             foreach ( $val[ 'ROWSPAN' ] as $k )
             {
-
                 /** @var $cell Pdf_Table_Cell_Interface */
                 $cell = &$val[ 'DATA' ][ $k ];
 
@@ -1124,7 +1116,6 @@ class Pdf_Table
 
         foreach ( $aRowSpans as $val1 )
         {
-
             /** @var Pdf_Table_Cell_Abstract $cell */
             $cell = $val1[ 'reference_cell' ];
 
@@ -1177,7 +1168,6 @@ class Pdf_Table
 
         for ( $i = 0; $i < $iItems; $i++ )
         {
-
             $val = &$aDC[ $i ];
 
             switch ( $val[ 'DATATYPE' ] )
@@ -1244,7 +1234,6 @@ class Pdf_Table
             }
             else
             {
-
                 //@formatter:off
 
                 /**
@@ -1320,7 +1309,6 @@ class Pdf_Table
                             //parse the data's on this line
                             for ( $j = 0; $j < $this->nColumns; $j++ )
                             {
-
                                 /** @var $cell Pdf_Table_Cell_Abstract */
                                 /** @var $cellSplit Pdf_Table_Cell_Abstract */
 
@@ -1371,7 +1359,6 @@ class Pdf_Table
 
                             foreach ( $aRowSpans as $rws )
                             {
-
                                 $rData = &$aDC[ $rws[ 0 ] ][ 'DATA' ][ $rws[ 1 ] ];
                                 /** @var $rData Pdf_Table_Cell_Abstract */
 
@@ -1422,7 +1409,6 @@ class Pdf_Table
                         }
                         else
                         {
-
                             /**
                              * *************************************************
                              * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -1441,7 +1427,6 @@ class Pdf_Table
 
                             foreach ( $aRowSpans as $rws )
                             {
-
                                 $rData = &$aDC[ $rws[ 0 ] ][ 'DATA' ][ $rws[ 1 ] ];
                                 /** @var $rData Pdf_Table_Cell_Abstract */
 
@@ -1586,7 +1571,6 @@ class Pdf_Table
      */
     protected function _cachePrepOutputData()
     {
-
         $this->bDataOnCurrentPage = false;
 
         //save the old auto page break value
@@ -1602,7 +1586,6 @@ class Pdf_Table
 
         for ( $k = 0; $k < $iItems; $k++ )
         {
-
             $val = &$aDataCache[ $k ];
 
             //each array contains one line
@@ -1620,7 +1603,6 @@ class Pdf_Table
             //Draw the cells of the row
             for ( $i = 0; $i < $this->nColumns; $i++ )
             {
-
                 /** @var $cell Pdf_Table_Cell_Interface */
                 $cell = &$data[ $i ];
 
@@ -1630,7 +1612,6 @@ class Pdf_Table
 
                 if ( $cell->getSkipped() === false )
                 {
-
                     //render the cell to the pdf
                     //$data[$i]->render($rowHeight = $val['HEIGHT']);
 

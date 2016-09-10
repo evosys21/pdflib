@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="2" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="#828 - Addons don't work in PHP7">
+    <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="#946 - Code improvements">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/font/courier.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/font/courierb.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/font/courierbi.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/font/courieri.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/font/helvetica.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/font/helveticab.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/font/helveticabi.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/font/helveticai.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/font/symbol.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/font/times.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/font/timesb.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/font/timesbi.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/font/timesi.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/font/zapfdingbats.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/andy.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/andy.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/fpdf.iml" afterPath="$PROJECT_DIR$/.idea/fpdf.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Pdf/Interface.php" afterPath="$PROJECT_DIR$/classes/Pdf/Interface.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Pdf/Multicell.php" afterPath="$PROJECT_DIR$/classes/Pdf/Multicell.php" />
@@ -16,38 +26,18 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Pdf/Table.php" afterPath="$PROJECT_DIR$/classes/Pdf/Table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Pdf/Table/Cell/Abstract.php" afterPath="$PROJECT_DIR$/classes/Pdf/Table/Cell/Abstract.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Pdf/Table/Cell/Empty.php" afterPath="$PROJECT_DIR$/classes/Pdf/Table/Cell/Empty.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Pdf/Table/Cell/Image.php" afterPath="$PROJECT_DIR$/classes/Pdf/Table/Cell/Image.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Pdf/Table/Cell/Multicell.php" afterPath="$PROJECT_DIR$/classes/Pdf/Table/Cell/Multicell.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/dev-multicell-transparent.php" afterPath="$PROJECT_DIR$/dev/dev-multicell-transparent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/dev-table-images.php" afterPath="$PROJECT_DIR$/dev/dev-table-images.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/dev-table-images1.php" afterPath="$PROJECT_DIR$/dev/dev-table-images1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/dev-table-test-bug1.php" afterPath="$PROJECT_DIR$/dev/dev-table-test-bug1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/dev-table-test.php" afterPath="$PROJECT_DIR$/dev/dev-table-test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/dev-table1-simple-table-page-break.php" afterPath="$PROJECT_DIR$/dev/dev-table1-simple-table-page-break.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/dev-table1.php" afterPath="$PROJECT_DIR$/dev/dev-table1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/dev-table2-simple-table-page-break.php" afterPath="$PROJECT_DIR$/dev/dev-table2-simple-table-page-break.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/dev-table2.php" afterPath="$PROJECT_DIR$/dev/dev-table2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/dev-table3.php" afterPath="$PROJECT_DIR$/dev/dev-table3.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/dev-table4-line-breaks.php" afterPath="$PROJECT_DIR$/dev/dev-table4-line-breaks.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/dev-table5-line-breaks.php" afterPath="$PROJECT_DIR$/dev/dev-table5-line-breaks.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/dev-table6-bug1.php" afterPath="$PROJECT_DIR$/dev/dev-table6-bug1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/images/dev-table-images.php" afterPath="$PROJECT_DIR$/dev/images/dev-table-images.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/images/dev-table-images1.php" afterPath="$PROJECT_DIR$/dev/images/dev-table-images1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/table/dev-table1.php" afterPath="$PROJECT_DIR$/dev/table/dev-table1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/table/example-table-1-overview.php" afterPath="$PROJECT_DIR$/dev/table/example-table-1-overview.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example-multicell-1-overview.php" afterPath="$PROJECT_DIR$/example-multicell-1-overview.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example-multicell-2-overview-page-break.php" afterPath="$PROJECT_DIR$/example-multicell-2-overview-page-break.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example-multicell-4-page-break.php" afterPath="$PROJECT_DIR$/example-multicell-4-page-break.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example-table-1-overview.php" afterPath="$PROJECT_DIR$/example-table-1-overview.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example-table-3-detailed.php" afterPath="$PROJECT_DIR$/example-table-3-detailed.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example-table-4-override.php" afterPath="$PROJECT_DIR$/example-table-4-override.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/pdf.php" afterPath="$PROJECT_DIR$/classes/pdf.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example-table-2-overview.php" afterPath="$PROJECT_DIR$/example-table-2-overview.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/table/code-example-alignments.php" afterPath="$PROJECT_DIR$/examples/table/code-example-alignments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/table/code-example-transparent.php" afterPath="$PROJECT_DIR$/examples/table/code-example-transparent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/table/code-example1.php" afterPath="$PROJECT_DIR$/examples/table/code-example1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/table/code-example2.php" afterPath="$PROJECT_DIR$/examples/table/code-example2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/table/code-example3.php" afterPath="$PROJECT_DIR$/examples/table/code-example3.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mypdf.php" afterPath="$PROJECT_DIR$/mypdf.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/table_example2.inc" afterPath="$PROJECT_DIR$/table_example2.inc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/BaseExamplesTestCase.php" afterPath="$PROJECT_DIR$/tests/BaseExamplesTestCase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/BaseTestCase.php" afterPath="$PROJECT_DIR$/tests/BaseTestCase.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php" afterPath="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/TableExamples2Test.php" afterPath="$PROJECT_DIR$/tests/functional/TableExamples2Test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/TableTest.php" afterPath="$PROJECT_DIR$/tests/functional/TableTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/helper/Helper.php" afterPath="$PROJECT_DIR$/tests/helper/Helper.php" />
     </list>
     <ignored path="fpdf.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,21 +58,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Empty.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/classes/Pdf/Table/Cell/Empty.php">
+      <file leaf-file-name="pdf.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/pdf.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="140">
+              <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+              <folding>
+                <element signature="e#6#977#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="version_table" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/version_table">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Multicell.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/Pdf/Table/Cell/Multicell.php">
+      <file leaf-file-name="version_multicell" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/version_multicell">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="363" column="14" selection-start-line="363" selection-start-column="14" selection-end-line="363" selection-end-column="14" />
+            <state relative-caret-position="0">
+              <caret line="0" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fpdf.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fpdf/fpdf.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -104,9 +116,6 @@
         <option value="$PROJECT_DIR$/pdfFactory.php" />
         <option value="$PROJECT_DIR$/fpdf.php" />
         <option value="$PROJECT_DIR$/ss.php" />
-        <option value="$PROJECT_DIR$/classes/Pdf/Interface.php" />
-        <option value="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php" />
-        <option value="$PROJECT_DIR$/classes/pdf.php" />
         <option value="$PROJECT_DIR$/classes/Pdf/String/Tags.php" />
         <option value="$PROJECT_DIR$/classes/Pdf/Multicell.php" />
         <option value="$PROJECT_DIR$/classes/Pdf/Table.php" />
@@ -118,6 +127,10 @@
         <option value="$PROJECT_DIR$/dev/dev-table-images1.php" />
         <option value="$PROJECT_DIR$/classes/Pdf/Table/Cell/Multicell.php" />
         <option value="$PROJECT_DIR$/classes/Pdf/Table/Cell/Empty.php" />
+        <option value="$PROJECT_DIR$/tests/BaseTestCase.php" />
+        <option value="$PROJECT_DIR$/classes/Pdf/Interface.php" />
+        <option value="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php" />
+        <option value="$PROJECT_DIR$/classes/pdf.php" />
       </list>
     </option>
   </component>
@@ -206,70 +219,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fpdf" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fpdf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fpdf" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fpdf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fpdf" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="functional" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fpdf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fpdf" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fpdf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fpdf" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pdf" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -381,7 +330,7 @@
       <option name="presentableId" value="Default" />
       <updated>1473501640764</updated>
       <workItem from="1473501641973" duration="6647000" />
-      <workItem from="1473510232803" duration="7122000" />
+      <workItem from="1473510232803" duration="8257000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
@@ -404,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1473510358620</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="#946 - Code improvements">
+      <created>1473525378686</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1473525378686</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -422,25 +378,26 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13769000" />
+    <option name="totallyTimeSpent" value="14904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1035" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5410959" sideWeight="0.42910448" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27511415" sideWeight="0.4978678" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5410959" sideWeight="0.42910448" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27511415" sideWeight="0.4978678" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20522387" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19292237" sideWeight="0.5708955" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21917808" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40753424" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13326226" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4885845" sideWeight="0.5708955" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21917808" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40753424" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -456,14 +413,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="#828 - Addons don't work in PHP7" />
-    <option name="LAST_COMMIT_MESSAGE" value="#828 - Addons don't work in PHP7" />
+    <MESSAGE value="#946 - Code improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="#946 - Code improvements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php</url>
-          <line>359</line>
+          <line>344</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
@@ -528,18 +486,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/version_multicell">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content/createdby.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -547,13 +498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/version_table">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -606,28 +550,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/Pdf/Interface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fpdf.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
           <caret line="965" column="43" selection-start-line="965" selection-start-column="43" selection-end-line="965" selection-end-column="43" />
-          <folding>
-            <element signature="e#6#578#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="361" column="27" selection-start-line="361" selection-start-column="27" selection-end-line="361" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -636,14 +562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/pdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -760,6 +678,72 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/BaseTestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Pdf/Interface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2499">
+          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/dev-table1-simple-table-page-break.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fpdf/fpdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/pdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+          <folding>
+            <element signature="e#6#977#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/version_table">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/version_multicell">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="5" />
           <folding />
         </state>
       </provider>

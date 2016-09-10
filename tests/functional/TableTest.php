@@ -17,7 +17,6 @@ class TableTest extends PHPUnit_Framework_TestCase
 
     protected function runTestModelSimple( $require, $name )
     {
-
         $oPdf = $this->getPdfObject1();
 
         require $require;
@@ -49,7 +48,6 @@ class TableTest extends PHPUnit_Framework_TestCase
 
     protected function runTestModel1( $require, $name )
     {
-
         $oPdf = $this->getPdfObject1();
 
         $nHeight = $oPdf->h - 60;
@@ -93,7 +91,6 @@ class TableTest extends PHPUnit_Framework_TestCase
 
     protected function runTestModel2( $require, $name, $y )
     {
-
         $oPdf = $this->getPdfObject1();
 
         $oPdf->SetY( $y );
@@ -138,7 +135,6 @@ class TableTest extends PHPUnit_Framework_TestCase
      */
     public function testTableModel1()
     {
-
         $this->runTestModel1( dirname( __FILE__ ) . '/table/draw-table-model1.php', __FUNCTION__ );
     }
 
@@ -148,7 +144,6 @@ class TableTest extends PHPUnit_Framework_TestCase
      */
     public function testTableModel2()
     {
-
         $this->runTestModel1( dirname( __FILE__ ) . '/table/draw-table-model2.php', __FUNCTION__ );
     }
 
@@ -157,7 +152,6 @@ class TableTest extends PHPUnit_Framework_TestCase
      */
     public function testTableModel3()
     {
-
         $this->runTestModel1( dirname( __FILE__ ) . '/table/draw-table-model3.php', __FUNCTION__ );
     }
 
@@ -166,7 +160,6 @@ class TableTest extends PHPUnit_Framework_TestCase
      */
     public function testDisablePageBreak()
     {
-
         $this->runTestModelSimple( dirname( __FILE__ ) . '/table/disable-page-break.php', __FUNCTION__ );
     }
 }

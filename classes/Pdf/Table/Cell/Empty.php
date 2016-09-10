@@ -41,7 +41,6 @@ class Pdf_Table_Cell_Empty extends Pdf_Table_Cell_Abstract implements Pdf_Table_
 
     public function copyProperties( Pdf_Table_Cell_Abstract $oSource )
     {
-
         $aProps = array_keys( $this->aDefaultValues );
 
         foreach ( $aProps as $sProperty )

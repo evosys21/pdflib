@@ -125,7 +125,6 @@ class Pdf_Multicell
      */
     public function __construct( $oPdf )
     {
-
         $this->oPdf = $oPdf;
         $this->oPdfi = new Pdf_Interface( $oPdf );
         $this->sLineBreakingChars = self::SEPARATOR;
@@ -234,7 +233,6 @@ class Pdf_Multicell
      */
     public function setStyle( $tag, $fontfamily, $fontstyle, $fontsize, $color )
     {
-
         if ( $tag == "ttags" )
             $this->oPdf->Error( ">> ttags << is reserved TAG Name." );
         if ( $tag == "" )
@@ -261,7 +259,6 @@ class Pdf_Multicell
      */
     public function getTagFont( $tag )
     {
-
         return $this->getTagAttribute( $tag, 'family' );
     }
 

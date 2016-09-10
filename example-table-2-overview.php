@@ -92,7 +92,6 @@ for ( $j = 0; $j < 45; $j++ )
         $aRow[ 1 ][ 'LINE_SIZE' ] = 5;
     } elseif ( $j == 1 )
     {
-
         $aRow[ 0 ][ 'TEXT' ] = "Top Right Align <p>Align Top</p> Right Right Align";
         $aRow[ 0 ][ 'ALIGN' ] = "RT";
 

@@ -11,7 +11,6 @@ class BaseTestCase extends PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-
         parent::setUp();
     }
 
@@ -21,7 +20,6 @@ class BaseTestCase extends PHPUnit_Framework_TestCase
      */
     protected function tearDown()
     {
-
         parent::tearDown();
     }
 
@@ -29,11 +27,10 @@ class BaseTestCase extends PHPUnit_Framework_TestCase
     /**
      * Returns the pdf object
      *
-     * @return myPdf
+     * @return Pdf
      */
     protected function getPdfObject()
     {
-
         //create the pdf object and do some initialization
         $oPdf = new Pdf();
 

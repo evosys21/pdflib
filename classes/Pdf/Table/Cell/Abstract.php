@@ -145,7 +145,6 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
     {
         foreach ( $aValues as $key => $value )
         {
-
             if ( $bCheckSet && $this->isInternValueSet( $key ) )
             {
                 //property is already set, ignore the value
@@ -190,7 +189,6 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
 
         if ( isset( $this->aPropertyMethodMap[ $key ] ) )
         {
-
             call_user_func_array( array(
                 $this,
                 $this->aPropertyMethodMap[ $key ]

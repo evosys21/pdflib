@@ -44,7 +44,6 @@ for ( $i = 0; $i < 6; $i++ )
 
     if ( $i >= 3 && $i <= 5 )
     {
-
         $aRow[ 0 ][ 'TEXT' ] = "Forced\nLine\nForced\nLine\nForced\nLine";
         $aRow[ 1 ] = $aImageCell;
         $aRow[ 1 ][ 'ALIGN' ] = Pdf_Tools::getNextValue( $aAlignments, $k );

@@ -16,7 +16,6 @@ class Helper
      */
     public static function pdfObject1()
     {
-
         require_once( __DIR__ . '/testPdf.php' );
 
         //create the pdf object and do some initialization

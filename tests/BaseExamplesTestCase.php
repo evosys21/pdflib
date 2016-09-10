@@ -9,7 +9,6 @@ class BaseExamplesTestCase extends PHPUnit_Framework_TestCase
      */
     protected function getPdfObject()
     {
-
         //create the pdf object and do some initialization
         $oPdf = new myPdf();
 
@@ -25,7 +24,6 @@ class BaseExamplesTestCase extends PHPUnit_Framework_TestCase
 
     protected function runTestWithExample( $require, $name )
     {
-
         //remove the .php extention
         $name = str_replace( ".php", '', $name );
 

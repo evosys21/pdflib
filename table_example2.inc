@@ -83,7 +83,6 @@ for ( $j = 1; $j <= 15; $j++ )
 
     if ( $j == 9 )
     {
-
         $oTable->setStyle( "sd1", "helvetica", "", 6, "0,49,159" );
         $oTable->setStyle( "sd2", "helvetica", "", 5, "140,12,12" );
         $oTable->setStyle( "sd3", "helvetica", "", 6, "0,5,90" );
@@ -103,7 +102,6 @@ for ( $j = 1; $j <= 15; $j++ )
 
     if ( $j == 14 )
     {
-
         $aRow[ 1 ][ 'TEXT' ] = "Cell Properties Overwriting Example";
         $aRow[ 1 ][ 'TEXT_FONT' ] = "Times";
         $aRow[ 1 ][ 'TEXT_SIZE' ] = 7;

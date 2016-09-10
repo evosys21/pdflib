@@ -47,7 +47,6 @@ class Pdf_Table_Cell_Image extends Pdf_Table_Cell_Abstract implements Pdf_Table_
      */
     public function __construct( $pdf, $file = '', $width = 0, $height = 0, $type = '', $link = '' )
     {
-
         parent::__construct( $pdf );
 
         if ( strlen( $file ) > 0 )
@@ -59,7 +58,6 @@ class Pdf_Table_Cell_Image extends Pdf_Table_Cell_Abstract implements Pdf_Table_
 
     public function setProperties( array $aValues = array() )
     {
-
         //call the parent function
         parent::setProperties( $aValues );
 
@@ -75,7 +73,6 @@ class Pdf_Table_Cell_Image extends Pdf_Table_Cell_Abstract implements Pdf_Table_
 
     public function setImage( $file = '', $width = 0, $height = 0, $type = '', $link = '' )
     {
-
         $this->sFile = $file;
         $this->sType = $type;
         $this->sLink = $link;
@@ -101,28 +98,24 @@ class Pdf_Table_Cell_Image extends Pdf_Table_Cell_Abstract implements Pdf_Table_
      */
     public function setAlign( $alignment )
     {
-
         $this->sAlignment = strtoupper( $alignment );
     }
 
 
     public function isSplittable()
     {
-
         return false;
     }
 
 
     public function getType()
     {
-
         return $this->sType;
     }
 
 
     public function getLink()
     {
-
         return $this->sLink;
     }
 
@@ -132,7 +125,6 @@ class Pdf_Table_Cell_Image extends Pdf_Table_Cell_Abstract implements Pdf_Table_
      */
     public function render()
     {
-
         $this->renderCellLayout();
 
         $x = $this->oPdf->GetX() + $this->getBorderSize();
@@ -188,7 +180,6 @@ class Pdf_Table_Cell_Image extends Pdf_Table_Cell_Abstract implements Pdf_Table_
      */
     protected function doChecks()
     {
-
         //check if the image is set
         if ( 0 == strlen( $this->sFile ) )
         {
@@ -204,7 +195,6 @@ class Pdf_Table_Cell_Image extends Pdf_Table_Cell_Abstract implements Pdf_Table_
 
     public function processContent()
     {
-
         $this->doChecks();
 
         $this->setCellHeight( $this->getContentHeight() + $this->getPaddingTop() + $this->getPaddingBottom() + 2 * $this->getBorderSize() );

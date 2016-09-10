@@ -11,7 +11,6 @@ class TableExamples2Test extends PHPUnit_Framework_TestCase
      */
     protected function getPdfObject()
     {
-
         //create the pdf object and do some initialization
         $oPdf = new testPdf();
 
@@ -27,7 +26,6 @@ class TableExamples2Test extends PHPUnit_Framework_TestCase
 
     protected function runTestWithExample( $require, $name )
     {
-
         //remove the .php extention
         $name = str_replace( ".php", '', $name );
 
@@ -64,7 +62,6 @@ class TableExamples2Test extends PHPUnit_Framework_TestCase
      */
     public function testExample1()
     {
-
         $require = APPLICATION_PATH . '/examples/table/code-example1.php';
 
         $this->runTestWithExample( $require, 'table-' . basename( $require ) );
@@ -76,7 +73,6 @@ class TableExamples2Test extends PHPUnit_Framework_TestCase
      */
     public function testExample2()
     {
-
         $require = APPLICATION_PATH . '/examples/table/code-example2.php';
 
         $this->runTestWithExample( $require, 'table-' . basename( $require ) );
@@ -85,7 +81,6 @@ class TableExamples2Test extends PHPUnit_Framework_TestCase
 
     public function testExample3()
     {
-
         $require = APPLICATION_PATH . '/examples/table/code-example3.php';
 
         $this->runTestWithExample( $require, 'table-' . basename( $require ) );
@@ -94,7 +89,6 @@ class TableExamples2Test extends PHPUnit_Framework_TestCase
 
     public function testExampleAlignments()
     {
-
         $require = APPLICATION_PATH . '/examples/table/code-example-alignments.php';
 
         $this->runTestWithExample( $require, 'table-' . basename( $require ) );
@@ -103,7 +97,6 @@ class TableExamples2Test extends PHPUnit_Framework_TestCase
 
     public function testExampleTransparent()
     {
-
         $require = APPLICATION_PATH . '/examples/table/code-example-transparent.php';
 
         $this->runTestWithExample( $require, 'table-' . basename( $require ) );

@@ -50,7 +50,6 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
      */
     public function __construct( $pdf, $data = ' ' )
     {
-
         parent::__construct( $pdf );
 
         if ( is_string( $data ) )
@@ -66,7 +65,6 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
 
     public function getDefaultValues()
     {
-
 
         $aValues = array(
             'TEXT' => '',
@@ -93,7 +91,6 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
      */
     public function setAlign( $alignment )
     {
-
         parent::setAlign( $alignment );
 
         $vertical = "TBM";
@@ -121,7 +118,6 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
 
     public function attachMulticell( $oMulticell )
     {
-
         $this->oMulticell = $oMulticell;
         $this->oMulticell->enableFill( false );
     }
@@ -135,7 +131,6 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
      */
     public function setCellDrawWidth( $value )
     {
-
         parent::setCellDrawWidth( $value );
         $this->calculateContentWidth();
     }
@@ -148,7 +143,6 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
      */
     public function isSplittable()
     {
-
         //return false;
 
 
@@ -170,7 +164,6 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
      */
     public function split( $nRowHeight, $nMaxHeight )
     {
-
         $oCell2 = clone $this;
 
         /**
@@ -193,7 +186,6 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
                 }
                 elseif ( ( $x + $this->getCellHeight() ) >= $nMaxHeight )
                 {
-
                     //CASE 2
                     $fHeightSplit = $nMaxHeight - $x;
 
@@ -285,21 +277,18 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
 
     public function getText()
     {
-
         return $this->TEXT;
     }
 
 
     public function getLineSize()
     {
-
         return $this->LINE_SIZE;
     }
 
 
     public function processContent()
     {
-
         //Text Color = TEXT_COLOR
         list ( $r, $g, $b ) = $this->TEXT_COLOR;
         $this->oPdf->SetTextColor( $r, $g, $b );
@@ -315,7 +304,6 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
 
     public function calculateCellHeight()
     {
-
         $this->nLines = count( $this->TEXT_STRLINES );
         $this->nCellHeight = $this->getLineSize() * $this->nLines + $this->getPaddingTop() + $this->getPaddingBottom();
 
@@ -327,7 +315,6 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
      */
     public function calculateContentWidth()
     {
-
         $this->nContentWidth = $this->getCellWidth() - $this->getPaddingLeft() - $this->getPaddingRight();
 
         if ( $this->nContentWidth < 0 )
@@ -342,7 +329,6 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
      */
     public function render()
     {
-
         $this->renderCellLayout();
 
         //Text Color = TEXT_COLOR
@@ -373,7 +359,6 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
     function multiCellTbl( $w, $h, $txtData, $align = 'J', $valign = 'T', $vh = 0, $vtop = 0, $pad_left = 0, $pad_top = 0, $pad_right = 0,
                            $pad_bottom = 0 )
     {
-
         $wh_Top = 0;
 
         if ( $vtop > 0 )

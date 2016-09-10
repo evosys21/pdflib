@@ -65,7 +65,6 @@ class Pdf_String_Tags
      */
     protected function OpenTag( $p_tag, $p_array )
     {
-
         $aTAGS = &$this->aTAGS;
         $aHREF = &$this->aHREF;
         $maxElem = &$this->iTagMaxElem;
@@ -162,7 +161,6 @@ class Pdf_String_Tags
      */
     protected function optimize_tags( $result )
     {
-
         if ( count( $result ) == 0 ) return $result;
 
         $res_result = array();
@@ -171,7 +169,6 @@ class Pdf_String_Tags
 
         while ( $i < count( $result ) )
         {
-
             //if they have the same tag then we concatenate them
             if ( ( $current[ 'tag' ] == $result[ $i ][ 'tag' ] ) && ( $current[ 'params' ] == $result[ $i ][ 'params' ] ) )
             {
@@ -202,7 +199,6 @@ class Pdf_String_Tags
      */
     public function get_tags( $p_str )
     {
-
         $aTAGS = &$this->aTAGS;
         $aHREF = &$this->aHREF;
         $aTAGS = array();
