@@ -1,0 +1,1 @@
+phpunit -c phpunit-gen.xml

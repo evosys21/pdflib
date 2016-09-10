@@ -1,0 +1,2085 @@
+%PDF-1.3
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/Annots [<</Type /Annot /Subtype /Link /Rect [56.69 812.29 117.38 806.29] /Border [0 0 0] /A <</S /URI /URI (www.interpid.eu/fpdf-addons)>>>><</Type /Annot /Subtype /Link /Rect [56.69 803.79 76.04 797.79] /Border [0 0 0] /A <</S /URI /URI (www.interpid.eu/fpdf-addons)>>>><</Type /Annot /Subtype /Link /Rect [79.09 803.79 121.45 797.79] /Border [0 0 0] /A <</S /URI /URI (mailto:andy@interpid.eu)>>>><</Type /Annot /Subtype /Link /Rect [453.54 813.54 566.93 799.26] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu)>>>><</Type /Annot /Subtype /Link /Rect [329.55 747.26 466.92 735.26] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu/pdf-multicell)>>>><</Type /Annot /Subtype /Link /Rect [428.81 732.09 448.82 722.09] /Border [0 0 0] /A <</S /URI /URI (http://http://www.interpid.eu/pdf-tcpdf-addons)>>>><</Type /Annot /Subtype /Link /Rect [272.86 280.39 410.22 268.39] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu/pdf-multicell)>>>><</Type /Annot /Subtype /Link /Rect [372.12 268.06 392.13 258.06] /Border [0 0 0] /A <</S /URI /URI (http://http://www.interpid.eu/pdf-tcpdf-addons)>>>>]
+/Contents 4 0 R>>
+endobj
+4 0 obj
+<</Length 25130>>
+stream
+2 J
+0.57 w
+BT /F1 11.00 Tf ET
+0.996 1.000 0.961 rg
+BT /F1 6.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F1 6.00 Tf ET
+0.000 Tw
+q 0.627 0.627 0.627 rg BT 56.69 807.49 Td (FPDF Advanced Table) Tj ET Q
+0 Tw
+q 0.627 0.627 0.627 rg BT 56.69 798.99 Td (Author:) Tj ET Q
+BT /F1 11.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 76.04 797.49 Td ( ) Tj ET Q
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 0.467 0.863 rg BT 79.09 798.99 Td (Andrei Bintintan) Tj ET Q
+BT /F1 11.00 Tf ET
+q 113.39 0 0 14.29 453.54 799.26 cm /I1 Do Q
+BT /F2 8.00 Tf ET
+BT /F1 5.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F3 12.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 5.50 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 5.50 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 5.50 Tf ET
+BT /F3 7.50 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 9.50 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 6.50 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 8.50 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 7.50 Tf ET
+BT /F1 5.50 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 5.00 Tf ET
+BT /F1 8.50 Tf ET
+BT /F1 4.50 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 6.50 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F1 4.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 9.50 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 5.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 5.50 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 6.50 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 7.50 Tf ET
+BT /F1 5.50 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F3 12.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 5.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 5.50 Tf ET
+BT /F1 7.50 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 9.50 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 6.50 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 8.50 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 7.50 Tf ET
+BT /F1 5.50 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 7.50 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 5.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 8.50 Tf ET
+BT /F1 4.50 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 6.50 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F1 4.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 9.50 Tf ET
+BT /F1 3.50 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 5.50 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 3.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 5.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 5.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 5.50 Tf ET
+BT /F1 7.50 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 9.50 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 6.50 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 8.50 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 7.50 Tf ET
+BT /F1 5.50 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 7.50 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 5.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 8.50 Tf ET
+BT /F1 4.50 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 6.50 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F1 4.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 9.50 Tf ET
+BT /F1 3.50 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 5.50 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 3.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 5.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 5.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F2 8.00 Tf ET
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 785.20 56.69 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 96.49 777.13 Td (Header 1) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+141.73 785.20 85.04 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 167.36 777.13 Td (Header 2) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+226.77 785.20 113.39 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 266.57 777.13 Td (Header 3) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+340.16 785.20 113.39 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 379.95 777.13 Td (Header 4) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+453.54 785.20 56.69 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 464.99 777.13 Td (Header 5) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 773.86 56.69 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 96.49 765.79 Td (Header 1) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+141.73 773.86 85.04 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 167.36 765.79 Td (Header 2) Tj ET Q
+0.57 w
+0.647 0.980 0.863 rg
+0.000 0.361 0.694 RG
+226.77 773.86 226.77 -22.68 re B 
+0 Tw
+q 0.039 0.078 0.392 rg BT 290.81 760.12 Td (Header Colspan/Rowspan) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+453.54 773.86 56.69 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 464.99 765.79 Td (Header 5) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 762.52 56.69 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 112.27 754.45 Td ( ) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+141.73 762.52 85.04 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 183.14 754.45 Td ( ) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+453.54 762.52 56.69 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 480.78 754.45 Td ( ) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 751.18 56.69 -34.02 re B 
+BT /F1 5.00 Tf ET
+0 Tw
+q 0.000 g BT 100.88 732.67 Td (Row No - 0) Tj ET Q
+q 0.000 g BT 113.39 725.59 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+141.73 751.18 368.50 -34.02 re B 
+BT /F1 8.00 Tf ET
+BT /F1 10.00 Tf ET
+0 Tw
+q 0.510 0.000 0.118 rg BT 185.05 738.26 Td (All table cells are fully functional ) Tj ET Q
+BT /F3 12.00 Tf ET
+0 Tw
+q 0.000 0.000 0.471 rg BT 329.55 737.66 Td (pdf Advanced Multicells) Tj ET Q
+BT /F1 10.00 Tf ET
+0 Tw
+q 0.510 0.000 0.118 rg BT 203.14 724.09 Td (Details about Pdf Advanced Multicell can be found ) Tj ET Q
+0 Tw
+q 0.000 0.592 0.784 rg BT 428.81 724.09 Td (here) Tj ET Q
+q 0.000 0.592 0.784 rg BT 325.98 715.58 Td () Tj ET Q
+BT /F1 8.00 Tf ET
+0.28 w
+0.118 0.980 1.000 rg
+0.000 0.361 0.694 RG
+85.04 717.17 56.69 -73.70 re B 
+BT /F1 5.50 Tf ET
+0 Tw
+q 0.000 g BT 101.30 690.00 Td (Top Right Align) Tj ET Q
+BT /F1 10.00 Tf ET
+0 Tw
+q 0.510 0.000 0.118 rg BT 96.66 677.32 Td (Align Top) Tj ET Q
+BT /F1 5.50 Tf ET
+0 Tw
+q 0.000 g BT 97.94 667.33 Td (Right Right Align) Tj ET Q
+q 0.000 g BT 138.90 660.24 Td () Tj ET Q
+0.28 w
+1.000 0.980 0.882 rg
+0.000 0.361 0.694 RG
+141.73 717.17 85.04 -73.70 re B 
+BT /F3 7.50 Tf ET
+0 Tw
+q 0.000 g BT 149.04 683.73 Td (Middle Center Align) Tj ET Q
+0 Tw
+q 0.000 g BT 166.33 672.40 Td (Bold Italic) Tj ET Q
+q 0.000 g BT 184.25 665.31 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 717.17 113.39 -73.70 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 229.61 650.17 Td (Bottom Left Align) Tj ET Q
+q 0.000 g BT 229.61 643.08 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 717.17 113.39 -73.70 re B 
+BT /F1 9.50 Tf ET
+9.246 Tw
+q 0.000 g BT 342.99 683.13 Td (Middle Justified Align) Tj ET Q
+0 Tw
+q 0.000 g BT 342.99 671.80 Td (Longer text) Tj ET Q
+q 0.000 g BT 342.99 664.71 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 717.17 56.69 -73.70 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 469.29 683.88 Td (TOP RIGHT) Tj ET Q
+0 Tw
+q 0.000 g BT 465.77 672.55 Td (Align with top) Tj ET Q
+0 Tw
+q 0.000 g BT 473.94 661.21 Td (padding\(5\)) Tj ET Q
+q 0.000 g BT 507.40 654.12 Td () Tj ET Q
+0.28 w
+0.235 0.961 1.000 rg
+0.000 0.361 0.694 RG
+85.04 643.46 56.69 -48.76 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 98.38 617.29 Td (Row No - 2) Tj ET Q
+q 0.000 g BT 113.39 610.20 Td () Tj ET Q
+0.28 w
+1.000 0.961 0.765 rg
+0.000 0.361 0.694 RG
+141.73 643.46 85.04 -48.76 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 152.74 622.66 Td (Cells can be images) Tj ET Q
+0 Tw
+q 0.000 g BT 175.79 611.32 Td (-->>>) Tj ET Q
+q 0.000 g BT 184.25 604.23 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 643.46 113.39 -48.76 re B 
+q 42.52 0 0 42.52 262.49 597.54 cm /I2 Do Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 643.46 113.39 -48.76 re B 
+BT /F1 9.00 Tf ET
+0 Tw
+q 0.000 g BT 348.08 622.06 Td (Longer text, this will split) Tj ET Q
+0 Tw
+q 0.000 g BT 371.34 610.72 Td (sometimes...) Tj ET Q
+q 0.000 g BT 396.85 603.63 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 643.46 56.69 -48.76 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 466.52 616.99 Td (Short 4- 2) Tj ET Q
+q 0.000 g BT 481.89 609.90 Td () Tj ET Q
+0.28 w
+0.353 0.941 1.000 rg
+0.000 0.361 0.694 RG
+85.04 594.71 56.69 -28.35 re B 
+BT /F1 6.50 Tf ET
+0 Tw
+q 0.000 g BT 97.13 578.59 Td (Row No - 3) Tj ET Q
+q 0.000 g BT 113.39 571.50 Td () Tj ET Q
+0.28 w
+1.000 0.941 0.647 rg
+0.000 0.361 0.694 RG
+141.73 594.71 85.04 -28.35 re B 
+0 Tw
+q 0.000 g BT 152.10 578.59 Td (Test Text Column 1- 3) Tj ET Q
+q 0.000 g BT 184.25 571.50 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 594.71 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 253.79 578.74 Td (Test Text Column 2- 3) Tj ET Q
+q 0.000 g BT 283.46 571.65 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 594.71 113.39 -28.35 re B 
+BT /F1 8.50 Tf ET
+0 Tw
+q 0.000 g BT 350.79 583.65 Td (Longer text, this will split) Tj ET Q
+0 Tw
+q 0.000 g BT 372.76 572.32 Td (sometimes...) Tj ET Q
+q 0.000 g BT 396.85 565.23 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 594.71 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 466.52 578.44 Td (Short 4- 3) Tj ET Q
+q 0.000 g BT 481.89 571.35 Td () Tj ET Q
+0.28 w
+0.000 0.922 1.000 rg
+0.000 0.361 0.694 RG
+85.04 566.36 56.69 -28.35 re B 
+0 Tw
+q 0.000 g BT 95.88 550.09 Td (Row No - 4) Tj ET Q
+q 0.000 g BT 113.39 543.00 Td () Tj ET Q
+0.28 w
+1.000 0.196 0.196 rg
+0.000 0.361 0.694 RG
+141.73 566.36 198.43 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 1.000 1.000 0.922 rg BT 198.26 550.39 Td (Colspan Example - Center Align) Tj ET Q
+q 1.000 1.000 0.922 rg BT 240.94 543.30 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 566.36 113.39 -28.35 re B 
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.000 g BT 353.50 555.46 Td (Longer text, this will split) Tj ET Q
+0 Tw
+q 0.000 g BT 374.18 544.12 Td (sometimes...) Tj ET Q
+q 0.000 g BT 396.85 537.03 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 566.36 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 466.52 550.09 Td (Short 4- 4) Tj ET Q
+q 0.000 g BT 481.89 543.00 Td () Tj ET Q
+0.28 w
+0.118 0.902 1.000 rg
+0.000 0.361 0.694 RG
+85.04 538.02 56.69 -17.01 re B 
+BT /F1 7.50 Tf ET
+0 Tw
+q 0.000 g BT 94.63 527.26 Td (Row No - 5) Tj ET Q
+q 0.000 g BT 113.39 520.18 Td () Tj ET Q
+0.28 w
+0.882 0.196 0.196 rg
+0.000 0.361 0.694 RG
+141.73 538.02 311.81 -17.01 re B 
+BT /F1 5.50 Tf ET
+0 Tw
+q 1.000 1.000 0.902 rg BT 258.51 527.86 Td (Colspan Example - Center Align) Tj ET Q
+q 1.000 1.000 0.902 rg BT 297.64 520.78 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 538.02 56.69 -17.01 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 466.52 527.41 Td (Short 4- 5) Tj ET Q
+q 0.000 g BT 481.89 520.33 Td () Tj ET Q
+0.28 w
+0.235 0.882 1.000 rg
+0.000 0.361 0.694 RG
+85.04 521.01 56.69 -17.01 re B 
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.000 g BT 93.38 510.10 Td (Row No - 6) Tj ET Q
+q 0.000 g BT 113.39 503.02 Td () Tj ET Q
+0.28 w
+0.765 0.196 0.196 rg
+0.000 0.361 0.694 RG
+141.73 521.01 368.50 -17.01 re B 
+BT /F1 5.00 Tf ET
+0 Tw
+q 1.000 1.000 0.882 rg BT 290.42 511.00 Td (Colspan Example - Center Align) Tj ET Q
+q 1.000 1.000 0.882 rg BT 325.98 503.92 Td () Tj ET Q
+0.28 w
+0.353 0.863 1.000 rg
+0.000 0.361 0.694 RG
+85.04 504.00 56.69 -17.01 re B 
+BT /F1 8.50 Tf ET
+0 Tw
+q 0.000 g BT 92.13 492.95 Td (Row No - 7) Tj ET Q
+q 0.000 g BT 113.39 485.86 Td () Tj ET Q
+0.28 w
+1.000 0.863 0.647 rg
+0.000 0.361 0.694 RG
+141.73 504.00 85.04 -17.01 re B 
+BT /F1 4.50 Tf ET
+0 Tw
+q 0.000 g BT 161.99 494.15 Td (Test Text Column 1- 7) Tj ET Q
+q 0.000 g BT 184.25 487.06 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 504.00 113.39 -17.01 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 253.79 493.70 Td (Test Text Column 2- 7) Tj ET Q
+q 0.000 g BT 283.46 486.61 Td () Tj ET Q
+0.28 w
+0.647 0.647 0.980 rg
+0.000 0.361 0.694 RG
+340.16 504.00 113.39 -79.37 re B 
+BT /F1 6.50 Tf ET
+0 Tw
+q 0.000 g BT 369.76 462.37 Td (Rowspan Example) Tj ET Q
+q 0.000 g BT 396.85 455.28 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 504.00 56.69 -17.01 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 466.52 493.40 Td (Short 4- 7) Tj ET Q
+q 0.000 g BT 481.89 486.31 Td () Tj ET Q
+0.28 w
+0.000 0.843 1.000 rg
+0.000 0.361 0.694 RG
+85.04 486.99 56.69 -17.01 re B 
+BT /F1 9.00 Tf ET
+0 Tw
+q 0.000 g BT 90.88 475.79 Td (Row No - 8) Tj ET Q
+q 0.000 g BT 113.39 468.70 Td () Tj ET Q
+0.28 w
+1.000 0.196 0.196 rg
+0.000 0.361 0.694 RG
+141.73 486.99 85.04 -124.72 re B 
+BT /F1 4.00 Tf ET
+0 Tw
+q 0.000 g BT 167.58 423.43 Td (Rowspan Example) Tj ET Q
+q 0.000 g BT 184.25 416.34 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 486.99 113.39 -17.01 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 253.79 476.69 Td (Test Text Column 2- 8) Tj ET Q
+q 0.000 g BT 283.46 469.60 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 486.99 56.69 -17.01 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 466.52 476.39 Td (Short 4- 8) Tj ET Q
+q 0.000 g BT 481.89 469.30 Td () Tj ET Q
+0.28 w
+0.118 0.824 1.000 rg
+0.000 0.361 0.694 RG
+85.04 469.98 56.69 -17.01 re B 
+BT /F1 9.50 Tf ET
+0 Tw
+q 0.000 g BT 89.63 458.63 Td (Row No - 9) Tj ET Q
+q 0.000 g BT 113.39 451.54 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 469.98 113.39 -73.70 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 258.46 431.33 Td (Rowspan Example) Tj ET Q
+q 0.000 g BT 283.46 424.25 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 469.98 56.69 -17.01 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 466.52 459.38 Td (Short 4- 9) Tj ET Q
+q 0.000 g BT 481.89 452.29 Td () Tj ET Q
+0.28 w
+0.235 0.804 1.000 rg
+0.000 0.361 0.694 RG
+85.04 452.98 56.69 -28.35 re B 
+BT /F1 10.00 Tf ET
+0 Tw
+q 0.000 g BT 92.55 441.47 Td (Row No -) Tj ET Q
+0 Tw
+q 0.000 g BT 107.83 430.13 Td (10) Tj ET Q
+q 0.000 g BT 113.39 423.05 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 452.98 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 436.70 Td (Short 4- 10) Tj ET Q
+q 0.000 g BT 481.89 429.62 Td () Tj ET Q
+0.28 w
+0.353 0.784 1.000 rg
+0.000 0.361 0.694 RG
+85.04 424.63 56.69 -28.35 re B 
+BT /F1 5.00 Tf ET
+0 Tw
+q 0.000 g BT 99.49 408.96 Td (Row No - 11) Tj ET Q
+q 0.000 g BT 113.39 401.87 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 424.63 113.39 -28.35 re B 
+BT /F1 10.00 Tf ET
+0 Tw
+q 0.000 g BT 352.95 413.13 Td (Longer text, this will) Tj ET Q
+0 Tw
+q 0.000 g BT 358.23 401.79 Td (split sometimes...) Tj ET Q
+q 0.000 g BT 396.85 394.70 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 424.63 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 408.36 Td (Short 4- 11) Tj ET Q
+q 0.000 g BT 481.89 401.27 Td () Tj ET Q
+0.28 w
+0.000 0.765 1.000 rg
+0.000 0.361 0.694 RG
+85.04 396.28 56.69 -17.01 re B 
+BT /F1 5.50 Tf ET
+0 Tw
+q 0.000 g BT 98.10 386.13 Td (Row No - 12) Tj ET Q
+q 0.000 g BT 113.39 379.04 Td () Tj ET Q
+0.28 w
+0.918 1.000 0.855 rg
+0.000 0.361 0.694 RG
+226.77 396.28 226.77 -85.04 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 298.48 363.30 Td (Rowspan && Colspan Example) Tj ET Q
+0 Tw
+q 0.000 g BT 306.65 340.63 Td (Center/Middle Allignment) Tj ET Q
+q 0.000 g BT 340.16 333.54 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 396.28 56.69 -17.01 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 385.68 Td (Short 4- 12) Tj ET Q
+q 0.000 g BT 481.89 378.59 Td () Tj ET Q
+0.28 w
+0.118 0.745 1.000 rg
+0.000 0.361 0.694 RG
+85.04 379.28 56.69 -17.01 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 96.71 368.97 Td (Row No - 13) Tj ET Q
+q 0.000 g BT 113.39 361.89 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 379.28 56.69 -17.01 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 368.67 Td (Short 4- 13) Tj ET Q
+q 0.000 g BT 481.89 361.59 Td () Tj ET Q
+0.28 w
+0.235 0.725 1.000 rg
+0.000 0.361 0.694 RG
+85.04 362.27 56.69 -17.01 re B 
+BT /F1 6.50 Tf ET
+0 Tw
+q 0.000 g BT 95.33 351.81 Td (Row No - 14) Tj ET Q
+q 0.000 g BT 113.39 344.73 Td () Tj ET Q
+0.28 w
+1.000 0.725 0.765 rg
+0.000 0.361 0.694 RG
+141.73 362.27 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 150.30 351.81 Td (Test Text Column 1- 14) Tj ET Q
+q 0.000 g BT 184.25 344.73 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 362.27 56.69 -17.01 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 351.66 Td (Short 4- 14) Tj ET Q
+q 0.000 g BT 481.89 344.58 Td () Tj ET Q
+0.28 w
+0.353 0.706 1.000 rg
+0.000 0.361 0.694 RG
+85.04 345.26 56.69 -17.01 re B 
+0 Tw
+q 0.000 g BT 93.94 334.66 Td (Row No - 15) Tj ET Q
+q 0.000 g BT 113.39 327.57 Td () Tj ET Q
+0.28 w
+1.000 0.706 0.647 rg
+0.000 0.361 0.694 RG
+141.73 345.26 85.04 -17.01 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 152.91 334.96 Td (Test Text Column 1- 15) Tj ET Q
+q 0.000 g BT 184.25 327.87 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 345.26 56.69 -17.01 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 334.66 Td (Short 4- 15) Tj ET Q
+q 0.000 g BT 481.89 327.57 Td () Tj ET Q
+0.28 w
+0.000 0.686 1.000 rg
+0.000 0.361 0.694 RG
+85.04 328.25 56.69 -17.01 re B 
+BT /F1 7.50 Tf ET
+0 Tw
+q 0.000 g BT 92.55 317.50 Td (Row No - 16) Tj ET Q
+q 0.000 g BT 113.39 310.41 Td () Tj ET Q
+0.28 w
+1.000 0.686 1.000 rg
+0.000 0.361 0.694 RG
+141.73 328.25 85.04 -17.01 re B 
+BT /F1 5.50 Tf ET
+0 Tw
+q 0.000 g BT 155.52 318.10 Td (Test Text Column 1- 16) Tj ET Q
+q 0.000 g BT 184.25 311.01 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 328.25 56.69 -17.01 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 317.65 Td (Short 4- 16) Tj ET Q
+q 0.000 g BT 481.89 310.56 Td () Tj ET Q
+0.28 w
+0.918 1.000 0.855 rg
+0.000 0.361 0.694 RG
+85.04 311.24 368.50 -85.04 re B 
+BT /F1 8.00 Tf ET
+BT /F1 10.00 Tf ET
+0 Tw
+q 0.510 0.000 0.118 rg BT 128.36 271.39 Td (All table cells are fully functional ) Tj ET Q
+BT /F3 12.00 Tf ET
+0 Tw
+q 0.000 0.000 0.471 rg BT 272.86 270.79 Td (pdf Advanced Multicells) Tj ET Q
+BT /F1 10.00 Tf ET
+0 Tw
+q 0.510 0.000 0.118 rg BT 146.45 260.06 Td (Details about Pdf Advanced Multicell can be found ) Tj ET Q
+0 Tw
+q 0.000 0.592 0.784 rg BT 372.12 260.06 Td (here) Tj ET Q
+q 0.000 0.592 0.784 rg BT 269.29 252.97 Td () Tj ET Q
+BT /F1 8.00 Tf ET
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 311.24 56.69 -17.01 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 300.64 Td (Short 4- 17) Tj ET Q
+q 0.000 g BT 481.89 293.55 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 294.24 56.69 -17.01 re B 
+0 Tw
+q 0.000 g BT 464.58 283.63 Td (Short 4- 18) Tj ET Q
+q 0.000 g BT 481.89 276.55 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 277.23 56.69 -17.01 re B 
+0 Tw
+q 0.000 g BT 464.58 266.62 Td (Short 4- 19) Tj ET Q
+q 0.000 g BT 481.89 259.54 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 260.22 56.69 -17.01 re B 
+0 Tw
+q 0.000 g BT 464.58 249.62 Td (Short 4- 20) Tj ET Q
+q 0.000 g BT 481.89 242.53 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 243.21 56.69 -17.01 re B 
+0 Tw
+q 0.000 g BT 464.58 232.61 Td (Short 4- 21) Tj ET Q
+q 0.000 g BT 481.89 225.52 Td () Tj ET Q
+0.28 w
+0.235 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 226.20 56.69 -28.35 re B 
+BT /F1 5.00 Tf ET
+0 Tw
+q 0.000 g BT 99.49 210.53 Td (Row No - 22) Tj ET Q
+q 0.000 g BT 113.39 203.45 Td () Tj ET Q
+0.28 w
+1.000 1.000 0.765 rg
+0.000 0.361 0.694 RG
+141.73 226.20 85.04 -28.35 re B 
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.000 g BT 148.02 215.30 Td (Test Text Column 1-) Tj ET Q
+0 Tw
+q 0.000 g BT 179.80 203.96 Td (22) Tj ET Q
+q 0.000 g BT 184.25 196.88 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 226.20 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 210.23 Td (Test Text Column 2- 22) Tj ET Q
+q 0.000 g BT 283.46 203.15 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 226.20 113.39 -28.35 re B 
+BT /F1 10.00 Tf ET
+0 Tw
+q 0.000 g BT 352.95 214.70 Td (Longer text, this will) Tj ET Q
+0 Tw
+q 0.000 g BT 358.23 203.36 Td (split sometimes...) Tj ET Q
+q 0.000 g BT 396.85 196.28 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 226.20 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 209.93 Td (Short 4- 22) Tj ET Q
+q 0.000 g BT 481.89 202.85 Td () Tj ET Q
+0.28 w
+0.353 0.980 1.000 rg
+0.000 0.361 0.694 RG
+85.04 197.86 56.69 -28.35 re B 
+BT /F1 5.50 Tf ET
+0 Tw
+q 0.000 g BT 98.10 182.04 Td (Row No - 23) Tj ET Q
+q 0.000 g BT 113.39 174.95 Td () Tj ET Q
+0.28 w
+1.000 0.980 0.647 rg
+0.000 0.361 0.694 RG
+141.73 197.86 85.04 -28.35 re B 
+BT /F1 7.50 Tf ET
+0 Tw
+q 0.000 g BT 145.07 181.44 Td (Test Text Column 1- 23) Tj ET Q
+q 0.000 g BT 184.25 174.35 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 197.86 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 181.89 Td (Test Text Column 2- 23) Tj ET Q
+q 0.000 g BT 283.46 174.80 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 197.86 113.39 -28.35 re B 
+BT /F1 9.50 Tf ET
+0 Tw
+q 0.000 g BT 345.37 186.50 Td (Longer text, this will split) Tj ET Q
+0 Tw
+q 0.000 g BT 369.93 175.17 Td (sometimes...) Tj ET Q
+q 0.000 g BT 396.85 168.08 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 197.86 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 181.59 Td (Short 4- 23) Tj ET Q
+q 0.000 g BT 481.89 174.50 Td () Tj ET Q
+0.28 w
+0.000 0.961 1.000 rg
+0.000 0.361 0.694 RG
+85.04 169.51 56.69 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 96.71 153.54 Td (Row No - 24) Tj ET Q
+q 0.000 g BT 113.39 146.45 Td () Tj ET Q
+0.28 w
+1.000 0.961 1.000 rg
+0.000 0.361 0.694 RG
+141.73 169.51 85.04 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 147.68 153.24 Td (Test Text Column 1- 24) Tj ET Q
+q 0.000 g BT 184.25 146.15 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 169.51 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 153.54 Td (Test Text Column 2- 24) Tj ET Q
+q 0.000 g BT 283.46 146.45 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 169.51 113.39 -28.35 re B 
+BT /F1 9.00 Tf ET
+0 Tw
+q 0.000 g BT 348.08 158.31 Td (Longer text, this will split) Tj ET Q
+0 Tw
+q 0.000 g BT 371.34 146.97 Td (sometimes...) Tj ET Q
+q 0.000 g BT 396.85 139.88 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 169.51 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 153.24 Td (Short 4- 24) Tj ET Q
+q 0.000 g BT 481.89 146.15 Td () Tj ET Q
+0.28 w
+0.118 0.941 1.000 rg
+0.000 0.361 0.694 RG
+85.04 141.17 56.69 -28.35 re B 
+BT /F1 6.50 Tf ET
+0 Tw
+q 0.000 g BT 95.33 125.04 Td (Row No - 25) Tj ET Q
+q 0.000 g BT 113.39 117.96 Td () Tj ET Q
+0.28 w
+1.000 0.941 0.882 rg
+0.000 0.361 0.694 RG
+141.73 141.17 85.04 -28.35 re B 
+0 Tw
+q 0.000 g BT 150.30 125.04 Td (Test Text Column 1- 25) Tj ET Q
+q 0.000 g BT 184.25 117.96 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 141.17 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 125.19 Td (Test Text Column 2- 25) Tj ET Q
+q 0.000 g BT 283.46 118.11 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 141.17 113.39 -28.35 re B 
+BT /F1 8.50 Tf ET
+0 Tw
+q 0.000 g BT 350.79 130.11 Td (Longer text, this will split) Tj ET Q
+0 Tw
+q 0.000 g BT 372.76 118.77 Td (sometimes...) Tj ET Q
+q 0.000 g BT 396.85 111.69 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 141.17 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 124.89 Td (Short 4- 25) Tj ET Q
+q 0.000 g BT 481.89 117.81 Td () Tj ET Q
+0.28 w
+0.235 0.922 1.000 rg
+0.000 0.361 0.694 RG
+85.04 112.82 56.69 -28.35 re B 
+0 Tw
+q 0.000 g BT 93.94 96.55 Td (Row No - 26) Tj ET Q
+q 0.000 g BT 113.39 89.46 Td () Tj ET Q
+0.28 w
+1.000 0.922 0.765 rg
+0.000 0.361 0.694 RG
+141.73 112.82 85.04 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 152.91 96.85 Td (Test Text Column 1- 26) Tj ET Q
+q 0.000 g BT 184.25 89.76 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 112.82 113.39 -28.35 re B 
+0 Tw
+q 0.000 g BT 252.12 96.85 Td (Test Text Column 2- 26) Tj ET Q
+q 0.000 g BT 283.46 89.76 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 112.82 113.39 -28.35 re B 
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.000 g BT 353.50 101.92 Td (Longer text, this will split) Tj ET Q
+0 Tw
+q 0.000 g BT 374.18 90.58 Td (sometimes...) Tj ET Q
+q 0.000 g BT 396.85 83.49 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 112.82 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 96.55 Td (Short 4- 26) Tj ET Q
+q 0.000 g BT 481.89 89.46 Td () Tj ET Q
+0.000 0.361 0.694 RG
+0.85 w
+85.04 785.20 425.20 -700.72 re S
+BT /F4 7.00 Tf ET
+q 0.667 0.667 0.667 rg BT 277.40 20.58 Td (Page 1 / 2) Tj ET Q
+
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/Annots [<</Type /Annot /Subtype /Link /Rect [56.69 812.29 117.38 806.29] /Border [0 0 0] /A <</S /URI /URI (www.interpid.eu/fpdf-addons)>>>><</Type /Annot /Subtype /Link /Rect [56.69 803.79 76.04 797.79] /Border [0 0 0] /A <</S /URI /URI (www.interpid.eu/fpdf-addons)>>>><</Type /Annot /Subtype /Link /Rect [77.98 803.79 120.34 797.79] /Border [0 0 0] /A <</S /URI /URI (mailto:andy@interpid.eu)>>>><</Type /Annot /Subtype /Link /Rect [453.54 813.54 566.93 799.26] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu)>>>>]
+/Contents 6 0 R>>
+endobj
+6 0 obj
+<</Length 21911>>
+stream
+2 J
+0.85 w
+BT /F1 7.00 Tf ET
+0.000 0.361 0.694 RG
+1.000 1.000 1.000 rg
+BT /F1 6.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 6.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 6.00 Tf ET
+0.000 Tw
+q 0.627 0.627 0.627 rg BT 56.69 807.49 Td (FPDF Advanced Table) Tj ET Q
+0 Tw
+q 0.627 0.627 0.627 rg BT 56.69 798.99 Td (Author:) Tj ET Q
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 76.04 798.69 Td ( ) Tj ET Q
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 0.467 0.863 rg BT 77.98 798.99 Td (Andrei Bintintan) Tj ET Q
+BT /F1 7.00 Tf ET
+q 113.39 0 0 14.29 453.54 799.26 cm /I1 Do Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 785.20 56.69 -11.34 re B 
+BT /F2 8.00 Tf ET
+0 Tw
+q 0.863 0.902 0.941 rg BT 96.49 777.13 Td (Header 1) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+141.73 785.20 85.04 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 167.36 777.13 Td (Header 2) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+226.77 785.20 113.39 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 266.57 777.13 Td (Header 3) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+340.16 785.20 113.39 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 379.95 777.13 Td (Header 4) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+453.54 785.20 56.69 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 464.99 777.13 Td (Header 5) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 773.86 56.69 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 96.49 765.79 Td (Header 1) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+141.73 773.86 85.04 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 167.36 765.79 Td (Header 2) Tj ET Q
+0.57 w
+0.647 0.980 0.863 rg
+0.000 0.361 0.694 RG
+226.77 773.86 226.77 -22.68 re B 
+0 Tw
+q 0.039 0.078 0.392 rg BT 290.81 760.12 Td (Header Colspan/Rowspan) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+453.54 773.86 56.69 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 464.99 765.79 Td (Header 5) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 762.52 56.69 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 112.27 754.45 Td ( ) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+141.73 762.52 85.04 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 183.14 754.45 Td ( ) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+453.54 762.52 56.69 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 480.78 754.45 Td ( ) Tj ET Q
+0.28 w
+0.353 0.902 1.000 rg
+0.000 0.361 0.694 RG
+85.04 751.18 56.69 -28.35 re B 
+BT /F1 7.50 Tf ET
+0 Tw
+q 0.000 g BT 92.55 734.76 Td (Row No - 27) Tj ET Q
+q 0.000 g BT 113.39 727.67 Td () Tj ET Q
+0.28 w
+1.000 0.902 0.647 rg
+0.000 0.361 0.694 RG
+141.73 751.18 85.04 -28.35 re B 
+BT /F1 5.50 Tf ET
+0 Tw
+q 0.000 g BT 155.52 735.36 Td (Test Text Column 1- 27) Tj ET Q
+q 0.000 g BT 184.25 728.27 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 751.18 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 735.21 Td (Test Text Column 2- 27) Tj ET Q
+q 0.000 g BT 283.46 728.12 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 751.18 113.39 -28.35 re B 
+BT /F1 7.50 Tf ET
+0 Tw
+q 0.000 g BT 356.21 740.43 Td (Longer text, this will split) Tj ET Q
+0 Tw
+q 0.000 g BT 375.60 729.09 Td (sometimes...) Tj ET Q
+q 0.000 g BT 396.85 722.00 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 751.18 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 734.91 Td (Short 4- 27) Tj ET Q
+q 0.000 g BT 481.89 727.82 Td () Tj ET Q
+0.28 w
+0.000 0.882 1.000 rg
+0.000 0.361 0.694 RG
+85.04 722.83 56.69 -28.35 re B 
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.000 g BT 91.16 706.26 Td (Row No - 28) Tj ET Q
+q 0.000 g BT 113.39 699.18 Td () Tj ET Q
+0.28 w
+1.000 0.882 1.000 rg
+0.000 0.361 0.694 RG
+141.73 722.83 85.04 -28.35 re B 
+BT /F1 5.00 Tf ET
+0 Tw
+q 0.000 g BT 158.13 707.16 Td (Test Text Column 1- 28) Tj ET Q
+q 0.000 g BT 184.25 700.08 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 722.83 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 706.86 Td (Test Text Column 2- 28) Tj ET Q
+q 0.000 g BT 283.46 699.78 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 722.83 113.39 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 358.92 712.23 Td (Longer text, this will split) Tj ET Q
+0 Tw
+q 0.000 g BT 377.01 700.89 Td (sometimes...) Tj ET Q
+q 0.000 g BT 396.85 693.81 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 722.83 56.69 -28.35 re B 
+0 Tw
+q 0.000 g BT 464.58 706.56 Td (Short 4- 28) Tj ET Q
+q 0.000 g BT 481.89 699.48 Td () Tj ET Q
+0.28 w
+0.118 0.863 1.000 rg
+0.000 0.361 0.694 RG
+85.04 694.49 56.69 -28.35 re B 
+BT /F1 8.50 Tf ET
+0 Tw
+q 0.000 g BT 89.77 677.77 Td (Row No - 29) Tj ET Q
+q 0.000 g BT 113.39 670.68 Td () Tj ET Q
+0.28 w
+1.000 0.863 0.882 rg
+0.000 0.361 0.694 RG
+141.73 694.49 85.04 -28.35 re B 
+BT /F1 4.50 Tf ET
+0 Tw
+q 0.000 g BT 160.74 678.97 Td (Test Text Column 1- 29) Tj ET Q
+q 0.000 g BT 184.25 671.88 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 694.49 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 678.52 Td (Test Text Column 2- 29) Tj ET Q
+q 0.000 g BT 283.46 671.43 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 694.49 113.39 -28.35 re B 
+BT /F1 6.50 Tf ET
+0 Tw
+q 0.000 g BT 343.21 684.03 Td (Longer text, this will split sometimes..) Tj ET Q
+0 Tw
+q 0.000 g BT 395.95 672.70 Td (.) Tj ET Q
+q 0.000 g BT 396.85 665.61 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 694.49 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 678.22 Td (Short 4- 29) Tj ET Q
+q 0.000 g BT 481.89 671.13 Td () Tj ET Q
+0.28 w
+0.235 0.843 1.000 rg
+0.000 0.361 0.694 RG
+85.04 666.14 56.69 -17.01 re B 
+BT /F1 9.00 Tf ET
+0 Tw
+q 0.000 g BT 88.38 654.94 Td (Row No - 30) Tj ET Q
+q 0.000 g BT 113.39 647.85 Td () Tj ET Q
+0.28 w
+1.000 0.843 0.765 rg
+0.000 0.361 0.694 RG
+141.73 666.14 85.04 -17.01 re B 
+BT /F1 4.00 Tf ET
+0 Tw
+q 0.000 g BT 163.36 656.44 Td (Test Text Column 1- 30) Tj ET Q
+q 0.000 g BT 184.25 649.35 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 666.14 113.39 -17.01 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 655.84 Td (Test Text Column 2- 30) Tj ET Q
+q 0.000 g BT 283.46 648.75 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 666.14 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 346.50 655.84 Td (Longer text, this will split sometimes...) Tj ET Q
+q 0.000 g BT 396.85 648.75 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 666.14 56.69 -17.01 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 655.54 Td (Short 4- 30) Tj ET Q
+q 0.000 g BT 481.89 648.45 Td () Tj ET Q
+0.28 w
+0.353 0.824 1.000 rg
+0.000 0.361 0.694 RG
+85.04 649.13 56.69 -28.35 re B 
+BT /F1 9.50 Tf ET
+0 Tw
+q 0.000 g BT 93.59 637.78 Td (Row No -) Tj ET Q
+0 Tw
+q 0.000 g BT 108.10 626.44 Td (31) Tj ET Q
+q 0.000 g BT 113.39 619.35 Td () Tj ET Q
+0.28 w
+1.000 0.824 0.647 rg
+0.000 0.361 0.694 RG
+141.73 649.13 85.04 -28.35 re B 
+BT /F1 3.50 Tf ET
+0 Tw
+q 0.000 g BT 165.97 633.91 Td (Test Text Column 1- 31) Tj ET Q
+q 0.000 g BT 184.25 626.82 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 649.13 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 633.16 Td (Test Text Column 2- 31) Tj ET Q
+q 0.000 g BT 283.46 626.07 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 649.13 113.39 -28.35 re B 
+BT /F1 5.50 Tf ET
+0 Tw
+q 0.000 g BT 350.70 633.31 Td (Longer text, this will split sometimes...) Tj ET Q
+q 0.000 g BT 396.85 626.22 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 649.13 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 632.86 Td (Short 4- 31) Tj ET Q
+q 0.000 g BT 481.89 625.77 Td () Tj ET Q
+0.28 w
+0.000 0.804 1.000 rg
+0.000 0.361 0.694 RG
+85.04 620.79 56.69 -28.35 re B 
+BT /F1 10.00 Tf ET
+0 Tw
+q 0.000 g BT 92.55 609.28 Td (Row No -) Tj ET Q
+0 Tw
+q 0.000 g BT 107.83 597.95 Td (32) Tj ET Q
+q 0.000 g BT 113.39 590.86 Td () Tj ET Q
+0.28 w
+1.000 0.804 1.000 rg
+0.000 0.361 0.694 RG
+141.73 620.79 85.04 -28.35 re B 
+BT /F1 3.00 Tf ET
+0 Tw
+q 0.000 g BT 168.58 605.71 Td (Test Text Column 1- 32) Tj ET Q
+q 0.000 g BT 184.25 598.63 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 620.79 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 604.81 Td (Test Text Column 2- 32) Tj ET Q
+q 0.000 g BT 283.46 597.73 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 620.79 113.39 -28.35 re B 
+BT /F1 5.00 Tf ET
+0 Tw
+q 0.000 g BT 354.89 605.11 Td (Longer text, this will split sometimes...) Tj ET Q
+q 0.000 g BT 396.85 598.03 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 620.79 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 604.51 Td (Short 4- 32) Tj ET Q
+q 0.000 g BT 481.89 597.43 Td () Tj ET Q
+0.28 w
+0.118 0.784 1.000 rg
+0.000 0.361 0.694 RG
+85.04 592.44 56.69 -28.35 re B 
+BT /F1 5.00 Tf ET
+0 Tw
+q 0.000 g BT 99.49 576.77 Td (Row No - 33) Tj ET Q
+q 0.000 g BT 113.39 569.68 Td () Tj ET Q
+0.28 w
+1.000 0.784 0.882 rg
+0.000 0.361 0.694 RG
+141.73 592.44 85.04 -28.35 re B 
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.000 g BT 148.02 581.54 Td (Test Text Column 1-) Tj ET Q
+0 Tw
+q 0.000 g BT 179.80 570.20 Td (33) Tj ET Q
+q 0.000 g BT 184.25 563.11 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 592.44 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 576.47 Td (Test Text Column 2- 33) Tj ET Q
+q 0.000 g BT 283.46 569.38 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 592.44 113.39 -28.35 re B 
+BT /F1 10.00 Tf ET
+0 Tw
+q 0.000 g BT 352.95 580.94 Td (Longer text, this will) Tj ET Q
+0 Tw
+q 0.000 g BT 358.23 569.60 Td (split sometimes...) Tj ET Q
+q 0.000 g BT 396.85 562.51 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 592.44 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 576.17 Td (Short 4- 33) Tj ET Q
+q 0.000 g BT 481.89 569.08 Td () Tj ET Q
+0.28 w
+0.235 0.765 1.000 rg
+0.000 0.361 0.694 RG
+85.04 564.09 56.69 -28.35 re B 
+BT /F1 5.50 Tf ET
+0 Tw
+q 0.000 g BT 98.10 548.27 Td (Row No - 34) Tj ET Q
+q 0.000 g BT 113.39 541.18 Td () Tj ET Q
+0.28 w
+1.000 0.765 0.765 rg
+0.000 0.361 0.694 RG
+141.73 564.09 85.04 -28.35 re B 
+BT /F1 7.50 Tf ET
+0 Tw
+q 0.000 g BT 145.07 547.67 Td (Test Text Column 1- 34) Tj ET Q
+q 0.000 g BT 184.25 540.58 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 564.09 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 548.12 Td (Test Text Column 2- 34) Tj ET Q
+q 0.000 g BT 283.46 541.03 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 564.09 113.39 -28.35 re B 
+BT /F1 9.50 Tf ET
+0 Tw
+q 0.000 g BT 345.37 552.74 Td (Longer text, this will split) Tj ET Q
+0 Tw
+q 0.000 g BT 369.93 541.40 Td (sometimes...) Tj ET Q
+q 0.000 g BT 396.85 534.32 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 564.09 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 547.82 Td (Short 4- 34) Tj ET Q
+q 0.000 g BT 481.89 540.73 Td () Tj ET Q
+0.28 w
+0.353 0.745 1.000 rg
+0.000 0.361 0.694 RG
+85.04 535.75 56.69 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 96.71 519.78 Td (Row No - 35) Tj ET Q
+q 0.000 g BT 113.39 512.69 Td () Tj ET Q
+0.28 w
+1.000 0.745 0.647 rg
+0.000 0.361 0.694 RG
+141.73 535.75 85.04 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 147.68 519.48 Td (Test Text Column 1- 35) Tj ET Q
+q 0.000 g BT 184.25 512.39 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 535.75 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 519.78 Td (Test Text Column 2- 35) Tj ET Q
+q 0.000 g BT 283.46 512.69 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 535.75 113.39 -28.35 re B 
+BT /F1 9.00 Tf ET
+0 Tw
+q 0.000 g BT 348.08 524.54 Td (Longer text, this will split) Tj ET Q
+0 Tw
+q 0.000 g BT 371.34 513.21 Td (sometimes...) Tj ET Q
+q 0.000 g BT 396.85 506.12 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 535.75 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 519.48 Td (Short 4- 35) Tj ET Q
+q 0.000 g BT 481.89 512.39 Td () Tj ET Q
+0.28 w
+0.000 0.725 1.000 rg
+0.000 0.361 0.694 RG
+85.04 507.40 56.69 -28.35 re B 
+BT /F1 6.50 Tf ET
+0 Tw
+q 0.000 g BT 95.33 491.28 Td (Row No - 36) Tj ET Q
+q 0.000 g BT 113.39 484.19 Td () Tj ET Q
+0.28 w
+1.000 0.725 1.000 rg
+0.000 0.361 0.694 RG
+141.73 507.40 85.04 -28.35 re B 
+0 Tw
+q 0.000 g BT 150.30 491.28 Td (Test Text Column 1- 36) Tj ET Q
+q 0.000 g BT 184.25 484.19 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 507.40 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 491.43 Td (Test Text Column 2- 36) Tj ET Q
+q 0.000 g BT 283.46 484.34 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 507.40 113.39 -28.35 re B 
+BT /F1 8.50 Tf ET
+0 Tw
+q 0.000 g BT 350.79 496.35 Td (Longer text, this will split) Tj ET Q
+0 Tw
+q 0.000 g BT 372.76 485.01 Td (sometimes...) Tj ET Q
+q 0.000 g BT 396.85 477.92 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 507.40 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 491.13 Td (Short 4- 36) Tj ET Q
+q 0.000 g BT 481.89 484.04 Td () Tj ET Q
+0.28 w
+0.118 0.706 1.000 rg
+0.000 0.361 0.694 RG
+85.04 479.06 56.69 -28.35 re B 
+0 Tw
+q 0.000 g BT 93.94 462.78 Td (Row No - 37) Tj ET Q
+q 0.000 g BT 113.39 455.70 Td () Tj ET Q
+0.28 w
+1.000 0.706 0.882 rg
+0.000 0.361 0.694 RG
+141.73 479.06 85.04 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 152.91 463.08 Td (Test Text Column 1- 37) Tj ET Q
+q 0.000 g BT 184.25 456.00 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 479.06 113.39 -28.35 re B 
+0 Tw
+q 0.000 g BT 252.12 463.08 Td (Test Text Column 2- 37) Tj ET Q
+q 0.000 g BT 283.46 456.00 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 479.06 113.39 -28.35 re B 
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.000 g BT 353.50 468.15 Td (Longer text, this will split) Tj ET Q
+0 Tw
+q 0.000 g BT 374.18 456.81 Td (sometimes...) Tj ET Q
+q 0.000 g BT 396.85 449.73 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 479.06 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 462.78 Td (Short 4- 37) Tj ET Q
+q 0.000 g BT 481.89 455.70 Td () Tj ET Q
+0.28 w
+0.235 0.686 1.000 rg
+0.000 0.361 0.694 RG
+85.04 450.71 56.69 -28.35 re B 
+BT /F1 7.50 Tf ET
+0 Tw
+q 0.000 g BT 92.55 434.29 Td (Row No - 38) Tj ET Q
+q 0.000 g BT 113.39 427.20 Td () Tj ET Q
+0.28 w
+1.000 0.686 0.765 rg
+0.000 0.361 0.694 RG
+141.73 450.71 85.04 -28.35 re B 
+BT /F1 5.50 Tf ET
+0 Tw
+q 0.000 g BT 155.52 434.89 Td (Test Text Column 1- 38) Tj ET Q
+q 0.000 g BT 184.25 427.80 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 450.71 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 434.74 Td (Test Text Column 2- 38) Tj ET Q
+q 0.000 g BT 283.46 427.65 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 450.71 113.39 -28.35 re B 
+BT /F1 7.50 Tf ET
+0 Tw
+q 0.000 g BT 356.21 439.95 Td (Longer text, this will split) Tj ET Q
+0 Tw
+q 0.000 g BT 375.60 428.62 Td (sometimes...) Tj ET Q
+q 0.000 g BT 396.85 421.53 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 450.71 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 434.44 Td (Short 4- 38) Tj ET Q
+q 0.000 g BT 481.89 427.35 Td () Tj ET Q
+0.28 w
+0.353 0.667 1.000 rg
+0.000 0.361 0.694 RG
+85.04 422.36 56.69 -28.35 re B 
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.000 g BT 91.16 405.79 Td (Row No - 39) Tj ET Q
+q 0.000 g BT 113.39 398.70 Td () Tj ET Q
+0.28 w
+1.000 0.667 0.647 rg
+0.000 0.361 0.694 RG
+141.73 422.36 85.04 -28.35 re B 
+BT /F1 5.00 Tf ET
+0 Tw
+q 0.000 g BT 158.13 406.69 Td (Test Text Column 1- 39) Tj ET Q
+q 0.000 g BT 184.25 399.60 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 422.36 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 406.39 Td (Test Text Column 2- 39) Tj ET Q
+q 0.000 g BT 283.46 399.30 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 422.36 113.39 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 358.92 411.76 Td (Longer text, this will split) Tj ET Q
+0 Tw
+q 0.000 g BT 377.01 400.42 Td (sometimes...) Tj ET Q
+q 0.000 g BT 396.85 393.33 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 422.36 56.69 -28.35 re B 
+0 Tw
+q 0.000 g BT 464.58 406.09 Td (Short 4- 39) Tj ET Q
+q 0.000 g BT 481.89 399.00 Td () Tj ET Q
+0.28 w
+0.000 0.647 1.000 rg
+0.000 0.361 0.694 RG
+85.04 394.02 56.69 -28.35 re B 
+BT /F1 8.50 Tf ET
+0 Tw
+q 0.000 g BT 89.77 377.29 Td (Row No - 40) Tj ET Q
+q 0.000 g BT 113.39 370.21 Td () Tj ET Q
+0.28 w
+1.000 0.647 1.000 rg
+0.000 0.361 0.694 RG
+141.73 394.02 85.04 -28.35 re B 
+BT /F1 4.50 Tf ET
+0 Tw
+q 0.000 g BT 160.74 378.49 Td (Test Text Column 1- 40) Tj ET Q
+q 0.000 g BT 184.25 371.41 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 394.02 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 378.04 Td (Test Text Column 2- 40) Tj ET Q
+q 0.000 g BT 283.46 370.96 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 394.02 113.39 -28.35 re B 
+BT /F1 6.50 Tf ET
+0 Tw
+q 0.000 g BT 343.21 383.56 Td (Longer text, this will split sometimes..) Tj ET Q
+0 Tw
+q 0.000 g BT 395.95 372.22 Td (.) Tj ET Q
+q 0.000 g BT 396.85 365.14 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 394.02 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 377.74 Td (Short 4- 40) Tj ET Q
+q 0.000 g BT 481.89 370.66 Td () Tj ET Q
+0.28 w
+0.118 0.627 1.000 rg
+0.000 0.361 0.694 RG
+85.04 365.67 56.69 -17.01 re B 
+BT /F1 9.00 Tf ET
+0 Tw
+q 0.000 g BT 88.38 354.47 Td (Row No - 41) Tj ET Q
+q 0.000 g BT 113.39 347.38 Td () Tj ET Q
+0.28 w
+1.000 0.627 0.882 rg
+0.000 0.361 0.694 RG
+141.73 365.67 85.04 -17.01 re B 
+BT /F1 4.00 Tf ET
+0 Tw
+q 0.000 g BT 163.36 355.97 Td (Test Text Column 1- 41) Tj ET Q
+q 0.000 g BT 184.25 348.88 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 365.67 113.39 -17.01 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 355.37 Td (Test Text Column 2- 41) Tj ET Q
+q 0.000 g BT 283.46 348.28 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 365.67 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 346.50 355.37 Td (Longer text, this will split sometimes...) Tj ET Q
+q 0.000 g BT 396.85 348.28 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 365.67 56.69 -17.01 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 355.07 Td (Short 4- 41) Tj ET Q
+q 0.000 g BT 481.89 347.98 Td () Tj ET Q
+0.28 w
+0.235 0.608 1.000 rg
+0.000 0.361 0.694 RG
+85.04 348.66 56.69 -28.35 re B 
+BT /F1 9.50 Tf ET
+0 Tw
+q 0.000 g BT 93.59 337.31 Td (Row No -) Tj ET Q
+0 Tw
+q 0.000 g BT 108.10 325.97 Td (42) Tj ET Q
+q 0.000 g BT 113.39 318.88 Td () Tj ET Q
+0.28 w
+1.000 0.608 0.765 rg
+0.000 0.361 0.694 RG
+141.73 348.66 85.04 -28.35 re B 
+BT /F1 3.50 Tf ET
+0 Tw
+q 0.000 g BT 165.97 333.44 Td (Test Text Column 1- 42) Tj ET Q
+q 0.000 g BT 184.25 326.35 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 348.66 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 332.69 Td (Test Text Column 2- 42) Tj ET Q
+q 0.000 g BT 283.46 325.60 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 348.66 113.39 -28.35 re B 
+BT /F1 5.50 Tf ET
+0 Tw
+q 0.000 g BT 350.70 332.84 Td (Longer text, this will split sometimes...) Tj ET Q
+q 0.000 g BT 396.85 325.75 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 348.66 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 332.39 Td (Short 4- 42) Tj ET Q
+q 0.000 g BT 481.89 325.30 Td () Tj ET Q
+0.28 w
+0.353 0.588 1.000 rg
+0.000 0.361 0.694 RG
+85.04 320.32 56.69 -28.35 re B 
+BT /F1 10.00 Tf ET
+0 Tw
+q 0.000 g BT 92.55 308.81 Td (Row No -) Tj ET Q
+0 Tw
+q 0.000 g BT 107.83 297.47 Td (43) Tj ET Q
+q 0.000 g BT 113.39 290.39 Td () Tj ET Q
+0.28 w
+1.000 0.588 0.647 rg
+0.000 0.361 0.694 RG
+141.73 320.32 85.04 -28.35 re B 
+BT /F1 3.00 Tf ET
+0 Tw
+q 0.000 g BT 168.58 305.24 Td (Test Text Column 1- 43) Tj ET Q
+q 0.000 g BT 184.25 298.16 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 320.32 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 304.34 Td (Test Text Column 2- 43) Tj ET Q
+q 0.000 g BT 283.46 297.26 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 320.32 113.39 -28.35 re B 
+BT /F1 5.00 Tf ET
+0 Tw
+q 0.000 g BT 354.89 304.64 Td (Longer text, this will split sometimes...) Tj ET Q
+q 0.000 g BT 396.85 297.56 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 320.32 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 304.04 Td (Short 4- 43) Tj ET Q
+q 0.000 g BT 481.89 296.96 Td () Tj ET Q
+0.28 w
+0.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 291.97 56.69 -28.35 re B 
+BT /F1 5.00 Tf ET
+0 Tw
+q 0.000 g BT 99.49 276.30 Td (Row No - 44) Tj ET Q
+q 0.000 g BT 113.39 269.21 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+141.73 291.97 85.04 -28.35 re B 
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.000 g BT 148.02 281.06 Td (Test Text Column 1-) Tj ET Q
+0 Tw
+q 0.000 g BT 179.80 269.73 Td (44) Tj ET Q
+q 0.000 g BT 184.25 262.64 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+226.77 291.97 113.39 -28.35 re B 
+BT /F1 6.00 Tf ET
+0 Tw
+q 0.000 g BT 252.12 276.00 Td (Test Text Column 2- 44) Tj ET Q
+q 0.000 g BT 283.46 268.91 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 291.97 113.39 -28.35 re B 
+BT /F1 10.00 Tf ET
+0 Tw
+q 0.000 g BT 352.95 280.46 Td (Longer text, this will) Tj ET Q
+0 Tw
+q 0.000 g BT 358.23 269.13 Td (split sometimes...) Tj ET Q
+q 0.000 g BT 396.85 262.04 Td () Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+453.54 291.97 56.69 -28.35 re B 
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 g BT 464.58 275.70 Td (Short 4- 44) Tj ET Q
+q 0.000 g BT 481.89 268.61 Td () Tj ET Q
+0.000 0.361 0.694 RG
+0.85 w
+85.04 785.20 425.20 -521.57 re S
+BT /F4 7.00 Tf ET
+q 0.667 0.667 0.667 rg BT 277.40 20.58 Td (Page 2 / 2) Tj ET Q
+
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R ]
+/Count 2
+/MediaBox [0 0 595.28 841.89]
+>>
+endobj
+7 0 obj
+<</Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+>>
+endobj
+8 0 obj
+<</Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+>>
+endobj
+9 0 obj
+<</Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+>>
+endobj
+10 0 obj
+<</Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+>>
+endobj
+11 0 obj
+<</Type /XObject
+/Subtype /Image
+/Width 1000
+/Height 126
+/ColorSpace [/Indexed /DeviceRGB 139 12 0 R]
+/BitsPerComponent 8
+/Filter /FlateDecode
+/DecodeParms <</Predictor 15 /Colors 1 /BitsPerComponent 8 /Columns 1000>>
+/Mask [139 139 ]
+/Length 3572>>
+stream
+x⁄Ï›ÁC€HÒXñeÂåç.¯L sd!@\ ùÙ∂%ª…ñ$ªŸΩm∑Ω∑€Îm˛Ès±•yUF£¯y>„ë–¯gïôy≈ÑøT∂/m¨ÌÏ<ÂÌ<›ŸY€∏¥ΩPÇËÊ„≥È¬ªãúı_|∑ê∆—EêòC?sı˛‹ ‰{ÿÁÓ_=É#å qÖ~Í˙ñÚ=Ï[◊O· #H¸†€ØH*ÔZør—∆qFêXAø∂6«»ô[ªÜ#ç ±Å^^‰ÃS¯b«Ab}€+Ûımm—˙ΩÃ€‘wÓ·x#à÷–O}‡ìyõ˙xè ˙B∑7`ﬁ¶æÅ'¢)Ùgeè¥‚˙Wg/‡†#àÜ–Ì∑]OÁ´ó?¸j·ÀÊﬂ~π’áóWùOÍo„§é ⁄AøÁv:π˘ﬁA∫ˆ{7œÏgÒPA4É˛wc~´œßn9RÁﬂ·¿#àF–+nóÌÓ¯‰ùéóÔX«ä ⁄@/^q9ù∂rƒÈ§~•àcè z@Oª‹ûﬂ~›±Ì◊o;›®cπ:Çh}}ﬁŸ˘„7\„±√ßÁ◊qÙ$zË]nœ_sØ*qÊ5ßıã8¸5t7Á´w$öø≥
+È¢1ÙKn≥d^ñjˇe«π3ó–%ÙÇõÛÂ»*?B:ÇË
+›’˘»ãíx—qí/†$*ËKÆ≥€_ëﬁ¬+Œ3ﬂó–Ù{ÛÆ+’§∑ÜÛä∂˘ÛËâ˙ôßÆãMˇDÿƒøúõzä⁄Ôt˚¥˚⁄ÛwõxŸ•≠”X∂ä Í°?î®1±@ÿƒ[n’(¢D5Ùœ%™FΩI⁄∆õnı•>G? àZËßÊ›ù≥À§m\vkn5#D)Ùäƒ:c/ë∂Òík{ß±<ATBØIs=G⁄∆9˜kË	Q=ÕCÄ˛°Dh¨NGe–Ì-ÕùmaåATA_ì|C–˜ËÕºãæ@5–O…æè%‡ßÓÌãw<yG5–Ô æY)ÿqÙNÓ¢3DÙmÈ¨;3Æ{J«ªöDÙ ìeÆ˚E…6∑0òé ·C/ﬁäJYΩvY∂Q°@ê–°€'–É[èﬁìbCê∞°_'ΩË<®
+3r˝Å ·B'ù–´áS:Ç(Ö^`¥¸"YˆJ£∏KGêP°Wû°Q◊˝ô<¡Éw	˙’y ojÈ‘ÑEê0°ﬂ%C˜˝Óµ~ŸAè Hx–op:tˆ¯-ó∆ﬂzLmíﬂ@ó Hh–◊òó¯y?˙Ä¨°K$,Ëˆú'Ël‰‹‡ßgïs#Zú√ÇÑΩÃºÊ¡≠ﬂz‡≠¡2˙ABÇ~‹3t6Új?Í∑^ÒÿﬁqÙ	ÇÑ˝gÃıØ∑Ìûô3∆è°S$ËÎÃgVoæ≥˛‚Bì®Ωﬁ;7W}µµéNAêP†?dÅd§ˇ≠‹Gß H–Ìy¶QÊÒ‹A¬Ä~íiïìË	zM/ËxkÇÑ}Q/Ëã=ª«•ìÍ~"%˘˜£y˙¡‚»·$E:Ë&≥©v¶í…‰l:Ì“M¶d∆3Õò¶iY’†∂ju?‰∂vq“≤rDË˛◊ÇOÔ õ¸ÆÌAó˝@vñù!á“ÑÚ∑°˘õ‹D?= ºô'Ü1ñYnX¬˜V˜†á≥è%s≥.˝ºßxˇ„Ø?sn˙≥Ø?~ﬂÔMzà–OŸÄÆ=Ù}©⁄¥≠˙.•Ò“dUWË=;Ÿ®K@‰Â∏Òìååüæ“ˆ#5–õ'ıi@èÙÓoÛlQ%Ù§ÒÂ∫Œ–;;9±“®∫@˜0ˇıÁdm¸≥ØY∞·Bg| ÙAouŸ—i≈–[å∆Ã™ﬁ–;{π\wÇ~Ç|∞ˇMò¶zå~˘>ß:c3y@èÙ&ıô≤jË-E•™Ó–;÷´É†…_ﬂè˛N9Ê?"˜dQt∆ìÄ/Ë-ÍiÂ–P◊zk73ì˝°”ü≈}Bª≥˝ÑºÅÛ
+°3>ZÙxAo]¿€ °'ç@où÷'˚A/êèÚß4Ëüí7PP	ù±l–c}ÔûK)ÙÑ±íãÙæ‘ôÿ†‚o®√œﬂP∑∞°˙˛˘–cΩ;d¢z"1ûãÙ÷|˝0tÚC˜o©–øı˛ÿ]ÙÊ∑&Ë1ÉŒx>ËÈ˙CoR7A?M=¿G®–èP∑pZ9t∆kÄ3Ë,[å zb<&–∆x˝ Ùπ–°ˇ∆˚¯ö2ËLfÚ;†kΩ’ÁÍ°À1ÅûHLÙ‹©3õÎù€Í°7∑:Ë·BÔ.WÈìQŒ=\û¶êÀ XkïàÈ’∏@Oç}Ë7ò~–Ÿç(†ªO~é†Ûd0IS†ßún1=[%·)
+9≥ﬂV-À,çñb=aîˆ†_”˙µH†ªN~û†∂–9(ËÌ…,©ø|Co'7I≤n‰BÖnX≥iöf)ì1<˝TÏ=íc'uÑ~2"Ë.ìﬂe˜f4%˘éÀ5ò˙[‹°a%¸úÚ| –õŸ#Ë˘Û°BÙsd5ñ«…⁄çÓ}:[“˙RT–õI˚áûñ;.<pñ©¯Cbä–[|! Ë"7.ﬂ“˜ë@ÔÏÊfiÇ(ΩÛÏù]“z!:ËNìﬂ]t „·‡†S§—AoﬂhåëŒÎcÌ9>¨ Ëœ¥=BËî.∫∞åx@ofítV7}–3ûY@ètû6ÉÉ.‚]T«)ÔUm°_ç˙†…ÔÄÆ‰“=K¯/Ü:ÈëB¢ËÉOÍi@◊ˇa‹— °[qÇ.rc¥S:.›I®ŸÄÆ˘mf\p„æ◊ :·w©˝Ø˙‡—¸Û=Ì;v–m“Ñ⁄\˜‡Ü◊˛£tQ"<x«ö#ÜŸÁz IΩòN%Õ=$Æ^sÇû3	œ±'Bû'ŸŸuBìuLòqûêVÙp°Áõó…d-ï íWµP◊£Ün-ìÜ´BûÎ.]ÆAòÎr“òÙ‡†˜{ìœÆÒ	Ωn5ñ©≥»'™ö@'Ï≈
+µP⁄ ›Ù CØwxôÍ∏«U™¶–∫EπI«2U◊oT–µÉMÿÓ…QË9Jõzû8>Ù£“kü˜'ø∫–£©Îﬁ≠$ï”:•ÕÍ–ñíJä§¥Ù›Å6@◊z4ojÈÇQPVzÜ∞*äCí°üV]§g§¸Ã∫&–y™ÏÒÅTÄ[b	˝∏~–è´ÅNòÖ’π'Ùà°Ûôö˙∑©ˆ<oﬂ1Üæ°ÙE–Öòñûà’ÕÙ(°Û—dﬁœìˇ”yNƒzA?Ëe–EQ∫†ØŸÄtûM%ßmüc…~ô´zõjX–œÎ˝º:ËBÃJo„,tÂ–oßj…t1àI#æ.⁄KÍﬁè.]~>üëÛ⁄‰–°+ymÚ~¡®¸hH ›?Ûá/ÂÉöÊ˝dæ2ôÛºUMÜ◊‚Ñn–ÁÑRË¬ÆÒ°É@]˜¢öKwŒSµi;*Ë∆XÈ∞rm†Vµåµ†◊˙q≈–õ_÷Ï–Aèb=zvˇΩ,TÌGÀ∂jËÜëYû¨˙›jà–'Â˜"”Ç˛H7ËèîCßUtﬂÖ'ä”‰∑≤dì∂ËÜaåeJ¶U‰Ü!DË+î=MËÁuÉæ≠∫≥Y@W[aÜ¯Vñu_‰åÅŸ]ÓR2Ms”≤]7t Tw´˝◊˙˛Lwï–Eqî∫JË≠z2¥CŒg¶}ê3˚óıÄNÿââ÷kìÖX‘˙¢à∫IËJ°”G<óbË9B±åRzM/Ëµ®†&øz0–Ö=E¸u=Ù"ù·ÖN®/”ºroC?,Ùg\ˇÉ÷˛…»†”øvÄÓªf‹,U˙Å¢ù√
+=W"‘ÃËˆ|∏–Kj~ﬁé:eÚ;†]î©?ÆŸÚ–CßΩ©e≥]‹◊	˙}%taß8†+Ö.Ú‘W^rËR1ÀåÿÖæÆÙıh°”Ø%›'t“gázÆA{õÍDu:mÄ-\ËΩÉk—@yømÄNÉ.lÍr>5§–´ì+ƒÇñFg⁄–i≥`√Ö˛Åà∫>'ø:zS:˜&}X†◊-´añ2‰≤µ∆§ËÅ^÷˙∫–}N~èÙTP˘K–ÖòÚ&˝yÑ˛LMjou©8ÔB∑ÁtÅ>ok›ﬂ‰˜·X¶⁄ÕÔÇÅNó>j?ü–]GøÎº]¨È}MËΩyïìtï–È√l-ÈÄÓ8Äæø0ß}ÅÎùü“∫è…ÔÄÓ∫'ÈÄÓT0£g%}∫∏¢Ù+BËﬁ'ø∫'ËÙa∂ô<†æloÙÓÚ.Ù%=†/i]‰g ]!t∫Ù’ø˙†bñ„ÏBØ<—˙ìä^–=N~tè–ÈÍˇÙ˛OÓØ™ﬂÖN®˙"ÙÇ–∫∑…ÔÄÓ:y@˝Ä.√º∫}"zË'l˝†{ô¸Ëû°SáŸ ΩœE{ø9{–≈ıË°_B˜Pe
+–}@ßIÙ√Uk˝ÎYÓCó>•á˝Ÿ∫–…ìﬂ›t“0†Pæ<∞¢Â>tq5jËWÖ¶–©ìﬂ›tät@ﬂ+}ô1Í÷ˆBØlE}´¢/tZï)@˜ù0ÃËÌ3˘äÈVª∂∫ÿÊQBÁÑ∆–Iìﬂ›'tyÈC›0&2≥aÂ$vπ∫∏ÀeÚ_*ÙW§öΩ+¥ÜNô¸Ë~°K®Ù÷J∂&ÔïV˙:aóô–:Úo€≠.Tñ¸˚4}gäƒ∑í˜œ…˛*ïìÍsÅﬁGR“Âö¸ﬂÔwÛ´È+∏Ø•eJg˜∏È7´ù∫«]˛ø  ?´ä
+endstream
+endobj
+12 0 obj
+<</Length 420>>
+stream
+?òπ¡¡¡n± qqq€ÎÚÔÔÔˆ˙¸≠”·˛˛˛∞ØØ»»»###˛ˇˇˆˆˆXXXÀÀÀ˚˚˚è√◊ûÀ‹«‡Í€€€ˇˇˇ˝˛˛∫–ØØØAAA˙¸˝ÎÙ¯àààúúúÊÊÊ???„ıŒŒŒaaa˝˝˝üÀ‹ıııtttQQQﬁﬁﬁ—ÊÓ   ∫⁄ÊÁÁÁö∂¿ÛÛÛöööJJJ◊◊◊¶¶¶Ò˜˙!N^¯¯¯@@@ÂÂÂ111µ¥¥ÍÍÍ···”””–––nnn^^^WWW«««ÒÒÒµµµ˜˜˜uttÚÚÚ"""ÒgggÏÏÏÓÓÓ†††œœœééé|||}||,,,```ÅÅÅ‰‰‰˜ˆˆ322˙˘˘∫∫∫:::999çççæΩΩ***îîî›››¿¿¿444mmmª∫∫∫ππIIIôôô˘˘˘¸˚˚æææ∑∂∂¸¸¸⁄⁄⁄ÔÔ===ååå√√√ì≈◊ÚÒÒRRRˇ˛˛FFFYYY∑ÿÂæ’›∏∏∏á¥ƒ$$$ÙÙÙiii(Uehhh---√ﬂÈ‘””Øº¿ˇˇˇ
+endstream
+endobj
+13 0 obj
+<</Type /XObject
+/Subtype /Image
+/Width 256
+/Height 256
+/ColorSpace /DeviceRGB
+/BitsPerComponent 8
+/Filter /DCTDecode
+/Length 19102>>
+stream
+ˇÿˇ‡ JFIF  ` `  ˇ· åExif  MM *           b       j(       1       rQ       Q        Q               `      `   Paint.NET v3.5.11 ˇ€ C ˇ€ Cˇ¿   " ˇƒ           	
+ˇƒ µ   } !1AQa"q2Åë°#B±¡R—$3brÇ	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzÉÑÖÜáàâäíìîïñóòôö¢£§•¶ß®©™≤≥¥µ∂∑∏π∫¬√ƒ≈∆«»… “”‘’÷◊ÿŸ⁄·‚„‰ÂÊÁËÈÍÒÚÛÙıˆ˜¯˘˙ˇƒ        	
+ˇƒ µ  w !1AQaq"2ÅBë°±¡	#3Rbr—
+$4·%Ò&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzÇÉÑÖÜáàâäíìîïñóòôö¢£§•¶ß®©™≤≥¥µ∂∑∏π∫¬√ƒ≈∆«»… “”‘’÷◊ÿŸ⁄‚„‰ÂÊÁËÈÍÚÛÙıˆ˜¯˘˙ˇ⁄   ? ˛˛(¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ä (¢ºÎ«ﬂ>¸*µﬂ>(|;¯qfP»∑^<ÒØÜ¸#n»:≤M‚KOç«Uézje8¬.sîa´ Rj1ä[∑'dóõfÿ|>#ZûB∂'ZjhaÈNµj≥ì¥aNï8 súûä1ãmËëË¥WÊƒo¯,w¸∑·¿∏ä_⁄NÒæ°"=?·óÜ<]„»Óÿn‚◊ƒ&â/É»%vâ'ÒÂî˘õN·'ƒ¯8Á‡Nífá·GÏ˜ÒW«†+◊éºA·?Ü˙|œÇƒtI~&jlÙç>ŒfO˘fåp>O1„ﬁ πñ;âräsè≈Jé.û.º}p¯7^∫ÚΩ=z–\ÙJ˙KÒˇ ≤ó¯!‚.+^ﬁ«0Ã∏w√πMT⁄WßúqrúÆi6πúqçEk+-OËﬁä˛2~%ˇ ¡√ˇ µ◊à“Íﬂ·Á√øÇøÏÂﬁaªüJÒ/è|Edò„À‘ımwFÙÆüx…q‡◊F«˙Öı?¸ø˛˜ß¸iÒ ~Œ_∂∆Ø·ﬂx˜_◊éùó„î6ZwÖº„kÀÎÅóÅ<{ch-¥O	x∂{∑ﬁÒîVÒZ…o·˚Àm≈1Èè„?3#Ò?Ñ8á3y^WéØRß*pƒ◊¬V¬a*NRQßB1*ïEZ£ø≥çJ0SÂqåú‹c/∫ÒKË'ÙåsÅ·«|u¬˘VÌßFKïÒWƒAÇ¬—¢Îb≥LF%´é¡œ-¡ßIc+·3T º+U£4+◊£˝G—E˙	¸zQE QE QE QE QE QE QE QE QE QE QE ¸ÿ¡_?‡¨ˇ gOå∂≥üÏπ‚_¯gƒÂñ∑Òo∆˜~—<Y™Èö˜âaãPÔÇÙ[O€Í>”Ó4ÔΩßâuÎ´›VñÂ<M·˚k9,√TéÔ˜áˆë¯Î·OŸõ‡O≈é˛5`⁄√_	Í˘∞yı›_‰±◊ÖÏfdtMK≈^$º“º9¶3°å_ÍñÊ\Fá˘™|e¯πÆ|CÒœå>(¸J◊#ªÒoƒkæ.Ò6§˛`KÌ_‘&‘Ô-Ù˚`%ëm!ö‡⁄È:e∫∏¥”m¨Ïm£€FÉÛÆ:Œq1Øí∂WöC(Ã¯É9÷ÃùH”û]î‡a<N.º$ÁZı˝ì°Ü\–U\k¡T¶◊<≥>ä~‰ıÚØº{„Æƒxâ¿˛dòl>[¡Q¡◊≈·¯”ƒ)≈·≤n 14iPƒ∫Ÿ^Uı¯Êy‰„C≠ï‚™a1tÁıZˇ P¸Bˇ ÇÇ˛Ÿ.¶”º{˚V|m’æ›◊sÈ_éuoh7ñ–Õs˘û¯|ﬁ‘G%ƒ1¥•*)BåI˘fÓÌÓÓÊ‘.§kõ˚ñ-s}93ﬁ‹9$≥œy)kâú≥3íG9$ı5√È0.ó_úÀ∑p≥≥≤û π”ÌZÈÂú‹´Ç>”~—Z‹ë2√n∂9[àÁDﬁ3Áå„ﬂ˘˚ı<}k˘'éÒ4jÒ?óÁπ∂ñajR•CöcÂèùz¥ËRXöîÍ˚¥ÁEb}¨hNQï(∆Qî¢‘Âˇ CøEã3¿xA¬Ô¯U·ˇ Ñ‹uù·1ÿÏ€Ö¯Ñ®pû)¿‚≥,\≤L/Õ_ÜÃˇ ±?≥™ÊÿlV.uh„ÍV£^ù
+–ù
+weòı›ñÌìûπ˛G©5Öyyr∫∆ãej˘3}∫ÔSRl”¢µí(]ÛÃo.ß-¢[úÂ÷•˘Ç>“ˇ ˚REOÏªã$Œ%mB÷‚È‚ä;{ªBe\p≤?î›Ò‘ÕalˆëlíÊ[ÎôeiÆ.ÁXñiÂeE*¢4Q¥i-Ω§d√n°ä~ÚY•óÿ¬g|î¯{ä¿QÀ·ôÒñwıäºF/œ¢Çƒ∏—ñZ¥⁄¬¬®˝I∫≤∆TsƒŒ0°Jí¸Îà|0˙NxáÙ¬»8≥0‚¸_}º-YFk√Ÿ?ÒD∞’¸FÕÂìQ≠ôaÛÃì,ƒ*ÿ®K>ƒ‚r‹≈Ò5:x
+<9ÇÜ%√◊ƒÊ∏¸mLÎH–.Z7€uzùø8`eJ„˝»˜˙ëﬁæV∫â$GI$ç√$â"ÜGF]]Xeu8e`CÇyıèàzØˆÜÆm#|€È™aˆ7ÃÔıRB{m"º≈"d∏≥,HéHX@u Å,êªïW%[|l£ÃU}£+Ú0-Ìxk√3Zîp≠-\U:ò¸EyA‘tËSQT„jT‹§πÈ⁄.pÂïY∂ÌèÃ˛õ^;`xôq^'.ƒgÿáÇ·L£*¬‚aÑßçÃÒU*œVÆ2t10¬—Ê√„%:Ò√bJX<5(“n§\≠Ø¯#W¸éáC¬ü≤wÌ—‚˘Ô|üb˜¬O⁄7ƒwí‹ﬂ¯2ñö_Çæ1Í◊NÛﬂ¯- äœA¯ï{$óﬁ+/Ou·Éˇ 	7Öˇ ¥Ë. ∫Ç´Y¢π∂πä9ÌÓ ë&Çx&A$3C4e£ñ)cex‰Fdt` Jêk¸s¥…‰ö	#r_…*õ$Ïp~RNr÷ÙV€“ø§Ô¯#g¸/ƒ≤%ﬂá?f_⁄√Z’¸W˚,Õ-æì‡èN∑öœägü1÷{Gé5∏‘ºIv"ÀÊËvÈuÆxÿ4ﬁáQ–!ã√–9'W s
+‹3ƒ8à‘´Öú(·s6›™¬pÖJ≈96”ù:êq≠&‹[‰≠&”™ˇ «Ô¸ ¸B‡¸ø∆ˇ ≤äÿ,ÖØôgúFUpxú>+ÑÕ+dP£
+ãé√b£[.£NúkSÇƒÂîi∆q¿G˚Ë¢±|9‚?¯√√˙'ã<'Æi'øât´w√æ#˛£i¨hzÓã™€E{¶j˙>´ßÕqc©i∫Öú–›Y_Yœ5µ’º±Õè´™˝"ÁÒKM6öißfö≥MnöÓQE
+(¢Ä
+(¢Ä
+(¢Ä
+¸Ù˝±ˇ ‡®ü±ÔÏ-‚m¿ﬂ<qØA„Ôxxx≥LOÉ<Ø¯ø\_Iy•ZÎ:ú⁄u™Ëz¶£®È∫ïûò5≠cOüQìM‘Œ°≥∏ñ?–∫˛ˇ ‡Â€ÿ¨?‡£÷wÿü≤ß¡≥ÖvfÒÔ∆’U@HôÇÅñUÁí0MxŸˆ;óÂÓ∂î+bß^Ö
+4ÍBu#)V®°eNúÈŒr{E)Øy≠ˆ•¯O¬‹;≈¸]∑äÒÿ¨∑ √eôûkôbx¨6
+≠>]áu•9bÒò\fFöΩZı'áüÓ© 1prU#˚k‚Ô¯9∑ˆ+“É≈·Éˇ ¥wãnBK}§¸/æöÌí3œÒ;T’$Ëõ◊ yD‰/Õ^*ˇ É£,J…Äˇ cÒ+í¬œ|ní£¢4∫^â™3º—«≠Äq±eÁx˛8≠nöxmnMΩ›™›¡Ã	yo%¨Ø≥* © ·ê£ysƒ“A(Vh§uÊü™xÇ-÷9⁄∫ñVdÜëb.Qw9i2†Ç‰Éóej‰è«1|a«ºdrÏ∫§)„™‘ù*xl>Ì=§sá˚lk®˚5π rJ*2ri&◊˙M√øFˇ ¢ﬂ›^3„<+¬ÿ0∆g«gøS˙û&t)·´ß√5r∫ï÷*¶"Ö<<0î•<DÎ”ÖNSçˇ ´ã_¯8”ˆ¬¯ã™]i^ ¯=˚:¯S µäÛ:ﬁùÒ≈´∆±§hVÒAvû9›ìŒoıª"Ì6í#˚:‹>’h’_Ãu¯83˛
+•kzéõwg˚8C6è©ﬂiw÷ñø
+|Z–5÷ôu=Ö“Es?≈yÂ1˝¶	d€ñP0©ú¬ÔŸ„WÄ¯„J*¿&µˇ ’å9√dœ„ﬂﬁï%r§™YH©#(pqÕo¸G~#¸FQ—~ ¯·G—|S´˙
+¸≥7ÒéhUo˝cÃ)Uãç:î’<(¬JUπì•,#ÆHßÓﬂFô˝Î·Ô—ËØöeÙÈˇ ƒ‡¸~J¶7éû3â1’qyQÀêÃ1˝zıhÕ‚jŒ5ú$§§Ød~„¯w˛4˝πÙ∆ê¯á¡≥7âb1ÌEOáø¥IíM¿˘Ü[OåW1∏+ï)ˆ`9⁄Cwp¡ _µc7øg˚Éè˘wè‚=òœØÔ<g~q”éO^G¸—Í˛'≥”gkEÜKªà∂ô’céÎπcybe* Ê4S±YK≤ñù•Î÷∫∞x—ÑPÌÖ[rÓ ¥nº8R@`B∞»;ps^¨xã∆*,8Ö„3Uì 1®±µ0yEX˚)¥°]“©Öû&8i∂π12§®J2å£Q∆Qo‡kx9˚6Û_+¯=GÜx~$–≠[WÜ0úG‚
+¢«·©∫∏ú™ñ?√du3¨<)‘˙∆MG2ûkF•*‘™`„VçhC˙V?r«ÌD°á¸(OŸÙ±ë
+9ü‚R™ƒ˘à»<FÂ‰v1îêIƒ√E)ëL}∂ëˇ 8¸Tµ∂é?˛…?µ{≈œùu£|`Ò_ám‰ÁÂÚ¥˚Ôá)í,ÉªSü'û "øòGÎ¯çRóø˚ﬂ„^e?¯˘=xÇrÚñ[ìæﬂı.G€„˛ÅDÜ•…·ìµÔKç|HãM+u„.ª4’ıiª[˙®ì˛ÅÒ¬ª?bÔ4˘;â˝°ıUá€˛c6}rOı©ÙÔ¯:*Ëj
+∫œÏWböKH¡¶”?hãâ5(·˛ó!µöQ¸Q˝∂=¶¸üÃpÆ„˝kíø÷Ì-Ó‹,ìIbS—Oå˘eòçŒ3óUfpÃ*>ì'Òƒú„]ãûaâ‰u]Y^Z⁄•U:ï%,#N	 1sú°i∆*\“I˛/‚7—ËO·∆GSà¯” °¡Ÿ*ƒQ¡C1Ã8˜ç©¬Æ7 é	FÆ}ä≠å≈ ´VéBΩgFÖzÚßÏh’ú~?‡¶ZÈnˇ Üû¯I·OÖ:œ¬?hﬁ)πÒóé-Øºia‚ãèÍ˙}öÿ¯:…œ√˙ŸÙçﬂk⁄≠‹zﬂjÁ√˜âË±…/„èåÙ˝BÌt¯“xnn"dë-ÃK/ŒÑÏë B∂7(b…äÚπäÓ/6"pÜV8;Hı˜A5J;ˇ ÏÌkNú∂›–jqg¶Ej«ˇ A¸M|‘ÕsÃ«_à#W˚^ç8·gN•7át>¨Ω ?V\∞ßg*é*öU%U]œôˇ GxÇ‡?
+¯/ …¸"≠Åóáyñ2Æ{Ü≈·qîÛzy≥Œj”xå Yƒ›LV.≥•NÜùZ∏â<=„x_dæÑ7£$Îœ'å~<üÛ◊"\´§èØ∑lz˜„ﬂÎÂ˛ YH√˜ÁüØ\o~z˜´”Ôåÿ;èn3ûû›˘˛uXåÈ+ È˙ziÁˇ °˝kìqF8∆îîì∂ŒÎßüù∫ÓﬂKù‹rÁúÅ«Ø˛±Z∫îqË^‘|_xv…y®…†xz¡∫π¥∂ÜÛZΩ Úa∞[Õ"ƒ2Â^„Uì5úÄs˙twzç’•Öçºów◊˜V÷66±Àuyy2[Z[F;…=ƒëƒÉ<ªØ÷°˝†5ÀCÆiæ—nc∫–æÈ—¯v+ò`‘ıXgûÎƒz“cÂt÷<Iw´_ZÀíNî⁄T9+nò√/¡,N"1öº££ınWÚç8…]|5gFÍ“=N/‚äô&M:òY®b™R©:sæ±iFï™Ugã´BØ≤îR≠Å√f^Õ©—V˘≤ÂûWíI≥ ÏÓ«´3íÃ«Íƒ˛5¬xÉJ∫æöãY¢ bñﬁ„z∆Ë«wõë´òÊS√ç£ï©1≤+Ónˇ Aˇ °V4„®˛ùzä˝k%Ã±ôF*é;Y–ƒRMBj0ú\e¬tÊ•	¬Q∫qîZŸ´I)/Û€ƒﬁ·Ø8w1·n.À£õdŸì£WBU´·ÎFΩ
+‘Î–ƒ·ÒXjî±8|M
+—SÖjUc){ÙÍs“©Rú˘[k/∞¬»X<í“0»\ÅÖUúı=O<v´sÎÙ#ˇ ≠õÅúˇ ûŸ˛ïápqë€˘ûüê¸´€û;òbÍ„1ï]lN"ß=Z≤QçﬁâZ1QÑc¬0Ñbîc¢íI#Û/‰úêeº3√xeπ&MÜXLø	’™©RÁug)÷Ø:ïÎ÷≠Z•Z¯äıÍT´^ΩZïjŒSúõ˝¬ˇ ÇCˇ ¡j>#¡=|Gß|!¯≤˙Ôƒüÿ˜_’ôµ/¬“j^*¯-}©›4ó˛2¯_“s¢Ms,∫áãæ	#≥’•k≠¬øŸﬁ)óU¥Òw˙|.¯•Ô„_√ﬂ	|W¯M„«ˇ |w£[k˛ÒÜØc‘4}kK∫‹´5ºÈáä{y„öœP∞∫éCK‘mÆÙÕJ÷”P¥π∂ã¸yØßé"n%Û¥*ñ8Á,{*˚± ûM~Øˇ ¡+?‡Ø?ø‡öûã©¸K˝ò¸e¨«wÒ?‡¨∑»íZ‹‹yV˜^>¯]q,v^¯Éikm¥ñ[_¯ÚŒ⁄ƒÌgyÉ‚ø˛Ø¬ºEã¬aËQÃ·^YdÊ®as	”®·BkOa*Õr‘§¨ÏîúË®…Y”Vß˛}¯˘‡œÒsôÊ|ã hÒ≈
+⁄y˜·ÒòHb≥<=W˝©G/çU[è™ÍFUÈCôJ§*9S∆UÁ∆ˇ ßΩ·ü≥áÌ%_ˆ¥¯A·?éü ¸q¶x˚·«åmL∫~´`ÕÊõ®@u?xìI∏Í>ÒNÖr∆À\ˆ≠ok©ióK≤x<RIÓu˙Ñd•(µ(…)FQi∆QjÈ¶¥i≠SZ5™?Ñ*“´B≠JÈT£ZçI“≠F¨%N≠*¥‰„:u)Õ)¬§$úg	%(…4“iÖQLÃ(¢ä (¢ä +¸˘ˇ ‡Áˆaˇ ”?·ñ˛3c˛«Ôé@g˛∑é¬ø–bøœø˛oÀˇ '”≠Ê«7Ïùu_´…@¯ﬂÜFR]HX`´ Aº\˜Ü*PséÉ≠(F‹“å*ﬁJ7≤ÊÂø-⁄\÷ªH˝G¬\ûØqmê–Ø5|„Ñ¯á.°^Ø?≤ß_Öå(∫ﬁŒ3ü±ˆº™≥Ñe?fÂÀ	ªEˇ ?¸Z|›Õ”DÕk2\«≤;iÌHâ≠l‰˚U¡∏µTTêJc≥Ÿq-Õ∏µ"¥Oü„$i¨*ÂAœâà˚åÌ∆8<g∑Ì"÷œI¥ÉO”‚Úm-ÅFdíGÀª<≤<≥4íÀ$éÕ$íHÏÓÏIc[ñz≈õYﬁâ|¶˛8fx'è#cßCæ6t,§ØÃ ê¡X~'G9£ñÒTsÍÙjKıºujî©(∫±ßåß^üÓ‘•9√€&Ô(©r¥öπ˛üf^f|m‡o
+2ÃœC7˛¿·\∑	è«JΩ<æÆ+á1ô.-˝fT(◊ƒCä˛Ãù8 4*Œõ´NrÑúZ=œ‡=¸1¯Ø¿wq∂-£÷4ç≈c…∑÷¨&v*f∏*§ƒ\3Âp‡"∞ç=k«7w„ü]©‹ó~4Òm“09ó!‘¶Vz´Ç=Î¡º —Ÿj÷1Z™√ï°Kh–±%≤∆!UŒN‘†ñ»íyØTπï¶ñyúñyÊñWc…/3¥éOπ,O÷ø‚LCƒÊÿ⁄Œ
+àû3ï?Å÷©^|ª+•œ¯ÍﬂÇ9,r_∏_CƒÀ! p¸6´µg^9f(√˝a¶ﬂ,™˝YM≈ÌÕÛ<?VÜÓ˚Ûw¬Ûj:Ñ±±çí;òÚaƒ‰I∆w©+Ê#ß*‹ J˙≈πè8ç&yO@"1≤«—ôî‹„”#—5M’$ék»Oyk<rIæV‚ﬁS≤0FñUë\#)¥≥˚]>œNS§+lnZG#°yñ8Åù£ú_Øb<^ÀÎ<≤ï‚£õ’…ñI95C˚60xUÅû.ú’W^˛∆ıi·ﬁ*Z¶Í ú}§øŒl£ˆtq~QÙß•‚ÂN<»jxwÄÒ.^'‡È¬y≥„j¯∫|@¯ü√¯¨,≤¯Âjús'39éw:òúæ3∆GO]·(»ˇ x˛»U˜ÁÆœ˘ı´≠‘˝MPò¸øà˙◊·Ù˙¸øS˝L≈k~Œˇ s∑˘ôÚ[í=˙„#Ø˘‰3Ãì\ﬁÄ[Ô.°ñÿK$ﬁDÒÃﬁjô&&WÛ	©rrì#/Ó WÆJ~˜·˝sw∫Füqr◊í[‚ÂïIcíHå ãÑ™2§∆1ƒo"¥àø*∏Q∂øMÁã‹#ò‚Îcpµ±8\v*K©ºM”®™SîY“Ñ·/z5 ÍB˛‰”nü,øÜæôﬂG\ÔÈ¡ú=ïpŒ}ódôÔgµ≥l%<ÓX y.cá∆‡ﬁC[/√cqXlU5∞8ò`qQäX¨,È¬8«à°Œiø“[ü/Ø±|±¸¬úü®Æc∆∑ﬂ`}&}¡A∏∫èq8t	üLì∑8»È«ø¢4q¬Ç8î$cÓ®ßí{ñ8…'$ı5·_&+i°*ûßuü|ZèCÌú˙˚SŒs∫\K≈5Û8–xjx˙êÖ
+qu90ò%N.´èªÌ*S√:ìI 0r‰Röäî≤œ√√¡/2é´öG;∆ÆäÕ3L4j”¡¨f}ƒÚ≈‚!ÄÖuÀÖ∆gK	ÖuaJÆ&ù/¨’£áùZî©uz≥ˆâyÈ‘ <’Œw˝Ïg∏«8œ^˛Á¢ŒääTW*+≤´mÈªåÆÔîë¿aÉÉ_¯NkàÆbxH5Yë$˚«ÄÇ™Û…Ùñ˜ó“√yx—∂ÀO&‘FëçÒÕ*M,≠Âú}Ë£D\Iï∫xèÉ∏
+≠≈8¸z√bk‘√«*À£KÎJ≠xSjsoù‘ñV≈B4ìT®—Á©)9 º˛íﬂ˝'≤œxOÑ™gy&YÇÕ´¯É∆u´‚)À!´óÂqJX<-:r°8û[êW≠é™™cs,|∞¯Jtcáßâ∆˝Q·z/\\¯°]ZÁE”Ôd“dF-µãõgµ≤øn˝Óò≥M®⁄t+®[Ÿ8‡_<juq=Ãü~yáæ–[ÂQÏäèa]∆®≤¥!~[ãﬂÙ˚‡V!£çøÒ’ ˆèﬁº”P‘,¨ä-›‘6Ì(˝⁄»ﬂ3?3 ∂–p∑$Êø7·Ï&#„ÏhUØ_'Ï(–ß:’e§Ê·
+qsìü≥ºπb˝ P{+ü⁄û2qOís√2ÕpfYîP°<”5Õ1∏lªNΩI(·°â≈b´R√Qßáé-¬ã´R6ƒcÒ”röä©?Vˇ ?≈XÛıoÛ¸U™Ú$®%â“H›C+∆¡ëÅ=UÅ èˇ QÊ≥Ö•â.$Ú≠ﬁHí‚_1"Ú°i öO6PbãdEüÃê”üÂæøNN§i5…>g%4‚·+®54’‚„-$ù≠fûßÛŒuç†∞uqÙ¶±8_™ºe:òYFºq=í≠	·•	8VUi⁄T\$„QJ.-¶ôÃKyjÚº	qJ§©E`Hp0S?t∏Ó†í;åÉå´Æˇ è˛Õ\ºÏD¨¡∫JÏO9!îÉÇ;Ü£ ◊I+˚Ãä[éåGÃ?3˝}´Ù˛$·(p⁄À•K<Tqj¨*˚HFÖj*ìú©®ΩiO€{±wï>[JsÊV˛KÈ	äÒ∫ßQ«ÌäÆAWâ¡}S[NæYô‘∆S°G*—ãYÜ‡ØV≠%NÜ.5[•Ü√˚	˚NsTû±[®"‡4íÀñ|L"Hô–B∆…"8‹¯v…+ΩV±òùá”ú}qœÙ˝+cQµÇÂ£3GóÖöHdGx•â∫6…#e}Æ>Yìã√£cW¡Ò?ƒø¯;·ØÅÙπ5Øx˚≈~OÑtàÉ¥ößâºU´ŸËZÄ⁄≤0˚f©kI¥Ñ8U&Ωö9Ù1;Ü»£Öõƒ™¥È™ãï”î#€A¡|~⁄Ríß(ÚÚ¥Â.{Àï~köxMä <eŒºXØüa£íV¡‚qS¿œ€¨m,DÚxeòäxô∏,3ÀpÙiœN™™ÍFQ£A·„^ﬁ_›/¸ô∆˝îæ;|}◊ıR||¯ß¶i‘≥‹dæóÇ√T–uøZ⁄0[QØ¯ü^’º!wwiÊ∑¯we≤4Q[$’5xÏØ√≤øÏ„Sˆvzƒt/Ñº5‡®Ô"å∆uùOL”‚ˇ ÑÉƒó
+ﬂ7€ºQ‚5Oj.pdø’.d ¿˜Í˝k.¬˝GÖ¬^ÓÖBN˜ºÌzç>ŒnN+¢≤Z#¸Ù„˙\Q≈9Ó~·Ï„öfXåE|™.ûõŸ·!;hÍC
+1´=ÁQJoY0¢ä+∞˘†¢ä( ¢ä( ØÛ‚ˇ ÉùfÚˇ ‡¶Z2ÙœÏõqÒúd¬√¯‡πäëœ?Ü+˝k¸Áø‡Í´◊∑ˇ Çû¯Ucëì?≤/¬v9\ëÒ„ÅÁÚ∞Îüc≈|ˇ «ü)®øÈÌ'ˇ ì?Î°˚Åu˛Ø‚•Ì˛¡èã~∞á˘[üÖ±\G‘q◊É˝1èÛäﬁµ∏Èí{ÙÈœ9>ˇ ÄÛÂû≥t
+Åu?^Aêë◊=œÓ>É÷ª-vc˝!è˚¡I'Ò„‘g∑æ+l”€z_˙_◊e¯üÎ'f¸∞£Ôˇ -µˇ ^ã˙ZN¯m⁄‘c÷⁄‰„?Ï˙˛•zÛûqÈ_6|+’ÓØ|[¶Ÿ¸≥5ÊÎH”fñ·‚Ö ⁄1íÓ†pIÈﬂèo∏÷fäy¢1F)•âÅcù—»»G‘9È_éq93≠Ω
+OØÛUˇ Ä•>b÷+Ç‘˘ìqÕq™◊ÈÏ0:ı”[~CP1‰◊<u…±˜"â?÷™>πqÇq9Ììœ„^4>/O¯o‘˝*≥”˙ı¸ø/ø°vYòÄ %òê  díO §ú 9<W(˛$—§ê∆∑ô∞%1» nŸY
+‡°Í| ≈H5ã‚/_√£_<[@∆%äGñ8€6˜R«iqK,r°ûXn8âU(XÀ±Kl<p‹J∞:ú˙cﬂÚØ⁄|5Ô-‚Ï∑0Ã≥<n2ç:π`pÙ03°N¢´kŒΩiV£àÊÖ´¬4È∆ªÖG)µ ó˘ãÙ€˙fÒØ—ﬂç8CÇxÜxw2ƒÊº?OäÛúœä0˘Æ+S_5Ã2¨6UñPÀs,¢T±*yF.∂7WâPÜ#Né2U'/¢$`FA6
+ëÇ<Ç‡Ç9u¨Èé}⁄∏ΩWΩM"’LÑã™≥yBFÚ∆Oaí—@µ>m^ËÁ˜ò„o
+øÁ?˛∫¯√/˛ÀÕ3∑⁄∆øˆ~?Çˆ—VçUÑØ:>—FÔóüìô«ö\≠Ú›⁄Ô˙ÁÉ∏ΩqÁ g¨l©q	˜fWõ©[˝ªî‡Û7ÇùW
+~Ÿ·û%”UΩù%Z0çUN¸´jÂ∂©>ò«◊∑Û˜È_?|`‹ˆæPH›´O»ı˚qúr~ú˛uÈ7˜˜îi‰Nw+∆B2ëê „9úåÁê+Êœçæ-◊º=¶¯~hÁÜÂWùb[òcñ<µåôb1ªÃ]´å±'h$ì]YFåŒÚÂA¡ˇ ‡Â(˛Út*∂Â$ùì“7Ÿ%mﬁæàúW√ú9·TÕaâÉŸ∏åv"ç*u⁄¡·Û|≤PT):îÂQ“˝Â^Nh…ŒWÊ¥"◊™¯W@ÖÌ≠§û9ïVeY¶ä7S–MNã(·\é1Éä˙C¿∫j∫µΩ≤F>Õg⁄çÎ\6Zt-s<Ø¿TÜ(¢%éÑR:êÊ^ù˚Bxﬁ›D˙HQµ¨¯2eYNOB={
+Ù/~÷Ùxı+6 -+]µ~≥çøës5âï$í8¶íI<∂`¢7+µﬁ&ñ-·d`ﬁés¡eéˆq≈◊Ö|6⁄}^É«’≠=9Àût¥™≈R•Œ’Âr);s]ÔÒ˛˝)>çú.±U≤ÆæOùg_Ty∆q¿e’ÛúfÑp¯l^òeıj„±Ô∆1/:Tõç7∑oΩıªÛ®_\›Ú‹àA˛SÂâq–∏'˝¢k¿<W;K¨ﬁ'˜>T ·∂>áyaèÔgæjoxÛLÒeÇ^i◊ﬁa yë˘Ödâ»§±ìπﬂt‡m$µ+ÓÓﬂ⁄$äVUIî"N"6!πIêûb4xWFÿÖ=ÔÛå	Á≥©ö—´Jã¿UÀ‹ïNÆ£©á™¶È%Œ‚„BT¶‡ú≠Q4úyè»æôûqO“¬¨.Ä3Lø0Ãc≈Yw∆åÛ*X|øà∞q¡f∏:∏zXÁ/™F≠*π•<u‚™S√ﬂ*rù:˛∆⁄>ïÕù‹lŸé)‘ƒpH…u∞vá>Ï{ìù;Ü\¡ ÉèMøB9Ëz◊%π-¢Ú‚,I'$'c»¿«∞ s÷≤nn[yøı>øOœÈF}ò·Û|ˇ 3Ã∞î•Oãƒ˚JQúTf„t©J¨‚Æ£:Úß*Ûç€R®”m¶›¯M¡˘◊á>p?q:é?:·¸õÍ∏˙‘jŒµ
+Ukc18ÿ`0’™F´á ®b©exzúëÑË‡È ú!M∆
+◊ˆç¥Ø"M+B\…¥èGIo)(ê¬ßÓFÏÂÜŸÖV‹…„r˙}‡?œJÊÓn#q˝=∫Ûı¸´üπ∏…cìﬂ”ø„Ó/≠wÀ0«ÊWX‹^#ıjjïoRU=ú-‘yûÔïsIﬁR‰äì|™ﬂ#CÑ8OÑo.·¸ß ñuåx¸’ÂxJXWç≈ﬁN5+*QWç7V≥£F*4(:’ùt›Zú˝%Ã—s˚ƒ„˝•ˆ„Ø^Bm'Ïñøøof¯›ØÈ¢˜¿ü≤oÖ•ÒÎI4o%åˇ |a£·OÜvëàö{∆>5≥%ÀZÍû“Ê1ùÒ∞˛k.g'=y>ÉÈ˝Jˇ L¯7WˆF?≤Á¸á·ˇ äºA§∂üÒˆü‘%¯˚‚Ü∏Å‚øÉ√>!≤µ”˛È2v ∂©‡'ƒ…jËüe’<[¨çª‰v?w¡Y÷ÛZufØK¨œM=§Zçﬂ˘Ω≠™.Íúë¸üÙõ‚ˇ ıwÄ±∏*y3'¨≤:ØﬂXJëˆπ•[izoNx)ø≥<u&÷«ÔÕ„ﬂ¸˛4oˇ ÁÒØ⁄Û,}Ä‰fñÄ
+(¶9¿«≠ #>3åc◊öàÀÓ~∏¸*ºí„◊ÈüØÎÌ˙’7õú„Ø˘ıˇ <–Åòìöˇ 8è¯:ÓÁÀˇ Ç†¯Ms◊ˆD¯Bﬂ_¯∏_èL{˜"ø—èÕ˜?êØÛÖˇ É∞ﬂ?T_)ŒÏÖ∫ı«è˛3Ò˘∞ÁÎÈ^^qBXú∞Ç\ıkQÑyù¢õùØ'≠í›ËÙË}ˇ Üπ≠ìâkâÁ˙æ,ÃqU8©Tî)“Sqß(©Tïπ`ú¢úöº¢Æ◊ÛõixxÁ˘zÒˇ ÷»ı<‚∫´;ﬂ∫3ﬂ<ø^øéz‡oV⁄¬Ó(m'öhd≤”Ó˜ODÒ…{kÀB6K(ë"Û<∏Á>SL{Av÷çµ¯MõõÔ∞Eÿ±{GSéM~=òÂ’ßàûßRø¥ï5Nî%Rnp∫íåc)Y¶Ó∫+ËèÙ{É8«-√elÎòa∞YT∞∏ll±ÿ⁄Ùòj8|LiJåÎ÷Ø(S£ÕÌaŒ◊Ω(√‚jˇ a~Õ∑ˇ >Y9n¸s·+g+?âtòòs¡W é‡Ú1^—‚f¯õƒ∞å‚Î—“-ZÒ˛É_?~ 7?Òêüï˛\|FPlFﬂË€Å±Ç5Óû/õ.Òi…Á≈~%#û«[ø«OÛÔ_ÜÒ}gåß•õä]∂O”œ˛«˙£ÙqÃ^/ÜÒküö≠RJŒÈπ:ZßÊí◊[´;ΩÁü∑>¸Û˘˛UYÁË2}zÛ˛<ÀõÎ{Uqpë8]Ì∑qÍBØ,ÿvÉé	ı™Î{ÍœÀ2Á£m¿g‘g#˛zÛﬂÁaÄ∆¨/◊~ßä˙õ©Ï˛πızøUˆó∑≥˙«/±ˆó˚¸⁄⁄«Ï’¯´Üﬁy.\Cë>&XUç|9˝≠óˇ o,äö∆<õÎ⁄K	Ài}e·Ωè.æ”R›œïs∞NÇh&ç‚ö7Â$ç‘´´w Çy*pTÇÆLx~ 7ñÍTÑíE-é “Ñ¿x¸Ì¸LNI€yx«<˛}ˇ œÁÔT§òryÎÅ˛}œµ{y6}ùdjºråœó«B√UpçNT‘d”M*∞ÊíßZ<µi©KíqªOÚˇ º&ø≈Â5|C‡~‚ÍŸjï≤zŸŒ
+8äÿ7ZTß^Ñj∆TÁWâï2≈Â∏âV¿b•Nú±jÆÂë‰TPà6¢ ™†‡*®¿
+ ¿qÌY≥M«NOøÂ€∑Ù®Âõ<cÿs€π¸QXW˙ä€IÂŸüj≥€B´(dÉí ¡∞ !âÌÆºü(ÃÛÃ_’r‹-lv.QïY∆< )ØiZµj≤å!)∆.•Y•)Œ1ÊsíOÁ<FÒÅº+·’üqÆ}ñpßP´ÜÀpı´∆™ß*ı)…ar¸ø/¿PƒbÒ5ï
+g&Ztÿz’ù8aıgSœ◊wÔûüÀüÒ‚æ[˝•¶«Ü¸<ŸÈØH2=Ï&Ùˇ w„9Ø¢M‚Lõêé™«ê}˙Á'°qé¢π?˛Õøøj-S¬ˇ ≥Ô√o|UÒgÄ<3‚/ã!üÑm”RÒ;x¬ãßÿ¯èU—4q™xéÎJ}z¬Ê]@∂‘5©¨Ö’’¶üq§Â>ÀÖr¸VãrÏ3Sä£ãï:‘*F”Ñ˝åÂ™’4„À( 7Ñ„%(JQío˘≥«Œ0»∏èË˜∆<Y√y∂8»s>£éÀsLUSä√º”MŒ|≤ß:uc:5Ë’å+·Î”´áƒSß^ùJq¸ÁÜéçÏ3˘œÙ´â®ï|◊ûæ†Á˘W”Mm<∂◊Àoqo,êOÒ¥SC4.cñ¢ê+≈$R+$ë∫áGR¨≠€O8Œˇ B—5≠?'ô†m;VàëÄmıù9‡π ˝‰[Ëµm¿ó∑`H?–s ’f“pÉÈŒÏ§Ù—J÷æùm‰èxn=©ñ∆ùUOâ¶Âjè£RtRQjs¶Á =‹9úU€—´˙á¸a™x~ˆ;˝.ÌÌÊRª◊q0ÃùLsG˜dSéÎë‘€ÎÔ|[“º[
+Y]∫ÿÎ*†5≥ø…p@¡kGlyã‘òâÛ¶◊ÁìÍ6¶MˆMr-€k,w{>—_›I$xä}Ω¶â#LP±1≠€mVH^9bë£ñ6$àÏééßáV\√±}k‚Ûﬁ√fI˚H{d°âÇM´%hUJ ≠/&Ó∑ß%◊˙o¬_§¶{¡R•ı\GˆØ‚‰™c2<]Jë£$Ïß_)≈‘ÀÒ´ïß8A¬£JöπcÀ˙á<˘1#∑?áØ◊¸ä≈∏üì…ˇ Î~~√ÛØôºÒ¥Åì‚πrø,v˙ø¶~U[ÂÈãÖÔé¶Ω˘Øb∏â'ÜTñ)^9ï£uaïdu ≤∞∆8¸∏¸Øì„räÎç£À{˚:±ª£Z*◊ï9Ÿ_K∑i∆˛ÙVçˇ |pˇ â<1‚Q˝≠√x¯◊På>ªó÷qßòÂµfï®„0 SqM›SƒSu0’Ï›*≤jQçÉ∑Õ>JC«êÇAöPÏ±ØLæƒë»»¬èuœ?®!ÖU√BJì‹Ocåü •Ω÷gÉM:vco®•˚H∂àÓ¥ñä^Ìa˚`µhﬂﬂœ˚"K∂vÑIôG9stJcÃ‹3úÓ»<}q”ß_»Û˙VYï‰S‡⁄ÿÈ∫⁄±©Rıf´SØBç<)sÚ∏T¢„&ú$⁄©:çØgC¯õçxÛ≈jIå∑Ö0ê∆.©É¡?©G/ß,ªïV ~±ög±ÔÌaâ¡féµ
+ré*úaSÜ¡rI‚™GıÁÏ	˚/Íü∂üÌï˚>˛ÕVﬁ6ùÒ'‚óm„+ª4êÀ§|9–“o|G÷VH»Úiæ—ıÎã9%í8€P[8<¡$Ë≠˛π∫Fü•¯J“ÙO∂“tMN±—Ùm. ∑≥”tù2÷+:¬“!!∂≥≥Çh"Oñ8£T^ Ø‚á˛5˝íM∆•˚B~‹>'”øußCÏÛûÊÊ‹m:Ü†∫Wå~*Îm/I-4·‡M“ˆ›’Í˛#±iÅ«_⁄ˆˇ ˆø_ÒØº‡¨øÍyJƒN6´éü∂ªV~¬íÇ~Oﬂ™º™£˘'È9∆ÎàS…ıy'ÜYrQwÑ≥LO&'4®∂¥‡˛´Ä´ó-Lª‹—˚Aı#Û˛Ü•Ix…?˙eo?ﬁ•YFoîg”ˇ Ø_`8ö®‰˜‰vÁ´ ‰T"'#=Û˘˙≈]LÌ¸x†‘∏Qû8ˇ ?•OYÚ˘qìûpsÎ˝:ˇ Ö T∫ªä<ÓaÄ?óˇ _ÙÙ„8sÎ6»r\`ppC◊ı„ﬁ∏œÎB€~[¶sœØ∑N‹ı˜Î^1≠x˛+2˚Ê  sôÁ9œ^πœQì@F?à≠W£É«µúo¸}´√7¸¡íá˝èæ£3¬wÒëÛ¡ËôÎ¯◊˜‚ézVîí<⁄î*%åÅ∞\Ì-«®Ì˘„¯?ˇ Éí|+Ò‚ﬂÌy·⁄¡æ◊¸i÷Ä˛¯{´Î˛—ı}i|3Æ¯C≈>9‘ØƒPZXºö}ç›óâÏg±‘óŒ±êEwÃ∂“¿´/&7⁄**t†Á:ui‘QI ¸íª—j◊Fñ∂πÙú,O3û0Ø6Å∆`™Vî„MCÎ4πSù·'¨9˝ﬁdì‹˛{Æ<Eq´µèõ<“⁄È÷6˙nõ—¨M§;•h’ ÓÂπù|¬“ë1Œ—à“◊⁄7 ;ª¿˙Éœ‡OÁ:v•„0Õò»bØíÖN
+∞˚ Tå@#°Ê∫ò.àQ#¡]óxV«°#pËJñ „yØÑ•àé9ßèƒß™µßWñ- ⁄ùH6¢ΩÊ¢ÍjíΩì≤Ê–˛≠Ã2ö¸A·Æ/Ö2J∞´ZX™éNµ:pÆ≤Ã^u+]RRØO“úúi∫≤ÉìÑkÏøŸ˜ZãL¯Ûˇ Vi6¡ß¯∑¬⁄§“.v°∂‘Ù{€ñ „Ó:H[8W–:˝‚‹Î⁄ı“‡≠÷ª¨‹°œU∏‘Æ•S”°Z¯è‡˝„«„=6M‰…S» 	x’dÖ¿2ÁjÄ™8^’ıƒìÂôè,ÏÃy…Àƒü©>µ¸·‚î≥È∏F‘ÍBU·∫UkV≤∑KE$µ?C r°·>Î}æ3äßî‚*Û6™KïÂJuvmN´úÓ˜M7≠ŒSæ˚]ı‹äd(ìÕoïB¥im#@Sj≥˚»›ŒX∂Ê‰‡?GöHÔ”i‚Uuë{2™˜VPAÌœ©´˜∫:Õ<◊0J 3∑ô,Lõ£3 ÑT LÄ»∏.‡æ ≈,wH_ÕùîÆ¸m
+π…TRN2pKO°˝g‚K√ØÏ|;æ>¶CO)éN∞ï¢Ëb˛´Ø*≤§∞Æï
+˜∆∆¥k:ï%…Eb£Û„"˙ }"®}3?‚#fÒˆ|)ÇÒc‚oûñTYØG=©ö“ ®e‘±Ûœ!èÃÚ∑ØñUÀi‡pT™÷£*≥ aF≠}ô%'é2O?J•,«€¶?ƒ˚ü¬9% v˜Î˛y¸ÍÑ≥ûÉ°¸¯˙ı´˘ˆî>z˝Ô˙˛∑?◊¸v& Z•Û˛¥_ÁË,≤∑'8»¿«`^sœııÆ.ÓÌnnÆÊÚ#∂oµLèm	ò«£c
+n$ñm≤(Yî…#≤ü&’^ÜièØßß‡?Ø∑Ωb‹,LÊFE2ê§∆ÇÁhb1∏.H]Ÿ∆N03_•“·<~*∂'	Sá∆·£Bß∞t÷"ú©‘U!:~÷QÑ·&Âî‹·v·QI˚5	˝/<Ã>ê\%êeY7‡Ú„Ü≥∫πÆÊê≈O(«—∆aCtÎb0ıÈ•JæOäQÂƒa•F1≈∫Ù*¬Ï∑cÅÌëì˘ÙıÎ˘~’ˇ ¡ æ$iﬂø‡°1xüTΩ[q˚?¸`∞I⁄AŸÓn¸$@9 Ü>C¡¿<uØƒŸ•*∏@:{tÙˇ <Íæx∑∆>ÒÌé©‡≠b˚D÷%–¸E`˜ötØœÿÆ°≤i·GÜªEÏcïP{W“Â9º≥ˇ ∞Yª†∞Îç§©—∫ìÖ*8?´“ÁíKö§£IJn÷ÊmG›Jˇ àxÉ·’?~á<O·‹37ú’…xgSò˚'Bû+ôÒ3|t∞Ù%:í°Ñ•â∆’•ÖÑß*éÖ8NØÔß3˙¡ˇ Ç¥ˇ ¡/øa¯(R¯É‚ˇ √ùg¬_≥gÌipíﬂ\|F–,-Ì˛¸X‘QK,¸'•$bM^Å	¯ì·ÿ"ÒTLÀ?à,¸aΩΩú?¿èÌ‚ØÏ«ÒU¯YÒsAèEÒ&ó3Ωµﬁù®Zk~ÒôÊI∂Ω·èi“MßÎ:=ËB–\A"‹BwZÍñW‹Y√˙·‚Îﬂçû2I´„oﬁ«.‡—∂ª´`s«ó¿^Glr;bæYÒOÏ√©¯ï‰õR”µÈ‰fo:w∫ñ|ûIÛù⁄L˚Óœ\◊ÙEJ1û∂≥¸ˇ ‡˘≠˙‹ˇ ôû# πÂ(Gdﬁ±€D˚uÈ⁄ÀG˘ë·ËO˘˙wœ∏´±ﬁˇ µ˘üÊ†ˇ ˚Vˇ ˆ9‘◊wŸtÕ^,tÿf|c∏´‡Á®'‹„/dèA∏€Zj≠è∫ØhX˚r®Ωø?^ıÀ<6÷¸t€nﬂè»˙7JùπùUÚøkÍ§ﬂG”©Û\wß◊”°Î˛ ~È˛	¯£™¯U“÷W}CFfeåèÛ¡ûØe#Âë‘ƒt˛äÿ5∑w˚2|S∂œë°ÍËÖ∆~ßh Òè°Ó{e?Ï˘Òí3àº	‚;£€Ï˙MÙ§ûüÚŒ=så}+ ∆‰tq‘gCáÖjSµ‚⁄ºd≠i”jJPúwSãåóGcÔxW≈\ÀÖ≥,>míÊ¯å∑ávUi™ä)æ^zäRÑ®‚0ıµJ£:SI^7IØ¶tØi^#≤K˝*È'àÄ3∂{yäxœÕÉ◊±‰© ”ñ+ãÎ®,Ï°ñÍÓÓx≠mmm—•∏∏∏ûEä â2ÚM4åë«Ç]»U‰äO¸˝•ÙªÙπ˜¡ÔäWÂC?¡∫ÌÌΩ pvK6leOrõáU Äkıwˆ˝ôh|s¯s„¸¯è†h^◊¨|c~æ#¶••i⁄ñ©†∏‘<=gj˙§∆t}z>ÍÌicktìﬁB≤˛{[Ç1ÿlm
+xx‘≠ÉØZˆºøº¬¬Rè3Ødî°Í™EYÚ⁄Qãkõ˚,˙Rp∂w√¶39ØÖ ¯è+À18µó*ØÍôÊ&çË“ ‹‰ÍSØâ≠…I‡´7:\ÓtÎVß
+éü˙"ˇ ¡9|·ÿÀˆ/˝ügõuœ¯”P¯Ö=£(]K‚óåeó≈ü/B≈ÂX<O¨_i/#≥.ï•i÷Í€!@>ı¥¯≠ßMç∑—6z|À”ÛÈ€–Áæk˘ﬁ¯yÆ|iΩHf’-ÆmL4Ç‚Átõ…‹wÑfÀdúÛûs‹◊ÿ>‘|lDBÍÍ^0)>˝q”ÇF~µ˚*p£JùqÂßJú)Sä˚0ßØîRG˘≥è∆‚≥,v31∆’ï|f?à∆‚ÎK‚≠â≈Uùzıe˝Íïg)?6~¬⁄x˙⁄r1<G= aﬂ◊úzv…«∏œYa‚XÓ6¸ wt˘∫èÚ=OæxØŒ
+j:·1y”NOsﬂœ9È∆3åÁå◊”˛∏æuãÃ/€É€¸ˆÎ˙Vá!ıeçËòüÁ€¸?kz3ë˙˛∏ »Q7g∂s”ÈıÙÎŒ{uÓ‡Œ}9˙ÊÄ'¨=N6hõò˙v˛üÁ•nUi„ﬁßﬂ€?^øüË(Á?Èí $∆ÓÁØOœÒ˙˜˘g≈û∫ù•˚‡í√æyœ u¡Ô˛q˜ﬁ±•$¡≤3ünøN:ˇ ûïÂZ«Ü rIàd√ﬂøÆzı¸q@ôﬁ&¯s=Ê≥á©¡Å˙ÚyËkÊ|Äò≈∑É˚≥í9g<géAë_≤w>¥êê`é—œN˝;w=˘È¸ßÀímcl˙åû}z‰~]{PÚu˚Gˇ ¡$ˇ gøçØ{®¯ì·Nü¶xñ‡3¯27èäD‹Ìñ}GFX"’]\‰&µi©¬ƒ|—0$W·ﬂ«O¯!ﬂ«OµÊßK≈–xˇ LÑºê¯[«VÉ√˛&X‘≥yVæ#”`óB‘¶€Öå^È˙
+3cÃõ∞ˇ G)˛i2guÖªg¶ËîÙ=9ß¯tÊ±Á¯?°…◊J≥9ÎõXN1ıSÔÓxÁä‰ƒ‡p∏»Ú‚(BßNkZk“j“˘^«–dúUƒ9V5r|”ÑQíì¢§™·¶”˚xj™t%}õ‰ÊÌ$î4_~'¸¯Åcß|n¯{‚ﬂÜÌπ∂ä˜≈TË7r≤ÌAßxíÿ\h:ÜÚ)¥‘f!H‹Ò^Ÿm„/_øó•^æµ!8T—m.ıgs€bXC;6{ 2k˝=/>xGPÖÌÔº9¢ﬁ€?/o{•X›¿Á±h'∑í6#∂UàÌ“±GÏ›‡(Ü€o	hVc<}ãH±≥P?‹∑Ç%€g“ø3œ|& sÃ|qµ3,~*åh˚p°=#9JÍ§„u~f¨‡˚‹˛„ßˆÖxá·_V·|'pÆwZÆe[1˛‘«bs\5ùl>É•,≤å≠ıe>xbiØ~QT“‘ˇ 5]7√üuˆQ·ˇ Éﬂu‡Á‰}/·/èn lÙ+p4nA˛îØ´c$zô˚7~’⁄ˆ”£~Àˇ ßµı=L“ HÂœâum$†«<Æq€µ£3~Œ^ŒWF¥^?ÁÇgˇ AË1üØ9‚úü≥ﬂÜ£#fïl>J8„Ö«á~∏¨0˛p•-j‚s|CÎÕâ√”ã˘S¬©/îèO6˝¶ﬁ?„‹ñ&Î(É€Ÿdyæ2¨Ì¸^:nﬁtmÂΩˇ œI˝Äøn]x)É‡z2øFÒ'ƒ⁄Ì˜í='S÷f\w'`;d‚Ω/Gˇ ÇP˛‹z÷”yß¸‚π˚Gä¸U¨MNNR√¡i;n1ÿ’˝Ò«+BãtË0"@O^ú{˜¸+JÉ<},aÁ˝Pœ∏…ü®Ì^ﬁ¬ﬁ°o¯L´ZﬂÛ˚ãóﬁ°Vö¸Ã3oßß“k5ÁQ„lYÙÀx_á©ÚÆ–û+/≈‘_9∑Ê∫G¸Cˆ°‘ 6±Ò·˛å≠À«§xƒ:„Ø˜∂œ‚	I2m∆HË;˙Œçˇ Ò≠ËO¯Høh/π?Î√ﬁ–4qìåÏ}KQÒ^rr»›9èˆª¬m51ã8Ü9ˇ V6˙û√_ÎZp¸1””µAÿb08Á'˛gêØjápûﬁÀ"¿i∑¥Ñ´˛5ÁRˇ 3ÛL”ÈGÙÇŒyæΩ‚∑⁄W∫¡bheq◊¥rÃ6/íGÒ’°ˇ ¡ <
+€ΩÒ7„>∂x.≠ÆxsIç˙Áç+¬VÚ†Î¿ú:Û_H¸/ˇ Ç!¸¯o®À¨h˙GàµNÊÿZIy‚Î:˚-øòí∫Cowqˆ;Q,ë∆ÚõkxöS{…TPø‘º_lì•≤c<¸£Ò‡dvÁ£Åm„»Q”¯GÚ„˘~Ï·≤ú´(œ	ñ‡0”Ö˘'C	Bî„ugÀ8SRWZ;=Q˘¶w‚'q%ÿn „n,Œ∏éU_öqmé¬÷QújET√b1u(MFqå‚•M•(©+4ô¸˝X¡2¸
+*ÆÖm[pNG‘ì˘Á∏5“[ˇ ¡4<vÓ“!8‰ÉnÉ˝ÏæôÁ_æ1¯2’OØNªGˇ ´ßØ·Wcç∞¿Ú˛˘˛Ø_LÙé?-ˇ ‡ö?◊O[ <¿ú˝FﬂÒ˜‡Û”Ÿˇ ¡7˛BAoi“c˛zZ∆Ÿ?]£åıÙ∆xØ‹t•∂8ÑvœÀ◊ø`qˇ ◊´·{q÷¸Wßnáü~G”‹ÒóNˇ Ç|3µÿcNÑ0@¥Àg¡ˆ/w˝luÙ-3ˆ+=Ü<èh„Í¥ÀD#ßq«πœ<é‚øWó√6„§K«w'ÿ{˝z˝EÑ‰ˇ R—F«–qé(ÛcM˝ï¸=hG§¡‹pê¢ 9Tg°? ªãŸﬂF∑€∑Oãé 1É‘Ûé÷æı_≈¿ÙOÛˇ Í´)†/¸Ú†‰ìÌ‹Û¯–∆ˆÙ˚mª-`qà¿{Ì«N›q⁄ªç;·ç¥%HÅx<|£ßF'=±”ø„_M«†Æ’Ç@Ë=}O·Ùï´k†åè›„ë¿^‹uˆ=?\cä ÒΩ¿ëFTà`å|ºå‡ûp^F:ıÊΩüB“[Ñ˝ﬂ /o«#œˇ ’]5Üå´∑‰«·Ù¸G”¶}πÆ∫÷…P :~CøıÁ◊øJ füd!U cßÈ˛x»?÷∑„ñ>ÉΩExé=}}øœÛ´ RëäZ(6Ê›\G◊¸˚ˆ¸Ω1 _i°∑:Áz˜Èˇ Î˛}”ÆF?•PöﬂOÛﬂ◊ˇ ≠È@]6ìÛp ?„œN}˚c∑5û⁄W?sπ«ˆ˜„–˙s≈zd∂`Ór?ØP«€ÎÕ'≤^ÍN_Æ}?˙„>ÙÁgJÍvÒ˘˙q”<")áJıL˜È”ûˇ _JÙd2zps”ü»uN¸‰S~«œ›t:˝Nq◊íG?Ä˝í:lÁûÉëÅÎﬂép3Íiê8˘:˜∆=}z{cû}Õz ≥˚Ω3œèœ<}{~Ä¥=
+ÛÙÁ ı¸zg”Î@}˝í‡t«∏ˇ ?Jp“8ˇ W˝=æ£È“ªˇ ±úsüÚ·⁄§+»¡n8€ØıÍz–û#y~˝3˛?Á≠8hƒˇ À>πˇ 9Ä+—ÖäÒÚÅû0F˝_üJîXØ˜O#`g˘˛^‘ÁEoÓí{ßŒ}è{ˆêh≠œ 8‡Á¶}≥‹~#Ëˇ a\¥q˛xæøûz”Öí˙œ<{„Ø_©Ù¸(ŒÜä} '∞˛™ïtl˙ÙÏ∏8˙sœ◊ø~ÇΩY.N œ∞ßˇ _ıßã1›c˙~_Ø4¿.ã˛…8‡dzzˆ˙ıi4\qµFy‡gßæÛû+π[@3Úé©V’Gß·˛Ä8u—á˜OÂÔ∆Ôˇ Í©Fé$c∑*z}x˙„é=¯Æÿ[/lü√Òˇ >ù©~Œ®Á”Ùˇ <–4ÄG
+:„89ÌÌü◊(“T¬èÀø·é‹ˆ?üáŸÅÁ˙Ø˘ˇ >‘¢‹v›1˝z˚ıËì])N=qœ˙ˇ û∏˜ÈS.ñù◊=rH –ì]@∑ÏGÚˇ Îöê@;„Îœ~æîŒ«¶ß˜Gt¿ÙÎ˘˜‚±E#Âˇ ıûΩ≥◊∑8≠a˝aäïS–c‹ˇ üÂ@cÅT1ènœ◊¸*⁄'∂Û˛øÁäê ˇ _ßPEPEPQ2uÙÙÙˇ ?•KE RhÅˇ ?Á˙‘ Ù9ıÌ˙w˜˝+H®>ﬂJn√ÿˇ OÒ†£n3€ÒÁ÷õˆoÛ˛OÂ«™P˙gÚ˛¥û_˚#Ù†Ø≥{~ø˝Òß~ßåˇ û‹èÂZ~_˚#Ù£À?›• fãqÌÌ¿ˇ ÛÔO˛†ı˜ˇ Î~ø≠hÏooÛ¯R˘~ˇ ßˇ ^Ä)¶?/Èœ˘ÙßàG˘…˛f≠ÏÁ¸˚bù¥ﬂ◊˘–O-GN?/•ÿ=ˇ œ˘Õ[È–Q@v–˘˛ÁäPò˛~¢¨—@ˇ Ÿ¸ˇ ˙ÙÌáÿ{T¥P[®•Ú˝ˇ O˛ΩIE E∞˙èÛ¯R˘g◊¸ˇ üˇ ]IE GÂ˚˛ü˝z]É‹ˇ üÛﬁüE   t¥Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@ˇŸ
+endstream
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 7 0 R
+/F2 8 0 R
+/F3 9 0 R
+/F4 10 0 R
+>>
+/XObject <<
+/I1 11 0 R
+/I2 13 0 R
+>>
+>>
+endobj
+14 0 obj
+<<
+>>
+endobj
+15 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+>>
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000048956 00000 n 
+0000073055 00000 n 
+0000000009 00000 n 
+0000001205 00000 n 
+0000026386 00000 n 
+0000026994 00000 n 
+0000049049 00000 n 
+0000049145 00000 n 
+0000049246 00000 n 
+0000049354 00000 n 
+0000049459 00000 n 
+0000053315 00000 n 
+0000053785 00000 n 
+0000073212 00000 n 
+0000073234 00000 n 
+trailer
+<<
+/Size 16
+/Root 15 0 R
+/Info 14 0 R
+>>
+startxref
+73284
+%%EOF
