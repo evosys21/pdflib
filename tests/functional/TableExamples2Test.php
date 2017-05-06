@@ -12,15 +12,15 @@ class TableExamples2Test extends PHPUnit_Framework_TestCase
     protected function getPdfObject()
     {
         //create the pdf object and do some initialization
-        $oPdf = new testPdf();
+        $pdf = new testPdf();
 
         $factory = new pdfFactory();
-        $factory->initPdfObject( $oPdf );
+        $factory->initPdfObject( $pdf );
 
         //disable compression for testing
-        $oPdf->SetCompression( false );
+        $pdf->SetCompression( false );
 
-        return $oPdf;
+        return $pdf;
     }
 
 
@@ -29,7 +29,7 @@ class TableExamples2Test extends PHPUnit_Framework_TestCase
         //remove the .php extention
         $name = str_replace( ".php", '', $name );
 
-        $oPdf = $this->getPdfObject();
+        $pdf = $this->getPdfObject();
 
         require $require;
 
@@ -45,7 +45,7 @@ class TableExamples2Test extends PHPUnit_Framework_TestCase
         }
 
         //send the pdf to the browser
-        $oPdf->Output( $sPdfFile, 'F' );
+        $pdf->Output( $sPdfFile, 'F' );
 
         $this->assertTrue( file_exists( $sPdfFile ) );
 

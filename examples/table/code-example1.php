@@ -1,27 +1,27 @@
 <?php
 
-$oTable = new Pdf_Table( $oPdf );
+$table = new Pdf_Table( $pdf );
 
-$oTable->setStyle( "p", $oPdf->getDefaultFontName(), "", 7, "130,0,30" );
-$oTable->setStyle( "b", $oPdf->getDefaultFontName(), "B", 7, "130,0,30" );
+$table->setStyle( "p", 'Helvetica', "", 7, "130,0,30" );
+$table->setStyle( "b", 'Helvetica', "B", 7, "130,0,30" );
 
-$nColumns = 3;
+$columns = 3;
 
 /**
  * Set the tag styles
  */
 
-$oTable->initialize( array( 20, 30, 50 ) );
+$table->initialize( array( 20, 30, 50 ) );
 
 
-$aHeader = array(
+$header = array(
     array( 'TEXT' => 'Header #1' ),
     array( 'TEXT' => 'Header #2' ),
     array( 'TEXT' => 'Header #3' ),
 );
 
 //add the header row
-$oTable->addHeader( $aHeader );
+$table->addHeader( $header );
 
 for ( $j = 1; $j < 3; $j++ )
 {
@@ -31,8 +31,8 @@ for ( $j = 1; $j < 3; $j++ )
     $aRow[ 2 ][ 'TEXT' ] = "<p>Simple text\n<b>Bold text</b></p>";
 
     //add the data row
-    $oTable->addRow( $aRow );
+    $table->addRow( $aRow );
 }
 
 //close the table
-$oTable->close();
+$table->close();

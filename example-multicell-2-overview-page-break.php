@@ -1,63 +1,52 @@
 <?php
 /**
  * Pdf Advanced Multicell - Example
- * Copyright (c), Andrei Bintintan, http://www.interpid.eu
+ * Copyright (c), Interpid, http://www.interpid.eu
  */
 
-// include the pdf factory
-require_once( "pdfFactory.php" );
+require_once __DIR__ . "/autoload.php";
 
-// Include the Advanced Multicell Class
-require_once( "classes/pdfmulticell.php" );
-
-/**
- * Include my Custom PDF class This is required only to overwrite the header
- */
-require_once( "mypdf-multicell.php" );
+use Interpid\Pdf\Multicell;
+use Interpid\PdfExamples\pdfFactory;
 
 $factory = new pdfFactory();
 
-// create new PDF document
-$oPdf = new myPdfMulticell();
-$factory->initPdfObject( $oPdf );
+//get the FPDF object and initializes it
+$pdf = pdfFactory::newPdf( 'multicell' );
 
-/**
- * Create the Advanced Multicell Object and pass the PDF object as a parameter to the constructor
- */
-$oMulticell = new PdfMulticell( $oPdf );
+// Create the Advanced Multicell Object and pass the PDF object as a parameter to the constructor
+$multicell = new Multicell( $pdf );
 
-/**
- * Set the styles for the advanced multicell
- */
-$oMulticell->setStyle( "p", $oPdf->getDefaultFontName(), "", 11, "130,0,30" );
-$oMulticell->setStyle( "b", $oPdf->getDefaultFontName(), "B", 11, "130,0,30" );
-$oMulticell->setStyle( "i", $oPdf->getDefaultFontName(), "I", 11, "80,80,260" );
-$oMulticell->setStyle( "u", $oPdf->getDefaultFontName(), "U", 11, "80,80,260" );
-$oMulticell->setStyle( "h1", $oPdf->getDefaultFontName(), "", 11, "80,80,260" );
-$oMulticell->setStyle( "h3", $oPdf->getDefaultFontName(), "B", 12, "203,0,48" );
-$oMulticell->setStyle( "h4", $oPdf->getDefaultFontName(), "BI", 11, "0,151,200" );
-$oMulticell->setStyle( "hh", $oPdf->getDefaultFontName(), "B", 11, "255,189,12" );
-$oMulticell->setStyle( "ss", $oPdf->getDefaultFontName(), "", 7, "203,0,48" );
-$oMulticell->setStyle( "font", $oPdf->getDefaultFontName(), "", 10, "0,0,255" );
-$oMulticell->setStyle( "style", $oPdf->getDefaultFontName(), "BI", 10, "0,0,220" );
-$oMulticell->setStyle( "size", $oPdf->getDefaultFontName(), "BI", 12, "0,0,120" );
-$oMulticell->setStyle( "color", $oPdf->getDefaultFontName(), "BI", 12, "0,255,255" );
+// Set the styles for the advanced multicell
+$multicell->setStyle( "p", 'Helvetica', "", 11, "130,0,30" );
+$multicell->setStyle( "b", 'Helvetica', "B", 11, "130,0,30" );
+$multicell->setStyle( "i", 'Helvetica', "I", 11, "80,80,260" );
+$multicell->setStyle( "u", 'Helvetica', "U", 11, "80,80,260" );
+$multicell->setStyle( "h1", 'Helvetica', "", 11, "80,80,260" );
+$multicell->setStyle( "h3", 'Helvetica', "B", 12, "203,0,48" );
+$multicell->setStyle( "h4", 'Helvetica', "BI", 11, "0,151,200" );
+$multicell->setStyle( "hh", 'Helvetica', "B", 11, "255,189,12" );
+$multicell->setStyle( "ss", 'Helvetica', "", 7, "203,0,48" );
+$multicell->setStyle( "font", 'Helvetica', "", 10, "0,0,255" );
+$multicell->setStyle( "style", 'Helvetica', "BI", 10, "0,0,220" );
+$multicell->setStyle( "size", 'Helvetica', "BI", 12, "0,0,120" );
+$multicell->setStyle( "color", 'Helvetica', "BI", 12, "0,255,255" );
 
 //read TAG formatted text from files
-$sTxt1 = file_get_contents( __DIR__ . '/content/createdby.txt' );
-$sTxt2 = file_get_contents( __DIR__ . '/content/multicell.txt' );
+$txt1 = file_get_contents( __DIR__ . '/content/createdby.txt' );
+$txt2 = file_get_contents( __DIR__ . '/content/multicell.txt' );
 
 //create an advanced multicell
-$oMulticell->multiCell( 150, 5, $sTxt1, 1, "L", 1, 5, 5, 5, 5 );
-$oPdf->Ln( 10 ); //new line
+$multicell->multiCell( 150, 5, $txt1, 1, "L", 1, 5, 5, 5, 5 );
+$pdf->Ln( 10 ); //new line
 
 
-$s = $sTxt2 . "\n\n\n\nRepeat the text to trigger a page break \n\n\n" . $sTxt2;
+$s = $txt2 . "\n\n\n\nRepeat the text to trigger a page break \n\n\n" . $txt2;
 
 //create an advanced multicell
-$oMulticell->multiCell( 0, 5, $s, 1, "J", 1, 3, 3, 3, 3 );
-$oPdf->Ln( 10 ); //new line
+$multicell->multiCell( 0, 5, $s, 1, "J", 1, 3, 3, 3, 3 );
+$pdf->Ln( 10 ); //new line
 
 
 //send the pdf to the browser
-$oPdf->Output();
+$pdf->Output();

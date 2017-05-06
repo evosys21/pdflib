@@ -3,9 +3,17 @@
 /**
  * Custom PDF class extention for Header and Footer Definitions
  *
- * @author andy@interpid.eu
+ * @author office@interpid.eu
  *
  */
+
+namespace Interpid\PdfExamples;
+
+use Interpid\Pdf\Pdf;
+use Interpid\Pdf\Multicell;
+
+require( __DIR__ . '/../../../vendor/fpdf/fpdf.php');
+
 class myPdf extends Pdf
 {
 
@@ -18,19 +26,20 @@ class myPdf extends Pdf
      */
     public function Header()
     {
+        global $BASE_PATH;
         $this->SetY( 10 );
 
         /**
          * yes, even here we can use the multicell tag! this will be a local object
          */
-        $oMulticell = PdfMulticell::getInstance( $this );
+        $multicell = Multicell::getInstance( $this );
 
-        $oMulticell->setStyle( "h1", $this->getDefaultFontName(), "", 6, "160,160,160" );
-        $oMulticell->setStyle( "h2", $this->getDefaultFontName(), "", 6, "0,119,220" );
+        $multicell->setStyle( "h1", $this->getDefaultFontName(), "", 6, "160,160,160" );
+        $multicell->setStyle( "h2", $this->getDefaultFontName(), "", 6, "0,119,220" );
 
-        $oMulticell->multiCell( 100, 3, file_get_contents( __DIR__ . '/content/' . $this->headerSource ) );
+        $multicell->multiCell( 100, 3, file_get_contents( $BASE_PATH . '/content/' . $this->headerSource ) );
 
-        $this->Image( __DIR__ . '/images/interpid_logo.png', 160, 10, 40, 0, '', 'http://www.interpid.eu' );
+        $this->Image( $BASE_PATH . '/images/interpid_logo.png', 160, 10, 40, 0, '', 'http://www.interpid.eu' );
         $this->SetY( $this->tMargin );
     }
 
@@ -82,22 +91,36 @@ class myPdf extends Pdf
      */
     function _putinfo()
     {
-        if ( isset( $_SERVER[ 'ENVIRONMENT' ] ) && 'test' == $_SERVER[ 'ENVIRONMENT' ] )
-        {
-            if ( !empty( $this->title ) )
+        if ( isset( $_SERVER[ 'ENVIRONMENT' ] ) && 'test' == $_SERVER[ 'ENVIRONMENT' ] ) {
+            if ( !empty( $this->title ) ) {
                 $this->_out( '/Title ' . $this->_textstring( $this->title ) );
-            if ( !empty( $this->subject ) )
+            }
+            if ( !empty( $this->subject ) ) {
                 $this->_out( '/Subject ' . $this->_textstring( $this->subject ) );
-            if ( !empty( $this->author ) )
+            }
+            if ( !empty( $this->author ) ) {
                 $this->_out( '/Author ' . $this->_textstring( $this->author ) );
-            if ( !empty( $this->keywords ) )
+            }
+            if ( !empty( $this->keywords ) ) {
                 $this->_out( '/Keywords ' . $this->_textstring( $this->keywords ) );
-            if ( !empty( $this->creator ) )
+            }
+            if ( !empty( $this->creator ) ) {
                 $this->_out( '/Creator ' . $this->_textstring( $this->creator ) );
-        } else
-        {
+            }
+        } else {
             parent::_putinfo();
         }
     }
+
+    /**
+     * @param string $headerSource
+     * @return $this
+     */
+    public function setHeaderSource( $headerSource )
+    {
+        $this->headerSource = $headerSource;
+        return $this;
+    }
+
 }
 

@@ -1,28 +1,28 @@
 <?php
 
-if ( !isset( $oPdf ) )
+if ( !isset( $pdf ) )
 {
-    $oPdf = new myPdf();
+    $pdf = new myPdf();
 }
 
-$oTable = new PdfTable( $oPdf );
+$table = new PdfTable( $pdf );
 
-$oTable->setStyle( "p", $oPdf->getDefaultFontName(), "", 6, "130,0,30" );
-$oTable->setStyle( "b", $oPdf->getDefaultFontName(), "B", 6, "130,0,30" );
-$oTable->setStyle( "bi", $oPdf->getDefaultFontName(), "BI", 6, "0,0,120" );
+$table->setStyle( "p", 'Helvetica', "", 6, "130,0,30" );
+$table->setStyle( "b", 'Helvetica', "B", 6, "130,0,30" );
+$table->setStyle( "bi", 'Helvetica', "BI", 6, "0,0,120" );
 
 require( 'settings.php' );
 
-$nColumns = 5;
+$columns = 5;
 
 /**
  * Set the tag styles
  */
 
-$oTable->initialize( array( 20, 30, 40, 50 ) );
+$table->initialize( array( 20, 30, 40, 50 ) );
 
 
-$oTable->addHeader( $aHeaderRow );
+$table->addHeader( $headerRow );
 
 for ( $i = 0; $i < 6; $i++ )
 {
@@ -56,8 +56,8 @@ for ( $i = 0; $i < 6; $i++ )
     }
 
 
-    $oTable->addRow( $aRow );
+    $table->addRow( $aRow );
 }
 
 //close the table
-$oTable->close();
+$table->close();

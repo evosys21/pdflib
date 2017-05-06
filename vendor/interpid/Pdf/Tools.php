@@ -14,11 +14,14 @@
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
  * @version   : 5.3.0
- * @author    : Andrei Bintintan <andy@interpid.eu>
- * @copyright : Andrei Bintintan, http://www.interpid.eu
+ * @author    : Interpid <office@interpid.eu>
+ * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
-class Pdf_Tools
+
+namespace Interpid\Pdf;
+
+class Tools
 {
 
     public static function getValue( array $var, $index = '', $default = '' )

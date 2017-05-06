@@ -14,20 +14,14 @@
  *
  * @version   : 5.3.0
  * @property
- * @author    : Andrei Bintintan <andy@interpid.eu>
- * @copyright : Andrei Bintintan, http://www.interpid.eu
+ * @author    : Interpid <office@interpid.eu>
+ * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
 
+namespace Interpid\Pdf;
 
-require_once( dirname( __FILE__ ) . '/Tools.php' );
-require_once( dirname( __FILE__ ) . '/Multicell.php' );
-require_once( dirname( __FILE__ ) . '/Table/Cell/Empty.php' );
-require_once( dirname( __FILE__ ) . '/Table/Cell/Multicell.php' );
-require_once( dirname( __FILE__ ) . '/Table/Cell/Image.php' );
-
-
-class Pdf_Table
+class Table
 {
 
     const TB_DATA_TYPE_DATA = 'data';
@@ -160,12 +154,13 @@ class Pdf_Table
      *
      * @var int
      */
-    protected $nColumns = 0;
+    protected $columns = 0;
 
     /**
      * Table configuration array
+     * @var array
      */
-    protected $aConfiguration = array();
+    protected $configuration = array();
 
     /**
      * Contains the Header Data - header characteristics and texts Characteristics constants for Header Type: EVERY CELL FROM THE TABLE IS A MULTICELL TEXT_COLOR - text color = array(r,g,b); TEXT_SIZE
@@ -178,14 +173,14 @@ class Pdf_Table
      * @var array
      *
      */
-    protected $aTableHeaderType = array();
+    protected $tableHeaderType = array();
 
     /**
      * Header is drawed or not
      *
      * @var boolean
      */
-    protected $bDrawHeader = true;
+    protected $drawHeader = true;
 
     /**
      * True if the header will be added on a new page.
@@ -193,7 +188,7 @@ class Pdf_Table
      * @var boolean
      *
      */
-    protected $bHeaderOnNewPage = true;
+    protected $headerOnNewPage = true;
 
     /**
      * Header is parsed or not
@@ -201,29 +196,29 @@ class Pdf_Table
      * @var boolean
      *
      */
-    protected $bHeaderParsed = false;
+    protected $headerParsed = false;
 
     /**
      * Page Split Variable - if the table does not have enough space on the current page then the cells will be splitted.
-     * This only if $bTableSplit == TRUE If $bTableSplit == FALSE then the current cell will be drawed on the next page
+     * This only if $tableSplit == TRUE If $tableSplit == FALSE then the current cell will be drawed on the next page
      *
      * @var boolean
      */
-    protected $bTableSplit = false;
+    protected $tableSplit = false;
 
     /**
      * TRUE - if on current page was some data written
      *
      * @var boolean
      */
-    protected $bDataOnCurrentPage = false;
+    protected $dataOnCurrentPage = false;
 
     /**
      * TRUE - if on current page the header was written
      *
      * @var boolean
      */
-    protected $bHeaderOnCurrentPage = false;
+    protected $headerOnCurrentPage = false;
 
     /**
      * Table Data Cache.
@@ -231,14 +226,14 @@ class Pdf_Table
      *
      * @var array
      */
-    protected $aDataCache = array();
+    protected $dataCache = array();
 
     /**
      * TRUE - if there is a Rowspan in the Data Cache
      *
      * @var boolean
      */
-    protected $bRowSpanInCache = false;
+    protected $rowSpanInCache = false;
 
     /**
      * Sequence for Rowspan ID's.
@@ -246,7 +241,7 @@ class Pdf_Table
      *
      * @var int
      */
-    protected $iRowSpanID = 0;
+    protected $rowSpanID = 0;
 
     /**
      * Table Header Cache.
@@ -254,7 +249,7 @@ class Pdf_Table
      *
      * @var array
      */
-    protected $aHeaderCache = array();
+    protected $headerCache = array();
 
     /**
      * Header Height.
@@ -262,21 +257,21 @@ class Pdf_Table
      *
      * @var int
      */
-    protected $nHeaderHeight = 0;
+    protected $headerHeight = 0;
 
     /**
      * Table Start X Position
      *
      * @var int
      */
-    protected $iTableStartX = 0;
+    protected $tableStartX = 0;
 
     /**
      * Table Start Y Position
      *
      * @var int
      */
-    protected $iTableStartY = 0;
+    protected $tableStartY = 0;
 
     /**
      * Multicell Object
@@ -284,7 +279,7 @@ class Pdf_Table
      * @var object
      *
      */
-    protected $oMulticell = null;
+    protected $multicell = null;
 
     /**
      * Pdf Object
@@ -292,7 +287,7 @@ class Pdf_Table
      * @var Pdf
      *
      */
-    protected $oPdf = null;
+    protected $pdf = null;
 
     /**
      * Contains the Singleton Object
@@ -310,10 +305,10 @@ class Pdf_Table
      */
     protected $aColumnWidth = array();
 
-    protected $aTypeMap = array(
-        'EMPTY' => 'Pdf_Table_Cell_Empty',
-        'MULTICELL' => 'Pdf_Table_Cell_Multicell',
-        'IMAGE' => 'Pdf_Table_Cell_Image'
+    protected $typeMap = array(
+        'EMPTY' => 'Table\Cell\Void',
+        'MULTICELL' => 'Table\Cell\Multicell',
+        'IMAGE' => 'Table\Cell\Image'
     );
 
     /**
@@ -321,39 +316,38 @@ class Pdf_Table
      *
      * @var bool
      */
-    protected $bDisablePageBreak = false;
+    protected $disablePageBreak = false;
 
 
     /**
      * Class constructor.
      *
-     * @param Pdf $oPdf object Instance of the PDF class
+     * @param Pdf $pdf object Instance of the PDF class
      */
-    public function __construct( $oPdf )
+    public function __construct( $pdf )
     {
         //pdf object
-        $this->oPdf = $oPdf;
+        $this->pdf = $pdf;
         //call the multicell instance
-        $this->oMulticell = new Pdf_Multicell( $oPdf );
+        $this->multicell = new Multicell( $pdf );
 
         //get the default configuration
-        $this->aConfiguration = $this->getDefaultConfiguration();
+        $this->configuration = $this->getDefaultConfiguration();
     }
 
 
     /**
      * Returnes the Singleton Instance of this class.
      *
-     * @param Pdf $oPdf object the pdf Object
+     * @param Pdf $pdf object the pdf Object
      * @return Pdf_Table
      */
-    static function getInstance( $oPdf )
+    static function getInstance( $pdf )
     {
-        $oInstance = &self::$_singleton[ spl_object_hash( $oPdf ) ];
+        $oInstance = &self::$_singleton[ spl_object_hash( $pdf ) ];
 
-        if ( !isset( $oInstance ) )
-        {
-            $oInstance = new self( $oPdf );
+        if ( !isset( $oInstance ) ) {
+            $oInstance = new self( $pdf );
         }
 
         return $oInstance;
@@ -361,13 +355,13 @@ class Pdf_Table
 
 
     /**
-     * Returns the Pdf_Multicell instance
+     * Returns the Multicell instance
      *
-     * @return Pdf_Multicell
+     * @return Multicell
      */
     public function getMulticellInstance()
     {
-        return $this->oMulticell;
+        return $this->multicell;
     }
 
 
@@ -375,27 +369,27 @@ class Pdf_Table
      * Table Initialization Function
      *
      * @param array $aColumnWidths
-     * @param array $aConfiguration
+     * @param array $configuration
      */
-    public function initialize( array $aColumnWidths, $aConfiguration = array() )
+    public function initialize( array $aColumnWidths, $configuration = array() )
     {
         //set the no of columns
-        $this->nColumns = count( $aColumnWidths );
+        $this->columns = count( $aColumnWidths );
         $this->setColumnsWidths( $aColumnWidths );
 
         //heeader is not parsed
-        $this->bHeaderParsed = false;
+        $this->headerParsed = false;
 
-        $this->aTableHeaderType = Array();
+        $this->tableHeaderType = Array();
 
-        $this->aDataCache = Array();
-        $this->aHeaderCache = Array();
+        $this->dataCache = Array();
+        $this->headerCache = Array();
 
-        $this->iTableStartX = $this->oPdf->GetX();
-        $this->iTableStartY = $this->oPdf->GetY();
+        $this->tableStartX = $this->pdf->GetX();
+        $this->tableStartY = $this->pdf->GetY();
 
-        $this->bDataOnCurrentPage = false;
-        $this->bHeaderOnCurrentPage = false;
+        $this->dataOnCurrentPage = false;
+        $this->headerOnCurrentPage = false;
 
         $aKeys = array(
             'TABLE',
@@ -403,12 +397,12 @@ class Pdf_Table
             'ROW'
         );
 
-        foreach ( $aKeys as $val )
-        {
-            if ( !isset( $aConfiguration[ $val ] ) )
+        foreach ( $aKeys as $val ) {
+            if ( !isset( $configuration[ $val ] ) ) {
                 continue;
+            }
 
-            $this->aConfiguration[ $val ] = array_merge( $this->aConfiguration[ $val ], $aConfiguration[ $val ] );
+            $this->configuration[ $val ] = array_merge( $this->configuration[ $val ], $configuration[ $val ] );
         }
 
         $this->markMarginX();
@@ -436,12 +430,9 @@ class Pdf_Table
      */
     public function setColumnsWidths( $aColumnWidths = null )
     {
-        if ( is_array( $aColumnWidths ) )
-        {
+        if ( is_array( $aColumnWidths ) ) {
             $this->aColumnWidth = $aColumnWidths;
-        }
-        else
-        {
+        } else {
             $this->aColumnWidth = func_get_args();
         }
     }
@@ -451,12 +442,12 @@ class Pdf_Table
      * Set the Width for the specified Column
      *
      * @param $nColumnIndex number the column index, 0 based ( first column starts with 0)
-     * @param $nWidth number
+     * @param $width number
      *
      */
-    public function setColumnWidth( $nColumnIndex, $nWidth )
+    public function setColumnWidth( $nColumnIndex, $width )
     {
-        $this->aColumnWidth[ $nColumnIndex ] = $nWidth;
+        $this->aColumnWidth[ $nColumnIndex ] = $width;
     }
 
 
@@ -464,12 +455,11 @@ class Pdf_Table
      * Get the Width for the specified Column
      *
      * @param integer $nColumnIndex the column index, 0 based ( first column starts with 0)
-     * @return number $nWidth The column Width
+     * @return number $width The column Width
      */
     public function getColumnWidth( $nColumnIndex )
     {
-        if ( !isset( $this->aColumnWidth[ $nColumnIndex ] ) )
-        {
+        if ( !isset( $this->aColumnWidth[ $nColumnIndex ] ) ) {
             trigger_error( "Undefined width for column $nColumnIndex" );
 
             return 0;
@@ -486,7 +476,7 @@ class Pdf_Table
      */
     protected function PageWidth()
     {
-        return (int) $this->oPdf->w - $this->oPdf->rMargin - $this->oPdf->lMargin;
+        return (int)$this->pdf->w - $this->pdf->rMargin - $this->pdf->lMargin;
     }
 
 
@@ -497,7 +487,7 @@ class Pdf_Table
      */
     protected function PageHeight()
     {
-        return (int) $this->oPdf->h - $this->oPdf->tMargin - $this->oPdf->bMargin;
+        return (int)$this->pdf->h - $this->pdf->tMargin - $this->pdf->bMargin;
     }
 
 
@@ -509,7 +499,7 @@ class Pdf_Table
      */
     public function setSplitMode( $bSplit = true )
     {
-        $this->bTableSplit = $bSplit;
+        $this->tableSplit = $bSplit;
     }
 
 
@@ -521,7 +511,7 @@ class Pdf_Table
      */
     public function setHeaderNewPage( $bValue )
     {
-        $this->bHeaderOnNewPage = (bool) $bValue;
+        $this->headerOnNewPage = (bool)$bValue;
     }
 
 
@@ -541,11 +531,11 @@ class Pdf_Table
      * ),
      * );
      *
-     * @param $aHeaderRow array
+     * @param $headerRow array
      */
-    public function addHeader( $aHeaderRow = array() )
+    public function addHeader( $headerRow = array() )
     {
-        $this->aTableHeaderType[ ] = $aHeaderRow;
+        $this->tableHeaderType[] = $headerRow;
     }
 
 
@@ -559,18 +549,17 @@ class Pdf_Table
      */
     public function setHeaderProperty( $nColumn, $sPropertyKey, $sPropertyValue, $nRow = 0 )
     {
-        for ( $i = 0; $i <= $nRow; $i++ )
-        {
-            if ( !isset( $this->aTableHeaderType[ $i ] ) )
-                $this->aTableHeaderType[ $i ] = array();
+        for ( $i = 0; $i <= $nRow; $i++ ) {
+            if ( !isset( $this->tableHeaderType[ $i ] ) ) {
+                $this->tableHeaderType[ $i ] = array();
+            }
         }
 
-        if ( !isset( $this->aTableHeaderType[ $nRow ][ $nColumn ] ) )
-        {
-            $this->aTableHeaderType[ $nRow ][ $nColumn ] = array();
+        if ( !isset( $this->tableHeaderType[ $nRow ][ $nColumn ] ) ) {
+            $this->tableHeaderType[ $nRow ][ $nColumn ] = array();
         }
 
-        $this->aTableHeaderType[ $nRow ][ $nColumn ][ $sPropertyKey ] = $sPropertyValue;
+        $this->tableHeaderType[ $nRow ][ $nColumn ][ $sPropertyKey ] = $sPropertyValue;
     }
 
 
@@ -582,17 +571,15 @@ class Pdf_Table
     protected function parseHeader( $bForce = false )
     {
         //if the header was parsed don't parse it again!
-        if ( $this->bHeaderParsed && !$bForce )
-        {
+        if ( $this->headerParsed && !$bForce ) {
             return;
         }
 
         //empty the header cache
-        $this->aHeaderCache = Array();
+        $this->headerCache = Array();
 
         //create the header cache data
-        foreach ( $this->aTableHeaderType as $val )
-        {
+        foreach ( $this->tableHeaderType as $val ) {
             $this->_addDataToCache( $val, 'header' );
         }
 
@@ -607,17 +594,15 @@ class Pdf_Table
      */
     protected function headerHeight()
     {
-        $this->nHeaderHeight = 0;
+        $this->headerHeight = 0;
 
-        $iItems = count( $this->aHeaderCache );
-        for ( $i = 0; $i < $iItems; $i++ )
-        {
-            $this->nHeaderHeight += $this->aHeaderCache[ $i ][ 'HEIGHT' ];
+        $iItems = count( $this->headerCache );
+        for ( $i = 0; $i < $iItems; $i++ ) {
+            $this->headerHeight += $this->headerCache[ $i ][ 'HEIGHT' ];
         }
 
-        if ( $this->nHeaderHeight > $this->PageHeight() )
-        {
-            die( "Header Height({$this->nHeaderHeight}) bigger than Page Height({$this->PageHeight()})" );
+        if ( $this->headerHeight > $this->PageHeight() ) {
+            die( "Header Height({$this->headerHeight}) bigger than Page Height({$this->PageHeight()})" );
         }
     }
 
@@ -630,16 +615,15 @@ class Pdf_Table
         $tb_align = $this->getTableConfig( 'TABLE_ALIGN' );
 
         //set the table align
-        switch ( $tb_align )
-        {
+        switch ( $tb_align ) {
             case 'C':
-                $this->iTableStartX = $this->oPdf->lMargin + $this->getTableConfig( 'TABLE_LEFT_MARGIN' ) + ( $this->PageWidth() - $this->getWidth() ) / 2;
+                $this->tableStartX = $this->pdf->lMargin + $this->getTableConfig( 'TABLE_LEFT_MARGIN' ) + ( $this->PageWidth() - $this->getWidth() ) / 2;
                 break;
             case 'R':
-                $this->iTableStartX = $this->oPdf->lMargin + $this->getTableConfig( 'TABLE_LEFT_MARGIN' ) + ( $this->PageWidth() - $this->getWidth() );
+                $this->tableStartX = $this->pdf->lMargin + $this->getTableConfig( 'TABLE_LEFT_MARGIN' ) + ( $this->PageWidth() - $this->getWidth() );
                 break;
             default:
-                $this->iTableStartX = $this->oPdf->lMargin + $this->getTableConfig( 'TABLE_LEFT_MARGIN' );
+                $this->tableStartX = $this->pdf->lMargin + $this->getTableConfig( 'TABLE_LEFT_MARGIN' );
                 break;
         }
     }
@@ -650,25 +634,29 @@ class Pdf_Table
      */
     public function drawBorder()
     {
-        if ( 0 == $this->getTableConfig( 'BORDER_TYPE' ) )
+        if ( 0 == $this->getTableConfig( 'BORDER_TYPE' ) ) {
             return;
+        }
 
-        if ( !$this->bDataOnCurrentPage )
-            return; //there was no data on the current page
+        if ( !$this->dataOnCurrentPage ) {
+            return;
+        } //there was no data on the current page
 
 
         //set the colors
         list ( $r, $g, $b ) = $this->getTableConfig( 'BORDER_COLOR' );
-        $this->oPdf->SetDrawColor( $r, $g, $b );
+        $this->pdf->SetDrawColor( $r, $g, $b );
 
-        if ( 0 == $this->getTableConfig( 'BORDER_SIZE' ) )
+        if ( 0 == $this->getTableConfig( 'BORDER_SIZE' ) ) {
             return;
+        }
 
         //set the line width
-        $this->oPdf->SetLineWidth( $this->getTableConfig( 'BORDER_SIZE' ) );
+        $this->pdf->SetLineWidth( $this->getTableConfig( 'BORDER_SIZE' ) );
 
         //draw the border
-        $this->oPdf->Rect( $this->iTableStartX, $this->iTableStartY, $this->getWidth(), $this->oPdf->GetY() - $this->iTableStartY );
+        $this->pdf->Rect( $this->tableStartX, $this->tableStartY, $this->getWidth(),
+            $this->pdf->GetY() - $this->tableStartY );
     }
 
 
@@ -678,19 +666,18 @@ class Pdf_Table
      */
     protected function _tbEndPageBorder()
     {
-        if ( '' != $this->getTableConfig( 'BRD_TYPE_END_PAGE' ) )
-        {
-            if ( strpos( $this->getTableConfig( 'BRD_TYPE_END_PAGE' ), 'B' ) >= 0 )
-            {
+        if ( '' != $this->getTableConfig( 'BRD_TYPE_END_PAGE' ) ) {
+            if ( strpos( $this->getTableConfig( 'BRD_TYPE_END_PAGE' ), 'B' ) >= 0 ) {
                 //set the colors
                 list ( $r, $g, $b ) = $this->getTableConfig( 'BORDER_COLOR' );
-                $this->oPdf->SetDrawColor( $r, $g, $b );
+                $this->pdf->SetDrawColor( $r, $g, $b );
 
                 //set the line width
-                $this->oPdf->SetLineWidth( $this->getTableConfig( 'BORDER_SIZE' ) );
+                $this->pdf->SetLineWidth( $this->getTableConfig( 'BORDER_SIZE' ) );
 
                 //draw the line
-                $this->oPdf->Line( $this->iTableStartX, $this->oPdf->GetY(), $this->iTableStartX + $this->getWidth(), $this->oPdf->GetY() );
+                $this->pdf->Line( $this->tableStartX, $this->pdf->GetY(), $this->tableStartX + $this->getWidth(),
+                    $this->pdf->GetY() );
             }
         }
     }
@@ -706,8 +693,7 @@ class Pdf_Table
         //calculate the table width
         $tb_width = 0;
 
-        for ( $i = 0; $i < $this->nColumns; $i++ )
-        {
+        for ( $i = 0; $i < $this->columns; $i++ ) {
             $tb_width += $this->getColumnWidth( $i );
         }
 
@@ -720,7 +706,7 @@ class Pdf_Table
      */
     protected function _tbAlign()
     {
-        $this->oPdf->SetX( $this->iTableStartX );
+        $this->pdf->SetX( $this->tableStartX );
     }
 
 
@@ -733,12 +719,11 @@ class Pdf_Table
     {
         $this->parseHeader();
 
-        foreach ( $this->aHeaderCache as $val )
-        {
-            $this->aDataCache[ ] = $val;
+        foreach ( $this->headerCache as $val ) {
+            $this->dataCache[] = $val;
         }
 
-        $this->bHeaderOnCurrentPage = true;
+        $this->headerOnCurrentPage = true;
     }
 
 
@@ -750,8 +735,7 @@ class Pdf_Table
      */
     public function addRow( $aRowData = array() )
     {
-        if ( !$this->bHeaderOnCurrentPage )
-        {
+        if ( !$this->headerOnCurrentPage ) {
             $this->drawHeader();
         }
 
@@ -767,7 +751,7 @@ class Pdf_Table
         //$this->insertNewPage();
         $aData = array();
         $aData[ 'ADD_PAGE_BREAK' ] = true;
-        $this->aDataCache[ ] = array(
+        $this->dataCache[] = array(
             'HEIGHT' => 0,
             'DATATYPE' => self::TB_DATA_TYPE_INSERT_NEW_PAGE
         );
@@ -784,14 +768,13 @@ class Pdf_Table
      */
     protected function applyDefaultValues( $aData, $sDataType )
     {
-        switch ( $sDataType )
-        {
+        switch ( $sDataType ) {
             case 'header':
-                $aReference = $this->aConfiguration[ 'HEADER' ];
+                $aReference = $this->configuration[ 'HEADER' ];
                 break;
 
             default:
-                $aReference = $this->aConfiguration[ 'ROW' ];
+                $aReference = $this->configuration[ 'ROW' ];
                 break;
         }
 
@@ -807,14 +790,13 @@ class Pdf_Table
      */
     protected function getDefaultValues( $sDataType )
     {
-        switch ( $sDataType )
-        {
+        switch ( $sDataType ) {
             case 'header':
-                return $this->aConfiguration[ 'HEADER' ];
+                return $this->configuration[ 'HEADER' ];
                 break;
 
             default:
-                return $this->aConfiguration[ 'ROW' ];
+                return $this->configuration[ 'ROW' ];
                 break;
         }
     }
@@ -822,35 +804,28 @@ class Pdf_Table
 
     protected function getCellObject( $data = null )
     {
-        if ( null === $data )
-        {
-            $oCell = new Pdf_Table_Cell_Multicell( $this->oPdf );
-        }
-        elseif ( is_object( $data ) )
-        {
+        if ( null === $data ) {
+            $oCell = new Table\Cell\Multicell( $this->pdf );
+        } elseif ( is_object( $data ) ) {
             $oCell = $data;
-        }
-        else
-        {
+        } else {
             $type = isset( $data[ 'TYPE' ] ) ? $data[ 'TYPE' ] : 'MULTICELL';
             $type = strtoupper( $type );
 
-            if ( !isset( $this->aTypeMap[ $type ] ) )
-            {
+            if ( !isset( $this->typeMap[ $type ] ) ) {
                 trigger_error( "Invalid cell type: $type", E_USER_ERROR );
             }
 
-            $class = $this->aTypeMap[ $type ];
+            $class = $this->typeMap[ $type ];
 
-            $oCell = new $class( $this->oPdf );
-            /** @var $oCell Pdf_Table_Cell_Interface */
+            $oCell = new $class( $this->pdf );
+            /** @var $oCell CellInterface */
             $oCell->setProperties( $data );
         }
 
-        if ( $oCell instanceof Pdf_Table_Cell_Multicell )
-        {
-            /** @var $oCell Pdf_Table_Cell_Multicell */
-            $oCell->attachMulticell( $this->oMulticell );
+        if ( $oCell instanceof Table\Cell\Multicell ) {
+            /** @var $oCell Table\Cell\Multicell */
+            $oCell->attachMulticell( $this->multicell );
         }
 
         return $oCell;
@@ -865,19 +840,15 @@ class Pdf_Table
      */
     protected function _addDataToCache( $data, $sDataType = 'data' )
     {
-        if ( !is_array( $data ) )
-        {
+        if ( !is_array( $data ) ) {
             //this is fatal error
             trigger_error( "Invalid data value 0x00012. (not array)", E_USER_ERROR );
         }
 
-        if ( $sDataType == 'header' )
-        {
-            $aRefCache = &$this->aHeaderCache;
-        }
-        else
-        { //data
-            $aRefCache = &$this->aDataCache;
+        if ( $sDataType == 'header' ) {
+            $aRefCache = &$this->headerCache;
+        } else { //data
+            $aRefCache = &$this->dataCache;
         }
 
         $aRowSpan = array();
@@ -887,10 +858,11 @@ class Pdf_Table
         /**
          * If datacache is empty initialize it
          */
-        if ( count( $aRefCache ) > 0 )
+        if ( count( $aRefCache ) > 0 ) {
             $aLastDataCache = end( $aRefCache );
-        else
+        } else {
             $aLastDataCache = array();
+        }
 
         //this variable will contain the active colspans
         $iActiveColspan = 0;
@@ -898,14 +870,10 @@ class Pdf_Table
         $aRow = array();
 
         //calculate the maximum height of the cells
-        for ( $i = 0; $i < $this->nColumns; $i++ )
-        {
-            if ( isset( $data[ $i ] ) )
-            {
+        for ( $i = 0; $i < $this->columns; $i++ ) {
+            if ( isset( $data[ $i ] ) ) {
                 $oCell = $this->getCellObject( $data[ $i ] );
-            }
-            else
-            {
+            } else {
                 $oCell = $this->getCellObject();
             }
 
@@ -915,22 +883,19 @@ class Pdf_Table
             $oCell->setCellDrawWidth( $this->getColumnWidth( $i ) ); //copy this from the header settings
 
             //if there is an active colspan on this line we just skip this cell
-            if ( $iActiveColspan > 1 )
-            {
+            if ( $iActiveColspan > 1 ) {
                 $oCell->setSkipped( true );
                 $iActiveColspan--;
                 continue;
             }
 
-            if ( !empty( $aLastDataCache ) )
-            {
+            if ( !empty( $aLastDataCache ) ) {
                 //there was at least one row before and was data or header
                 $cell = &$aLastDataCache[ 'DATA' ][ $i ];
-                /** @var $cell Pdf_Table_Cell_Interface */
+                /** @var $cell CellInterface */
 
 
-                if ( isset( $cell ) && ( $cell->getRowSpan() > 1 ) )
-                {
+                if ( isset( $cell ) && ( $cell->getRowSpan() > 1 ) ) {
                     /**
                      * This is rowspan over this cell.
                      * The cell will be ignored but some characteristics are kept
@@ -947,8 +912,7 @@ class Pdf_Table
                     //cell width is the same as the one from the line before it
                     $oCell->setCellDrawWidth( $cell->getCellDrawWidth() );
 
-                    if ( $oCell->getColSpan() > 1 )
-                    {
+                    if ( $oCell->getColSpan() > 1 ) {
                         $iActiveColspan = $oCell->getColSpan();
                     }
 
@@ -959,26 +923,24 @@ class Pdf_Table
             }
 
             //set the font settings
-            //$this->oPdf->SetFont($data[$i]TEXT_FONT'], $data[$i]['TEXT_TYPE'], $data[$i]['TEXT_SIZE']);
+            //$this->pdf->SetFont($data[$i]TEXT_FONT'], $data[$i]['TEXT_TYPE'], $data[$i]['TEXT_SIZE']);
 
 
             /**
              * If we have colspan then we ignore the "colspanned" cells
              */
-            if ( $oCell->getColSpan() > 1 )
-            {
-                for ( $j = 1; $j < $oCell->getColSpan(); $j++ )
-                {
+            if ( $oCell->getColSpan() > 1 ) {
+                for ( $j = 1; $j < $oCell->getColSpan(); $j++ ) {
                     //if there is a colspan, then calculate the number of lines also with the with of the next cell
-                    if ( ( $i + $j ) < $this->nColumns )
+                    if ( ( $i + $j ) < $this->columns ) {
                         $oCell->setCellDrawWidth( $oCell->getCellDrawWidth() + $this->getColumnWidth( $i + $j ) );
+                    }
                 }
             }
 
             //add the cells that are with rowspan to the rowspan array - this is used later
-            if ( $oCell->getRowSpan() > 1 )
-            {
-                $aRowSpan[ ] = $i;
+            if ( $oCell->getRowSpan() > 1 ) {
+                $aRowSpan[] = $i;
             }
 
             $oCell->processContent();
@@ -988,27 +950,24 @@ class Pdf_Table
              * IF THERE IS ROWSPAN ACTIVE Don't include this cell Height in the calculation.
              * This will be calculated later with the sum of all heights
              */
-            if ( 1 == $oCell->getRowSpan() )
-            {
+            if ( 1 == $oCell->getRowSpan() ) {
                 $hm = max( $hm, $oCell->getCellDrawHeight() ); //this would be the normal height
             }
 
-            if ( $oCell->getColSpan() > 1 )
-            {
+            if ( $oCell->getColSpan() > 1 ) {
                 //just skip the other cells
                 $iActiveColspan = $oCell->getColSpan();
             }
         }
 
         //for every cell, set the Draw Height to the maximum height of the row
-        foreach ( $aRow as $aCell )
-        {
-            /** @var $aCell Pdf_Table_Cell_Interface */
+        foreach ( $aRow as $aCell ) {
+            /** @var $aCell CellInterface */
             $aCell->setCellDrawHeight( $hm );
         }
 
         //@formatter:off
-        $aRefCache[ ] = array(
+        $aRefCache[] = array(
             'HEIGHT' => $hm, //the line maximum height
             'DATATYPE' => $sDataType, //The data Type - Data/Header
             'DATA' => $aRow, //this line's data
@@ -1018,9 +977,8 @@ class Pdf_Table
 
 
         //we set the rowspan in cache variable to true if we have a rowspan
-        if ( !empty( $aRowSpan ) && ( !$this->bRowSpanInCache ) )
-        {
-            $this->bRowSpanInCache = true;
+        if ( !empty( $aRowSpan ) && ( !$this->rowSpanInCache ) ) {
+            $this->rowSpanInCache = true;
         }
     }
 
@@ -1034,41 +992,43 @@ class Pdf_Table
      */
     protected function _cacheParseRowspan( $iStartIndex = 0, $sCacheType = 'data' )
     {
-        if ( $sCacheType == 'data' )
-            $aRefCache = &$this->aDataCache;
-        else
-            $aRefCache = &$this->aHeaderCache;
+        if ( $sCacheType == 'data' ) {
+            $aRefCache = &$this->dataCache;
+        } else {
+            $aRefCache = &$this->headerCache;
+        }
 
         $aRowSpans = array();
 
         $iItems = count( $aRefCache );
 
-        for ( $ix = $iStartIndex; $ix < $iItems; $ix++ )
-        {
+        for ( $ix = $iStartIndex; $ix < $iItems; $ix++ ) {
             $val = &$aRefCache[ $ix ];
 
             if ( !in_array( $val[ 'DATATYPE' ], array(
                 'data',
                 'header'
             ) )
-            )
+            ) {
                 continue;
+            }
 
             //if there is no rowspan jump over
-            if ( empty( $val[ 'ROWSPAN' ] ) )
+            if ( empty( $val[ 'ROWSPAN' ] ) ) {
                 continue;
+            }
 
-            foreach ( $val[ 'ROWSPAN' ] as $k )
-            {
-                /** @var $cell Pdf_Table_Cell_Interface */
+            foreach ( $val[ 'ROWSPAN' ] as $k ) {
+                /** @var $cell CellInterface */
                 $cell = &$val[ 'DATA' ][ $k ];
 
-                if ( $cell->getRowSpan() < 1 )
-                    continue; //skip the rows without rowspan
+                if ( $cell->getRowSpan() < 1 ) {
+                    continue;
+                } //skip the rows without rowspan
 
 
                 //@formatter:off
-                $aRowSpans[ ] = array(
+                $aRowSpans[] = array(
                     'row_id' => $ix,
                     'reference_cell' => $cell
                 );
@@ -1077,10 +1037,8 @@ class Pdf_Table
                 $h_rows = 0;
 
                 //calculate the sum of the Heights for the lines that are included in the rowspan
-                for ( $i = 0; $i < $cell->getRowSpan(); $i++ )
-                {
-                    if ( isset( $aRefCache[ $ix + $i ] ) )
-                    {
+                for ( $i = 0; $i < $cell->getRowSpan(); $i++ ) {
+                    if ( isset( $aRefCache[ $ix + $i ] ) ) {
                         $h_rows += $aRefCache[ $ix + $i ][ 'HEIGHT' ];
                     }
                 }
@@ -1094,14 +1052,11 @@ class Pdf_Table
                  * The Rowspan Cell's Height is bigger than the sum of the Rows Heights that he
                  * is spanning In this case we have to increase the height of each row
                  */
-                if ( $h_cell > $h_rows )
-                {
+                if ( $h_cell > $h_rows ) {
                     //calculate the value of the HEIGHT to be added to each row
                     $add_on = ( $h_cell - $h_rows ) / $cell->getRowSpan();
-                    for ( $i = 0; $i < $cell->getRowSpan(); $i++ )
-                    {
-                        if ( isset( $aRefCache[ $ix + $i ] ) )
-                        {
+                    for ( $i = 0; $i < $cell->getRowSpan(); $i++ ) {
+                        if ( isset( $aRefCache[ $ix + $i ] ) ) {
                             $aRefCache[ $ix + $i ][ 'HEIGHT' ] += $add_on;
                         }
                     }
@@ -1114,23 +1069,21 @@ class Pdf_Table
          * The height of this cell is the sum of the heights of the rows where the rowspan occurs
          */
 
-        foreach ( $aRowSpans as $val1 )
-        {
-            /** @var Pdf_Table_Cell_Abstract $cell */
+        foreach ( $aRowSpans as $val1 ) {
+            /** @var CellAbstract $cell */
             $cell = $val1[ 'reference_cell' ];
 
             $h_rows = 0;
             //calculate the sum of the Heights for the lines that are included in the rowspan
-            for ( $i = 0; $i < $cell->getRowSpan(); $i++ )
-            {
-                if ( isset( $aRefCache[ $val1[ 'row_id' ] + $i ] ) )
+            for ( $i = 0; $i < $cell->getRowSpan(); $i++ ) {
+                if ( isset( $aRefCache[ $val1[ 'row_id' ] + $i ] ) ) {
                     $h_rows += $aRefCache[ $val1[ 'row_id' ] + $i ][ 'HEIGHT' ];
+                }
             }
 
             $cell->setCellDrawHeight( $h_rows );
 
-            if ( false == $this->bTableSplit )
-            {
+            if ( false == $this->tableSplit ) {
                 $aRefCache[ $val1[ 'row_id' ] ][ 'HEIGHT_ROWSPAN' ] = $h_rows;
             }
         }
@@ -1148,34 +1101,32 @@ class Pdf_Table
         /**
          * This Variable will contain the remained page Height
          */
-        //$iLeftHeight = $iPageHeight - $this->oPdf->GetY() + $this->oPdf->tMargin;
-        $iLeftHeight = $iPageHeight - $this->oPdf->GetY() + $this->oPdf->tMargin;
+        //$iLeftHeight = $iPageHeight - $this->pdf->GetY() + $this->pdf->tMargin;
+        $iLeftHeight = $iPageHeight - $this->pdf->GetY() + $this->pdf->tMargin;
 
         $bWasData = true; //can be deleted
         $iLastOkKey = 0; //can be deleted
 
 
-        $this->bDataOnCurrentPage = false;
+        $this->dataOnCurrentPage = false;
         $bHeaderOnThisPage = false;
         $iLastDataKey = 0;
 
         //will contain the rowspans on the current page, EMPTY THIS VARIABLE AT EVERY NEW PAGE!!!
         $aRowSpans = array();
 
-        $aDC = &$this->aDataCache;
+        $aDC = &$this->dataCache;
 
         $iItems = count( $aDC );
 
-        for ( $i = 0; $i < $iItems; $i++ )
-        {
+        for ( $i = 0; $i < $iItems; $i++ ) {
             $val = &$aDC[ $i ];
 
-            switch ( $val[ 'DATATYPE' ] )
-            {
+            switch ( $val[ 'DATATYPE' ] ) {
                 case self::TB_DATA_TYPE_INSERT_NEW_PAGE:
                     $aRowSpans = array();
                     $iLeftHeight = $iPageHeight;
-                    $this->bDataOnCurrentPage = false; //new page
+                    $this->dataOnCurrentPage = false; //new page
                     $this->insertNewPage( $i, null, true, true );
                     continue;
                     break;
@@ -1183,16 +1134,13 @@ class Pdf_Table
 
             $bIsHeader = $val[ 'DATATYPE' ] == 'header';
 
-            if ( ( $bIsHeader ) && ( $bWasData ) )
-            {
+            if ( ( $bIsHeader ) && ( $bWasData ) ) {
                 $iLastDataKey = $iLastOkKey;
             }
 
-            if ( isset( $val[ 'ROWSPAN' ] ) )
-            {
-                foreach ( $val[ 'ROWSPAN' ] as $v )
-                {
-                    $aRowSpans[ ] = array(
+            if ( isset( $val[ 'ROWSPAN' ] ) ) {
+                foreach ( $val[ 'ROWSPAN' ] as $v ) {
+                    $aRowSpans[] = array(
                         $i,
                         $v
                     );
@@ -1204,8 +1152,7 @@ class Pdf_Table
 
             $iRowHeight = $val[ 'HEIGHT' ];
             $iRowHeightRowspan = 0;
-            if ( ( false == $this->bTableSplit ) && ( isset( $val[ 'HEIGHT_ROWSPAN' ] ) ) )
-            {
+            if ( ( false == $this->tableSplit ) && ( isset( $val[ 'HEIGHT_ROWSPAN' ] ) ) ) {
                 $iRowHeightRowspan = $val[ 'HEIGHT_ROWSPAN' ];
             }
 
@@ -1213,27 +1160,20 @@ class Pdf_Table
             $iLeftHeight -= $iRowHeight;
 
             //if (isset($val['DATA'][0]['IGNORE_PAGE_BREAK']) && ($iLeftHeight < 0)) {
-            if ( isset( $val[ 'DATA' ][ 0 ]->IGNORE_PAGE_BREAK ) && ( $iLeftHeight < 0 ) )
-            {
+            if ( isset( $val[ 'DATA' ][ 0 ]->IGNORE_PAGE_BREAK ) && ( $iLeftHeight < 0 ) ) {
                 $iLeftHeight = 0;
             }
 
-            if ( ( $iLeftHeight >= 0 ) && ( $iLeftHeightRowspan >= 0 ) )
-            {
+            if ( ( $iLeftHeight >= 0 ) && ( $iLeftHeightRowspan >= 0 ) ) {
                 //this row has enough space on the page
-                if ( true == $bIsHeader )
-                {
+                if ( true == $bIsHeader ) {
                     $bHeaderOnThisPage = true;
-                }
-                else
-                {
+                } else {
                     $iLastDataKey = $i;
-                    $this->bDataOnCurrentPage = true;
+                    $this->dataOnCurrentPage = true;
                 }
                 $iLastOkKey = $i;
-            }
-            else
-            {
+            } else {
                 //@formatter:off
 
                 /**
@@ -1243,7 +1183,7 @@ class Pdf_Table
                  * SITUATION 1:
                  * IF
                  *         - the current data type is header OR
-                 *         - on this page we had no data(that means untill this point was nothing or just header) AND bTableSplit is off AND $iLastDataKey is NOT the first row(>0)
+                 *         - on this page we had no data(that means untill this point was nothing or just header) AND tableSplit is off AND $iLastDataKey is NOT the first row(>0)
                  * THEN we just add new page on the positions of LAST DATA KEY ($iLastDataKey)
                  *
                  * SITUATION 2:
@@ -1259,35 +1199,31 @@ class Pdf_Table
 
 
                 //use this switch for flow control
-                switch ( 1 )
-                {
+                switch ( 1 ) {
                     case 1:
 
                         //SITUATION 1:
                         if ( ( true == $bIsHeader ) or
-                            ( ( false == $bHeaderOnThisPage ) and ( false == $this->bDataOnCurrentPage ) and ( false == $this->bTableSplit ) and ( $iLastDataKey > 0 ) )
-                        )
-                        {
-                            $iItems = $this->insertNewPage( $iLastDataKey, null, ( !$bIsHeader ) && ( !$bHeaderOnThisPage ) );
+                            ( ( false == $bHeaderOnThisPage ) and ( false == $this->dataOnCurrentPage ) and ( false == $this->tableSplit ) and ( $iLastDataKey > 0 ) )
+                        ) {
+                            $iItems = $this->insertNewPage( $iLastDataKey, null,
+                                ( !$bIsHeader ) && ( !$bHeaderOnThisPage ) );
                             break; //exit from switch(1);
                         }
 
-                        $bSplitCommand = $this->bTableSplit;
+                        $bSplitCommand = $this->tableSplit;
 
                         //SITUATION 2:
-                        if ( $val[ 'HEIGHT' ] > ( $iPageHeight - $this->nHeaderHeight ) )
-                        {
-                            //even if the bTableSplit is OFF - split the data!!!
+                        if ( $val[ 'HEIGHT' ] > ( $iPageHeight - $this->headerHeight ) ) {
+                            //even if the tableSplit is OFF - split the data!!!
                             $bSplitCommand = true;
                         }
 
-                        if ( $this->bDisablePageBreak )
-                        {
+                        if ( $this->disablePageBreak ) {
                             $bSplitCommand = false;
                         }
 
-                        if ( true == $bSplitCommand )
-                        {
+                        if ( true == $bSplitCommand ) {
                             /**
                              * *************************************************
                              * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -1307,10 +1243,9 @@ class Pdf_Table
                             $aTData = array();
 
                             //parse the data's on this line
-                            for ( $j = 0; $j < $this->nColumns; $j++ )
-                            {
-                                /** @var $cell Pdf_Table_Cell_Abstract */
-                                /** @var $cellSplit Pdf_Table_Cell_Abstract */
+                            for ( $j = 0; $j < $this->columns; $j++ ) {
+                                /** @var $cell CellAbstract */
+                                /** @var $cellSplit CellAbstract */
 
                                 $aTData[ $j ] = $aData[ $j ];
                                 $cellSplit = &$aTData[ $j ];
@@ -1320,19 +1255,17 @@ class Pdf_Table
                                  * The cell is Skipped or is a Rowspan.
                                  * For active split we handle rowspanned cells later
                                  */
-                                if ( ( $cell->getSkipped() === true ) || ( $cell->getRowSpan() > 1 ) )
+                                if ( ( $cell->getSkipped() === true ) || ( $cell->getRowSpan() > 1 ) ) {
                                     continue;
+                                }
 
-                                if ( $cell->isSplittable() )
-                                {
+                                if ( $cell->isSplittable() ) {
                                     list ( $cellSplit ) = $cell->split( $val[ 'HEIGHT' ], $iLeftHeightLast );
                                     $cell->setCellDrawHeight( $iLeftHeightLast );
-                                }
-                                else
-                                {
+                                } else {
                                     $cellSplit = clone $cell;
 
-                                    $o = new Pdf_Table_Cell_Empty( $this->oPdf );
+                                    $o = new Void( $this->pdf );
                                     $o->copyProperties( $cell );
                                     $o->setCellDrawWidth( $cell->getCellDrawWidth() );
                                     $o->setCellHeight( $iLeftHeightLast );
@@ -1357,13 +1290,11 @@ class Pdf_Table
 
                             $aRowSpan = $aDC[ $i ][ 'ROWSPAN' ];
 
-                            foreach ( $aRowSpans as $rws )
-                            {
+                            foreach ( $aRowSpans as $rws ) {
                                 $rData = &$aDC[ $rws[ 0 ] ][ 'DATA' ][ $rws[ 1 ] ];
-                                /** @var $rData Pdf_Table_Cell_Abstract */
+                                /** @var $rData CellAbstract */
 
-                                if ( $rData->isPropertySet( 'HEIGHT_LEFT_RW' ) && $rData->getCellDrawHeight() > $rData->HEIGHT_LEFT_RW )
-                                {
+                                if ( $rData->isPropertySet( 'HEIGHT_LEFT_RW' ) && $rData->getCellDrawHeight() > $rData->HEIGHT_LEFT_RW ) {
                                     /**
                                      * This cell has a rowspan in IT
                                      * We have to split this cell only if its height is bigger than the space to the end of page
@@ -1372,17 +1303,14 @@ class Pdf_Table
                                      */
 
                                     //list ($aTData[$rws[1]], $fHeightSplit) = $this->splitCell($rData, $rData->HEIGHT_MAX, $rData->HEIGHT_LEFT_RW);
-                                    if ( $rData->isSplittable() )
-                                    {
+                                    if ( $rData->isSplittable() ) {
                                         list ( $aTData[ $rws[ 1 ] ], $fHeightSplit ) = $rData->split(
                                             $rData->getCellDrawHeight(), $rData->HEIGHT_LEFT_RW );
                                         $rData->setCellDrawHeight( $rData->HEIGHT_LEFT_RW );
-                                    }
-                                    else
-                                    {
+                                    } else {
                                         $aTData[ $rws[ 1 ] ] = clone $rData;
 
-                                        $o = new Pdf_Table_Cell_Empty( $this->oPdf );
+                                        $o = new Void( $this->pdf );
                                         $o->copyProperties( $rData );
                                         $o->setCellDrawWidth( $rData->getCellDrawWidth() );
                                         $o->setCellDrawHeight( $rData->HEIGHT_LEFT_RW );
@@ -1392,23 +1320,22 @@ class Pdf_Table
 
                                     $aTData[ $rws[ 1 ] ]->setRowSpan( $aTData[ $rws[ 1 ] ]->getRowSpan() - ( $i - $rws[ 0 ] ) );
 
-                                    $v_new[ 'ROWSPAN' ][ ] = $rws[ 1 ];
+                                    $v_new[ 'ROWSPAN' ][] = $rws[ 1 ];
 
                                     $bNeedParseCache = true;
                                 }
                             }
 
                             $v_new[ 'DATA' ] = $aTData;
-                            $this->bDataOnCurrentPage = true;
+                            $this->dataOnCurrentPage = true;
 
                             //Insert the new page, and get the new number of the lines
                             $iItems = $this->insertNewPage( $i, $v_new );
 
-                            if ( $bNeedParseCache )
+                            if ( $bNeedParseCache ) {
                                 $this->_cacheParseRowspan( $i + 1 );
-                        }
-                        else
-                        {
+                            }
+                        } else {
                             /**
                              * *************************************************
                              * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -1425,17 +1352,16 @@ class Pdf_Table
 
                             $aRowSpan = $aDC[ $i ][ 'ROWSPAN' ];
 
-                            foreach ( $aRowSpans as $rws )
-                            {
+                            foreach ( $aRowSpans as $rws ) {
                                 $rData = &$aDC[ $rws[ 0 ] ][ 'DATA' ][ $rws[ 1 ] ];
-                                /** @var $rData Pdf_Table_Cell_Abstract */
+                                /** @var $rData CellAbstract */
 
-                                if ( $rws[ 0 ] == $i )
-                                    continue; //means that this was added at the last line, that will not appear on this page
+                                if ( $rws[ 0 ] == $i ) {
+                                    continue;
+                                } //means that this was added at the last line, that will not appear on this page
 
 
-                                if ( $rData->getCellDrawHeight() > $rData->HEIGHT_LEFT_RW )
-                                {
+                                if ( $rData->getCellDrawHeight() > $rData->HEIGHT_LEFT_RW ) {
                                     /**
                                      * This cell has a rowspan in IT
                                      * We have to split this cell only if its height is bigger than the space to the end of page
@@ -1446,7 +1372,7 @@ class Pdf_Table
                                     list ( $aTData, $fHeightSplit ) = $rData->split( $rData->getCellDrawHeight(),
                                         $rData->HEIGHT_LEFT_RW - $iLeftHeightLast );
 
-                                    /** @var $aTData Pdf_Table_Cell_Interface */
+                                    /** @var $aTData CellInterface */
 
                                     $rData->setCellDrawHeight( $rData->HEIGHT_LEFT_RW - $iLeftHeightLast );
 
@@ -1454,15 +1380,16 @@ class Pdf_Table
 
                                     $aDC[ $i ][ 'DATA' ][ $rws[ 1 ] ] = $aTData;
 
-                                    $aRowSpan[ ] = $rws[ 1 ];
+                                    $aRowSpan[] = $rws[ 1 ];
                                     $aDC[ $i ][ 'ROWSPAN' ] = $aRowSpan;
 
                                     $bNeedParseCache = true;
                                 }
                             }
 
-                            if ( $bNeedParseCache )
+                            if ( $bNeedParseCache ) {
                                 $this->_cacheParseRowspan( $i );
+                            }
 
                             //Insert the new page, and get the new number of the lines
                             $iItems = $this->insertNewPage( $i );
@@ -1471,7 +1398,7 @@ class Pdf_Table
 
                 $iLeftHeight = $iPageHeight;
                 $aRowSpans = array();
-                $this->bDataOnCurrentPage = false; //new page
+                $this->dataOnCurrentPage = false; //new page
             }
         }
     }
@@ -1489,47 +1416,44 @@ class Pdf_Table
      */
     protected function insertNewPage( $iIndex = 0, $rNewData = null, $bInsertHeader = true, $bRemoveCurrentRow = false )
     {
-        if ( $this->bDisablePageBreak ) return 0;
+        if ( $this->disablePageBreak ) {
+            return 0;
+        }
 
-        $this->bHeaderOnCurrentPage = false;
+        $this->headerOnCurrentPage = false;
 
         //parse the header if for some reason it was not parsed!?
         $this->parseHeader();
 
         //the number of lines that the header contains
-        if ( ( true == $this->bDrawHeader ) && ( true == $bInsertHeader ) && ( $this->bHeaderOnNewPage ) )
-        {
-            $nHeaderLines = count( $this->aHeaderCache );
-        }
-        else
-        {
+        if ( ( true == $this->drawHeader ) && ( true == $bInsertHeader ) && ( $this->headerOnNewPage ) ) {
+            $nHeaderLines = count( $this->headerCache );
+        } else {
             $nHeaderLines = 0;
         }
 
-        $aDC = &$this->aDataCache;
+        $aDC = &$this->dataCache;
         $iItems = count( $aDC ); //the number of elements in the cache
 
         //if we have a NewData to be inserted after the new page then we have to shift the data with 1
-        if ( null != $rNewData )
+        if ( null != $rNewData ) {
             $iShift = 1;
-        else
+        } else {
             $iShift = 0;
+        }
 
         //if we have a header and no data on the current page, remove the header from the current page!
-        if ( $nHeaderLines > 0 && false == $this->bDataOnCurrentPage )
-        {
+        if ( $nHeaderLines > 0 && false == $this->dataOnCurrentPage ) {
             $iShift -= $nHeaderLines;
         }
 
         $nIdx = 0;
-        if ( $bRemoveCurrentRow )
-        {
+        if ( $bRemoveCurrentRow ) {
             $nIdx = 1;
         }
 
         //shift the array with the number of lines that the header contains + one line for the new page
-        for ( $j = $iItems; $j > $iIndex; $j-- )
-        {
+        for ( $j = $iItems; $j > $iIndex; $j-- ) {
             $aDC[ $j + $nHeaderLines + $iShift - $nIdx ] = $aDC[ $j - 1 ];
         }
 
@@ -1540,26 +1464,23 @@ class Pdf_Table
 
         $j = $iShift;
 
-        if ( $nHeaderLines > 0 )
-        {
+        if ( $nHeaderLines > 0 ) {
             //only if we have a header
             //insert the header into the corresponding positions
-            foreach ( $this->aHeaderCache as $rHeaderVal )
-            {
+            foreach ( $this->headerCache as $rHeaderVal ) {
                 $j++;
                 $aDC[ $iIndex + $j ] = $rHeaderVal;
             }
 
-            $this->bHeaderOnCurrentPage = true;
+            $this->headerOnCurrentPage = true;
         }
 
-        if ( 1 == $iShift )
-        {
+        if ( 1 == $iShift ) {
             $j++;
             $aDC[ $iIndex + $j ] = $rNewData;
         }
 
-        $this->bDataOnCurrentPage = false;
+        $this->dataOnCurrentPage = false;
 
         return count( $aDC );
     }
@@ -1571,28 +1492,26 @@ class Pdf_Table
      */
     protected function _cachePrepOutputData()
     {
-        $this->bDataOnCurrentPage = false;
+        $this->dataOnCurrentPage = false;
 
         //save the old auto page break value
-        $oldAutoPageBreak = $this->oPdf->AutoPageBreak;
-        $oldbMargin = $this->oPdf->bMargin;
+        $oldAutoPageBreak = $this->pdf->AutoPageBreak;
+        $oldbMargin = $this->pdf->bMargin;
 
         //disable the auto page break
-        $this->oPdf->SetAutoPageBreak( false, $oldbMargin );
+        $this->pdf->SetAutoPageBreak( false, $oldbMargin );
 
-        $aDataCache = &$this->aDataCache;
+        $dataCache = &$this->dataCache;
 
-        $iItems = count( $aDataCache );
+        $iItems = count( $dataCache );
 
-        for ( $k = 0; $k < $iItems; $k++ )
-        {
-            $val = &$aDataCache[ $k ];
+        for ( $k = 0; $k < $iItems; $k++ ) {
+            $val = &$dataCache[ $k ];
 
             //each array contains one line
             $this->_tbAlign();
 
-            if ( $val[ 'DATATYPE' ] == 'new_page' )
-            {
+            if ( $val[ 'DATATYPE' ] == 'new_page' ) {
                 //add a new page
                 $this->addPage();
                 continue;
@@ -1601,45 +1520,41 @@ class Pdf_Table
             $data = &$val[ 'DATA' ];
 
             //Draw the cells of the row
-            for ( $i = 0; $i < $this->nColumns; $i++ )
-            {
-                /** @var $cell Pdf_Table_Cell_Interface */
+            for ( $i = 0; $i < $this->columns; $i++ ) {
+                /** @var $cell CellInterface */
                 $cell = &$data[ $i ];
 
                 //Save the current position
-                $x = $this->oPdf->GetX();
-                $y = $this->oPdf->GetY();
+                $x = $this->pdf->GetX();
+                $y = $this->pdf->GetY();
 
-                if ( $cell->getSkipped() === false )
-                {
+                if ( $cell->getSkipped() === false ) {
                     //render the cell to the pdf
                     //$data[$i]->render($rowHeight = $val['HEIGHT']);
 
 
-                    if ( $val[ 'HEIGHT' ] > $cell->getCellDrawHeight() )
-                    {
+                    if ( $val[ 'HEIGHT' ] > $cell->getCellDrawHeight() ) {
                         $cell->setCellDrawHeight( $val[ 'HEIGHT' ] );
                     }
 
                     $cell->render();
                 }
 
-                $this->oPdf->SetXY( $x + $this->getColumnWidth( $i ), $y );
+                $this->pdf->SetXY( $x + $this->getColumnWidth( $i ), $y );
 
                 //if we have colspan, just ignore the next cells
-                if ( $cell->getColSpan() > 1 )
-                {
+                if ( $cell->getColSpan() > 1 ) {
                     //$i = $i + (int)$cell->getColspan() - 1;
                 }
             }
 
-            $this->bDataOnCurrentPage = true;
+            $this->dataOnCurrentPage = true;
 
             //Go to the next line
-            $this->oPdf->Ln( $val[ 'HEIGHT' ] );
+            $this->pdf->Ln( $val[ 'HEIGHT' ] );
         }
 
-        $this->oPdf->SetAutoPageBreak( $oldAutoPageBreak, $oldbMargin );
+        $this->pdf->SetAutoPageBreak( $oldAutoPageBreak, $oldbMargin );
     }
 
 
@@ -1649,8 +1564,9 @@ class Pdf_Table
      */
     protected function _cachePrepOutput()
     {
-        if ( $this->bRowSpanInCache )
+        if ( $this->rowSpanInCache ) {
             $this->_cacheParseRowspan();
+        }
 
         $this->_cachePaginate();
 
@@ -1661,17 +1577,17 @@ class Pdf_Table
     /**
      * Adds a new page in the pdf document and initializes the table and the header if necessary.
      */
-    protected function addPage( )
+    protected function addPage()
     {
         $this->drawBorder(); //draw the table border
         $this->_tbEndPageBorder(); //if there is a special handling for end page??? this is specific for me
 
-        $this->oPdf->AddPage( $this->oPdf->CurOrientation ); //add a new page
+        $this->pdf->AddPage( $this->pdf->CurOrientation ); //add a new page
 
-        $this->bDataOnCurrentPage = false;
+        $this->dataOnCurrentPage = false;
 
-        $this->iTableStartX = $this->oPdf->GetX();
-        $this->iTableStartY = $this->oPdf->GetY();
+        $this->tableStartX = $this->pdf->GetX();
+        $this->tableStartY = $this->pdf->GetY();
         $this->markMarginX();
     }
 
@@ -1697,7 +1613,7 @@ class Pdf_Table
      */
     public function setStyle( $tag, $family, $style, $size, $color )
     {
-        $this->oMulticell->setStyle( $tag, $family, $style, $size, $color );
+        $this->multicell->setStyle( $tag, $family, $style, $size, $color );
     }
 
 
@@ -1711,10 +1627,8 @@ class Pdf_Table
      */
     public static function getValue( $var, $index = '', $default = '' )
     {
-        if ( is_array( $var ) )
-        {
-            if ( isset( $var[ $index ] ) )
-            {
+        if ( is_array( $var ) ) {
+            if ( isset( $var[ $index ] ) ) {
                 return $var[ $index ];
             }
         }
@@ -1732,7 +1646,7 @@ class Pdf_Table
      */
     protected function getTableConfig( $key )
     {
-        return self::getValue( $this->aConfiguration[ 'TABLE' ], $key );
+        return self::getValue( $this->configuration[ 'TABLE' ], $key );
     }
 
 
@@ -1747,7 +1661,7 @@ class Pdf_Table
      */
     public function setTableConfig( $aConfig )
     {
-        $this->aConfiguration[ 'TABLE' ] = array_merge( $this->aConfiguration[ 'TABLE' ], $aConfig );
+        $this->configuration[ 'TABLE' ] = array_merge( $this->configuration[ 'TABLE' ], $aConfig );
 
         // update the Margin X
         // @see https://tracker.interpid.eu/issues/896
@@ -1761,7 +1675,7 @@ class Pdf_Table
      */
     public function setHeaderConfig( $aConfig )
     {
-        $this->aConfiguration[ 'HEADER' ] = array_merge( $this->aConfiguration[ 'HEADER' ], $aConfig );
+        $this->configuration[ 'HEADER' ] = array_merge( $this->configuration[ 'HEADER' ], $aConfig );
     }
 
     /**
@@ -1771,7 +1685,7 @@ class Pdf_Table
      */
     public function setRowConfig( $aConfig )
     {
-        $this->aConfiguration[ 'ROW' ] = array_merge( $this->aConfiguration[ 'ROW' ], $aConfig );
+        $this->configuration[ 'ROW' ] = array_merge( $this->configuration[ 'ROW' ], $aConfig );
     }
 
 
@@ -1784,7 +1698,7 @@ class Pdf_Table
      */
     protected function getHeaderConfig( $key )
     {
-        return self::getValue( $this->aConfiguration[ 'HEADER' ], $key );
+        return self::getValue( $this->configuration[ 'HEADER' ], $key );
     }
 
 
@@ -1797,7 +1711,7 @@ class Pdf_Table
      */
     protected function getRowConfig( $key )
     {
-        return self::getValue( $this->aConfiguration[ 'ROW' ], $key );
+        return self::getValue( $this->configuration[ 'ROW' ], $key );
     }
 
 
@@ -1812,7 +1726,7 @@ class Pdf_Table
     {
         $aDefaultConfiguration = array();
 
-        require dirname( __FILE__ ) . '/../../table.config.php';
+        require PDF_APPLICATION_PATH . '/table.config.php';
 
         return $aDefaultConfiguration;
     }
@@ -1857,7 +1771,7 @@ class Pdf_Table
      */
     protected function getTypeMap()
     {
-        return $this->aTypeMap;
+        return $this->typeMap;
     }
 
 
@@ -1869,13 +1783,12 @@ class Pdf_Table
      */
     public function addTypeMap( $name, $class )
     {
-        if ( !class_exists( $class ) )
-        {
+        if ( !class_exists( $class ) ) {
             //fatal error
             trigger_error( "Invalid class specified: $class", E_USER_ERROR );
         }
 
-        $this->aTypeMap[ strtoupper( $name ) ] = $class;
+        $this->typeMap[ strtoupper( $name ) ] = $class;
     }
 
 
@@ -1887,7 +1800,7 @@ class Pdf_Table
      */
     public function setDisablePageBreak( $value )
     {
-        $this->bDisablePageBreak = (bool) $value;
+        $this->disablePageBreak = (bool)$value;
 
         return $this;
     }

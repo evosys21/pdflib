@@ -1,7 +1,7 @@
 <?php
 /**
  * Pdf Advanced Table - Example
- * Copyright (c), Andrei Bintintan, http://www.interpid.eu
+ * Copyright (c), Interpid, http://www.interpid.eu
  */
 
 // include the pdf factory
@@ -18,8 +18,8 @@ require_once( "mypdf-table.php" );
 $factory = new pdfFactory();
 
 // create new PDF document
-$oPdf = new myPdfTable();
-$factory->initPdfObject( $oPdf );
+$pdf = new myPdfTable();
+$factory->initPdfObject( $pdf );
 
 //define some background colors
 $aBgColor1 = array( 234, 255, 218 );
@@ -29,39 +29,39 @@ $aBgColor3 = array( 255, 252, 249 );
  * Create the pdf Table object
  * Alternative you can use the Singleton Instance
  *
- * @example : $oTable = PdfTable::getInstance($oPdf);
+ * @example : $table = PdfTable::getInstance($pdf);
  */
-$oTable = new PdfTable( $oPdf );
+$table = new PdfTable( $pdf );
 
 /**
  * Set the tag styles
  */
-$oTable->setStyle( "p", $oPdf->getDefaultFontName(), "", 10, "130,0,30" );
-$oTable->setStyle( "b", $oPdf->getDefaultFontName(), "", 9, "80,80,260" );
-$oTable->setStyle( "h1", $oPdf->getDefaultFontName(), "", 10, "0,151,200" );
-$oTable->setStyle( "bi", $oPdf->getDefaultFontName(), "BI", 12, "0,0,120" );
+$table->setStyle( "p", 'Helvetica', "", 10, "130,0,30" );
+$table->setStyle( "b", 'Helvetica', "", 9, "80,80,260" );
+$table->setStyle( "h1", 'Helvetica', "", 10, "0,151,200" );
+$table->setStyle( "bi", 'Helvetica', "BI", 12, "0,0,120" );
 
-$sTxt1 = "<p>All table cells are fully functional <bi href='http://www.interpid.eu/pdf-multicell'>pdf Advanced Multicells</bi>\nDetails about Pdf Advanced Multicell can be found <h1 href='http://http://www.interpid.eu/pdf-tcpdf-addons'>here</h1></p>";
+$txt1 = "<p>All table cells are fully functional <bi href='http://www.interpid.eu/pdf-multicell'>pdf Advanced Multicells</bi>\nDetails about Pdf Advanced Multicell can be found <h1 href='http://http://www.interpid.eu/pdf-tcpdf-addons'>here</h1></p>";
 
 //Initialize the table class, 5 columns with the specified widths
-$oTable->initialize( array( 20, 30, 40, 40, 20 ) );
+$table->initialize( array( 20, 30, 40, 40, 20 ) );
 
-$aHeader = array( array( 'TEXT' => 'Header 1' ), array( 'TEXT' => 'Header 2' ), array( 'TEXT' => 'Header 3' ), array( 'TEXT' => 'Header 4' ), array( 'TEXT' => 'Header 5' ) );
+$header = array( array( 'TEXT' => 'Header 1' ), array( 'TEXT' => 'Header 2' ), array( 'TEXT' => 'Header 3' ), array( 'TEXT' => 'Header 4' ), array( 'TEXT' => 'Header 5' ) );
 
 //add the header line
-$oTable->addHeader( $aHeader );
+$table->addHeader( $header );
 
 //do some adjustments in the header
-$aHeader[ 2 ][ 'TEXT' ] = 'Header Colspan/Rowspan';
-$aHeader[ 2 ][ 'COLSPAN' ] = 2;
-$aHeader[ 2 ][ 'ROWSPAN' ] = 2;
-$aHeader[ 2 ][ 'TEXT_COLOR' ] = array( 10, 20, 100 );
-$aHeader[ 2 ][ 'BACKGROUND_COLOR' ] = $aBgColor2;
+$header[ 2 ][ 'TEXT' ] = 'Header Colspan/Rowspan';
+$header[ 2 ][ 'COLSPAN' ] = 2;
+$header[ 2 ][ 'ROWSPAN' ] = 2;
+$header[ 2 ][ 'TEXT_COLOR' ] = array( 10, 20, 100 );
+$header[ 2 ][ 'BACKGROUND_COLOR' ] = $aBgColor2;
 
-$oTable->addHeader( $aHeader );
+$table->addHeader( $header );
 
 //add an empty header line
-$oTable->addHeader();
+$table->addHeader();
 
 $fsize = 5;
 $colspan = 2;
@@ -86,7 +86,7 @@ for ( $j = 0; $j < 45; $j++ )
 
     if ( $j == 0 )
     {
-        $aRow[ 1 ][ 'TEXT' ] = $sTxt1;
+        $aRow[ 1 ][ 'TEXT' ] = $txt1;
         $aRow[ 1 ][ 'COLSPAN' ] = 4;
         $aRow[ 1 ][ 'ALIGN' ] = "C";
         $aRow[ 1 ][ 'LINE_SIZE' ] = 5;
@@ -170,7 +170,7 @@ for ( $j = 0; $j < 45; $j++ )
 
     if ( $j == 17 )
     {
-        $aRow[ 0 ][ 'TEXT' ] = $sTxt1;
+        $aRow[ 0 ][ 'TEXT' ] = $txt1;
         $aRow[ 0 ][ 'TEXT_ALIGN' ] = 'C';
         $aRow[ 0 ][ 'VERTICAL_ALIGN' ] = 'M';
         $aRow[ 0 ][ 'BACKGROUND_COLOR' ] = array( 234, 255, 218 );
@@ -190,11 +190,11 @@ for ( $j = 0; $j < 45; $j++ )
     if ( $rgb_g < 150 ) $rgb_g = 255;
     if ( $rgb_b < 150 ) $rgb_b = 255;
 
-    $oTable->addRow( $aRow );
+    $table->addRow( $aRow );
 }
 
 //close the table
-$oTable->close();
+$table->close();
 
 //send the pdf to the browser
-$oPdf->Output();
+$pdf->Output();

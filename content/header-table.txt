@@ -1,2 +1,2 @@
 <h1 href='www.interpid.eu/fpdf-addons'>FPDF Advanced Table
-Author:</h1> <h2 href='mailto:andy@interpid.eu'>Andrei Bintintan</h2>
+Author:</h1> <h2 href='mailto:office@interpid.eu'>Andrei Bintintan</h2>

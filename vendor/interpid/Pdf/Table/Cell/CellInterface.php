@@ -14,18 +14,21 @@
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
  * @version   : 5.3.0
- * @author    : Andrei Bintintan <andy@interpid.eu>
- * @copyright : Andrei Bintintan, http://www.interpid.eu
+ * @author    : Interpid <office@interpid.eu>
+ * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
-interface Pdf_Table_Cell_Interface
+
+namespace Interpid\Pdf\Table\Cell;
+
+interface CellInterface
 {
 
 
     /**
      * Class constructor
      *
-     * @param PDF Object: Pdf_Interface $pdf
+     * @param PDF Object: PdfInterface $pdf
      */
     public function __construct( $pdf );
 

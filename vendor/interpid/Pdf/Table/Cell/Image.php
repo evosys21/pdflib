@@ -14,11 +14,14 @@
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
  * @version   : 5.3.0
- * @author    : Andrei Bintintan <andy@interpid.eu>
- * @copyright : Andrei Bintintan, http://www.interpid.eu
+ * @author    : Interpid <office@interpid.eu>
+ * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
-class Pdf_Table_Cell_Image extends Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
+
+namespace Interpid\Pdf\Table\Cell;
+
+class Image extends CellAbstract implements CellInterface
 {
 
     protected $sFile;
@@ -80,7 +83,7 @@ class Pdf_Table_Cell_Image extends Pdf_Table_Cell_Abstract implements Pdf_Table_
         //check if file exists etc...
         $this->doChecks();
 
-        list ( $width, $height ) = $this->oPdfi->getImageParams( $file, $width, $height );
+        list ( $width, $height ) = $this->pdfi->getImageParams( $file, $width, $height );
 
         $this->setContentWidth( $width );
         $this->setContentHeight( $height );
@@ -127,8 +130,8 @@ class Pdf_Table_Cell_Image extends Pdf_Table_Cell_Abstract implements Pdf_Table_
     {
         $this->renderCellLayout();
 
-        $x = $this->oPdf->GetX() + $this->getBorderSize();
-        $y = $this->oPdf->GetY() + $this->getBorderSize();
+        $x = $this->pdf->GetX() + $this->getBorderSize();
+        $y = $this->pdf->GetY() + $this->getBorderSize();
 
         //Horizontal Alignment
         if ( strpos( $this->sAlignment, 'J' ) !== false )
@@ -171,7 +174,7 @@ class Pdf_Table_Cell_Image extends Pdf_Table_Cell_Abstract implements Pdf_Table_
             $y += ( $this->getCellDrawHeight() - $this->getContentHeight() ) / 2;
         }
 
-        $this->oPdf->Image( $this->sFile, $x, $y, $this->getContentWidth(), $this->getContentHeight(), $this->sType, $this->sLink );
+        $this->pdf->Image( $this->sFile, $x, $y, $this->getContentWidth(), $this->getContentHeight(), $this->sType, $this->sLink );
     }
 
 

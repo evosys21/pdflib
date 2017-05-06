@@ -1,7 +1,7 @@
 <?php
 /**
  * Pdf Advanced Table - Example
- * Copyright (c), Andrei Bintintan, http://www.interpid.eu
+ * Copyright (c), Interpid, http://www.interpid.eu
  */
 
 // include the pdf factory
@@ -18,36 +18,36 @@ require_once( "mypdf-table.php" );
 $factory = new pdfFactory();
 
 // create new PDF document
-$oPdf = new myPdfTable();
-$factory->initPdfObject( $oPdf );
+$pdf = new myPdfTable();
+$factory->initPdfObject( $pdf );
 
 /**
  * Create the pdf Table object
  * Alternative you can use the Singleton Instance
  *
- * @example : $oTable = PdfTable::getInstance($oPdf);
+ * @example : $table = PdfTable::getInstance($pdf);
  */
-$oTable = new PdfTable( $oPdf );
+$table = new PdfTable( $pdf );
 
 /**
  * Set the tag styles
  */
-$oTable->setStyle( "p", $oPdf->getDefaultFontName(), "", 10, "130,0,30" );
-$oTable->setStyle( "b", $oPdf->getDefaultFontName(), "", 9, "80,80,260" );
-$oTable->setStyle( "h1", $oPdf->getDefaultFontName(), "", 10, "0,151,200" );
-$oTable->setStyle( "bi", $oPdf->getDefaultFontName(), "BI", 12, "0,0,120" );
-$oTable->setStyle( "size", $oPdf->getDefaultFontName(), "BI", 13, "0,0,120" );
+$table->setStyle( "p", 'Helvetica', "", 10, "130,0,30" );
+$table->setStyle( "b", 'Helvetica', "", 9, "80,80,260" );
+$table->setStyle( "h1", 'Helvetica', "", 10, "0,151,200" );
+$table->setStyle( "bi", 'Helvetica', "BI", 12, "0,0,120" );
+$table->setStyle( "size", 'Helvetica', "BI", 13, "0,0,120" );
 
 //default text color
-$oPdf->SetTextColor( 118, 0, 3 );
+$pdf->SetTextColor( 118, 0, 3 );
 
 //create an advanced multicell    
-$oMulticell = PdfMulticell::getInstance( $oPdf );
-$oMulticell->setStyle( "s1", $oPdf->getDefaultFontName(), "", 8, "118,0,3" );
-$oMulticell->setStyle( "s2", $oPdf->getDefaultFontName(), "", 6, "0,49,159" );
-$oMulticell->multiCell( 100, 4, "<s1>Example - Override Default Configuration Values</s1>", 0 );
+$multicell = PdfMulticell::getInstance( $pdf );
+$multicell->setStyle( "s1", 'Helvetica', "", 8, "118,0,3" );
+$multicell->setStyle( "s2", 'Helvetica', "", 6, "0,49,159" );
+$multicell->multiCell( 100, 4, "<s1>Example - Override Default Configuration Values</s1>", 0 );
 
-$nColumns = 3;
+$columns = 3;
 
 $aCustomConfiguration = array(
     'TABLE' => array(
@@ -75,18 +75,18 @@ $aCustomConfiguration = array(
 );
 
 //Initialize the table class, 3 columns
-$oTable->initialize( array( 40, 50, 30 ), $aCustomConfiguration );
+$table->initialize( array( 40, 50, 30 ), $aCustomConfiguration );
 
-$aHeader = array();
+$header = array();
 
 //Table Header
-for ( $i = 0; $i < $nColumns; $i++ )
+for ( $i = 0; $i < $columns; $i++ )
 {
-    $aHeader[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
+    $header[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
 }
 
 //add the header
-$oTable->addHeader( $aHeader );
+$table->addHeader( $header );
 
 for ( $j = 1; $j < 5; $j++ )
 {
@@ -104,11 +104,11 @@ for ( $j = 1; $j < 5; $j++ )
     }
 
     //add the row
-    $oTable->addRow( $aRow );
+    $table->addRow( $aRow );
 }
 
 //close the table
-$oTable->close();
+$table->close();
 
 //send the pdf to the browser
-$oPdf->Output();
+$pdf->Output();

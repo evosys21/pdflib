@@ -13,17 +13,17 @@
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
  * @version   : 5.3.0
- * @author    : Andrei Bintintan <andy@interpid.eu>
- * @copyright : Andrei Bintintan, http://www.interpid.eu
+ * @author    : Interpid <office@interpid.eu>
+ * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
 
-require_once( dirname( __FILE__ ) . '/Interface.php' );
+namespace Interpid\Pdf\Table\Cell;
 
 /**
  * @property mixed|null HEIGHT_LEFT_RW
  */
-abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
+abstract class CellAbstract implements CellInterface
 {
 
     protected $aPropertyMethodMap = array(
@@ -70,21 +70,21 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
     protected $align = 'L';
     protected $alignVertical = 'M';
 
-    protected $aProperties = array();
+    protected $properties = array();
 
-    protected $aInternValueSet = array();
+    protected $internValueSet = array();
 
-    protected $nCellWidth = 0;
+    protected $cellWidth = 0;
 
-    protected $nCellHeight = 0;
+    protected $cellHeight = 0;
 
-    protected $nCellDrawWidth = 0;
+    protected $cellDrawWidth = 0;
 
-    protected $nCellDrawHeight = 0;
+    protected $cellDrawHeight = 0;
 
-    protected $nContentWidth = 0;
+    protected $contentWidth = 0;
 
-    protected $nContentHeight = 0;
+    protected $contentHeight = 0;
 
     /**
      * Default alignment is Middle Center
@@ -98,14 +98,14 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
      *
      * @var Pdf
      */
-    protected $oPdf;
+    protected $pdf;
 
     /**
      * Pdf Interface
      *
-     * @var Pdf_Interface
+     * @var PdfInterface
      */
-    protected $oPdfi;
+    protected $pdfi;
 
     /**
      * If this cell will be skipped
@@ -117,16 +117,16 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
 
     public function __construct( $pdf )
     {
-        if ( $pdf instanceof Pdf_Interface )
+        if ( $pdf instanceof PdfInterface )
         {
-            $this->oPdfi = $pdf;
-            $this->oPdf = $pdf->getPdfObject();
+            $this->pdfi = $pdf;
+            $this->pdf = $pdf->getPdfObject();
         }
         else
         {
             //it must be an instance of a pdf object
-            $this->oPdf = $pdf;
-            $this->oPdfi = new Pdf_Interface( $pdf );
+            $this->pdf = $pdf;
+            $this->pdfi = new PdfInterface( $pdf );
         }
     }
 
@@ -164,7 +164,7 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
      */
     protected function isInternValueSet( $key )
     {
-        return array_key_exists( $key, $this->aInternValueSet );
+        return array_key_exists( $key, $this->internValueSet );
     }
 
     /**
@@ -174,7 +174,7 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
      */
     protected function markInternValueAsSet( $key )
     {
-        $this->aInternValueSet[ $key ] = true;
+        $this->internValueSet[ $key ] = true;
     }
 
     /**
@@ -209,7 +209,7 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
             return;
         }
 
-        $this->aProperties[ $key ] = $value;
+        $this->properties[ $key ] = $value;
     }
 
 
@@ -255,7 +255,7 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
     {
         $value = Pdf_Validate::float( $value, 0 );
 
-        $this->nCellWidth = $value;
+        $this->cellWidth = $value;
 
         if ( $value > $this->getCellDrawWidth() )
         {
@@ -266,7 +266,7 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
 
     public function getCellWidth()
     {
-        return $this->nCellWidth;
+        return $this->cellWidth;
     }
 
 
@@ -274,7 +274,7 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
     {
         $value = Pdf_Validate::float( $value, 0 );
 
-        $this->nCellHeight = $value;
+        $this->cellHeight = $value;
 
         if ( $value > $this->getCellDrawHeight() )
         {
@@ -285,7 +285,7 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
 
     public function getCellHeight()
     {
-        return $this->nCellHeight;
+        return $this->cellHeight;
     }
 
 
@@ -295,14 +295,14 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
 
         if ( $this->getCellHeight() <= $value )
         {
-            $this->nCellDrawHeight = $value;
+            $this->cellDrawHeight = $value;
         }
     }
 
 
     public function getCellDrawHeight()
     {
-        return $this->nCellDrawHeight;
+        return $this->cellDrawHeight;
     }
 
 
@@ -310,38 +310,38 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
     {
         $value = Pdf_Validate::float( $value, 0 );
 
-        $this->nCellDrawWidth = $value;
+        $this->cellDrawWidth = $value;
         $this->setCellWidth( $value );
     }
 
 
     public function getCellDrawWidth()
     {
-        return $this->nCellDrawWidth;
+        return $this->cellDrawWidth;
     }
 
 
     public function setContentWidth( $value )
     {
-        $this->nContentWidth = Pdf_Validate::float( $value, 0 );
+        $this->contentWidth = Pdf_Validate::float( $value, 0 );
     }
 
 
     public function getContentWidth()
     {
-        return $this->nContentWidth;
+        return $this->contentWidth;
     }
 
 
     public function setContentHeight( $value )
     {
-        $this->nContentHeight = Pdf_Validate::float( $value, 0 );
+        $this->contentHeight = Pdf_Validate::float( $value, 0 );
     }
 
 
     public function getContentHeight()
     {
-        return $this->nContentHeight;
+        return $this->contentHeight;
     }
 
 
@@ -359,9 +359,9 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
 
     public function __get( $property )
     {
-        if ( isset( $this->aProperties[ $property ] ) )
+        if ( isset( $this->properties[ $property ] ) )
         {
-            return $this->aProperties[ $property ];
+            return $this->properties[ $property ];
         }
 
         trigger_error( "Undefined property $property" );
@@ -380,7 +380,7 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
 
     public function isPropertySet( $property )
     {
-        if ( isset( $this->aProperties[ $property ] ) )
+        if ( isset( $this->properties[ $property ] ) )
             return true;
 
         return false;
@@ -398,26 +398,26 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
      */
     public function renderCellLayout()
     {
-        $x = $this->oPdf->GetX();
-        $y = $this->oPdf->GetY();
+        $x = $this->pdf->GetX();
+        $y = $this->pdf->GetY();
 
         //border size BORDER_SIZE
-        $this->oPdf->SetLineWidth( $this->getBorderSize() );
+        $this->pdf->SetLineWidth( $this->getBorderSize() );
 
         if ( !$this->isTransparent() )
         {
             //fill color = BACKGROUND_COLOR
             list ( $r, $g, $b ) = $this->getBackgroundColor();
-            $this->oPdf->SetFillColor( $r, $g, $b );
+            $this->pdf->SetFillColor( $r, $g, $b );
         }
 
         //Draw Color = BORDER_COLOR
         list ( $r, $g, $b ) = $this->getBorderColor();
-        $this->oPdf->SetDrawColor( $r, $g, $b );
+        $this->pdf->SetDrawColor( $r, $g, $b );
 
-        $this->oPdf->Cell( $this->getCellDrawWidth(), $this->getCellDrawHeight(), '', $this->getBorderType(), 0, '', !$this->isTransparent() );
+        $this->pdf->Cell( $this->getCellDrawWidth(), $this->getCellDrawHeight(), '', $this->getBorderType(), 0, '', !$this->isTransparent() );
 
-        $this->oPdf->SetXY( $x, $y );
+        $this->pdf->SetXY( $x, $y );
     }
 
 
@@ -427,7 +427,7 @@ abstract class Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
     }
 
 
-    public function copyProperties( Pdf_Table_Cell_Abstract $oSource )
+    public function copyProperties( CellAbstract $oSource )
     {
         $this->rowSpan = $oSource->getRowSpan();
         $this->colSpan = $oSource->getColSpan();

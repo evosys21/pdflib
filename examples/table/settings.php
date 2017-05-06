@@ -2,6 +2,10 @@
 
 //define some background colors
 
+if ( !defined( 'PDF_APPLICATION_PATH' ) ) {
+    define( 'PDF_APPLICATION_PATH', __DIR__ . '/../..' );
+}
+
 $aColor = array(
     array( 234, 255, 218 ),
     array( 165, 250, 220 ),
@@ -9,7 +13,8 @@ $aColor = array(
     array( 86, 155, 225 ),
     array( 207, 247, 239 ),
     array( 246, 211, 207 ),
-    array( 216, 243, 228 ) );
+    array( 216, 243, 228 )
+);
 
 
 //top, right, bottom, left
@@ -47,9 +52,8 @@ $sTextSubSuperscript = "<ss ypos='-0.8'>Subscript</ss> or <ss ypos='1.1'>Supersc
 
 
 //prepare some default row settings
-for ( $i = 0; $i < 5; $i++ )
-{
-    $aHeaderRow[ $i ][ 'TEXT' ] = "Header #$i";
+for ( $i = 0; $i < 5; $i++ ) {
+    $headerRow[ $i ][ 'TEXT' ] = "Header #$i";
     $aDataRow[ $i ][ 'TEXT' ] = "Cool <b>cell</b>";
 }
 

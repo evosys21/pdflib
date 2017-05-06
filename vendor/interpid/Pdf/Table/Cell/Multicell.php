@@ -13,13 +13,13 @@
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
  * @version   : 5.3.0
- * @author    : Andrei Bintintan <andy@interpid.eu>
- * @copyright : Andrei Bintintan, http://www.interpid.eu
+ * @author    : Interpid <office@interpid.eu>
+ * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
 
 
-require_once( dirname( __FILE__ ) . '/Abstract.php' );
+require_once( __DIR__ . '/Abstract.php' );
 
 /**
  * @property string TEXT
@@ -33,14 +33,17 @@ require_once( dirname( __FILE__ ) . '/Abstract.php' );
  * @property float|int V_OFFSET
  * @property int nLines
  */
-class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
+
+namespace Interpid\Pdf\Table\Cell;
+
+class Multicell extends CellAbstract implements CellInterface
 {
 
     /**
      *
-     * @var Pdf_Multicell
+     * @var \Interpid\Pdf\Multicell
      */
-    protected $oMulticell;
+    protected $multicell;
 
     /**
      * Class Constructor
@@ -86,7 +89,7 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
      * Vertical values: TBMJ
      * Horizontal values: LRC
      *
-     * @see Pdf_Table_Cell_Abstract::setAlign()
+     * @see CellAbstract::setAlign()
      * @param string $alignment
      */
     public function setAlign( $alignment )
@@ -116,17 +119,17 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
     }
 
 
-    public function attachMulticell( $oMulticell )
+    public function attachMulticell( $multicell )
     {
-        $this->oMulticell = $oMulticell;
-        $this->oMulticell->enableFill( false );
+        $this->multicell = $multicell;
+        $this->multicell->enableFill( false );
     }
 
 
     /**
      * (non-PHPdoc)
      *
-     * @see Pdf_Table_Cell_Abstract::setCellDrawWidth()
+     * @see CellAbstract::setCellDrawWidth()
      * @param $value
      */
     public function setCellDrawWidth( $value )
@@ -139,7 +142,7 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
     /**
      * (non-PHPdoc)
      *
-     * @see Pdf_Table_Cell_Interface::isSplittable()
+     * @see CellInterface::isSplittable()
      */
     public function isSplittable()
     {
@@ -291,12 +294,12 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
     {
         //Text Color = TEXT_COLOR
         list ( $r, $g, $b ) = $this->TEXT_COLOR;
-        $this->oPdf->SetTextColor( $r, $g, $b );
+        $this->pdf->SetTextColor( $r, $g, $b );
 
         //Set the font, font type and size
-        $this->oPdf->SetFont( $this->TEXT_FONT, $this->TEXT_TYPE, $this->TEXT_SIZE );
+        $this->pdf->SetFont( $this->TEXT_FONT, $this->TEXT_TYPE, $this->TEXT_SIZE );
 
-        $this->TEXT_STRLINES = $this->oMulticell->stringToLines( $this->getContentWidth(), $this->getText() );
+        $this->TEXT_STRLINES = $this->multicell->stringToLines( $this->getContentWidth(), $this->getText() );
 
         $this->calculateCellHeight();
     }
@@ -305,9 +308,9 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
     public function calculateCellHeight()
     {
         $this->nLines = count( $this->TEXT_STRLINES );
-        $this->nCellHeight = $this->getLineSize() * $this->nLines + $this->getPaddingTop() + $this->getPaddingBottom();
+        $this->cellHeight = $this->getLineSize() * $this->nLines + $this->getPaddingTop() + $this->getPaddingBottom();
 
-        $this->setCellDrawHeight( $this->nCellHeight );
+        $this->setCellDrawHeight( $this->cellHeight );
     }
 
 
@@ -315,9 +318,9 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
      */
     public function calculateContentWidth()
     {
-        $this->nContentWidth = $this->getCellWidth() - $this->getPaddingLeft() - $this->getPaddingRight();
+        $this->contentWidth = $this->getCellWidth() - $this->getPaddingLeft() - $this->getPaddingRight();
 
-        if ( $this->nContentWidth < 0 )
+        if ( $this->contentWidth < 0 )
         {
             trigger_error( "Cell with negative value. Please check width, padding left and right" );
         }
@@ -333,10 +336,10 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
 
         //Text Color = TEXT_COLOR
         list ( $r, $g, $b ) = $this->TEXT_COLOR;
-        $this->oPdf->SetTextColor( $r, $g, $b );
+        $this->pdf->SetTextColor( $r, $g, $b );
 
         //Set the font, font type and size
-        $this->oPdf->SetFont( $this->TEXT_FONT, $this->TEXT_TYPE, $this->TEXT_SIZE );
+        $this->pdf->SetFont( $this->TEXT_FONT, $this->TEXT_TYPE, $this->TEXT_SIZE );
 
         //print the text
         $this->multiCellTbl(
@@ -390,7 +393,7 @@ class Pdf_Table_Cell_Multicell extends Pdf_Table_Cell_Abstract implements Pdf_Ta
                 $wh_T = $wh_Top; //Top width
         }
 
-        $this->oMulticell->multiCellSec( $w, $h, $txtData, 0, $align, 1, $pad_left, $pad_top + $wh_T, $pad_right, $pad_bottom, false );
+        $this->multicell->multiCellSec( $w, $h, $txtData, 0, $align, 1, $pad_left, $pad_top + $wh_T, $pad_right, $pad_bottom, false );
     }
 }
 

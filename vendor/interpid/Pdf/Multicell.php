@@ -13,21 +13,20 @@
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
  * @version   : 2.5.0
- * @author    : Andrei Bintintan <andy@interpid.eu>
- * @copyright : Andrei Bintintan, http://www.interpid.eu
+ * @author    : Interpid <office@interpid.eu>
+ * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
 
+namespace Interpid\Pdf;
 
-require_once( dirname( __FILE__ ) . '/Tools.php' );
-require_once( dirname( __FILE__ ) . '/Validate.php' );
-require_once( dirname( __FILE__ ) . '/String/Tags.php' );
-require_once( dirname( __FILE__ ) . '/Interface.php' );
-
-if ( !defined( 'PARAGRAPH_STRING' ) )
+if ( !defined( 'PARAGRAPH_STRING' ) ) {
     define( 'PARAGRAPH_STRING', '~~~' );
+}
 
-class Pdf_Multicell
+use Interpid\Pdf\String\Tags;
+
+class Multicell
 {
     const DEBUG_CELL_BORDERS = 0;
     const SEPARATOR = ' ,.:;';
@@ -37,42 +36,42 @@ class Pdf_Multicell
      *
      * @var string
      */
-    protected $sLineBreakingChars;
+    protected $lineBreakingChars;
 
     /**
      * Valid Tag Maximum Width
      *
      * @var integer
      */
-    protected $nTagWidthMax = 25;
+    protected $tagWidthMax = 25;
 
     /**
      * The current active tag
      *
      * @var string
      */
-    protected $sCurrentTag = '';
+    protected $currentTag = '';
 
     /**
      * Tags Font Information
      *
      * @var array
      */
-    protected $oFontInfo;
+    protected $fontInfo;
 
     /**
      * Parsed string data info
      *
      * @var array
      */
-    protected $aDataInfo;
+    protected $dataInfo;
 
     /**
      * Data Extra Info
      *
      * @var array
      */
-    protected $aDataExtraInfo;
+    protected $dataExtraInfo;
 
     /**
      * Temporary Info
@@ -80,29 +79,29 @@ class Pdf_Multicell
      *
      * @var array
      */
-    protected $aTempData;
+    protected $tempData;
 
     /**
      * == true if a tag was more times defined.
      *
      * @var boolean
      */
-    protected $bDoubleTags = false;
+    protected $doubleTags = false;
 
     /**
      * Pointer to the pdf object
      *
      * @var Pdf
      */
-    protected $oPdf = null;
+    protected $pdf = null;
 
     /**
      * PDF Interface Object
      *
-     * @var Pdf_Interface
+     * @var PdfInterface
      *
      */
-    protected $oPdfi;
+    protected $pdfi;
 
     /**
      * Contains the Singleton Object
@@ -121,13 +120,13 @@ class Pdf_Multicell
     /**
      * Class constructor.
      *
-     * @param Pdf $oPdf Instance of the pdf class
+     * @param Pdf $pdf Instance of the pdf class
      */
-    public function __construct( $oPdf )
+    public function __construct( $pdf )
     {
-        $this->oPdf = $oPdf;
-        $this->oPdfi = new Pdf_Interface( $oPdf );
-        $this->sLineBreakingChars = self::SEPARATOR;
+        $this->pdf = $pdf;
+        $this->pdfi = new PdfInterface( $pdf );
+        $this->lineBreakingChars = self::SEPARATOR;
     }
 
 
@@ -138,33 +137,33 @@ class Pdf_Multicell
      */
     public function getPdfObject()
     {
-        return $this->oPdf;
+        return $this->pdf;
     }
 
 
     /**
      * Returns the Pdf Interface Object
      *
-     * @return Pdf_Interface
+     * @return PdfInterface
      */
     public function getPdfInterfaceObject()
     {
-        return $this->oPdfi;
+        return $this->pdfi;
     }
 
 
     /**
      * Returnes the Singleton Instance of this class.
      *
-     * @param Pdf $oPdf Instance of the pdf class
-     * @return Pdf_Multicell
+     * @param Pdf $pdf Instance of the pdf class
+     * @return self
      */
-    static function getInstance( $oPdf )
+    static function getInstance( $pdf )
     {
-        $oInstance = &self::$_singleton[ spl_object_hash( $oPdf ) ];
+        $oInstance = &self::$_singleton[ spl_object_hash( $pdf ) ];
 
         if ( !isset( $oInstance ) ) {
-            $oInstance = new self( $oPdf );
+            $oInstance = new self( $pdf );
         }
 
         return $oInstance;
@@ -178,7 +177,7 @@ class Pdf_Multicell
      */
     public function setLineBreakingCharacters( $sChars )
     {
-        $this->sLineBreakingChars = $sChars;
+        $this->lineBreakingChars = $sChars;
     }
 
 
@@ -187,7 +186,7 @@ class Pdf_Multicell
      */
     public function resetLineBreakingCharacters()
     {
-        $this->sLineBreakingChars = self::SEPARATOR;
+        $this->lineBreakingChars = self::SEPARATOR;
     }
 
 
@@ -198,7 +197,7 @@ class Pdf_Multicell
      */
     public function setTagWidthMax( $iWidth = 25 )
     {
-        $this->nTagWidthMax = $iWidth;
+        $this->tagWidthMax = $iWidth;
     }
 
 
@@ -207,47 +206,51 @@ class Pdf_Multicell
      */
     protected function resetData()
     {
-        $this->sCurrentTag = "";
+        $this->currentTag = "";
 
         //@formatter:off
-        $this->aDataInfo = array();
-        $this->aDataExtraInfo = array(
+        $this->dataInfo = array();
+        $this->dataExtraInfo = array(
             "LAST_LINE_BR" => "", //CURRENT LINE BREAK TYPE
             "CURRENT_LINE_BR" => "", //LAST LINE BREAK TYPE
-            "TAB_WIDTH" => 10 ); //The tab WIDTH IS IN mm
+            "TAB_WIDTH" => 10
+        ); //The tab WIDTH IS IN mm
         //@formatter:on
 
         //if another measure unit is used ... calculate your OWN
-        $this->aDataExtraInfo[ "TAB_WIDTH" ] *= ( 72 / 25.4 ) / $this->oPdf->k;
+        $this->dataExtraInfo[ "TAB_WIDTH" ] *= ( 72 / 25.4 ) / $this->pdf->k;
     }
 
 
     /**
      * Sets the font parameters for the specified tag
      *
-     * @param $tag string tag name
-     * @param $fontfamily string font family
-     * @param $fontstyle string font style
-     * @param $fontsize number font size
-     * @param $color mixed font color
+     * @param string $tagName tag name
+     * @param string $fontFamily font family
+     * @param string $fontStyle font style
+     * @param float $fontSize font size
+     * @param mixed(string|array) $color font color
      */
-    public function setStyle( $tag, $fontfamily, $fontstyle, $fontsize, $color )
+    public function setStyle( $tagName, $fontFamily, $fontStyle, $fontSize, $color )
     {
-        if ( $tag == "ttags" )
-            $this->oPdf->Error( ">> ttags << is reserved TAG Name." );
-        if ( $tag == "" )
-            $this->oPdf->Error( "Empty TAG Name." );
+        if ( $tagName == "ttags" ) {
+            $this->pdf->Error( ">> ttags << is reserved TAG Name." );
+        }
+        if ( $tagName == "" ) {
+            $this->pdf->Error( "Empty TAG Name." );
+        }
 
         //use case insensitive tags
-        $tag = trim( strtoupper( $tag ) );
+        $tagName = trim( strtoupper( $tagName ) );
 
-        if ( isset( $this->TagStyle[ $tag ] ) )
-            $this->bDoubleTags = true;
+        if ( isset( $this->TagStyle[ $tagName ] ) ) {
+            $this->doubleTags = true;
+        }
 
-        $this->TagStyle[ $tag ][ 'family' ] = trim( $fontfamily );
-        $this->TagStyle[ $tag ][ 'style' ] = trim( $fontstyle );
-        $this->TagStyle[ $tag ][ 'size' ] = trim( $fontsize );
-        $this->TagStyle[ $tag ][ 'color' ] = trim( $color );
+        $this->TagStyle[ $tagName ][ 'family' ] = trim( $fontFamily );
+        $this->TagStyle[ $tagName ][ 'style' ] = trim( $fontStyle );
+        $this->TagStyle[ $tagName ][ 'size' ] = trim( $fontSize );
+        $this->TagStyle[ $tagName ][ 'color' ] = trim( $color );
     }
 
 
@@ -311,12 +314,15 @@ class Pdf_Multicell
         //tags are saved uppercase!
         $sTag = strtoupper( $sTag );
 
-        if ( 'TTAGS' === $sTag )
+        if ( 'TTAGS' === $sTag ) {
             $sTag = "DEFAULT";
-        if ( 'PPARG' === $sTag )
+        }
+        if ( 'PPARG' === $sTag ) {
             $sTag = "DEFAULT";
-        if ( '' === $sTag )
+        }
+        if ( '' === $sTag ) {
             $sTag = "DEFAULT";
+        }
 
         if ( !isset( $this->TagStyle[ $sTag ] ) ) {
             //trigger_error("Tag $sTag not found!");
@@ -344,32 +350,34 @@ class Pdf_Multicell
         //use case insensitive tags
         $tag = trim( strtoupper( $tag ) );
 
-        if ( $this->sCurrentTag == $tag )
+        if ( $this->currentTag == $tag ) {
             return;
+        }
 
-        if ( ( $tag == "" ) || ( !isset( $this->TagStyle[ $tag ] ) ) )
+        if ( ( $tag == "" ) || ( !isset( $this->TagStyle[ $tag ] ) ) ) {
             $tag = "DEFAULT";
+        }
 
-        $this->sCurrentTag = $tag;
+        $this->currentTag = $tag;
 
         $style = &$this->TagStyle[ $tag ];
 
         if ( isset( $style ) ) {
             if ( strpos( $style[ 'size' ], '%' ) !== false ) {
-                $style[ 'size' ] = $this->oPdf->FontSizePt * ( ( (float)$style[ 'size' ] ) / 100 );
+                $style[ 'size' ] = $this->pdf->FontSizePt * ( ( (float)$style[ 'size' ] ) / 100 );
             }
-            $this->oPdf->SetFont( $style[ 'family' ], $style[ 'style' ], $style[ 'size' ] );
+            $this->pdf->SetFont( $style[ 'family' ], $style[ 'style' ], $style[ 'size' ] );
             //this is textcolor in PDF format
             if ( isset( $style[ 'textcolor_pdf' ] ) ) {
-                $this->oPdf->TextColor = $style[ 'textcolor_pdf' ];
-                $this->oPdf->ColorFlag = ( $this->oPdf->FillColor != $this->oPdf->TextColor );
+                $this->pdf->TextColor = $style[ 'textcolor_pdf' ];
+                $this->pdf->ColorFlag = ( $this->pdf->FillColor != $this->pdf->TextColor );
             } else {
                 if ( $style[ 'color' ] != "" ) { //if we have a specified color
                     $temp = explode( ",", $style[ 'color' ] );
                     // added to support Grayscale, RGB and CMYK
                     call_user_func_array(
                         array(
-                            $this->oPdf,
+                            $this->pdf,
                             'SetTextColor'
                         ), $temp );
                 }
@@ -386,32 +394,32 @@ class Pdf_Multicell
      */
     protected function saveCurrentStyle()
     {
-        $this->TagStyle[ 'DEFAULT' ][ 'family' ] = $this->oPdfi->getFontFamily();
-        $this->TagStyle[ 'DEFAULT' ][ 'style' ] = $this->oPdfi->getFontStyle();
-        $this->TagStyle[ 'DEFAULT' ][ 'size' ] = $this->oPdfi->getFontSizePt();
-        $this->TagStyle[ 'DEFAULT' ][ 'textcolor_pdf' ] = $this->oPdf->TextColor;
+        $this->TagStyle[ 'DEFAULT' ][ 'family' ] = $this->pdfi->getFontFamily();
+        $this->TagStyle[ 'DEFAULT' ][ 'style' ] = $this->pdfi->getFontStyle();
+        $this->TagStyle[ 'DEFAULT' ][ 'size' ] = $this->pdfi->getFontSizePt();
+        $this->TagStyle[ 'DEFAULT' ][ 'textcolor_pdf' ] = $this->pdf->TextColor;
         $this->TagStyle[ 'DEFAULT' ][ 'color' ] = "";
     }
 
 
     /**
-     * Divides $this->aDataInfo and returnes a line from this variable
+     * Divides $this->dataInfo and returnes a line from this variable
      *
-     * @param $nWidth
+     * @param $width
      * @internal param number $width the width of the cell
      * @return array $aLine - array() -> contains informations to draw a line
      */
-    protected function makeLine( $nWidth )
+    protected function makeLine( $width )
     {
         //last line break >> current line break
-        $this->aDataExtraInfo[ 'LAST_LINE_BR' ] = $this->aDataExtraInfo[ 'CURRENT_LINE_BR' ];
-        $this->aDataExtraInfo[ 'CURRENT_LINE_BR' ] = "";
+        $this->dataExtraInfo[ 'LAST_LINE_BR' ] = $this->dataExtraInfo[ 'CURRENT_LINE_BR' ];
+        $this->dataExtraInfo[ 'CURRENT_LINE_BR' ] = "";
 
-        if ( 0 == $nWidth ) {
-            $nWidth = $this->oPdfi->getRemainingWidth();
+        if ( 0 == $width ) {
+            $width = $this->pdfi->getRemainingWidth();
         }
 
-        $nMaximumWidth = $nWidth;
+        $nMaximumWidth = $width;
 
         $aLine = array(); //this will contain the result
         $bReturnResult = false; //if break and return result
@@ -419,13 +427,13 @@ class Pdf_Multicell
 
         $nLineWith = 0; //line string width
         $nTotalChars = 0; //total characters included in the result string
-        $fw = &$this->oFontInfo; //font info array
+        $fw = &$this->fontInfo; //font info array
 
 
         $last_sepch = ""; //last separator character
 
 
-        foreach ( $this->aDataInfo as $key => $val ) {
+        foreach ( $this->dataInfo as $key => $val ) {
 
             $s = $val[ 'text' ];
 
@@ -448,7 +456,7 @@ class Pdf_Multicell
             $ante_last_sepwidth = 0;
             $nSpaces = 0;
 
-            $aString = $this->oPdfi->stringToArray( $s );
+            $aString = $this->pdfi->stringToArray( $s );
             $nStringLength = count( $aString );
 
             //parse the whole string
@@ -458,7 +466,7 @@ class Pdf_Multicell
 
                 if ( $c == ord( "\n" ) ) { //Explicit line break
                     $i++; //ignore/skip this caracter
-                    $this->aDataExtraInfo[ 'CURRENT_LINE_BR' ] = "BREAK";
+                    $this->dataExtraInfo[ 'CURRENT_LINE_BR' ] = "BREAK";
                     $bReturnResult = true;
                     $bResetSpaces = true;
                     break;
@@ -470,17 +478,17 @@ class Pdf_Multicell
                 }
 
                 //    Font Width / Size Array
-                if ( !isset( $fw[ $tag ] ) || ( $tag == "" ) || ( $this->bDoubleTags ) ) {
+                if ( !isset( $fw[ $tag ] ) || ( $tag == "" ) || ( $this->doubleTags ) ) {
                     //if this font was not used untill now,
                     $this->applyStyle( $tag );
-                    $fw[ $tag ][ 'CurrentFont' ] = &$this->oPdf->CurrentFont; //this can be copied by reference!
-                    $fw[ $tag ][ 'FontSize' ] = $this->oPdf->FontSize;
+                    $fw[ $tag ][ 'CurrentFont' ] = &$this->pdf->CurrentFont; //this can be copied by reference!
+                    $fw[ $tag ][ 'FontSize' ] = $this->pdf->FontSize;
                 }
 
                 $char_width = $this->mt_getCharWidth( $tag, $c );
 
                 //separators
-                if ( in_array( $c, array_map( 'ord', str_split( $this->sLineBreakingChars ) ) ) ) {
+                if ( in_array( $c, array_map( 'ord', str_split( $this->lineBreakingChars ) ) ) ) {
 
                     $ante_last_sep = $last_sep;
                     $ante_last_sepch = $last_sepch;
@@ -496,15 +504,16 @@ class Pdf_Multicell
                     //$c = $s[$i] = "";
                     $c = ord( "" );
                     $s = substr_replace( $s, '', $i, 1 );
-                    $char_width = $this->aDataExtraInfo[ 'TAB_WIDTH' ];
+                    $char_width = $this->dataExtraInfo[ 'TAB_WIDTH' ];
                 }
 
                 if ( $bParagraph == true ) {
                     $c = ord( "" );
                     $s = substr_replace( $s, ' ', $i, 1 );
-                    $char_width = $this->aTempData[ 'LAST_TAB_REQSIZE' ] - $this->aTempData[ 'LAST_TAB_SIZE' ];
-                    if ( $char_width < 0 )
+                    $char_width = $this->tempData[ 'LAST_TAB_REQSIZE' ] - $this->tempData[ 'LAST_TAB_SIZE' ];
+                    if ( $char_width < 0 ) {
                         $char_width = 0;
+                    }
                 }
 
                 $nLineWith += $char_width;
@@ -513,7 +522,7 @@ class Pdf_Multicell
                 if ( round( $nLineWith, 5 ) > round( $nMaximumWidth, 5 ) ) { //Automatic line break
 
 
-                    $this->aDataExtraInfo[ 'CURRENT_LINE_BR' ] = "AUTO";
+                    $this->dataExtraInfo[ 'CURRENT_LINE_BR' ] = "AUTO";
 
                     if ( $nTotalChars == 0 ) {
                         /*
@@ -541,8 +550,9 @@ class Pdf_Multicell
                         if ( $last_sepch == ord( " " ) ) {
                             $j = $last_sep; //just ignore the last space (it is at end of line)
                             $i = $last_sep + 1;
-                            if ( $nSpaces > 0 )
+                            if ( $nSpaces > 0 ) {
                                 $nSpaces--;
+                            }
                             $nCurrentWidth = $last_sepwidth;
                         } else {
                             $j = $last_sep + 1;
@@ -558,7 +568,8 @@ class Pdf_Multicell
 
                             if ( ' ' == self::strchar( $temp[ 'text' ], -1 ) ) {
 
-                                $temp[ 'text' ] = self::substr( $temp[ 'text' ], 0, self::strlen( $temp[ 'text' ] ) - 1 );
+                                $temp[ 'text' ] = self::substr( $temp[ 'text' ], 0,
+                                    self::strlen( $temp[ 'text' ] ) - 1 );
                                 $temp[ 'width' ] -= $this->mt_getCharWidth( $temp[ 'tag' ], ord( ' ' ) );
                                 $temp[ 'spaces' ]--;
 
@@ -587,19 +598,21 @@ class Pdf_Multicell
 
             $str = self::substr( $s, 0, $j );
 
-            $sTmpStr = $this->aDataInfo[ 0 ][ 'text' ];
+            $sTmpStr = $this->dataInfo[ 0 ][ 'text' ];
             $sTmpStr = self::substr( $sTmpStr, $i, self::strlen( $sTmpStr ) );
 
             if ( ( $sTmpStr == "" ) || ( $sTmpStr === false ) ) {
-                array_shift( $this->aDataInfo );
+                array_shift( $this->dataInfo );
             } else {
-                $this->aDataInfo[ 0 ][ 'text' ] = $sTmpStr;
+                $this->dataInfo[ 0 ][ 'text' ] = $sTmpStr;
             }
 
-            if ( !isset( $val[ 'href' ] ) )
+            if ( !isset( $val[ 'href' ] ) ) {
                 $val[ 'href' ] = '';
-            if ( !isset( $val[ 'ypos' ] ) )
+            }
+            if ( !isset( $val[ 'ypos' ] ) ) {
                 $val[ 'ypos' ] = 0;
+            }
 
             //we have a partial result
             array_push( $aLine, array(
@@ -613,16 +626,17 @@ class Pdf_Multicell
             ) );
 
 
-            $this->aTempData[ 'LAST_TAB_SIZE' ] = $nCurrentWidth;
-            $this->aTempData[ 'LAST_TAB_REQSIZE' ] = ( isset( $val[ 'size' ] ) ) ? $val[ 'size' ] : 0;
+            $this->tempData[ 'LAST_TAB_SIZE' ] = $nCurrentWidth;
+            $this->tempData[ 'LAST_TAB_REQSIZE' ] = ( isset( $val[ 'size' ] ) ) ? $val[ 'size' ] : 0;
 
-            if ( $bReturnResult )
-                break; //break this for
+            if ( $bReturnResult ) {
+                break;
+            } //break this for
         }
 
 
         // Check the first and last tag -> if first and last caracters are " " space remove them!!!"
-        if ( ( count( $aLine ) > 0 ) && ( $this->aDataExtraInfo[ 'LAST_LINE_BR' ] == "AUTO" ) ) {
+        if ( ( count( $aLine ) > 0 ) && ( $this->dataExtraInfo[ 'LAST_LINE_BR' ] == "AUTO" ) ) {
 
             // first tag
             // If the first character is a space, then cut it off
@@ -657,38 +671,47 @@ class Pdf_Multicell
      * Draws a MultiCell with a TAG Based Formatted String as an Input
      *
      *
-     * @param number $nWidth width of the cell
-     * @param number $nHeight height of the lines in the cell
-     * @param mixed(string|array) $pData string or formatted data to be putted in the multicell
+     * @param number $width width of the cell
+     * @param number $height height of the lines in the cell
+     * @param mixed(string|array) $data string or formatted data to be putted in the multicell
      * @param mixed(string|number) $border Indicates if borders must be drawn around the cell block. The value can be either a number: 0 = no border 1 = frame border or a string containing some or
      * all of the following characters (in any order): L: left T: top R: right B: bottom
      * @param string $align Sets the text alignment Possible values: L: left R: right C: center J: justified
      * @param int|number $fill Indicates if the cell background must be painted (1) or transparent (0). Default value: 0.
-     * @param int|number $nPaddingLeft Left padding
-     * @param int|number $nPaddingTop Top padding
-     * @param int|number $nPaddingRight Right padding
-     * @param int|number $nPaddingBottom Bottom padding
+     * @param int|number $paddingLeft Left padding
+     * @param int|number $paddingTop Top padding
+     * @param int|number $paddingRight Right padding
+     * @param int|number $paddingBottom Bottom padding
      */
-    public function multiCell( $nWidth, $nHeight, $pData, $border = 0, $align = 'J', $fill = 0, $nPaddingLeft = 0, $nPaddingTop = 0, $nPaddingRight = 0,
-                               $nPaddingBottom = 0 )
-    {
+    public function multiCell(
+        $width,
+        $height,
+        $data,
+        $border = 0,
+        $align = 'J',
+        $fill = 0,
+        $paddingLeft = 0,
+        $paddingTop = 0,
+        $paddingRight = 0,
+        $paddingBottom = 0
+    ) {
         //get the available width for the text
-        $w_text = $this->mt_getAvailableTextWidth( $nWidth, $nPaddingLeft, $nPaddingRight );
+        $w_text = $this->mt_getAvailableTextWidth( $width, $paddingLeft, $paddingRight );
 
-        $nStartX = $this->oPdf->GetX();
-        $aRecData = $this->stringToLines( $w_text, $pData );
+        $nStartX = $this->pdf->GetX();
+        $aRecData = $this->stringToLines( $w_text, $data );
         $iCounter = 9999; //avoid infinite loop for any reasons
 
         $doBreak = false;
 
         do {
-            $iLeftHeight = $this->oPdf->h - $this->oPdf->bMargin - $this->oPdf->GetY() - $nPaddingTop - $nPaddingBottom;
+            $iLeftHeight = $this->pdf->h - $this->pdf->bMargin - $this->pdf->GetY() - $paddingTop - $paddingBottom;
             $bAddNewPage = false;
 
             //Number of rows that have space on this page:
-            $iRows = floor( $iLeftHeight / $nHeight );
+            $iRows = floor( $iLeftHeight / $height );
             // Added check for "AcceptPageBreak"
-            if ( count( $aRecData ) > $iRows && $this->oPdf->AcceptPageBreak() ) {
+            if ( count( $aRecData ) > $iRows && $this->pdf->AcceptPageBreak() ) {
                 $aSendData = array_slice( $aRecData, 0, $iRows );
                 $aRecData = array_slice( $aRecData, $iRows );
                 $bAddNewPage = true;
@@ -697,13 +720,14 @@ class Pdf_Multicell
                 $doBreak = true;
             }
 
-            $this->multiCellSec( $nWidth, $nHeight, $aSendData, $border, $align, $fill, $nPaddingLeft, $nPaddingTop, $nPaddingRight, $nPaddingBottom, false );
+            $this->multiCellSec( $width, $height, $aSendData, $border, $align, $fill, $paddingLeft, $paddingTop,
+                $paddingRight, $paddingBottom, false );
 
             if ( true == $bAddNewPage ) {
                 $this->beforeAddPage();
-                $this->oPdf->AddPage();
+                $this->pdf->AddPage();
                 $this->afterAddPage();
-                $this->oPdf->SetX( $nStartX );
+                $this->pdf->SetX( $nStartX );
             }
         } while ( ( ( $iCounter-- ) > 0 ) && ( false == $doBreak ) );
     }
@@ -713,51 +737,63 @@ class Pdf_Multicell
      * Draws a MultiCell with TAG recognition parameters
      *
      *
-     * @param $nWidth number - with of the cell
-     * @param $nHeight number - height of the lines in the cell
-     * @param $pData string - string or formatted data to be putted in the multicell
+     * @param $width number - with of the cell
+     * @param $height number - height of the lines in the cell
+     * @param $data string - string or formatted data to be putted in the multicell
      * @param int $border
      * @param $align string - Sets the text alignment Possible values: L: left R: right C: center J: justified
      * @param int|number $fill number - Indicates if the cell background must be painted (1) or transparent (0). Default value: 0.
-     * @param int|number $nPaddingLeft number - Left pad
-     * @param int|number $nPaddingTop number - Top pad
-     * @param int|number $nPaddingRight number - Right pad
-     * @param int|number $nPaddingBottom number - Bottom pad
-     * @param $bDataIsString boolean - true if $pData is a string - false if $pData is an array containing lines formatted with $this->makeLine($nWidth) function (the false option is used in relation
+     * @param int|number $paddingLeft number - Left pad
+     * @param int|number $paddingTop number - Top pad
+     * @param int|number $paddingRight number - Right pad
+     * @param int|number $paddingBottom number - Bottom pad
+     * @param $bDataIsString boolean - true if $data is a string - false if $data is an array containing lines formatted with $this->makeLine($width) function (the false option is used in relation
      * with stringToLines, to avoid double formatting of a string
      * @internal param \or $string number $border Indicates if borders must be drawn around the cell block. The value can be either a number: 0 = no border 1 = frame border or a string containing some or all of
      * the following characters (in any order): L: left T: top R: right B: bottom
      * @return void
      */
-    public function multiCellSec( $nWidth, $nHeight, $pData, $border = 0, $align = 'J', $fill = 0, $nPaddingLeft = 0, $nPaddingTop = 0, $nPaddingRight = 0,
-                                  $nPaddingBottom = 0, $bDataIsString = true )
-    {
+    public function multiCellSec(
+        $width,
+        $height,
+        $data,
+        $border = 0,
+        $align = 'J',
+        $fill = 0,
+        $paddingLeft = 0,
+        $paddingTop = 0,
+        $paddingRight = 0,
+        $paddingBottom = 0,
+        $bDataIsString = true
+    ) {
         //save the current style settings, this will be the default in case of no style is specified
         $this->saveCurrentStyle();
         $this->resetData();
 
         //if data is string
-        if ( $bDataIsString === true )
-            $this->divideByTags( $pData );
+        if ( $bDataIsString === true ) {
+            $this->divideByTags( $data );
+        }
 
         $b = $b1 = $b2 = $b3 = ''; //borders
 
 
-        if ( $nWidth == 0 )
-            $nWidth = $this->oPdf->w - $this->oPdf->rMargin - $this->oPdf->x;
+        if ( $width == 0 ) {
+            $width = $this->pdf->w - $this->pdf->rMargin - $this->pdf->x;
+        }
 
         /**
          * If the vertical padding is bigger than the width then we ignore it In this case we put them to 0.
          */
-        if ( ( $nPaddingLeft + $nPaddingRight ) > $nWidth ) {
-            $nPaddingLeft = 0;
-            $nPaddingRight = 0;
+        if ( ( $paddingLeft + $paddingRight ) > $width ) {
+            $paddingLeft = 0;
+            $paddingRight = 0;
         }
 
-        $w_text = $nWidth - $nPaddingLeft - $nPaddingRight;
+        $w_text = $width - $paddingLeft - $paddingRight;
 
         //save the current X position, we will have to jump back!!!!
-        $startX = $this->oPdf->GetX();
+        $startX = $this->pdf->GetX();
 
         if ( $border ) {
             if ( $border == 1 ) {
@@ -767,10 +803,12 @@ class Pdf_Multicell
                 $b3 = 'LRB'; //without the top
             } else {
                 $b2 = '';
-                if ( is_int( strpos( $border, 'L' ) ) )
+                if ( is_int( strpos( $border, 'L' ) ) ) {
                     $b2 .= 'L';
-                if ( is_int( strpos( $border, 'R' ) ) )
+                }
+                if ( is_int( strpos( $border, 'R' ) ) ) {
                     $b2 .= 'R';
+                }
                 $b1 = is_int( strpos( $border, 'T' ) ) ? $b2 . 'T' : $b2;
                 $b3 = is_int( strpos( $border, 'B' ) ) ? $b2 . 'B' : $b2;
             }
@@ -786,42 +824,42 @@ class Pdf_Multicell
         $bFirstLine = true;
 
         if ( $bDataIsString === true ) {
-            $bLastLine = !( count( $this->aDataInfo ) > 0 );
+            $bLastLine = !( count( $this->dataInfo ) > 0 );
         } else {
-            $bLastLine = !( count( $pData ) > 0 );
+            $bLastLine = !( count( $data ) > 0 );
         }
 
         while ( !$bLastLine ) {
 
-            if ( $bFirstLine && ( $nPaddingTop > 0 ) ) {
+            if ( $bFirstLine && ( $paddingTop > 0 ) ) {
                 /**
                  * If this is the first line and there is top_padding
                  */
-                $x = $this->oPdf->GetX();
-                $y = $this->oPdf->GetY();
-                $this->oPdfi->Cell( $nWidth, $nPaddingTop, '', $b1, 0, $align, $this->bFill, '' );
+                $x = $this->pdf->GetX();
+                $y = $this->pdf->GetY();
+                $this->pdfi->Cell( $width, $paddingTop, '', $b1, 0, $align, $this->bFill, '' );
                 $b1 = str_replace( 'T', '', $b1 );
                 $b = str_replace( 'T', '', $b );
-                $this->oPdf->SetXY( $x, $y + $nPaddingTop );
+                $this->pdf->SetXY( $x, $y + $paddingTop );
             }
 
             if ( $fill == 1 ) {
                 //fill in the cell at this point and write after the text without filling
-                $this->oPdf->SetX( $startX ); //restore the X position
-                $this->oPdfi->Cell( $nWidth, $nHeight, "", 0, 0, "", $this->bFill );
-                $this->oPdf->SetX( $startX ); //restore the X position
+                $this->pdf->SetX( $startX ); //restore the X position
+                $this->pdfi->Cell( $width, $height, "", 0, 0, "", $this->bFill );
+                $this->pdf->SetX( $startX ); //restore the X position
             }
 
             if ( $bDataIsString === true ) {
                 //make a line
                 $str_data = $this->makeLine( $w_text );
                 //check for last line
-                $bLastLine = !( count( $this->aDataInfo ) > 0 );
+                $bLastLine = !( count( $this->dataInfo ) > 0 );
             } else {
                 //make a line
-                $str_data = array_shift( $pData );
+                $str_data = array_shift( $data );
                 //check for last line
-                $bLastLine = !( count( $pData ) > 0 );
+                $bLastLine = !( count( $data ) > 0 );
             }
 
             if ( $bLastLine && ( $align == "J" ) ) { //do not Justify the Last Line
@@ -831,8 +869,8 @@ class Pdf_Multicell
             /**
              * Restore the X position with the corresponding padding if it exist The Right padding is done automatically by calculating the width of the text
              */
-            $this->oPdf->SetX( $startX + $nPaddingLeft );
-            $this->printLine( $w_text, $nHeight, $str_data, $align );
+            $this->pdf->SetX( $startX + $paddingLeft );
+            $this->printLine( $w_text, $height, $str_data, $align );
 
             //see what border we draw:
             if ( $bFirstLine && $bLastLine ) {
@@ -846,34 +884,35 @@ class Pdf_Multicell
                 $real_brd = $b2;
             }
 
-            if ( $bLastLine && ( $nPaddingBottom > 0 ) ) {
+            if ( $bLastLine && ( $paddingBottom > 0 ) ) {
                 /**
                  * If we have bottom padding then the border and the padding is outputted
                  */
-                $this->oPdf->SetX( $startX ); //restore the X
-                $this->oPdf->Cell( $nWidth, $nHeight, "", $b2, 2 );
-                $this->oPdf->SetX( $startX ); //restore the X
-                $this->oPdf->MultiCell( $nWidth, $nPaddingBottom, '', $real_brd, $align, $this->bFill );
+                $this->pdf->SetX( $startX ); //restore the X
+                $this->pdf->Cell( $width, $height, "", $b2, 2 );
+                $this->pdf->SetX( $startX ); //restore the X
+                $this->pdf->MultiCell( $width, $paddingBottom, '', $real_brd, $align, $this->bFill );
             } else {
                 //draw the border and jump to the next line
-                $this->oPdf->SetX( $startX ); //restore the X
-                $this->oPdf->Cell( $nWidth, $nHeight, "", $real_brd, 2 );
+                $this->pdf->SetX( $startX ); //restore the X
+                $this->pdf->Cell( $width, $height, "", $real_brd, 2 );
             }
 
-            if ( $bFirstLine )
+            if ( $bFirstLine ) {
                 $bFirstLine = false;
+            }
         }
 
 
         //APPLY THE DEFAULT STYLE
         $this->applyStyle( "DEFAULT" );
 
-        $this->oPdf->x = $this->oPdf->lMargin;
+        $this->pdf->x = $this->pdf->lMargin;
     }
 
 
     /**
-     * This method divides the string into the tags and puts the result into aDataInfo variable.
+     * This method divides the string into the tags and puts the result into dataInfo variable.
      *
      * @param string $pStr string to be parsed
      */
@@ -884,12 +923,12 @@ class Pdf_Multicell
         $pStr = str_replace( "\r", "", $pStr );
 
         //initialize the StringTags class
-        $sWork = new Pdf_String_Tags( $this->nTagWidthMax );
+        $sWork = new Tags( $this->tagWidthMax );
 
         //get the string divisions by tags
-        $this->aDataInfo = $sWork->get_tags( $pStr );
+        $this->dataInfo = $sWork->get_tags( $pStr );
 
-        foreach ( $this->aDataInfo as &$val ) {
+        foreach ( $this->dataInfo as &$val ) {
             $val[ 'text' ] = html_entity_decode( $val[ 'text' ] );
         }
 
@@ -901,11 +940,11 @@ class Pdf_Multicell
      * This method parses the current text and return an array that contains the text information for each line that will be drawed.
      *
      *
-     * @param int|number $nWidth number - width of the line
+     * @param int|number $width number - width of the line
      * @param $pStr string - String to be parsed
      * @return array $aStrLines - contains parsed text information.
      */
-    public function stringToLines( $nWidth = 0, $pStr )
+    public function stringToLines( $width = 0, $pStr )
     {
         //save the current style settings, this will be the default in case of no style is specified
         $this->saveCurrentStyle();
@@ -913,18 +952,18 @@ class Pdf_Multicell
 
         $this->divideByTags( $pStr );
 
-        $bLastLine = !( count( $this->aDataInfo ) > 0 );
+        $bLastLine = !( count( $this->dataInfo ) > 0 );
 
         $aStrLines = array();
 
         while ( !$bLastLine ) {
 
             //make a line
-            $str_data = $this->makeLine( $nWidth );
+            $str_data = $this->makeLine( $width );
             array_push( $aStrLines, $str_data );
 
             //check for last line
-            $bLastLine = !( count( $this->aDataInfo ) > 0 );
+            $bLastLine = !( count( $this->dataInfo ) > 0 );
         }
 
         //APPLY THE DEFAULT STYLE
@@ -938,18 +977,18 @@ class Pdf_Multicell
      * Draws a Tag Based formatted line returned from makeLine function into the pdf document
      *
      *
-     * @param $nWidth number - width of the text
-     * @param $nHeight number - height of a line
+     * @param $width number - width of the text
+     * @param $height number - height of a line
      * @param $aTxt array - data with text to be draw
      * @param $align string - align of the text
      */
-    protected function printLine( $nWidth, $nHeight, $aTxt, $align = 'J' )
+    protected function printLine( $width, $height, $aTxt, $align = 'J' )
     {
-        if ( 0 == $nWidth ) {
-            $nWidth = $this->oPdfi->getRemainingWidth();
+        if ( 0 == $width ) {
+            $width = $this->pdfi->getRemainingWidth();
         }
 
-        $nMaximumWidth = $nWidth; //Maximum width
+        $nMaximumWidth = $width; //Maximum width
 
         $nTotalWidth = 0; //the total width of all strings
         $nTotalSpaces = 0; //the total number of spaces
@@ -968,10 +1007,11 @@ class Pdf_Multicell
 
         switch ( $align ) {
             case 'J':
-                if ( $nTotalSpaces > 0 )
+                if ( $nTotalSpaces > 0 ) {
                     $extra_space = ( $nMaximumWidth - $nTotalWidth ) / $nTotalSpaces;
-                else
+                } else {
                     $extra_space = 0;
+                }
                 break;
             case 'L':
                 break;
@@ -985,7 +1025,7 @@ class Pdf_Multicell
 
         // Output the first Cell
         if ( $w_first != 0 ) {
-            $this->oPdf->Cell( $w_first, $nHeight, "", self::DEBUG_CELL_BORDERS, 0, "L", 0 );
+            $this->pdf->Cell( $w_first, $height, "", self::DEBUG_CELL_BORDERS, 0, "L", 0 );
         }
 
         $last_width = $nMaximumWidth - $w_first;
@@ -1001,54 +1041,57 @@ class Pdf_Multicell
             $extra_X = 0;
 
             if ( $val[ 'ypos' ] != 0 ) {
-                $lastY = $this->oPdf->y;
-                $this->oPdf->y = $lastY - $val[ 'ypos' ];
+                $lastY = $this->pdf->y;
+                $this->pdf->y = $lastY - $val[ 'ypos' ];
                 $bYPosUsed = true;
             }
 
             //string width
             $width = $val[ 'width' ];
 
-            if ( $width == 0 )
-                continue; // No width jump over!!!
+            if ( $width == 0 ) {
+                continue;
+            } // No width jump over!!!
 
 
             if ( $align == 'J' ) {
-                if ( $val[ 'spaces' ] < 1 )
+                if ( $val[ 'spaces' ] < 1 ) {
                     $temp_X = 0;
-                else
+                } else {
                     $temp_X = $extra_space;
+                }
 
-                $this->oPdf->ws = $temp_X;
+                $this->pdf->ws = $temp_X;
 
-                $this->oPdf->_out( sprintf( '%.3f Tw', $temp_X * $this->oPdf->k ) );
+                $this->pdf->_out( sprintf( '%.3f Tw', $temp_X * $this->pdf->k ) );
 
                 $extra_X = $extra_space * $val[ 'spaces' ]; //increase the extra_X Space
             } else {
-                $this->oPdf->ws = 0;
-                $this->oPdf->_out( '0 Tw' );
+                $this->pdf->ws = 0;
+                $this->pdf->_out( '0 Tw' );
             }
 
 
             //Output the Text/Links
-            $this->oPdf->Cell( $width, $nHeight, $val[ 'text' ], self::DEBUG_CELL_BORDERS, 0, "C", 0, $val[ 'href' ] );
+            $this->pdf->Cell( $width, $height, $val[ 'text' ], self::DEBUG_CELL_BORDERS, 0, "C", 0, $val[ 'href' ] );
 
             $last_width -= $width; //last column width
 
 
             if ( $extra_X != 0 ) {
-                $this->oPdf->SetX( $this->oPdf->GetX() + $extra_X );
+                $this->pdf->SetX( $this->pdf->GetX() + $extra_X );
                 $last_width -= $extra_X;
             }
 
 
-            if ( $bYPosUsed )
-                $this->oPdf->y = $lastY;
+            if ( $bYPosUsed ) {
+                $this->pdf->y = $lastY;
+            }
         }
 
         // Output the Last Cell
         if ( $last_width != 0 ) {
-            $this->oPdfi->Cell( $last_width, $nHeight, "", self::DEBUG_CELL_BORDERS, 0, "", 0 );
+            $this->pdfi->Cell( $last_width, $height, "", self::DEBUG_CELL_BORDERS, 0, "", 0 );
         }
     }
 
@@ -1089,8 +1132,8 @@ class Pdf_Multicell
     {
         //if this font was not used untill now,
         $this->applyStyle( $tag );
-        $fw[ $tag ][ 'w' ] = $this->oPdf->CurrentFont[ 'cw' ]; //width
-        $fw[ $tag ][ 's' ] = $this->oPdf->FontSize; //size
+        $fw[ $tag ][ 'w' ] = $this->pdf->CurrentFont[ 'cw' ]; //width
+        $fw[ $tag ][ 's' ] = $this->pdf->FontSize; //size
 
 
         return $fw[ $tag ][ 'w' ][ chr( $char ) ] * $fw[ $tag ][ 's' ] / 1000;
@@ -1100,28 +1143,28 @@ class Pdf_Multicell
     /**
      * Returns the Available Width to draw the Text.
      *
-     * @param number $nWidth
-     * @param int|number $nPaddingLeft
-     * @param int|number $nPaddingRight
+     * @param number $width
+     * @param int|number $paddingLeft
+     * @param int|number $paddingRight
      * @return number the width
      */
-    protected function mt_getAvailableTextWidth( $nWidth, $nPaddingLeft = 0, $nPaddingRight = 0 )
+    protected function mt_getAvailableTextWidth( $width, $paddingLeft = 0, $paddingRight = 0 )
     {
         //if with is == 0
-        if ( 0 == $nWidth ) {
-            $nWidth = $this->oPdf->w - $this->oPdf->rMargin - $this->oPdf->x;
+        if ( 0 == $width ) {
+            $width = $this->pdf->w - $this->pdf->rMargin - $this->pdf->x;
         }
 
         /**
          * If the vertical padding is bigger than the width then we ignore it In this case we put them to 0.
          */
-        if ( ( $nPaddingLeft + $nPaddingRight ) > $nWidth ) {
-            $nPaddingLeft = 0;
-            $nPaddingRight = 0;
+        if ( ( $paddingLeft + $paddingRight ) > $width ) {
+            $paddingLeft = 0;
+            $paddingRight = 0;
         }
 
         //read width of the text
-        $nTextWidth = $nWidth - $nPaddingLeft - $nPaddingRight;
+        $nTextWidth = $width - $paddingLeft - $paddingRight;
 
         return $nTextWidth;
     }
@@ -1132,12 +1175,12 @@ class Pdf_Multicell
      * If the optional width parameter is not specified if functions the same as if "autobreak" would be disabled.
      *
      * @param string $sText Tag based formatted Text
-     * @param int|number $nWidth The specified Width. Optional.
+     * @param int|number $width The specified Width. Optional.
      * @return number The maximum line Width
      */
-    public function getMultiCellTagWidth( $sText, $nWidth = 999999 )
+    public function getMultiCellTagWidth( $sText, $width = 999999 )
     {
-        $aRecData = $this->stringToLines( $nWidth, $sText );
+        $aRecData = $this->stringToLines( $width, $sText );
 
         $nMaxWidth = 0;
 
@@ -1158,18 +1201,18 @@ class Pdf_Multicell
     /**
      * Returns the calculated Height of the Tag based formated Text(String) within the specified Width
      *
-     * @param number $nWidth
-     * @param number $nHeight
+     * @param number $width
+     * @param number $height
      * @param string $sText
      * @return number The calculated height
      */
-    public function getMultiCellTagHeight( $nWidth, $nHeight, $sText )
+    public function getMultiCellTagHeight( $width, $height, $sText )
     {
-        $aRecData = $this->stringToLines( $nWidth, $sText );
+        $aRecData = $this->stringToLines( $width, $sText );
 
-        $nHeight *= count( $aRecData );
+        $height *= count( $aRecData );
 
-        return $nHeight;
+        return $height;
     }
 
 

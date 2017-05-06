@@ -1,29 +1,29 @@
 <?php
 
-$nColumns = 3;
+$columns = 3;
 
 //Initialize the table class, 3 columns
-$oTable->initialize( array( 40, 50, 30 ) );
+$table->initialize( array( 40, 50, 30 ) );
 
-$aHeader = array();
+$header = array();
 
 //Table Header
-for ( $i = 0; $i < $nColumns; $i++ )
+for ( $i = 0; $i < $columns; $i++ )
 {
-    $aHeader[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
+    $header[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
 }
 
-$oTable->addHeader( $aHeader );
-$oTable->addHeader( $aHeader );
-$oTable->addHeader( $aHeader );
+$table->addHeader( $header );
+$table->addHeader( $header );
+$table->addHeader( $header );
 
-$oTable->setHeaderProperty( 1, 'TEXT', 'Rowspan/Colspan can be made also in the header.' );
-$oTable->setHeaderProperty( 1, 'ROWSPAN', 2 );
-$oTable->setHeaderProperty( 1, 'COLSPAN', 2 );
-$oTable->setHeaderProperty( 1, 'BACKGROUND_COLOR', $aBgColor4 );
-$oTable->setHeaderProperty( 1, 'TEXT_COLOR', array( 0, 0, 0 ) );
+$table->setHeaderProperty( 1, 'TEXT', 'Rowspan/Colspan can be made also in the header.' );
+$table->setHeaderProperty( 1, 'ROWSPAN', 2 );
+$table->setHeaderProperty( 1, 'COLSPAN', 2 );
+$table->setHeaderProperty( 1, 'BACKGROUND_COLOR', $aBgColor4 );
+$table->setHeaderProperty( 1, 'TEXT_COLOR', array( 0, 0, 0 ) );
 
-if ( isset( $bTableSplitMode ) ) $oTable->setSplitMode( $bTableSplitMode );
+if ( isset( $tableSplitMode ) ) $table->setSplitMode( $tableSplitMode );
 
 for ( $j = 1; $j <= 15; $j++ )
 {
@@ -83,9 +83,9 @@ for ( $j = 1; $j <= 15; $j++ )
 
     if ( $j == 9 )
     {
-        $oTable->setStyle( "sd1", "helvetica", "", 6, "0,49,159" );
-        $oTable->setStyle( "sd2", "helvetica", "", 5, "140,12,12" );
-        $oTable->setStyle( "sd3", "helvetica", "", 6, "0,5,90" );
+        $table->setStyle( "sd1", "helvetica", "", 6, "0,49,159" );
+        $table->setStyle( "sd2", "helvetica", "", 5, "140,12,12" );
+        $table->setStyle( "sd3", "helvetica", "", 6, "0,5,90" );
 
         $aRow[ 1 ][ 'TEXT' ] = "<sd1>This is just a longer text, justified align, middle vertical align to demonstrate some other capabilities. Test text. Test text.</sd1>
 <sd3>\tSettings:</sd3>
@@ -113,8 +113,8 @@ for ( $j = 1; $j <= 15; $j++ )
         $aRow[ 1 ][ 'TEXT_ALIGN' ] = "C";
     }
 
-    $oTable->addRow( $aRow );
+    $table->addRow( $aRow );
 }
 
 //close the table
-$oTable->close();
+$table->close();

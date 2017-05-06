@@ -1,20 +1,20 @@
 <?php
 
-$nColumns = 3;
+$columns = 3;
 
 //Initialize the table class, 3 columns
-$oTable->initialize( array( 40, 50, 30 ) );
+$table->initialize( array( 40, 50, 30 ) );
 
-$aHeader = array();
+$header = array();
 
 //Table Header
-for ( $i = 0; $i < $nColumns; $i++ )
+for ( $i = 0; $i < $columns; $i++ )
 {
-    $aHeader[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
+    $header[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
 }
 
 //add the header
-$oTable->addHeader( $aHeader );
+$table->addHeader( $header );
 
 for ( $j = 1; $j < 5; $j++ )
 {
@@ -28,10 +28,10 @@ for ( $j = 1; $j < 5; $j++ )
 
 
     //add the row
-    $oTable->addRow( $aRow );
+    $table->addRow( $aRow );
     //break;
 }
 
 //close the table
-$oTable->close();
+$table->close();
     

@@ -1,5 +1,5 @@
-<p><h3>Description:</h3>
-
+<h3>Description:</h3>
+<p>
 	This <b>FPDF addon</b> allows creation of an <b>Advanced Multicell</b> which uses as input a <b>TAG based formatted string</b> instead of a simple string. The use of tags allows to change the font, the style (<b>bold</b>, <i>italic</i>, <u>underline</u>), the size, and the color of characters and many other features.
 	The call of the function is pretty similar to the Multicell function in the FPDF base class with some extended parameters.
 

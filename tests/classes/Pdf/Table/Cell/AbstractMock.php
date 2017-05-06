@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Pdf_Table_Cell_AbstractMock
+ * CellAbstractMock
  *
  * Mock class just to unit-test an abstract class
  *
  * @property mixed TEST
  * @property mixed TEST2
  */
-class Pdf_Table_Cell_AbstractMock extends Pdf_Table_Cell_Abstract
+class CellAbstractMock extends CellAbstract
 {
 
     protected $someValue;

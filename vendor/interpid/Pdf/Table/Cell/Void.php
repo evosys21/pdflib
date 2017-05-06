@@ -1,6 +1,6 @@
 <?php
 /**
- * Pdf Table Cell Empty
+ * Pdf Table Cell Void
  *
  * This program is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
@@ -13,18 +13,18 @@
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
  * @version   : 5.3.0
- * @author    : Andrei Bintintan <andy@interpid.eu>
- * @copyright : Andrei Bintintan, http://www.interpid.eu
+ * @author    : Interpid <office@interpid.eu>
+ * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
 
 
-require_once( dirname( __FILE__ ) . '/Abstract.php' );
+namespace Interpid\Pdf\Table\Cell;
 
 /**
  * @property array aDefaultValues
  */
-class Pdf_Table_Cell_Empty extends Pdf_Table_Cell_Abstract implements Pdf_Table_Cell_Interface
+class Void extends CellAbstract implements CellInterface
 {
 
 
@@ -39,7 +39,7 @@ class Pdf_Table_Cell_Empty extends Pdf_Table_Cell_Abstract implements Pdf_Table_
         $this->renderCellLayout();
     }
 
-    public function copyProperties( Pdf_Table_Cell_Abstract $oSource )
+    public function copyProperties( CellAbstract $oSource )
     {
         $aProps = array_keys( $this->aDefaultValues );
 

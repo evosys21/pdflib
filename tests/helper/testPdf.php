@@ -3,7 +3,7 @@
 /**
  * Custom PDF class extention for Header and Footer Definitions
  *
- * @author andy@interpid.eu
+ * @author office@interpid.eu
  *
  */
 

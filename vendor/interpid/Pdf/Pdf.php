@@ -1,8 +1,9 @@
 <?php
 /**
- * Pdf main class.
- * This class just extends FPDF class and it is used for "IDE/Editor reference simplicity".
+ * Fpdf main class.
+ * This class just FPDF class and it is used for "IDE/Editor reference simplicity".
  * In all subclasses we refer to Pdf class and not FPDF.
+ * Also some methods and variables are set to Public in order to access them in the addons.
  *
  * This program is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
@@ -15,14 +16,14 @@
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
  * @version   : 5.3.0
- * @author    : Andrei Bintintan <andy@interpid.eu>
- * @copyright : Andrei Bintintan, http://www.interpid.eu
+ * @author    : Interpid <office@interpid.eu>
+ * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
 
-require_once( dirname( __FILE__ ) . '/../fpdf/fpdf.php' );
+namespace Interpid\Pdf;
 
-class Pdf extends FPDF
+class Pdf extends \FPDF
 {
     public $images;
     public $w;

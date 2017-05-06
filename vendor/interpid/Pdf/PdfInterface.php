@@ -14,11 +14,14 @@
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
  * @version   : 5.3.0
- * @author    : Andrei Bintintan <andy@interpid.eu>
- * @copyright : Andrei Bintintan, http://www.interpid.eu
+ * @author    : Interpid <office@interpid.eu>
+ * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
-class Pdf_Interface
+
+namespace Interpid\Pdf;
+
+class PdfInterface
 {
 
     /**
@@ -26,12 +29,12 @@ class Pdf_Interface
      *
      * @var Pdf
      */
-    protected $oPdf;
+    protected $pdf;
 
 
     public function __construct( $pdf )
     {
-        $this->oPdf = $pdf;
+        $this->pdf = $pdf;
     }
 
     /**
@@ -41,7 +44,7 @@ class Pdf_Interface
      */
     public function getPdfObject()
     {
-        return $this->oPdf;
+        return $this->pdf;
     }
 
 
@@ -50,7 +53,7 @@ class Pdf_Interface
      */
     public function getPageWidth()
     {
-        return (int)$this->oPdf->w - $this->oPdf->rMargin - $this->oPdf->lMargin;
+        return (int)$this->pdf->w - $this->pdf->rMargin - $this->pdf->lMargin;
     }
 
 
@@ -61,7 +64,7 @@ class Pdf_Interface
      */
     public function getX()
     {
-        return $this->oPdf->GetX();
+        return $this->pdf->GetX();
     }
 
 
@@ -107,7 +110,7 @@ class Pdf_Interface
      */
     public function getFontFamily()
     {
-        return $this->oPdf->FontFamily;
+        return $this->pdf->FontFamily;
     }
 
 
@@ -118,7 +121,7 @@ class Pdf_Interface
      */
     public function getFontStyle()
     {
-        return $this->oPdf->FontStyle;
+        return $this->pdf->FontStyle;
     }
 
 
@@ -129,7 +132,7 @@ class Pdf_Interface
      */
     public function getFontSizePt()
     {
-        return $this->oPdf->FontSizePt;
+        return $this->pdf->FontSizePt;
     }
 
 
@@ -146,7 +149,7 @@ class Pdf_Interface
      */
     public function Image( $file, $x = null, $y = null, $w = 0, $h = 0, $type = '', $link = '' )
     {
-        $this->oPdf->Image( $file, $x, $y, $w, $h, $type, $link );
+        $this->pdf->Image( $file, $x, $y, $w, $h, $type, $link );
     }
 
 
@@ -161,21 +164,21 @@ class Pdf_Interface
     public function getImageParams( $file, $w = 0, $h = 0 )
     {
         // Put an image on the page
-        if ( !isset( $this->oPdf->images[ $file ] ) ) {
+        if ( !isset( $this->pdf->images[ $file ] ) ) {
             $pos = strrpos( $file, '.' );
             $type = substr( $file, $pos + 1 );
             $type = strtolower( $type );
             if ( $type == 'jpeg' )
                 $type = 'jpg';
             $mtd = '_parse' . $type;
-            if ( !method_exists( $this->oPdf, $mtd ) ) {
-                $this->oPdf->Error( 'Unsupported image type: ' . $type );
+            if ( !method_exists( $this->pdf, $mtd ) ) {
+                $this->pdf->Error( 'Unsupported image type: ' . $type );
             }
-            $info = $this->oPdf->$mtd( $file );
-            $info[ 'i' ] = count( $this->oPdf->images ) + 1;
-            $this->oPdf->images[ $file ] = $info;
+            $info = $this->pdf->$mtd( $file );
+            $info[ 'i' ] = count( $this->pdf->images ) + 1;
+            $this->pdf->images[ $file ] = $info;
         } else {
-            $info = $this->oPdf->images[ $file ];
+            $info = $this->pdf->images[ $file ];
         }
 
         // Automatic width and height calculation if needed
@@ -185,9 +188,9 @@ class Pdf_Interface
             $h = -96;
         }
         if ( $w < 0 )
-            $w = -$info[ 'w' ] * 72 / $w / $this->oPdf->k;
+            $w = -$info[ 'w' ] * 72 / $w / $this->pdf->k;
         if ( $h < 0 )
-            $h = -$info[ 'h' ] * 72 / $h / $this->oPdf->k;
+            $h = -$info[ 'h' ] * 72 / $h / $this->pdf->k;
         if ( $w == 0 )
             $w = $h * $info[ 'w' ] / $info[ 'h' ];
         if ( $h == 0 )
@@ -212,7 +215,7 @@ class Pdf_Interface
      */
     public function Cell( $w, $h = 0, $txt = '', $border = 0, $ln = 0, $align = '', $fill = false, $link = '' )
     {
-        $this->oPdf->Cell( $w, $h, $txt, $border, $ln, $align, $fill, $link );
+        $this->pdf->Cell( $w, $h, $txt, $border, $ln, $align, $fill, $link );
     }
 }
 

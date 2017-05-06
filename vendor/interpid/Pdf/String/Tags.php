@@ -14,11 +14,15 @@
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
  * @version   : 5.3.0
- * @author    : Andrei Bintintan <andy@interpid.eu>
- * @copyright : Andrei Bintintan, http://www.interpid.eu
+ * @author    : Interpid <office@interpid.eu>
+ * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
-class Pdf_String_Tags
+
+
+namespace Interpid\Pdf\String;
+
+class Tags
 {
 
     /**
@@ -26,21 +30,21 @@ class Pdf_String_Tags
      *
      * @var array
      */
-    protected $aTAGS = array();
+    protected $tags = array();
 
     /**
      * Contains the links for the tags that have specified this parameter
      *
      * @var array
      */
-    protected $aHREF;
+    protected $hRef;
 
     /**
      * The maximum number of chars for a tag
      *
      * @var integer
      */
-    protected $iTagMaxElem;
+    protected $tagMaxElem;
 
 
     /**
@@ -50,9 +54,9 @@ class Pdf_String_Tags
      */
     public function __construct( $p_tagmax = 10 )
     {
-        $this->aTAGS = array();
-        $this->aHREF = array();
-        $this->iTagMaxElem = $p_tagmax;
+        $this->tags = array();
+        $this->hRef = array();
+        $this->tagMaxElem = $p_tagmax;
     }
 
 
@@ -65,32 +69,33 @@ class Pdf_String_Tags
      */
     protected function OpenTag( $p_tag, $p_array )
     {
-        $aTAGS = &$this->aTAGS;
-        $aHREF = &$this->aHREF;
-        $maxElem = &$this->iTagMaxElem;
+        $tags = &$this->tags;
+        $hRef = &$this->hRef;
+        $maxElem = &$this->tagMaxElem;
 
-        if ( !preg_match( "/^<([a-zA-Z0-9]{1,$maxElem}) *(.*)>$/i", $p_tag, $reg ) ) return false;
+        if ( !preg_match( "/^<([a-zA-Z0-9]{1,$maxElem}) *(.*)>$/i", $p_tag, $reg ) ) {
+            return false;
+        }
 
         $p_tag = $reg[ 1 ];
 
         $sHREF = array();
-        if ( isset( $reg[ 2 ] ) )
-        {
+        if ( isset( $reg[ 2 ] ) ) {
             preg_match_all( "|([^ ]*)=[\"'](.*)[\"']|U", $reg[ 2 ], $out, PREG_PATTERN_ORDER );
-            for ( $i = 0; $i < count( $out[ 0 ] ); $i++ )
-            {
+            for ( $i = 0; $i < count( $out[ 0 ] ); $i++ ) {
                 $out[ 2 ][ $i ] = preg_replace( "/(\"|')/i", "", $out[ 2 ][ $i ] );
                 array_push( $sHREF, array( $out[ 1 ][ $i ], $out[ 2 ][ $i ] ) );
             }
         }
 
-        if ( in_array( $p_tag, $aTAGS ) ) return false; //tag already opened
+        if ( in_array( $p_tag, $tags ) ) {
+            return false;
+        } //tag already opened
 
 
-        if ( in_array( "</$p_tag>", $p_array ) )
-        {
-            array_push( $aTAGS, $p_tag );
-            array_push( $aHREF, $sHREF );
+        if ( in_array( "</$p_tag>", $p_array ) ) {
+            array_push( $tags, $p_tag );
+            array_push( $hRef, $sHREF );
 
             return true;
         }
@@ -113,18 +118,19 @@ class Pdf_String_Tags
      */
     protected function CloseTag( $p_tag )
     {
-        $aTAGS = &$this->aTAGS;
-        $aHREF = &$this->aHREF;
-        $maxElem = &$this->iTagMaxElem;
+        $tags = &$this->tags;
+        $hRef = &$this->hRef;
+        $maxElem = &$this->tagMaxElem;
 
-        if ( !preg_match( "/^<\/([a-zA-Z0-9]{1,$maxElem})>$/i", $p_tag, $reg ) ) return false;
+        if ( !preg_match( "/^<\/([a-zA-Z0-9]{1,$maxElem})>$/i", $p_tag, $reg ) ) {
+            return false;
+        }
 
         $p_tag = $reg[ 1 ];
 
-        if ( in_array( "$p_tag", $aTAGS ) )
-        {
-            array_pop( $aTAGS );
-            array_pop( $aHREF );
+        if ( in_array( "$p_tag", $tags ) ) {
+            array_pop( $tags );
+            array_pop( $hRef );
 
             return true;
         }
@@ -142,9 +148,10 @@ class Pdf_String_Tags
     protected function expand_parameters( $pResult )
     {
         $aTmp = $pResult[ 'params' ];
-        if ( $aTmp != '' ) for ( $i = 0; $i < count( $aTmp ); $i++ )
-        {
-            $pResult[ $aTmp[ $i ][ 0 ] ] = $aTmp[ $i ][ 1 ];
+        if ( $aTmp != '' ) {
+            for ( $i = 0; $i < count( $aTmp ); $i++ ) {
+                $pResult[ $aTmp[ $i ][ 0 ] ] = $aTmp[ $i ][ 1 ];
+            }
         }
 
         unset( $pResult[ 'params' ] );
@@ -161,21 +168,19 @@ class Pdf_String_Tags
      */
     protected function optimize_tags( $result )
     {
-        if ( count( $result ) == 0 ) return $result;
+        if ( count( $result ) == 0 ) {
+            return $result;
+        }
 
         $res_result = array();
         $current = $result[ 0 ];
         $i = 1;
 
-        while ( $i < count( $result ) )
-        {
+        while ( $i < count( $result ) ) {
             //if they have the same tag then we concatenate them
-            if ( ( $current[ 'tag' ] == $result[ $i ][ 'tag' ] ) && ( $current[ 'params' ] == $result[ $i ][ 'params' ] ) )
-            {
+            if ( ( $current[ 'tag' ] == $result[ $i ][ 'tag' ] ) && ( $current[ 'params' ] == $result[ $i ][ 'params' ] ) ) {
                 $current[ 'text' ] .= $result[ $i ][ 'text' ];
-            }
-            else
-            {
+            } else {
                 $current = $this->expand_parameters( $current );
                 array_push( $res_result, $current );
                 $current = $result[ $i ];
@@ -199,9 +204,9 @@ class Pdf_String_Tags
      */
     public function get_tags( $p_str )
     {
-        $aTAGS = &$this->aTAGS;
-        $aHREF = &$this->aHREF;
-        $aTAGS = array();
+        $tags = &$this->tags;
+        $hRef = &$this->hRef;
+        $tags = array();
         $result = array();
 
         $reg = preg_split( '/(<.*>)/U', $p_str, -1, PREG_SPLIT_DELIM_CAPTURE );
@@ -209,23 +214,21 @@ class Pdf_String_Tags
         $sTAG = "";
         $sHREF = "";
 
-        while ( false != ( list ( $key, $val ) = each( $reg ) ) )
-        {
-            if ( $val == "" ) continue;
+        while ( false != ( list ( $key, $val ) = each( $reg ) ) ) {
+            if ( $val == "" ) {
+                continue;
+            }
 
-            if ( $this->OpenTag( $val, $reg ) )
-            {
-                $sTAG = ( ( $temp = end( $aTAGS ) ) != null ) ? $temp : "";
-                $sHREF = ( ( $temp = end( $aHREF ) ) != null ) ? $temp : "";
-            }
-            elseif ( $this->CloseTag( $val ) )
-            {
-                $sTAG = ( ( $temp = end( $aTAGS ) ) != null ) ? $temp : "";
-                $sHREF = ( ( $temp = end( $aHREF ) ) != null ) ? $temp : "";
-            }
-            else
-            {
-                if ( $val != "" ) array_push( $result, array( 'text' => $val, 'tag' => $sTAG, 'params' => $sHREF ) );
+            if ( $this->OpenTag( $val, $reg ) ) {
+                $sTAG = ( ( $temp = end( $tags ) ) != null ) ? $temp : "";
+                $sHREF = ( ( $temp = end( $hRef ) ) != null ) ? $temp : "";
+            } elseif ( $this->CloseTag( $val ) ) {
+                $sTAG = ( ( $temp = end( $tags ) ) != null ) ? $temp : "";
+                $sHREF = ( ( $temp = end( $hRef ) ) != null ) ? $temp : "";
+            } else {
+                if ( $val != "" ) {
+                    array_push( $result, array( 'text' => $val, 'tag' => $sTAG, 'params' => $sHREF ) );
+                }
             }
         } //while
 

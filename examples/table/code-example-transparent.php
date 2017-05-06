@@ -1,32 +1,34 @@
 <?php
 
-$y = $oPdf->GetY();
-$oPdf->SetX( 50 );
-$oPdf->Image( PDF_RESOURCES_IMAGES . "/sample-pdf.jpg" );
+$y = $pdf->GetY();
+$pdf->SetX( 50 );
+$pdf->Image( PDF_RESOURCES_IMAGES . "/sample-pdf.jpg" );
 
-$oPdf->SetY( $y );
+$pdf->SetY( $y );
 
 require( 'settings.php' );
 
-$oTable = new Pdf_Table( $oPdf );
+use \Interpid\Pdf\Table;
 
-$oTable->setStyle( "p", $oPdf->getDefaultFontName(), "", 7, "130,0,30" );
-$oTable->setStyle( "b", $oPdf->getDefaultFontName(), "B", 7, "130,0,30" );
-$oTable->setStyle( "bi", $oPdf->getDefaultFontName(), "BI", 7, "0,0,120" );
+$table = new Table( $pdf );
 
-$nColumns = 3;
+$table->setStyle( "p", 'Helvetica', "", 7, "130,0,30" );
+$table->setStyle( "b", 'Helvetica', "B", 7, "130,0,30" );
+$table->setStyle( "bi", 'Helvetica', "BI", 7, "0,0,120" );
+
+$columns = 3;
 
 /**
  * Set the tag styles
  */
 
-$oTable->initialize( array( 20, 30, 80 ) );
-$oTable->setRowConfig( array(
+$table->initialize( array( 20, 30, 80 ) );
+$table->setRowConfig( array(
     'BACKGROUND_COLOR' => false
 ) );
 
 
-$aHeader = array(
+$header = array(
     array(
         'TEXT' => 'Header #1'
     ),
@@ -39,7 +41,7 @@ $aHeader = array(
 );
 
 //add the header row
-$oTable->addHeader( $aHeader );
+$table->addHeader( $header );
 
 $aImageCell = array(
     'TYPE' => 'IMAGE',
@@ -61,19 +63,19 @@ $aRow[ 2 ][ 'TEXT' ] = "<p>All <b>table cells</b> are fully functional <bi>Advan
 $aRow[ 2 ][ 'ALIGN' ] = "L";
 
 //add the data row
-$oTable->addRow( $aRow );
+$table->addRow( $aRow );
 
 //row 2 - add data as Objects
 $aRow = array();
 
 //alternatively you can create directly the cell object
-$aRow[ 0 ] = new Pdf_Table_Cell_Image( $oPdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10 );
-$aRow[ 1 ] = new Pdf_Table_Cell_Multicell( $oPdf, "<p>This is another <b>Multicell</b></p>" );
+$aRow[ 0 ] = new Table\Cell\Image( $pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10 );
+$aRow[ 1 ] = new Table\Cell\Multicell( $pdf, "<p>This is another <b>Multicell</b></p>" );
 $aRow[ 2 ][ 'TEXT' ] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='http://www.interpid.eu'>www.interpid.eu</bi></p>";
 $aRow[ 2 ][ 'BACKGROUND_COLOR' ] = $aColor[ 1 ];
 
 //add the data row
-$oTable->addRow( $aRow );
+$table->addRow( $aRow );
 
 //close the table
-$oTable->close();
+$table->close();

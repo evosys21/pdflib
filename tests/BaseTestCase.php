@@ -1,6 +1,6 @@
 <?php
 
-require_once( dirname( __FILE__ ) . "/bootstrap.php" );
+require_once( __DIR__ . "/bootstrap.php" );
 
 class BaseTestCase extends PHPUnit_Framework_TestCase
 {
@@ -32,15 +32,15 @@ class BaseTestCase extends PHPUnit_Framework_TestCase
     protected function getPdfObject()
     {
         //create the pdf object and do some initialization
-        $oPdf = new Pdf();
+        $pdf = new Pdf();
 
         $factory = new pdfFactory();
-        $factory->initPdfObject( $oPdf );
+        $factory->initPdfObject( $pdf );
 
         //disable compression for testing
-        $oPdf->SetCompression( false );
+        $pdf->SetCompression( false );
 
-        return $oPdf;
+        return $pdf;
     }
 }
 

@@ -5,52 +5,52 @@ if ( !isset( $bSplitMode ) )
     $bSplitMode = true;
 }
 
-require dirname( __FILE__ ) . '/table.config.php';
+require __DIR__ . '/table.config.php';
 
-$oPdf->SetFontSize( 7 );
+$pdf->SetFontSize( 7 );
 
-$oTable = new PdfTable( $oPdf );
+$table = new PdfTable( $pdf );
 
-$oTable->setStyle( "p", $oPdf->getDefaultFontName(), "", 6, "130,0,30" );
-$oTable->setStyle( "b", $oPdf->getDefaultFontName(), "", 8, "80,80,260" );
-$oTable->setStyle( "h1", $oPdf->getDefaultFontName(), "", 10, "0,151,200" );
-$oTable->setStyle( "bi", $oPdf->getDefaultFontName(), "BI", 12, "0,0,120" );
+$table->setStyle( "p", 'Helvetica', "", 6, "130,0,30" );
+$table->setStyle( "b", 'Helvetica', "", 8, "80,80,260" );
+$table->setStyle( "h1", 'Helvetica', "", 10, "0,151,200" );
+$table->setStyle( "bi", 'Helvetica', "BI", 12, "0,0,120" );
 
 //default text color
-$oPdf->SetTextColor( 118, 0, 3 );
+$pdf->SetTextColor( 118, 0, 3 );
 
-$nColumns = 4;
+$columns = 4;
 
-$oPdf->Ln( 30 );
+$pdf->Ln( 30 );
 
 //Initialize the table class, 3 columns
-$oTable->initialize( array(
+$table->initialize( array(
     20,
     20,
     20,
     20
 ), $aDefaultConfiguration );
 
-$oTable->setSplitMode( $bSplitMode );
+$table->setSplitMode( $bSplitMode );
 
-$aHeader = array();
+$header = array();
 
 //Table Header
-for ( $i = 0; $i < $nColumns; $i++ )
+for ( $i = 0; $i < $columns; $i++ )
 {
-    $aHeader[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
+    $header[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
 }
 
-$aHeader1 = $aHeader;
+$header1 = $header;
 
-$aHeader[ 0 ][ 'COLSPAN' ] = 2;
+$header[ 0 ][ 'COLSPAN' ] = 2;
 
-$aHeader[ 2 ][ 'COLSPAN' ] = 2;
-$aHeader[ 2 ][ 'ROWSPAN' ] = 2;
+$header[ 2 ][ 'COLSPAN' ] = 2;
+$header[ 2 ][ 'ROWSPAN' ] = 2;
 
 //add the header
-$oTable->addHeader( $aHeader );
-$oTable->addHeader( $aHeader1 );
+$table->addHeader( $header );
+$table->addHeader( $header1 );
 
 $sDefaultText = "Lorem ipsum;, dolor sit amet";
 $sDefaultText2 = "<p>Some Line</p>\n<b>Some text</b>";
@@ -58,7 +58,7 @@ $sDefaultLongText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, s
 $sDefaultLongText2 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur";
 
 $aDefaultRow = Array();
-for ( $i = 0; $i < $nColumns; $i++ )
+for ( $i = 0; $i < $columns; $i++ )
 {
     $aDefaultRow[ $i ][ 'TEXT' ] = $sDefaultText;
 }
@@ -117,10 +117,10 @@ for ( $i = 1; $i < 10; $i++ )
             break;
     }
 
-    $oTable->addRow( $aRow );
+    $table->addRow( $aRow );
     $aRowLast = $aRow;
 }
 
 //close the table
-$oTable->close();
+$table->close();
 

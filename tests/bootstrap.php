@@ -1,9 +1,9 @@
 <?php
 
 // Define path to application directory
-defined( 'APPLICATION_PATH' ) || define( 'APPLICATION_PATH', realpath( dirname( __FILE__ ) . '/../' ) );
+defined( 'APPLICATION_PATH' ) || define( 'APPLICATION_PATH', realpath( __DIR__ . '/../' ) );
 
-defined( 'TEST_PATH' ) || define( 'TEST_PATH', realpath( dirname( __FILE__ ) ) );
+defined( 'TEST_PATH' ) || define( 'TEST_PATH', realpath( __DIR__ ) );
 
 $_SERVER[ 'ENVIRONMENT' ] = 'test';
 

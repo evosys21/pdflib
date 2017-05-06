@@ -1,12 +1,12 @@
 <?php
 /**
- * Class Pdf_Table_Cell_AbstractTest
+ * Class CellAbstractTest
  */
 
 
 require_once 'AbstractMock.php';
 
-class Pdf_Table_Cell_AbstractTest extends BaseTestCase
+class CellAbstractTest extends BaseTestCase
 {
 
     public function testConstructor()
@@ -14,16 +14,16 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
         //case 1
         $pdf = $this->getPdfObject();
 
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
 
-        $this->assertInstanceOf( 'Pdf_Table_Cell_AbstractMock', $o );
+        $this->assertInstanceOf( 'CellAbstractMock', $o );
 
         //case 2
-        $pdfi = new Pdf_Interface( $pdf );
+        $pdfi = new PdfInterface( $pdf );
 
-        $o = new Pdf_Table_Cell_AbstractMock( $pdfi );
+        $o = new CellAbstractMock( $pdfi );
 
-        $this->assertInstanceOf( 'Pdf_Table_Cell_AbstractMock', $o );
+        $this->assertInstanceOf( 'CellAbstractMock', $o );
     }
 
     public function testSimpleGettersAndSetters()
@@ -69,7 +69,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
     {
         $pdf = $this->getPdfObject();
 
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
 
         $o->setAlignVertical( '' );
         $this->assertEquals( 'M', $o->getAlignVertical() );
@@ -89,7 +89,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
     {
         $pdf = $this->getPdfObject();
 
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
 
         $o->setAlign( '' );
     }
@@ -98,7 +98,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
     {
         $pdf = $this->getPdfObject();
 
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
 
         $aValues = array(
             array( array( 0, 0, 0, 0 ), array( 0, 0, 0, 0 ) ),
@@ -150,17 +150,17 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
         $pdf = $this->getPdfObject();
 
         $aProps[ 'COLSPAN' ] = 0;
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
         $o->setProperties( $aProps );
         $this->assertEquals( 1, $o->getColSpan() );
 
         $aProps[ 'COLSPAN' ] = 1;
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
         $o->setProperties( $aProps );
         $this->assertEquals( 1, $o->getColSpan() );
 
         $aProps[ 'COLSPAN' ] = 2;
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
         $o->setProperties( $aProps );
         $this->assertEquals( $aProps[ 'COLSPAN' ], $o->getColSpan() );
     }
@@ -169,7 +169,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
     public function testSetProperties()
     {
         $pdf = $this->getPdfObject();
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
 
         $aProps = array(
             'ALIGN' => 'R',
@@ -201,7 +201,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
     public function testSetInternValue()
     {
         $pdf = $this->getPdfObject();
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
         $o->setProperties( array( 'someValue' => 1, 'TEST' => 2 ) );
 
         $this->assertEquals( 1, $o->getSomeValue() );
@@ -211,7 +211,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
     public function testSetDefaultValues()
     {
         $pdf = $this->getPdfObject();
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
 
         $aProps = array(
             'ALIGN' => 'R',
@@ -253,7 +253,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
     public function testCellWidth()
     {
         $pdf = $this->getPdfObject();
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
 
         $o->setCellWidth( -1 );
         $this->assertEquals( 0, $o->getCellWidth() );
@@ -268,7 +268,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
     public function testIsPropertySet()
     {
         $pdf = $this->getPdfObject();
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
 
         $this->assertFalse( $o->isPropertySet( 'TEST' ) );
 
@@ -283,7 +283,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
     public function testIsPropertySetReturnValue()
     {
         $pdf = $this->getPdfObject();
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
 
         PHPUnit_Framework_Error_Notice::$enabled = false;
         $error_level = ini_get( 'error_reporting' );
@@ -300,7 +300,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
     {
         $pdf = $this->getPdfObject();
 
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
 
         $aValues = array( -1, 0, 1, 2, '', 'bla', 'test' );
         foreach ( $aValues as $val )
@@ -314,7 +314,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
     {
         $pdf = $this->getPdfObject();
 
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
 
         $o->$setter( -1 );
         $this->assertEquals( 1, $o->$getter() );
@@ -333,7 +333,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
     public function testRenderCellLayout()
     {
         $pdf = $this->getPdfObject();
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
 
         $o->setCellWidth( 10 );
         $o->setCellHeight( 10 );
@@ -356,8 +356,8 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
     public function testCopyProperties()
     {
         $pdf = $this->getPdfObject();
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
-        $source = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
+        $source = new CellAbstractMock( $pdf );
 
         $aProps = array(
             'ALIGN' => 'R',
@@ -390,7 +390,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
     public function testProcessContent()
     {
         $pdf = $this->getPdfObject();
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
         $o->processContent();
     }
 
@@ -405,7 +405,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
     {
         $pdf = $this->getPdfObject();
 
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
 
         $o->$setter( -1 );
         $this->assertEquals( 0, $o->$getter() );
@@ -431,7 +431,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
     {
         $pdf = $this->getPdfObject();
 
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
 
         $aTrue = array( 1, "true", true );
         $aFalse = array( 0, false, '' );
@@ -453,7 +453,7 @@ class Pdf_Table_Cell_AbstractTest extends BaseTestCase
     {
         $pdf = $this->getPdfObject();
 
-        $o = new Pdf_Table_Cell_AbstractMock( $pdf );
+        $o = new CellAbstractMock( $pdf );
 
         $o->$setter( 1, 2, 3 );
         $this->assertEquals( array( 1, 2, 3 ), $o->$getter() );

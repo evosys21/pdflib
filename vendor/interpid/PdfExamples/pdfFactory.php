@@ -15,22 +15,45 @@
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
  * @version   : 5.3.0
- * @author    : Andrei Bintintan <andy@interpid.eu>
- * @copyright : Andrei Bintintan, http://www.interpid.eu
+ * @author    : Interpid <office@interpid.eu>
+ * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
 
-if ( !defined( 'PDF_RESOURCES_IMAGES' ) )
-{
-    define( 'PDF_RESOURCES_IMAGES', dirname( __FILE__ ) . '/images' );
+namespace Interpid\PdfExamples;
+
+if ( !defined( 'PDF_RESOURCES_IMAGES' ) ) {
+    define( 'PDF_RESOURCES_IMAGES', __DIR__ . '/images' );
 }
 
-//include pdf class
-require_once( "classes/pdf.php" );
 
 
 class pdfFactory
 {
+    /**
+     * Creates a new Fpdf Object and Initializes it
+     *
+     * @param $type
+     * @return myPdf
+     */
+    public static function newPdf( $type )
+    {
+        $pdf = new myPdf();
+
+        switch ( $type ) {
+            case 'multicell':
+                $pdf->setHeaderSource( 'header-multicell.txt' );
+                break;
+            case 'table':
+                $pdf->setHeaderSource( 'header-table.txt' );
+                break;
+        }
+
+        //initialize the pdf document
+        self::initPdfObject( $pdf );
+
+        return $pdf;
+    }
 
     /**
      * Initializes the pdf object.
@@ -39,7 +62,7 @@ class pdfFactory
      * @param Pdf $pdf
      * @return Pdf $pdf
      */
-    public function initPdfObject( $pdf )
+    public static function initPdfObject( $pdf )
     {
         $pdf->SetMargins( 20, 20, 20 );
 
@@ -53,8 +76,7 @@ class pdfFactory
         $pdf->AliasNbPages();
 
         //disable compression for unit-testing!
-        if ( isset( $_SERVER[ 'ENVIRONMENT' ] ) && 'test' == $_SERVER[ 'ENVIRONMENT' ] )
-        {
+        if ( isset( $_SERVER[ 'ENVIRONMENT' ] ) && 'test' == $_SERVER[ 'ENVIRONMENT' ] ) {
             $pdf->SetCompression( false );
         }
 

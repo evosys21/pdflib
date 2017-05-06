@@ -19,18 +19,18 @@ class Helper
         require_once( __DIR__ . '/testPdf.php' );
 
         //create the pdf object and do some initialization
-        $oPdf = new testPdf( 'P', 'mm', array(
+        $pdf = new testPdf( 'P', 'mm', array(
             130,
             180
         ) );
 
         $factory = new pdfFactory();
-        $factory->initPdfObject( $oPdf );
+        $factory->initPdfObject( $pdf );
 
         //disable compression for testing
-        $oPdf->SetCompression( false );
+        $pdf->SetCompression( false );
 
-        return $oPdf;
+        return $pdf;
     }
 
     /**
@@ -38,7 +38,7 @@ class Helper
      */
     public static function setFontStyle1( $pdf )
     {
-        $pdf->SetFont( $pdf->getDefaultFontName(), 'I', 7 );
+        $pdf->SetFont( 'Helvetica', 'I', 7 );
         $pdf->SetTextColor( 170, 170, 170 );
     }
 
