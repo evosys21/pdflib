@@ -32,9 +32,6 @@ $multicell->setStyle( "style", 'Helvetica', "BI", 10, "0,0,220" );
 $multicell->setStyle( "size", 'Helvetica', "BI", 12, "0,0,120" );
 $multicell->setStyle( "color", 'Helvetica', "BI", 12, "0,255,255" );
 
-//TAG Based Formatted text
-$txt1 = file_get_contents( __DIR__ . '/content/createdby.txt' );
-
 $txt2 = '<p>';
 for ( $i = 0; $i < 100; $i++ ) {
     $txt2 .= "Line <b>$i</b>\n";

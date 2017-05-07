@@ -1,5 +1,8 @@
 <?php
 
+use \Interpid\PdfExamples\myPdf;
+use \Interpid\PdfExamples\pdfFactory;
+
 class BaseExamplesTestCase extends PHPUnit_Framework_TestCase
 {
     /**
@@ -12,8 +15,7 @@ class BaseExamplesTestCase extends PHPUnit_Framework_TestCase
         //create the pdf object and do some initialization
         $pdf = new myPdf();
 
-        $factory = new pdfFactory();
-        $factory->initPdfObject( $pdf );
+        $factory = pdfFactory::initPdfObject( $pdf );
 
         //disable compression for testing
         $pdf->SetCompression( false );
@@ -26,8 +28,6 @@ class BaseExamplesTestCase extends PHPUnit_Framework_TestCase
     {
         //remove the .php extention
         $name = str_replace( ".php", '', $name );
-
-        die();
 
         ob_start();
         require $require;
@@ -44,10 +44,8 @@ class BaseExamplesTestCase extends PHPUnit_Framework_TestCase
         file_put_contents( $sPdfFile, $content );
 
         $this->assertTrue( file_exists( $sPdfFile ), $require );
-
-        //$this->assertFileEquals( $sResultFile, $sPdfFile, $require );
-
-        //$this->assertSame( sha1_file( $sResultFile ), sha1_file( $sPdfFile ), $require );
+        $this->assertFileEquals( $sResultFile, $sPdfFile, $require );
+        $this->assertSame( sha1_file( $sResultFile ), sha1_file( $sPdfFile ), $require );
 
         if ( !defined( 'GENERATE_RESULT_FILES' ) ) {
             unlink( $sPdfFile );

@@ -2,6 +2,9 @@
 
 require_once( __DIR__ . "/bootstrap.php" );
 
+use \Interpid\Pdf\Pdf;
+use \Interpid\PdfExamples\pdfFactory;
+
 class BaseTestCase extends PHPUnit_Framework_TestCase
 {
 

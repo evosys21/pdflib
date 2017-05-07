@@ -12,8 +12,6 @@ namespace Interpid\PdfExamples;
 use Interpid\Pdf\Pdf;
 use Interpid\Pdf\Multicell;
 
-require( __DIR__ . '/../../../vendor/fpdf/fpdf.php' );
-
 class myPdf extends Pdf
 {
 
@@ -26,7 +24,6 @@ class myPdf extends Pdf
      */
     public function Header()
     {
-        global $BASE_PATH;
         $this->SetY( 10 );
 
         /**
@@ -34,12 +31,15 @@ class myPdf extends Pdf
          */
         $multicell = Multicell::getInstance( $this );
 
+        $multicell->setStyle( "p", $this->getDefaultFontName(), "", 6, "160,160,160" );
         $multicell->setStyle( "h1", $this->getDefaultFontName(), "", 6, "160,160,160" );
         $multicell->setStyle( "h2", $this->getDefaultFontName(), "", 6, "0,119,220" );
+        $multicell->setStyle( "h4", $this->getDefaultFontName(), "", 6, "0,151,200" );
 
-        $multicell->multiCell( 100, 3, file_get_contents( $BASE_PATH . '/content/' . $this->headerSource ) );
+        $multicell->multiCell( 100, 3, file_get_contents( PDF_APPLICATION_PATH . '/content/' . $this->headerSource ) );
 
-        $this->Image( $BASE_PATH . '/images/interpid_logo.png', 160, 10, 40, 0, '', 'http://www.interpid.eu' );
+        $this->Image( PDF_APPLICATION_PATH . '/images/interpid_logo.png', 160, 10, 40, 0, '',
+            'http://www.interpid.eu' );
         $this->SetY( $this->tMargin );
     }
 

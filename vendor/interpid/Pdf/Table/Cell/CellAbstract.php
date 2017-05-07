@@ -96,7 +96,7 @@ abstract class CellAbstract implements CellInterface
      *
      * @var string
      */
-    protected $sAlignment = 'MC';
+    protected $alignment = 'MC';
 
     /**
      * Pdf Interface
@@ -221,7 +221,7 @@ abstract class CellAbstract implements CellInterface
      */
     public function setAlign( $alignment )
     {
-        $this->sAlignment = strtoupper( $alignment );
+        $this->alignment = strtoupper( $alignment );
     }
 
 
@@ -540,6 +540,7 @@ abstract class CellAbstract implements CellInterface
 
     public function setAlignVertical( $alignVertical )
     {
+        $this->markInternValueAsSet('VERTICAL_ALIGN');
         $this->alignVertical = Validate::alignVertical( $alignVertical );
     }
 

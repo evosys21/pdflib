@@ -8,14 +8,12 @@ if ( !defined( 'PDF_RESOURCES_IMAGES' ) ) {
     define( 'PDF_RESOURCES_IMAGES', __DIR__ . '/images' );
 }
 
-$BASE_PATH = realpath( __DIR__ );
 /**
  * @param $class
  */
 function autoLoadVendor( $class )
 {
-    global $BASE_PATH;
-    $filename = $BASE_PATH . '/vendor/' . str_replace( '\\', '/', $class ) . '.php';
+    $filename = PDF_APPLICATION_PATH . '/vendor/' . str_replace( '\\', '/', $class ) . '.php';
     if ( !file_exists( $filename ) ) {
         echo "<pre>";
         debug_print_backtrace();
@@ -24,4 +22,8 @@ function autoLoadVendor( $class )
     require( $filename );
 }
 
-spl_autoload_register( 'autoLoadVendor' );
+//spl_autoload_register( 'autoLoadVendor' );
+
+require_once 'vendor/autoload.php';
+
+

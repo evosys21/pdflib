@@ -1,5 +1,7 @@
 <?php
 
+use \Interpid\Pdf\Table;
+
 if ( !isset( $bSplitMode ) ) {
     $bSplitMode = true;
 }

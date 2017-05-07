@@ -8,6 +8,7 @@
  */
 
 use \Interpid\PdfExamples\pdfFactory;
+use \Interpid\Pdf\Pdf;
 
 class Helper
 {
@@ -36,7 +37,7 @@ class Helper
     }
 
     /**
-     * @param $pdf
+     * @param Pdf $pdf
      */
     public static function setFontStyle1( $pdf )
     {

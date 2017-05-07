@@ -3,11 +3,11 @@
 <</Type /Page
 /Parent 1 0 R
 /Resources 2 0 R
-/Annots [<</Type /Annot /Subtype /Link /Rect [56.69 812.29 124.04 806.29] /Border [0 0 0] /A <</S /URI /URI (www.interpid.eu/fpdf-addons)>>>><</Type /Annot /Subtype /Link /Rect [56.69 803.79 76.04 797.79] /Border [0 0 0] /A <</S /URI /URI (www.interpid.eu/fpdf-addons)>>>><</Type /Annot /Subtype /Link /Rect [76.04 803.79 120.06 797.79] /Border [0 0 0] /A <</S /URI /URI (mailto:andy@interpid.eu)>>>><</Type /Annot /Subtype /Link /Rect [453.54 813.54 566.93 799.26] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu)>>>>]
+/Annots [<</Type /Annot /Subtype /Link /Rect [56.69 803.79 105.14 797.79] /Border [0 0 0] /A <</S /URI /URI (mailto:office@interpid.eu)>>>><</Type /Annot /Subtype /Link /Rect [113.81 803.79 191.49 797.79] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu/fpdf/multicell)>>>><</Type /Annot /Subtype /Link /Rect [453.54 813.54 566.93 799.26] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu)>>>>]
 /Contents 4 0 R>>
 endobj
 4 0 obj
-<</Length 18023>>
+<</Length 18149>>
 stream
 2 J
 0.57 w
@@ -17,11 +17,15 @@ BT /F1 6.00 Tf ET
 BT /F1 11.00 Tf ET
 BT /F1 6.00 Tf ET
 0.000 Tw
-q 0.627 0.627 0.627 rg BT 56.69 807.49 Td (FPDF Advanced Multicell) Tj ET Q
+q 0.627 0.627 0.627 rg BT 56.69 807.49 Td (Fpdf Advanced Multicell) Tj ET Q
+BT /F1 11.00 Tf ET
+BT /F1 6.00 Tf ET
 0 Tw
-q 0.627 0.627 0.627 rg BT 56.69 798.99 Td (Author:) Tj ET Q
+q 0.000 0.592 0.784 rg BT 56.69 798.99 Td (office@interpid.eu) Tj ET Q
 0 Tw
-q 0.000 0.467 0.863 rg BT 76.04 798.99 Td ( Andrei Bintintan) Tj ET Q
+q 0.627 0.627 0.627 rg BT 105.14 798.99 Td (  -  ) Tj ET Q
+0 Tw
+q 0.000 0.592 0.784 rg BT 113.81 798.99 Td (www.interpid.eu/fpdf/multicell) Tj ET Q
 BT /F1 11.00 Tf ET
 q 113.39 0 0 14.29 453.54 799.26 cm /I1 Do Q
 BT /F2 11.00 Tf ET
@@ -641,11 +645,11 @@ endobj
 <</Type /Page
 /Parent 1 0 R
 /Resources 2 0 R
-/Annots [<</Type /Annot /Subtype /Link /Rect [56.69 812.29 124.04 806.29] /Border [0 0 0] /A <</S /URI /URI (www.interpid.eu/fpdf-addons)>>>><</Type /Annot /Subtype /Link /Rect [56.69 803.79 76.04 797.79] /Border [0 0 0] /A <</S /URI /URI (www.interpid.eu/fpdf-addons)>>>><</Type /Annot /Subtype /Link /Rect [76.04 803.79 120.06 797.79] /Border [0 0 0] /A <</S /URI /URI (mailto:andy@interpid.eu)>>>><</Type /Annot /Subtype /Link /Rect [453.54 813.54 566.93 799.26] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu)>>>>]
+/Annots [<</Type /Annot /Subtype /Link /Rect [56.69 803.79 105.14 797.79] /Border [0 0 0] /A <</S /URI /URI (mailto:office@interpid.eu)>>>><</Type /Annot /Subtype /Link /Rect [113.81 803.79 191.49 797.79] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu/fpdf/multicell)>>>><</Type /Annot /Subtype /Link /Rect [453.54 813.54 566.93 799.26] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu)>>>>]
 /Contents 6 0 R>>
 endobj
 6 0 obj
-<</Length 13709>>
+<</Length 13835>>
 stream
 2 J
 0.57 w
@@ -655,11 +659,15 @@ BT /F1 6.00 Tf ET
 BT /F1 11.00 Tf ET
 BT /F1 6.00 Tf ET
 0.000 Tw
-q 0.627 0.627 0.627 rg BT 56.69 807.49 Td (FPDF Advanced Multicell) Tj ET Q
+q 0.627 0.627 0.627 rg BT 56.69 807.49 Td (Fpdf Advanced Multicell) Tj ET Q
+BT /F1 11.00 Tf ET
+BT /F1 6.00 Tf ET
 0 Tw
-q 0.627 0.627 0.627 rg BT 56.69 798.99 Td (Author:) Tj ET Q
+q 0.000 0.592 0.784 rg BT 56.69 798.99 Td (office@interpid.eu) Tj ET Q
 0 Tw
-q 0.000 0.467 0.863 rg BT 76.04 798.99 Td ( Andrei Bintintan) Tj ET Q
+q 0.627 0.627 0.627 rg BT 105.14 798.99 Td (  -  ) Tj ET Q
+0 Tw
+q 0.000 0.592 0.784 rg BT 113.81 798.99 Td (www.interpid.eu/fpdf/multicell) Tj ET Q
 BT /F1 11.00 Tf ET
 q 113.39 0 0 14.29 453.54 799.26 cm /I1 Do Q
 56.69 785.20 481.89 -14.17 re f 
@@ -1196,20 +1204,20 @@ endobj
 xref
 0 15
 0000000000 65535 f 
-0000033059 00000 n 
-0000038555 00000 n 
+0000033075 00000 n 
+0000038571 00000 n 
 0000000009 00000 n 
-0000000617 00000 n 
-0000018691 00000 n 
-0000019299 00000 n 
-0000033152 00000 n 
-0000033876 00000 n 
-0000033989 00000 n 
-0000034107 00000 n 
-0000034229 00000 n 
-0000038085 00000 n 
-0000038691 00000 n 
-0000038713 00000 n 
+0000000499 00000 n 
+0000018699 00000 n 
+0000019189 00000 n 
+0000033168 00000 n 
+0000033892 00000 n 
+0000034005 00000 n 
+0000034123 00000 n 
+0000034245 00000 n 
+0000038101 00000 n 
+0000038707 00000 n 
+0000038729 00000 n 
 trailer
 <<
 /Size 15
@@ -1217,5 +1225,5 @@ trailer
 /Info 13 0 R
 >>
 startxref
-38763
+38779
 %%EOF

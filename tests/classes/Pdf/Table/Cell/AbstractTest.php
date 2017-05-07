@@ -6,6 +6,8 @@
 
 require_once 'AbstractMock.php';
 
+use \Interpid\Pdf\PdfInterface;
+
 class CellAbstractTest extends BaseTestCase
 {
 

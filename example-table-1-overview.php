@@ -14,24 +14,17 @@ $factory = new pdfFactory();
 //get the FPDF object and initializes it
 $pdf = pdfFactory::newPdf( 'table' );
 
-// Create the Advanced Multicell Object and pass the PDF object as a parameter to the constructor
+//Create the Advanced Multicell Object and pass the PDF object as a parameter to the constructor
 $multicell = new Multicell( $pdf );
 
-// Set the styles for the advanced multicell
-
-/**
- * Create the pdf Table object
- * Alternative you can use the Singleton Instance
- *
- * @example : $table = Table::getInstance($pdf);
- */
+//Set the styles for the advanced multicell
 $multicell = new Multicell( $pdf );
 $multicell->setStyle( "p", 'Helvetica', "", 7, "130,0,30" );
 $multicell->setStyle( "b", 'Helvetica', "B", 7, "130,0,30" );
 
 //simple table
 $multicell->multiCell( 0, 5, "<p size='10' > ~~~Simple table:</p>" );
-//require( 'examples/table/code-example1.php' );
+require( 'examples/table/code-example1.php' );
 
 //cells can be multicells and images
 $pdf->Ln( 10 );
@@ -49,11 +42,10 @@ $multicell->multiCell( 0, 5, "<p size='10' > ~~~ Transparent Background:</p>" );
 require( 'examples/table/code-example-transparent.php' );
 
 
-//example 3 - all parameters can be overwritten
+//example - all parameters can be overwritten
 $pdf->Ln( 10 );
 $multicell->multiCell( 0, 5, "<p size='10' > ~~~Different alignments:</p>" );
 require( 'examples/table/code-example-alignments.php' );
-
 
 //send the pdf to the browser
 $pdf->Output();

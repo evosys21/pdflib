@@ -36,7 +36,7 @@ class Image extends CellAbstract implements CellInterface
      *
      * @var string
      */
-    protected $sAlignment = 'MC';
+    protected $alignment = 'MC';
 
 
     /**
@@ -102,7 +102,7 @@ class Image extends CellAbstract implements CellInterface
      */
     public function setAlign( $alignment )
     {
-        $this->sAlignment = strtoupper( $alignment );
+        $this->alignment = strtoupper( $alignment );
     }
 
 
@@ -135,19 +135,19 @@ class Image extends CellAbstract implements CellInterface
         $y = $this->pdf->GetY() + $this->getBorderSize();
 
         //Horizontal Alignment
-        if ( strpos( $this->sAlignment, 'J' ) !== false )
+        if ( strpos( $this->alignment, 'J' ) !== false )
         {
             //justified - image is fully streched
 
             $x += $this->getPaddingLeft();
             $this->setContentWidth( $this->getCellDrawWidth() - 2 * $this->getBorderSize() - $this->getPaddingLeft() - $this->getPaddingRight() );
         }
-        elseif ( strpos( $this->sAlignment, 'C' ) !== false )
+        elseif ( strpos( $this->alignment, 'C' ) !== false )
         {
             //center
             $x += ( $this->getCellDrawWidth() - $this->getContentWidth() ) / 2;
         }
-        elseif ( strpos( $this->sAlignment, 'R' ) !== false )
+        elseif ( strpos( $this->alignment, 'R' ) !== false )
         {
             //right
             $x += $this->getCellDrawWidth() - $this->getContentWidth() - $this->getPaddingRight();
@@ -159,12 +159,12 @@ class Image extends CellAbstract implements CellInterface
         }
 
         //Vertical Alignment
-        if ( strpos( $this->sAlignment, 'T' ) !== false )
+        if ( strpos( $this->alignment, 'T' ) !== false )
         {
             //top
             $y += $this->getPaddingTop();
         }
-        elseif ( strpos( $this->sAlignment, 'B' ) !== false )
+        elseif ( strpos( $this->alignment, 'B' ) !== false )
         {
             //bottom
             $y += $this->getCellDrawHeight() - $this->getContentHeight() - $this->getPaddingBottom();

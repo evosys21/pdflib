@@ -2,6 +2,8 @@
 
 require_once( TEST_PATH . '/helper/testPdf.php' );
 
+use \Interpid\PdfExamples\pdfFactory;
+
 class TableExamples2Test extends PHPUnit_Framework_TestCase
 {
     /**

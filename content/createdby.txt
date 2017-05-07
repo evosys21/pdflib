@@ -1,1 +1,0 @@
-<p>Developed by: <h1 href='mailto:office@interpid.eu'>Interpid</h1><h1 href='www.interpid.eu'>www.interpid.eu/fpdf/multicell</h1></p>

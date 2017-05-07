@@ -11,6 +11,10 @@
 
 use Interpid\Pdf\Table\Cell\CellAbstract;
 
+/**
+ * @property mixed|null TEST2
+ * @property mixed|null TEST
+ */
 class CellAbstractMock extends CellAbstract
 {
 

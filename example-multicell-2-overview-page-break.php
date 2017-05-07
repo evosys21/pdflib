@@ -11,7 +11,7 @@ use Interpid\PdfExamples\pdfFactory;
 
 $factory = new pdfFactory();
 
-//get the FPDF object and initializes it
+//get the FPDF Object
 $pdf = pdfFactory::newPdf( 'multicell' );
 
 // Create the Advanced Multicell Object and pass the PDF object as a parameter to the constructor
@@ -22,7 +22,7 @@ $multicell->setStyle( "p", 'Helvetica', "", 11, "130,0,30" );
 $multicell->setStyle( "b", 'Helvetica', "B", 11, "130,0,30" );
 $multicell->setStyle( "i", 'Helvetica', "I", 11, "80,80,260" );
 $multicell->setStyle( "u", 'Helvetica', "U", 11, "80,80,260" );
-$multicell->setStyle( "h1", 'Helvetica', "", 11, "80,80,260" );
+$multicell->setStyle( "h1", 'Helvetica', "", 14, "203,0,48" );
 $multicell->setStyle( "h3", 'Helvetica', "B", 12, "203,0,48" );
 $multicell->setStyle( "h4", 'Helvetica', "BI", 11, "0,151,200" );
 $multicell->setStyle( "hh", 'Helvetica', "B", 11, "255,189,12" );
@@ -32,16 +32,17 @@ $multicell->setStyle( "style", 'Helvetica', "BI", 10, "0,0,220" );
 $multicell->setStyle( "size", 'Helvetica', "BI", 12, "0,0,120" );
 $multicell->setStyle( "color", 'Helvetica', "BI", 12, "0,255,255" );
 
+$pdf->Ln( 10 ); //line break
+
+// create the advanced multicell
+$multicell->multiCell( 0, 5, "<h1>Fpdf Advanced Multicell</h1>", 1, "J", 1, 3, 3, 3, 3 );
+
+$pdf->Ln( 10 ); //line break
+
+
 //read TAG formatted text from files
-$txt1 = file_get_contents( __DIR__ . '/content/createdby.txt' );
-$txt2 = file_get_contents( __DIR__ . '/content/multicell.txt' );
-
-//create an advanced multicell
-$multicell->multiCell( 150, 5, $txt1, 1, "L", 1, 5, 5, 5, 5 );
-$pdf->Ln( 10 ); //new line
-
-
-$s = $txt2 . "\n\n\n\nRepeat the text to trigger a page break \n\n\n" . $txt2;
+$txt = file_get_contents( __DIR__ . '/content/multicell.txt' );
+$s = $txt . "\n\n\n\nRepeat the text to trigger a page break \n\n\n" . $txt;
 
 //create an advanced multicell
 $multicell->multiCell( 0, 5, $s, 1, "J", 1, 3, 3, 3, 3 );
