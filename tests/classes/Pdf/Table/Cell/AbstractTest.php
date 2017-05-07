@@ -74,9 +74,8 @@ class CellAbstractTest extends BaseTestCase
         $o->setAlignVertical( '' );
         $this->assertEquals( 'M', $o->getAlignVertical() );
 
-        $a = array( 'T', 'B', 'M' );
-        foreach ( $a as $val )
-        {
+        $a = [ 'T', 'B', 'M' ];
+        foreach ( $a as $val ) {
             $o->setAlignVertical( $val );
             $this->assertEquals( $val, $o->getAlignVertical() );
         }
@@ -101,15 +100,14 @@ class CellAbstractTest extends BaseTestCase
         $o = new CellAbstractMock( $pdf );
 
         $aValues = array(
-            array( array( 0, 0, 0, 0 ), array( 0, 0, 0, 0 ) ),
-            array( array( -1, -1, -1, -1 ), array( 0, 0, 0, 0 ) ),
-            array( array( 1, 1, 1, 1 ), array( 1, 1, 1, 1 ) ),
-            array( array( 1.123, 1.2321, 1.1234, 1.123412 ), array( 1.123, 1.2321, 1.1234, 1.123412 ) ),
-            array( array( -1, 1, -1, 1 ), array( 0, 1, 0, 1 ) ),
+            [ [ 0, 0, 0, 0 ], [ 0, 0, 0, 0 ] ],
+            [ [ -1, -1, -1, -1 ], [ 0, 0, 0, 0 ] ],
+            [ [ 1, 1, 1, 1 ], [ 1, 1, 1, 1 ] ],
+            [ [ 1.123, 1.2321, 1.1234, 1.123412 ], [ 1.123, 1.2321, 1.1234, 1.123412 ] ],
+            [ [ -1, 1, -1, 1 ], [ 0, 1, 0, 1 ] ],
         );
 
-        foreach ( $aValues as $val )
-        {
+        foreach ( $aValues as $val ) {
             list( $set, $get ) = $val;
             $o->setPadding( $set[ 0 ], $set[ 1 ], $set[ 2 ], $set[ 3 ] );
             $this->assertEquals( $get[ 0 ], $o->getPaddingTop() );
@@ -176,11 +174,11 @@ class CellAbstractTest extends BaseTestCase
             'VERTICAL_ALIGN' => 'T',
             'COLSPAN' => 5,
             'ROWSPAN' => 6,
-            'PADDING' => array( 1, 2, 3, 4 ),
+            'PADDING' => [ 1, 2, 3, 4 ],
             'BORDER_TYPE' => 0,
             'BORDER_SIZE' => 2.5,
-            'BORDER_COLOR' => array( 1, 2, 3 ),
-            'BACKGROUND_COLOR' => array( 5, 6, 7 ),
+            'BORDER_COLOR' => [ 1, 2, 3 ],
+            'BACKGROUND_COLOR' => [ 5, 6, 7 ],
         );
 
         $o->setProperties( $aProps );
@@ -202,7 +200,7 @@ class CellAbstractTest extends BaseTestCase
     {
         $pdf = $this->getPdfObject();
         $o = new CellAbstractMock( $pdf );
-        $o->setProperties( array( 'someValue' => 1, 'TEST' => 2 ) );
+        $o->setProperties( [ 'someValue' => 1, 'TEST' => 2 ] );
 
         $this->assertEquals( 1, $o->getSomeValue() );
         $this->assertEquals( 2, $o->TEST );
@@ -218,7 +216,7 @@ class CellAbstractTest extends BaseTestCase
             'VERTICAL_ALIGN' => 'T',
             'COLSPAN' => 5,
             'ROWSPAN' => 6,
-            'BACKGROUND_COLOR' => array( 5, 6, 7 ),
+            'BACKGROUND_COLOR' => [ 5, 6, 7 ],
         );
 
         $aDefault = array(
@@ -226,11 +224,11 @@ class CellAbstractTest extends BaseTestCase
             'VERTICAL_ALIGN' => 'M',
             'COLSPAN' => 1,
             'ROWSPAN' => 1,
-            'PADDING' => array( 3, 3, 3, 3 ),
+            'PADDING' => [ 3, 3, 3, 3 ],
             'BORDER_TYPE' => 1,
             'BORDER_SIZE' => 1,
-            'BORDER_COLOR' => array( 2, 2, 2 ),
-            'BACKGROUND_COLOR' => array( 3, 3, 3 ),
+            'BORDER_COLOR' => [ 2, 2, 2 ],
+            'BACKGROUND_COLOR' => [ 3, 3, 3 ],
         );
 
 
@@ -302,9 +300,8 @@ class CellAbstractTest extends BaseTestCase
 
         $o = new CellAbstractMock( $pdf );
 
-        $aValues = array( -1, 0, 1, 2, '', 'bla', 'test' );
-        foreach ( $aValues as $val )
-        {
+        $aValues = [ -1, 0, 1, 2, '', 'bla', 'test' ];
+        foreach ( $aValues as $val ) {
             $o->$setter( $val );
             $this->assertEquals( $val, $o->$getter() );
         }
@@ -364,11 +361,11 @@ class CellAbstractTest extends BaseTestCase
             'VERTICAL_ALIGN' => 'T',
             'COLSPAN' => 5,
             'ROWSPAN' => 6,
-            'PADDING' => array( 1, 2, 3, 4 ),
+            'PADDING' => [ 1, 2, 3, 4 ],
             'BORDER_TYPE' => 0,
             'BORDER_SIZE' => 2.5,
-            'BORDER_COLOR' => array( 1, 2, 3 ),
-            'BACKGROUND_COLOR' => array( 5, 6, 7 ),
+            'BORDER_COLOR' => [ 1, 2, 3 ],
+            'BACKGROUND_COLOR' => [ 5, 6, 7 ],
         );
 
         $source->setProperties( $aProps );
@@ -433,17 +430,15 @@ class CellAbstractTest extends BaseTestCase
 
         $o = new CellAbstractMock( $pdf );
 
-        $aTrue = array( 1, "true", true );
-        $aFalse = array( 0, false, '' );
+        $aTrue = [ 1, "true", true ];
+        $aFalse = [ 0, false, '' ];
 
-        foreach ( $aTrue as $val )
-        {
+        foreach ( $aTrue as $val ) {
             $o->$setter( $val );
             $this->assertEquals( true, $o->$getter() );
         }
 
-        foreach ( $aFalse as $val )
-        {
+        foreach ( $aFalse as $val ) {
             $o->$setter( $val );
             $this->assertEquals( false, $o->$getter() );
         }
@@ -456,13 +451,13 @@ class CellAbstractTest extends BaseTestCase
         $o = new CellAbstractMock( $pdf );
 
         $o->$setter( 1, 2, 3 );
-        $this->assertEquals( array( 1, 2, 3 ), $o->$getter() );
+        $this->assertEquals( [ 1, 2, 3 ], $o->$getter() );
 
         $o->$setter( false );
         $this->assertEquals( false, $o->$getter() );
 
-        $o->$setter( array( 1, 2, 3 ) );
-        $this->assertEquals( array( 1, 2, 3 ), $o->$getter() );
+        $o->$setter( [ 1, 2, 3 ] );
+        $this->assertEquals( [ 1, 2, 3 ], $o->$getter() );
     }
 }
  

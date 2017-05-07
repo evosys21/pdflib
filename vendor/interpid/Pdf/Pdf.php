@@ -49,7 +49,7 @@ class Pdf extends \FPDF
 
     public function _out( $s )
     {
-        return parent::_out( $s );
+        parent::_out( $s );
     }
 
     public function _parsejpg( $file )

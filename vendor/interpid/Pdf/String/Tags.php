@@ -30,7 +30,7 @@ class Tags
      *
      * @var array
      */
-    protected $tags = array();
+    protected $tags = [];
 
     /**
      * Contains the links for the tags that have specified this parameter
@@ -54,8 +54,8 @@ class Tags
      */
     public function __construct( $p_tagmax = 10 )
     {
-        $this->tags = array();
-        $this->hRef = array();
+        $this->tags = [];
+        $this->hRef = [];
         $this->tagMaxElem = $p_tagmax;
     }
 
@@ -79,12 +79,12 @@ class Tags
 
         $p_tag = $reg[ 1 ];
 
-        $sHREF = array();
+        $sHREF = [];
         if ( isset( $reg[ 2 ] ) ) {
             preg_match_all( "|([^ ]*)=[\"'](.*)[\"']|U", $reg[ 2 ], $out, PREG_PATTERN_ORDER );
             for ( $i = 0; $i < count( $out[ 0 ] ); $i++ ) {
                 $out[ 2 ][ $i ] = preg_replace( "/(\"|')/i", "", $out[ 2 ][ $i ] );
-                array_push( $sHREF, array( $out[ 1 ][ $i ], $out[ 2 ][ $i ] ) );
+                array_push( $sHREF, [ $out[ 1 ][ $i ], $out[ 2 ][ $i ] ] );
             }
         }
 
@@ -172,7 +172,7 @@ class Tags
             return $result;
         }
 
-        $res_result = array();
+        $res_result = [];
         $current = $result[ 0 ];
         $i = 1;
 
@@ -197,7 +197,7 @@ class Tags
 
 
     /**
-     * Parses a string and returnes an array of TAG - SRTING correspondent array The result has the following structure: array( array (string1, tag1), array (string2, tag2), ... etc )
+     * Parses a string and returnes an array of TAG - SRTING correspondent array The result has the following structure: [ array (string1, tag1), array (string2, tag2), ... etc ]
      *
      * @param $p_str string - the Input String
      * @return array - the result array
@@ -206,8 +206,8 @@ class Tags
     {
         $tags = &$this->tags;
         $hRef = &$this->hRef;
-        $tags = array();
-        $result = array();
+        $tags = [];
+        $result = [];
 
         $reg = preg_split( '/(<.*>)/U', $p_str, -1, PREG_SPLIT_DELIM_CAPTURE );
 
@@ -227,7 +227,7 @@ class Tags
                 $sHREF = ( ( $temp = end( $hRef ) ) != null ) ? $temp : "";
             } else {
                 if ( $val != "" ) {
-                    array_push( $result, array( 'text' => $val, 'tag' => $sTAG, 'params' => $sHREF ) );
+                    array_push( $result, [ 'text' => $val, 'tag' => $sTAG, 'params' => $sHREF ] );
                 }
             }
         } //while

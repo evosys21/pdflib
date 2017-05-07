@@ -93,8 +93,7 @@ $oTable->setSplitMode( true );
 $aHeader = array();
 
 //Table Header
-for ( $i = 0; $i < $nColumns; $i++ )
-{
+for ( $i = 0; $i < $nColumns; $i++ ) {
     $aHeader[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
 }
 
@@ -104,20 +103,19 @@ $aHeader1 = $aHeader;
 #$oTable->addHeader($aHeader);
 #$oTable->addHeader($aHeader1);
 
-for ( $j = 1; $j < 2; $j++ )
-{
+for ( $j = 1; $j < 2; $j++ ) {
     $aRow = Array();
 
-    for ( $i = 0; $i < $nColumns; $i++ )
-    {
+    for ( $i = 0; $i < $nColumns; $i++ ) {
         $aRow[ $i ][ 'TEXT' ] = "Line $j\nText $i\nLine $j\nText $i";
     }
 
     //add the row
     $oTable->addRow( $aRow );
 
-    if ( $j >= 1111 )
+    if ( $j >= 1111 ) {
         break;
+    }
 }
 
 //close the table

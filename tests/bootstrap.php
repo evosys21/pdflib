@@ -15,10 +15,7 @@ set_include_path( implode( PATH_SEPARATOR, array(
     get_include_path()
 ) ) );
 
+require '../autoload.php';
 
 require 'BaseTestCase.php';
 require 'BaseExamplesTestCase.php';
-require_once( APPLICATION_PATH . "/classes/pdf.php" );
-require_once( APPLICATION_PATH . "/classes/pdftable.php" );
-require_once( APPLICATION_PATH . "/pdfFactory.php" );
-

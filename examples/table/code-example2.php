@@ -2,7 +2,9 @@
 
 require( 'settings.php' );
 
-$table = new Pdf_Table( $pdf );
+use \Interpid\Pdf\Table;
+
+$table = new Table( $pdf );
 
 $table->setStyle( "p", 'Helvetica', "", 7, "130,0,30" );
 $table->setStyle( "b", 'Helvetica', "B", 7, "130,0,30" );
@@ -14,32 +16,25 @@ $columns = 3;
  * Set the tag styles
  */
 
-$table->initialize( array( 20, 30, 80 ) );
+$table->initialize( [ 20, 30, 80 ] );
 
-
-$header = array(
-    array(
-        'TEXT' => 'Header #1'
-    ),
-    array(
-        'TEXT' => 'Header #2'
-    ),
-    array(
-        'TEXT' => 'Header #3'
-    )
-);
+$header = [
+    [ 'TEXT' => 'Header #1' ],
+    [ 'TEXT' => 'Header #2' ],
+    [ 'TEXT' => 'Header #3' ]
+];
 
 //add the header row
 $table->addHeader( $header );
 
-$aImageCell = array(
+$imageCell = [
     'TYPE' => 'IMAGE',
     'FILE' => PDF_APPLICATION_PATH . '/images/dice.jpg',
     'WIDTH' => 10
-);
+];
 
 //row 1 - add data as Array
-$aRow = array();
+$aRow = [];
 $aRow[ 0 ][ 'TEXT' ] = "Line <b>1</b>";
 
 $aRow[ 1 ] = array(
@@ -55,13 +50,14 @@ $aRow[ 2 ][ 'ALIGN' ] = "L";
 $table->addRow( $aRow );
 
 //row 2 - add data as Objects
-$aRow = array();
+$aRow = [];
 
 //alternatively you can create directly the cell object
 $aRow[ 0 ] = new Table\Cell\Image( $pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10 );
 $aRow[ 1 ] = array(
     'TEXT' => "<p>This is another <b>Multicell</b></p>",
-    'BACKGROUND_COLOR' => $aColor[ 0 ] );
+    'BACKGROUND_COLOR' => $aColor[ 0 ]
+);
 $aRow[ 2 ] = new Table\Cell\Image( $pdf, PDF_RESOURCES_IMAGES . '/pensil.jpg', 10 );
 $aRow[ 2 ]->setAlign( "L" );
 

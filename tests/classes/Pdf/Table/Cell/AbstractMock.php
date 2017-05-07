@@ -8,6 +8,9 @@
  * @property mixed TEST
  * @property mixed TEST2
  */
+
+use Interpid\Pdf\Table\Cell\CellAbstract;
+
 class CellAbstractMock extends CellAbstract
 {
 

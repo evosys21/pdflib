@@ -7,7 +7,8 @@ require_once( "../classes/pdftable.php" );
 
 //create the pdf object and do some initialization
 $oPdf = new myPdfTable( 'P', 'mm', array(
-    100, 100
+    100,
+    100
 ) );
 
 $oPdf->SetAutoPageBreak( true, 20 );
@@ -18,8 +19,7 @@ $oPdf->AliasNbPages();
 $nHeight = $oPdf->h - 20;
 $y = $oPdf->GetY();
 
-if ( !isset( $bSplitMode ) )
-{
+if ( !isset( $bSplitMode ) ) {
     $bSplitMode = true;
 }
 
@@ -42,7 +42,8 @@ $nColumns = 4;
 
 //Initialize the table class, 3 columns
 $oTable->initialize( array(
-    20, 20
+    20,
+    20
 ), $aDefaultConfiguration );
 
 $oTable->setSplitMode( $bSplitMode );
@@ -50,8 +51,7 @@ $oTable->setSplitMode( $bSplitMode );
 $aHeader = array();
 
 //Table Header
-for ( $i = 0; $i < $nColumns; $i++ )
-{
+for ( $i = 0; $i < $nColumns; $i++ ) {
     $aHeader[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
 }
 
@@ -72,14 +72,12 @@ $sDefaultLongText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, s
 $sDefaultLongText2 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur";
 
 $aDefaultRow = Array();
-for ( $i = 0; $i < $nColumns; $i++ )
-{
+for ( $i = 0; $i < $nColumns; $i++ ) {
     $aDefaultRow[ $i ][ 'TEXT' ] = $sDefaultText;
 }
 $aDefaultRow[ 0 ][ 'TEXT' ] = $sDefaultText2;
 
-for ( $i = 1; $i < 3; $i++ )
-{
+for ( $i = 1; $i < 3; $i++ ) {
     $aRow = $aDefaultRow;
 
     $aRow[ 0 ][ 'ROWSPAN' ] = 2;

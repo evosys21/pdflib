@@ -12,7 +12,7 @@ namespace Interpid\PdfExamples;
 use Interpid\Pdf\Pdf;
 use Interpid\Pdf\Multicell;
 
-require( __DIR__ . '/../../../vendor/fpdf/fpdf.php');
+require( __DIR__ . '/../../../vendor/fpdf/fpdf.php' );
 
 class myPdf extends Pdf
 {

@@ -26,8 +26,7 @@ class Tools
 
     public static function getValue( array $var, $index = '', $default = '' )
     {
-        if ( isset( $var[ $index ] ) )
-        {
+        if ( isset( $var[ $index ] ) ) {
             return $var[ $index ];
         }
 
@@ -44,13 +43,11 @@ class Tools
      */
     public static function getNextValue( array $data, &$index )
     {
-        if ( isset( $index ) )
-        {
+        if ( isset( $index ) ) {
             $index++;
         }
 
-        if ( !isset( $index ) || ( $index >= count( $data ) ) )
-        {
+        if ( !isset( $index ) || ( $index >= count( $data ) ) ) {
             $index = 0;
         }
 
@@ -67,9 +64,8 @@ class Tools
      */
     public static function getColor( $r, $b = null, $g = null )
     {
-        if ( $g !== null && $b !== null )
-        {
-            return array( $r, $b, $g );
+        if ( $g !== null && $b !== null ) {
+            return [ $r, $b, $g ];
         }
 
         return $r;
@@ -84,12 +80,11 @@ class Tools
      */
     public static function makeArray( $value )
     {
-        if ( is_array( $value ) )
-        {
+        if ( is_array( $value ) ) {
             return $value;
         }
 
-        return array( $value );
+        return [ $value ];
     }
 
 
@@ -101,14 +96,17 @@ class Tools
      */
     public static function isFalse( $value )
     {
-        if ( false === $value )
+        if ( false === $value ) {
             return true;
+        }
 
-        if ( 0 === $value )
+        if ( 0 === $value ) {
             return true;
+        }
 
-        if ( '0' === $value )
+        if ( '0' === $value ) {
             return true;
+        }
 
         return false;
     }

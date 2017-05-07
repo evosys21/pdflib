@@ -33,7 +33,9 @@ class Validate
     public static function intPositive( $value )
     {
         $value = intval( $value );
-        if ( $value < 1 ) $value = 1;
+        if ( $value < 1 ) {
+            $value = 1;
+        }
 
         return $value;
     }
@@ -52,16 +54,18 @@ class Validate
     {
         $value = floatval( $value );
 
-        if ( $min !== null )
-        {
+        if ( $min !== null ) {
             $min = floatval( $min );
-            if ( $value < $min ) return $min;
+            if ( $value < $min ) {
+                return $min;
+            }
         }
 
-        if ( $max !== null )
-        {
+        if ( $max !== null ) {
             $max = floatval( $max );
-            if ( $value > $max ) return $max;
+            if ( $value > $max ) {
+                return $max;
+            }
         }
 
         return $value;
@@ -78,10 +82,9 @@ class Validate
     {
         $value = strtoupper( $value );
 
-        $aValid = array( 'T', 'B', 'M' );
+        $aValid = [ 'T', 'B', 'M' ];
 
-        if ( !in_array( $value, $aValid ) )
-        {
+        if ( !in_array( $value, $aValid ) ) {
             return 'M';
         }
 

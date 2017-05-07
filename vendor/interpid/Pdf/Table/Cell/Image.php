@@ -20,6 +20,7 @@
  */
 
 namespace Interpid\Pdf\Table\Cell;
+use Interpid\Pdf\Tools;
 
 class Image extends CellAbstract implements CellInterface
 {
@@ -66,11 +67,11 @@ class Image extends CellAbstract implements CellInterface
 
 
         $this->setImage(
-            Pdf_Tools::getValue( $aValues, 'FILE' ),
-            Pdf_Tools::getValue( $aValues, 'WIDTH' ),
-            Pdf_Tools::getValue( $aValues, 'HEIGHT' ),
-            Pdf_Tools::getValue( $aValues, 'IMAGE_TYPE' ),
-            Pdf_Tools::getValue( $aValues, 'LINK' ) );
+            Tools::getValue( $aValues, 'FILE' ),
+            Tools::getValue( $aValues, 'WIDTH' ),
+            Tools::getValue( $aValues, 'HEIGHT' ),
+            Tools::getValue( $aValues, 'IMAGE_TYPE' ),
+            Tools::getValue( $aValues, 'LINK' ) );
     }
 
 

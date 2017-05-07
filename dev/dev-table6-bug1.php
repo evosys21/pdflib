@@ -104,8 +104,7 @@ $oTable->setSplitMode( true );
 $aHeader = array();
 
 //Table Header
-for ( $i = 0; $i < $nColumns; $i++ )
-{
+for ( $i = 0; $i < $nColumns; $i++ ) {
     $aHeader[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
 }
 
@@ -120,12 +119,10 @@ $aHeader[ 2 ][ 'ROWSPAN' ] = 2;
 $oTable->addHeader( $aHeader );
 $oTable->addHeader( $aHeader1 );
 
-for ( $j = 1; $j < 5; $j++ )
-{
+for ( $j = 1; $j < 5; $j++ ) {
     $aRow = Array();
 
-    for ( $i = 0; $i < $nColumns; $i++ )
-    {
+    for ( $i = 0; $i < $nColumns; $i++ ) {
         $aRow[ $i ][ 'TEXT' ] = "Line $j\nText $i";
     }
 
@@ -135,8 +132,7 @@ for ( $j = 1; $j < 5; $j++ )
     $aRow[ 2 ][ 'TEXT_ALIGN' ] = "R"; //text align
 
 
-    if ( $j == 1 )
-    {
+    if ( $j == 1 ) {
 //         $o = new Pdf_Table_Cell_Image("pic1.jpg", 10, 25);
 //         $o->setPadding(10, 5, 5, 5);
 //         $aRow[1] = $o;
@@ -145,8 +141,9 @@ for ( $j = 1; $j < 5; $j++ )
     //add the row
     $oTable->addRow( $aRow );
 
-    if ( $j >= 1111 )
+    if ( $j >= 1111 ) {
         break;
+    }
 }
 
 //close the table

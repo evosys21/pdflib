@@ -21,6 +21,10 @@
 
 namespace Interpid\Pdf;
 
+use Interpid\Pdf\Table\Cell\CellInterface;
+use Interpid\Pdf\Table\Cell\CellAbstract;
+use Interpid\Pdf\Table\Cell\Void;
+
 class Table
 {
 
@@ -160,7 +164,7 @@ class Table
      * Table configuration array
      * @var array
      */
-    protected $configuration = array();
+    protected $configuration = [];
 
     /**
      * Contains the Header Data - header characteristics and texts Characteristics constants for Header Type: EVERY CELL FROM THE TABLE IS A MULTICELL TEXT_COLOR - text color = array(r,g,b); TEXT_SIZE
@@ -173,7 +177,7 @@ class Table
      * @var array
      *
      */
-    protected $tableHeaderType = array();
+    protected $tableHeaderType = [];
 
     /**
      * Header is drawed or not
@@ -226,7 +230,7 @@ class Table
      *
      * @var array
      */
-    protected $dataCache = array();
+    protected $dataCache = [];
 
     /**
      * TRUE - if there is a Rowspan in the Data Cache
@@ -249,7 +253,7 @@ class Table
      *
      * @var array
      */
-    protected $headerCache = array();
+    protected $headerCache = [];
 
     /**
      * Header Height.
@@ -294,7 +298,7 @@ class Table
      *
      * @var object
      */
-    private static $_singleton = array(); //implements the Singleton Pattern
+    private static $_singleton = []; //implements the Singleton Pattern
 
 
     /**
@@ -303,12 +307,12 @@ class Table
      * @var array
      *
      */
-    protected $aColumnWidth = array();
+    protected $aColumnWidth = [];
 
     protected $typeMap = array(
-        'EMPTY' => 'Table\Cell\Void',
-        'MULTICELL' => 'Table\Cell\Multicell',
-        'IMAGE' => 'Table\Cell\Image'
+        'EMPTY' => '\Interpid\Pdf\Table\Cell\Void',
+        'MULTICELL' => '\Interpid\Pdf\Table\Cell\Multicell',
+        'IMAGE' => '\Interpid\Pdf\Table\Cell\Image',
     );
 
     /**
@@ -340,7 +344,7 @@ class Table
      * Returnes the Singleton Instance of this class.
      *
      * @param Pdf $pdf object the pdf Object
-     * @return Pdf_Table
+     * @return self
      */
     static function getInstance( $pdf )
     {
@@ -380,10 +384,10 @@ class Table
         //heeader is not parsed
         $this->headerParsed = false;
 
-        $this->tableHeaderType = Array();
+        $this->tableHeaderType = [];
 
-        $this->dataCache = Array();
-        $this->headerCache = Array();
+        $this->dataCache = [];
+        $this->headerCache = [];
 
         $this->tableStartX = $this->pdf->GetX();
         $this->tableStartY = $this->pdf->GetY();
@@ -551,12 +555,12 @@ class Table
     {
         for ( $i = 0; $i <= $nRow; $i++ ) {
             if ( !isset( $this->tableHeaderType[ $i ] ) ) {
-                $this->tableHeaderType[ $i ] = array();
+                $this->tableHeaderType[ $i ] = [];
             }
         }
 
         if ( !isset( $this->tableHeaderType[ $nRow ][ $nColumn ] ) ) {
-            $this->tableHeaderType[ $nRow ][ $nColumn ] = array();
+            $this->tableHeaderType[ $nRow ][ $nColumn ] = [];
         }
 
         $this->tableHeaderType[ $nRow ][ $nColumn ][ $sPropertyKey ] = $sPropertyValue;
@@ -576,7 +580,7 @@ class Table
         }
 
         //empty the header cache
-        $this->headerCache = Array();
+        $this->headerCache = [];
 
         //create the header cache data
         foreach ( $this->tableHeaderType as $val ) {
@@ -749,7 +753,7 @@ class Table
     public function addPageBreak()
     {
         //$this->insertNewPage();
-        $aData = array();
+        $aData = [];
         $aData[ 'ADD_PAGE_BREAK' ] = true;
         $this->dataCache[] = array(
             'HEIGHT' => 0,
@@ -851,7 +855,7 @@ class Table
             $aRefCache = &$this->dataCache;
         }
 
-        $aRowSpan = array();
+        $aRowSpan = [];
 
         $hm = 0;
 
@@ -861,13 +865,13 @@ class Table
         if ( count( $aRefCache ) > 0 ) {
             $aLastDataCache = end( $aRefCache );
         } else {
-            $aLastDataCache = array();
+            $aLastDataCache = [];
         }
 
         //this variable will contain the active colspans
         $iActiveColspan = 0;
 
-        $aRow = array();
+        $aRow = [];
 
         //calculate the maximum height of the cells
         for ( $i = 0; $i < $this->columns; $i++ ) {
@@ -998,7 +1002,7 @@ class Table
             $aRefCache = &$this->headerCache;
         }
 
-        $aRowSpans = array();
+        $aRowSpans = [];
 
         $iItems = count( $aRefCache );
 
@@ -1113,7 +1117,7 @@ class Table
         $iLastDataKey = 0;
 
         //will contain the rowspans on the current page, EMPTY THIS VARIABLE AT EVERY NEW PAGE!!!
-        $aRowSpans = array();
+        $aRowSpans = [];
 
         $aDC = &$this->dataCache;
 
@@ -1124,7 +1128,7 @@ class Table
 
             switch ( $val[ 'DATATYPE' ] ) {
                 case self::TB_DATA_TYPE_INSERT_NEW_PAGE:
-                    $aRowSpans = array();
+                    $aRowSpans = [];
                     $iLeftHeight = $iPageHeight;
                     $this->dataOnCurrentPage = false; //new page
                     $this->insertNewPage( $i, null, true, true );
@@ -1240,7 +1244,7 @@ class Table
                             #$fRowH = 0;
                             $fRowHTdata = 0;
 
-                            $aTData = array();
+                            $aTData = [];
 
                             //parse the data's on this line
                             for ( $j = 0; $j < $this->columns; $j++ ) {
@@ -1281,7 +1285,7 @@ class Table
 
                             $v_new = $val;
                             $v_new[ 'HEIGHT' ] = $fRowHTdata;
-                            $v_new[ 'ROWSPAN' ] = array();
+                            $v_new[ 'ROWSPAN' ] = [];
                             /**
                              * Parse separately the rows with the ROWSPAN
                              */
@@ -1397,7 +1401,7 @@ class Table
                 }
 
                 $iLeftHeight = $iPageHeight;
-                $aRowSpans = array();
+                $aRowSpans = [];
                 $this->dataOnCurrentPage = false; //new page
             }
         }
@@ -1724,7 +1728,7 @@ class Table
      */
     protected function getDefaultConfiguration()
     {
-        $aDefaultConfiguration = array();
+        $aDefaultConfiguration = [];
 
         require PDF_APPLICATION_PATH . '/table.config.php';
 

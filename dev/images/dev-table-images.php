@@ -17,30 +17,45 @@ require_once( "../classes/pdftable.php" );
 
 //define some background colors
 $aBgColor1 = array(
-    234, 255, 218
+    234,
+    255,
+    218
 );
 $aBgColor2 = array(
-    165, 250, 220
+    165,
+    250,
+    220
 );
 $aBgColor3 = array(
-    255, 252, 249
+    255,
+    252,
+    249
 );
 $aBgColor4 = array(
-    86, 155, 225
+    86,
+    155,
+    225
 );
 $aBgColor5 = array(
-    207, 247, 239
+    207,
+    247,
+    239
 );
 $aBgColor6 = array(
-    246, 211, 207
+    246,
+    211,
+    207
 );
 $bg_color7 = array(
-    216, 243, 228
+    216,
+    243,
+    228
 );
 
 //create the pdf object and do some initialization
 $oPdf = new myPdfTable( 'P', 'mm', array(
-    130, 180
+    130,
+    180
 ) );
 $oPdf->SetAutoPageBreak( true, 20 );
 $oPdf->SetMargins( 20, 20, 20 );
@@ -84,7 +99,10 @@ $oPdf->Ln( 30 );
 
 //Initialize the table class, 3 columns
 $oTable->initialize( array(
-    20, 20, 20, 20
+    20,
+    20,
+    20,
+    20
 ) );
 
 //$oTable->setSplitMode(false);
@@ -93,8 +111,7 @@ $oTable->setSplitMode( true );
 $aHeader = array();
 
 //Table Header
-for ( $i = 0; $i < $nColumns; $i++ )
-{
+for ( $i = 0; $i < $nColumns; $i++ ) {
     $aHeader[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
 }
 
@@ -109,12 +126,10 @@ $aHeader[ 2 ][ 'ROWSPAN' ] = 2;
 $oTable->addHeader( $aHeader );
 $oTable->addHeader( $aHeader1 );
 
-for ( $j = 1; $j < 5; $j++ )
-{
+for ( $j = 1; $j < 5; $j++ ) {
     $aRow = Array();
 
-    for ( $i = 0; $i < $nColumns; $i++ )
-    {
+    for ( $i = 0; $i < $nColumns; $i++ ) {
         $aRow[ $i ][ 'TEXT' ] = "Line $j\nText $i";
     }
 
@@ -124,8 +139,7 @@ for ( $j = 1; $j < 5; $j++ )
     $aRow[ 2 ][ 'TEXT_ALIGN' ] = "R"; //text align
 
 
-    if ( $j == 1 )
-    {
+    if ( $j == 1 ) {
         //$o = new Pdf_Table_Cell_Image("pic1.jpg", 5, 50);
         //$o = new Pdf_Table_Cell_Image($oPdf, "pic1.jpg");
         $o = new Pdf_Table_Cell_Image( $oPdf, "pic1.jpg", 20, 10 );
@@ -154,8 +168,9 @@ for ( $j = 1; $j < 5; $j++ )
     //add the row
     $oTable->addRow( $aRow );
 
-    if ( $j >= 1111 )
+    if ( $j >= 1111 ) {
         break;
+    }
 }
 
 //close the table

@@ -1,7 +1,6 @@
 <?php
 
-if ( !isset( $bSplitMode ) )
-{
+if ( !isset( $bSplitMode ) ) {
     $bSplitMode = true;
 }
 
@@ -9,7 +8,7 @@ require __DIR__ . '/table.config.php';
 
 $pdf->SetFontSize( 7 );
 
-$table = new PdfTable( $pdf );
+$table = new Table( $pdf );
 
 $table->setStyle( "p", 'Helvetica', "", 6, "130,0,30" );
 $table->setStyle( "b", 'Helvetica', "", 8, "80,80,260" );
@@ -32,11 +31,10 @@ $table->initialize( array(
 
 $table->setSplitMode( $bSplitMode );
 
-$header = array();
+$header = [];
 
 //Table Header
-for ( $i = 0; $i < $columns; $i++ )
-{
+for ( $i = 0; $i < $columns; $i++ ) {
     $header[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
 }
 
@@ -56,19 +54,16 @@ $sDefaultText2 = "<p>Some Line</p>\n<b>Some text</b>";
 $sDefaultLongText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 $sDefaultLongText2 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur";
 
-$aDefaultRow = Array();
-for ( $i = 0; $i < $columns; $i++ )
-{
+$aDefaultRow = [];
+for ( $i = 0; $i < $columns; $i++ ) {
     $aDefaultRow[ $i ][ 'TEXT' ] = $sDefaultText;
 }
 $aDefaultRow[ 0 ][ 'TEXT' ] = $sDefaultText2;
 
-for ( $i = 1; $i < 10; $i++ )
-{
+for ( $i = 1; $i < 10; $i++ ) {
     $aRow = $aDefaultRow;
 
-    switch ( $i )
-    {
+    switch ( $i ) {
         case 1:
             $aRow[ 0 ][ 'TEXT_ALIGN' ] = 'L';
             $aRow[ 1 ][ 'TEXT_ALIGN' ] = 'C';

@@ -100,8 +100,7 @@ $oTable->initialize( array(
 $aHeader = array();
 
 //Table Header
-for ( $i = 0; $i < $nColumns; $i++ )
-{
+for ( $i = 0; $i < $nColumns; $i++ ) {
     $aHeader[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
 }
 
@@ -113,12 +112,10 @@ $aHeader[ 0 ][ 'COLSPAN' ] = 2;
 $oTable->addHeader( $aHeader );
 $oTable->addHeader( $aHeader1 );
 
-for ( $j = 1; $j < 5; $j++ )
-{
+for ( $j = 1; $j < 5; $j++ ) {
     $aRow = Array();
 
-    for ( $i = 0; $i < $nColumns; $i++ )
-    {
+    for ( $i = 0; $i < $nColumns; $i++ ) {
         $aRow[ $i ][ 'TEXT' ] = "Line $j Text $i";
     }
 

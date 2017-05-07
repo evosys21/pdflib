@@ -22,7 +22,7 @@ $columns = 3;
  * Set the tag styles
  */
 
-$table->initialize( array( 20, 30, 80 ) );
+$table->initialize( [ 20, 30, 80 ] );
 $table->setRowConfig( array(
     'BACKGROUND_COLOR' => false
 ) );
@@ -43,14 +43,14 @@ $header = array(
 //add the header row
 $table->addHeader( $header );
 
-$aImageCell = array(
+$imageCell = array(
     'TYPE' => 'IMAGE',
     'FILE' => PDF_APPLICATION_PATH . '/images/dice.jpg',
     'WIDTH' => 10
 );
 
 //row 1 - add data as Array
-$aRow = array();
+$aRow = [];
 $aRow[ 0 ][ 'TEXT' ] = "Line <b>1</b>";
 
 $aRow[ 1 ] = array(
@@ -66,11 +66,11 @@ $aRow[ 2 ][ 'ALIGN' ] = "L";
 $table->addRow( $aRow );
 
 //row 2 - add data as Objects
-$aRow = array();
+$aRow = [];
 
 //alternatively you can create directly the cell object
-$aRow[ 0 ] = new Table\Cell\Image( $pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10 );
-$aRow[ 1 ] = new Table\Cell\Multicell( $pdf, "<p>This is another <b>Multicell</b></p>" );
+$aRow[ 0 ] = new \Interpid\Pdf\Table\Cell\Image( $pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10 );
+$aRow[ 1 ] = new \Interpid\Pdf\Table\Cell\Multicell( $pdf, "<p>This is another <b>Multicell</b></p>" );
 $aRow[ 2 ][ 'TEXT' ] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='http://www.interpid.eu'>www.interpid.eu</bi></p>";
 $aRow[ 2 ][ 'BACKGROUND_COLOR' ] = $aColor[ 1 ];
 

@@ -7,11 +7,9 @@
  *
  */
 
-require_once( APPLICATION_PATH . "/mypdf.php" );
-require_once( APPLICATION_PATH . "/classes/pdf.php" );
-require_once( APPLICATION_PATH . "/classes/pdftable.php" );
-
 require_once( __DIR__ . "/Helper.php" );
+
+use \Interpid\PdfExamples\myPdf;
 
 class testPdf extends myPdf
 {

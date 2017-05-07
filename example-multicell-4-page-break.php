@@ -36,8 +36,7 @@ $multicell->setStyle( "color", 'Helvetica', "BI", 12, "0,255,255" );
 $txt1 = file_get_contents( __DIR__ . '/content/createdby.txt' );
 
 $txt2 = '<p>';
-for ( $i = 0; $i < 100; $i++ )
-{
+for ( $i = 0; $i < 100; $i++ ) {
     $txt2 .= "Line <b>$i</b>\n";
 }
 

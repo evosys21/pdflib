@@ -57,8 +57,7 @@ $oTable->setSplitMode( true );
 $aHeader = array();
 
 //Table Header
-for ( $i = 0; $i < $nColumns; $i++ )
-{
+for ( $i = 0; $i < $nColumns; $i++ ) {
     $aHeader[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
 }
 
@@ -93,8 +92,7 @@ $aAlignments = array(
 
 $nAlign = 0;
 
-for ( $i = 1; $i < 25; $i++ )
-{
+for ( $i = 1; $i < 25; $i++ ) {
 
     $aRow = Array();
 
@@ -103,10 +101,10 @@ for ( $i = 1; $i < 25; $i++ )
 
     $aRow[ 0 ] = $oImage;
 
-    for ( $j = 1; $j < 4; $j++ )
-    {
-        if ( $nAlign >= count( $aAlignments ) )
+    for ( $j = 1; $j < 4; $j++ ) {
+        if ( $nAlign >= count( $aAlignments ) ) {
             $nAlign = 0;
+        }
         $aRow[ $j ] = $aImageCell1;
         $aRow[ $j ][ 'ALIGN' ] = $aAlignments[ $nAlign++ ];
     }

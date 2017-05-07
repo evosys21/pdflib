@@ -90,16 +90,14 @@ $oTable->initialize( array(
 $aHeader = array();
 
 //Table Header
-for ( $i = 0; $i < $nColumns; $i++ )
-{
+for ( $i = 0; $i < $nColumns; $i++ ) {
     $aHeader[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
 }
 
 //add the header
 $oTable->addHeader( $aHeader );
 
-for ( $j = 1; $j < 5; $j++ )
-{
+for ( $j = 1; $j < 5; $j++ ) {
     $aRow = Array();
     $aRow[ 0 ][ 'TEXT' ] = "Line $j Text 1"; //text for column 0
     $aRow[ 0 ][ 'TEXT_ALIGN' ] = "L"; //text align

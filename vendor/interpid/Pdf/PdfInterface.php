@@ -77,8 +77,9 @@ class PdfInterface
     {
         $n = $this->getPageWidth() - $this->getX();
 
-        if ( $n < 0 )
+        if ( $n < 0 ) {
             $n = 0;
+        }
 
         return $n;
     }
@@ -93,7 +94,7 @@ class PdfInterface
     public function stringToArray( $str )
     {
         // split string into array of equivalent codes
-        $aResult = array();
+        $aResult = [];
         $strlen = strlen( $str );
         for ( $i = 0; $i < $strlen; $i++ ) {
             $aResult[] = ord( $str[ $i ] );
@@ -168,8 +169,9 @@ class PdfInterface
             $pos = strrpos( $file, '.' );
             $type = substr( $file, $pos + 1 );
             $type = strtolower( $type );
-            if ( $type == 'jpeg' )
+            if ( $type == 'jpeg' ) {
                 $type = 'jpg';
+            }
             $mtd = '_parse' . $type;
             if ( !method_exists( $this->pdf, $mtd ) ) {
                 $this->pdf->Error( 'Unsupported image type: ' . $type );
@@ -187,14 +189,18 @@ class PdfInterface
             $w = -96;
             $h = -96;
         }
-        if ( $w < 0 )
+        if ( $w < 0 ) {
             $w = -$info[ 'w' ] * 72 / $w / $this->pdf->k;
-        if ( $h < 0 )
+        }
+        if ( $h < 0 ) {
             $h = -$info[ 'h' ] * 72 / $h / $this->pdf->k;
-        if ( $w == 0 )
+        }
+        if ( $w == 0 ) {
             $w = $h * $info[ 'w' ] / $info[ 'h' ];
-        if ( $h == 0 )
+        }
+        if ( $h == 0 ) {
             $h = $w * $info[ 'h' ] / $info[ 'w' ];
+        }
 
         return array(
             $w,

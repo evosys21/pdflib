@@ -3,22 +3,20 @@
 $columns = 3;
 
 //Initialize the table class, 3 columns
-$table->initialize( array( 40, 50, 30 ) );
+$table->initialize( [ 40, 50, 30 ] );
 
-$header = array();
+$header = [];
 
 //Table Header
-for ( $i = 0; $i < $columns; $i++ )
-{
+for ( $i = 0; $i < $columns; $i++ ) {
     $header[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
 }
 
 //add the header
 $table->addHeader( $header );
 
-for ( $j = 1; $j < 5; $j++ )
-{
-    $aRow = Array();
+for ( $j = 1; $j < 5; $j++ ) {
+    $aRow = [];
     $aRow[ 0 ][ 'TEXT' ] = "Line $j Text 1"; //text for column 0
     $aRow[ 0 ][ 'TEXT_ALIGN' ] = "L"; //text align
     //$aRow[0]['LINE_SIZE'] = 7; //text align

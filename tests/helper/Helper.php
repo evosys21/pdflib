@@ -6,6 +6,9 @@
  * Date: 10/20/2014
  * Time: 10:21 PM
  */
+
+use \Interpid\PdfExamples\pdfFactory;
+
 class Helper
 {
 
@@ -24,8 +27,7 @@ class Helper
             180
         ) );
 
-        $factory = new pdfFactory();
-        $factory->initPdfObject( $pdf );
+        pdfFactory::initPdfObject( $pdf );
 
         //disable compression for testing
         $pdf->SetCompression( false );

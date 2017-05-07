@@ -27,8 +27,7 @@ $oTable->initialize( array( 20, 30, 50, 30 ), $aDefaultConfiguration );
 $aHeader = array();
 
 //Table Header
-for ( $i = 0; $i < $nColumns; $i++ )
-{
+for ( $i = 0; $i < $nColumns; $i++ ) {
     $aHeader[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
     //$aHeader[ $i ][ '' ]
 }
@@ -38,8 +37,7 @@ for ( $i = 0; $i < $nColumns; $i++ )
 #$oTable->addHeader( $aHeader );
 #$oTable->addHeader();
 
-for ( $j = 1; $j < 10; $j++ )
-{
+for ( $j = 1; $j < 10; $j++ ) {
     $aRow = Array();
     $aRow[ 0 ][ 'TEXT' ] = "This is\nLine $j";
     $aRow[ 1 ][ 'TEXT' ] = $sText;

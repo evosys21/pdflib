@@ -35,12 +35,9 @@ class TableExamples2Test extends PHPUnit_Framework_TestCase
 
         $sResultFile = TEST_PATH . '/data/' . $name . '.pdf';
 
-        if ( defined( 'GENERATE_RESULT_FILES' ) )
-        {
+        if ( defined( 'GENERATE_RESULT_FILES' ) ) {
             $sPdfFile = $sResultFile;
-        }
-        else
-        {
+        } else {
             $sPdfFile = tempnam( sys_get_temp_dir(), 'pdf_test' );
         }
 
@@ -51,8 +48,7 @@ class TableExamples2Test extends PHPUnit_Framework_TestCase
 
         $this->assertFileEquals( $sPdfFile, $sResultFile );
 
-        if ( !defined( 'GENERATE_RESULT_FILES' ) )
-        {
+        if ( !defined( 'GENERATE_RESULT_FILES' ) ) {
             unlink( $sPdfFile );
         }
     }

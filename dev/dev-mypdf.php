@@ -11,8 +11,7 @@ require_once 'dev-includes.php';
 require_once 'settings.php';
 
 
-if ( !defined( 'PDF_APPLICATION_PATH' ) )
-{
+if ( !defined( 'PDF_APPLICATION_PATH' ) ) {
     define( 'PDF_APPLICATION_PATH', dirname( __FILE__ ) . '/..' );
 }
 

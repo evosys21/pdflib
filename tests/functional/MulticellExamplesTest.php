@@ -16,8 +16,7 @@ class MulticellExamplesTest extends BaseExamplesTestCase
             'example-multicell-4-page-break.php',
         );
 
-        foreach ( $aSources as $source )
-        {
+        foreach ( $aSources as $source ) {
             $require = APPLICATION_PATH . '/' . $source;
             $this->runTestWithExample( $require, basename( $require ) );
         }

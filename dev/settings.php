@@ -9,7 +9,8 @@ $aBgColor = array(
     array( 86, 155, 225 ),
     array( 207, 247, 239 ),
     array( 246, 211, 207 ),
-    array( 216, 243, 228 ) );
+    array( 216, 243, 228 )
+);
 
 
 //top, right, bottom, left

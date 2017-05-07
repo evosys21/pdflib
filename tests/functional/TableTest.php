@@ -23,12 +23,9 @@ class TableTest extends PHPUnit_Framework_TestCase
 
         $sResultFile = TEST_PATH . '/data/' . $name . '.pdf';
 
-        if ( defined( 'GENERATE_RESULT_FILES' ) )
-        {
+        if ( defined( 'GENERATE_RESULT_FILES' ) ) {
             $sPdfFile = $sResultFile;
-        }
-        else
-        {
+        } else {
             $sPdfFile = tempnam( sys_get_temp_dir(), 'pdf_test' );
         }
 
@@ -39,8 +36,7 @@ class TableTest extends PHPUnit_Framework_TestCase
 
         $this->assertFileEquals( $sPdfFile, $sResultFile );
 
-        if ( !defined( 'GENERATE_RESULT_FILES' ) )
-        {
+        if ( !defined( 'GENERATE_RESULT_FILES' ) ) {
             unlink( $sPdfFile );
         }
     }
@@ -53,8 +49,7 @@ class TableTest extends PHPUnit_Framework_TestCase
         $height = $pdf->h - 60;
         $y = $pdf->GetY();
 
-        while ( $y < $height )
-        {
+        while ( $y < $height ) {
             Helper::setFontStyle1( $pdf );
             $pdf->Cell( 0, 5, "Current Y: $y" );
             $pdf->SetY( $y );
@@ -67,12 +62,9 @@ class TableTest extends PHPUnit_Framework_TestCase
 
         $sResultFile = TEST_PATH . '/data/' . $name . '.pdf';
 
-        if ( defined( 'GENERATE_RESULT_FILES' ) )
-        {
+        if ( defined( 'GENERATE_RESULT_FILES' ) ) {
             $sPdfFile = $sResultFile;
-        }
-        else
-        {
+        } else {
             $sPdfFile = tempnam( sys_get_temp_dir(), 'pdf_test' );
         }
 
@@ -83,8 +75,7 @@ class TableTest extends PHPUnit_Framework_TestCase
 
         $this->assertFileEquals( $sPdfFile, $sResultFile );
 
-        if ( !defined( 'GENERATE_RESULT_FILES' ) )
-        {
+        if ( !defined( 'GENERATE_RESULT_FILES' ) ) {
             unlink( $sPdfFile );
         }
     }
@@ -99,12 +90,9 @@ class TableTest extends PHPUnit_Framework_TestCase
 
         $sResultFile = TEST_PATH . '/data/' . $name . '.pdf';
 
-        if ( defined( 'GENERATE_RESULT_FILES' ) )
-        {
+        if ( defined( 'GENERATE_RESULT_FILES' ) ) {
             $sPdfFile = $sResultFile;
-        }
-        else
-        {
+        } else {
             $sPdfFile = tempnam( sys_get_temp_dir(), 'pdf_test' );
         }
 
@@ -115,8 +103,7 @@ class TableTest extends PHPUnit_Framework_TestCase
 
         $this->assertFileEquals( $sPdfFile, $sResultFile );
 
-        if ( !defined( 'GENERATE_RESULT_FILES' ) )
-        {
+        if ( !defined( 'GENERATE_RESULT_FILES' ) ) {
             unlink( $sPdfFile );
         }
     }

@@ -34,5 +34,13 @@ $aPaddings = array(
 
 
 $aAlignments = array(
-    'TL', 'TC', 'TR', 'ML', 'MC', 'MR', 'BL', 'BC', 'BR'
+    'TL',
+    'TC',
+    'TR',
+    'ML',
+    'MC',
+    'MR',
+    'BL',
+    'BC',
+    'BR'
 );

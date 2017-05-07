@@ -108,14 +108,14 @@ class Multicell
      *
      * @var object
      */
-    private static $_singleton = array(); //implements the Singleton Pattern
+    private static $_singleton = []; //implements the Singleton Pattern
 
 
     protected $aImage = null;
 
     protected $bFill = true;
 
-    protected $TagStyle = array();
+    protected $TagStyle = [];
 
     /**
      * Class constructor.
@@ -209,7 +209,7 @@ class Multicell
         $this->currentTag = "";
 
         //@formatter:off
-        $this->dataInfo = array();
+        $this->dataInfo = [];
         $this->dataExtraInfo = array(
             "LAST_LINE_BR" => "", //CURRENT LINE BREAK TYPE
             "CURRENT_LINE_BR" => "", //LAST LINE BREAK TYPE
@@ -421,7 +421,7 @@ class Multicell
 
         $nMaximumWidth = $width;
 
-        $aLine = array(); //this will contain the result
+        $aLine = []; //this will contain the result
         $bReturnResult = false; //if break and return result
         $bResetSpaces = false;
 
@@ -737,16 +737,16 @@ class Multicell
      * Draws a MultiCell with TAG recognition parameters
      *
      *
-     * @param $width number - with of the cell
-     * @param $height number - height of the lines in the cell
-     * @param $data string - string or formatted data to be putted in the multicell
+     * @param number $width width of the cell
+     * @param number $height height of the lines in the cell
+     * @param mixed(string|array) $data - string or formatted data to be putted in the multicell
      * @param int $border
      * @param $align string - Sets the text alignment Possible values: L: left R: right C: center J: justified
-     * @param int|number $fill number - Indicates if the cell background must be painted (1) or transparent (0). Default value: 0.
-     * @param int|number $paddingLeft number - Left pad
-     * @param int|number $paddingTop number - Top pad
-     * @param int|number $paddingRight number - Right pad
-     * @param int|number $paddingBottom number - Bottom pad
+     * @param int|number $fill Indicates if the cell background must be painted (1) or transparent (0). Default value: 0.
+     * @param int|number $paddingLeft Left pad
+     * @param int|number $paddingTop Top pad
+     * @param int|number $paddingRight Right pad
+     * @param int|number $paddingBottom Bottom pad
      * @param $bDataIsString boolean - true if $data is a string - false if $data is an array containing lines formatted with $this->makeLine($width) function (the false option is used in relation
      * with stringToLines, to avoid double formatting of a string
      * @internal param \or $string number $border Indicates if borders must be drawn around the cell block. The value can be either a number: 0 = no border 1 = frame border or a string containing some or all of
@@ -940,7 +940,7 @@ class Multicell
      * This method parses the current text and return an array that contains the text information for each line that will be drawed.
      *
      *
-     * @param int|number $width number - width of the line
+     * @param int|number $width width of the line
      * @param $pStr string - String to be parsed
      * @return array $aStrLines - contains parsed text information.
      */
@@ -954,7 +954,7 @@ class Multicell
 
         $bLastLine = !( count( $this->dataInfo ) > 0 );
 
-        $aStrLines = array();
+        $aStrLines = [];
 
         while ( !$bLastLine ) {
 
@@ -977,10 +977,10 @@ class Multicell
      * Draws a Tag Based formatted line returned from makeLine function into the pdf document
      *
      *
-     * @param $width number - width of the text
-     * @param $height number - height of a line
-     * @param $aTxt array - data with text to be draw
-     * @param $align string - align of the text
+     * @param number $width width of the text
+     * @param number $height height of a line
+     * @param array $aTxt data with text to be draw
+     * @param string $align align of the text
      */
     protected function printLine( $width, $height, $aTxt, $align = 'J' )
     {
@@ -1124,9 +1124,9 @@ class Multicell
      * Returns the Width of the Specified Char.
      * The Font Style / Size are taken from the tag specifications!
      *
-     * @param $tag string - inner tag
-     * @param $char number - character specified by ascii/unicode code
-     * @return number - the char width
+     * @param string $tag inner tag
+     * @param string $char character specified by ascii/unicode code
+     * @return number the char width
      */
     protected function mt_getCharWidth( $tag, $char )
     {

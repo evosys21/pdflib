@@ -4,40 +4,34 @@
  * Copyright (c), Interpid, http://www.interpid.eu
  */
 
-// include the pdf factory
-require_once( "pdfFactory.php" );
 
-// Include the Advanced Table Class
-require_once( "classes/pdftable.php" );
+require_once __DIR__ . "/autoload.php";
 
-/**
- * Include my Custom PDF class This is required only to overwrite the header
- */
-require_once( "mypdf-table.php" );
+use Interpid\Pdf\Multicell;
+use Interpid\Pdf\Table;
+use Interpid\PdfExamples\pdfFactory;
 
 $factory = new pdfFactory();
 
-// create new PDF document
-$pdf = new myPdfTable();
-$factory->initPdfObject( $pdf );
-
+//get the FPDF object and initializes it
+$pdf = pdfFactory::newPdf( 'table' );
 
 //define some background colors
-$aBgColor1 = array( 234, 255, 218 );
-$aBgColor2 = array( 165, 250, 220 );
-$aBgColor3 = array( 255, 252, 249 );
-$aBgColor4 = array( 86, 155, 225 );
-$aBgColor5 = array( 207, 247, 239 );
-$aBgColor6 = array( 246, 211, 207 );
-$bg_color7 = array( 216, 243, 228 );
+$aBgColor1 = [ 234, 255, 218 ];
+$aBgColor2 = [ 165, 250, 220 ];
+$aBgColor3 = [ 255, 252, 249 ];
+$aBgColor4 = [ 86, 155, 225 ];
+$aBgColor5 = [ 207, 247, 239 ];
+$aBgColor6 = [ 246, 211, 207 ];
+$bg_color7 = [ 216, 243, 228 ];
 
 /**
  * Create the pdf Table object
  * Alternative you can use the Singleton Instance
  *
- * @example : $table = PdfTable::getInstance($pdf);
+ * @example : $table = Table::getInstance($pdf);
  */
-$table = new PdfTable( $pdf );
+$table = new Table( $pdf );
 
 /**
  * Set the tag styles
@@ -51,7 +45,7 @@ $table->setStyle( "bi", 'Helvetica', "BI", 12, "0,0,120" );
 $pdf->SetTextColor( 118, 0, 3 );
 
 //create an advanced multicell    
-$multicell = PdfMulticell::getInstance( $pdf );
+$multicell = Multicell::getInstance( $pdf );
 $multicell->setStyle( "s1", 'Helvetica', "", 8, "118,0,3" );
 $multicell->setStyle( "s2", 'Helvetica', "", 6, "0,49,159" );
 
