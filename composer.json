@@ -1,0 +1,18 @@
+{
+    "name": "interpid/fpdf",
+    "description": "Fpdf Addons",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Andrei Bintintan",
+            "email": "andy@interpid.eu"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "classmap": [
+			"vendor/fpdf",
+			"vendor/interpid"
+        ]
+    }
+}

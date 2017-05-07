@@ -4,44 +4,17 @@
     <option name="SCOPE_TYPE" value="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="#1200 Implement Namespaces&#10;#1199 Remove Hungarian Notation&#10;#1201 Use array short-hands">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/createdby.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/multicell_text1.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-multicell-1-overview.pdf" afterPath="$PROJECT_DIR$/tests/data/example-multicell-1-overview.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-multicell-2-overview-page-break.pdf" afterPath="$PROJECT_DIR$/tests/data/example-multicell-2-overview-page-break.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-multicell-3-line-breaking.pdf" afterPath="$PROJECT_DIR$/tests/data/example-multicell-3-line-breaking.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-multicell-4-page-break.pdf" afterPath="$PROJECT_DIR$/tests/data/example-multicell-4-page-break.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-table-1-overview.pdf" afterPath="$PROJECT_DIR$/tests/data/example-table-1-overview.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-table-2-overview.pdf" afterPath="$PROJECT_DIR$/tests/data/example-table-2-overview.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-table-3-detailed.pdf" afterPath="$PROJECT_DIR$/tests/data/example-table-3-detailed.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-table-4-override.pdf" afterPath="$PROJECT_DIR$/tests/data/example-table-4-override.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/table-code-example-alignments.pdf" afterPath="$PROJECT_DIR$/tests/data/table-code-example-alignments.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="#1200 Implement Namespaces&#10;#1199 Remove Hungarian Notation&#10;#1201 Use array short-hands&#10;#1202 Table vertical align not working">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autoload.php" afterPath="$PROJECT_DIR$/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/header-multicell.txt" afterPath="$PROJECT_DIR$/content/header-multicell.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/header-table.txt" afterPath="$PROJECT_DIR$/content/header-table.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/multicell.txt" afterPath="$PROJECT_DIR$/content/multicell.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example-multicell-1-overview.php" afterPath="$PROJECT_DIR$/example-multicell-1-overview.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example-multicell-2-overview-page-break.php" afterPath="$PROJECT_DIR$/example-multicell-2-overview-page-break.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example-multicell-4-page-break.php" afterPath="$PROJECT_DIR$/example-multicell-4-page-break.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example-table-1-overview.php" afterPath="$PROJECT_DIR$/example-table-1-overview.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/table_example1.inc" afterPath="$PROJECT_DIR$/table_example1.inc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/table_example2.inc" afterPath="$PROJECT_DIR$/table_example2.inc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/BaseExamplesTestCase.php" afterPath="$PROJECT_DIR$/tests/BaseExamplesTestCase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/BaseTestCase.php" afterPath="$PROJECT_DIR$/tests/BaseTestCase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/bootstrap.php" afterPath="$PROJECT_DIR$/tests/bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractMock.php" afterPath="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractMock.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php" afterPath="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/TableExamples2Test.php" afterPath="$PROJECT_DIR$/tests/functional/TableExamples2Test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/table/disable-page-break.php" afterPath="$PROJECT_DIR$/tests/functional/table/disable-page-break.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/table/draw-table-model1.php" afterPath="$PROJECT_DIR$/tests/functional/table/draw-table-model1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/table/draw-table-model2.php" afterPath="$PROJECT_DIR$/tests/functional/table/draw-table-model2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/helper/Helper.php" afterPath="$PROJECT_DIR$/tests/helper/Helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/interpid/Pdf/Table/Cell/CellAbstract.php" afterPath="$PROJECT_DIR$/vendor/interpid/Pdf/Table/Cell/CellAbstract.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/interpid/Pdf/Table/Cell/Image.php" afterPath="$PROJECT_DIR$/vendor/interpid/Pdf/Table/Cell/Image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/interpid/PdfExamples/mypdf.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfExamples/mypdf.php" />
     </list>
     <ignored path="fpdf.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,76 +34,10 @@
     <favorites_list name="fpdf" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="example-multicell-4-page-break.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example-multicell-4-page-break.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="multicell.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/multicell.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="example-multicell-1-overview.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example-multicell-1-overview.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-              <folding>
-                <element signature="e#143#170#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header-multicell.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/header-multicell.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="1" column="68" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="example-table-4-override.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/example-table-4-override.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-              <folding>
-                <element signature="e#139#166#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header-table.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/header-table.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>FPDF</find>
       <find>f</find>
       <find>fpdf.</find>
       <find>fpdf.php</find>
@@ -160,9 +67,9 @@
       <find>createdby</find>
       <find>multicell_text1</find>
       <find>multicell_text</find>
+      <find>5.3.0</find>
     </findStrings>
     <replaceStrings>
-      <replace>internValueSet</replace>
       <replace>PdfInterface</replace>
       <replace>Abstract</replace>
       <replace>CellInterface</replace>
@@ -192,6 +99,7 @@
       <replace>] );</replace>
       <replace>PDF_APPLICATION_PATH</replace>
       <replace>alignment</replace>
+      <replace>5.4.0</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\Projects\pdf-addons\fpdf\examples\table</dir>
@@ -207,7 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vendor/interpid/Pdf/Tools.php" />
         <option value="$PROJECT_DIR$/vendor/interpid/Pdf/Table/Cell/Interface.php" />
         <option value="$PROJECT_DIR$/vendor/interpid/Pdf/Table/Cell/CellInterface.php" />
         <option value="$PROJECT_DIR$/vendor/interpid/Pdf/Table/Cell/Empty.php" />
@@ -258,6 +165,7 @@
         <option value="$PROJECT_DIR$/example-multicell-1-overview.php" />
         <option value="$PROJECT_DIR$/content/header-table.txt" />
         <option value="$PROJECT_DIR$/content/header-multicell.txt" />
+        <option value="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
       </list>
     </option>
   </component>
@@ -545,7 +453,7 @@
       <workItem from="1482065120833" duration="1584000" />
       <workItem from="1487949540507" duration="322000" />
       <workItem from="1492688679498" duration="640000" />
-      <workItem from="1493995159662" duration="22753000" />
+      <workItem from="1493995159662" duration="22930000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
@@ -596,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494158194800</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="#1200 Implement Namespaces&#10;#1199 Remove Hungarian Notation&#10;#1201 Use array short-hands&#10;#1202 Table vertical align not working">
+      <created>1494176701366</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1494176701366</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -632,11 +547,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48483000" />
+    <option name="totallyTimeSpent" value="48660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="2578" height="1381" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -644,12 +558,12 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36432797" sideWeight="0.4978678" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20456466" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19464429" sideWeight="0.7601573" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19464429" sideWeight="0.7633136" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23161454" sideWeight="0.5708955" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21978022" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19464429" sideWeight="0.23984273" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35502958" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19464429" sideWeight="0.2366864" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35502958" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13326226" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
@@ -674,7 +588,8 @@
     <MESSAGE value="#896 - Passing TABLE_ALIGN to setTableConfig does not work" />
     <MESSAGE value="#1200 Implement Namespaces&#10;#1199 Remove Hungarian Notation" />
     <MESSAGE value="#1200 Implement Namespaces&#10;#1199 Remove Hungarian Notation&#10;#1201 Use array short-hands" />
-    <option name="LAST_COMMIT_MESSAGE" value="#1200 Implement Namespaces&#10;#1199 Remove Hungarian Notation&#10;#1201 Use array short-hands" />
+    <MESSAGE value="#1200 Implement Namespaces&#10;#1199 Remove Hungarian Notation&#10;#1201 Use array short-hands&#10;#1202 Table vertical align not working" />
+    <option name="LAST_COMMIT_MESSAGE" value="#1200 Implement Namespaces&#10;#1199 Remove Hungarian Notation&#10;#1201 Use array short-hands&#10;#1202 Table vertical align not working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -716,20 +631,12 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/examples/table/code-example1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="14" column="36" lean-forward="false" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/interpid/Pdf/String/Tags.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="491">
           <caret line="229" column="97" lean-forward="false" selection-start-line="229" selection-start-column="97" selection-end-line="229" selection-end-column="97" />
           <folding>
-            <element signature="e#7#827#0#PHP" expanded="true" />
+            <element signature="e#7#827#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -811,7 +718,7 @@
         <state relative-caret-position="1152">
           <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
-            <element signature="e#7#819#0#PHP" expanded="true" />
+            <element signature="e#7#819#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -839,7 +746,7 @@
         <state relative-caret-position="216">
           <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="23" />
           <folding>
-            <element signature="e#6#1048#0#PHP" expanded="true" />
+            <element signature="e#6#1048#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1004,16 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/interpid/Pdf/Table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="885" column="27" lean-forward="false" selection-start-line="885" selection-start-column="27" selection-end-line="885" selection-end-column="27" />
-          <folding>
-            <element signature="e#848#890#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/table/settings.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="685">
@@ -1075,7 +972,7 @@
         <state relative-caret-position="295">
           <caret line="117" column="30" lean-forward="false" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
           <folding>
-            <element signature="e#6#823#0#PHP" expanded="true" />
+            <element signature="e#6#823#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1085,7 +982,7 @@
         <state relative-caret-position="291">
           <caret line="104" column="24" lean-forward="false" selection-start-line="104" selection-start-column="15" selection-end-line="104" selection-end-column="24" />
           <folding>
-            <element signature="e#7#820#0#PHP" expanded="true" />
+            <element signature="e#7#820#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1150,11 +1047,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/example-table-4-override.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state relative-caret-position="387">
+          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding>
             <element signature="e#139#166#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/interpid/Pdf/Table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="21" />
+          <folding>
+            <element signature="e#848#890#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="315" column="31" lean-forward="false" selection-start-line="315" selection-start-column="31" selection-end-line="315" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
