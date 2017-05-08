@@ -4,80 +4,21 @@
     <option name="SCOPE_TYPE" value="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="#1200 Implement Namespaces&#10;#1199 Remove Hungarian Notation&#10;#1201 Use array short-hands&#10;#1202 Table vertical align not working">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-multicell-1-overview.pdf" afterPath="$PROJECT_DIR$/tests/data/example-multicell-1-overview.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-multicell-2-overview-page-break.pdf" afterPath="$PROJECT_DIR$/tests/data/example-multicell-2-overview-page-break.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-multicell-3-line-breaking.pdf" afterPath="$PROJECT_DIR$/tests/data/example-multicell-3-line-breaking.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-multicell-4-page-break.pdf" afterPath="$PROJECT_DIR$/tests/data/example-multicell-4-page-break.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-table-1-overview.pdf" afterPath="$PROJECT_DIR$/tests/data/example-table-1-overview.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-table-2-overview.pdf" afterPath="$PROJECT_DIR$/tests/data/example-table-2-overview.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-table-3-detailed.pdf" afterPath="$PROJECT_DIR$/tests/data/example-table-3-detailed.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/example-table-4-override.pdf" afterPath="$PROJECT_DIR$/tests/data/example-table-4-override.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/table-code-example-alignments.pdf" afterPath="$PROJECT_DIR$/tests/data/table-code-example-alignments.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/table-code-example-transparent.pdf" afterPath="$PROJECT_DIR$/tests/data/table-code-example-transparent.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/table-code-example1.pdf" afterPath="$PROJECT_DIR$/tests/data/table-code-example1.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/table-code-example2.pdf" afterPath="$PROJECT_DIR$/tests/data/table-code-example2.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/table-code-example3.pdf" afterPath="$PROJECT_DIR$/tests/data/table-code-example3.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/testDisablePageBreak.pdf" afterPath="$PROJECT_DIR$/tests/data/testDisablePageBreak.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/testTableModel1.pdf" afterPath="$PROJECT_DIR$/tests/data/testTableModel1.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/testTableModel2.pdf" afterPath="$PROJECT_DIR$/tests/data/testTableModel2.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/data/testTableModel3.pdf" afterPath="$PROJECT_DIR$/tests/data/testTableModel3.pdf" />
+    <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autoload.php" afterPath="$PROJECT_DIR$/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/table/code-example-alignments.php" afterPath="$PROJECT_DIR$/examples/table/code-example-alignments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/table/code-example-transparent.php" afterPath="$PROJECT_DIR$/examples/table/code-example-transparent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/table/code-example1.php" afterPath="$PROJECT_DIR$/examples/table/code-example1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/table/code-example2.php" afterPath="$PROJECT_DIR$/examples/table/code-example2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/table/code-example3.php" afterPath="$PROJECT_DIR$/examples/table/code-example3.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/table/settings.php" afterPath="$PROJECT_DIR$/examples/table/settings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/BaseTestCase.php" afterPath="$PROJECT_DIR$/tests/BaseTestCase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/bootstrap.php" afterPath="$PROJECT_DIR$/tests/bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractMock.php" afterPath="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractMock.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php" afterPath="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/MulticellExamplesTest.php" afterPath="$PROJECT_DIR$/tests/functional/MulticellExamplesTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/TableExamples2Test.php" afterPath="$PROJECT_DIR$/tests/functional/TableExamples2Test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/TableExamplesTest.php" afterPath="$PROJECT_DIR$/tests/functional/TableExamplesTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/TableTest.php" afterPath="$PROJECT_DIR$/tests/functional/TableTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/table/disable-page-break.php" afterPath="$PROJECT_DIR$/tests/functional/table/disable-page-break.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/table/draw-table-model1.php" afterPath="$PROJECT_DIR$/tests/functional/table/draw-table-model1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/functional/table/draw-table-model2.php" afterPath="$PROJECT_DIR$/tests/functional/table/draw-table-model2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/helper/Helper.php" afterPath="$PROJECT_DIR$/tests/helper/Helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/interpid/PdfExamples/mypdf.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfExamples/mypdf.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/interpid/PdfExamples/pdfFactory.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfExamples/pdfFactory.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/example-multicell-1-overview.php" afterPath="$PROJECT_DIR$/examples/example-multicell-1-overview.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/example-multicell-2-overview-page-break.php" afterPath="$PROJECT_DIR$/examples/example-multicell-2-overview-page-break.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/example-multicell-3-line-breaking.php" afterPath="$PROJECT_DIR$/examples/example-multicell-3-line-breaking.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/example-multicell-4-page-break.php" afterPath="$PROJECT_DIR$/examples/example-multicell-4-page-break.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/example-table-1-overview.php" afterPath="$PROJECT_DIR$/examples/example-table-1-overview.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/example-table-2-overview.php" afterPath="$PROJECT_DIR$/examples/example-table-2-overview.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/example-table-3-detailed.php" afterPath="$PROJECT_DIR$/examples/example-table-3-detailed.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/example-table-4-override.php" afterPath="$PROJECT_DIR$/examples/example-table-4-override.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/blog.jpg" afterPath="$PROJECT_DIR$/content/images/blog.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/camaro_128.jpg" afterPath="$PROJECT_DIR$/content/images/camaro_128.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/dice.jpg" afterPath="$PROJECT_DIR$/content/images/dice.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/interpid_logo.png" afterPath="$PROJECT_DIR$/content/images/interpid_logo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/pensil.jpg" afterPath="$PROJECT_DIR$/content/images/pensil.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/sample-pdf.jpg" afterPath="$PROJECT_DIR$/content/images/sample-pdf.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/telescope.jpg" afterPath="$PROJECT_DIR$/content/images/telescope.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/usb.jpg" afterPath="$PROJECT_DIR$/content/images/usb.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/table.config.php" afterPath="$PROJECT_DIR$/examples/table.config.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/table_example1.inc" afterPath="$PROJECT_DIR$/examples/table_example1.inc" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/table_example2.inc" afterPath="$PROJECT_DIR$/examples/table_example2.inc" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/interpid/Pdf/Multicell.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Multicell.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/interpid/Pdf/Pdf.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Pdf.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/interpid/Pdf/PdfInterface.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/PdfInterface.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/interpid/Pdf/String/Tags.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/String/Tags.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/interpid/Pdf/Table.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/interpid/Pdf/Table/Cell/CellAbstract.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/CellAbstract.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/interpid/Pdf/Table/Cell/CellInterface.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/CellInterface.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/interpid/Pdf/Table/Cell/Image.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/Image.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/interpid/Pdf/Table/Cell/Multicell.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/Multicell.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/interpid/Pdf/Table/Cell/Void.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/Void.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/interpid/Pdf/Tools.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Tools.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/interpid/Pdf/Validate.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Validate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Pdf.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Pdf.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/PdfInterface.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/PdfInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/String/Tags.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/String/Tags.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/CellAbstract.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/CellAbstract.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/CellInterface.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/CellInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/Image.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/Image.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/Multicell.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/Multicell.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/Void.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/Void.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Tools.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Tools.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Validate.php" afterPath="$PROJECT_DIR$/vendor/interpid/PdfLib/Validate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/version_multicell" afterPath="$PROJECT_DIR$/version_multicell" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/version_table" afterPath="$PROJECT_DIR$/version_table" />
     </list>
     <ignored path="fpdf.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -110,13 +51,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mypdf.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mypdf.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/interpid/PdfExamples/mypdf.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="615">
-              <caret line="101" column="9" lean-forward="true" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
+              <caret line="101" column="9" lean-forward="false" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
               <folding>
                 <marker date="1494240974251" expanded="true" signature="2898:2926" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="version_table" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/version_table">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="version_multicell" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/version_multicell">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Multicell.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/interpid/PdfLib/Multicell.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#812#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,11 +98,9 @@
       <file leaf-file-name="Pdf.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/interpid/PdfLib/Pdf.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="68" column="20" lean-forward="false" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
-              <folding>
-                <element signature="e#6#1004#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="250">
+              <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,8 +131,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>vard</find>
-      <find>var</find>
       <find>v</find>
       <find>var_</find>
       <find>var_d</find>
@@ -175,7 +144,6 @@
       <find>createdby</find>
       <find>multicell_text1</find>
       <find>multicell_text</find>
-      <find>5.3.0</find>
       <find>2.5.0</find>
       <find>output</find>
       <find>multicell</find>
@@ -190,9 +158,11 @@
       <find>$_SERVER[ 'ENVIRONMENT' ]</find>
       <find>CreationDate</find>
       <find>_putinfo</find>
+      <find>* @version   : 5.3.0</find>
+      <find>5.4.0</find>
+      <find>5.3.0</find>
     </findStrings>
     <replaceStrings>
-      <replace>Void</replace>
       <replace>&quot;Helvetica&quot;</replace>
       <replace>__DIR__</replace>
       <replace>Table\Cell\Multicell</replace>
@@ -222,6 +192,7 @@
       <replace>Interpid\Pdf</replace>
       <replace>Interpid\PdfLib</replace>
       <replace>helvetica</replace>
+      <replace>* @version   : 5.4.0</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\Projects\pdf-addons\fpdf\examples\table</dir>
@@ -237,8 +208,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vendor/interpid/Pdf/Table/Cell/Void.php" />
-        <option value="$PROJECT_DIR$/autoloader.php" />
         <option value="$PROJECT_DIR$/vendor/interpid/pdf.php" />
         <option value="$PROJECT_DIR$/pdfFactory.php" />
         <option value="$PROJECT_DIR$/vendor/interpid/Pdf/pdf.php" />
@@ -286,8 +255,10 @@
         <option value="$PROJECT_DIR$/examples/table/code-example-transparent.php" />
         <option value="$PROJECT_DIR$/vendor/interpid/PdfExamples/pdfFactory.php" />
         <option value="$PROJECT_DIR$/examples/example-multicell-1-overview.php" />
-        <option value="$PROJECT_DIR$/vendor/interpid/PdfLib/Pdf.php" />
         <option value="$PROJECT_DIR$/vendor/interpid/PdfExamples/mypdf.php" />
+        <option value="$PROJECT_DIR$/vendor/interpid/PdfLib/Pdf.php" />
+        <option value="$PROJECT_DIR$/version_table" />
+        <option value="$PROJECT_DIR$/version_multicell" />
       </list>
     </option>
   </component>
@@ -446,7 +417,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="SearchEverywhereHistoryKey" value="pdf&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/vendor/interpid/PdfLib/Pdf.php&#10;testPdf&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/tests/helper/testPdf.php&#10;abstract&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/tests/classes/Pdf/Table/Cell/AbstractTest.php&#10;my&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/vendor/interpid/PdfExamples/mypdf.php&#10;mypdf&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/vendor/interpid/PdfExamples/mypdf.php&#10;multicell&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/vendor/interpid/Pdf/Multicell.php&#10;table&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/vendor/interpid/Pdf/Table.php" />
+    <property name="SearchEverywhereHistoryKey" value="multicell&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/vendor/interpid/PdfLib/Multicell.php&#10;pdf&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/vendor/interpid/PdfLib/Pdf.php&#10;testPdf&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/tests/helper/testPdf.php&#10;abstract&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/tests/classes/Pdf/Table/Cell/AbstractTest.php&#10;my&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/vendor/interpid/PdfExamples/mypdf.php&#10;mypdf&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/vendor/interpid/PdfExamples/mypdf.php&#10;table&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/vendor/interpid/Pdf/Table.php" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
@@ -628,7 +599,7 @@
       <workItem from="1492688679498" duration="640000" />
       <workItem from="1493995159662" duration="24809000" />
       <workItem from="1494231359404" duration="4261000" />
-      <workItem from="1494238678501" duration="2445000" />
+      <workItem from="1494238678501" duration="3116000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
@@ -693,7 +664,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494176796420</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="#1200 Implement Namespaces&#10;#1199 Remove Hungarian Notation&#10;#1201 Use array short-hands&#10;#1202 Table vertical align not working">
+      <created>1494241152075</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1494241152075</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -729,7 +707,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57245000" />
+    <option name="totallyTimeSpent" value="57916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="2578" height="1381" extended-state="6" />
@@ -825,6 +803,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -832,6 +811,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1152">
           <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#819#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -839,6 +821,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="783">
           <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="e#52#77#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -886,6 +871,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
           <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -893,6 +879,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -900,6 +887,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1401">
           <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -917,6 +905,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="15" column="2" lean-forward="false" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+          <folding>
+            <element signature="e#7#139#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -931,6 +922,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
           <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#39#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1019,6 +1013,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="104" column="24" lean-forward="false" selection-start-line="104" selection-start-column="15" selection-end-line="104" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1063,24 +1058,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/version_table">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7368">
           <caret line="315" column="31" lean-forward="false" selection-start-line="315" selection-start-column="31" selection-end-line="315" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/version_multicell">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1097,18 +1079,8 @@
         <state relative-caret-position="7800">
           <caret line="335" column="35" lean-forward="false" selection-start-line="335" selection-start-column="35" selection-end-line="335" selection-end-column="35" />
           <folding>
-            <element signature="e#6#821#0#PHP" expanded="true" />
+            <element signature="e#6#821#0#PHP" expanded="false" />
             <element signature="e#851#896#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/interpid/PdfLib/Multicell.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="25" />
-          <folding>
-            <element signature="e#6#812#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1125,6 +1097,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="34" column="47" lean-forward="false" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1170,16 +1143,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/interpid/PdfLib/Pdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="68" column="20" lean-forward="false" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
-          <folding>
-            <element signature="e#6#1004#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/interpid/PdfExamples/pdfFactory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-9">
@@ -1201,9 +1164,43 @@
     <entry file="file://$PROJECT_DIR$/vendor/interpid/PdfExamples/mypdf.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
-          <caret line="101" column="9" lean-forward="true" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
+          <caret line="101" column="9" lean-forward="false" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
           <folding>
             <marker date="1494240974251" expanded="true" signature="2898:2926" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/interpid/PdfLib/Pdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/version_table">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/version_multicell">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/interpid/PdfLib/Multicell.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#812#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
