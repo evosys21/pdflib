@@ -18,12 +18,12 @@
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
 
-namespace Interpid\Pdf\Table\Cell;
+namespace Interpid\PdfLib\Table\Cell;
 
-use Interpid\Pdf\PdfInterface;
-use Interpid\Pdf\Tools;
-use Interpid\Pdf\Pdf;
-use Interpid\Pdf\Validate;
+use Interpid\PdfLib\PdfInterface;
+use Interpid\PdfLib\Tools;
+use Interpid\PdfLib\Pdf;
+use Interpid\PdfLib\Validate;
 
 /**
  * @property mixed|null HEIGHT_LEFT_RW

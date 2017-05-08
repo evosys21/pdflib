@@ -19,8 +19,8 @@
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
 
-namespace Interpid\Pdf\Table\Cell;
-use Interpid\Pdf\Tools;
+namespace Interpid\PdfLib\Table\Cell;
+use Interpid\PdfLib\Tools;
 
 class Image extends CellAbstract implements CellInterface
 {

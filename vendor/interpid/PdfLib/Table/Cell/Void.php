@@ -19,7 +19,7 @@
  */
 
 
-namespace Interpid\Pdf\Table\Cell;
+namespace Interpid\PdfLib\Table\Cell;
 
 /**
  * @property array aDefaultValues

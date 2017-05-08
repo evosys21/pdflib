@@ -17,7 +17,7 @@ class MulticellExamplesTest extends BaseExamplesTestCase
         );
 
         foreach ( $aSources as $source ) {
-            $require = APPLICATION_PATH . '/' . $source;
+            $require = APPLICATION_PATH . '/examples/' . $source;
             $this->runTestWithExample( $require, basename( $require ) );
         }
     }

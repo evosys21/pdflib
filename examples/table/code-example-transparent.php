@@ -8,13 +8,13 @@ $pdf->SetY( $y );
 
 require( 'settings.php' );
 
-use \Interpid\Pdf\Table;
+use \Interpid\PdfLib\Table;
 
 $table = new Table( $pdf );
 
-$table->setStyle( "p", 'Helvetica', "", 7, "130,0,30" );
-$table->setStyle( "b", 'Helvetica', "B", 7, "130,0,30" );
-$table->setStyle( "bi", 'Helvetica', "BI", 7, "0,0,120" );
+$table->setStyle( "p", 'helvetica', "", 7, "130,0,30" );
+$table->setStyle( "b", 'helvetica', "B", 7, "130,0,30" );
+$table->setStyle( "bi", 'helvetica', "BI", 7, "0,0,120" );
 
 $columns = 3;
 
@@ -45,7 +45,7 @@ $table->addHeader( $header );
 
 $imageCell = array(
     'TYPE' => 'IMAGE',
-    'FILE' => PDF_APPLICATION_PATH . '/images/dice.jpg',
+    'FILE' => PDF_RESOURCES_IMAGES . '/dice.jpg',
     'WIDTH' => 10
 );
 
@@ -69,8 +69,8 @@ $table->addRow( $aRow );
 $aRow = [];
 
 //alternatively you can create directly the cell object
-$aRow[ 0 ] = new \Interpid\Pdf\Table\Cell\Image( $pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10 );
-$aRow[ 1 ] = new \Interpid\Pdf\Table\Cell\Multicell( $pdf, "<p>This is another <b>Multicell</b></p>" );
+$aRow[ 0 ] = new \Interpid\PdfLib\Table\Cell\Image( $pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10 );
+$aRow[ 1 ] = new \Interpid\PdfLib\Table\Cell\Multicell( $pdf, "<p>This is another <b>Multicell</b></p>" );
 $aRow[ 2 ][ 'TEXT' ] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='http://www.interpid.eu'>www.interpid.eu</bi></p>";
 $aRow[ 2 ][ 'BACKGROUND_COLOR' ] = $aColor[ 1 ];
 

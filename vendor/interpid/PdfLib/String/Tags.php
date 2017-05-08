@@ -20,7 +20,7 @@
  */
 
 
-namespace Interpid\Pdf\String;
+namespace Interpid\PdfLib\String;
 
 class Tags
 {

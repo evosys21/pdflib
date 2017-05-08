@@ -2,13 +2,13 @@
 
 require( 'settings.php' );
 
-use \Interpid\Pdf\Table;
+use \Interpid\PdfLib\Table;
 
 $table = new Table( $pdf );
 
-$table->setStyle( "p", 'Helvetica', "", 7, "130,0,30" );
-$table->setStyle( "b", 'Helvetica', "B", 7, "130,0,30" );
-$table->setStyle( "bi", 'Helvetica', "BI", 7, "0,0,120" );
+$table->setStyle( "p", 'helvetica', "", 7, "130,0,30" );
+$table->setStyle( "b", 'helvetica', "B", 7, "130,0,30" );
+$table->setStyle( "bi", 'helvetica', "BI", 7, "0,0,120" );
 
 $columns = 3;
 
@@ -29,7 +29,7 @@ $table->addHeader( $header );
 
 $imageCell = [
     'TYPE' => 'IMAGE',
-    'FILE' => PDF_APPLICATION_PATH . '/images/dice.jpg',
+    'FILE' => PDF_RESOURCES_IMAGES . '/dice.jpg',
     'WIDTH' => 10
 ];
 

@@ -4,9 +4,9 @@
  * Copyright (c), Interpid, http://www.interpid.eu
  */
 
-require_once __DIR__ . "/autoload.php";
+require_once __DIR__ . "/../autoload.php";
 
-use Interpid\Pdf\Table;
+use Interpid\PdfLib\Table;
 use Interpid\PdfExamples\pdfFactory;
 
 $factory = new pdfFactory();
@@ -29,10 +29,10 @@ $table = new Table( $pdf );
 /**
  * Set the tag styles
  */
-$table->setStyle( "p", 'Helvetica', "", 10, "130,0,30" );
-$table->setStyle( "b", 'Helvetica', "", 9, "80,80,260" );
-$table->setStyle( "h1", 'Helvetica', "", 10, "0,151,200" );
-$table->setStyle( "bi", 'Helvetica', "BI", 12, "0,0,120" );
+$table->setStyle( "p", 'helvetica', "", 10, "130,0,30" );
+$table->setStyle( "b", 'helvetica', "", 9, "80,80,260" );
+$table->setStyle( "h1", 'helvetica', "", 10, "0,151,200" );
+$table->setStyle( "bi", 'helvetica', "BI", 12, "0,0,120" );
 
 $txt1 = "<p>All table cells are fully functional <bi href='http://www.interpid.eu/pdf-multicell'>pdf Advanced Multicells</bi>\nDetails about Pdf Advanced Multicell can be found <h1 href='http://http://www.interpid.eu/pdf-tcpdf-addons'>here</h1></p>";
 
@@ -110,7 +110,7 @@ for ( $j = 0; $j < 45; $j++ ) {
         $aRow[ 1 ][ 'TEXT' ] = "Cells can be images -->>>";
         $aRow[ 2 ] = array(
             'TYPE' => 'IMAGE',
-            'FILE' => PDF_APPLICATION_PATH . '/images/dice.jpg',
+            'FILE' => PDF_RESOURCES_IMAGES . '/dice.jpg',
             'WIDTH' => 15
         );
     }

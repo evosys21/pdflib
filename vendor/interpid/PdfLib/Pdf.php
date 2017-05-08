@@ -1,8 +1,7 @@
 <?php
 /**
- * Fpdf main class.
- * This class just FPDF class and it is used for "IDE/Editor reference simplicity".
- * In all subclasses we refer to Pdf class and not FPDF.
+ * FPDF extended class.
+ * This class extends the FPDF class. In all subclasses we refer to Pdf class and not TCPDF.
  * Also some methods and variables are set to Public in order to access them in the addons.
  *
  * This program is distributed in the hope that it will be useful, but WITHOUT
@@ -21,7 +20,7 @@
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
 
-namespace Interpid\Pdf;
+namespace Interpid\PdfLib;
 
 class Pdf extends \FPDF
 {
@@ -74,6 +73,11 @@ class Pdf extends \FPDF
          */
         $txt = strval( $txt );
         parent::Cell( $w, $h, $txt, $border, $ln, $align, $fill, $link );
+    }
+
+    public function saveToFile( $fileName )
+    {
+        $this->Output( "F", $fileName );
     }
 
 }

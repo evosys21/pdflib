@@ -19,11 +19,15 @@
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
 
-namespace Interpid\Pdf;
+namespace Interpid\PdfLib;
 
-use Interpid\Pdf\Table\Cell\CellInterface;
-use Interpid\Pdf\Table\Cell\CellAbstract;
-use Interpid\Pdf\Table\Cell\Void;
+use Interpid\PdfLib\Table\Cell\CellInterface;
+use Interpid\PdfLib\Table\Cell\CellAbstract;
+use Interpid\PdfLib\Table\Cell\Void;
+
+if ( !defined( 'PDF_TABLE_CONFIG_PATH' ) ) {
+    define( 'PDF_TABLE_CONFIG_PATH', __DIR__ );
+}
 
 class Table
 {
@@ -310,9 +314,9 @@ class Table
     protected $aColumnWidth = [];
 
     protected $typeMap = array(
-        'EMPTY' => '\Interpid\Pdf\Table\Cell\Void',
-        'MULTICELL' => '\Interpid\Pdf\Table\Cell\Multicell',
-        'IMAGE' => '\Interpid\Pdf\Table\Cell\Image',
+        'EMPTY' => '\Interpid\PdfLib\Table\Cell\Void',
+        'MULTICELL' => '\Interpid\PdfLib\Table\Cell\Multicell',
+        'IMAGE' => '\Interpid\PdfLib\Table\Cell\Image',
     );
 
     /**
@@ -1730,7 +1734,7 @@ class Table
     {
         $aDefaultConfiguration = [];
 
-        require PDF_APPLICATION_PATH . '/table.config.php';
+        require PDF_TABLE_CONFIG_PATH . '/table.config.php';
 
         return $aDefaultConfiguration;
     }

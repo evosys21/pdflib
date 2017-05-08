@@ -4,15 +4,15 @@ if ( !isset( $pdf ) ) {
     $pdf = new myPdf();
 }
 
-use \Interpid\Pdf\Table;
-use \Interpid\Pdf\Tools;
+use \Interpid\PdfLib\Table;
+use \Interpid\PdfLib\Tools;
 
 $table = new Table( $pdf );
 
 
-$table->setStyle( "p", 'Helvetica', "", 6, "130,0,30" );
-$table->setStyle( "b", 'Helvetica', "B", 6, "130,0,30" );
-$table->setStyle( "bi", 'Helvetica', "BI", 6, "0,0,120" );
+$table->setStyle( "p", 'helvetica', "", 6, "130,0,30" );
+$table->setStyle( "b", 'helvetica', "B", 6, "130,0,30" );
+$table->setStyle( "bi", 'helvetica', "BI", 6, "0,0,120" );
 
 require( 'settings.php' );
 

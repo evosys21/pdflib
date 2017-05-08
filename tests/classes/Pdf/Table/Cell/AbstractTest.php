@@ -6,7 +6,7 @@
 
 require_once 'AbstractMock.php';
 
-use \Interpid\Pdf\PdfInterface;
+use \Interpid\PdfLib\PdfInterface;
 
 class CellAbstractTest extends BaseTestCase
 {
@@ -343,7 +343,7 @@ class CellAbstractTest extends BaseTestCase
 
         $filename = tempnam( sys_get_temp_dir(), 'fpdf' );
 
-        $pdf->Output( "F", $filename );
+        $pdf->saveToFile( $filename );
 
         $finfo = finfo_open( FILEINFO_MIME_TYPE );
 

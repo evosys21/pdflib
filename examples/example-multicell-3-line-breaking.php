@@ -4,9 +4,9 @@
  * Copyright (c), Interpid, http://www.interpid.eu
  */
 
-require_once __DIR__ . "/autoload.php";
+require_once __DIR__ . "/../autoload.php";
 
-use Interpid\Pdf\Multicell;
+use Interpid\PdfLib\Multicell;
 use Interpid\PdfExamples\pdfFactory;
 
 $factory = new pdfFactory();
@@ -18,7 +18,7 @@ $pdf = pdfFactory::newPdf( 'multicell' );
 $multicell = new Multicell( $pdf );
 
 // Set the styles for the advanced multicell
-$multicell->setStyle( "b", 'Helvetica', "B", 11, "130,0,30" );
+$multicell->setStyle( "b", 'helvetica', "B", 11, "130,0,30" );
 
 $txt = "This is a demo of <b>NON BREAKING > S P>A C E EXAMPLE</b>";
 

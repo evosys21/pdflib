@@ -6,15 +6,15 @@ if ( !isset( $pdf ) ) {
     $pdf = new \Interpid\PdfExamples\myPdf();
 }
 
-use \Interpid\Pdf\Table;
+use \Interpid\PdfLib\Table;
 
 $table = new Table( $pdf );
 
-$table->setStyle( "p", 'Helvetica', "", 6, "130,0,30" );
-$table->setStyle( "b", 'Helvetica', "B", 6, "130,0,30" );
-$table->setStyle( "bi", 'Helvetica', "BI", 6, "0,0,120" );
-$table->setStyle( "s1", 'Helvetica', "I", 6, "0,0,120" );
-$table->setStyle( "s2", 'Helvetica', "", 7, "110,50,120" );
+$table->setStyle( "p", 'helvetica', "", 6, "130,0,30" );
+$table->setStyle( "b", 'helvetica', "B", 6, "130,0,30" );
+$table->setStyle( "bi", 'helvetica', "BI", 6, "0,0,120" );
+$table->setStyle( "s1", 'helvetica', "I", 6, "0,0,120" );
+$table->setStyle( "s2", 'helvetica', "", 7, "110,50,120" );
 
 $nColumns = 5;
 

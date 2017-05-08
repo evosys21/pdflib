@@ -19,7 +19,7 @@
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
 
-namespace Interpid\Pdf;
+namespace Interpid\PdfLib;
 
 class PdfInterface
 {

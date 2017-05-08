@@ -6,10 +6,10 @@ defined( 'APPLICATION_PATH' ) || define( 'APPLICATION_PATH', realpath( __DIR__ .
 defined( 'TEST_PATH' ) || define( 'TEST_PATH', realpath( __DIR__ ) );
 $_SERVER[ 'ENVIRONMENT' ] = 'test';
 
-define( 'PDF_RESOURCES_IMAGES', APPLICATION_PATH . '/images' );
+define( 'PDF_RESOURCES_IMAGES', APPLICATION_PATH . '/content/images' );
+
 
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once( __DIR__ . '/../vendor/fpdf/fpdf.php' );
 
 require 'BaseTestCase.php';
 require 'BaseExamplesTestCase.php';

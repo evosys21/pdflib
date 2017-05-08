@@ -1338,6 +1338,8 @@ endobj
 endobj
 16 0 obj
 <<
+/Producer (FPDF - Unit-test)
+/CreationDate (D:20170101010000)
 >>
 endobj
 17 0 obj
@@ -1365,7 +1367,7 @@ xref
 0000032060 00000 n 
 0000035916 00000 n 
 0000036535 00000 n 
-0000036557 00000 n 
+0000036619 00000 n 
 trailer
 <<
 /Size 18
@@ -1373,5 +1375,5 @@ trailer
 /Info 16 0 R
 >>
 startxref
-36607
+36669
 %%EOF

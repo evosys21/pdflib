@@ -8,7 +8,7 @@
  */
 
 use \Interpid\PdfExamples\pdfFactory;
-use \Interpid\Pdf\Pdf;
+use \Interpid\PdfLib\Pdf;
 
 class Helper
 {
@@ -41,7 +41,7 @@ class Helper
      */
     public static function setFontStyle1( $pdf )
     {
-        $pdf->SetFont( 'Helvetica', 'I', 7 );
+        $pdf->SetFont( 'helvetica', 'I', 7 );
         $pdf->SetTextColor( 170, 170, 170 );
     }
 

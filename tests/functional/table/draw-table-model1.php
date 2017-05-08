@@ -1,6 +1,6 @@
 <?php
 
-use \Interpid\Pdf\Table;
+use \Interpid\PdfLib\Table;
 
 if ( !isset( $bSplitMode ) ) {
     $bSplitMode = true;
@@ -12,10 +12,10 @@ $pdf->SetFontSize( 7 );
 
 $table = new Table( $pdf );
 
-$table->setStyle( "p", 'Helvetica', "", 6, "130,0,30" );
-$table->setStyle( "b", 'Helvetica', "", 8, "80,80,260" );
-$table->setStyle( "h1", 'Helvetica', "", 10, "0,151,200" );
-$table->setStyle( "bi", 'Helvetica', "BI", 12, "0,0,120" );
+$table->setStyle( "p", 'helvetica', "", 6, "130,0,30" );
+$table->setStyle( "b", 'helvetica', "", 8, "80,80,260" );
+$table->setStyle( "h1", 'helvetica', "", 10, "0,151,200" );
+$table->setStyle( "bi", 'helvetica', "BI", 12, "0,0,120" );
 
 //default text color
 $pdf->SetTextColor( 118, 0, 3 );

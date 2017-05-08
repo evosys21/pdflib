@@ -44,7 +44,7 @@ class TableExamples2Test extends PHPUnit_Framework_TestCase
         }
 
         //send the pdf to the browser
-        $pdf->Output( $sPdfFile, 'F' );
+        $pdf->saveToFile( $sPdfFile );
 
         $this->assertTrue( file_exists( $sPdfFile ) );
 

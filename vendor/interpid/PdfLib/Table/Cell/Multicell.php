@@ -31,9 +31,9 @@
  * @property int nLines
  */
 
-namespace Interpid\Pdf\Table\Cell;
+namespace Interpid\PdfLib\Table\Cell;
 
-use \Interpid\Pdf\Pdf;
+use \Interpid\PdfLib\Pdf;
 
 /**
  * @property mixed|array TEXT_STRLINES
@@ -52,7 +52,7 @@ class Multicell extends CellAbstract implements CellInterface
 
     /**
      *
-     * @var \Interpid\Pdf\Multicell
+     * @var \Interpid\PdfLib\Multicell
      */
     protected $multicell;
 

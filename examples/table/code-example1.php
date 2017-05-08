@@ -1,11 +1,11 @@
 <?php
 
-use \Interpid\Pdf\Table;
+use \Interpid\PdfLib\Table;
 
 $table = new Table( $pdf );
 
-$table->setStyle( "p", 'Helvetica', "", 7, "130,0,30" );
-$table->setStyle( "b", 'Helvetica', "B", 7, "130,0,30" );
+$table->setStyle( "p", 'helvetica', "", 7, "130,0,30" );
+$table->setStyle( "b", 'helvetica', "B", 7, "130,0,30" );
 
 $columns = 3;
 

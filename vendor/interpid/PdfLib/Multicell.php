@@ -12,19 +12,19 @@
  * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
- * @version   : 2.5.0
+ * @version   : 2.6.0
  * @author    : Interpid <office@interpid.eu>
  * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
 
-namespace Interpid\Pdf;
+namespace Interpid\PdfLib;
 
 if ( !defined( 'PARAGRAPH_STRING' ) ) {
     define( 'PARAGRAPH_STRING', '~~~' );
 }
 
-use Interpid\Pdf\String\Tags;
+use Interpid\PdfLib\String\Tags;
 
 class Multicell
 {

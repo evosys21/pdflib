@@ -5,10 +5,10 @@
  */
 
 
-require_once __DIR__ . "/autoload.php";
+require_once __DIR__ . "/../autoload.php";
 
-use Interpid\Pdf\Multicell;
-use Interpid\Pdf\Table;
+use Interpid\PdfLib\Multicell;
+use Interpid\PdfLib\Table;
 use Interpid\PdfExamples\pdfFactory;
 
 $factory = new pdfFactory();
@@ -36,18 +36,18 @@ $table = new Table( $pdf );
 /**
  * Set the tag styles
  */
-$table->setStyle( "p", 'Helvetica', "", 10, "130,0,30" );
-$table->setStyle( "b", 'Helvetica', "", 9, "80,80,260" );
-$table->setStyle( "h1", 'Helvetica', "", 10, "0,151,200" );
-$table->setStyle( "bi", 'Helvetica', "BI", 12, "0,0,120" );
+$table->setStyle( "p", 'helvetica', "", 10, "130,0,30" );
+$table->setStyle( "b", 'helvetica', "", 9, "80,80,260" );
+$table->setStyle( "h1", 'helvetica', "", 10, "0,151,200" );
+$table->setStyle( "bi", 'helvetica', "BI", 12, "0,0,120" );
 
 //default text color
 $pdf->SetTextColor( 118, 0, 3 );
 
 //create an advanced multicell    
 $multicell = Multicell::getInstance( $pdf );
-$multicell->setStyle( "s1", 'Helvetica', "", 8, "118,0,3" );
-$multicell->setStyle( "s2", 'Helvetica', "", 6, "0,49,159" );
+$multicell->setStyle( "s1", 'helvetica', "", 8, "118,0,3" );
+$multicell->setStyle( "s2", 'helvetica', "", 6, "0,49,159" );
 
 $multicell->multiCell( 100, 4, "<s1>Example 1 - Very Simple Table</s1>", 0 );
 $pdf->Ln( 1 );

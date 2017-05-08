@@ -9,8 +9,8 @@
 
 namespace Interpid\PdfExamples;
 
-use Interpid\Pdf\Pdf;
-use Interpid\Pdf\Multicell;
+use Interpid\PdfLib\Pdf;
+use Interpid\PdfLib\Multicell;
 
 class myPdf extends Pdf
 {
@@ -38,7 +38,7 @@ class myPdf extends Pdf
 
         $multicell->multiCell( 100, 3, file_get_contents( PDF_APPLICATION_PATH . '/content/' . $this->headerSource ) );
 
-        $this->Image( PDF_APPLICATION_PATH . '/images/interpid_logo.png', 160, 10, 40, 0, '',
+        $this->Image( PDF_APPLICATION_PATH . '/content/images/interpid_logo.png', 160, 10, 40, 0, '',
             'http://www.interpid.eu' );
         $this->SetY( $this->tMargin );
     }
@@ -92,20 +92,10 @@ class myPdf extends Pdf
     function _putinfo()
     {
         if ( isset( $_SERVER[ 'ENVIRONMENT' ] ) && 'test' == $_SERVER[ 'ENVIRONMENT' ] ) {
-            if ( !empty( $this->title ) ) {
-                $this->_out( '/Title ' . $this->_textstring( $this->title ) );
-            }
-            if ( !empty( $this->subject ) ) {
-                $this->_out( '/Subject ' . $this->_textstring( $this->subject ) );
-            }
-            if ( !empty( $this->author ) ) {
-                $this->_out( '/Author ' . $this->_textstring( $this->author ) );
-            }
-            if ( !empty( $this->keywords ) ) {
-                $this->_out( '/Keywords ' . $this->_textstring( $this->keywords ) );
-            }
-            if ( !empty( $this->creator ) ) {
-                $this->_out( '/Creator ' . $this->_textstring( $this->creator ) );
+            $this->metadata[ 'Producer' ] = 'FPDF - UNIT-TEST';
+            $this->metadata[ 'CreationDate' ] = 'D:' . @date( 'YmdHis', 1483228800 );
+            foreach ( $this->metadata as $key => $value ) {
+                $this->_put( '/' . $key . ' ' . $this->_textstring( $value ) );
             }
         } else {
             parent::_putinfo();

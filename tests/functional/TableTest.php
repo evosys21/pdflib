@@ -30,7 +30,7 @@ class TableTest extends PHPUnit_Framework_TestCase
         }
 
         //send the pdf to the browser
-        $pdf->Output( $sPdfFile, 'F' );
+        $pdf->saveToFile( $sPdfFile );
 
         $this->assertTrue( file_exists( $sPdfFile ) );
 
@@ -69,7 +69,7 @@ class TableTest extends PHPUnit_Framework_TestCase
         }
 
         //send the pdf to the browser
-        $pdf->Output( $sPdfFile, 'F' );
+        $pdf->saveToFile( $sPdfFile );
 
         $this->assertTrue( file_exists( $sPdfFile ) );
 
@@ -96,8 +96,7 @@ class TableTest extends PHPUnit_Framework_TestCase
             $sPdfFile = tempnam( sys_get_temp_dir(), 'pdf_test' );
         }
 
-        //send the pdf to the browser
-        $pdf->Output( $sPdfFile, 'F' );
+        $pdf->saveToFile( $sPdfFile );
 
         $this->assertTrue( file_exists( $sPdfFile ) );
 

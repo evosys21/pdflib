@@ -9,7 +9,7 @@
  * @property mixed TEST2
  */
 
-use Interpid\Pdf\Table\Cell\CellAbstract;
+use Interpid\PdfLib\Table\Cell\CellAbstract;
 
 /**
  * @property mixed|null TEST2

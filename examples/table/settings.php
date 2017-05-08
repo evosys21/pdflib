@@ -61,6 +61,6 @@ for ( $i = 0; $i < 5; $i++ ) {
 
 $imageCell = array(
     'TYPE' => 'IMAGE',
-    'FILE' => PDF_APPLICATION_PATH . '/images/dice.jpg',
+    'FILE' => PDF_RESOURCES_IMAGES . '/dice.jpg',
     'WIDTH' => 10
 );
