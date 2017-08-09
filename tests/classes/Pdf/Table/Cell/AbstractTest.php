@@ -7,6 +7,7 @@
 require_once 'AbstractMock.php';
 
 use \Interpid\PdfLib\PdfInterface;
+use PhpUnit\Framework\Exception;
 
 class CellAbstractTest extends BaseTestCase
 {
@@ -276,8 +277,8 @@ class CellAbstractTest extends BaseTestCase
 
         $this->assertTrue( $o->isPropertySet( 'TEST' ) );
 
-        $this->setExpectedException( 'PHPUnit_Framework_Error_Notice' );
-        $this->assertInstanceOf( 'PHPUnit_Framework_Error_Notice', $o->TEST2 );
+        $this->expectException('PhpUnit\Framework\Error\Notice');
+        $this->assertInstanceOf( 'PhpUnit\Framework\Error\Notice', $o->TEST2 );
     }
 
     public function testIsPropertySetReturnValue()
@@ -285,7 +286,7 @@ class CellAbstractTest extends BaseTestCase
         $pdf = $this->getPdfObject();
         $o = new CellAbstractMock( $pdf );
 
-        PHPUnit_Framework_Error_Notice::$enabled = false;
+        PhpUnit\Framework\Error\Notice::$enabled = false;
         $error_level = ini_get( 'error_reporting' );
 
         error_reporting( 0 );

@@ -5,6 +5,7 @@
       <path value="C:\Composer\vendor" />
     </include_path>
   </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
   <component name="PhpUnit">
     <phpunit_settings>
       <PhpUnitSettings load_method="PHPUNIT_PHAR" bootstrap_file_path="D:/Projects/pdf-addons/fpdf/tests/bootstrap-gen.php" custom_loader_path="" phpunit_phar_path="C:/Composer/phars/phpunit.phar" use_bootstrap_file="true" />
