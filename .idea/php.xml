@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="C:\Composer\vendor" />
+      <path value="C:\Composer\phars" />
+    </include_path>
+  </component>
   <component name="PhpUnit">
     <phpunit_settings>
-      <PhpUnitSettings load_method="PHPUNIT_PHAR" bootstrap_file_path="$PROJECT_DIR$/tests/bootstrap-gen.php" custom_loader_path="" phpunit_phar_path="C:/Composer/phars/phpunit.phar" use_bootstrap_file="true" />
+      <PhpUnitSettings load_method="PHPUNIT_PHAR" bootstrap_file_path="D:/Projects/pdf-addons/fpdf/tests/bootstrap.php" custom_loader_path="" phpunit_phar_path="C:/Composer/phars/phpunit.phar" use_bootstrap_file="true" />
     </phpunit_settings>
   </component>
 </project>

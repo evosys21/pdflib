@@ -23,7 +23,7 @@ namespace Interpid\PdfLib;
 
 use Interpid\PdfLib\Table\Cell\CellInterface;
 use Interpid\PdfLib\Table\Cell\CellAbstract;
-use Interpid\PdfLib\Table\Cell\Void;
+use Interpid\PdfLib\Table\Cell\EmptyCell;
 
 if ( !defined( 'PDF_TABLE_CONFIG_PATH' ) ) {
     define( 'PDF_TABLE_CONFIG_PATH', __DIR__ );
@@ -314,7 +314,7 @@ class Table
     protected $aColumnWidth = [];
 
     protected $typeMap = array(
-        'EMPTY' => '\Interpid\PdfLib\Table\Cell\Void',
+        'EMPTY' => '\Interpid\PdfLib\Table\Cell\EmptyCell',
         'MULTICELL' => '\Interpid\PdfLib\Table\Cell\Multicell',
         'IMAGE' => '\Interpid\PdfLib\Table\Cell\Image',
     );
@@ -1273,7 +1273,7 @@ class Table
                                 } else {
                                     $cellSplit = clone $cell;
 
-                                    $o = new Void( $this->pdf );
+                                    $o = new EmptyCell( $this->pdf );
                                     $o->copyProperties( $cell );
                                     $o->setCellDrawWidth( $cell->getCellDrawWidth() );
                                     $o->setCellHeight( $iLeftHeightLast );
@@ -1318,7 +1318,7 @@ class Table
                                     } else {
                                         $aTData[ $rws[ 1 ] ] = clone $rData;
 
-                                        $o = new Void( $this->pdf );
+                                        $o = new EmptyCell( $this->pdf );
                                         $o->copyProperties( $rData );
                                         $o->setCellDrawWidth( $rData->getCellDrawWidth() );
                                         $o->setCellDrawHeight( $rData->HEIGHT_LEFT_RW );

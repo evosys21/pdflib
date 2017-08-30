@@ -956,11 +956,21 @@ class Multicell
 
         $aStrLines = [];
 
+        $lines = 0;
+
         while ( !$bLastLine ) {
+
+            $lines++;
 
             //make a line
             $str_data = $this->makeLine( $width );
             array_push( $aStrLines, $str_data );
+
+            #1247 - limit the maximum number of lines
+            $maxLines = $this->getMaxLines();
+            if ( $maxLines > 0 && $lines >= $maxLines ) {
+                break;
+            }
 
             //check for last line
             $bLastLine = !( count( $this->dataInfo ) > 0 );
@@ -1268,4 +1278,26 @@ class Multicell
     {
         $this->bFill = $value;
     }
+
+
+    protected $maxLines = 0;
+
+    /**
+     * @return int
+     */
+    public function getMaxLines()
+    {
+        return $this->maxLines;
+    }
+
+    /**
+     * @param int $maxLines
+     * @return $this
+     */
+    public function setMaxLines( $maxLines )
+    {
+        $this->maxLines = $maxLines;
+        return $this;
+    }
+
 }

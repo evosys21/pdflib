@@ -11,9 +11,11 @@
     <orderEntry type="module-library">
       <library name="PHP">
         <CLASSES>
+          <root url="file://C:/Composer/phars" />
           <root url="file://C:/Composer/vendor" />
         </CLASSES>
         <SOURCES>
+          <root url="file://C:/Composer/phars" />
           <root url="file://C:/Composer/vendor" />
         </SOURCES>
       </library>
@@ -21,12 +23,30 @@
     <orderEntry type="module-library">
       <library name="PHARS">
         <CLASSES>
-          <root url="phar://C:/Composer/vendor/pdepend/pdepend/src/site/rst/static_reflection/releases/staticReflection-0.1.1.phar/" />
+          <root url="phar://C:/Composer/phars/phpmd.phar/" />
+          <root url="phar://C:/Composer/phars/phpunit.phar/" />
           <root url="phar://C:/Composer/vendor/symfony/dependency-injection/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
+          <root url="phar://C:/Composer/phars/symfony.phar/" />
+          <root url="phar://C:/Composer/phars/pdepend.phar/" />
+          <root url="phar://C:/Composer/phars/phpdcd.phar/" />
+          <root url="phar://C:/Composer/phars/phpcpd.phar/" />
+          <root url="phar://C:/Composer/vendor/pdepend/pdepend/src/site/rst/static_reflection/releases/staticReflection-0.1.1.phar/" />
+          <root url="phar://C:/Composer/phars/phpcs.phar/" />
+          <root url="phar://C:/Composer/phars/composer.phar/" />
+          <root url="phar://C:/Composer/phars/phpunit-skelgen.phar/" />
         </CLASSES>
         <SOURCES>
-          <root url="phar://C:/Composer/vendor/pdepend/pdepend/src/site/rst/static_reflection/releases/staticReflection-0.1.1.phar/" />
+          <root url="phar://C:/Composer/phars/phpmd.phar/" />
+          <root url="phar://C:/Composer/phars/phpunit.phar/" />
           <root url="phar://C:/Composer/vendor/symfony/dependency-injection/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
+          <root url="phar://C:/Composer/phars/symfony.phar/" />
+          <root url="phar://C:/Composer/phars/pdepend.phar/" />
+          <root url="phar://C:/Composer/phars/phpdcd.phar/" />
+          <root url="phar://C:/Composer/phars/phpcpd.phar/" />
+          <root url="phar://C:/Composer/vendor/pdepend/pdepend/src/site/rst/static_reflection/releases/staticReflection-0.1.1.phar/" />
+          <root url="phar://C:/Composer/phars/phpcs.phar/" />
+          <root url="phar://C:/Composer/phars/composer.phar/" />
+          <root url="phar://C:/Composer/phars/phpunit-skelgen.phar/" />
         </SOURCES>
       </library>
     </orderEntry>

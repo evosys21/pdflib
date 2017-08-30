@@ -9,7 +9,7 @@
 
 require_once( __DIR__ . "/Helper.php" );
 
-use \Interpid\PdfExamples\myPdf;
+use Interpid\PdfExamples\myPdf;
 
 class testPdf extends myPdf
 {

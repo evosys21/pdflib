@@ -4,7 +4,11 @@
             <directory>.</directory>
         </testsuite>
     </testsuites>
-
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">../vendor/interpid</directory>
+        </whitelist>
+    </filter>
     <logging>
         <log type="coverage-html" target="../build/logs/coverage" title="Code Coverage"
              charset="UTF-8" yui="true" highlight="true" lowUpperBound="35" highLowerBound="70"/>

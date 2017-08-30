@@ -4,8 +4,8 @@ if ( !isset( $pdf ) ) {
     $pdf = new myPdf();
 }
 
-use \Interpid\PdfLib\Table;
-use \Interpid\PdfLib\Tools;
+use Interpid\PdfLib\Table;
+use Interpid\PdfLib\Tools;
 
 $table = new Table( $pdf );
 

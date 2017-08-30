@@ -33,7 +33,7 @@
 
 namespace Interpid\PdfLib\Table\Cell;
 
-use \Interpid\PdfLib\Pdf;
+use Interpid\PdfLib\Pdf;
 
 /**
  * @property mixed|array TEXT_STRLINES

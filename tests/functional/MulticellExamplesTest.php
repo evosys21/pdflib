@@ -14,6 +14,7 @@ class MulticellExamplesTest extends BaseExamplesTestCase
             'example-multicell-2-overview-page-break.php',
             'example-multicell-3-line-breaking.php',
             'example-multicell-4-page-break.php',
+            'example-multicell-5-max-lines.php',
         );
 
         foreach ( $aSources as $source ) {

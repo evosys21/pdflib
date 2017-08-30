@@ -7,8 +7,8 @@
  * Time: 10:21 PM
  */
 
-use \Interpid\PdfExamples\pdfFactory;
-use \Interpid\PdfLib\Pdf;
+use Interpid\PdfExamples\pdfFactory;
+use Interpid\PdfLib\Pdf;
 
 class Helper
 {

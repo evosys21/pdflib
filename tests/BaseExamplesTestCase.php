@@ -1,9 +1,10 @@
 <?php
 
-use \Interpid\PdfExamples\myPdf;
-use \Interpid\PdfExamples\pdfFactory;
+use Interpid\PdfExamples\myPdf;
+use Interpid\PdfExamples\pdfFactory;
+use PHPUnit\Framework\TestCase;
 
-class BaseExamplesTestCase extends PHPUnit_Framework_TestCase
+class BaseExamplesTestCase extends TestCase
 {
     /**
      * Returns the pdf object

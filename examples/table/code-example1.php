@@ -1,6 +1,6 @@
 <?php
 
-use \Interpid\PdfLib\Table;
+use Interpid\PdfLib\Table;
 
 $table = new Table( $pdf );
 

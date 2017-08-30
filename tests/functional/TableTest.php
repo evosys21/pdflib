@@ -1,6 +1,8 @@
 <?php
 
-class TableTest extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class TableTest extends TestCase
 {
 
     /**
@@ -106,15 +108,6 @@ class TableTest extends PHPUnit_Framework_TestCase
             unlink( $sPdfFile );
         }
     }
-
-
-    /**
-     * Constructs the test case.
-     */
-    public function __construct()
-    {
-    }
-
 
     /**
      * Tests testTableModel1

@@ -6,7 +6,7 @@ if ( !isset( $pdf ) ) {
     $pdf = new \Interpid\PdfExamples\myPdf();
 }
 
-use \Interpid\PdfLib\Table;
+use Interpid\PdfLib\Table;
 
 $table = new Table( $pdf );
 

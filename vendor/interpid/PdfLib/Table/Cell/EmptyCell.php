@@ -1,6 +1,6 @@
 <?php
 /**
- * Pdf Table Cell Void
+ * Pdf Table Cell EmptyCell
  *
  * This program is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
@@ -24,7 +24,7 @@ namespace Interpid\PdfLib\Table\Cell;
 /**
  * @property array aDefaultValues
  */
-class Void extends CellAbstract implements CellInterface
+class EmptyCell extends CellAbstract implements CellInterface
 {
 
 

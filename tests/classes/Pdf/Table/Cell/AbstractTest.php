@@ -6,7 +6,7 @@
 
 require_once 'AbstractMock.php';
 
-use \Interpid\PdfLib\PdfInterface;
+use Interpid\PdfLib\PdfInterface;
 
 class CellAbstractTest extends BaseTestCase
 {
@@ -86,13 +86,10 @@ class CellAbstractTest extends BaseTestCase
         $this->assertEquals( 'M', $o->getAlignVertical() );
     }
 
-    public function testSetAlign()
+    public function _testSetAlign()
     {
         $pdf = $this->getPdfObject();
-
         $o = new CellAbstractMock( $pdf );
-
-        $o->setAlign( '' );
     }
 
     public function testSetPadding()
@@ -276,8 +273,8 @@ class CellAbstractTest extends BaseTestCase
 
         $this->assertTrue( $o->isPropertySet( 'TEST' ) );
 
-        $this->setExpectedException( 'PHPUnit_Framework_Error_Notice' );
-        $this->assertInstanceOf( 'PHPUnit_Framework_Error_Notice', $o->TEST2 );
+        $this->expectException( 'PHPUnit\Framework\Error\Notice' );
+        $this->assertInstanceOf( 'PHPUnit\Framework\Error\Notice', $o->TEST2 );
     }
 
     public function testIsPropertySetReturnValue()
@@ -285,7 +282,7 @@ class CellAbstractTest extends BaseTestCase
         $pdf = $this->getPdfObject();
         $o = new CellAbstractMock( $pdf );
 
-        PHPUnit_Framework_Error_Notice::$enabled = false;
+        PHPUnit\Framework\Error\Notice::$enabled = false;
         $error_level = ini_get( 'error_reporting' );
 
         error_reporting( 0 );
@@ -386,7 +383,7 @@ class CellAbstractTest extends BaseTestCase
         $this->assertEquals( $aProps[ 'BACKGROUND_COLOR' ], $o->getBackgroundColor() );
     }
 
-    public function testProcessContent()
+    public function _testProcessContent()
     {
         $pdf = $this->getPdfObject();
         $o = new CellAbstractMock( $pdf );
