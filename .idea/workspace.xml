@@ -4,27 +4,7 @@
     <option name="SCOPE_TYPE" value="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="#1200 Implement Namespaces&#10;#1199 Remove Hungarian Notation&#10;#1201 Use array short-hands&#10;#1202 Table vertical align not working">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/multicell-title.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/example-multicell.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/andy.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/andy.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/header-table.txt" afterPath="$PROJECT_DIR$/content/header-table.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/example-multicell-1-overview.php" afterPath="$PROJECT_DIR$/examples/example-multicell-1-overview.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/example-multicell-2-overview-page-break.php" afterPath="$PROJECT_DIR$/examples/example-multicell-2-overview-page-break.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/example-multicell-3-line-breaking.php" afterPath="$PROJECT_DIR$/examples/example-multicell-3-line-breaking.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/example-multicell-4-page-break.php" afterPath="$PROJECT_DIR$/examples/example-multicell-4-page-break.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/example-multicell-5-max-lines.php" afterPath="$PROJECT_DIR$/examples/example-multicell-5-max-lines.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/example-table-1-overview.php" afterPath="$PROJECT_DIR$/examples/example-table-1-overview.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/example-table-2-overview.php" afterPath="$PROJECT_DIR$/examples/example-table-2-overview.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/example-table-3-detailed.php" afterPath="$PROJECT_DIR$/examples/example-table-3-detailed.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/example-table-4-override.php" afterPath="$PROJECT_DIR$/examples/example-table-4-override.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/table/code-example-alignments.php" afterPath="$PROJECT_DIR$/examples/table/code-example-alignments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/table/code-example-transparent.php" afterPath="$PROJECT_DIR$/examples/table/code-example-transparent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/table/code-example1.php" afterPath="$PROJECT_DIR$/examples/table/code-example1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/table/code-example2.php" afterPath="$PROJECT_DIR$/examples/table/code-example2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/table/code-example3.php" afterPath="$PROJECT_DIR$/examples/table/code-example3.php" />
-    </list>
+    <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="#1200 Implement Namespaces&#10;#1199 Remove Hungarian Notation&#10;#1201 Use array short-hands&#10;#1202 Table vertical align not working" />
     <ignored path="fpdf.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -204,7 +184,7 @@
       <path value="C:\Composer\phars" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="2578" />
@@ -635,8 +615,7 @@
     <option name="totallyTimeSpent" value="65355000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="2578" height="1381" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="2578" height="1381" extended-state="7" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20663469" sideWeight="0.72570723" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />

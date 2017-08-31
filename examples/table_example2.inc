@@ -76,9 +76,9 @@ for ( $j = 1; $j <= 15; $j++ ) {
     }
 
     if ( $j == 9 ) {
-        $table->setStyle( "sd1", "helvetica", "", 6, "0,49,159" );
-        $table->setStyle( "sd2", "helvetica", "", 5, "140,12,12" );
-        $table->setStyle( "sd3", "helvetica", "", 6, "0,5,90" );
+        $table->setStyle( "sd1", $pdf->getDefaultFontName(), "", 6, "0,49,159" );
+        $table->setStyle( "sd2", $pdf->getDefaultFontName(), "", 5, "140,12,12" );
+        $table->setStyle( "sd3", $pdf->getDefaultFontName(), "", 6, "0,5,90" );
 
         $aRow[ 1 ][ 'TEXT' ] = "<sd1>This is just a longer text, justified align, middle vertical align to demonstrate some other capabilities. Test text. Test text.</sd1>
 <sd3>\tSettings:</sd3>
