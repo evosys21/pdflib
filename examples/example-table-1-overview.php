@@ -11,7 +11,7 @@ use Interpid\PdfExamples\pdfFactory;
 
 $factory = new pdfFactory();
 
-//get the FPDF object and initializes it
+//get the PDF object
 $pdf = pdfFactory::newPdf( 'table' );
 
 //Create the Advanced Multicell Object and pass the PDF object as a parameter to the constructor
@@ -19,8 +19,8 @@ $multicell = new Multicell( $pdf );
 
 //Set the styles for the advanced multicell
 $multicell = new Multicell( $pdf );
-$multicell->setStyle( "p", 'helvetica', "", 7, "130,0,30" );
-$multicell->setStyle( "b", 'helvetica', "B", 7, "130,0,30" );
+$multicell->setStyle( "p", $pdf->getDefaultFontName(), "", 7, "130,0,30" );
+$multicell->setStyle( "b", $pdf->getDefaultFontName(), "B", 7, "130,0,30" );
 
 //simple table
 $multicell->multiCell( 0, 5, "<p size='10' > ~~~Simple table:</p>" );

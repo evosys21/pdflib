@@ -10,11 +10,11 @@ use Interpid\PdfLib\Table;
 
 $table = new Table( $pdf );
 
-$table->setStyle( "p", 'helvetica', "", 6, "130,0,30" );
-$table->setStyle( "b", 'helvetica', "B", 6, "130,0,30" );
-$table->setStyle( "bi", 'helvetica', "BI", 6, "0,0,120" );
-$table->setStyle( "s1", 'helvetica', "I", 6, "0,0,120" );
-$table->setStyle( "s2", 'helvetica', "", 7, "110,50,120" );
+$table->setStyle( "p", $pdf->getDefaultFontName(), "", 6, "130,0,30" );
+$table->setStyle( "b", $pdf->getDefaultFontName(), "B", 6, "130,0,30" );
+$table->setStyle( "bi", $pdf->getDefaultFontName(), "BI", 6, "0,0,120" );
+$table->setStyle( "s1", $pdf->getDefaultFontName(), "I", 6, "0,0,120" );
+$table->setStyle( "s2", $pdf->getDefaultFontName(), "", 7, "110,50,120" );
 
 $nColumns = 5;
 
@@ -23,7 +23,6 @@ $nColumns = 5;
  */
 
 $table->initialize( [ 20, 30, 40, 50 ] );
-
 
 $header1 = $headerRow;
 $header1[ 2 ][ 'TEXT' ] = 'Colspan in Header';

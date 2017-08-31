@@ -12,7 +12,7 @@ use Interpid\PdfExamples\pdfFactory;
 
 $factory = new pdfFactory();
 
-//get the FPDF object and initializes it
+//get the PDF object
 $pdf = pdfFactory::newPdf( 'table' );
 /**
  * Create the pdf Table object
@@ -25,19 +25,19 @@ $table = new Table( $pdf );
 /**
  * Set the tag styles
  */
-$table->setStyle( "p", 'helvetica', "", 10, "130,0,30" );
-$table->setStyle( "b", 'helvetica', "", 9, "80,80,260" );
-$table->setStyle( "h1", 'helvetica', "", 10, "0,151,200" );
-$table->setStyle( "bi", 'helvetica', "BI", 12, "0,0,120" );
-$table->setStyle( "size", 'helvetica', "BI", 13, "0,0,120" );
+$table->setStyle( "p", $pdf->getDefaultFontName(), "", 10, "130,0,30" );
+$table->setStyle( "b", $pdf->getDefaultFontName(), "", 9, "80,80,260" );
+$table->setStyle( "h1", $pdf->getDefaultFontName(), "", 10, "0,151,200" );
+$table->setStyle( "bi", $pdf->getDefaultFontName(), "BI", 12, "0,0,120" );
+$table->setStyle( "size", $pdf->getDefaultFontName(), "BI", 13, "0,0,120" );
 
 //default text color
 $pdf->SetTextColor( 118, 0, 3 );
 
 //create an advanced multicell    
 $multicell = Multicell::getInstance( $pdf );
-$multicell->setStyle( "s1", 'helvetica', "", 8, "118,0,3" );
-$multicell->setStyle( "s2", 'helvetica', "", 6, "0,49,159" );
+$multicell->setStyle( "s1", $pdf->getDefaultFontName(), "", 8, "118,0,3" );
+$multicell->setStyle( "s2", $pdf->getDefaultFontName(), "", 6, "0,49,159" );
 $multicell->multiCell( 100, 4, "<s1>Example - Override Default Configuration Values</s1>", 0 );
 
 $columns = 3;

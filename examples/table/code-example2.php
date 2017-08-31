@@ -6,9 +6,9 @@ use Interpid\PdfLib\Table;
 
 $table = new Table( $pdf );
 
-$table->setStyle( "p", 'helvetica', "", 7, "130,0,30" );
-$table->setStyle( "b", 'helvetica', "B", 7, "130,0,30" );
-$table->setStyle( "bi", 'helvetica', "BI", 7, "0,0,120" );
+$table->setStyle( "p", $pdf->getDefaultFontName(), "", 7, "130,0,30" );
+$table->setStyle( "b", $pdf->getDefaultFontName(), "B", 7, "130,0,30" );
+$table->setStyle( "bi", $pdf->getDefaultFontName(), "BI", 7, "0,0,120" );
 
 $columns = 3;
 

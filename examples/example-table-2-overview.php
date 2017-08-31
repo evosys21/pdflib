@@ -11,7 +11,7 @@ use Interpid\PdfExamples\pdfFactory;
 
 $factory = new pdfFactory();
 
-//get the FPDF object and initializes it
+//get the PDF object
 $pdf = pdfFactory::newPdf( 'table' );
 
 //define some background colors
@@ -29,12 +29,12 @@ $table = new Table( $pdf );
 /**
  * Set the tag styles
  */
-$table->setStyle( "p", 'helvetica', "", 10, "130,0,30" );
-$table->setStyle( "b", 'helvetica', "", 9, "80,80,260" );
-$table->setStyle( "h1", 'helvetica', "", 10, "0,151,200" );
-$table->setStyle( "bi", 'helvetica', "BI", 12, "0,0,120" );
+$table->setStyle( "p", $pdf->getDefaultFontName(), "", 10, "130,0,30" );
+$table->setStyle( "b", $pdf->getDefaultFontName(), "", 9, "80,80,260" );
+$table->setStyle( "h1", $pdf->getDefaultFontName(), "", 10, "0,151,200" );
+$table->setStyle( "bi", $pdf->getDefaultFontName(), "BI", 12, "0,0,120" );
 
-$txt1 = "<p>All table cells are fully functional <bi href='http://www.interpid.eu/pdf-multicell'>pdf Advanced Multicells</bi>\nDetails about Pdf Advanced Multicell can be found <h1 href='http://http://www.interpid.eu/pdf-tcpdf-addons'>here</h1></p>";
+$txt1 = $title = file_get_contents( PDF_APPLICATION_PATH . '/content/table-cell-text.txt' );
 
 //Initialize the table class, 5 columns with the specified widths
 $table->initialize( [ 20, 30, 40, 40, 20 ] );

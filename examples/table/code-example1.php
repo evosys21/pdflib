@@ -4,8 +4,8 @@ use Interpid\PdfLib\Table;
 
 $table = new Table( $pdf );
 
-$table->setStyle( "p", 'helvetica', "", 7, "130,0,30" );
-$table->setStyle( "b", 'helvetica', "B", 7, "130,0,30" );
+$table->setStyle( "p", $pdf->getDefaultFontName(), "", 7, "130,0,30" );
+$table->setStyle( "b", $pdf->getDefaultFontName(), "B", 7, "130,0,30" );
 
 $columns = 3;
 

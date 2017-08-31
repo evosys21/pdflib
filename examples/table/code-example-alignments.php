@@ -9,10 +9,9 @@ use Interpid\PdfLib\Tools;
 
 $table = new Table( $pdf );
 
-
-$table->setStyle( "p", 'helvetica', "", 6, "130,0,30" );
-$table->setStyle( "b", 'helvetica', "B", 6, "130,0,30" );
-$table->setStyle( "bi", 'helvetica', "BI", 6, "0,0,120" );
+$table->setStyle( "p", $pdf->getDefaultFontName(), "", 6, "130,0,30" );
+$table->setStyle( "b", $pdf->getDefaultFontName(), "B", 6, "130,0,30" );
+$table->setStyle( "bi", $pdf->getDefaultFontName(), "BI", 6, "0,0,120" );
 
 require( 'settings.php' );
 
@@ -23,7 +22,6 @@ $columns = 5;
  */
 
 $table->initialize( [ 20, 30, 40, 50 ] );
-
 
 $table->addHeader( $headerRow );
 

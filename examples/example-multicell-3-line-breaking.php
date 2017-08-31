@@ -11,14 +11,14 @@ use Interpid\PdfExamples\pdfFactory;
 
 $factory = new pdfFactory();
 
-//get the FPDF object and initializes it
+//get the PDF object
 $pdf = pdfFactory::newPdf( 'multicell' );
 
 // Create the Advanced Multicell Object and pass the PDF object as a parameter to the constructor
 $multicell = new Multicell( $pdf );
 
 // Set the styles for the advanced multicell
-$multicell->setStyle( "b", 'helvetica', "B", 11, "130,0,30" );
+$multicell->setStyle( "b", $pdf->getDefaultFontName(), "B", 11, "130,0,30" );
 
 $txt = "This is a demo of <b>NON BREAKING > S P>A C E EXAMPLE</b>";
 
