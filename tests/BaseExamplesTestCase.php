@@ -16,7 +16,7 @@ class BaseExamplesTestCase extends TestCase
         //create the pdf object and do some initialization
         $pdf = new myPdf();
 
-        $factory = pdfFactory::initPdfObject( $pdf );
+        $factory = pdfFactory::initPdf( $pdf );
 
         //disable compression for testing
         $pdf->SetCompression( false );

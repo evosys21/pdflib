@@ -8,12 +8,13 @@ require_once __DIR__ . "/../autoload.php";
 
 use Interpid\PdfLib\Multicell;
 use Interpid\PdfExamples\pdfFactory;
+use Interpid\PdfLib\Pdf;
 
-$factory = new pdfFactory();
+// Pdf extends FPDF
+$pdf = new Pdf();
 
-//get the FPDF Object
-$pdf = pdfFactory::newPdf( 'multicell' );
-
+// Initialize the pdf object. Set the margins, adds a page, set default fonts etc...
+pdfFactory::initPdf( $pdf );
 
 // Create the Advanced Multicell Object and pass the PDF object as a parameter to the constructor
 $multicell = new Multicell( $pdf );

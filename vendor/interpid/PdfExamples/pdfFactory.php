@@ -56,12 +56,12 @@ class pdfFactory
 
     /**
      * Initializes the pdf object.
-     * Opens the object, sets the margins, adds default fonts etc...
+     * Set the margins, adds a page, adds default fonts etc...
      *
      * @param Pdf $pdf
      * @return Pdf $pdf
      */
-    public static function initPdfObject( $pdf )
+    public static function initPdf( $pdf )
     {
         $pdf->SetMargins( 20, 20, 20 );
 

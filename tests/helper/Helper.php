@@ -28,7 +28,7 @@ class Helper
             180
         ) );
 
-        pdfFactory::initPdfObject( $pdf );
+        pdfFactory::initPdf( $pdf );
 
         //disable compression for testing
         $pdf->SetCompression( false );

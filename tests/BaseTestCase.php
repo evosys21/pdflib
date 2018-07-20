@@ -39,7 +39,7 @@ class BaseTestCase extends TestCase
         $pdf = new Pdf();
 
         $factory = new pdfFactory();
-        $factory->initPdfObject( $pdf );
+        $factory->initPdf( $pdf );
 
         //disable compression for testing
         $pdf->SetCompression( false );
