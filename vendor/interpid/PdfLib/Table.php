@@ -738,15 +738,15 @@ class Table
      * Adds a line to the Table Data or Header Cache.
      * Call this function after the table initialization, table, header and data types are set
      *
-     * @param array $aRowData Data to be Drawed
+     * @param array $rowData Data to be Drawed
      */
-    public function addRow( $aRowData = array() )
+    public function addRow( $rowData = array() )
     {
         if ( !$this->headerOnCurrentPage ) {
             $this->drawHeader();
         }
 
-        $this->_addDataToCache( $aRowData );
+        $this->_addDataToCache( $rowData );
     }
 
 
@@ -858,7 +858,7 @@ class Table
             $aRefCache = &$this->dataCache;
         }
 
-        $aRowSpan = [];
+        $rowSpan = [];
 
         $hm = 0;
 
@@ -874,7 +874,7 @@ class Table
         //this variable will contain the active colspans
         $iActiveColspan = 0;
 
-        $aRow = [];
+        $row = [];
 
         //calculate the maximum height of the cells
         for ( $i = 0; $i < $this->columns; $i++ ) {
@@ -884,7 +884,7 @@ class Table
                 $oCell = $this->getCellObject();
             }
 
-            $aRow[ $i ] = $oCell;
+            $row[ $i ] = $oCell;
 
             $oCell->setDefaultValues( $this->getDefaultValues( $sDataType ) );
             $oCell->setCellDrawWidth( $this->getColumnWidth( $i ) ); //copy this from the header settings
@@ -947,7 +947,7 @@ class Table
 
             //add the cells that are with rowspan to the rowspan array - this is used later
             if ( $oCell->getRowSpan() > 1 ) {
-                $aRowSpan[] = $i;
+                $rowSpan[] = $i;
             }
 
             $oCell->processContent();
@@ -968,7 +968,7 @@ class Table
         }
 
         //for every cell, set the Draw Height to the maximum height of the row
-        foreach ( $aRow as $aCell ) {
+        foreach ( $row as $aCell ) {
             /** @var $aCell CellInterface */
             $aCell->setCellDrawHeight( $hm );
         }
@@ -977,14 +977,14 @@ class Table
         $aRefCache[] = array(
             'HEIGHT' => $hm, //the line maximum height
             'DATATYPE' => $sDataType, //The data Type - Data/Header
-            'DATA' => $aRow, //this line's data
-            'ROWSPAN' => $aRowSpan //rowspan ID array
+            'DATA' => $row, //this line's data
+            'ROWSPAN' => $rowSpan //rowspan ID array
         );
         //@formatter:on
 
 
         //we set the rowspan in cache variable to true if we have a rowspan
-        if ( !empty( $aRowSpan ) && ( !$this->rowSpanInCache ) ) {
+        if ( !empty( $rowSpan ) && ( !$this->rowSpanInCache ) ) {
             $this->rowSpanInCache = true;
         }
     }
@@ -1005,7 +1005,7 @@ class Table
             $aRefCache = &$this->headerCache;
         }
 
-        $aRowSpans = [];
+        $rowSpans = [];
 
         $iItems = count( $aRefCache );
 
@@ -1035,7 +1035,7 @@ class Table
 
 
                 //@formatter:off
-                $aRowSpans[] = array(
+                $rowSpans[] = array(
                     'row_id' => $ix,
                     'reference_cell' => $cell
                 );
@@ -1076,7 +1076,7 @@ class Table
          * The height of this cell is the sum of the heights of the rows where the rowspan occurs
          */
 
-        foreach ( $aRowSpans as $val1 ) {
+        foreach ( $rowSpans as $val1 ) {
             /** @var CellAbstract $cell */
             $cell = $val1[ 'reference_cell' ];
 
@@ -1120,7 +1120,7 @@ class Table
         $iLastDataKey = 0;
 
         //will contain the rowspans on the current page, EMPTY THIS VARIABLE AT EVERY NEW PAGE!!!
-        $aRowSpans = [];
+        $rowSpans = [];
 
         $aDC = &$this->dataCache;
 
@@ -1131,7 +1131,7 @@ class Table
 
             switch ( $val[ 'DATATYPE' ] ) {
                 case self::TB_DATA_TYPE_INSERT_NEW_PAGE:
-                    $aRowSpans = [];
+                    $rowSpans = [];
                     $iLeftHeight = $iPageHeight;
                     $this->dataOnCurrentPage = false; //new page
                     $this->insertNewPage( $i, null, true, true );
@@ -1147,7 +1147,7 @@ class Table
 
             if ( isset( $val[ 'ROWSPAN' ] ) ) {
                 foreach ( $val[ 'ROWSPAN' ] as $v ) {
-                    $aRowSpans[] = array(
+                    $rowSpans[] = array(
                         $i,
                         $v
                     );
@@ -1295,9 +1295,9 @@ class Table
 
                             $bNeedParseCache = false;
 
-                            $aRowSpan = $aDC[ $i ][ 'ROWSPAN' ];
+                            $rowSpan = $aDC[ $i ][ 'ROWSPAN' ];
 
-                            foreach ( $aRowSpans as $rws ) {
+                            foreach ( $rowSpans as $rws ) {
                                 $rData = &$aDC[ $rws[ 0 ] ][ 'DATA' ][ $rws[ 1 ] ];
                                 /** @var $rData CellAbstract */
 
@@ -1357,9 +1357,9 @@ class Table
 
                             $bNeedParseCache = false;
 
-                            $aRowSpan = $aDC[ $i ][ 'ROWSPAN' ];
+                            $rowSpan = $aDC[ $i ][ 'ROWSPAN' ];
 
-                            foreach ( $aRowSpans as $rws ) {
+                            foreach ( $rowSpans as $rws ) {
                                 $rData = &$aDC[ $rws[ 0 ] ][ 'DATA' ][ $rws[ 1 ] ];
                                 /** @var $rData CellAbstract */
 
@@ -1387,8 +1387,8 @@ class Table
 
                                     $aDC[ $i ][ 'DATA' ][ $rws[ 1 ] ] = $aTData;
 
-                                    $aRowSpan[] = $rws[ 1 ];
-                                    $aDC[ $i ][ 'ROWSPAN' ] = $aRowSpan;
+                                    $rowSpan[] = $rws[ 1 ];
+                                    $aDC[ $i ][ 'ROWSPAN' ] = $rowSpan;
 
                                     $bNeedParseCache = true;
                                 }
@@ -1404,7 +1404,7 @@ class Table
                 }
 
                 $iLeftHeight = $iPageHeight;
-                $aRowSpans = [];
+                $rowSpans = [];
                 $this->dataOnCurrentPage = false; //new page
             }
         }

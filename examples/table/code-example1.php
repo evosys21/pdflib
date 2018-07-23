@@ -24,13 +24,13 @@ $header = array(
 $table->addHeader( $header );
 
 for ( $j = 1; $j < 3; $j++ ) {
-    $aRow = [];
-    $aRow[ 0 ][ 'TEXT' ] = "Line $j";
-    $aRow[ 1 ][ 'TEXT' ] = "Lorem ipsum dolor sit amet...";
-    $aRow[ 2 ][ 'TEXT' ] = "<p>Simple text\n<b>Bold text</b></p>";
+    $row = [];
+    $row[ 0 ][ 'TEXT' ] = "Line $j";
+    $row[ 1 ][ 'TEXT' ] = "Lorem ipsum dolor sit amet...";
+    $row[ 2 ][ 'TEXT' ] = "<p>Simple text\n<b>Bold text</b></p>";
 
     //add the data row
-    $table->addRow( $aRow );
+    $table->addRow( $row );
 }
 
 //close the table

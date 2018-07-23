@@ -38,7 +38,7 @@ $aBgColor6 = array(
     211,
     207
 );
-$bg_color7 = array(
+$bgColor7 = array(
     216,
     243,
     228
@@ -104,14 +104,14 @@ $aHeader1 = $aHeader;
 #$oTable->addHeader($aHeader1);
 
 for ( $j = 1; $j < 2; $j++ ) {
-    $aRow = Array();
+    $row = Array();
 
     for ( $i = 0; $i < $nColumns; $i++ ) {
-        $aRow[ $i ][ 'TEXT' ] = "Line $j\nText $i\nLine $j\nText $i";
+        $row[ $i ][ 'TEXT' ] = "Line $j\nText $i\nLine $j\nText $i";
     }
 
     //add the row
-    $oTable->addRow( $aRow );
+    $oTable->addRow( $row );
 
     if ( $j >= 1111 ) {
         break;

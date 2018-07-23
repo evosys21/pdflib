@@ -78,13 +78,13 @@ for ( $i = 0; $i < $nColumns; $i++ ) {
 $aDefaultRow[ 0 ][ 'TEXT' ] = $sDefaultText2;
 
 for ( $i = 1; $i < 3; $i++ ) {
-    $aRow = $aDefaultRow;
+    $row = $aDefaultRow;
 
-    $aRow[ 0 ][ 'ROWSPAN' ] = 2;
-    $aRow[ 0 ][ 'TEXT' ] = $sDefaultLongText;
+    $row[ 0 ][ 'ROWSPAN' ] = 2;
+    $row[ 0 ][ 'TEXT' ] = $sDefaultLongText;
 
-    $oTable->addRow( $aRow );
-    $aRowLast = $aRow;
+    $oTable->addRow( $row );
+    $rowLast = $row;
 }
 
 //close the table

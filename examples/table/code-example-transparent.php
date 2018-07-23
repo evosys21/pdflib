@@ -50,32 +50,32 @@ $imageCell = array(
 );
 
 //row 1 - add data as Array
-$aRow = [];
-$aRow[ 0 ][ 'TEXT' ] = "Line <b>1</b>";
+$row = [];
+$row[ 0 ][ 'TEXT' ] = "Line <b>1</b>";
 
-$aRow[ 1 ] = array(
+$row[ 1 ] = array(
     'TYPE' => 'IMAGE',
     'FILE' => PDF_RESOURCES_IMAGES . '/dice.jpg',
     'WIDTH' => 10
 );
 
-$aRow[ 2 ][ 'TEXT' ] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='http://www.interpid.eu'>www.interpid.eu</bi></p>";
-$aRow[ 2 ][ 'ALIGN' ] = "L";
+$row[ 2 ][ 'TEXT' ] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='http://www.interpid.eu'>www.interpid.eu</bi></p>";
+$row[ 2 ][ 'ALIGN' ] = "L";
 
 //add the data row
-$table->addRow( $aRow );
+$table->addRow( $row );
 
 //row 2 - add data as Objects
-$aRow = [];
+$row = [];
 
 //alternatively you can create directly the cell object
-$aRow[ 0 ] = new \Interpid\PdfLib\Table\Cell\Image( $pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10 );
-$aRow[ 1 ] = new \Interpid\PdfLib\Table\Cell\Multicell( $pdf, "<p>This is another <b>Multicell</b></p>" );
-$aRow[ 2 ][ 'TEXT' ] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='http://www.interpid.eu'>www.interpid.eu</bi></p>";
-$aRow[ 2 ][ 'BACKGROUND_COLOR' ] = $aColor[ 1 ];
+$row[ 0 ] = new \Interpid\PdfLib\Table\Cell\Image( $pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10 );
+$row[ 1 ] = new \Interpid\PdfLib\Table\Cell\Multicell( $pdf, "<p>This is another <b>Multicell</b></p>" );
+$row[ 2 ][ 'TEXT' ] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='http://www.interpid.eu'>www.interpid.eu</bi></p>";
+$row[ 2 ][ 'BACKGROUND_COLOR' ] = $aColor[ 1 ];
 
 //add the data row
-$table->addRow( $aRow );
+$table->addRow( $row );
 
 //close the table
 $table->close();

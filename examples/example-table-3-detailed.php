@@ -17,13 +17,13 @@ $factory = new pdfFactory();
 $pdf = pdfFactory::newPdf( 'table' );
 
 //define some background colors
-$aBgColor1 = [ 234, 255, 218 ];
-$aBgColor2 = [ 165, 250, 220 ];
-$aBgColor3 = [ 255, 252, 249 ];
-$aBgColor4 = [ 86, 155, 225 ];
-$aBgColor5 = [ 207, 247, 239 ];
-$aBgColor6 = [ 246, 211, 207 ];
-$bg_color7 = [ 216, 243, 228 ];
+$bgColor1 = [ 234, 255, 218 ];
+$bgColor2 = [ 165, 250, 220 ];
+$bgColor3 = [ 255, 252, 249 ];
+$bgColor4 = [ 86, 155, 225 ];
+$bgColor5 = [ 207, 247, 239 ];
+$bgColor6 = [ 246, 211, 207 ];
+$bgColor7 = [ 216, 243, 228 ];
 
 /**
  * Create the pdf Table object

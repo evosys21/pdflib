@@ -104,23 +104,23 @@ $nAlign = 0;
 
 for ( $i = 1; $i < 25; $i++ ) {
 
-    $aRow = Array();
+    $row = Array();
 
     $oImage = new Pdf_Table_Cell_Image( $oPdf );
     $oImage->setImage( PDF_APPLICATION_PATH . '/images/camaro_128.jpg', 19, 19 );
 
-    $aRow[ 0 ] = $oImage;
+    $row[ 0 ] = $oImage;
 
     for ( $j = 1; $j < 4; $j++ ) {
         if ( $nAlign >= count( $aAlignments ) ) {
             $nAlign = 0;
         }
-        $aRow[ $j ] = $aImageCell1;
-        $aRow[ $j ][ 'ALIGN' ] = $aAlignments[ $nAlign++ ];
+        $row[ $j ] = $aImageCell1;
+        $row[ $j ][ 'ALIGN' ] = $aAlignments[ $nAlign++ ];
     }
 
     //add the row
-    $oTable->addRow( $aRow );
+    $oTable->addRow( $row );
 }
 
 //close the table

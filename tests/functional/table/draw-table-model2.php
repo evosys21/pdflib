@@ -64,58 +64,58 @@ for ( $i = 0; $i < $columns; $i++ ) {
 $aDefaultRow[ 0 ][ 'TEXT' ] = $sDefaultText2;
 
 for ( $i = 1; $i < 10; $i++ ) {
-    $aRow = $aDefaultRow;
+    $row = $aDefaultRow;
 
     switch ( $i ) {
         case 1:
-            $aRow[ 0 ][ 'TEXT_ALIGN' ] = 'L';
-            $aRow[ 1 ][ 'TEXT_ALIGN' ] = 'C';
-            $aRow[ 2 ][ 'TEXT_ALIGN' ] = 'R';
+            $row[ 0 ][ 'TEXT_ALIGN' ] = 'L';
+            $row[ 1 ][ 'TEXT_ALIGN' ] = 'C';
+            $row[ 2 ][ 'TEXT_ALIGN' ] = 'R';
             break;
         case 2:
-            $aRow[ 0 ][ 'TEXT_ALIGN' ] = 'L';
-            $aRow[ 0 ][ 'TEXT' ] = $sDefaultText2;
-            $aRow[ 1 ][ 'TEXT_ALIGN' ] = 'C';
-            $aRow[ 1 ][ 'VERTICAL_ALIGN' ] = 'T';
-            $aRow[ 2 ][ 'TEXT_ALIGN' ] = 'R';
-            $aRow[ 2 ][ 'VERTICAL_ALIGN' ] = 'B';
+            $row[ 0 ][ 'TEXT_ALIGN' ] = 'L';
+            $row[ 0 ][ 'TEXT' ] = $sDefaultText2;
+            $row[ 1 ][ 'TEXT_ALIGN' ] = 'C';
+            $row[ 1 ][ 'VERTICAL_ALIGN' ] = 'T';
+            $row[ 2 ][ 'TEXT_ALIGN' ] = 'R';
+            $row[ 2 ][ 'VERTICAL_ALIGN' ] = 'B';
             break;
         case 3:
-            $aRow[ 0 ][ 'COLSPAN' ] = 2;
-            $aRow[ 0 ][ 'TEXT_ALIGN' ] = 'L';
-            $aRow[ 2 ][ 'COLSPAN' ] = 2;
-            $aRow[ 2 ][ 'TEXT_ALIGN' ] = 'R';
+            $row[ 0 ][ 'COLSPAN' ] = 2;
+            $row[ 0 ][ 'TEXT_ALIGN' ] = 'L';
+            $row[ 2 ][ 'COLSPAN' ] = 2;
+            $row[ 2 ][ 'TEXT_ALIGN' ] = 'R';
             break;
         case 4:
-            $aRow[ 1 ][ 'COLSPAN' ] = 2;
-            $aRow[ 1 ][ 'TEXT_ALIGN' ] = 'J';
-            $aRow[ 1 ][ 'TEXT' ] = $sDefaultLongText;
-            $aRow[ 1 ][ 'LINE_SIZE' ] = 2;
+            $row[ 1 ][ 'COLSPAN' ] = 2;
+            $row[ 1 ][ 'TEXT_ALIGN' ] = 'J';
+            $row[ 1 ][ 'TEXT' ] = $sDefaultLongText;
+            $row[ 1 ][ 'LINE_SIZE' ] = 2;
             break;
         case 5:
-            $aRow = $aRowLast;
-            $aRow[ 1 ][ 'COLSPAN' ] = 3;
-            $aRow[ 1 ][ 'VERTICAL_ALIGN' ] = 'B';
-            $aRow[ 1 ][ 'TEXT_ALIGN' ] = 'R';
+            $row = $rowLast;
+            $row[ 1 ][ 'COLSPAN' ] = 3;
+            $row[ 1 ][ 'VERTICAL_ALIGN' ] = 'B';
+            $row[ 1 ][ 'TEXT_ALIGN' ] = 'R';
             break;
         case 6:
-            $aRow[ 0 ][ 'ROWSPAN' ] = 2;
-            $aRow[ 1 ][ 'ROWSPAN' ] = 2;
+            $row[ 0 ][ 'ROWSPAN' ] = 2;
+            $row[ 1 ][ 'ROWSPAN' ] = 2;
             break;
         case 7:
-//            $aRow[ 3 ][ 'ROWSPAN' ] = 3;
+//            $row[ 3 ][ 'ROWSPAN' ] = 3;
             break;
         case 8:
-            $aRow[ 0 ][ 'ROWSPAN' ] = 2;
-            $aRow[ 0 ][ 'TEXT' ] = $sDefaultLongText;
+            $row[ 0 ][ 'ROWSPAN' ] = 2;
+            $row[ 0 ][ 'TEXT' ] = $sDefaultLongText;
             break;
 
         case 10:
             break;
     }
 
-    $table->addRow( $aRow );
-    $aRowLast = $aRow;
+    $table->addRow( $row );
+    $rowLast = $row;
 }
 
 //close the table

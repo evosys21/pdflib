@@ -2,7 +2,7 @@
 
 //define some background colors
 
-$aBgColor = array(
+$bgColor = array(
     array( 234, 255, 218 ),
     array( 165, 250, 220 ),
     array( 255, 252, 249 ),

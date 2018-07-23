@@ -26,35 +26,35 @@ $table->initialize( [ 20, 30, 40, 50 ] );
 $table->addHeader( $headerRow );
 
 for ( $i = 0; $i < 6; $i++ ) {
-    $aRow = $dataRow;
+    $row = $dataRow;
 
     if ( $i >= 0 && $i < 3 ) {
-        $aRow[ 0 ][ 'TEXT' ] = "Forced\nLine\nBreaks";
+        $row[ 0 ][ 'TEXT' ] = "Forced\nLine\nBreaks";
         $align = Tools::getNextValue( $alignments, $k );
-        $aRow[ 1 ][ 'TEXT' ] = "Align: <b>$align</b>";
-        $aRow[ 1 ][ 'ALIGN' ] = "$align";
+        $row[ 1 ][ 'TEXT' ] = "Align: <b>$align</b>";
+        $row[ 1 ][ 'ALIGN' ] = "$align";
         $align = Tools::getNextValue( $alignments, $k );
-        $aRow[ 2 ][ 'TEXT' ] = "Align: <b>$align</b>";
-        $aRow[ 2 ][ 'ALIGN' ] = "$align";
+        $row[ 2 ][ 'TEXT' ] = "Align: <b>$align</b>";
+        $row[ 2 ][ 'ALIGN' ] = "$align";
         $align = Tools::getNextValue( $alignments, $k );
-        $aRow[ 3 ][ 'TEXT' ] = "Align: <b>$align</b>";
-        $aRow[ 3 ][ 'ALIGN' ] = "$align";
+        $row[ 3 ][ 'TEXT' ] = "Align: <b>$align</b>";
+        $row[ 3 ][ 'ALIGN' ] = "$align";
     }
 
     if ( $i >= 3 && $i <= 5 ) {
-        $aRow[ 0 ][ 'TEXT' ] = "Forced\nLine\nForced\nLine\nForced\nLine";
-        $aRow[ 1 ] = $imageCell;
-        $aRow[ 1 ][ 'ALIGN' ] = Tools::getNextValue( $alignments, $k );
+        $row[ 0 ][ 'TEXT' ] = "Forced\nLine\nForced\nLine\nForced\nLine";
+        $row[ 1 ] = $imageCell;
+        $row[ 1 ][ 'ALIGN' ] = Tools::getNextValue( $alignments, $k );
 
-        $aRow[ 2 ] = $imageCell;
-        $aRow[ 2 ][ 'ALIGN' ] = Tools::getNextValue( $alignments, $k );
+        $row[ 2 ] = $imageCell;
+        $row[ 2 ][ 'ALIGN' ] = Tools::getNextValue( $alignments, $k );
 
-        $aRow[ 3 ] = $imageCell;
-        $aRow[ 3 ][ 'ALIGN' ] = Tools::getNextValue( $alignments, $k );
+        $row[ 3 ] = $imageCell;
+        $row[ 3 ][ 'ALIGN' ] = Tools::getNextValue( $alignments, $k );
     }
 
 
-    $table->addRow( $aRow );
+    $table->addRow( $row );
 }
 
 //close the table

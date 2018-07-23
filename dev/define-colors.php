@@ -1,13 +1,13 @@
 <?php
 
 //define some background colors
-$aBgColor1 = array( 234, 255, 218 );
-$aBgColor2 = array( 165, 250, 220 );
-$aBgColor3 = array( 255, 252, 249 );
-$aBgColor4 = array( 86, 155, 225 );
-$aBgColor5 = array( 207, 247, 239 );
-$aBgColor6 = array( 246, 211, 207 );
-$aBgColor7 = array( 216, 243, 228 );
+$bgColor1 = array( 234, 255, 218 );
+$bgColor2 = array( 165, 250, 220 );
+$bgColor3 = array( 255, 252, 249 );
+$bgColor4 = array( 86, 155, 225 );
+$bgColor5 = array( 207, 247, 239 );
+$bgColor6 = array( 246, 211, 207 );
+$bgColor7 = array( 216, 243, 228 );
 
 
 //top, right, bottom, left

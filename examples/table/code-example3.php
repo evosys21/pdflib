@@ -41,35 +41,35 @@ $table->addHeader( $header3 );
 
 
 for ( $i = 0; $i < 8; $i++ ) {
-    $aRow = $dataRow;
+    $row = $dataRow;
 
     if ( 0 == $i ) {
-        $aRow[ 1 ][ 'COLSPAN' ] = 2;
+        $row[ 1 ][ 'COLSPAN' ] = 2;
     }
 
     if ( 1 == $i ) {
-        $aRow[ 1 ][ 'COLSPAN' ] = 3;
+        $row[ 1 ][ 'COLSPAN' ] = 3;
     }
 
     if ( 2 == $i ) {
-        $aRow[ 1 ][ 'TEXT' ] = $sTextExtraLong . "\n\n" . $sTextSubSuperscript;
-        $aRow[ 1 ][ 'ALIGN' ] = "J";
-        $aRow[ 1 ][ 'COLSPAN' ] = 3;
-        $aRow[ 1 ][ 'ROWSPAN' ] = 3;
+        $row[ 1 ][ 'TEXT' ] = $sTextExtraLong . "\n\n" . $sTextSubSuperscript;
+        $row[ 1 ][ 'ALIGN' ] = "J";
+        $row[ 1 ][ 'COLSPAN' ] = 3;
+        $row[ 1 ][ 'ROWSPAN' ] = 3;
     }
 
     if ( 3 == $i ) {
-        $aRow[ 0 ] = $imageCell;
+        $row[ 0 ] = $imageCell;
     }
 
     if ( 5 == $i ) {
-        $aRow[ 1 ] = $imageCell;
-        $aRow[ 1 ][ 'COLSPAN' ] = 2;
-        $aRow[ 1 ][ 'ROWSPAN' ] = 2;
+        $row[ 1 ] = $imageCell;
+        $row[ 1 ][ 'COLSPAN' ] = 2;
+        $row[ 1 ][ 'ROWSPAN' ] = 2;
     }
 
 
-    $table->addRow( $aRow );
+    $table->addRow( $row );
 }
 
 //close the table

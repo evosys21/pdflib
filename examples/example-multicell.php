@@ -16,7 +16,7 @@ $pdf = new Pdf();
 // Initialize the pdf object. Set the margins, adds a page, set default fonts etc...
 pdfFactory::initPdf( $pdf );
 
-// Create the Advanced Multicell Object and pass the PDF object as a parameter to the constructor
+// Create the Advanced Multicell Object and inject the PDF object
 $multicell = new Multicell( $pdf );
 
 // Set the styles for the advanced multicell

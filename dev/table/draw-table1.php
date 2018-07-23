@@ -38,16 +38,16 @@ for ( $i = 0; $i < $nColumns; $i++ ) {
 #$oTable->addHeader();
 
 for ( $j = 1; $j < 10; $j++ ) {
-    $aRow = Array();
-    $aRow[ 0 ][ 'TEXT' ] = "This is\nLine $j";
-    $aRow[ 1 ][ 'TEXT' ] = $sText;
+    $row = Array();
+    $row[ 0 ][ 'TEXT' ] = "This is\nLine $j";
+    $row[ 1 ][ 'TEXT' ] = $sText;
     $align = Pdf_Tools::getNextValue( $aAlignments, $nAlign );
-    $aRow[ 2 ][ 'TEXT' ] = "ALIGN = <b>$align</b>";
-    $aRow[ 2 ][ 'ALIGN' ] = $align;
-    $aRow[ 3 ][ 'TEXT' ] = $sText;
+    $row[ 2 ][ 'TEXT' ] = "ALIGN = <b>$align</b>";
+    $row[ 2 ][ 'ALIGN' ] = $align;
+    $row[ 3 ][ 'TEXT' ] = $sText;
 
     //add the row
-    $oTable->addRow( $aRow );
+    $oTable->addRow( $row );
 
     break;
 }

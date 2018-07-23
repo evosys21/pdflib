@@ -16,37 +16,37 @@ require_once( "../mypdf-table.php" );
 require_once( "../classes/pdftable.php" );
 
 //define some background colors
-$aBgColor1 = array(
+$bgColor1 = array(
     234,
     255,
     218
 );
-$aBgColor2 = array(
+$bgColor2 = array(
     165,
     250,
     220
 );
-$aBgColor3 = array(
+$bgColor3 = array(
     255,
     252,
     249
 );
-$aBgColor4 = array(
+$bgColor4 = array(
     86,
     155,
     225
 );
-$aBgColor5 = array(
+$bgColor5 = array(
     207,
     247,
     239
 );
-$aBgColor6 = array(
+$bgColor6 = array(
     246,
     211,
     207
 );
-$bg_color7 = array(
+$bgColor7 = array(
     216,
     243,
     228
@@ -127,16 +127,16 @@ $oTable->addHeader( $aHeader );
 $oTable->addHeader( $aHeader1 );
 
 for ( $j = 1; $j < 5; $j++ ) {
-    $aRow = Array();
+    $row = Array();
 
     for ( $i = 0; $i < $nColumns; $i++ ) {
-        $aRow[ $i ][ 'TEXT' ] = "Line $j\nText $i";
+        $row[ $i ][ 'TEXT' ] = "Line $j\nText $i";
     }
 
-    $aRow[ 0 ][ 'ROWSPAN' ] = 3;
-    $aRow[ 0 ][ 'TEXT_ALIGN' ] = "L"; //text align
-    //$aRow[0]['LINE_SIZE'] = 7; //text align
-    $aRow[ 2 ][ 'TEXT_ALIGN' ] = "R"; //text align
+    $row[ 0 ][ 'ROWSPAN' ] = 3;
+    $row[ 0 ][ 'TEXT_ALIGN' ] = "L"; //text align
+    //$row[0]['LINE_SIZE'] = 7; //text align
+    $row[ 2 ][ 'TEXT_ALIGN' ] = "R"; //text align
 
 
     if ( $j == 1 ) {
@@ -148,10 +148,10 @@ for ( $j = 1; $j < 5; $j++ ) {
         $o->setColSpan( 2 );
         //$o = new Pdf_Table_Cell_Image("pic1.jpg");
         //$o->setPadding(10, 5, 5, 5);
-        $aRow[ 1 ] = $o;
+        $row[ 1 ] = $o;
 
         $o = new Pdf_Table_Cell_Image( $oPdf, "pic1.jpg", 5, 5 );
-        $aRow[ 3 ] = $o;
+        $row[ 3 ] = $o;
         $o->setAlign( 'MC' );
 
 //                 $o = new Pdf_Table_Cell_Image("pic1.jpg", 10, 10);
@@ -159,14 +159,14 @@ for ( $j = 1; $j < 5; $j++ ) {
 //                 $o->setColSpan(2);
 //                 //$o = new Pdf_Table_Cell_Image("pic1.jpg");
 //                 //$o->setPadding(10, 5, 5, 5);
-//                 $aRow[2] = $o;
+//                 $row[2] = $o;
 
-//                 $aRow[2] = $o;
-//                 $aRow[3] = $o;
+//                 $row[2] = $o;
+//                 $row[3] = $o;
     }
 
     //add the row
-    $oTable->addRow( $aRow );
+    $oTable->addRow( $row );
 
     if ( $j >= 1111 ) {
         break;

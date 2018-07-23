@@ -63,37 +63,37 @@ for ( $i = 0; $i < $columns; $i++ ) {
 $aDefaultRow[ 0 ][ 'TEXT' ] = $sDefaultText2;
 
 for ( $i = 1; $i < 10; $i++ ) {
-    $aRow = $aDefaultRow;
+    $row = $aDefaultRow;
 
     switch ( $i ) {
         case 1:
-            $aRow[ 0 ][ 'TEXT_ALIGN' ] = 'L';
-            $aRow[ 1 ][ 'TEXT_ALIGN' ] = 'C';
-            $aRow[ 2 ][ 'TEXT_ALIGN' ] = 'R';
+            $row[ 0 ][ 'TEXT_ALIGN' ] = 'L';
+            $row[ 1 ][ 'TEXT_ALIGN' ] = 'C';
+            $row[ 2 ][ 'TEXT_ALIGN' ] = 'R';
             break;
         case 2:
-            $aRow[ 0 ][ 'TEXT_ALIGN' ] = 'L';
-            $aRow[ 0 ][ 'PADDING_LEFT' ] = 5;
-            $aRow[ 0 ][ 'PADDING_RIGHT' ] = 5;
-            $aRow[ 0 ][ 'PADDING_TOP' ] = 5;
-            $aRow[ 1 ][ 'TEXT' ] = $sDefaultLongText;
-            $aRow[ 1 ][ 'TEXT_ALIGN' ] = 'J';
-            $aRow[ 1 ][ 'VERTICAL_ALIGN' ] = 'T';
-            $aRow[ 2 ][ 'TEXT_ALIGN' ] = 'R';
-            $aRow[ 2 ][ 'VERTICAL_ALIGN' ] = 'B';
+            $row[ 0 ][ 'TEXT_ALIGN' ] = 'L';
+            $row[ 0 ][ 'PADDING_LEFT' ] = 5;
+            $row[ 0 ][ 'PADDING_RIGHT' ] = 5;
+            $row[ 0 ][ 'PADDING_TOP' ] = 5;
+            $row[ 1 ][ 'TEXT' ] = $sDefaultLongText;
+            $row[ 1 ][ 'TEXT_ALIGN' ] = 'J';
+            $row[ 1 ][ 'VERTICAL_ALIGN' ] = 'T';
+            $row[ 2 ][ 'TEXT_ALIGN' ] = 'R';
+            $row[ 2 ][ 'VERTICAL_ALIGN' ] = 'B';
             break;
         case 3:
-            $aRow = $aRowLast;
-            $aRow[ 1 ][ 'PADDING_TOP' ] = 0;
+            $row = $rowLast;
+            $row[ 1 ][ 'PADDING_TOP' ] = 0;
             break;
         case 4:
-            $aRow = $aRowLast;
-            $aRow[ 2 ][ 'PADDING_BOTTOM' ] = 0;
+            $row = $rowLast;
+            $row[ 2 ][ 'PADDING_BOTTOM' ] = 0;
             break;
     }
 
-    $table->addRow( $aRow );
-    $aRowLast = $aRow;
+    $table->addRow( $row );
+    $rowLast = $row;
 }
 
 //close the table

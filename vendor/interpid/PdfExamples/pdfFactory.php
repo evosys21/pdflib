@@ -49,7 +49,7 @@ class pdfFactory
         }
 
         //initialize the pdf document
-        self::initPdfObject( $pdf );
+        self::initPdf( $pdf );
 
         return $pdf;
     }

@@ -65,12 +65,12 @@ $aDefaultRow[ 0 ][ 'TEXT' ] = $sDefaultText2;
 $table->setDisablePageBreak( true );
 
 for ( $i = 1; $i < 15; $i++ ) {
-    $aRow = $aDefaultRow;
+    $row = $aDefaultRow;
 
-    $aRow[ 0 ][ 'TEXT' ] = "Line #$i";
+    $row[ 0 ][ 'TEXT' ] = "Line #$i";
 
-    $table->addRow( $aRow );
-    $aRowLast = $aRow;
+    $table->addRow( $row );
+    $rowLast = $row;
 }
 
 //close the table

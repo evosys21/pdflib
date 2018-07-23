@@ -8,37 +8,37 @@ require_once 'dev-includes.php';
 
 
 //define some background colors
-$aBgColor1 = array(
+$bgColor1 = array(
     234,
     255,
     218
 );
-$aBgColor2 = array(
+$bgColor2 = array(
     165,
     250,
     220
 );
-$aBgColor3 = array(
+$bgColor3 = array(
     255,
     252,
     249
 );
-$aBgColor4 = array(
+$bgColor4 = array(
     86,
     155,
     225
 );
-$aBgColor5 = array(
+$bgColor5 = array(
     207,
     247,
     239
 );
-$aBgColor6 = array(
+$bgColor6 = array(
     246,
     211,
     207
 );
-$bg_color7 = array(
+$bgColor7 = array(
     216,
     243,
     228
@@ -98,19 +98,19 @@ for ( $i = 0; $i < $nColumns; $i++ ) {
 $oTable->addHeader( $aHeader );
 
 for ( $j = 1; $j < 5; $j++ ) {
-    $aRow = Array();
-    $aRow[ 0 ][ 'TEXT' ] = "Line $j Text 1"; //text for column 0
-    $aRow[ 0 ][ 'TEXT_ALIGN' ] = "L"; //text align
-    $aRow[ 0 ][ 'COLSPAN' ] = 2;
-    //$aRow[0]['LINE_SIZE'] = 7; //text align
-    $aRow[ 1 ][ 'TEXT' ] = "Line $j Text 2"; //text for column 1
-    //$aRow[ 1 ][ 'COLSPAN' ] = 2;
-    $aRow[ 2 ][ 'TEXT' ] = "Line $j Text 3"; //text for column 2
-    $aRow[ 2 ][ 'TEXT_ALIGN' ] = "R"; //text align
+    $row = Array();
+    $row[ 0 ][ 'TEXT' ] = "Line $j Text 1"; //text for column 0
+    $row[ 0 ][ 'TEXT_ALIGN' ] = "L"; //text align
+    $row[ 0 ][ 'COLSPAN' ] = 2;
+    //$row[0]['LINE_SIZE'] = 7; //text align
+    $row[ 1 ][ 'TEXT' ] = "Line $j Text 2"; //text for column 1
+    //$row[ 1 ][ 'COLSPAN' ] = 2;
+    $row[ 2 ][ 'TEXT' ] = "Line $j Text 3"; //text for column 2
+    $row[ 2 ][ 'TEXT_ALIGN' ] = "R"; //text align
 
 
     //add the row
-    $oTable->addRow( $aRow );
+    $oTable->addRow( $row );
     //break;
 }
 

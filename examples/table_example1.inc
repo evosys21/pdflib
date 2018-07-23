@@ -16,17 +16,17 @@ for ( $i = 0; $i < $columns; $i++ ) {
 $table->addHeader( $header );
 
 for ( $j = 1; $j < 5; $j++ ) {
-    $aRow = [];
-    $aRow[ 0 ][ 'TEXT' ] = "Line $j Text 1"; //text for column 0
-    $aRow[ 0 ][ 'TEXT_ALIGN' ] = "L"; //text align
-    //$aRow[0]['LINE_SIZE'] = 7; //text align
-    $aRow[ 1 ][ 'TEXT' ] = "Line $j Text 2"; //text for column 1
-    $aRow[ 2 ][ 'TEXT' ] = "Line $j Text 3"; //text for column 2
-    $aRow[ 2 ][ 'TEXT_ALIGN' ] = "R"; //text align
+    $row = [];
+    $row[ 0 ][ 'TEXT' ] = "Line $j Text 1"; //text for column 0
+    $row[ 0 ][ 'TEXT_ALIGN' ] = "L"; //text align
+    //$row[0]['LINE_SIZE'] = 7; //text align
+    $row[ 1 ][ 'TEXT' ] = "Line $j Text 2"; //text for column 1
+    $row[ 2 ][ 'TEXT' ] = "Line $j Text 3"; //text for column 2
+    $row[ 2 ][ 'TEXT_ALIGN' ] = "R"; //text align
 
 
     //add the row
-    $table->addRow( $aRow );
+    $table->addRow( $row );
     //break;
 }
 

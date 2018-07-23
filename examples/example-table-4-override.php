@@ -42,7 +42,7 @@ $multicell->multiCell( 100, 4, "<s1>Example - Override Default Configuration Val
 
 $columns = 3;
 
-$aCustomConfiguration = array(
+$config = array(
     'TABLE' => array(
         'TABLE_ALIGN' => 'L', //left align
         'BORDER_COLOR' => [ 0, 0, 0 ], //border color
@@ -68,7 +68,7 @@ $aCustomConfiguration = array(
 );
 
 //Initialize the table class, 3 columns
-$table->initialize( [ 40, 50, 30 ], $aCustomConfiguration );
+$table->initialize( [ 40, 50, 30 ], $config );
 
 $header = [];
 
@@ -81,20 +81,20 @@ for ( $i = 0; $i < $columns; $i++ ) {
 $table->addHeader( $header );
 
 for ( $j = 1; $j < 5; $j++ ) {
-    $aRow = [];
-    $aRow[ 0 ][ 'TEXT' ] = "Line $j Text 1"; //text for column 0
-    $aRow[ 1 ][ 'TEXT' ] = "Line $j Text 2"; //text for column 1
-    $aRow[ 2 ][ 'TEXT' ] = "Line $j Text 3"; //text for column 2
+    $row = [];
+    $row[ 0 ][ 'TEXT' ] = "Line $j Text 1"; //text for column 0
+    $row[ 1 ][ 'TEXT' ] = "Line $j Text 2"; //text for column 1
+    $row[ 2 ][ 'TEXT' ] = "Line $j Text 3"; //text for column 2
 
 
     //override some settings for row 2
     if ( 2 == $j ) {
-        $aRow[ 1 ][ 'TEXT_ALIGN' ] = 'L';
-        $aRow[ 1 ][ 'TEXT' ] = "<p>This is a <b>Multicell</b></p>";
+        $row[ 1 ][ 'TEXT_ALIGN' ] = 'L';
+        $row[ 1 ][ 'TEXT' ] = "<p>This is a <b>Multicell</b></p>";
     }
 
     //add the row
-    $table->addRow( $aRow );
+    $table->addRow( $row );
 }
 
 //close the table

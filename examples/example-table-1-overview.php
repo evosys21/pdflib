@@ -14,7 +14,7 @@ $factory = new pdfFactory();
 //get the PDF object
 $pdf = pdfFactory::newPdf( 'table' );
 
-//Create the Advanced Multicell Object and pass the PDF object as a parameter to the constructor
+//Create the Advanced Multicell Object and inject the PDF object
 $multicell = new Multicell( $pdf );
 
 //Set the styles for the advanced multicell
