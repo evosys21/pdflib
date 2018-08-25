@@ -1615,7 +1615,7 @@ class Table
      * @param $family string - text font family name
      * @param $style string - text font style
      * @param $size number - text font size
-     * @param $color array - text color
+     * @param $color string|array - text color
      *
      */
     public function setStyle( $tag, $family, $style, $size, $color )
