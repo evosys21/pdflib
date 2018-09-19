@@ -230,7 +230,7 @@ class Tags
                     array_push( $result, [ 'text' => $val, 'tag' => $sTAG, 'params' => $sHREF ] );
                 }
             }
-        } //while
+        }
 
         return $this->optimize_tags( $result );
     }

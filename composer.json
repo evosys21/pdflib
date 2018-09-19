@@ -11,8 +11,8 @@
     "require": {},
     "autoload": {
         "classmap": [
-			"vendor/fpdf",
-			"vendor/interpid"
+			"library/fpdf",
+			"library/interpid"
         ]
     }
 }

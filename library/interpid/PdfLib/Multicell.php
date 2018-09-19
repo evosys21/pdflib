@@ -111,11 +111,9 @@ class Multicell
     private static $_singleton = []; //implements the Singleton Pattern
 
 
-    protected $aImage = null;
+    protected $fill = true;
 
-    protected $bFill = true;
-
-    protected $TagStyle = [];
+    protected $tagStyle = [];
 
     /**
      * Class constructor.
@@ -837,7 +835,7 @@ class Multicell
                  */
                 $x = $this->pdf->GetX();
                 $y = $this->pdf->GetY();
-                $this->pdfi->Cell( $width, $paddingTop, '', $b1, 0, $align, $this->bFill, '' );
+                $this->pdfi->Cell( $width, $paddingTop, '', $b1, 0, $align, $this->fill, '' );
                 $b1 = str_replace( 'T', '', $b1 );
                 $b = str_replace( 'T', '', $b );
                 $this->pdf->SetXY( $x, $y + $paddingTop );
@@ -846,7 +844,7 @@ class Multicell
             if ( $fill == 1 ) {
                 //fill in the cell at this point and write after the text without filling
                 $this->pdf->SetX( $startX ); //restore the X position
-                $this->pdfi->Cell( $width, $height, "", 0, 0, "", $this->bFill );
+                $this->pdfi->Cell( $width, $height, "", 0, 0, "", $this->fill );
                 $this->pdf->SetX( $startX ); //restore the X position
             }
 
@@ -891,7 +889,7 @@ class Multicell
                 $this->pdf->SetX( $startX ); //restore the X
                 $this->pdf->Cell( $width, $height, "", $b2, 2 );
                 $this->pdf->SetX( $startX ); //restore the X
-                $this->pdf->MultiCell( $width, $paddingBottom, '', $real_brd, $align, $this->bFill );
+                $this->pdf->MultiCell( $width, $paddingBottom, '', $real_brd, $align, $this->fill );
             } else {
                 //draw the border and jump to the next line
                 $this->pdf->SetX( $startX ); //restore the X
@@ -989,10 +987,10 @@ class Multicell
      *
      * @param number $width width of the text
      * @param number $height height of a line
-     * @param array $aTxt data with text to be draw
+     * @param array $data data with text to be draw
      * @param string $align align of the text
      */
-    protected function printLine( $width, $height, $aTxt, $align = 'J' )
+    protected function printLine( $width, $height, $data, $align = 'J' )
     {
         if ( 0 == $width ) {
             $width = $this->pdfi->getRemainingWidth();
@@ -1003,11 +1001,11 @@ class Multicell
         $nTotalWidth = 0; //the total width of all strings
         $nTotalSpaces = 0; //the total number of spaces
 
-        $nr = count( $aTxt ); //number of elements
+        $nr = count( $data ); //number of elements
 
         for ( $i = 0; $i < $nr; $i++ ) {
-            $nTotalWidth += $aTxt[ $i ][ 'width' ];
-            $nTotalSpaces += $aTxt[ $i ][ 'spaces' ];
+            $nTotalWidth += $data[ $i ][ 'width' ];
+            $nTotalSpaces += $data[ $i ][ 'spaces' ];
         }
 
         //default
@@ -1040,8 +1038,7 @@ class Multicell
 
         $last_width = $nMaximumWidth - $w_first;
 
-        while ( false != ( list ( , $val ) = each( $aTxt ) ) ) {
-
+        foreach( $data as $val ) {
             $bYPosUsed = false;
 
             //apply current tag style
@@ -1276,7 +1273,7 @@ class Multicell
      */
     public function enableFill( $value )
     {
-        $this->bFill = $value;
+        $this->fill = $value;
     }
 
 
