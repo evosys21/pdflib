@@ -4,71 +4,9 @@
     <option name="SCOPE_TYPE" value="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="#1200 - Line Separators \n">
-      <change afterPath="$PROJECT_DIR$/tests/gen72.cmd" afterDir="false" />
+    <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="#1681 - Vendor folder moved to library&#10;#1680 - The each() function is deprecated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bin/server.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/FAQ.htm" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/FAQ.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/changelog.htm" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/changelog.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/courier.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/font/courier.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/courierb.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/font/courierb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/courierbi.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/font/courierbi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/courieri.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/font/courieri.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/helvetica.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/font/helvetica.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/helveticab.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/font/helveticab.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/helveticabi.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/font/helveticabi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/helveticai.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/font/helveticai.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/symbol.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/font/symbol.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/times.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/font/times.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/timesb.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/font/timesb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/timesbi.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/font/timesbi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/timesi.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/font/timesi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/font/zapfdingbats.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/font/zapfdingbats.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/fpdf.css" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/fpdf.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/fpdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/fpdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/install.txt" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/install.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/license.txt" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/license.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1250.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/cp1250.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1251.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/cp1251.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1252.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/cp1252.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1253.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/cp1253.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1254.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/cp1254.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1255.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/cp1255.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1257.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/cp1257.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp1258.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/cp1258.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/cp874.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/cp874.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-1.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/iso-8859-1.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-11.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/iso-8859-11.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-15.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/iso-8859-15.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-16.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/iso-8859-16.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-2.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/iso-8859-2.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-4.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/iso-8859-4.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-5.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/iso-8859-5.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-7.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/iso-8859-7.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/iso-8859-9.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/iso-8859-9.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/koi8-r.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/koi8-r.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/koi8-u.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/koi8-u.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/makefont.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/makefont.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fpdf/makefont/ttfparser.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/fpdf/makefont/ttfparser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/interpid/PdfExamples/mypdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfExamples/mypdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/interpid/PdfExamples/pdfFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfExamples/pdfFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Multicell.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Multicell.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Pdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Pdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/PdfInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/PdfInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/String/Tags.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/String/Tags.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/CellAbstract.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/CellAbstract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/CellInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/CellInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/EmptyCell.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/EmptyCell.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Table/Cell/Multicell.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/Multicell.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Tools.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Tools.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/Validate.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Validate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/interpid/PdfLib/table.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/table.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_multicell" beforeDir="false" afterPath="$PROJECT_DIR$/version_multicell" afterDir="false" />
     </list>
     <ignored path="fpdf.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,6 +38,8 @@
           <entry key="cmd" value="3" />
           <entry key="json" value="1" />
           <entry key="php" value="21" />
+          <entry key="version_multicell" value="1" />
+          <entry key="version_table" value="1" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
@@ -107,7 +47,7 @@
         <counts>
           <entry key="JSON" value="1" />
           <entry key="PHP" value="21" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="PLAIN_TEXT" value="5" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -116,14 +56,16 @@
           <entry key="cmd" value="2" />
           <entry key="json" value="7" />
           <entry key="php" value="39" />
-          <entry key="txt" value="21" />
+          <entry key="txt" value="33" />
+          <entry key="version_multicell" value="1" />
+          <entry key="version_table" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="7" />
           <entry key="PHP" value="39" />
-          <entry key="PLAIN_TEXT" value="23" />
+          <entry key="PLAIN_TEXT" value="38" />
         </counts>
       </usages-collector>
     </session>
@@ -133,27 +75,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/interpid/PdfLib/Multicell.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="1272" column="7" selection-start-line="1272" selection-start-column="7" selection-end-line="1272" selection-end-column="7" />
-              <folding>
-                <element signature="e#6#812#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autoload.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -186,11 +107,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/functional/MulticellExamplesTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+            <state relative-caret-position="816">
+              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/version_table">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/version_multicell">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -315,8 +254,6 @@
         <option value="$PROJECT_DIR$/examples/table/code-example2.php" />
         <option value="$PROJECT_DIR$/examples/table/code-example-transparent.php" />
         <option value="$PROJECT_DIR$/vendor/interpid/PdfExamples/mypdf.php" />
-        <option value="$PROJECT_DIR$/version_table" />
-        <option value="$PROJECT_DIR$/version_multicell" />
         <option value="$PROJECT_DIR$/tests/phpunit.xml" />
         <option value="$PROJECT_DIR$/tests/BaseTestCase.php" />
         <option value="$PROJECT_DIR$/tests/functional/TableExamples2Test.php" />
@@ -343,6 +280,8 @@
         <option value="$PROJECT_DIR$/vendor/interpid/PdfLib/Multicell.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/tests/gen7.cmd" />
+        <option value="$PROJECT_DIR$/version_table" />
+        <option value="$PROJECT_DIR$/version_multicell" />
       </list>
     </option>
   </component>
@@ -593,7 +532,7 @@
       <workItem from="1532422746228" duration="1000" />
       <workItem from="1535200328893" duration="1152000" />
       <workItem from="1536651230044" duration="616000" />
-      <workItem from="1537339402513" duration="1526000" />
+      <workItem from="1537339402513" duration="2656000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
@@ -686,7 +625,21 @@
       <option name="project" value="LOCAL" />
       <updated>1535200880797</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="#1681 - Vendor folder moved to library&#10;#1680 - The each() function is deprecated">
+      <created>1537341237164</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1537341237164</updated>
+    </task>
+    <task id="LOCAL-00015" summary="#1681 - Vendor folder moved to library&#10;#1680 - The each() function is deprecated">
+      <created>1537342819748</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1537342819748</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -722,7 +675,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73235000" />
+    <option name="totallyTimeSpent" value="74365000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-12" y="-12" width="3864" height="2078" extended-state="6" />
@@ -734,7 +687,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="1" />
       <window_info anchor="bottom" id="Inspection Results" order="2" sideWeight="0.5708955" weight="0.23161454" />
-      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.42910448" side_tool="true" weight="0.5394495" />
+      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.42910448" side_tool="true" weight="0.5391015" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Run" order="5" sideWeight="0.4978678" weight="0.36409822" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
@@ -774,7 +727,8 @@
     <MESSAGE value="#1200 Implement Namespaces&#10;#1199 Remove Hungarian Notation&#10;#1201 Use array short-hands&#10;#1202 Table vertical align not working" />
     <MESSAGE value="#1200 - Implement Namespaces, create Vendor Lib" />
     <MESSAGE value="#1200 - Line Separators \n" />
-    <option name="LAST_COMMIT_MESSAGE" value="#1200 - Line Separators \n" />
+    <MESSAGE value="#1681 - Vendor folder moved to library&#10;#1680 - The each() function is deprecated" />
+    <option name="LAST_COMMIT_MESSAGE" value="#1681 - Vendor folder moved to library&#10;#1680 - The each() function is deprecated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -953,20 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/version_table">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3" selection-start-column="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/version_multicell">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/interpid/PdfLib/PdfInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -1141,8 +1081,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/functional/MulticellExamplesTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="816">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/version_table">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/version_multicell">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
