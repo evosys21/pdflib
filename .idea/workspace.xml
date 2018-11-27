@@ -4,7 +4,10 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="#1701 - PHPCS, Mess Detector Integration" />
+    <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="#1701 - PHPCS, Mess Detector Integration">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.php-censor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.php-censor.yml" afterDir="false" />
+    </list>
     <ignored path="fpdf.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -24,7 +27,17 @@
     <favorites_list name="fpdf" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="525" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.php-censor.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="29" column="11" lean-forward="true" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -272,19 +285,19 @@
     <property name="settings.editor.splitter.proportion" value="0.2304038" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\pdf-addons\fpdf-table" />
+      <recent name="D:\Projects\pdf-addons\fpdf" />
+      <recent name="D:\Projects\pdf-addons\fpdf\tests" />
+      <recent name="D:\Projects\pdf-addons\fpdf\examples" />
+      <recent name="D:\Projects\pdf-addons\fpdf\content" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\pdf-addons\fpdf\bin" />
       <recent name="D:\Projects\pdf-addons\fpdf\library" />
       <recent name="D:\Projects\pdf-addons\fpdf\examples" />
       <recent name="D:\Projects\pdf-addons\fpdf\content" />
       <recent name="D:\Projects\pdf-addons\fpdf\vendor\interpid\PdfExamples" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projects\pdf-addons\fpdf" />
-      <recent name="D:\Projects\pdf-addons\fpdf\tests" />
-      <recent name="D:\Projects\pdf-addons\fpdf\examples" />
-      <recent name="D:\Projects\pdf-addons\fpdf\content" />
-      <recent name="D:\Projects\pdf-addons\fpdf\examples\table" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -396,7 +409,7 @@
       <workItem from="1537339402513" duration="3278000" />
       <workItem from="1541428683019" duration="1391000" />
       <workItem from="1543326621016" duration="2972000" />
-      <workItem from="1543345462452" duration="2098000" />
+      <workItem from="1543345462452" duration="3206000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
@@ -524,7 +537,21 @@
       <option name="project" value="LOCAL" />
       <updated>1543347138370</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="#1701 - PHPCS, Mess Detector Integration">
+      <created>1543347630036</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1543347630036</updated>
+    </task>
+    <task id="LOCAL-00020" summary="#1701 - PHPCS, Mess Detector Integration">
+      <created>1543348078176</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1543348078176</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -560,7 +587,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81448000" />
+    <option name="totallyTimeSpent" value="82556000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-12" y="-12" width="3864" height="2078" extended-state="6" />
@@ -663,7 +690,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build/logs/coverage/index.html" />
     <entry file="file://$PROJECT_DIR$/tests/functional/TableExamples2Test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -975,6 +1001,13 @@
           <folding>
             <element signature="e#7#876#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.php-censor.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="29" column="11" lean-forward="true" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
         </state>
       </provider>
     </entry>

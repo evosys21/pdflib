@@ -24,7 +24,7 @@ test:
   php_parallel_lint:
   php_loc:
   php_cpd:
-    path: "src"
+    path: "library/interpid"
   #codeception:
   php_unit:
     config:
