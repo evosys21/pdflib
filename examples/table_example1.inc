@@ -3,19 +3,19 @@
 $columns = 3;
 
 //Initialize the table class, 3 columns
-$table->initialize( [ 40, 50, 30 ] );
+$table->initialize([40, 50, 30]);
 
 $header = [];
 
 //Table Header
-for ( $i = 0; $i < $columns; $i++ ) {
-    $header[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
+for ($i = 0; $i < $columns; $i++) {
+    $header[ $i ][ 'TEXT' ] = "Header #" . ($i + 1);
 }
 
 //add the header
-$table->addHeader( $header );
+$table->addHeader($header);
 
-for ( $j = 1; $j < 5; $j++ ) {
+for ($j = 1; $j < 5; $j++) {
     $row = [];
     $row[ 0 ][ 'TEXT' ] = "Line $j Text 1"; //text for column 0
     $row[ 0 ][ 'TEXT_ALIGN' ] = "L"; //text align
@@ -26,7 +26,7 @@ for ( $j = 1; $j < 5; $j++ ) {
 
 
     //add the row
-    $table->addRow( $row );
+    $table->addRow($row);
     //break;
 }
 

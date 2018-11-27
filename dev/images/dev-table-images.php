@@ -5,15 +5,15 @@
  */
 
 //include pdf class
-require_once( "../../classes/pdf.php" );
+require_once("../../classes/pdf.php");
 
 /**
  * mypdf extends pdf class, it is used to draw the header and footer
  */
-require_once( "../mypdf-table.php" );
+require_once("../mypdf-table.php");
 
 //Tag Based Multicell Class
-require_once( "../classes/pdftable.php" );
+require_once("../classes/pdftable.php");
 
 //define some background colors
 $bgColor1 = array(
@@ -53,12 +53,12 @@ $bgColor7 = array(
 );
 
 //create the pdf object and do some initialization
-$oPdf = new myPdfTable( 'P', 'mm', array(
+$oPdf = new myPdfTable('P', 'mm', array(
     130,
     180
-) );
-$oPdf->SetAutoPageBreak( true, 20 );
-$oPdf->SetMargins( 20, 20, 20 );
+));
+$oPdf->SetAutoPageBreak(true, 20);
+$oPdf->SetMargins(20, 20, 20);
 $oPdf->AddPage();
 $oPdf->AliasNbPages();
 
@@ -73,46 +73,46 @@ $oPdf->AliasNbPages();
  *
  * @example : $oTable = PdfTable::getInstance($oPdf);
  */
-$oTable = new PdfTable( $oPdf );
+$oTable = new PdfTable($oPdf);
 
 /**
  * Set the tag styles
  */
-$oTable->setStyle( "p", $oPdf->getDefaultFontName(), "", 10, "130,0,30" );
-$oTable->setStyle( "b", $oPdf->getDefaultFontName(), "", 9, "80,80,260" );
-$oTable->setStyle( "h1", $oPdf->getDefaultFontName(), "", 10, "0,151,200" );
-$oTable->setStyle( "bi", $oPdf->getDefaultFontName(), "BI", 12, "0,0,120" );
+$oTable->setStyle("p", $oPdf->getDefaultFontName(), "", 10, "130,0,30");
+$oTable->setStyle("b", $oPdf->getDefaultFontName(), "", 9, "80,80,260");
+$oTable->setStyle("h1", $oPdf->getDefaultFontName(), "", 10, "0,151,200");
+$oTable->setStyle("bi", $oPdf->getDefaultFontName(), "BI", 12, "0,0,120");
 
 //default text color
-$oPdf->SetTextColor( 118, 0, 3 );
+$oPdf->SetTextColor(118, 0, 3);
 
 //create an advanced multicell
-$oMulticell = PdfMulticell::getInstance( $oPdf );
-$oMulticell->setStyle( "s1", $oPdf->getDefaultFontName(), "", 8, "118,0,3" );
-$oMulticell->setStyle( "s2", $oPdf->getDefaultFontName(), "", 6, "0,49,159" );
+$oMulticell = PdfMulticell::getInstance($oPdf);
+$oMulticell->setStyle("s1", $oPdf->getDefaultFontName(), "", 8, "118,0,3");
+$oMulticell->setStyle("s2", $oPdf->getDefaultFontName(), "", 6, "0,49,159");
 
-$oMulticell->multiCell( 100, 4, "<s1>Example 1 - Very Simple Table</s1>", 0 );
+$oMulticell->multiCell(100, 4, "<s1>Example 1 - Very Simple Table</s1>", 0);
 
 $nColumns = 5;
 
-$oPdf->Ln( 30 );
+$oPdf->Ln(30);
 
 //Initialize the table class, 3 columns
-$oTable->initialize( array(
+$oTable->initialize(array(
     20,
     20,
     20,
     20
-) );
+));
 
 //$oTable->setSplitMode(false);
-$oTable->setSplitMode( true );
+$oTable->setSplitMode(true);
 
 $aHeader = array();
 
 //Table Header
-for ( $i = 0; $i < $nColumns; $i++ ) {
-    $aHeader[ $i ][ 'TEXT' ] = "Header #" . ( $i + 1 );
+for ($i = 0; $i < $nColumns; $i++) {
+    $aHeader[ $i ][ 'TEXT' ] = "Header #" . ($i + 1);
 }
 
 $aHeader1 = $aHeader;
@@ -123,13 +123,13 @@ $aHeader[ 2 ][ 'COLSPAN' ] = 2;
 $aHeader[ 2 ][ 'ROWSPAN' ] = 2;
 
 //add the header
-$oTable->addHeader( $aHeader );
-$oTable->addHeader( $aHeader1 );
+$oTable->addHeader($aHeader);
+$oTable->addHeader($aHeader1);
 
-for ( $j = 1; $j < 5; $j++ ) {
+for ($j = 1; $j < 5; $j++) {
     $row = Array();
 
-    for ( $i = 0; $i < $nColumns; $i++ ) {
+    for ($i = 0; $i < $nColumns; $i++) {
         $row[ $i ][ 'TEXT' ] = "Line $j\nText $i";
     }
 
@@ -139,20 +139,20 @@ for ( $j = 1; $j < 5; $j++ ) {
     $row[ 2 ][ 'TEXT_ALIGN' ] = "R"; //text align
 
 
-    if ( $j == 1 ) {
+    if ($j == 1) {
         //$o = new Pdf_Table_Cell_Image("pic1.jpg", 5, 50);
         //$o = new Pdf_Table_Cell_Image($oPdf, "pic1.jpg");
-        $o = new Pdf_Table_Cell_Image( $oPdf, "pic1.jpg", 20, 10 );
-        $o->setAlign( 'MC' );
-        $o->setRowSpan( 2 );
-        $o->setColSpan( 2 );
+        $o = new Pdf_Table_Cell_Image($oPdf, "pic1.jpg", 20, 10);
+        $o->setAlign('MC');
+        $o->setRowSpan(2);
+        $o->setColSpan(2);
         //$o = new Pdf_Table_Cell_Image("pic1.jpg");
         //$o->setPadding(10, 5, 5, 5);
         $row[ 1 ] = $o;
 
-        $o = new Pdf_Table_Cell_Image( $oPdf, "pic1.jpg", 5, 5 );
+        $o = new Pdf_Table_Cell_Image($oPdf, "pic1.jpg", 5, 5);
         $row[ 3 ] = $o;
-        $o->setAlign( 'MC' );
+        $o->setAlign('MC');
 
 //                 $o = new Pdf_Table_Cell_Image("pic1.jpg", 10, 10);
 //                 $o->setRowSpan(2);
@@ -166,9 +166,9 @@ for ( $j = 1; $j < 5; $j++ ) {
     }
 
     //add the row
-    $oTable->addRow( $row );
+    $oTable->addRow($row);
 
-    if ( $j >= 1111 ) {
+    if ($j >= 1111) {
         break;
     }
 }

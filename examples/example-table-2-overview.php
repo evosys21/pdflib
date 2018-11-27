@@ -12,52 +12,52 @@ use Interpid\PdfExamples\PdfFactory;
 $factory = new PdfFactory();
 
 //get the PDF object
-$pdf = PdfFactory::newPdf( 'table' );
+$pdf = PdfFactory::newPdf('table');
 
 //define some background colors
-$bgColor1 = [ 234, 255, 218 ];
-$bgColor2 = [ 165, 250, 220 ];
-$bgColor3 = [ 255, 252, 249 ];
+$bgColor1 = [234, 255, 218];
+$bgColor2 = [165, 250, 220];
+$bgColor3 = [255, 252, 249];
 /**
  * Create the pdf Table object
  * Alternative you can use the Singleton Instance
  *
  * @example : $table = Table::getInstance($pdf);
  */
-$table = new Table( $pdf );
+$table = new Table($pdf);
 
 /**
  * Set the tag styles
  */
-$table->setStyle( "p", $pdf->getDefaultFontName(), "", 10, "130,0,30" );
-$table->setStyle( "b", $pdf->getDefaultFontName(), "", 9, "80,80,260" );
-$table->setStyle( "h1", $pdf->getDefaultFontName(), "", 10, "0,151,200" );
-$table->setStyle( "bi", $pdf->getDefaultFontName(), "BI", 12, "0,0,120" );
+$table->setStyle("p", $pdf->getDefaultFontName(), "", 10, "130,0,30");
+$table->setStyle("b", $pdf->getDefaultFontName(), "", 9, "80,80,260");
+$table->setStyle("h1", $pdf->getDefaultFontName(), "", 10, "0,151,200");
+$table->setStyle("bi", $pdf->getDefaultFontName(), "BI", 12, "0,0,120");
 
-$txt1 = $title = file_get_contents( PDF_APPLICATION_PATH . '/content/table-cell-text.txt' );
+$txt1 = $title = file_get_contents(PDF_APPLICATION_PATH . '/content/table-cell-text.txt');
 
 //Initialize the table class, 5 columns with the specified widths
-$table->initialize( [ 20, 30, 40, 40, 20 ] );
+$table->initialize([20, 30, 40, 40, 20]);
 
 $header = [
-    [ 'TEXT' => 'Header 1' ],
-    [ 'TEXT' => 'Header 2' ],
-    [ 'TEXT' => 'Header 3' ],
-    [ 'TEXT' => 'Header 4' ],
-    [ 'TEXT' => 'Header 5' ]
+    ['TEXT' => 'Header 1'],
+    ['TEXT' => 'Header 2'],
+    ['TEXT' => 'Header 3'],
+    ['TEXT' => 'Header 4'],
+    ['TEXT' => 'Header 5']
 ];
 
 //add the header line
-$table->addHeader( $header );
+$table->addHeader($header);
 
 //do some adjustments in the header
 $header[ 2 ][ 'TEXT' ] = 'Header Colspan/Rowspan';
 $header[ 2 ][ 'COLSPAN' ] = 2;
 $header[ 2 ][ 'ROWSPAN' ] = 2;
-$header[ 2 ][ 'TEXT_COLOR' ] = [ 10, 20, 100 ];
+$header[ 2 ][ 'TEXT_COLOR' ] = [10, 20, 100];
 $header[ 2 ][ 'BACKGROUND_COLOR' ] = $bgColor2;
 
-$table->addHeader( $header );
+$table->addHeader($header);
 
 //add an empty header line
 $table->addHeader();
@@ -70,7 +70,7 @@ $rgb_r = 255;
 $rgb_g = 255;
 $rgb_b = 255;
 
-for ( $j = 0; $j < 45; $j++ ) {
+for ($j = 0; $j < 45; $j++) {
     $row = [];
     $row[ 0 ][ 'TEXT' ] = "Row No - $j";
     $row[ 0 ][ 'TEXT_SIZE' ] = $fsize;
@@ -82,12 +82,12 @@ for ( $j = 0; $j < 45; $j++ ) {
     $row[ 4 ][ 'TEXT' ] = "Short 4- $j";
     $row[ 4 ][ 'TEXT_SIZE' ] = 7;
 
-    if ( $j == 0 ) {
+    if ($j == 0) {
         $row[ 1 ][ 'TEXT' ] = $txt1;
         $row[ 1 ][ 'COLSPAN' ] = 4;
         $row[ 1 ][ 'ALIGN' ] = "C";
         $row[ 1 ][ 'LINE_SIZE' ] = 5;
-    } elseif ( $j == 1 ) {
+    } elseif ($j == 1) {
         $row[ 0 ][ 'TEXT' ] = "Top Right Align <p>Align Top</p> Right Right Align";
         $row[ 0 ][ 'ALIGN' ] = "RT";
 
@@ -106,7 +106,7 @@ for ( $j = 0; $j < 45; $j++ ) {
         $row[ 4 ][ 'PADDING_TOP' ] = 5;
     }
 
-    if ( $j == 2 ) {
+    if ($j == 2) {
         $row[ 1 ][ 'TEXT' ] = "Cells can be images -->>>";
         $row[ 2 ] = array(
             'TYPE' => 'IMAGE',
@@ -115,62 +115,62 @@ for ( $j = 0; $j < 45; $j++ ) {
         );
     }
 
-    if ( $j > 0 ) {
-        $row[ 0 ][ 'BACKGROUND_COLOR' ] = [ 255 - $rgb_b, $rgb_g, $rgb_r ];
-        $row[ 1 ][ 'BACKGROUND_COLOR' ] = [ $rgb_r, $rgb_g, $rgb_b ];
+    if ($j > 0) {
+        $row[ 0 ][ 'BACKGROUND_COLOR' ] = [255 - $rgb_b, $rgb_g, $rgb_r];
+        $row[ 1 ][ 'BACKGROUND_COLOR' ] = [$rgb_r, $rgb_g, $rgb_b];
     }
 
-    if ( $j > 3 && $j < 7 ) {
+    if ($j > 3 && $j < 7) {
         $row[ 1 ][ 'TEXT' ] = "Colspan Example - Center Align";
         $row[ 1 ][ 'COLSPAN' ] = $colspan;
-        $row[ 1 ][ 'BACKGROUND_COLOR' ] = [ $rgb_b, 50, 50 ];
-        $row[ 1 ][ 'TEXT_COLOR' ] = [ 255, 255, $rgb_g ];
+        $row[ 1 ][ 'BACKGROUND_COLOR' ] = [$rgb_b, 50, 50];
+        $row[ 1 ][ 'TEXT_COLOR' ] = [255, 255, $rgb_g];
         $row[ 1 ][ 'TEXT_ALIGN' ] = "C";
         $colspan++;
-        if ( $colspan > 4 ) {
+        if ($colspan > 4) {
             $colspan = 2;
         }
     }
 
-    if ( $j == 7 ) {
+    if ($j == 7) {
         $row[ 3 ][ 'TEXT' ] = "Rowspan Example";
-        $row[ 3 ][ 'BACKGROUND_COLOR' ] = [ $rgb_b, $rgb_b, 250 ];
+        $row[ 3 ][ 'BACKGROUND_COLOR' ] = [$rgb_b, $rgb_b, 250];
         $row[ 3 ][ 'ROWSPAN' ] = 4;
     }
 
-    if ( $j == 8 ) {
+    if ($j == 8) {
         $row[ 1 ][ 'TEXT' ] = "Rowspan Example";
-        $row[ 1 ][ 'BACKGROUND_COLOR' ] = [ $rgb_b, 50, 50 ];
+        $row[ 1 ][ 'BACKGROUND_COLOR' ] = [$rgb_b, 50, 50];
         $row[ 1 ][ 'ROWSPAN' ] = 6;
     }
 
-    if ( $j == 9 ) {
+    if ($j == 9) {
         $row[ 2 ][ 'TEXT' ] = "Rowspan Example";
-        $row[ 2 ][ 'BACKGROUND_COLOR' ] = [ $rgb_r, $rgb_r, $rgb_r ];
+        $row[ 2 ][ 'BACKGROUND_COLOR' ] = [$rgb_r, $rgb_r, $rgb_r];
         $row[ 2 ][ 'ROWSPAN' ] = 3;
     }
 
-    if ( $j == 12 ) {
+    if ($j == 12) {
         $row[ 2 ][ 'TEXT' ] = "Rowspan && Colspan Example\n\nCenter/Middle Allignment";
         $row[ 2 ][ 'TEXT_ALIGN' ] = 'C';
         $row[ 2 ][ 'VERTICAL_ALIGN' ] = 'M';
-        $row[ 2 ][ 'BACKGROUND_COLOR' ] = [ 234, 255, 218 ];
+        $row[ 2 ][ 'BACKGROUND_COLOR' ] = [234, 255, 218];
         $row[ 2 ][ 'ROWSPAN' ] = 5;
         $row[ 2 ][ 'COLSPAN' ] = 2;
     }
 
-    if ( $j == 17 ) {
+    if ($j == 17) {
         $row[ 0 ][ 'TEXT' ] = $txt1;
         $row[ 0 ][ 'TEXT_ALIGN' ] = 'C';
         $row[ 0 ][ 'VERTICAL_ALIGN' ] = 'M';
-        $row[ 0 ][ 'BACKGROUND_COLOR' ] = [ 234, 255, 218 ];
+        $row[ 0 ][ 'BACKGROUND_COLOR' ] = [234, 255, 218];
         $row[ 0 ][ 'ROWSPAN' ] = 5;
         $row[ 0 ][ 'COLSPAN' ] = 4;
     }
 
     $fsize += 0.5;
 
-    if ( $fsize > 10 ) {
+    if ($fsize > 10) {
         $fsize = 5;
     }
 
@@ -178,17 +178,17 @@ for ( $j = 0; $j < 45; $j++ ) {
     $rgb_g -= 5;
     $rgb_b -= 20;
 
-    if ( $rgb_b < 150 ) {
+    if ($rgb_b < 150) {
         $rgb_b = 255;
     }
-    if ( $rgb_g < 150 ) {
+    if ($rgb_g < 150) {
         $rgb_g = 255;
     }
-    if ( $rgb_b < 150 ) {
+    if ($rgb_b < 150) {
         $rgb_b = 255;
     }
 
-    $table->addRow( $row );
+    $table->addRow($row);
 }
 
 //close the table

@@ -1,20 +1,20 @@
 <?php
 
-require( 'settings.php' );
+require('settings.php');
 
-if ( !isset( $pdf ) ) {
+if (!isset($pdf)) {
     $pdf = new \Interpid\PdfExamples\MyPdf();
 }
 
 use Interpid\PdfLib\Table;
 
-$table = new Table( $pdf );
+$table = new Table($pdf);
 
-$table->setStyle( "p", $pdf->getDefaultFontName(), "", 6, "130,0,30" );
-$table->setStyle( "b", $pdf->getDefaultFontName(), "B", 6, "130,0,30" );
-$table->setStyle( "bi", $pdf->getDefaultFontName(), "BI", 6, "0,0,120" );
-$table->setStyle( "s1", $pdf->getDefaultFontName(), "I", 6, "0,0,120" );
-$table->setStyle( "s2", $pdf->getDefaultFontName(), "", 7, "110,50,120" );
+$table->setStyle("p", $pdf->getDefaultFontName(), "", 6, "130,0,30");
+$table->setStyle("b", $pdf->getDefaultFontName(), "B", 6, "130,0,30");
+$table->setStyle("bi", $pdf->getDefaultFontName(), "BI", 6, "0,0,120");
+$table->setStyle("s1", $pdf->getDefaultFontName(), "I", 6, "0,0,120");
+$table->setStyle("s2", $pdf->getDefaultFontName(), "", 7, "110,50,120");
 
 $nColumns = 5;
 
@@ -22,7 +22,7 @@ $nColumns = 5;
  * Set the tag styles
  */
 
-$table->initialize( [ 20, 30, 40, 50 ] );
+$table->initialize([20, 30, 40, 50]);
 
 $header1 = $headerRow;
 $header1[ 2 ][ 'TEXT' ] = 'Colspan in Header';
@@ -35,41 +35,41 @@ $header2[ 1 ][ 'TEXT' ] = "Colspan/Rowspan in Header";
 $header2[ 1 ][ 'COLSPAN' ] = 2;
 $header2[ 1 ][ 'ROWSPAN' ] = 2;
 
-$table->addHeader( $header1 );
-$table->addHeader( $header2 );
-$table->addHeader( $header3 );
+$table->addHeader($header1);
+$table->addHeader($header2);
+$table->addHeader($header3);
 
 
-for ( $i = 0; $i < 8; $i++ ) {
+for ($i = 0; $i < 8; $i++) {
     $row = $dataRow;
 
-    if ( 0 == $i ) {
+    if (0 == $i) {
         $row[ 1 ][ 'COLSPAN' ] = 2;
     }
 
-    if ( 1 == $i ) {
+    if (1 == $i) {
         $row[ 1 ][ 'COLSPAN' ] = 3;
     }
 
-    if ( 2 == $i ) {
+    if (2 == $i) {
         $row[ 1 ][ 'TEXT' ] = $sTextExtraLong . "\n\n" . $sTextSubSuperscript;
         $row[ 1 ][ 'ALIGN' ] = "J";
         $row[ 1 ][ 'COLSPAN' ] = 3;
         $row[ 1 ][ 'ROWSPAN' ] = 3;
     }
 
-    if ( 3 == $i ) {
+    if (3 == $i) {
         $row[ 0 ] = $imageCell;
     }
 
-    if ( 5 == $i ) {
+    if (5 == $i) {
         $row[ 1 ] = $imageCell;
         $row[ 1 ][ 'COLSPAN' ] = 2;
         $row[ 1 ][ 'ROWSPAN' ] = 2;
     }
 
 
-    $table->addRow( $row );
+    $table->addRow($row);
 }
 
 //close the table

@@ -5,13 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="#1701 - PHPCS, Mess Detector Integration">
-      <change afterPath="$PROJECT_DIR$/phpcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phpmd.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fpdf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fpdf.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.php-censor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.php-censor.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/define-colors.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/define-colors.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-includes.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/dev-includes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-multicell-transparent.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/dev-multicell-transparent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-mypdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/dev-mypdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table-images.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/dev-table-images.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table-images1.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/dev-table-images1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table-test-bug1.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/dev-table-test-bug1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table-test.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/dev-table-test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table1-simple-table-page-break.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/dev-table1-simple-table-page-break.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table1.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/dev-table1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table2-simple-table-page-break.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/dev-table2-simple-table-page-break.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table2.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/dev-table2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table3.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/dev-table3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table4-line-breaks.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/dev-table4-line-breaks.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table5-line-breaks.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/dev-table5-line-breaks.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table6-bug1.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/dev-table6-bug1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/table.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/table.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/table/draw-table1.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/table/draw-table1.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/example-multicell-1-overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-1-overview.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/example-multicell-2-overview-page-break.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-2-overview-page-break.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/example-multicell-3-line-breaking.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-3-line-breaking.php" afterDir="false" />
@@ -22,20 +35,15 @@
       <change beforePath="$PROJECT_DIR$/examples/example-table-2-overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-table-2-overview.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/example-table-3-detailed.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-table-3-detailed.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/example-table-4-override.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-table-4-override.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table/code-example-alignments.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example-alignments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table/code-example1.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table/code-example2.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example2.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/table/code-example3.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfExamples/mypdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfExamples/MyPdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfExamples/pdfFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfExamples/PdfFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Multicell.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Multicell.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Pdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Pdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/PdfInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/PdfInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Table.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/CellAbstract.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/CellAbstract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/BaseExamplesTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/BaseExamplesTestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/BaseTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/BaseTestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/functional/TableExamples2Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/TableExamples2Test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/helper/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/helper/Helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/helper/testPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/helper/testPdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table_example1.inc" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table_example1.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table_example2.inc" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table_example2.inc" afterDir="false" />
     </list>
     <ignored path="fpdf.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +64,17 @@
     <favorites_list name="fpdf" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/examples/example-table-3-detailed.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -139,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
         <option value="$PROJECT_DIR$/vendor/interpid/Pdf/Multicell.php" />
         <option value="$PROJECT_DIR$/examples/table/code-example2.php" />
         <option value="$PROJECT_DIR$/examples/table/code-example-transparent.php" />
@@ -190,6 +207,7 @@
         <option value="$PROJECT_DIR$/library/interpid/PdfLib/PdfInterface.php" />
         <option value="$PROJECT_DIR$/phpmd.xml" />
         <option value="$PROJECT_DIR$/library/interpid/PdfLib/Table.php" />
+        <option value="$PROJECT_DIR$/examples/example-table-3-detailed.php" />
       </list>
     </option>
   </component>
@@ -249,6 +267,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -278,7 +297,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -418,6 +436,8 @@
       <workItem from="1543326621016" duration="2972000" />
       <workItem from="1543345462452" duration="9515000" />
       <workItem from="1543357457846" duration="3000" />
+      <workItem from="1543357467779" duration="154000" />
+      <workItem from="1543357681113" duration="58000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
@@ -573,7 +593,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543351716083</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="#1701 - PHPCS, Mess Detector Integration">
+      <created>1543357531164</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1543357531164</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -609,7 +636,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88868000" />
+    <option name="totallyTimeSpent" value="89080000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -622,10 +649,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-12" y="-12" width="3864" height="2078" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7156319" visible="true" weight="0.18846358" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.71452326" visible="true" weight="0.19218501" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info id="Structure" order="2" sideWeight="0.28436807" side_tool="true" visible="true" weight="0.18846358" />
+      <window_info id="Structure" order="2" sideWeight="0.2854767" side_tool="true" visible="true" weight="0.19218501" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="1" />
       <window_info active="true" anchor="bottom" id="Inspection Results" order="2" sideWeight="0.5707071" visible="true" weight="0.35144123" />
@@ -720,13 +748,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/EmptyCell.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="26" column="11" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
     <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_static.php" />
     <entry file="file://$PROJECT_DIR$/content/multicell-title.txt">
@@ -1038,6 +1059,13 @@
           <folding>
             <element signature="e#816#861#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/example-table-3-detailed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
         </state>
       </provider>
     </entry>
