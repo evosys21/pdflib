@@ -4,45 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="#1680 - The each() function is deprecated">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/andy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/andy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fpdf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fpdf.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bin/server.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfExamples/mypdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfExamples/mypdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfExamples/pdfFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfExamples/pdfFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Multicell.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Multicell.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Pdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Pdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/PdfInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/PdfInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/String/Tags.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/String/Tags.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Table.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/CellAbstract.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/CellAbstract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/CellInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/CellInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/EmptyCell.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/EmptyCell.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/Multicell.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/Multicell.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Tools.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Tools.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Validate.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Validate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/table.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/table.config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/BaseExamplesTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/BaseExamplesTestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/BaseTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/BaseTestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/bootstrap-gen.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/bootstrap-gen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractMock.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractMock.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/functional/MulticellExamplesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/MulticellExamplesTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/functional/TableExamples2Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/TableExamples2Test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/functional/TableExamplesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/TableExamplesTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/functional/TableTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/TableTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/functional/table/disable-page-break.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/table/disable-page-break.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/functional/table/draw-table-model1.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/table/draw-table-model1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/functional/table/draw-table-model2.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/table/draw-table-model2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/functional/table/draw-table-model3.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/table/draw-table-model3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/functional/table/table.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/table/table.config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/helper/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/helper/Helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/helper/testPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/helper/testPdf.php" afterDir="false" />
-    </list>
+    <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="#1701 - PHPCS, Mess Detector Integration" />
     <ignored path="fpdf.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -434,7 +396,7 @@
       <workItem from="1537339402513" duration="3278000" />
       <workItem from="1541428683019" duration="1391000" />
       <workItem from="1543326621016" duration="2972000" />
-      <workItem from="1543345462452" duration="1598000" />
+      <workItem from="1543345462452" duration="2098000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
@@ -555,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543327933094</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="#1701 - PHPCS, Mess Detector Integration">
+      <created>1543347138370</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1543347138370</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -591,7 +560,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80948000" />
+    <option name="totallyTimeSpent" value="81448000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-12" y="-12" width="3864" height="2078" extended-state="6" />
@@ -652,7 +621,8 @@
     <MESSAGE value="#1200 - Line Separators \n" />
     <MESSAGE value="#1681 - Vendor folder moved to library&#10;#1680 - The each() function is deprecated" />
     <MESSAGE value="#1680 - The each() function is deprecated" />
-    <option name="LAST_COMMIT_MESSAGE" value="#1680 - The each() function is deprecated" />
+    <MESSAGE value="#1701 - PHPCS, Mess Detector Integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="#1701 - PHPCS, Mess Detector Integration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

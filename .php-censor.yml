@@ -1,0 +1,35 @@
+build_settings:
+  clone_depth: 1
+  ignore:
+    - "vendor"
+    - "tests"
+setup:
+  composer:
+    action: "install"
+test:
+  technical_debt:
+    allowed_errors: -1
+  php_code_sniffer:
+    allowed_warnings: -1
+    allowed_errors: -1
+  php_mess_detector:
+    allowed_warnings: -1
+  php_docblock_checker:
+    allowed_warnings: -1
+  security_checker:
+    allowed_warnings: -1
+  php_parallel_lint:
+  php_loc:
+  php_cpd:
+    path: "src"
+  #codeception:
+  php_unit:
+    config:
+      - "phpunit-ci.xml"
+failure:
+  email:
+    committer: true
+    default_mailto_address: andy@interpid.eu
+#complete:
+#  email:
+#    default_mailto_address: andy@interpid.eu
