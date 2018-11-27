@@ -8,6 +8,8 @@ $_SERVER[ 'ENVIRONMENT' ] = 'test';
 
 define( 'PDF_RESOURCES_IMAGES', APPLICATION_PATH . '/content/images' );
 
+date_default_timezone_set( "Europe/Zurich" );
+
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
