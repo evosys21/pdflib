@@ -8,7 +8,10 @@
             "email": "office@interpid.eu"
         }
     ],
-    "require": {},
+    "require": {
+        "phpunit/phpunit": "^7.4",
+        "phpmetrics/phpmetrics": "^2.4"
+    },
     "autoload": {
         "classmap": [
 			"library/fpdf",

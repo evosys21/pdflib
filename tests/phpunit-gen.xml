@@ -1,7 +1,0 @@
-<phpunit bootstrap="./bootstrap-gen.php">
-    <testsuites>
-        <testsuite name="allTests">
-            <directory>.</directory>
-        </testsuite>
-    </testsuites>
-</phpunit>

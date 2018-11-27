@@ -1,12 +1,25 @@
-<phpunit bootstrap="./bootstrap.php">
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.1/phpunit.xsd"
+         backupGlobals="false"
+         colors="true"
+         bootstrap="tests/bootstrap.php"
+         failOnRisky="true"
+         failOnWarning="true"
+>
     <testsuites>
         <testsuite name="allTests">
-            <directory>.</directory>
+            <directory>./tests/</directory>
         </testsuite>
     </testsuites>
     <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">../library/interpid</directory>
+        <whitelist>
+            <directory>./library/interpid</directory>
+            <exclude>
+                <directory>./tests</directory>
+                <directory>./vendor</directory>
+            </exclude>
         </whitelist>
     </filter>
     <logging>

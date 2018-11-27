@@ -1,2 +1,6 @@
-# Created by .ignore support plugin (hsz.mobi)
+.idea/
 /build
+tests/build
+tests/old
+vendor/
+composer.lock
