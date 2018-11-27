@@ -1,6 +1,9 @@
 build_settings:
   clone_depth: 1
   ignore:
+    - "dev"
+    - "library/tcpdf"
+    - "library/fpdf"
     - "vendor"
     - "tests"
 setup:
