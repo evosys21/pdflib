@@ -214,7 +214,7 @@ class Tags
         $sTAG = "";
         $sHREF = "";
 
-        while ( false != ( list ( $key, $val ) = each( $reg ) ) ) {
+        foreach( $reg as $key => $val ){
             if ( $val == "" ) {
                 continue;
             }

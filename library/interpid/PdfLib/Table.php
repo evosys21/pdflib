@@ -1108,7 +1108,6 @@ class Table
         /**
          * This Variable will contain the remained page Height
          */
-        //$iLeftHeight = $iPageHeight - $this->pdf->GetY() + $this->pdf->tMargin;
         $iLeftHeight = $iPageHeight - $this->pdf->GetY() + $this->pdf->tMargin;
 
         $bWasData = true; //can be deleted
