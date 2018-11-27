@@ -1,6 +1,6 @@
 <?php
 
-require_once( __DIR__ . "/bootstrap.php" );
+require_once(__DIR__ . "/bootstrap.php");
 
 use Interpid\PdfLib\Pdf;
 use Interpid\PdfExamples\pdfFactory;
@@ -39,12 +39,11 @@ class BaseTestCase extends TestCase
         $pdf = new Pdf();
 
         $factory = new pdfFactory();
-        $factory->initPdf( $pdf );
+        $factory->initPdf($pdf);
 
         //disable compression for testing
-        $pdf->SetCompression( false );
+        $pdf->SetCompression(false);
 
         return $pdf;
     }
 }
-

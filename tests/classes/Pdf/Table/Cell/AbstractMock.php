@@ -17,7 +17,6 @@ use Interpid\PdfLib\Table\Cell\CellAbstract;
  */
 class CellAbstractMock extends CellAbstract
 {
-
     protected $someValue;
 
     public function render()
@@ -29,7 +28,7 @@ class CellAbstractMock extends CellAbstract
         return false;
     }
 
-    public function setSomeValue( $value )
+    public function setSomeValue($value)
     {
         $this->someValue = $value;
     }
@@ -39,4 +38,3 @@ class CellAbstractMock extends CellAbstract
         return $this->someValue;
     }
 }
-

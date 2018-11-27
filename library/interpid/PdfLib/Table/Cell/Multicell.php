@@ -12,7 +12,6 @@
  * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
- * @version   : 5.4.0
  * @author    : Interpid <office@interpid.eu>
  * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
@@ -62,24 +61,23 @@ class Multicell extends CellAbstract implements CellInterface
      * @param Pdf $pdf
      * @param string $data
      */
-    public function __construct( $pdf, $data = ' ' )
+    public function __construct($pdf, $data = ' ')
     {
-        parent::__construct( $pdf );
+        parent::__construct($pdf);
 
-        if ( is_string( $data ) ) {
+        if (is_string($data)) {
             $this->TEXT = $data;
-        } elseif ( is_array( $data ) ) {
-            $this->setProperties( $data );
+        } elseif (is_array($data)) {
+            $this->setProperties($data);
         }
     }
 
 
     public function getDefaultValues()
     {
-
         $aValues = array(
             'TEXT' => '',
-            'TEXT_COLOR' => [ 0, 0, 0 ], //text color
+            'TEXT_COLOR' => [0, 0, 0], //text color
             'TEXT_SIZE' => 6, //font size
             'TEXT_FONT' => 'Arial', //font family
             'TEXT_ALIGN' => 'C', //horizontal alignment, possible values: LRC (left, right, center)
@@ -87,7 +85,7 @@ class Multicell extends CellAbstract implements CellInterface
             'LINE_SIZE' => 4
         ); //line size for one row
 
-        return array_merge( parent::getDefaultValues(), $aValues );
+        return array_merge(parent::getDefaultValues(), $aValues);
     }
 
 
@@ -99,33 +97,33 @@ class Multicell extends CellAbstract implements CellInterface
      * @see CellAbstract::setAlign()
      * @param string $alignment
      */
-    public function setAlign( $alignment )
+    public function setAlign($alignment)
     {
-        parent::setAlign( $alignment );
+        parent::setAlign($alignment);
 
         $vertical = "TBM";
         $horizontal = "LRCJ";
 
-        foreach ( str_split( $horizontal ) as $val ) {
-            if ( false !== stripos( $alignment, $val ) ) {
+        foreach (str_split($horizontal) as $val) {
+            if (false !== stripos($alignment, $val)) {
                 $this->TEXT_ALIGN = $val;
                 break;
             }
         }
 
-        foreach ( str_split( $vertical ) as $val ) {
-            if ( false !== stripos( $alignment, $val ) ) {
-                $this->setAlignVertical( $val );
+        foreach (str_split($vertical) as $val) {
+            if (false !== stripos($alignment, $val)) {
+                $this->setAlignVertical($val);
                 break;
             }
         }
     }
 
 
-    public function attachMulticell( $multicell )
+    public function attachMulticell($multicell)
     {
         $this->multicell = $multicell;
-        $this->multicell->enableFill( false );
+        $this->multicell->enableFill(false);
     }
 
 
@@ -135,9 +133,9 @@ class Multicell extends CellAbstract implements CellInterface
      * @see CellAbstract::setCellDrawWidth()
      * @param $value
      */
-    public function setCellDrawWidth( $value )
+    public function setCellDrawWidth($value)
     {
-        parent::setCellDrawWidth( $value );
+        parent::setCellDrawWidth($value);
         $this->calculateContentWidth();
     }
 
@@ -152,8 +150,8 @@ class Multicell extends CellAbstract implements CellInterface
         //return false;
 
 
-        if ( $this->isPropertySet( 'SPLITTABLE' ) ) {
-            return true && $this->isPropertySet( 'SPLITTABLE' );
+        if ($this->isPropertySet('SPLITTABLE')) {
+            return true && $this->isPropertySet('SPLITTABLE');
         }
 
         return true;
@@ -167,49 +165,45 @@ class Multicell extends CellAbstract implements CellInterface
      * @param number $nMaxHeight - the Max height available
      * @return array(oNewCell, iSplitHeight)
      */
-    public function split( $nRowHeight, $nMaxHeight )
+    public function split($nRowHeight, $nMaxHeight)
     {
         $oCell2 = clone $this;
 
         /**
          * Have to look at the VERTICAL_ALIGN of the cells and calculate exaclty for each cell how much space is left
          */
-        switch ( $this->getAlignVertical() ) {
+        switch ($this->getAlignVertical()) {
             case 'M':
                 //Middle align
-                $x = ( $nRowHeight - $this->getCellHeight() ) / 2;
+                $x = ($nRowHeight - $this->getCellHeight()) / 2;
 
-                if ( $nMaxHeight <= $x ) {
+                if ($nMaxHeight <= $x) {
                     //CASE 1
                     $fHeightSplit = 0;
                     $this->V_OFFSET = $x - $nMaxHeight;
-                    $this->setAlignVertical( 'T' ); //top align
-
-
-                } elseif ( ( $x + $this->getCellHeight() ) >= $nMaxHeight ) {
+                    $this->setAlignVertical('T'); //top align
+                } elseif (($x + $this->getCellHeight()) >= $nMaxHeight) {
                     //CASE 2
                     $fHeightSplit = $nMaxHeight - $x;
 
-                    $this->setAlignVertical( 'B' ); //top align
-                    $oCell2->setAlignVertical( 'T' ); //top align
-
-
+                    $this->setAlignVertical('B'); //top align
+                    $oCell2->setAlignVertical('T'); //top align
                 } else { //{
                     //CASE 3
                     $fHeightSplit = $nMaxHeight;
                     $this->V_OFFSET = $x;
-                    $this->setAlignVertical( 'B' ); //bottom align
+                    $this->setAlignVertical('B'); //bottom align
                 }
                 break;
 
             case 'B':
                 //Bottom Align
-                if ( ( $nRowHeight - $this->getCellHeight() ) > $nMaxHeight ) {
+                if (($nRowHeight - $this->getCellHeight()) > $nMaxHeight) {
                     //if the text has enough place on the other page then we show nothing on this page
                     $fHeightSplit = 0;
                 } else {
                     //calculate the space that the text needs on this page
-                    $fHeightSplit = $nMaxHeight - ( $nRowHeight - $this->getCellHeight() );
+                    $fHeightSplit = $nMaxHeight - ($nRowHeight - $this->getCellHeight());
                 }
 
                 break;
@@ -222,34 +216,34 @@ class Multicell extends CellAbstract implements CellInterface
         }
 
         $fHeightSplit = $fHeightSplit - $this->getPaddingTop();
-        if ( $fHeightSplit < 0 ) {
+        if ($fHeightSplit < 0) {
             $fHeightSplit = 0;
         }
 
         //calculate the number of the lines that have space on the $fHeightSplit
-        $iNoLinesCPage = floor( $fHeightSplit / $this->LINE_SIZE );
+        $iNoLinesCPage = floor($fHeightSplit / $this->LINE_SIZE);
 
         //check which paddings we need to set
-        if ( $iNoLinesCPage == 0 ) {
+        if ($iNoLinesCPage == 0) {
             //there are no lines on the current cell - all paddings are 0
-            $this->setPaddingTop( 0 );
-            $this->setPaddingBottom( 0 );
+            $this->setPaddingTop(0);
+            $this->setPaddingBottom(0);
         } else {
             //the bottom padding of the first cell gets eliminated
             //as well as the top padding from the following cell(resulted from the split)
-            $this->setPaddingBottom( 0 );
-            $oCell2->setPaddingTop( 0 );
+            $this->setPaddingBottom(0);
+            $oCell2->setPaddingTop(0);
         }
 
-        $iCurrentLines = count( $this->TEXT_STRLINES );
+        $iCurrentLines = count($this->TEXT_STRLINES);
 
         //if the number of the lines is bigger than the number of the lines in the cell decrease the number of the lines
-        if ( $iNoLinesCPage > $iCurrentLines ) {
+        if ($iNoLinesCPage > $iCurrentLines) {
             $iNoLinesCPage = $iCurrentLines;
         }
 
         $aLines = $this->TEXT_STRLINES;
-        $aLines2 = array_splice( $aLines, $iNoLinesCPage );
+        $aLines2 = array_splice($aLines, $iNoLinesCPage);
         $this->TEXT_STRLINES = $aLines;
         $this->calculateCellHeight();
 
@@ -259,7 +253,7 @@ class Multicell extends CellAbstract implements CellInterface
         //$oCell2->setCellDrawHeight($nRowHeight);
 
 
-        $this->setCellDrawHeight( $nMaxHeight );
+        $this->setCellDrawHeight($nMaxHeight);
 
         return array(
             $oCell2,
@@ -283,13 +277,13 @@ class Multicell extends CellAbstract implements CellInterface
     public function processContent()
     {
         //Text Color = TEXT_COLOR
-        list ( $r, $g, $b ) = $this->TEXT_COLOR;
-        $this->pdf->SetTextColor( $r, $g, $b );
+        list($r, $g, $b) = $this->TEXT_COLOR;
+        $this->pdf->SetTextColor($r, $g, $b);
 
         //Set the font, font type and size
-        $this->pdf->SetFont( $this->TEXT_FONT, $this->TEXT_TYPE, $this->TEXT_SIZE );
+        $this->pdf->SetFont($this->TEXT_FONT, $this->TEXT_TYPE, $this->TEXT_SIZE);
 
-        $this->TEXT_STRLINES = $this->multicell->stringToLines( $this->getContentWidth(), $this->getText() );
+        $this->TEXT_STRLINES = $this->multicell->stringToLines($this->getContentWidth(), $this->getText());
 
         $this->calculateCellHeight();
     }
@@ -297,10 +291,10 @@ class Multicell extends CellAbstract implements CellInterface
 
     public function calculateCellHeight()
     {
-        $this->nLines = count( $this->TEXT_STRLINES );
+        $this->nLines = count($this->TEXT_STRLINES);
         $this->cellHeight = $this->getLineSize() * $this->nLines + $this->getPaddingTop() + $this->getPaddingBottom();
 
-        $this->setCellDrawHeight( $this->cellHeight );
+        $this->setCellDrawHeight($this->cellHeight);
     }
 
 
@@ -310,8 +304,8 @@ class Multicell extends CellAbstract implements CellInterface
     {
         $this->contentWidth = $this->getCellWidth() - $this->getPaddingLeft() - $this->getPaddingRight();
 
-        if ( $this->contentWidth < 0 ) {
-            trigger_error( "Cell with negative value. Please check width, padding left and right" );
+        if ($this->contentWidth < 0) {
+            trigger_error("Cell with negative value. Please check width, padding left and right");
         }
     }
 
@@ -324,11 +318,11 @@ class Multicell extends CellAbstract implements CellInterface
         $this->renderCellLayout();
 
         //Text Color = TEXT_COLOR
-        list ( $r, $g, $b ) = $this->TEXT_COLOR;
-        $this->pdf->SetTextColor( $r, $g, $b );
+        list($r, $g, $b) = $this->TEXT_COLOR;
+        $this->pdf->SetTextColor($r, $g, $b);
 
         //Set the font, font type and size
-        $this->pdf->SetFont( $this->TEXT_FONT, $this->TEXT_TYPE, $this->TEXT_SIZE );
+        $this->pdf->SetFont($this->TEXT_FONT, $this->TEXT_TYPE, $this->TEXT_SIZE);
 
         //print the text
         $this->multiCellTbl(
@@ -348,12 +342,12 @@ class Multicell extends CellAbstract implements CellInterface
     }
 
 
-    function multiCellTbl(
+    public function multiCellTbl(
         $w,
         $h,
         $txtData,
-        $align = 'J',
-        $valign = 'T',
+        $hAlign = 'J',
+        $vAlign = 'T',
         $vh = 0,
         $vtop = 0,
         $pad_left = 0,
@@ -363,18 +357,18 @@ class Multicell extends CellAbstract implements CellInterface
     ) {
         $wh_Top = 0;
 
-        if ( $vtop > 0 ) { //if this parameter is set
-            if ( $vtop < $vh ) { //only if the top add-on is bigger than the add-width
+        if ($vtop > 0) { //if this parameter is set
+            if ($vtop < $vh) { //only if the top add-on is bigger than the add-width
                 $wh_Top = $vtop;
                 $vh = $vh - $vtop;
             }
         }
 
-        if ( empty( $txtData ) ) {
+        if (empty($txtData)) {
             return;
         }
 
-        switch ( $valign ) {
+        switch ($vAlign) {
             case 'T':
                 $wh_T = $wh_Top; //Top width
                 break;
@@ -388,8 +382,18 @@ class Multicell extends CellAbstract implements CellInterface
                 $wh_T = $wh_Top; //Top width
         }
 
-        $this->multicell->multiCellSec( $w, $h, $txtData, 0, $align, 1, $pad_left, $pad_top + $wh_T, $pad_right,
-            $pad_bottom, false );
+        $this->multicell->multiCellSec(
+            $w,
+            $h,
+            $txtData,
+            0,
+            $hAlign,
+            1,
+            $pad_left,
+            $pad_top + $wh_T,
+            $pad_right,
+            $pad_bottom,
+            false
+        );
     }
 }
-

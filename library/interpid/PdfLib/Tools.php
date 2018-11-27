@@ -13,7 +13,6 @@
  * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
- * @version   : 5.4.0
  * @author    : Interpid <office@interpid.eu>
  * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
@@ -23,10 +22,9 @@ namespace Interpid\PdfLib;
 
 class Tools
 {
-
-    public static function getValue( array $var, $index = '', $default = '' )
+    public static function getValue(array $var, $index = '', $default = '')
     {
-        if ( isset( $var[ $index ] ) ) {
+        if (isset($var[ $index ])) {
             return $var[ $index ];
         }
 
@@ -41,13 +39,13 @@ class Tools
      * @param number $index
      * @return mixed
      */
-    public static function getNextValue( array $data, &$index )
+    public static function getNextValue(array $data, &$index)
     {
-        if ( isset( $index ) ) {
+        if (isset($index)) {
             $index++;
         }
 
-        if ( !isset( $index ) || ( $index >= count( $data ) ) ) {
+        if (!isset($index) || ($index >= count($data))) {
             $index = 0;
         }
 
@@ -62,10 +60,10 @@ class Tools
      * @param int|null $g
      * @return array|false
      */
-    public static function getColor( $r, $b = null, $g = null )
+    public static function getColor($r, $b = null, $g = null)
     {
-        if ( $g !== null && $b !== null ) {
-            return [ $r, $b, $g ];
+        if ($g !== null && $b !== null) {
+            return [$r, $b, $g];
         }
 
         return $r;
@@ -78,13 +76,13 @@ class Tools
      * @param mixed $value
      * @return array
      */
-    public static function makeArray( $value )
+    public static function makeArray($value)
     {
-        if ( is_array( $value ) ) {
+        if (is_array($value)) {
             return $value;
         }
 
-        return [ $value ];
+        return [$value];
     }
 
 
@@ -94,17 +92,17 @@ class Tools
      * @param mixed $value
      * @return bool
      */
-    public static function isFalse( $value )
+    public static function isFalse($value)
     {
-        if ( false === $value ) {
+        if (false === $value) {
             return true;
         }
 
-        if ( 0 === $value ) {
+        if (0 === $value) {
             return true;
         }
 
-        if ( '0' === $value ) {
+        if ('0' === $value) {
             return true;
         }
 

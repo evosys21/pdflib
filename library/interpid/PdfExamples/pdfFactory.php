@@ -14,7 +14,6 @@
  * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
- * @version   : 5.4.0
  * @author    : Interpid <office@interpid.eu>
  * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
@@ -22,9 +21,10 @@
 
 namespace Interpid\PdfExamples;
 
-if ( !defined( 'PDF_RESOURCES_IMAGES' ) ) {
-    define( 'PDF_RESOURCES_IMAGES', __DIR__ . '/images' );
+if (!defined('PDF_RESOURCES_IMAGES')) {
+    define('PDF_RESOURCES_IMAGES', __DIR__ . '/images');
 }
+
 use Interpid\PdfLib\Pdf;
 
 class pdfFactory
@@ -35,21 +35,21 @@ class pdfFactory
      * @param $type
      * @return myPdf
      */
-    public static function newPdf( $type )
+    public static function newPdf($type)
     {
         $pdf = new myPdf();
 
-        switch ( $type ) {
+        switch ($type) {
             case 'multicell':
-                $pdf->setHeaderSource( 'header-multicell.txt' );
+                $pdf->setHeaderSource('header-multicell.txt');
                 break;
             case 'table':
-                $pdf->setHeaderSource( 'header-table.txt' );
+                $pdf->setHeaderSource('header-table.txt');
                 break;
         }
 
         //initialize the pdf document
-        self::initPdf( $pdf );
+        self::initPdf($pdf);
 
         return $pdf;
     }
@@ -61,25 +61,24 @@ class pdfFactory
      * @param Pdf $pdf
      * @return Pdf $pdf
      */
-    public static function initPdf( $pdf )
+    public static function initPdf($pdf)
     {
-        $pdf->SetMargins( 20, 20, 20 );
+        $pdf->SetMargins(20, 20, 20);
 
         //set default font/colors
-        $pdf->SetFont( 'helvetica', '', 11 );
-        $pdf->SetTextColor( 200, 10, 10 );
-        $pdf->SetFillColor( 254, 255, 245 );
+        $pdf->SetFont('helvetica', '', 11);
+        $pdf->SetTextColor(200, 10, 10);
+        $pdf->SetFillColor(254, 255, 245);
 
         // add a page
         $pdf->AddPage();
         $pdf->AliasNbPages();
 
         //disable compression for unit-testing!
-        if ( isset( $_SERVER[ 'ENVIRONMENT' ] ) && 'test' == $_SERVER[ 'ENVIRONMENT' ] ) {
-            $pdf->SetCompression( false );
+        if (isset($_SERVER[ 'ENVIRONMENT' ]) && 'test' == $_SERVER[ 'ENVIRONMENT' ]) {
+            $pdf->SetCompression(false);
         }
 
         return $pdf;
     }
 }
-

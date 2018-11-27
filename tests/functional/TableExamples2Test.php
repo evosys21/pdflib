@@ -1,6 +1,6 @@
 <?php
 
-require_once( TEST_PATH . '/helper/testPdf.php' );
+require_once(TEST_PATH . '/helper/testPdf.php');
 
 use Interpid\PdfExamples\pdfFactory;
 use PHPUnit\Framework\TestCase;
@@ -18,19 +18,19 @@ class TableExamples2Test extends TestCase
         $pdf = new testPdf();
 
         $factory = new pdfFactory();
-        $factory->initPdf( $pdf );
+        $factory->initPdf($pdf);
 
         //disable compression for testing
-        $pdf->SetCompression( false );
+        $pdf->SetCompression(false);
 
         return $pdf;
     }
 
 
-    protected function runTestWithExample( $require, $name )
+    protected function runTestWithExample($require, $name)
     {
-        //remove the .php extention
-        $name = str_replace( ".php", '', $name );
+        //remove the .php extension
+        $name = str_replace(".php", '', $name);
 
         $pdf = $this->getPdfObject();
 
@@ -38,21 +38,21 @@ class TableExamples2Test extends TestCase
 
         $sResultFile = TEST_PATH . '/data/' . $name . '.pdf';
 
-        if ( defined( 'GENERATE_RESULT_FILES' ) ) {
+        if (defined('GENERATE_RESULT_FILES')) {
             $sPdfFile = $sResultFile;
         } else {
-            $sPdfFile = tempnam( sys_get_temp_dir(), 'pdf_test' );
+            $sPdfFile = tempnam(sys_get_temp_dir(), 'pdf_test');
         }
 
         //send the pdf to the browser
-        $pdf->saveToFile( $sPdfFile );
+        $pdf->saveToFile($sPdfFile);
 
-        $this->assertTrue( file_exists( $sPdfFile ) );
+        $this->assertTrue(file_exists($sPdfFile));
 
-        $this->assertFileEquals( $sPdfFile, $sResultFile );
+        $this->assertFileEquals($sPdfFile, $sResultFile);
 
-        if ( !defined( 'GENERATE_RESULT_FILES' ) ) {
-            unlink( $sPdfFile );
+        if (!defined('GENERATE_RESULT_FILES')) {
+            unlink($sPdfFile);
         }
     }
 
@@ -63,7 +63,7 @@ class TableExamples2Test extends TestCase
     {
         $require = APPLICATION_PATH . '/examples/table/code-example1.php';
 
-        $this->runTestWithExample( $require, 'table-' . basename( $require ) );
+        $this->runTestWithExample($require, 'table-' . basename($require));
     }
 
 
@@ -74,7 +74,7 @@ class TableExamples2Test extends TestCase
     {
         $require = APPLICATION_PATH . '/examples/table/code-example2.php';
 
-        $this->runTestWithExample( $require, 'table-' . basename( $require ) );
+        $this->runTestWithExample($require, 'table-' . basename($require));
     }
 
 
@@ -82,7 +82,7 @@ class TableExamples2Test extends TestCase
     {
         $require = APPLICATION_PATH . '/examples/table/code-example3.php';
 
-        $this->runTestWithExample( $require, 'table-' . basename( $require ) );
+        $this->runTestWithExample($require, 'table-' . basename($require));
     }
 
 
@@ -90,7 +90,7 @@ class TableExamples2Test extends TestCase
     {
         $require = APPLICATION_PATH . '/examples/table/code-example-alignments.php';
 
-        $this->runTestWithExample( $require, 'table-' . basename( $require ) );
+        $this->runTestWithExample($require, 'table-' . basename($require));
     }
 
 
@@ -98,7 +98,6 @@ class TableExamples2Test extends TestCase
     {
         $require = APPLICATION_PATH . '/examples/table/code-example-transparent.php';
 
-        $this->runTestWithExample( $require, 'table-' . basename( $require ) );
+        $this->runTestWithExample($require, 'table-' . basename($require));
     }
 }
-

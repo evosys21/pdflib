@@ -16,10 +16,9 @@ class TableExamplesTest extends BaseExamplesTestCase
             'example-table-4-override.php',
         );
 
-        foreach ( $aSources as $source ) {
+        foreach ($aSources as $source) {
             $require = APPLICATION_PATH . '/examples/' . $source;
-            $this->runTestWithExample( $require, basename( $require ) );
+            $this->runTestWithExample($require, basename($require));
         }
     }
 }
-

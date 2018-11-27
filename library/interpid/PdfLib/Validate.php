@@ -13,7 +13,6 @@
  * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
- * @version   : 5.4.0
  * @author    : Interpid <office@interpid.eu>
  * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
@@ -30,10 +29,10 @@ class Validate
      * @param $value
      * @return int
      */
-    public static function intPositive( $value )
+    public static function intPositive($value)
     {
-        $value = intval( $value );
-        if ( $value < 1 ) {
+        $value = intval($value);
+        if ($value < 1) {
             $value = 1;
         }
 
@@ -50,20 +49,20 @@ class Validate
      * @param null|float $max
      * @return float
      */
-    public static function float( $value, $min = null, $max = null )
+    public static function float($value, $min = null, $max = null)
     {
-        $value = floatval( $value );
+        $value = floatval($value);
 
-        if ( $min !== null ) {
-            $min = floatval( $min );
-            if ( $value < $min ) {
+        if ($min !== null) {
+            $min = floatval($min);
+            if ($value < $min) {
                 return $min;
             }
         }
 
-        if ( $max !== null ) {
-            $max = floatval( $max );
-            if ( $value > $max ) {
+        if ($max !== null) {
+            $max = floatval($max);
+            if ($value > $max) {
                 return $max;
             }
         }
@@ -78,13 +77,13 @@ class Validate
      * @param $value
      * @return string
      */
-    public static function alignVertical( $value )
+    public static function alignVertical($value)
     {
-        $value = strtoupper( $value );
+        $value = strtoupper($value);
 
-        $aValid = [ 'T', 'B', 'M' ];
+        $aValid = ['T', 'B', 'M'];
 
-        if ( !in_array( $value, $aValid ) ) {
+        if (!in_array($value, $aValid)) {
             return 'M';
         }
 

@@ -16,19 +16,19 @@ class BaseExamplesTestCase extends TestCase
         //create the pdf object and do some initialization
         $pdf = new myPdf();
 
-        $factory = pdfFactory::initPdf( $pdf );
+        $factory = pdfFactory::initPdf($pdf);
 
         //disable compression for testing
-        $pdf->SetCompression( false );
+        $pdf->SetCompression(false);
 
         return $pdf;
     }
 
 
-    protected function runTestWithExample( $require, $name )
+    protected function runTestWithExample($require, $name)
     {
-        //remove the .php extention
-        $name = str_replace( ".php", '', $name );
+        //remove the .php extension
+        $name = str_replace(".php", '', $name);
 
         ob_start();
         require $require;
@@ -36,21 +36,20 @@ class BaseExamplesTestCase extends TestCase
 
         $sResultFile = TEST_PATH . '/data/' . $name . '.pdf';
 
-        if ( defined( 'GENERATE_RESULT_FILES' ) ) {
+        if (defined('GENERATE_RESULT_FILES')) {
             $sPdfFile = $sResultFile;
         } else {
-            $sPdfFile = tempnam( sys_get_temp_dir(), 'pdf_test' );
+            $sPdfFile = tempnam(sys_get_temp_dir(), 'pdf_test');
         }
 
-        file_put_contents( $sPdfFile, $content );
+        file_put_contents($sPdfFile, $content);
 
-        $this->assertTrue( file_exists( $sPdfFile ), $require );
-        $this->assertFileEquals( $sResultFile, $sPdfFile, $require );
-        $this->assertSame( sha1_file( $sResultFile ), sha1_file( $sPdfFile ), $require );
+        $this->assertTrue(file_exists($sPdfFile), $require);
+        $this->assertFileEquals($sResultFile, $sPdfFile, $require);
+        $this->assertSame(sha1_file($sResultFile), sha1_file($sPdfFile), $require);
 
-        if ( !defined( 'GENERATE_RESULT_FILES' ) ) {
-            unlink( $sPdfFile );
+        if (!defined('GENERATE_RESULT_FILES')) {
+            unlink($sPdfFile);
         }
     }
 }
-

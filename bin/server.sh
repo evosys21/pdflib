@@ -1,1 +1,1 @@
-php72 -S localhost:8070
+php -S localhost:8070

@@ -20,18 +20,18 @@ class Helper
      */
     public static function pdfObject1()
     {
-        require_once( __DIR__ . '/testPdf.php' );
+        require_once(__DIR__ . '/testPdf.php');
 
         //create the pdf object and do some initialization
-        $pdf = new testPdf( 'P', 'mm', array(
+        $pdf = new testPdf('P', 'mm', array(
             130,
             180
-        ) );
+        ));
 
-        pdfFactory::initPdf( $pdf );
+        pdfFactory::initPdf($pdf);
 
         //disable compression for testing
-        $pdf->SetCompression( false );
+        $pdf->SetCompression(false);
 
         return $pdf;
     }
@@ -39,10 +39,9 @@ class Helper
     /**
      * @param Pdf $pdf
      */
-    public static function setFontStyle1( $pdf )
+    public static function setFontStyle1($pdf)
     {
-        $pdf->SetFont( 'helvetica', 'I', 7 );
-        $pdf->SetTextColor( 170, 170, 170 );
+        $pdf->SetFont('helvetica', 'I', 7);
+        $pdf->SetTextColor(170, 170, 170);
     }
-
-} 
+}

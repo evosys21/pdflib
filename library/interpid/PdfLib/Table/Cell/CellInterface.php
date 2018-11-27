@@ -13,7 +13,6 @@
  * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
- * @version   : 5.4.0
  * @author    : Interpid <office@interpid.eu>
  * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
@@ -28,9 +27,9 @@ interface CellInterface
     /**
      * Class constructor
      *
-     * @param PDF Object: PdfInterface $pdf
+     * @param PdfInterface $pdf
      */
-    public function __construct( $pdf );
+    public function __construct($pdf);
 
 
     /**
@@ -45,7 +44,7 @@ interface CellInterface
      * @param number $nMaxHeight - the Max height available
      * @return array(oNewCell, iSplitHeight)
      */
-    public function split( $nRowHeight, $nMaxHeight );
+    public function split($nRowHeight, $nMaxHeight);
 
 
     /**
@@ -53,7 +52,7 @@ interface CellInterface
      *
      * @param array $aValues
      */
-    public function setDefaultValues( array $aValues = array() );
+    public function setDefaultValues(array $aValues = array());
 
 
     /**
@@ -70,7 +69,7 @@ interface CellInterface
      *
      * @param array $aValues key=>value pair
      */
-    public function setProperties( array $aValues = array() );
+    public function setProperties(array $aValues = array());
 
     public function render();
 
@@ -86,7 +85,7 @@ interface CellInterface
      *
      * @param integer $value
      */
-    public function setColSpan( $value );
+    public function setColSpan($value);
 
     /**
      * Returns the rowspan value
@@ -100,7 +99,7 @@ interface CellInterface
      *
      * @param integer $value
      */
-    public function setRowSpan( $value );
+    public function setRowSpan($value);
 
 
     /**
@@ -111,14 +110,14 @@ interface CellInterface
      * @param int $bottom Bottom padding
      * @param int $left Left padding
      */
-    public function setPadding( $top = 0, $right = 0, $bottom = 0, $left = 0 );
+    public function setPadding($top = 0, $right = 0, $bottom = 0, $left = 0);
 
     /**
      * Sets the padding bottom
      *
      * @param int $paddingBottom
      */
-    public function setPaddingBottom( $paddingBottom );
+    public function setPaddingBottom($paddingBottom);
 
     /**
      * Returns the padding bottom
@@ -132,7 +131,7 @@ interface CellInterface
      *
      * @param int $paddingLeft
      */
-    public function setPaddingLeft( $paddingLeft );
+    public function setPaddingLeft($paddingLeft);
 
     /**
      * Returns the padding left
@@ -146,7 +145,7 @@ interface CellInterface
      *
      * @param int $paddingRight
      */
-    public function setPaddingRight( $paddingRight );
+    public function setPaddingRight($paddingRight);
 
     /**
      * Returns the padding right
@@ -160,7 +159,7 @@ interface CellInterface
      *
      * @param int $paddingTop
      */
-    public function setPaddingTop( $paddingTop );
+    public function setPaddingTop($paddingTop);
 
     /**
      * Returns the padding top
@@ -174,7 +173,7 @@ interface CellInterface
      *
      * @param float $borderSize
      */
-    public function setBorderSize( $borderSize );
+    public function setBorderSize($borderSize);
 
     /**
      * Returns the border Size
@@ -189,7 +188,7 @@ interface CellInterface
      *
      * @param string $borderType
      */
-    public function setBorderType( $borderType );
+    public function setBorderType($borderType);
 
     /**
      * Returns the border Type
@@ -206,7 +205,7 @@ interface CellInterface
      * @param int | null $g
      * @param int | null $b
      */
-    public function setBorderColor( $r, $g = null, $b = null );
+    public function setBorderColor($r, $g = null, $b = null);
 
     /**
      * Returns the Border Color
@@ -220,7 +219,7 @@ interface CellInterface
      *
      * @param string $alignVertical
      */
-    public function setAlignVertical( $alignVertical );
+    public function setAlignVertical($alignVertical);
 
     /**
      * Returns the Align Vertical
@@ -237,7 +236,7 @@ interface CellInterface
      * @param int | null $g
      * @param int | null $b
      */
-    public function setBackgroundColor( $r, $g = null, $b = null );
+    public function setBackgroundColor($r, $g = null, $b = null);
 
     /**
      * Returns the Background Color
@@ -247,44 +246,43 @@ interface CellInterface
     public function getBackgroundColor();
 
 
-    public function setCellWidth( $value );
+    public function setCellWidth($value);
 
 
     public function getCellWidth();
 
 
-    public function setCellHeight( $value );
+    public function setCellHeight($value);
 
 
     public function getCellHeight();
 
 
-    public function setCellDrawHeight( $value );
+    public function setCellDrawHeight($value);
 
     public function getCellDrawHeight();
 
 
-    public function setCellDrawWidth( $value );
+    public function setCellDrawWidth($value);
 
 
     public function getCellDrawWidth();
 
 
-    public function setContentWidth( $value );
+    public function setContentWidth($value);
 
 
     public function getContentWidth();
 
 
-    public function setContentHeight( $value );
+    public function setContentHeight($value);
 
 
     public function getContentHeight();
 
 
-    public function setSkipped( $value );
+    public function setSkipped($value);
 
 
     public function getSkipped();
 }
-

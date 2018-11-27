@@ -17,7 +17,7 @@ class TableTest extends TestCase
     }
 
 
-    protected function runTestModelSimple( $require, $name )
+    protected function runTestModelSimple($require, $name)
     {
         $pdf = $this->getPdfObject1();
 
@@ -25,36 +25,36 @@ class TableTest extends TestCase
 
         $sResultFile = TEST_PATH . '/data/' . $name . '.pdf';
 
-        if ( defined( 'GENERATE_RESULT_FILES' ) ) {
+        if (defined('GENERATE_RESULT_FILES')) {
             $sPdfFile = $sResultFile;
         } else {
-            $sPdfFile = tempnam( sys_get_temp_dir(), 'pdf_test' );
+            $sPdfFile = tempnam(sys_get_temp_dir(), 'pdf_test');
         }
 
         //send the pdf to the browser
-        $pdf->saveToFile( $sPdfFile );
+        $pdf->saveToFile($sPdfFile);
 
-        $this->assertTrue( file_exists( $sPdfFile ) );
+        $this->assertTrue(file_exists($sPdfFile));
 
-        $this->assertFileEquals( $sPdfFile, $sResultFile );
+        $this->assertFileEquals($sPdfFile, $sResultFile);
 
-        if ( !defined( 'GENERATE_RESULT_FILES' ) ) {
-            unlink( $sPdfFile );
+        if (!defined('GENERATE_RESULT_FILES')) {
+            unlink($sPdfFile);
         }
     }
 
 
-    protected function runTestModel1( $require, $name )
+    protected function runTestModel1($require, $name)
     {
         $pdf = $this->getPdfObject1();
 
         $height = $pdf->h - 60;
         $y = $pdf->GetY();
 
-        while ( $y < $height ) {
-            Helper::setFontStyle1( $pdf );
-            $pdf->Cell( 0, 5, "Current Y: $y" );
-            $pdf->SetY( $y );
+        while ($y < $height) {
+            Helper::setFontStyle1($pdf);
+            $pdf->Cell(0, 5, "Current Y: $y");
+            $pdf->SetY($y);
 
             require $require;
 
@@ -64,48 +64,48 @@ class TableTest extends TestCase
 
         $sResultFile = TEST_PATH . '/data/' . $name . '.pdf';
 
-        if ( defined( 'GENERATE_RESULT_FILES' ) ) {
+        if (defined('GENERATE_RESULT_FILES')) {
             $sPdfFile = $sResultFile;
         } else {
-            $sPdfFile = tempnam( sys_get_temp_dir(), 'pdf_test' );
+            $sPdfFile = tempnam(sys_get_temp_dir(), 'pdf_test');
         }
 
         //send the pdf to the browser
-        $pdf->saveToFile( $sPdfFile );
+        $pdf->saveToFile($sPdfFile);
 
-        $this->assertTrue( file_exists( $sPdfFile ) );
+        $this->assertTrue(file_exists($sPdfFile));
 
-        $this->assertFileEquals( $sPdfFile, $sResultFile );
+        $this->assertFileEquals($sPdfFile, $sResultFile);
 
-        if ( !defined( 'GENERATE_RESULT_FILES' ) ) {
-            unlink( $sPdfFile );
+        if (!defined('GENERATE_RESULT_FILES')) {
+            unlink($sPdfFile);
         }
     }
 
-    protected function runTestModel2( $require, $name, $y )
+    protected function runTestModel2($require, $name, $y)
     {
         $pdf = $this->getPdfObject1();
 
-        $pdf->SetY( $y );
+        $pdf->SetY($y);
 
         require $require;
 
         $sResultFile = TEST_PATH . '/data/' . $name . '.pdf';
 
-        if ( defined( 'GENERATE_RESULT_FILES' ) ) {
+        if (defined('GENERATE_RESULT_FILES')) {
             $sPdfFile = $sResultFile;
         } else {
-            $sPdfFile = tempnam( sys_get_temp_dir(), 'pdf_test' );
+            $sPdfFile = tempnam(sys_get_temp_dir(), 'pdf_test');
         }
 
-        $pdf->saveToFile( $sPdfFile );
+        $pdf->saveToFile($sPdfFile);
 
-        $this->assertTrue( file_exists( $sPdfFile ) );
+        $this->assertTrue(file_exists($sPdfFile));
 
-        $this->assertFileEquals( $sPdfFile, $sResultFile );
+        $this->assertFileEquals($sPdfFile, $sResultFile);
 
-        if ( !defined( 'GENERATE_RESULT_FILES' ) ) {
-            unlink( $sPdfFile );
+        if (!defined('GENERATE_RESULT_FILES')) {
+            unlink($sPdfFile);
         }
     }
 
@@ -114,7 +114,7 @@ class TableTest extends TestCase
      */
     public function testTableModel1()
     {
-        $this->runTestModel1( __DIR__ . '/table/draw-table-model1.php', __FUNCTION__ );
+        $this->runTestModel1(__DIR__ . '/table/draw-table-model1.php', __FUNCTION__);
     }
 
 
@@ -123,7 +123,7 @@ class TableTest extends TestCase
      */
     public function testTableModel2()
     {
-        $this->runTestModel1( __DIR__ . '/table/draw-table-model2.php', __FUNCTION__ );
+        $this->runTestModel1(__DIR__ . '/table/draw-table-model2.php', __FUNCTION__);
     }
 
     /**
@@ -131,7 +131,7 @@ class TableTest extends TestCase
      */
     public function testTableModel3()
     {
-        $this->runTestModel1( __DIR__ . '/table/draw-table-model3.php', __FUNCTION__ );
+        $this->runTestModel1(__DIR__ . '/table/draw-table-model3.php', __FUNCTION__);
     }
 
     /**
@@ -139,7 +139,6 @@ class TableTest extends TestCase
      */
     public function testDisablePageBreak()
     {
-        $this->runTestModelSimple( __DIR__ . '/table/disable-page-break.php', __FUNCTION__ );
+        $this->runTestModelSimple(__DIR__ . '/table/disable-page-break.php', __FUNCTION__);
     }
 }
-

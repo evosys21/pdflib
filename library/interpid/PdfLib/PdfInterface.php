@@ -13,7 +13,6 @@
  * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
- * @version   : 5.4.0
  * @author    : Interpid <office@interpid.eu>
  * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
@@ -32,7 +31,7 @@ class PdfInterface
     protected $pdf;
 
 
-    public function __construct( $pdf )
+    public function __construct($pdf)
     {
         $this->pdf = $pdf;
     }
@@ -77,7 +76,7 @@ class PdfInterface
     {
         $n = $this->getPageWidth() - $this->getX();
 
-        if ( $n < 0 ) {
+        if ($n < 0) {
             $n = 0;
         }
 
@@ -91,13 +90,13 @@ class PdfInterface
      * @param string $str The input string
      * @return array List of codes
      */
-    public function stringToArray( $str )
+    public function stringToArray($str)
     {
         // split string into array of equivalent codes
         $aResult = [];
-        $strlen = strlen( $str );
-        for ( $i = 0; $i < $strlen; $i++ ) {
-            $aResult[] = ord( $str[ $i ] );
+        $strlen = strlen($str);
+        for ($i = 0; $i < $strlen; $i++) {
+            $aResult[] = ord($str[ $i ]);
         }
 
         return $aResult;
@@ -148,9 +147,9 @@ class PdfInterface
      * @param string $type Type
      * @param string $link Link
      */
-    public function Image( $file, $x = null, $y = null, $w = 0, $h = 0, $type = '', $link = '' )
+    public function Image($file, $x = null, $y = null, $w = 0, $h = 0, $type = '', $link = '')
     {
-        $this->pdf->Image( $file, $x, $y, $w, $h, $type, $link );
+        $this->pdf->Image($file, $x, $y, $w, $h, $type, $link);
     }
 
 
@@ -162,43 +161,43 @@ class PdfInterface
      * @param int|number $h
      * @return array(width, height)
      */
-    public function getImageParams( $file, $w = 0, $h = 0 )
+    public function getImageParams($file, $w = 0, $h = 0)
     {
         // Put an image on the page
-        if ( !isset( $this->pdf->images[ $file ] ) ) {
-            $pos = strrpos( $file, '.' );
-            $type = substr( $file, $pos + 1 );
-            $type = strtolower( $type );
-            if ( $type == 'jpeg' ) {
+        if (!isset($this->pdf->images[ $file ])) {
+            $pos = strrpos($file, '.');
+            $type = substr($file, $pos + 1);
+            $type = strtolower($type);
+            if ($type == 'jpeg') {
                 $type = 'jpg';
             }
             $mtd = '_parse' . $type;
-            if ( !method_exists( $this->pdf, $mtd ) ) {
-                $this->pdf->Error( 'Unsupported image type: ' . $type );
+            if (!method_exists($this->pdf, $mtd)) {
+                $this->pdf->Error('Unsupported image type: ' . $type);
             }
-            $info = $this->pdf->$mtd( $file );
-            $info[ 'i' ] = count( $this->pdf->images ) + 1;
+            $info = $this->pdf->$mtd($file);
+            $info[ 'i' ] = count($this->pdf->images) + 1;
             $this->pdf->images[ $file ] = $info;
         } else {
             $info = $this->pdf->images[ $file ];
         }
 
         // Automatic width and height calculation if needed
-        if ( $w == 0 && $h == 0 ) {
+        if ($w == 0 && $h == 0) {
             // Put image at 96 dpi
             $w = -96;
             $h = -96;
         }
-        if ( $w < 0 ) {
+        if ($w < 0) {
             $w = -$info[ 'w' ] * 72 / $w / $this->pdf->k;
         }
-        if ( $h < 0 ) {
+        if ($h < 0) {
             $h = -$info[ 'h' ] * 72 / $h / $this->pdf->k;
         }
-        if ( $w == 0 ) {
+        if ($w == 0) {
             $w = $h * $info[ 'w' ] / $info[ 'h' ];
         }
-        if ( $h == 0 ) {
+        if ($h == 0) {
             $h = $w * $info[ 'h' ] / $info[ 'w' ];
         }
 
@@ -219,9 +218,8 @@ class PdfInterface
      * @param bool $fill
      * @param string $link
      */
-    public function Cell( $w, $h = 0, $txt = '', $border = 0, $ln = 0, $align = '', $fill = false, $link = '' )
+    public function Cell($w, $h = 0, $txt = '', $border = 0, $ln = 0, $align = '', $fill = false, $link = '')
     {
-        $this->pdf->Cell( $w, $h, $txt, $border, $ln, $align, $fill, $link );
+        $this->pdf->Cell($w, $h, $txt, $border, $ln, $align, $fill, $link);
     }
 }
-

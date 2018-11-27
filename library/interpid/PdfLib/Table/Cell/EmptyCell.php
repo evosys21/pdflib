@@ -12,7 +12,6 @@
  * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
- * @version   : 5.4.0
  * @author    : Interpid <office@interpid.eu>
  * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
@@ -26,8 +25,6 @@ namespace Interpid\PdfLib\Table\Cell;
  */
 class EmptyCell extends CellAbstract implements CellInterface
 {
-
-
     public function isSplittable()
     {
         return false;
@@ -39,14 +36,12 @@ class EmptyCell extends CellAbstract implements CellInterface
         $this->renderCellLayout();
     }
 
-    public function copyProperties( CellAbstract $oSource )
+    public function copyProperties(CellAbstract $oSource)
     {
-        $aProps = array_keys( $this->aDefaultValues );
+        $aProps = array_keys($this->aDefaultValues);
 
-        foreach ( $aProps as $sProperty )
-        {
-            if ( $oSource->isPropertySet( $sProperty ) )
-            {
+        foreach ($aProps as $sProperty) {
+            if ($oSource->isPropertySet($sProperty)) {
                 $this->$sProperty = $oSource->$sProperty;
             }
         }
@@ -55,4 +50,3 @@ class EmptyCell extends CellAbstract implements CellInterface
         $this->setPadding();
     }
 }
-

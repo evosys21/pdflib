@@ -14,7 +14,6 @@
  * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
- * @version   : 5.4.0
  * @author    : Interpid <office@interpid.eu>
  * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
@@ -46,39 +45,37 @@ class Pdf extends \FPDF
     public $AutoPageBreak;
     public $CurOrientation;
 
-    public function _out( $s )
+    public function _out($s)
     {
-        parent::_out( $s );
+        parent::_out($s);
     }
 
-    public function _parsejpg( $file )
+    public function _parsejpg($file)
     {
-        return parent::_parsejpg( $file );
+        return parent::_parsejpg($file);
     }
 
-    public function _parsegif( $file )
+    public function _parsegif($file)
     {
-        return parent::_parsegif( $file );
+        return parent::_parsegif($file);
     }
 
-    public function _parsepng( $file )
+    public function _parsepng($file)
     {
-        return parent::_parsepng( $file );
+        return parent::_parsepng($file);
     }
 
-    public function Cell( $w, $h = 0, $txt = '', $border = 0, $ln = 0, $align = '', $fill = false, $link = '' )
+    public function Cell($w, $h = 0, $txt = '', $border = 0, $ln = 0, $align = '', $fill = false, $link = '')
     {
         /**
          * AB 10.09.2016 - for "some" reason(haven't investigated) the TXT breaks the cell
          */
-        $txt = strval( $txt );
-        parent::Cell( $w, $h, $txt, $border, $ln, $align, $fill, $link );
+        $txt = strval($txt);
+        parent::Cell($w, $h, $txt, $border, $ln, $align, $fill, $link);
     }
 
-    public function saveToFile( $fileName )
+    public function saveToFile($fileName)
     {
-        $this->Output( "F", $fileName );
+        $this->Output("F", $fileName);
     }
-
 }
-

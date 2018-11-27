@@ -13,7 +13,6 @@
  * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
- * @version   : 5.4.0
  * @author    : Interpid <office@interpid.eu>
  * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
@@ -52,7 +51,7 @@ class Tags
      *
      * @param int|number $p_tagmax number - the number of characters allowed in a tag
      */
-    public function __construct( $p_tagmax = 10 )
+    public function __construct($p_tagmax = 10)
     {
         $this->tags = [];
         $this->hRef = [];
@@ -67,35 +66,35 @@ class Tags
      * @param $p_array array - tag arrays
      * @return boolean
      */
-    protected function OpenTag( $p_tag, $p_array )
+    protected function OpenTag($p_tag, $p_array)
     {
         $tags = &$this->tags;
         $hRef = &$this->hRef;
         $maxElem = &$this->tagMaxElem;
 
-        if ( !preg_match( "/^<([a-zA-Z0-9]{1,$maxElem}) *(.*)>$/i", $p_tag, $reg ) ) {
+        if (!preg_match("/^<([a-zA-Z0-9]{1,$maxElem}) *(.*)>$/i", $p_tag, $reg)) {
             return false;
         }
 
         $p_tag = $reg[ 1 ];
 
         $sHREF = [];
-        if ( isset( $reg[ 2 ] ) ) {
-            preg_match_all( "|([^ ]*)=[\"'](.*)[\"']|U", $reg[ 2 ], $out, PREG_PATTERN_ORDER );
-            for ( $i = 0; $i < count( $out[ 0 ] ); $i++ ) {
-                $out[ 2 ][ $i ] = preg_replace( "/(\"|')/i", "", $out[ 2 ][ $i ] );
-                array_push( $sHREF, [ $out[ 1 ][ $i ], $out[ 2 ][ $i ] ] );
+        if (isset($reg[ 2 ])) {
+            preg_match_all("|([^ ]*)=[\"'](.*)[\"']|U", $reg[ 2 ], $out, PREG_PATTERN_ORDER);
+            for ($i = 0; $i < count($out[ 0 ]); $i++) {
+                $out[ 2 ][ $i ] = preg_replace("/(\"|')/i", "", $out[ 2 ][ $i ]);
+                array_push($sHREF, [$out[ 1 ][ $i ], $out[ 2 ][ $i ]]);
             }
         }
 
-        if ( in_array( $p_tag, $tags ) ) {
+        if (in_array($p_tag, $tags)) {
             return false;
         } //tag already opened
 
 
-        if ( in_array( "</$p_tag>", $p_array ) ) {
-            array_push( $tags, $p_tag );
-            array_push( $hRef, $sHREF );
+        if (in_array("</$p_tag>", $p_array)) {
+            array_push($tags, $p_tag);
+            array_push($hRef, $sHREF);
 
             return true;
         }
@@ -116,21 +115,21 @@ class Tags
      * @param $p_tag string - tag name
      * @return boolean
      */
-    protected function CloseTag( $p_tag )
+    protected function CloseTag($p_tag)
     {
         $tags = &$this->tags;
         $hRef = &$this->hRef;
         $maxElem = &$this->tagMaxElem;
 
-        if ( !preg_match( "/^<\/([a-zA-Z0-9]{1,$maxElem})>$/i", $p_tag, $reg ) ) {
+        if (!preg_match("/^<\/([a-zA-Z0-9]{1,$maxElem})>$/i", $p_tag, $reg)) {
             return false;
         }
 
         $p_tag = $reg[ 1 ];
 
-        if ( in_array( "$p_tag", $tags ) ) {
-            array_pop( $tags );
-            array_pop( $hRef );
+        if (in_array("$p_tag", $tags)) {
+            array_pop($tags);
+            array_pop($hRef);
 
             return true;
         }
@@ -145,16 +144,16 @@ class Tags
      * @param $pResult
      * @return string
      */
-    protected function expand_parameters( $pResult )
+    protected function expand_parameters($pResult)
     {
         $aTmp = $pResult[ 'params' ];
-        if ( $aTmp != '' ) {
-            for ( $i = 0; $i < count( $aTmp ); $i++ ) {
+        if ($aTmp != '') {
+            for ($i = 0; $i < count($aTmp); $i++) {
                 $pResult[ $aTmp[ $i ][ 0 ] ] = $aTmp[ $i ][ 1 ];
             }
         }
 
-        unset( $pResult[ 'params' ] );
+        unset($pResult[ 'params' ]);
 
         return $pResult;
     }
@@ -166,9 +165,9 @@ class Tags
      * @param $result array - the array that has to be optimized
      * @return array - optimized result
      */
-    protected function optimize_tags( $result )
+    protected function optimize_tags($result)
     {
-        if ( count( $result ) == 0 ) {
+        if (count($result) == 0) {
             return $result;
         }
 
@@ -176,21 +175,21 @@ class Tags
         $current = $result[ 0 ];
         $i = 1;
 
-        while ( $i < count( $result ) ) {
+        while ($i < count($result)) {
             //if they have the same tag then we concatenate them
-            if ( ( $current[ 'tag' ] == $result[ $i ][ 'tag' ] ) && ( $current[ 'params' ] == $result[ $i ][ 'params' ] ) ) {
+            if (($current[ 'tag' ] == $result[ $i ][ 'tag' ]) && ($current[ 'params' ] == $result[ $i ][ 'params' ])) {
                 $current[ 'text' ] .= $result[ $i ][ 'text' ];
             } else {
-                $current = $this->expand_parameters( $current );
-                array_push( $res_result, $current );
+                $current = $this->expand_parameters($current);
+                array_push($res_result, $current);
                 $current = $result[ $i ];
             }
 
             $i++;
         }
 
-        $current = $this->expand_parameters( $current );
-        array_push( $res_result, $current );
+        $current = $this->expand_parameters($current);
+        array_push($res_result, $current);
 
         return $res_result;
     }
@@ -202,37 +201,36 @@ class Tags
      * @param $p_str string - the Input String
      * @return array - the result array
      */
-    public function get_tags( $p_str )
+    public function get_tags($p_str)
     {
         $tags = &$this->tags;
         $hRef = &$this->hRef;
         $tags = [];
         $result = [];
 
-        $reg = preg_split( '/(<.*>)/U', $p_str, -1, PREG_SPLIT_DELIM_CAPTURE );
+        $reg = preg_split('/(<.*>)/U', $p_str, -1, PREG_SPLIT_DELIM_CAPTURE);
 
         $sTAG = "";
         $sHREF = "";
 
-        foreach( $reg as $key => $val ){
-            if ( $val == "" ) {
+        foreach ($reg as $key => $val) {
+            if ($val == "") {
                 continue;
             }
 
-            if ( $this->OpenTag( $val, $reg ) ) {
-                $sTAG = ( ( $temp = end( $tags ) ) != null ) ? $temp : "";
-                $sHREF = ( ( $temp = end( $hRef ) ) != null ) ? $temp : "";
-            } elseif ( $this->CloseTag( $val ) ) {
-                $sTAG = ( ( $temp = end( $tags ) ) != null ) ? $temp : "";
-                $sHREF = ( ( $temp = end( $hRef ) ) != null ) ? $temp : "";
+            if ($this->OpenTag($val, $reg)) {
+                $sTAG = (($temp = end($tags)) != null) ? $temp : "";
+                $sHREF = (($temp = end($hRef)) != null) ? $temp : "";
+            } elseif ($this->CloseTag($val)) {
+                $sTAG = (($temp = end($tags)) != null) ? $temp : "";
+                $sHREF = (($temp = end($hRef)) != null) ? $temp : "";
             } else {
-                if ( $val != "" ) {
-                    array_push( $result, [ 'text' => $val, 'tag' => $sTAG, 'params' => $sHREF ] );
+                if ($val != "") {
+                    array_push($result, ['text' => $val, 'tag' => $sTAG, 'params' => $sHREF]);
                 }
             }
         }
 
-        return $this->optimize_tags( $result );
+        return $this->optimize_tags($result);
     }
 }
-

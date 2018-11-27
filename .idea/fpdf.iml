@@ -5,12 +5,10 @@
       <excludeFolder url="file://$MODULE_DIR$/build" />
       <excludeFolder url="file://$MODULE_DIR$/dev" />
       <excludeFolder url="file://$MODULE_DIR$/font" />
+      <excludeFolder url="file://$MODULE_DIR$/library/fpdf" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/fpdf/font" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/fpdf/makefont" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/interpid/PdfExamples" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/interpid/PdfLib" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/myclabs/deep-copy" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phar-io/manifest" />
