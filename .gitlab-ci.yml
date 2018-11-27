@@ -35,7 +35,7 @@ variables:
 test1:
   script:
   - vendor/bin/phpunit --configuration phpunit-ci.xml
-  - vendor/bin/phpmetrics --report-html=./build/phpmetrics ./src
+  - vendor/bin/phpmetrics --report-html=./build/phpmetrics ./library/interpid
   artifacts:
     paths:
     - build
