@@ -44,7 +44,7 @@ $table->setStyle("bi", $pdf->getDefaultFontName(), "BI", 12, "0,0,120");
 //default text color
 $pdf->SetTextColor(118, 0, 3);
 
-//create an advanced multicell    
+//create an advanced multicell
 $multicell = Multicell::getInstance($pdf);
 $multicell->setStyle("s1", $pdf->getDefaultFontName(), "", 8, "118,0,3");
 $multicell->setStyle("s2", $pdf->getDefaultFontName(), "", 6, "0,49,159");
