@@ -9,9 +9,9 @@
 
 require_once(__DIR__ . "/Helper.php");
 
-use Interpid\PdfExamples\myPdf;
+use Interpid\PdfExamples\MyPdf;
 
-class testPdf extends myPdf
+class testPdf extends MyPdf
 {
     /**
      * Custom Header

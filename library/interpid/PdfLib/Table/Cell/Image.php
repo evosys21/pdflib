@@ -138,7 +138,10 @@ class Image extends CellAbstract implements CellInterface
             //justified - image is fully streched
 
             $x += $this->getPaddingLeft();
-            $this->setContentWidth($this->getCellDrawWidth() - 2 * $this->getBorderSize() - $this->getPaddingLeft() - $this->getPaddingRight());
+            $this->setContentWidth(
+                $this->getCellDrawWidth() - 2 * $this->getBorderSize() -
+                $this->getPaddingLeft() - $this->getPaddingRight()
+            );
         } elseif (strpos($this->alignment, 'C') !== false) {
             //center
             $x += ($this->getCellDrawWidth() - $this->getContentWidth()) / 2;

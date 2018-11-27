@@ -4,7 +4,6 @@
  * Custom PDF class extension for Header and Footer Definitions
  *
  * @author office@interpid.eu
- *
  */
 
 namespace Interpid\PdfExamples;
@@ -12,7 +11,15 @@ namespace Interpid\PdfExamples;
 use Interpid\PdfLib\Pdf;
 use Interpid\PdfLib\Multicell;
 
-class myPdf extends Pdf
+/**
+ * Class MyPdf
+ *
+ * @package Interpid\PdfExamples
+ * @SuppressWarnings(PHPMD.CamelCaseMethodName)
+ * @SuppressWarnings(PHPMD.Superglobals)
+ * phpcs:disable PSR1.Methods.CamelCapsMethodName.NotCamelCaps
+ */
+class MyPdf extends Pdf
 {
     protected $headerSource = "header.txt";
 
@@ -94,6 +101,7 @@ class myPdf extends Pdf
 
     /**
      * Disable the Producer and CreationDate. It breaks the functional unit-testing(date always changes)
+     * phpcs:disable PSR2.Methods.MethodDeclaration.Underscore
      */
     public function _putinfo()
     {

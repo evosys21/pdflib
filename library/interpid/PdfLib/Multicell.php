@@ -952,7 +952,7 @@ class Multicell
      * @param $pStr string - String to be parsed
      * @return array $aStrLines - contains parsed text information.
      */
-    public function stringToLines($width = 0, $pStr)
+    public function stringToLines($width, $pStr)
     {
         //save the current style settings, this will be the default in case of no style is specified
         $this->saveCurrentStyle();

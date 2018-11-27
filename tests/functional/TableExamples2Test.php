@@ -2,7 +2,7 @@
 
 require_once(TEST_PATH . '/helper/testPdf.php');
 
-use Interpid\PdfExamples\pdfFactory;
+use Interpid\PdfExamples\PdfFactory;
 use PHPUnit\Framework\TestCase;
 
 class TableExamples2Test extends TestCase
@@ -17,7 +17,7 @@ class TableExamples2Test extends TestCase
         //create the pdf object and do some initialization
         $pdf = new testPdf();
 
-        $factory = new pdfFactory();
+        $factory = new PdfFactory();
         $factory->initPdf($pdf);
 
         //disable compression for testing

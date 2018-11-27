@@ -7,12 +7,12 @@
 require_once __DIR__ . "/../autoload.php";
 
 use Interpid\PdfLib\Table;
-use Interpid\PdfExamples\pdfFactory;
+use Interpid\PdfExamples\PdfFactory;
 
-$factory = new pdfFactory();
+$factory = new PdfFactory();
 
 //get the PDF object
-$pdf = pdfFactory::newPdf( 'table' );
+$pdf = PdfFactory::newPdf( 'table' );
 
 //define some background colors
 $bgColor1 = [ 234, 255, 218 ];

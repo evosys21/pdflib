@@ -1,4 +1,7 @@
 <?php
+
+namespace Interpid\PdfLib;
+
 /**
  * FPDF extended class.
  * This class extends the FPDF class. In all subclasses we refer to this Pdf class and not FPDF.
@@ -15,12 +18,11 @@
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
  * @author    : Interpid <office@interpid.eu>
+ * @package   : Interpid\PdfLib
  * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
+ * @SuppressWarnings(PHPMD)
  */
-
-namespace Interpid\PdfLib;
-
 class Pdf extends \FPDF
 {
     public $images;
@@ -45,6 +47,7 @@ class Pdf extends \FPDF
     public $AutoPageBreak;
     public $CurOrientation;
 
+    // phpcs:disable
     public function _out($s)
     {
         parent::_out($s);
@@ -64,7 +67,9 @@ class Pdf extends \FPDF
     {
         return parent::_parsepng($file);
     }
+    // phpcs:enable
 
+    //phpcs:disable PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function Cell($w, $h = 0, $txt = '', $border = 0, $ln = 0, $align = '', $fill = false, $link = '')
     {
         /**
@@ -73,6 +78,7 @@ class Pdf extends \FPDF
         $txt = strval($txt);
         parent::Cell($w, $h, $txt, $border, $ln, $align, $fill, $link);
     }
+    // phpcs:enable
 
     public function saveToFile($fileName)
     {

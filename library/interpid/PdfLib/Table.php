@@ -168,15 +168,7 @@ class Table
     protected $configuration = [];
 
     /**
-     * Contains the Header Data - header characteristics and texts Characteristics constants for Header Type: EVERY CELL FROM THE TABLE IS A MULTICELL TEXT_COLOR - text color = array(r,g,b); TEXT_SIZE
-     * - text size TEXT_FONT - text font - font type = "Arial", "Times" TEXT_ALIGN - text align - "RLCJ" VERTICAL_ALIGN - text vertical alignment - "TMB" TEXT_TYPE - text type (Bold Italic etc)
-     * LN_SPACE - space between lines BACKGROUND_COLOR - background color = array(r,g,b); BORDER_COLOR - border color =
-     * array(r,g,b); BORDER_SIZE - border size -- BORDER_TYPE - border size -- up down, with border without!!! etc BRD_TYPE_NEW_PAGE - border type on new page - this is user only if specified(<>'')
-     * TEXT - header text -- THIS ALSO BELONGS ONLY TO THE HEADER!!!!
-     * all these setting conform to the settings from the multicell functions!!!!
-     *
      * @var array
-     *
      */
     protected $tableHeaderType = [];
 
@@ -204,8 +196,9 @@ class Table
     protected $headerParsed = false;
 
     /**
-     * Page Split Variable - if the table does not have enough space on the current page then the cells will be splitted.
-     * This only if $tableSplit == TRUE If $tableSplit == FALSE then the current cell will be drawed on the next page
+     * Page Split Variable - if the table does not have enough space on the current page
+     * then the cells will be splitted if $tableSplit== TRUE
+     * If $tableSplit == FALSE then the current cell will be drawed on the next page
      *
      * @var boolean
      */
@@ -299,7 +292,7 @@ class Table
      *
      * @var object
      */
-    private static $_singleton = []; //implements the Singleton Pattern
+    private static $singleton = []; //implements the Singleton Pattern
 
 
     /**
@@ -349,7 +342,7 @@ class Table
      */
     public static function getInstance($pdf)
     {
-        $oInstance = &self::$_singleton[ spl_object_hash($pdf) ];
+        $oInstance = &self::$singleton[ spl_object_hash($pdf) ];
 
         if (!isset($oInstance)) {
             $oInstance = new self($pdf);
@@ -479,7 +472,7 @@ class Table
      *
      * @return integer - the Page Width
      */
-    protected function PageWidth()
+    protected function pageWidth()
     {
         return (int)$this->pdf->w - $this->pdf->rMargin - $this->pdf->lMargin;
     }
@@ -490,7 +483,7 @@ class Table
      *
      * @return number - the Page Height
      */
-    protected function PageHeight()
+    protected function pageHeight()
     {
         return (int)$this->pdf->h - $this->pdf->tMargin - $this->pdf->bMargin;
     }
@@ -585,10 +578,10 @@ class Table
 
         //create the header cache data
         foreach ($this->tableHeaderType as $val) {
-            $this->_addDataToCache($val, 'header');
+            $this->addDataToCache($val, 'header');
         }
 
-        $this->_cacheParseRowspan(0, 'header');
+        $this->cacheParseRowspan(0, 'header');
         $this->headerHeight();
     }
 
@@ -606,8 +599,8 @@ class Table
             $this->headerHeight += $this->headerCache[ $i ][ 'HEIGHT' ];
         }
 
-        if ($this->headerHeight > $this->PageHeight()) {
-            die("Header Height({$this->headerHeight}) bigger than Page Height({$this->PageHeight()})");
+        if ($this->headerHeight > $this->pageHeight()) {
+            die("Header Height({$this->headerHeight}) bigger than Page Height({$this->pageHeight()})");
         }
     }
 
@@ -622,10 +615,14 @@ class Table
         //set the table align
         switch ($tb_align) {
             case 'C':
-                $this->tableStartX = $this->pdf->lMargin + $this->getTableConfig('TABLE_LEFT_MARGIN') + ($this->PageWidth() - $this->getWidth()) / 2;
+                $this->tableStartX = $this->pdf->lMargin +
+                    $this->getTableConfig('TABLE_LEFT_MARGIN') +
+                    ($this->pageWidth() - $this->getWidth()) / 2;
                 break;
             case 'R':
-                $this->tableStartX = $this->pdf->lMargin + $this->getTableConfig('TABLE_LEFT_MARGIN') + ($this->PageWidth() - $this->getWidth());
+                $this->tableStartX = $this->pdf->lMargin +
+                    $this->getTableConfig('TABLE_LEFT_MARGIN') +
+                    ($this->pageWidth() - $this->getWidth());
                 break;
             default:
                 $this->tableStartX = $this->pdf->lMargin + $this->getTableConfig('TABLE_LEFT_MARGIN');
@@ -673,7 +670,7 @@ class Table
      * End Page Special Border Draw.
      * This is called in the case of a Page Split
      */
-    protected function _tbEndPageBorder()
+    protected function tbEndPageBorder()
     {
         if ('' != $this->getTableConfig('BRD_TYPE_END_PAGE')) {
             if (strpos($this->getTableConfig('BRD_TYPE_END_PAGE'), 'B') >= 0) {
@@ -717,7 +714,7 @@ class Table
     /**
      * Aligns the table to the Start X point
      */
-    protected function _tbAlign()
+    protected function tbAlign()
     {
         $this->pdf->SetX($this->tableStartX);
     }
@@ -752,7 +749,7 @@ class Table
             $this->drawHeader();
         }
 
-        $this->_addDataToCache($rowData);
+        $this->addDataToCache($rowData);
     }
 
 
@@ -851,7 +848,7 @@ class Table
      * @param $data array - array containing the data to be added
      * @param $sDataType string - data type. Can be 'data' or 'header'. Depending on this data the $data is put in the selected cache
      */
-    protected function _addDataToCache($data, $sDataType = 'data')
+    protected function addDataToCache($data, $sDataType = 'data')
     {
         if (!is_array($data)) {
             //this is fatal error
@@ -996,12 +993,13 @@ class Table
 
     /**
      * Parses the Data Cache and calculates the maximum Height of each row.
-     * Normally the cell Height of a row is calculated when the data's are added, but when that row is involved in a Rowspan then it's Height can change!
+     * Normally the cell Height of a row is calculated when the data's are added,
+     * but when that row is involved in a Rowspan then it's Height can change!
      *
      * @param $iStartIndex integer - the index from which to parse
      * @param $sCacheType string - what type has the cache - possible values: 'header' && 'data'
      */
-    protected function _cacheParseRowspan($iStartIndex = 0, $sCacheType = 'data')
+    protected function cacheParseRowspan($iStartIndex = 0, $sCacheType = 'data')
     {
         if ($sCacheType == 'data') {
             $aRefCache = &$this->dataCache;
@@ -1105,7 +1103,7 @@ class Table
      * Splits the Data Cache into Pages.
      * Parses the Data Cache and when it is needed then a "new page" command is inserted into the Data Cache.
      */
-    protected function _cachePaginate()
+    protected function cachePaginate()
     {
         $iPageHeight = $this->PageHeight();
 
@@ -1315,7 +1313,6 @@ class Table
                                      * HEIGHT_LEFT_RW
                                      */
 
-                                    //list ($aTData[$rws[1]], $fHeightSplit) = $this->splitCell($rData, $rData->HEIGHT_MAX, $rData->HEIGHT_LEFT_RW);
                                     if ($rData->isSplittable()) {
                                         list($aTData[ $rws[ 1 ] ], $fHeightSplit) = $rData->split(
                                             $rData->getCellDrawHeight(),
@@ -1348,7 +1345,7 @@ class Table
                             $iItems = $this->insertNewPage($i, $v_new);
 
                             if ($bNeedParseCache) {
-                                $this->_cacheParseRowspan($i + 1);
+                                $this->cacheParseRowspan($i + 1);
                             }
                         } else {
                             /**
@@ -1405,7 +1402,7 @@ class Table
                             }
 
                             if ($bNeedParseCache) {
-                                $this->_cacheParseRowspan($i);
+                                $this->cacheParseRowspan($i);
                             }
 
                             //Insert the new page, and get the new number of the lines
@@ -1507,7 +1504,7 @@ class Table
      * Sends all the Data Cache to the PDF Document.
      * This is the Function that Outputs the table data to the pdf document
      */
-    protected function _cachePrepOutputData()
+    protected function cachePrepOutputData()
     {
         $this->dataOnCurrentPage = false;
 
@@ -1526,7 +1523,7 @@ class Table
             $val = &$dataCache[ $k ];
 
             //each array contains one line
-            $this->_tbAlign();
+            $this->tbAlign();
 
             if ($val[ 'DATATYPE' ] == 'new_page') {
                 //add a new page
@@ -1560,9 +1557,6 @@ class Table
                 $this->pdf->SetXY($x + $this->getColumnWidth($i), $y);
 
                 //if we have colspan, just ignore the next cells
-                if ($cell->getColSpan() > 1) {
-                    //$i = $i + (int)$cell->getColspan() - 1;
-                }
             }
 
             $this->dataOnCurrentPage = true;
@@ -1579,15 +1573,15 @@ class Table
      * Prepares the cache for Output.
      * Parses the cache for Rowspans, Paginates the cache and then send the data to the pdf document
      */
-    protected function _cachePrepOutput()
+    protected function cachePrepOutput()
     {
         if ($this->rowSpanInCache) {
-            $this->_cacheParseRowspan();
+            $this->cacheParseRowspan();
         }
 
-        $this->_cachePaginate();
+        $this->cachePaginate();
 
-        $this->_cachePrepOutputData();
+        $this->cachePrepOutputData();
     }
 
 
@@ -1597,7 +1591,7 @@ class Table
     protected function addPage()
     {
         $this->drawBorder(); //draw the table border
-        $this->_tbEndPageBorder(); //if there is a special handling for end page??? this is specific for me
+        $this->tbEndPageBorder(); //if there is a special handling for end page??? this is specific for me
 
         $this->pdf->AddPage($this->pdf->CurOrientation); //add a new page
 
@@ -1614,7 +1608,7 @@ class Table
      */
     public function ouputData()
     {
-        $this->_cachePrepOutput();
+        $this->cachePrepOutput();
     }
 
 
@@ -1668,12 +1662,7 @@ class Table
 
     /**
      * Sets the Table Config
-     * $aConfig = array( "BORDER_COLOR" => array (120,120,120), //border color "BORDER_SIZE" => 5), //border line width "TABLE_ALIGN" => "L"), //the align of the table, possible values = L, R, C
-     * equivalent to Left, Right, Center 'TABLE_LEFT_MARGIN' => 0// left margin...
-     * reference from this->lmargin values );
-     *
      * @param $aConfig array - array containing the Table Configuration
-     *
      */
     public function setTableConfig($aConfig)
     {

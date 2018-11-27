@@ -3,7 +3,7 @@
 require_once(__DIR__ . "/bootstrap.php");
 
 use Interpid\PdfLib\Pdf;
-use Interpid\PdfExamples\pdfFactory;
+use Interpid\PdfExamples\PdfFactory;
 use PHPUnit\Framework\TestCase;
 
 class BaseTestCase extends TestCase
@@ -38,7 +38,7 @@ class BaseTestCase extends TestCase
         //create the pdf object and do some initialization
         $pdf = new Pdf();
 
-        $factory = new pdfFactory();
+        $factory = new PdfFactory();
         $factory->initPdf($pdf);
 
         //disable compression for testing

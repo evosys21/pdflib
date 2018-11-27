@@ -1,7 +1,7 @@
 <?php
 
-use Interpid\PdfExamples\myPdf;
-use Interpid\PdfExamples\pdfFactory;
+use Interpid\PdfExamples\MyPdf;
+use Interpid\PdfExamples\PdfFactory;
 use PHPUnit\Framework\TestCase;
 
 class BaseExamplesTestCase extends TestCase
@@ -9,14 +9,14 @@ class BaseExamplesTestCase extends TestCase
     /**
      * Returns the pdf object
      *
-     * @return myPdf
+     * @return MyPdf
      */
     protected function getPdfObject()
     {
         //create the pdf object and do some initialization
-        $pdf = new myPdf();
+        $pdf = new MyPdf();
 
-        $factory = pdfFactory::initPdf($pdf);
+        $factory = PdfFactory::initPdf($pdf);
 
         //disable compression for testing
         $pdf->SetCompression(false);

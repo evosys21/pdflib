@@ -27,17 +27,17 @@ if (!defined('PDF_RESOURCES_IMAGES')) {
 
 use Interpid\PdfLib\Pdf;
 
-class pdfFactory
+class PdfFactory
 {
     /**
      * Creates a new Fpdf Object and Initializes it
      *
      * @param $type
-     * @return myPdf
+     * @return MyPdf
      */
     public static function newPdf($type)
     {
-        $pdf = new myPdf();
+        $pdf = new MyPdf();
 
         switch ($type) {
             case 'multicell':

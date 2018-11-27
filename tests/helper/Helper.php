@@ -7,7 +7,7 @@
  * Time: 10:21 PM
  */
 
-use Interpid\PdfExamples\pdfFactory;
+use Interpid\PdfExamples\PdfFactory;
 use Interpid\PdfLib\Pdf;
 
 class Helper
@@ -28,7 +28,7 @@ class Helper
             180
         ));
 
-        pdfFactory::initPdf($pdf);
+        PdfFactory::initPdf($pdf);
 
         //disable compression for testing
         $pdf->SetCompression(false);

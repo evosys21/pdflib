@@ -13,7 +13,7 @@
  * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  *
  * @author    : Interpid <office@interpid.eu>
- * @copyright : Interpid, http://www.interpid.eu
+ * @copyright : 2018 Interpid http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
  */
 

@@ -1,5 +1,7 @@
 <?php
 
+namespace Interpid\PdfLib;
+
 /**
  * Pdf Class Interface
  *
@@ -16,10 +18,9 @@
  * @author    : Interpid <office@interpid.eu>
  * @copyright : Interpid, http://www.interpid.eu
  * @license   : http://www.interpid.eu/pdf-addons/eula
+ * @SuppressWarnings(PHPMD.CamelCaseMethodName)
+ * phpcs:disable PSR1.Methods.CamelCapsMethodName.NotCamelCaps
  */
-
-namespace Interpid\PdfLib;
-
 class PdfInterface
 {
 

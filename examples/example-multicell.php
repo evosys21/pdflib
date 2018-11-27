@@ -7,14 +7,14 @@
 require_once __DIR__ . "/../autoload.php";
 
 use Interpid\PdfLib\Multicell;
-use Interpid\PdfExamples\pdfFactory;
+use Interpid\PdfExamples\PdfFactory;
 use Interpid\PdfLib\Pdf;
 
 // Pdf extends FPDF
 $pdf = new Pdf();
 
 // Initialize the pdf object. Set the margins, adds a page, set default fonts etc...
-pdfFactory::initPdf( $pdf );
+PdfFactory::initPdf( $pdf );
 
 // Create the Advanced Multicell Object and inject the PDF object
 $multicell = new Multicell( $pdf );

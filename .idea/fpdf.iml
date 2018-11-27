@@ -5,7 +5,6 @@
       <excludeFolder url="file://$MODULE_DIR$/build" />
       <excludeFolder url="file://$MODULE_DIR$/dev" />
       <excludeFolder url="file://$MODULE_DIR$/font" />
-      <excludeFolder url="file://$MODULE_DIR$/library/fpdf" />
       <excludeFolder url="file://$MODULE_DIR$/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />

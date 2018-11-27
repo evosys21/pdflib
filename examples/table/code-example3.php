@@ -3,7 +3,7 @@
 require( 'settings.php' );
 
 if ( !isset( $pdf ) ) {
-    $pdf = new \Interpid\PdfExamples\myPdf();
+    $pdf = new \Interpid\PdfExamples\MyPdf();
 }
 
 use Interpid\PdfLib\Table;
