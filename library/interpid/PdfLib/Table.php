@@ -288,6 +288,14 @@ class Table
     protected $pdf = null;
 
     /**
+     * PDF Interface Object
+     *
+     * @var PdfInterface
+     *
+     */
+    protected $pdfi;
+
+    /**
      * Contains the Singleton Object
      *
      * @var object
@@ -326,6 +334,8 @@ class Table
     {
         //pdf object
         $this->pdf = $pdf;
+        $this->pdfi = new PdfInterface( $pdf );
+
         //call the multicell instance
         $this->multicell = new Multicell($pdf);
 
