@@ -1146,8 +1146,7 @@ class Table
                     $iLeftHeight = $iPageHeight;
                     $this->dataOnCurrentPage = false; //new page
                     $this->insertNewPage($i, null, true, true);
-                    continue;
-                    break;
+                    break 2;
             }
 
             $bIsHeader = $val[ 'DATATYPE' ] == 'header';
