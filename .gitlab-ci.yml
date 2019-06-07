@@ -1,42 +1,24 @@
-# Select image from https://hub.docker.com/_/php/
-image: klodoma/php71
-
 # Select what we should cache
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
-  - vendor/
-
-before_script:
-# Install git, the php image doesn't have installed
-# - apt-get update -yqq
-# - apt-get install git -yqq
-
-# Install mysql driver
-# - docker-php-ext-install pdo_mysql
-
-# Install composer
-# - curl -sS https://getcomposer.org/installer | php
-
-# Install all project dependencies
-# - php composer.phar install
-
-- composer install
-
-services:
-#- mysql
-
-variables:
-  # Configure mysql service (https://hub.docker.com/_/mysql/)
-#  MYSQL_DATABASE: hello_world_test
-#  MYSQL_ROOT_PASSWORD: mysql
+    - vendor/
 
 # Run phpunit tests
-test1:
+php72-tests:
+  image: klodoma/php72
   script:
-  - vendor/bin/phpunit --configuration phpunit-ci.xml
-  - vendor/bin/phpmetrics --report-html=./build/phpmetrics ./library/interpid
+    - composer install
+    - vendor/bin/phpunit --configuration phpunit-ci.xml
+    - vendor/bin/phpmetrics --report-html=./build/phpmetrics ./library/interpid
   artifacts:
     paths:
-    - build
+      - build
     expire_in: 1 year
+
+# Run phpunit tests
+php73-tests:
+  image: klodoma/php73
+  script:
+    - composer install
+    - vendor/bin/phpunit --configuration phpunit-ci.xml
