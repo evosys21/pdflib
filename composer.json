@@ -10,7 +10,6 @@
     ],
     "require": {
         "ext-mbstring": "*",
-        "ext-json": "*",
         "setasign/fpdf": "^1.8"
     },
     "require-dev": {

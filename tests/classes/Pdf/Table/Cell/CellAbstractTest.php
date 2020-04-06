@@ -1,15 +1,26 @@
 <?php
-/**
- * Class CellAbstractTest
- */
 
+/**
+ * This file is part of the Interpid PDF Addon package.
+ *
+ * @author Interpid <office@interpid.eu>
+ * @copyright (c) Interpid, http://www.interpid.eu
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell;
 
+use Interpid\PdfLib\BaseTestCase;
 use Interpid\PdfLib\PdfInterface;
-use Interpid\PdfLib\Tests\BaseTestCase;
 use PHPUnit\Framework\Error\Notice;
 
+/**
+ * Class CellAbstractTest
+ *
+ * @package Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell
+ */
 class CellAbstractTest extends BaseTestCase
 {
     public function testConstructor()
@@ -430,7 +441,7 @@ class CellAbstractTest extends BaseTestCase
 
         $o = new CellAbstractMock($pdf);
 
-        $aTrue = [1, "true", true];
+        $aTrue = [1, 'true', true];
         $aFalse = [0, false, ''];
 
         foreach ($aTrue as $val) {
