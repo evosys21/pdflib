@@ -21,7 +21,7 @@ All notable changes to FPDF Advanced Multicell  will be documented in this file.
 
 ### 2.6.2 (2018-11-27)
 
-- Change, Upgrade FPDF to 6.2.26 ([#1700](https://tracker.interpid.eu/issues/1700))
+- Change, Upgrade TCPDF to 6.2.26 ([#1700](https://tracker.interpid.eu/issues/1700))
 - Fix, PHP 7.* deprecation issues - each() function is deprecated ([#1680](https://tracker.interpid.eu/issues/1680))
 
 ### 2.6.1 (2018-09-19)
@@ -42,7 +42,7 @@ All notable changes to FPDF Advanced Multicell  will be documented in this file.
 
 ### 2.5.0 (2016-09-12)
 
-- Change, Upgrade to Fpdf 6.2.13 (fpdf) ([#947](https://tracker.interpid.eu/issues/947))
+- Change, Upgrade to Tcpdf 6.2.13 (tcpdf) ([#947](https://tracker.interpid.eu/issues/947))
 - Change, Code improvements ([#946](https://tracker.interpid.eu/issues/946))
 - Change, Upgrade to FPDF 1.8 ([#945](https://tracker.interpid.eu/issues/945))
 - Fix, PDF result differences between PHP5 and PHP7(fpdf) ([#944](https://tracker.interpid.eu/issues/944))

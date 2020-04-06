@@ -1,7 +1,7 @@
 build_settings:
   ignore:
     - "dev"
-    - "library/fpdf"
+    - "library/tcpdf"
     - "library/fpdf"
     - "vendor"
     - "tests"
