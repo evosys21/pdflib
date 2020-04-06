@@ -55,8 +55,8 @@ $headerRow = [];
 
 //prepare some default row settings
 for ($i = 0; $i < 5; $i++) {
-    $headerRow[ $i ][ 'TEXT' ] = "Header #$i";
-    $dataRow[ $i ][ 'TEXT' ] = "Cool <b>cell</b>";
+    $headerRow[$i]['TEXT'] = "Header #$i";
+    $dataRow[$i]['TEXT'] = "Cool <b>cell</b>";
 }
 
 $imageCell = array(

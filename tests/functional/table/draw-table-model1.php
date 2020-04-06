@@ -12,10 +12,10 @@ $pdf->SetFontSize(7);
 
 $table = new Table($pdf);
 
-$table->setStyle("p", $pdf->getDefaultFontName(), "", 6, "130,0,30");
-$table->setStyle("b", $pdf->getDefaultFontName(), "", 8, "80,80,260");
-$table->setStyle("h1", $pdf->getDefaultFontName(), "", 10, "0,151,200");
-$table->setStyle("bi", $pdf->getDefaultFontName(), "BI", 12, "0,0,120");
+$table->setStyle('p', 6, '', '130,0,30', $pdf->getDefaultFontName());
+$table->setStyle('b', 8, '', '80,80,260', $pdf->getDefaultFontName());
+$table->setStyle('h1', 10, '', '0,151,200', $pdf->getDefaultFontName());
+$table->setStyle('bi', 12, 'BI', '0,0,120', $pdf->getDefaultFontName());
 
 //default text color
 $pdf->SetTextColor(118, 0, 3);
@@ -24,7 +24,7 @@ $columns = 4;
 
 $pdf->Ln(30);
 
-//Initialize the table class, 3 columns
+//Initialize the table, 3 columns
 $table->initialize(array(
     20,
     40,

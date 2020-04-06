@@ -1,21 +1,36 @@
 <?php
 
-require_once(TEST_PATH . '/helper/testPdf.php');
+/**
+ * This file is part of the Interpid PDF Addon package.
+ *
+ * @author Interpid <office@interpid.eu>
+ * @copyright (c) Interpid, http://www.interpid.eu
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Interpid\PdfLib\Tests\Functional;
 
 use Interpid\PdfExamples\PdfFactory;
+use Interpid\PdfLib\Tests\Helper\TestPdf;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class TableExamples2Test
+ * @package Interpid\PdfLib\Tests\Functional
+ */
 class TableExamples2Test extends TestCase
 {
     /**
      * Returns the pdf object
      *
-     * @return testPdf
+     * @return TestPdf
      */
     protected function getPdfObject()
     {
         //create the pdf object and do some initialization
-        $pdf = new testPdf();
+        $pdf = new TestPdf();
 
         $factory = new PdfFactory();
         $factory->initPdf($pdf);
@@ -30,7 +45,7 @@ class TableExamples2Test extends TestCase
     protected function runTestWithExample($require, $name)
     {
         //remove the .php extension
-        $name = str_replace(".php", '', $name);
+        $name = str_replace('.php', '', $name);
 
         $pdf = $this->getPdfObject();
 

@@ -1,9 +1,25 @@
 <?php
 
+/**
+ * This file is part of the Interpid PDF Addon package.
+ *
+ * @author Interpid <office@interpid.eu>
+ * @copyright (c) Interpid, http://www.interpid.eu
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Interpid\PdfLib\Tests;
+
 use Interpid\PdfExamples\MyPdf;
 use Interpid\PdfExamples\PdfFactory;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class BaseExamplesTestCase
+ * @package Interpid\PdfLib\Tests
+ */
 class BaseExamplesTestCase extends TestCase
 {
     /**
@@ -28,7 +44,7 @@ class BaseExamplesTestCase extends TestCase
     protected function runTestWithExample($require, $name)
     {
         //remove the .php extension
-        $name = str_replace(".php", '', $name);
+        $name = str_replace('.php', '', $name);
 
         ob_start();
         require $require;

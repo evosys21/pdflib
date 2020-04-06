@@ -23,7 +23,7 @@ $aDefaultConfiguration = array(
         'BACKGROUND_COLOR' => [41, 80, 132], //background color
         'BORDER_COLOR' => [0, 92, 177], //border color
         'BORDER_SIZE' => 0.2, //border size
-        'BORDER_TYPE' => '1', //border type, can be: 0, 1 or a combination of: "LRTB"
+        'BORDER_TYPE' => '1', //border type, can be: 0, 1 or a combination of: 'LRTB'
         'TEXT' => ' ', //default text
         //padding
         'PADDING_TOP' => 0, //padding top
@@ -42,7 +42,7 @@ $aDefaultConfiguration = array(
         'BACKGROUND_COLOR' => [222, 225, 204], //background color
         'BORDER_COLOR' => [0, 92, 177], //border color
         'BORDER_SIZE' => 0.1, //border size
-        'BORDER_TYPE' => '1', //border type, can be: 0, 1 or a combination of: "LRTB"
+        'BORDER_TYPE' => '1', //border type, can be: 0, 1 or a combination of: 'LRTB'
         'TEXT' => ' ', //default text
         //padding
         'PADDING_TOP' => 2,

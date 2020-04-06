@@ -1,25 +1,20 @@
 <?php
+/**
+ * This file is part of the Interpid PDF Addon package.
+ *
+ * @author Interpid <office@interpid.eu>
+ * @copyright (c) Interpid, http://www.interpid.eu
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace Interpid\PdfLib;
 
 /**
  * Pdf Class Interface
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE.
- *
- * IN NO EVENT SHALL WE OR OUR SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT
- * OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS
- * OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION OR ANY OTHER
- * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
- * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
- *
- * @author    : Interpid <office@interpid.eu>
- * @copyright : Interpid, http://www.interpid.eu
- * @license   : http://www.interpid.eu/pdf-addons/eula
- * @SuppressWarnings(PHPMD.CamelCaseMethodName)
- * phpcs:disable PSR1.Methods.CamelCapsMethodName.NotCamelCaps
+ * @package Interpid\PdfLib
  */
 class PdfInterface
 {

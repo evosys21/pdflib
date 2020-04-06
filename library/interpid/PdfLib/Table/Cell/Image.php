@@ -1,27 +1,24 @@
 <?php
 
 /**
- * Pdf Table Cell Image
+ * This file is part of the Interpid PDF Addon package.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE.
+ * @author Interpid <office@interpid.eu>
+ * @copyright (c) Interpid, http://www.interpid.eu
  *
- * IN NO EVENT SHALL WE OR OUR SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT
- * OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS
- * OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION OR ANY OTHER
- * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
- * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
- *
- * @author    : Interpid <office@interpid.eu>
- * @copyright : Interpid, http://www.interpid.eu
- * @license   : http://www.interpid.eu/pdf-addons/eula
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace Interpid\PdfLib\Table\Cell;
 
 use Interpid\PdfLib\Tools;
 
+/**
+ * Pdf Table Cell Image
+ *
+ * @package Interpid\PdfLib\Table\Cell
+ */
 class Image extends CellAbstract implements CellInterface
 {
     protected $sFile;
@@ -58,18 +55,18 @@ class Image extends CellAbstract implements CellInterface
     }
 
 
-    public function setProperties(array $aValues = array())
+    public function setProperties(array $values = array())
     {
         //call the parent function
-        parent::setProperties($aValues);
+        parent::setProperties($values);
 
 
         $this->setImage(
-            Tools::getValue($aValues, 'FILE'),
-            Tools::getValue($aValues, 'WIDTH'),
-            Tools::getValue($aValues, 'HEIGHT'),
-            Tools::getValue($aValues, 'IMAGE_TYPE'),
-            Tools::getValue($aValues, 'LINK')
+            Tools::getValue($values, 'FILE'),
+            Tools::getValue($values, 'WIDTH'),
+            Tools::getValue($values, 'HEIGHT'),
+            Tools::getValue($values, 'IMAGE_TYPE'),
+            Tools::getValue($values, 'LINK')
         );
     }
 
@@ -96,8 +93,8 @@ class Image extends CellAbstract implements CellInterface
      * Vertical values: TBM
      * Horizontal values: LRC
      *
-     * @todo: check if this function is REALLY used
      * @param string $alignment
+     * @todo: check if this function is REALLY used
      */
     public function setAlign($alignment)
     {
@@ -133,15 +130,14 @@ class Image extends CellAbstract implements CellInterface
         $x = $this->pdf->GetX() + $this->getBorderSize();
         $y = $this->pdf->GetY() + $this->getBorderSize();
 
+        $width = $this->getContentWidth();
+        $height = $this->getContentHeight();
+
         //Horizontal Alignment
         if (strpos($this->alignment, 'J') !== false) {
             //justified - image is fully streched
-
             $x += $this->getPaddingLeft();
-            $this->setContentWidth(
-                $this->getCellDrawWidth() - 2 * $this->getBorderSize() -
-                $this->getPaddingLeft() - $this->getPaddingRight()
-            );
+            $this->setContentWidth($this->getCellDrawWidth() - 2 * $this->getBorderSize() - $this->getPaddingLeft() - $this->getPaddingRight());
         } elseif (strpos($this->alignment, 'C') !== false) {
             //center
             $x += ($this->getCellDrawWidth() - $this->getContentWidth()) / 2;

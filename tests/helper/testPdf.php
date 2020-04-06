@@ -1,17 +1,26 @@
 <?php
 
 /**
- * Custom PDF class extension for Header and Footer Definitions
+ * This file is part of the Interpid PDF Addon package.
  *
- * @author office@interpid.eu
+ * @author Interpid <office@interpid.eu>
+ * @copyright (c) Interpid, http://www.interpid.eu
  *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
-require_once(__DIR__ . "/Helper.php");
+namespace Interpid\PdfLib\Tests\Helper;
 
 use Interpid\PdfExamples\MyPdf;
 
-class testPdf extends MyPdf
+/**
+ * TestPdf Class
+ * Used for testing
+ *
+ * @package Interpid\PdfLib\Tests\Helper
+ */
+class TestPdf extends MyPdf
 {
     /**
      * Custom Header

@@ -36,23 +36,23 @@ $table = new Table($pdf);
 /**
  * Set the tag styles
  */
-$table->setStyle("p", $pdf->getDefaultFontName(), "", 10, "130,0,30");
-$table->setStyle("b", $pdf->getDefaultFontName(), "", 9, "80,80,260");
-$table->setStyle("h1", $pdf->getDefaultFontName(), "", 10, "0,151,200");
-$table->setStyle("bi", $pdf->getDefaultFontName(), "BI", 12, "0,0,120");
+$table->setStyle('p', 10, '', '130,0,30', $pdf->getDefaultFontName());
+$table->setStyle('b', 9, '', '80,80,260', $pdf->getDefaultFontName());
+$table->setStyle('h1', 10, '', '0,151,200', $pdf->getDefaultFontName());
+$table->setStyle('bi', 12, 'BI', '0,0,120', $pdf->getDefaultFontName());
 
 //default text color
 $pdf->SetTextColor(118, 0, 3);
 
 //create an advanced multicell
 $multicell = Multicell::getInstance($pdf);
-$multicell->setStyle("s1", $pdf->getDefaultFontName(), "", 8, "118,0,3");
-$multicell->setStyle("s2", $pdf->getDefaultFontName(), "", 6, "0,49,159");
+$multicell->setStyle('s1', 8, '', '118,0,3', $pdf->getDefaultFontName());
+$multicell->setStyle('s2', 6, '', '0,49,159', $pdf->getDefaultFontName());
 
 $multicell->multiCell(100, 4, "<s1>Example 1 - Very Simple Table</s1>", 0);
 $pdf->Ln(1);
 
-require('table_example1.inc');
+require('table_example1.php');
 
 $pdf->Ln(10);
 
@@ -61,7 +61,7 @@ $txt = "<s1>Example 2 - More detailed Table</s1>\n<s2>\t- Table Align = Center\n
 $pdf->SetX(60);
 $multicell->multiCell(100, 2.5, $txt, 0);
 $pdf->Ln(1);
-require('table_example2.inc');
+require('table_example2.php');
 
 $pdf->Ln(10);
 
@@ -71,7 +71,7 @@ $pdf->SetXY(60, 215);
 $multicell->multiCell(100, 2.5, $txt, 0);
 $pdf->Ln(1);
 $tableSplitMode = true;
-require('table_example2.inc');
+require('table_example2.php');
 
 $pdf->Ln(10);
 
@@ -81,7 +81,7 @@ $pdf->SetXY(60, 215);
 $multicell->multiCell(100, 2.5, $txt, 0);
 $pdf->Ln(1);
 $tableSplitMode = false;
-require('table_example2.inc');
+require('table_example2.php');
 
 //send the pdf to the browser
 $pdf->Output();

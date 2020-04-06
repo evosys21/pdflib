@@ -4,8 +4,8 @@ use Interpid\PdfLib\Table;
 
 $table = new Table($pdf);
 
-$table->setStyle("p", $pdf->getDefaultFontName(), "", 7, "130,0,30");
-$table->setStyle("b", $pdf->getDefaultFontName(), "B", 7, "130,0,30");
+$table->setStyle('p', 7, '', '130,0,30', $pdf->getDefaultFontName());
+$table->setStyle('b', 7, 'B', '130,0,30', $pdf->getDefaultFontName());
 
 $columns = 3;
 
@@ -25,9 +25,9 @@ $table->addHeader($header);
 
 for ($j = 1; $j < 3; $j++) {
     $row = [];
-    $row[ 0 ][ 'TEXT' ] = "Line $j";
-    $row[ 1 ][ 'TEXT' ] = "Lorem ipsum dolor sit amet...";
-    $row[ 2 ][ 'TEXT' ] = "<p>Simple text\n<b>Bold text</b></p>";
+    $row[0]['TEXT'] = "Line $j";
+    $row[1]['TEXT'] = "Lorem ipsum dolor sit amet...";
+    $row[2]['TEXT'] = "<p>Simple text\n<b>Bold text</b></p>";
 
     //add the data row
     $table->addRow($row);

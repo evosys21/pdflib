@@ -1,24 +1,85 @@
+
+variables:
+  PAGES_DEPLOY: public/${CI_COMMIT_REF_NAME}
+
+stages:
+  - build
+  - test
+  - deploy
+  - pre-release
+  - release
+
+
 # Select what we should cache
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
     - vendor/
 
-# Run phpunit tests
+# Run phpunit tests for php 7.2
 php72-tests:
+  stage: test
   image: klodoma/php72
   script:
     - composer install
+    - vendor/bin/phpunit --exclude-group functional
+
+# Run phpunit tests for php 7.3
+php73-tests:
+  stage: test
+  image: klodoma/php73
+  script:
+    - composer install
+    - vendor/bin/phpunit --exclude-group functional
+
+# Run phpunit tests for php 7.4
+php74-tests:
+  stage: test
+  image: klodoma/php74
+  script:
+    - composer install
     - vendor/bin/phpunit --configuration phpunit-ci.xml
-    - vendor/bin/phpmetrics --report-html=./build/phpmetrics ./library/interpid
+    - vendor/bin/phpmetrics --report-html=./build/php/phpmetrics ./library/interpid/PdfLib
+  coverage: '/Lines:\s*(\d+\.\d+)/'
   artifacts:
     paths:
       - build
     expire_in: 1 year
 
-# Run phpunit tests
-php73-tests:
-  image: klodoma/php73
+pages:
+  stage: deploy
   script:
-    - composer install
-    - vendor/bin/phpunit --configuration phpunit-ci.xml
+    - mkdir -p ${PAGES_DEPLOY}
+    - cp -r build/* ${PAGES_DEPLOY}
+  artifacts:
+    paths:
+      - ${PAGES_DEPLOY}
+
+# Run the release build
+build-release:
+  stage: pre-release
+  image: klodoma/php74
+  only:
+    - tags
+  except:
+    - schedules
+  script:
+    - php bin/build_release.php
+  artifacts:
+    paths:
+      - release
+    expire_in: 1 year
+
+release:
+  image: inetprocess/gitlab-release
+  stage: release
+  only:
+    - tags
+  except:
+    - schedules
+  dependencies:
+    - build-release
+  script:
+    - source ./bin/set-versions.sh
+    - eval "gitlab-release --message 'Automatic release Table ${VERSION_TABLE}' ./release/fpdf_table_${VERSION_TABLE}.zip"
+    - eval "gitlab-release --message 'Automatic release Multicell ${VERSION_MULTICELL}' ./release/fpdf_multicell_${VERSION_MULTICELL}.zip"

@@ -4,21 +4,70 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="#1701 - PHPCS, Mess Detector Integration">
-      <change afterPath="$PROJECT_DIR$/bin/file-manager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/phpinfo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="#1755 - Examples folder clean-up">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/fpdf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fpdf.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php-test-framework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/phpinfo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.php-censor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.php-censor.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-multicell-1-overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-1-overview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-multicell-2-overview-page-break.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-2-overview-page-break.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-multicell-3-line-breaking.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-3-line-breaking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-multicell-4-page-break.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-4-page-break.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-multicell-5-max-lines.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-5-max-lines.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-multicell.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-table-1-overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-table-1-overview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-table-2-overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-table-2-overview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-table-3-detailed.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-table-3-detailed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-table-4-override.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-table-4-override.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table/code-example-alignments.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example-alignments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table/code-example-transparent.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example-transparent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table/code-example1.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table/code-example2.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table/code-example3.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table_example1.inc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table_example2.inc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfExamples/MyPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfExamples/MyPdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfExamples/PdfFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfExamples/PdfFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Multicell.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Multicell.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Pdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Pdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/PdfInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/PdfInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/String/Tags.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/String/Tags.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Table.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/CellAbstract.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/CellAbstract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/CellInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/CellInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/EmptyCell.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/EmptyCell.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/Image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/Multicell.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/Multicell.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Tools.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Tools.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Validate.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Validate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/table.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/table.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit-ci.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit-ci.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit-gen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit-gen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/BaseExamplesTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/BaseExamplesTestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/BaseTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/BaseTestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/functional/MulticellExamplesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/MulticellExamplesTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/functional/TableExamples2Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/TableExamples2Test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/functional/TableExamplesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/TableExamplesTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/functional/TableTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/TableTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/functional/table/disable-page-break.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/table/disable-page-break.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/functional/table/draw-table-model1.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/table/draw-table-model1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/functional/table/draw-table-model2.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/table/draw-table-model2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/functional/table/table.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/table/table.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/helper/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/helper/Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/helper/testPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/helper/testPdf.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/version_multicell" beforeDir="false" afterPath="$PROJECT_DIR$/version_multicell" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/version_table" beforeDir="false" afterPath="$PROJECT_DIR$/version_table" afterDir="false" />
     </list>
-    <ignored path="fpdf.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path=".idea/dataSources.local.xml" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +75,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -33,171 +85,9 @@
   <component name="FavoritesManager">
     <favorites_list name="fpdf" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/version_table">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/version_multicell">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>Create the Advanced Multicell Object and pass the PDF object as a parameter to the constructor</find>
-      <find>and pass the PDF object as a parameter to the constructor</find>
-      <find>Table::getInstance($pdf);</find>
-      <find>$aImage</find>
-      <find>aImage</find>
-      <find>$atxt</find>
-      <find>$bFill</find>
-      <find>bFill</find>
-      <find>each</find>
-      <find>each(</find>
-      <find>$iLeftHeight</find>
-      <find>$iLeftHeight =</find>
-      <find>/tfpdf_table/pdfFactory.php</find>
-      <find>date_default_timezone_set</find>
-      <find>extention</find>
-      <find>* @version   : 5.4.0</find>
-      <find>\* @version   : 5.4.0\n</find>
-      <find>@version:</find>
-      <find>supress</find>
-      <find>phpcs:</find>
-      <find>myPdf</find>
-      <find>PageWidth</find>
-      <find>pageHeight</find>
-      <find>$iLastDataKey</find>
-      <find>_tbAlign</find>
-      <find>cachePaginate</find>
-      <find>transparent</find>
-      <find>transparent background</find>
-      <find>NO_WRAP</find>
-      <find>BORDER_TYPE</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>alignments</replace>
-      <replace>[]</replace>
-      <replace>[];</replace>
-      <replace>[ $1 ];</replace>
-      <replace>[ $1 ],</replace>
-      <replace>[ $1 ]</replace>
-      <replace>] );</replace>
-      <replace>PDF_APPLICATION_PATH</replace>
-      <replace>alignment</replace>
-      <replace>5.4.0</replace>
-      <replace>2.6.0</replace>
-      <replace>Interpid\Pdf</replace>
-      <replace>Interpid\PdfLib</replace>
-      <replace>helvetica</replace>
-      <replace>* @version   : 5.4.0</replace>
-      <replace>use Interpid\</replace>
-      <replace>TestCase</replace>
-      <replace>PHPUnit\Framework\Error\Notice</replace>
-      <replace>Empty</replace>
-      <replace>EmptyCell</replace>
-      <replace>$pdf-&gt;getDefaultFontName(),</replace>
-      <replace>//get the PDF object</replace>
-      <replace>'helvetica'</replace>
-      <replace>initPdf</replace>
-      <replace>and inject the PDF object</replace>
-      <replace>Table::getInstance( $pdf );</replace>
-      <replace>fill</replace>
-      <replace>extension</replace>
-      <replace />
-      <replace>$lastDataKey</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>D:\Projects\pdf-addons\fpdf\examples\table</dir>
-      <dir>D:\Projects\pdf-addons\fpdf\vendor\fpdf</dir>
-      <dir>D:\Projects\pdf-addons\fpdf\tests</dir>
-      <dir>D:\Projects\pdf-addons\fpdf\examples</dir>
-      <dir>D:\Projects\pdf-addons\fpdf\library\interpid</dir>
-      <dir>D:\Projects\pdf-addons\fpdf</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="WARN_ABOUT_CRLF" value="false" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/vendor/interpid/PdfExamples/mypdf.php" />
-        <option value="$PROJECT_DIR$/tests/BaseTestCase.php" />
-        <option value="$PROJECT_DIR$/tests/functional/TableExamples2Test.php" />
-        <option value="$PROJECT_DIR$/tests/functional/TableTest.php" />
-        <option value="$PROJECT_DIR$/tests/BaseExamplesTestCase.php" />
-        <option value="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php" />
-        <option value="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-        <option value="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
-        <option value="$PROJECT_DIR$/tests/functional/MulticellExamplesTest.php" />
-        <option value="$PROJECT_DIR$/content/multicell-title.txt" />
-        <option value="$PROJECT_DIR$/examples/example-table-1-overview.php" />
-        <option value="$PROJECT_DIR$/examples/example-multicell-5-max-lines.php" />
-        <option value="$PROJECT_DIR$/examples/example-multicell-4-page-break.php" />
-        <option value="$PROJECT_DIR$/examples/example-multicell-3-line-breaking.php" />
-        <option value="$PROJECT_DIR$/examples/example-multicell-2-overview-page-break.php" />
-        <option value="$PROJECT_DIR$/examples/table/code-example3.php" />
-        <option value="$PROJECT_DIR$/examples/table/code-example-alignments.php" />
-        <option value="$PROJECT_DIR$/vendor/interpid/PdfLib/Pdf.php" />
-        <option value="$PROJECT_DIR$/vendor/interpid/PdfExamples/pdfFactory.php" />
-        <option value="$PROJECT_DIR$/examples/example-multicell.php" />
-        <option value="$PROJECT_DIR$/examples/example-multicell-1-overview.php" />
-        <option value="$PROJECT_DIR$/examples/example-table-2-overview.php" />
-        <option value="$PROJECT_DIR$/vendor/interpid/PdfLib/Table.php" />
-        <option value="$PROJECT_DIR$/vendor/interpid/PdfLib/Multicell.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/tests/gen7.cmd" />
-        <option value="$PROJECT_DIR$/tests/phpunit.xml" />
-        <option value="$PROJECT_DIR$/phpunit.xml.dist" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/phpunit.xml" />
-        <option value="$PROJECT_DIR$/tests/bootstrap.php" />
-        <option value="$PROJECT_DIR$/.gitlab-ci.yml" />
-        <option value="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/CellAbstract.php" />
-        <option value="$PROJECT_DIR$/phpcs.xml" />
-        <option value="$PROJECT_DIR$/library/interpid/PdfLib/Multicell.php" />
-        <option value="$PROJECT_DIR$/library/interpid/PdfLib/Pdf.php" />
-        <option value="$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/Image.php" />
-        <option value="$PROJECT_DIR$/.php-censor.yml" />
-        <option value="$PROJECT_DIR$/library/interpid/PdfExamples/pdfFactory.php" />
-        <option value="$PROJECT_DIR$/library/interpid/PdfExamples/PdfFactory.php" />
-        <option value="$PROJECT_DIR$/library/interpid/PdfExamples/mypdf.php" />
-        <option value="$PROJECT_DIR$/library/interpid/PdfExamples/MyPdf.php" />
-        <option value="$PROJECT_DIR$/library/interpid/PdfLib/PdfInterface.php" />
-        <option value="$PROJECT_DIR$/phpmd.xml" />
-        <option value="$PROJECT_DIR$/library/interpid/PdfLib/Table.php" />
-        <option value="$PROJECT_DIR$/examples/example-table-3-detailed.php" />
-        <option value="$PROJECT_DIR$/examples/example-table-2-overview - Copy.php" />
-        <option value="$PROJECT_DIR$/examples/table.config.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/version_table" />
-        <option value="$PROJECT_DIR$/version_multicell" />
-      </list>
-    </option>
   </component>
   <component name="PhpServers">
     <servers>
@@ -205,7 +95,7 @@
       <server host="projects.localhost" id="52256df6-3178-406b-8e5f-b1af18d8cdab" name="projects.localhost (1)" port="8080" />
     </servers>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3">
     <include_path>
       <path value="C:/Composer/vendor" />
       <path value="C:/Composer/phars" />
@@ -243,48 +133,42 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/phpmetrics/phpmetrics" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/interpid/redmine" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/kbsali/redmine-api" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/setasign/fpdf" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-6" />
-    <option name="width" value="1935" />
-    <option name="height" value="1056" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="fpdf-table" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fpdf-table" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fpdf-table" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fpdf-table" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectId" id="1Qab0W7PRrmRmIG6hKy9aOnVn6n" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="multicellExa&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/tests/functional/MulticellExamplesTest.php&#10;abstract&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/tests/classes/Pdf/Table/Cell/AbstractTest.php&#10;example&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/examples/example-multicell-1-overview.php&#10;Void&#9;null&#9;null&#10;multicell&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/vendor/interpid/PdfLib/Multicell.php&#10;pdf&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/vendor/interpid/PdfLib/Pdf.php&#10;testPdf&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/tests/helper/testPdf.php&#10;my&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/vendor/interpid/PdfExamples/mypdf.php&#10;mypdf&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/vendor/interpid/PdfExamples/mypdf.php&#10;table&#9;FILE&#9;file://D:/Projects/pdf-addons/fpdf/vendor/interpid/Pdf/Table.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tcpdf-table" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fpdf-table1" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="settings.editor.splitter.proportion" value="0.2304038" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\pdf-addons\fpdf-table\library\interpid\PdfExamples" />
+      <recent name="D:\Projects\pdf-addons\fpdf-table\examples" />
+      <recent name="D:\Projects\pdf-addons\fpdf-table\#1731" />
+      <recent name="D:\Projects\pdf-addons\fpdf-table" />
+      <recent name="D:\Projects\pdf-addons\fpdf" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\pdf-addons\fpdf\bin" />
       <recent name="D:\Projects\pdf-addons\fpdf\library" />
@@ -292,25 +176,6 @@
       <recent name="D:\Projects\pdf-addons\fpdf\content" />
       <recent name="D:\Projects\pdf-addons\fpdf\vendor\interpid\PdfExamples" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projects\pdf-addons\fpdf-table" />
-      <recent name="D:\Projects\pdf-addons\fpdf" />
-      <recent name="D:\Projects\pdf-addons\fpdf\tests" />
-      <recent name="D:\Projects\pdf-addons\fpdf\examples" />
-      <recent name="D:\Projects\pdf-addons\fpdf\content" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="PHPUnit.tests">
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
@@ -324,20 +189,20 @@
       <module name="" />
       <method v="2" />
     </configuration>
-    <configuration name="CellAbstractTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="CellAbstractTest" file="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php" scope="Class" />
+    <configuration name="CellAbstractTest (1)" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell\CellAbstractTest" file="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/CellAbstractTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="MulticellExamplesTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="MulticellExamplesTest" file="$PROJECT_DIR$/tests/functional/MulticellExamplesTest.php" scope="Class" />
+    <configuration name="CellAbstractTest.testConstructor" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell\CellAbstractTest" file="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/CellAbstractTest.php" method="testConstructor" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="Pdf_Table_Cell_AbstractTest.testRenderCellLayout" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Pdf_Table_Cell_AbstractTest" file="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php" method="testRenderCellLayout" scope="Method" />
+    <configuration name="CellAbstractTest.testSimpleGettersAndSetters" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell\CellAbstractTest" file="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/CellAbstractTest.php" method="testSimpleGettersAndSetters" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner configuration_file="$PROJECT_DIR$/tests/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
+    <configuration name="functional" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$/tests/functional" />
       <method v="2" />
     </configuration>
     <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -354,19 +219,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHPUnit.Pdf_Table_Cell_AbstractTest.testRenderCellLayout" />
-      <item itemvalue="PHPUnit.CellAbstractTest" />
-      <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.tests" />
-      <item itemvalue="PHPUnit.MulticellExamplesTest" />
+      <item itemvalue="PHPUnit.functional" />
+      <item itemvalue="PHPUnit.CellAbstractTest (1)" />
+      <item itemvalue="PHPUnit.CellAbstractTest.testSimpleGettersAndSetters" />
+      <item itemvalue="PHPUnit.CellAbstractTest.testConstructor" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="PHPUnit.tests" />
-        <item itemvalue="PHPUnit.CellAbstractTest" />
-        <item itemvalue="PHPUnit.MulticellExamplesTest" />
-        <item itemvalue="PHPUnit.phpunit.xml" />
-        <item itemvalue="PHPUnit.Pdf_Table_Cell_AbstractTest.testRenderCellLayout" />
+        <item itemvalue="PHPUnit.CellAbstractTest.testConstructor" />
+        <item itemvalue="PHPUnit.CellAbstractTest.testSimpleGettersAndSetters" />
+        <item itemvalue="PHPUnit.CellAbstractTest (1)" />
+        <item itemvalue="PHPUnit.functional" />
       </list>
     </recent_temporary>
   </component>
@@ -419,7 +284,19 @@
       <workItem from="1548429098481" duration="607000" />
       <workItem from="1548662286851" duration="105000" />
       <workItem from="1549486391436" duration="980000" />
-      <workItem from="1549488621114" duration="460000" />
+      <workItem from="1549488621114" duration="1209000" />
+      <workItem from="1549524830789" duration="12000" />
+      <workItem from="1549828441863" duration="3529000" />
+      <workItem from="1550958223860" duration="191000" />
+      <workItem from="1551081868510" duration="599000" />
+      <workItem from="1552894276320" duration="681000" />
+      <workItem from="1553629891613" duration="216000" />
+      <workItem from="1553674063440" duration="1217000" />
+      <workItem from="1563346996715" duration="548000" />
+      <workItem from="1563349361057" duration="172000" />
+      <workItem from="1563608772894" duration="1651000" />
+      <workItem from="1568011436313" duration="408000" />
+      <workItem from="1586189632509" duration="2213000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
@@ -596,43 +473,15 @@
       <option name="project" value="LOCAL" />
       <updated>1543357945501</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="#1755 - Examples folder clean-up">
+      <created>1549489195832</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1549489195832</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="CellAbstractTest - 2017.08.30 at 21h 59m 09s.xml">
-      <configuration name="CellAbstractTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="CellAbstractTest - 2017.08.30 at 21h 59m 20s.xml">
-      <configuration name="CellAbstractTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="CellAbstractTest - 2017.08.30 at 21h 59m 45s.xml">
-      <configuration name="CellAbstractTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="tests - 2017.08.30 at 21h 52m 04s.xml">
-      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="tests - 2017.08.30 at 21h 54m 18s.xml">
-      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="tests - 2017.08.30 at 21h 54m 21s.xml">
-      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="tests - 2017.08.30 at 21h 54m 24s.xml">
-      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="tests - 2017.08.30 at 21h 55m 17s.xml">
-      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="tests - 2017.08.30 at 21h 56m 15s.xml">
-      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="tests - 2017.08.30 at 21h 59m 59s.xml">
-      <configuration name="tests" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92694000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -642,32 +491,6 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-12" y="-12" width="3864" height="2078" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.710643" visible="true" weight="0.18899521" />
-      <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info id="Structure" order="2" sideWeight="0.28935698" side_tool="true" visible="true" weight="0.18899521" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="1" />
-      <window_info active="true" anchor="bottom" id="Inspection Results" order="2" sideWeight="0.5707071" visible="true" weight="0.35144123" />
-      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.42929292" side_tool="true" weight="0.34035477" />
-      <window_info anchor="bottom" id="Version Control" order="4" weight="0.2616408" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.4978678" weight="0.36409822" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.46286032" />
-      <window_info anchor="bottom" id="Find" order="9" weight="0.31160033" />
-      <window_info anchor="bottom" id="Debug" order="10" weight="0.35478407" />
-      <window_info anchor="bottom" id="TODO" order="11" weight="0.32982263" />
-      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="right" id="Hierarchy" order="0" weight="0.13326226" />
-      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -680,6 +503,19 @@
         <option value="3" />
         <option value="1" />
       </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
     </option>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -702,29 +538,84 @@
     <MESSAGE value="#1681 - Vendor folder moved to library&#10;#1680 - The each() function is deprecated" />
     <MESSAGE value="#1680 - The each() function is deprecated" />
     <MESSAGE value="#1701 - PHPCS, Mess Detector Integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="#1701 - PHPCS, Mess Detector Integration" />
+    <MESSAGE value="#1755 - Examples folder clean-up" />
+    <option name="LAST_COMMIT_MESSAGE" value="#1755 - Examples folder clean-up" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="812" y="177" key="#PHP" timestamp="1586190809403">
+      <screen x="0" y="0" width="2194" height="1173" />
+    </state>
+    <state x="812" y="177" key="#PHP/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586190809403" />
+    <state x="685" y="241" key="#Test_Frameworks" timestamp="1586190845651">
+      <screen x="0" y="0" width="2194" height="1173" />
+    </state>
+    <state x="685" y="241" key="#Test_Frameworks/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586190845651" />
+    <state x="782" y="224" width="644" height="724" key="#functional" timestamp="1586190846248">
+      <screen x="0" y="0" width="2194" height="1173" />
+    </state>
+    <state x="782" y="224" width="644" height="724" key="#functional/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586190846248" />
+    <state x="752" y="181" key="CommitChangelistDialog2" timestamp="1586191081862">
+      <screen x="0" y="0" width="2194" height="1173" />
+    </state>
+    <state x="752" y="181" key="CommitChangelistDialog2/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586191081862" />
+    <state x="212" y="100" key="DiffContextDialog" timestamp="1586191081327">
+      <screen x="0" y="0" width="2194" height="1173" />
+    </state>
+    <state x="212" y="100" key="DiffContextDialog/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586191081327" />
+    <state x="885" y="341" key="FileChooserDialogImpl" timestamp="1586191011345">
+      <screen x="0" y="0" width="2194" height="1173" />
+    </state>
+    <state x="885" y="341" key="FileChooserDialogImpl/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586191011345" />
+    <state width="2151" height="387" key="GridCell.Tab.0.bottom" timestamp="1586192214696">
+      <screen x="0" y="0" width="2194" height="1173" />
+    </state>
+    <state width="2151" height="387" key="GridCell.Tab.0.bottom/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586192214696" />
+    <state width="2151" height="387" key="GridCell.Tab.0.center" timestamp="1586192214696">
+      <screen x="0" y="0" width="2194" height="1173" />
+    </state>
+    <state width="2151" height="387" key="GridCell.Tab.0.center/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586192214696" />
+    <state width="2151" height="387" key="GridCell.Tab.0.left" timestamp="1586192214696">
+      <screen x="0" y="0" width="2194" height="1173" />
+    </state>
+    <state width="2151" height="387" key="GridCell.Tab.0.left/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586192214696" />
+    <state width="2151" height="387" key="GridCell.Tab.0.right" timestamp="1586192214696">
+      <screen x="0" y="0" width="2194" height="1173" />
+    </state>
+    <state width="2151" height="387" key="GridCell.Tab.0.right/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586192214696" />
+    <state x="918" y="298" key="RollbackChangesDialog" timestamp="1586191052348">
+      <screen x="0" y="0" width="2194" height="1173" />
+    </state>
+    <state x="918" y="298" key="RollbackChangesDialog/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586191052348" />
+    <state x="791" y="318" width="741" height="536" key="find.popup" timestamp="1586192210020">
+      <screen x="0" y="0" width="2194" height="1173" />
+    </state>
+    <state x="791" y="318" width="741" height="536" key="find.popup/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586192210020" />
+    <state x="760" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1586191455374">
+      <screen x="0" y="0" width="2194" height="1173" />
+    </state>
+    <state x="760" y="258" width="672" height="678" key="search.everywhere.popup/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586191455374" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php</url>
-          <line>340</line>
+          <url>file://$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/CellAbstractTest.php</url>
+          <line>342</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/Multicell.php</url>
-          <line>332</line>
+          <line>313</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/CellAbstract.php</url>
-          <line>542</line>
+          <line>537</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/Multicell.php</url>
-          <line>102</line>
+          <line>83</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
@@ -741,336 +632,5 @@
         <watch expression="$this" language="PHP" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/examples/example-table-1-overview.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/table/code-example1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/example-multicell-1-overview.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="13" column="17" selection-start-line="13" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/example-multicell-2-overview-page-break.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/example-multicell-3-line-breaking.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/example-multicell-5-max-lines.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/example-multicell-4-page-break.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/table/code-example2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/table/code-example3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/example-multicell.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/gen7.cmd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" selection-start-column="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/AbstractTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11152">
-          <caret line="330" column="25" selection-start-line="330" selection-start-column="25" selection-end-line="330" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/functional/MulticellExamplesTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/gen72.cmd">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phpunit.xml.dist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/phpunit.xml" />
-    <entry file="file://$PROJECT_DIR$/tests/phpunit-gen.xml" />
-    <entry file="file://$PROJECT_DIR$/phpunit-gen.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/gen.cmd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/autoload.php" />
-    <entry file="file://$PROJECT_DIR$/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phpunit-ci.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phpunit.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="37" column="77" selection-start-line="37" selection-start-column="77" selection-end-line="37" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/dev-table6-bug1.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/CellAbstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-          <folding>
-            <element signature="e#6#800#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/interpid/PdfLib/Table/Cell/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="132" column="9" lean-forward="true" selection-start-line="132" selection-start-column="9" selection-end-line="132" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phpcs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/interpid/PdfLib/Multicell.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="956" column="57" selection-start-line="956" selection-start-column="57" selection-end-line="956" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/interpid/PdfLib/Pdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.php-censor.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/interpid/PdfExamples/PdfFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/interpid/PdfLib/PdfInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phpmd.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/interpid/PdfExamples/MyPdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/example-table-4-override.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#6#96#0#PHP" expanded="true" />
-            <element signature="e#142#172#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/example-table-3-detailed.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/table_example1.inc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/table_example2.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="25" column="42" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/functional/TableExamples2Test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3298">
-          <caret line="98" column="71" selection-start-line="98" selection-start-column="71" selection-end-line="98" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/table/code-example-transparent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/interpid/PdfLib/Table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58956">
-          <caret line="1750" column="36" selection-start-line="1750" selection-start-column="36" selection-end-line="1750" selection-end-column="36" />
-          <folding>
-            <element signature="e#816#861#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/example-table-2-overview - Copy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/table/settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/table.config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/version_table">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/version_multicell">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

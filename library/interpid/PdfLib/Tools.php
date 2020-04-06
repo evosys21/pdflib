@@ -1,34 +1,73 @@
 <?php
 
 /**
- * Pdf Tools
+ * This file is part of the Interpid PDF Addon package.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE.
+ * @author Interpid <office@interpid.eu>
+ * @copyright (c) Interpid, http://www.interpid.eu
  *
- * IN NO EVENT SHALL WE OR OUR SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT
- * OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS
- * OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION OR ANY OTHER
- * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
- * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
- *
- * @author    : Interpid <office@interpid.eu>
- * @copyright : Interpid, http://www.interpid.eu
- * @license   : http://www.interpid.eu/pdf-addons/eula
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace Interpid\PdfLib;
 
+/**
+ * Class Tools
+ * @package Interpid\PdfLib
+ */
 class Tools
 {
-    public static function getValue(array $var, $index = '', $default = '')
+    public static function getValue(array $data, $path, $default = '', $delimiter = '')
     {
-        if (isset($var[ $index ])) {
-            return $var[ $index ];
+        if (empty($delimiter)) {
+            $delimiter = '/';
         }
 
-        return $default;
+        $paths = explode($delimiter, $path);
+
+        foreach ($paths as $val) {
+            if (isset($data[$val])) {
+                $data = $data[$val];
+            } else {
+                return $default;
+            }
+        }
+
+        return $data;
+    }
+
+    /**
+     * String with NULL Allowed
+     *
+     * @param mixed $value
+     * @param bool $trim
+     * @return string
+     */
+    public static function string($value, $trim = true)
+    {
+        if (is_null($value)) {
+            return $value;
+        }
+        $value = strval($value);
+        if ($trim) {
+            $value = trim($value);
+        }
+        return $value;
+    }
+
+    /**
+     * String with NULL Allowed
+     *
+     * @param mixed $value
+     * @return string
+     */
+    public static function color($value)
+    {
+        if (is_array($value)) {
+            return $value;
+        }
+        return static::string($value);
     }
 
 
@@ -49,7 +88,7 @@ class Tools
             $index = 0;
         }
 
-        return $data[ $index ];
+        return $data[$index];
     }
 
     /**
@@ -107,5 +146,52 @@ class Tools
         }
 
         return false;
+    }
+
+    public static function getCellAlign($align)
+    {
+        $align = strtoupper($align);
+        switch ($align) {
+            case 'L':
+            case 'LEFT':
+                return 'L';
+            case 'R':
+            case 'RIGHT':
+                return 'R';
+            case 'C':
+            case 'CENTER':
+                return 'C';
+        }
+        return $align;
+    }
+
+    /**
+     * Compares 2 float values by the specified precision
+     *
+     * @param float $value1
+     * @param float $value2
+     * @param int $precision
+     * @return bool
+     */
+    public static function compareFloats($value1, $value2, $precision = 5)
+    {
+        return round($value1, $precision) === round($value2, $precision);
+    }
+
+    /**
+     * Parses array1 and sets all the null values from array2 if they exist
+     *
+     * @param array $array1
+     * @param array $array2
+     * @return array
+     */
+    public static function mergeNonNull($array1, $array2)
+    {
+        foreach ($array1 as $key => $value) {
+            if (is_null($value) && isset($array2[$key])) {
+                $array1[$key] = $array2[$key];
+            }
+        }
+        return $array1;
     }
 }

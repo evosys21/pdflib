@@ -1,20 +1,12 @@
 <?php
 /**
- * Pdf Table
+ * This file is part of the Interpid PDF Addon package.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE.
+ * @author Interpid <office@interpid.eu>
+ * @copyright (c) Interpid, http://www.interpid.eu
  *
- * IN NO EVENT SHALL WE OR OUR SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT
- * OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS
- * OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION OR ANY OTHER
- * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
- * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
- *
- * @author    : Interpid <office@interpid.eu>
- * @copyright : Interpid, http://www.interpid.eu
- * @license   : http://www.interpid.eu/pdf-addons/eula
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace Interpid\PdfLib;
@@ -27,6 +19,10 @@ if (!defined('PDF_TABLE_CONFIG_PATH')) {
     define('PDF_TABLE_CONFIG_PATH', __DIR__);
 }
 
+/**
+ * Pdf Table Class
+ * @package Interpid\PdfLib
+ */
 class Table
 {
     const TB_DATA_TYPE_DATA = 'data';
@@ -96,7 +92,7 @@ class Table
 
     /**
      * Cell border type.
-     * Mixed. Possible values: 0, 1 or a combination of: "LRTB". @example 'LRT'
+     * Mixed. Possible values: 0, 1 or a combination of: 'LRTB'. @example 'LRT'
      */
     const BORDER_TYPE = 'BORDER_TYPE';
 
@@ -334,7 +330,7 @@ class Table
     {
         //pdf object
         $this->pdf = $pdf;
-        $this->pdfi = new PdfInterface( $pdf );
+        $this->pdfi = new PdfInterface($pdf);
 
         //call the multicell instance
         $this->multicell = new Multicell($pdf);
@@ -352,7 +348,7 @@ class Table
      */
     public static function getInstance($pdf)
     {
-        $oInstance = &self::$singleton[ spl_object_hash($pdf) ];
+        $oInstance = &self::$singleton[spl_object_hash($pdf)];
 
         if (!isset($oInstance)) {
             $oInstance = new self($pdf);
@@ -406,11 +402,11 @@ class Table
         );
 
         foreach ($aKeys as $val) {
-            if (!isset($configuration[ $val ])) {
+            if (!isset($configuration[$val])) {
                 continue;
             }
 
-            $this->configuration[ $val ] = array_merge($this->configuration[ $val ], $configuration[ $val ]);
+            $this->configuration[$val] = array_merge($this->configuration[$val], $configuration[$val]);
         }
 
         $this->markMarginX();
@@ -455,7 +451,7 @@ class Table
      */
     public function setColumnWidth($nColumnIndex, $width)
     {
-        $this->aColumnWidth[ $nColumnIndex ] = $width;
+        $this->aColumnWidth[$nColumnIndex] = $width;
     }
 
 
@@ -467,13 +463,13 @@ class Table
      */
     public function getColumnWidth($nColumnIndex)
     {
-        if (!isset($this->aColumnWidth[ $nColumnIndex ])) {
+        if (!isset($this->aColumnWidth[$nColumnIndex])) {
             trigger_error("Undefined width for column $nColumnIndex");
 
             return 0;
         }
 
-        return $this->aColumnWidth[ $nColumnIndex ];
+        return $this->aColumnWidth[$nColumnIndex];
     }
 
 
@@ -529,7 +525,7 @@ class Table
      * Example of a header row input array:
      * array(
      * 0 => array(
-     * "TEXT" => "Header Text 1"
+     * 'TEXT' => "Header Text 1"
      * "TEXT_COLOR" => array(120,120,120),
      * "TEXT_SIZE" => 5,
      * ...
@@ -558,16 +554,16 @@ class Table
     public function setHeaderProperty($nColumn, $sPropertyKey, $sPropertyValue, $nRow = 0)
     {
         for ($i = 0; $i <= $nRow; $i++) {
-            if (!isset($this->tableHeaderType[ $i ])) {
-                $this->tableHeaderType[ $i ] = [];
+            if (!isset($this->tableHeaderType[$i])) {
+                $this->tableHeaderType[$i] = [];
             }
         }
 
-        if (!isset($this->tableHeaderType[ $nRow ][ $nColumn ])) {
-            $this->tableHeaderType[ $nRow ][ $nColumn ] = [];
+        if (!isset($this->tableHeaderType[$nRow][$nColumn])) {
+            $this->tableHeaderType[$nRow][$nColumn] = [];
         }
 
-        $this->tableHeaderType[ $nRow ][ $nColumn ][ $sPropertyKey ] = $sPropertyValue;
+        $this->tableHeaderType[$nRow][$nColumn][$sPropertyKey] = $sPropertyValue;
     }
 
 
@@ -606,7 +602,7 @@ class Table
 
         $iItems = count($this->headerCache);
         for ($i = 0; $i < $iItems; $i++) {
-            $this->headerHeight += $this->headerCache[ $i ][ 'HEIGHT' ];
+            $this->headerHeight += $this->headerCache[$i]['HEIGHT'];
         }
 
         if ($this->headerHeight > $this->pageHeight()) {
@@ -770,7 +766,7 @@ class Table
     {
         //$this->insertNewPage();
         $aData = [];
-        $aData[ 'ADD_PAGE_BREAK' ] = true;
+        $aData['ADD_PAGE_BREAK'] = true;
         $this->dataCache[] = array(
             'HEIGHT' => 0,
             'DATATYPE' => self::TB_DATA_TYPE_INSERT_NEW_PAGE
@@ -790,11 +786,11 @@ class Table
     {
         switch ($sDataType) {
             case 'header':
-                $aReference = $this->configuration[ 'HEADER' ];
+                $aReference = $this->configuration['HEADER'];
                 break;
 
             default:
-                $aReference = $this->configuration[ 'ROW' ];
+                $aReference = $this->configuration['ROW'];
                 break;
         }
 
@@ -812,11 +808,11 @@ class Table
     {
         switch ($sDataType) {
             case 'header':
-                return $this->configuration[ 'HEADER' ];
+                return $this->configuration['HEADER'];
                 break;
 
             default:
-                return $this->configuration[ 'ROW' ];
+                return $this->configuration['ROW'];
                 break;
         }
     }
@@ -825,30 +821,35 @@ class Table
     protected function getCellObject($data = null)
     {
         if (null === $data) {
-            $oCell = new Table\Cell\Multicell($this->pdf);
+            $cell = new Table\Cell\Multicell($this->pdf);
         } elseif (is_object($data)) {
-            $oCell = $data;
+            $cell = $data;
         } else {
-            $type = isset($data[ 'TYPE' ]) ? $data[ 'TYPE' ] : 'MULTICELL';
+            $type = isset($data['TYPE']) ? $data['TYPE'] : 'MULTICELL';
             $type = strtoupper($type);
 
-            if (!isset($this->typeMap[ $type ])) {
+            if (!isset($this->typeMap[$type])) {
                 trigger_error("Invalid cell type: $type", E_USER_ERROR);
             }
 
-            $class = $this->typeMap[ $type ];
+            $class = $this->typeMap[$type];
 
-            $oCell = new $class($this->pdf);
-            /** @var $oCell CellInterface */
-            $oCell->setProperties($data);
+            $cell = new $class($this->pdf);
+            /** @var $cell CellInterface */
+            if (!is_array($data)) {
+                $data = [
+                    'TEXT' => $data
+                ];
+            }
+            $cell->setProperties($data);
         }
 
-        if ($oCell instanceof Table\Cell\Multicell) {
-            /** @var $oCell Table\Cell\Multicell */
-            $oCell->attachMulticell($this->multicell);
+        if ($cell instanceof Table\Cell\Multicell) {
+            /** @var $cell Table\Cell\Multicell */
+            $cell->attachMulticell($this->multicell);
         }
 
-        return $oCell;
+        return $cell;
     }
 
 
@@ -891,13 +892,13 @@ class Table
 
         //calculate the maximum height of the cells
         for ($i = 0; $i < $this->columns; $i++) {
-            if (isset($data[ $i ])) {
-                $oCell = $this->getCellObject($data[ $i ]);
+            if (isset($data[$i])) {
+                $oCell = $this->getCellObject($data[$i]);
             } else {
                 $oCell = $this->getCellObject();
             }
 
-            $row[ $i ] = $oCell;
+            $row[$i] = $oCell;
 
             $oCell->setDefaultValues($this->getDefaultValues($sDataType));
             $oCell->setCellDrawWidth($this->getColumnWidth($i)); //copy this from the header settings
@@ -911,7 +912,7 @@ class Table
 
             if (!empty($aLastDataCache)) {
                 //there was at least one row before and was data or header
-                $cell = &$aLastDataCache[ 'DATA' ][ $i ];
+                $cell = &$aLastDataCache['DATA'][$i];
                 /** @var $cell CellInterface */
 
 
@@ -945,7 +946,7 @@ class Table
 
 
             /**
-             * If we have colspan then we ignore the "colspanned" cells
+             * If we have colspan then we ignore the 'colspanned' cells
              */
             if ($oCell->getColSpan() > 1) {
                 for ($j = 1; $j < $oCell->getColSpan(); $j++) {
@@ -1022,9 +1023,9 @@ class Table
         $iItems = count($aRefCache);
 
         for ($ix = $iStartIndex; $ix < $iItems; $ix++) {
-            $val = &$aRefCache[ $ix ];
+            $val = &$aRefCache[$ix];
 
-            if (!in_array($val[ 'DATATYPE' ], array(
+            if (!in_array($val['DATATYPE'], array(
                 'data',
                 'header'
             ))
@@ -1033,13 +1034,13 @@ class Table
             }
 
             //if there is no rowspan jump over
-            if (empty($val[ 'ROWSPAN' ])) {
+            if (empty($val['ROWSPAN'])) {
                 continue;
             }
 
-            foreach ($val[ 'ROWSPAN' ] as $k) {
+            foreach ($val['ROWSPAN'] as $k) {
                 /** @var $cell CellInterface */
-                $cell = &$val[ 'DATA' ][ $k ];
+                $cell = &$val['DATA'][$k];
 
                 if ($cell->getRowSpan() < 1) {
                     continue;
@@ -1057,8 +1058,8 @@ class Table
 
                 //calculate the sum of the Heights for the lines that are included in the rowspan
                 for ($i = 0; $i < $cell->getRowSpan(); $i++) {
-                    if (isset($aRefCache[ $ix + $i ])) {
-                        $h_rows += $aRefCache[ $ix + $i ][ 'HEIGHT' ];
+                    if (isset($aRefCache[$ix + $i])) {
+                        $h_rows += $aRefCache[$ix + $i]['HEIGHT'];
                     }
                 }
 
@@ -1075,8 +1076,8 @@ class Table
                     //calculate the value of the HEIGHT to be added to each row
                     $add_on = ($h_cell - $h_rows) / $cell->getRowSpan();
                     for ($i = 0; $i < $cell->getRowSpan(); $i++) {
-                        if (isset($aRefCache[ $ix + $i ])) {
-                            $aRefCache[ $ix + $i ][ 'HEIGHT' ] += $add_on;
+                        if (isset($aRefCache[$ix + $i])) {
+                            $aRefCache[$ix + $i]['HEIGHT'] += $add_on;
                         }
                     }
                 }
@@ -1090,20 +1091,20 @@ class Table
 
         foreach ($rowSpans as $val1) {
             /** @var CellAbstract $cell */
-            $cell = $val1[ 'reference_cell' ];
+            $cell = $val1['reference_cell'];
 
             $h_rows = 0;
             //calculate the sum of the Heights for the lines that are included in the rowspan
             for ($i = 0; $i < $cell->getRowSpan(); $i++) {
-                if (isset($aRefCache[ $val1[ 'row_id' ] + $i ])) {
-                    $h_rows += $aRefCache[ $val1[ 'row_id' ] + $i ][ 'HEIGHT' ];
+                if (isset($aRefCache[$val1['row_id'] + $i])) {
+                    $h_rows += $aRefCache[$val1['row_id'] + $i]['HEIGHT'];
                 }
             }
 
             $cell->setCellDrawHeight($h_rows);
 
             if (false == $this->tableSplit) {
-                $aRefCache[ $val1[ 'row_id' ] ][ 'HEIGHT_ROWSPAN' ] = $h_rows;
+                $aRefCache[$val1['row_id']]['HEIGHT_ROWSPAN'] = $h_rows;
             }
         }
     }
@@ -1138,9 +1139,9 @@ class Table
         $iItems = count($aDC);
 
         for ($i = 0; $i < $iItems; $i++) {
-            $val = &$aDC[ $i ];
+            $val = &$aDC[$i];
 
-            switch ($val[ 'DATATYPE' ]) {
+            switch ($val['DATATYPE']) {
                 case self::TB_DATA_TYPE_INSERT_NEW_PAGE:
                     $rowSpans = [];
                     $iLeftHeight = $iPageHeight;
@@ -1149,35 +1150,35 @@ class Table
                     break 2;
             }
 
-            $bIsHeader = $val[ 'DATATYPE' ] == 'header';
+            $bIsHeader = $val['DATATYPE'] == 'header';
 
             if (($bIsHeader) && ($bWasData)) {
                 $iLastDataKey = $iLastOkKey;
             }
 
-            if (isset($val[ 'ROWSPAN' ])) {
-                foreach ($val[ 'ROWSPAN' ] as $v) {
+            if (isset($val['ROWSPAN'])) {
+                foreach ($val['ROWSPAN'] as $v) {
                     $rowSpans[] = array(
                         $i,
                         $v
                     );
-                    $aDC[ $i ][ 'DATA' ][ $v ]->HEIGHT_LEFT_RW = $iLeftHeight;
+                    $aDC[$i]['DATA'][$v]->HEIGHT_LEFT_RW = $iLeftHeight;
                 }
             }
 
             $iLeftHeightLast = $iLeftHeight;
 
-            $iRowHeight = $val[ 'HEIGHT' ];
+            $iRowHeight = $val['HEIGHT'];
             $iRowHeightRowspan = 0;
-            if ((false == $this->tableSplit) && (isset($val[ 'HEIGHT_ROWSPAN' ]))) {
-                $iRowHeightRowspan = $val[ 'HEIGHT_ROWSPAN' ];
+            if ((false == $this->tableSplit) && (isset($val['HEIGHT_ROWSPAN']))) {
+                $iRowHeightRowspan = $val['HEIGHT_ROWSPAN'];
             }
 
             $iLeftHeightRowspan = $iLeftHeight - $iRowHeightRowspan;
             $iLeftHeight -= $iRowHeight;
 
             //if (isset($val['DATA'][0]['IGNORE_PAGE_BREAK']) && ($iLeftHeight < 0)) {
-            if (isset($val[ 'DATA' ][ 0 ]->IGNORE_PAGE_BREAK) && ($iLeftHeight < 0)) {
+            if (isset($val['DATA'][0]->IGNORE_PAGE_BREAK) && ($iLeftHeight < 0)) {
                 $iLeftHeight = 0;
             }
 
@@ -1234,7 +1235,7 @@ class Table
                         $bSplitCommand = $this->tableSplit;
 
                         //SITUATION 2:
-                        if ($val[ 'HEIGHT' ] > ($iPageHeight - $this->headerHeight)) {
+                        if ($val['HEIGHT'] > ($iPageHeight - $this->headerHeight)) {
                             //even if the tableSplit is OFF - split the data!!!
                             $bSplitCommand = true;
                         }
@@ -1254,7 +1255,7 @@ class Table
 
                             //if we can draw on this page at least one line from the cells
 
-                            $aData = $val[ 'DATA' ];
+                            $aData = $val['DATA'];
 
                             $fRowH = $iLeftHeightLast;
                             #$fRowH = 0;
@@ -1267,9 +1268,9 @@ class Table
                                 /** @var $cell CellAbstract */
                                 /** @var $cellSplit CellAbstract */
 
-                                $aTData[ $j ] = $aData[ $j ];
-                                $cellSplit = &$aTData[ $j ];
-                                $cell = &$aData[ $j ];
+                                $aTData[$j] = $aData[$j];
+                                $cellSplit = &$aTData[$j];
+                                $cell = &$aData[$j];
 
                                 /**
                                  * The cell is Skipped or is a Rowspan.
@@ -1280,7 +1281,7 @@ class Table
                                 }
 
                                 if ($cell->isSplittable()) {
-                                    list($cellSplit) = $cell->split($val[ 'HEIGHT' ], $iLeftHeightLast);
+                                    list($cellSplit) = $cell->split($val['HEIGHT'], $iLeftHeightLast);
                                     $cell->setCellDrawHeight($iLeftHeightLast);
                                 } else {
                                     $cellSplit = clone $cell;
@@ -1296,22 +1297,22 @@ class Table
                                 $fRowHTdata = max($fRowHTdata, $cellSplit->getCellDrawHeight());
                             }
 
-                            $val[ 'HEIGHT' ] = $fRowH;
-                            $val[ 'DATA' ] = $aData;
+                            $val['HEIGHT'] = $fRowH;
+                            $val['DATA'] = $aData;
 
                             $v_new = $val;
-                            $v_new[ 'HEIGHT' ] = $fRowHTdata;
-                            $v_new[ 'ROWSPAN' ] = [];
+                            $v_new['HEIGHT'] = $fRowHTdata;
+                            $v_new['ROWSPAN'] = [];
                             /**
                              * Parse separately the rows with the ROWSPAN
                              */
 
                             $bNeedParseCache = false;
 
-                            $rowSpan = $aDC[ $i ][ 'ROWSPAN' ];
+                            $rowSpan = $aDC[$i]['ROWSPAN'];
 
                             foreach ($rowSpans as $rws) {
-                                $rData = &$aDC[ $rws[ 0 ] ][ 'DATA' ][ $rws[ 1 ] ];
+                                $rData = &$aDC[$rws[0]]['DATA'][$rws[1]];
                                 /** @var $rData CellAbstract */
 
                                 if ($rData->isPropertySet('HEIGHT_LEFT_RW') && $rData->getCellDrawHeight() > $rData->HEIGHT_LEFT_RW) {
@@ -1323,13 +1324,13 @@ class Table
                                      */
 
                                     if ($rData->isSplittable()) {
-                                        list($aTData[ $rws[ 1 ] ], $fHeightSplit) = $rData->split(
+                                        list($aTData[$rws[1]], $fHeightSplit) = $rData->split(
                                             $rData->getCellDrawHeight(),
                                             $rData->HEIGHT_LEFT_RW
                                         );
                                         $rData->setCellDrawHeight($rData->HEIGHT_LEFT_RW);
                                     } else {
-                                        $aTData[ $rws[ 1 ] ] = clone $rData;
+                                        $aTData[$rws[1]] = clone $rData;
 
                                         $o = new EmptyCell($this->pdf);
                                         $o->copyProperties($rData);
@@ -1339,15 +1340,15 @@ class Table
                                         //$rData->setSkipped(true);
                                     }
 
-                                    $aTData[ $rws[ 1 ] ]->setRowSpan($aTData[ $rws[ 1 ] ]->getRowSpan() - ($i - $rws[ 0 ]));
+                                    $aTData[$rws[1]]->setRowSpan($aTData[$rws[1]]->getRowSpan() - ($i - $rws[0]));
 
-                                    $v_new[ 'ROWSPAN' ][] = $rws[ 1 ];
+                                    $v_new['ROWSPAN'][] = $rws[1];
 
                                     $bNeedParseCache = true;
                                 }
                             }
 
-                            $v_new[ 'DATA' ] = $aTData;
+                            $v_new['DATA'] = $aTData;
                             $this->dataOnCurrentPage = true;
 
                             //Insert the new page, and get the new number of the lines
@@ -1371,13 +1372,13 @@ class Table
 
                             $bNeedParseCache = false;
 
-                            $rowSpan = $aDC[ $i ][ 'ROWSPAN' ];
+                            $rowSpan = $aDC[$i]['ROWSPAN'];
 
                             foreach ($rowSpans as $rws) {
-                                $rData = &$aDC[ $rws[ 0 ] ][ 'DATA' ][ $rws[ 1 ] ];
+                                $rData = &$aDC[$rws[0]]['DATA'][$rws[1]];
                                 /** @var $rData CellAbstract */
 
-                                if ($rws[ 0 ] == $i) {
+                                if ($rws[0] == $i) {
                                     continue;
                                 } //means that this was added at the last line, that will not appear on this page
 
@@ -1399,12 +1400,12 @@ class Table
 
                                     $rData->setCellDrawHeight($rData->HEIGHT_LEFT_RW - $iLeftHeightLast);
 
-                                    $aTData->setRowSpan($aTData->getRowSpan() - ($i - $rws[ 0 ]));
+                                    $aTData->setRowSpan($aTData->getRowSpan() - ($i - $rws[0]));
 
-                                    $aDC[ $i ][ 'DATA' ][ $rws[ 1 ] ] = $aTData;
+                                    $aDC[$i]['DATA'][$rws[1]] = $aTData;
 
-                                    $rowSpan[] = $rws[ 1 ];
-                                    $aDC[ $i ][ 'ROWSPAN' ] = $rowSpan;
+                                    $rowSpan[] = $rws[1];
+                                    $aDC[$i]['ROWSPAN'] = $rowSpan;
 
                                     $bNeedParseCache = true;
                                 }
@@ -1477,10 +1478,10 @@ class Table
 
         //shift the array with the number of lines that the header contains + one line for the new page
         for ($j = $iItems; $j > $iIndex; $j--) {
-            $aDC[ $j + $nHeaderLines + $iShift - $nIdx ] = $aDC[ $j - 1 ];
+            $aDC[$j + $nHeaderLines + $iShift - $nIdx] = $aDC[$j - 1];
         }
 
-        $aDC[ $iIndex + $iShift ] = array(
+        $aDC[$iIndex + $iShift] = array(
             'HEIGHT' => 0,
             'DATATYPE' => 'new_page'
         );
@@ -1492,7 +1493,7 @@ class Table
             //insert the header into the corresponding positions
             foreach ($this->headerCache as $rHeaderVal) {
                 $j++;
-                $aDC[ $iIndex + $j ] = $rHeaderVal;
+                $aDC[$iIndex + $j] = $rHeaderVal;
             }
 
             $this->headerOnCurrentPage = true;
@@ -1500,7 +1501,7 @@ class Table
 
         if (1 == $iShift) {
             $j++;
-            $aDC[ $iIndex + $j ] = $rNewData;
+            $aDC[$iIndex + $j] = $rNewData;
         }
 
         $this->dataOnCurrentPage = false;
@@ -1529,23 +1530,23 @@ class Table
         $iItems = count($dataCache);
 
         for ($k = 0; $k < $iItems; $k++) {
-            $val = &$dataCache[ $k ];
+            $val = &$dataCache[$k];
 
             //each array contains one line
             $this->tbAlign();
 
-            if ($val[ 'DATATYPE' ] == 'new_page') {
+            if ($val['DATATYPE'] == 'new_page') {
                 //add a new page
                 $this->addPage();
                 continue;
             }
 
-            $data = &$val[ 'DATA' ];
+            $data = &$val['DATA'];
 
             //Draw the cells of the row
             for ($i = 0; $i < $this->columns; $i++) {
                 /** @var $cell CellInterface */
-                $cell = &$data[ $i ];
+                $cell = &$data[$i];
 
                 //Save the current position
                 $x = $this->pdf->GetX();
@@ -1556,8 +1557,8 @@ class Table
                     //$data[$i]->render($rowHeight = $val['HEIGHT']);
 
 
-                    if ($val[ 'HEIGHT' ] > $cell->getCellDrawHeight()) {
-                        $cell->setCellDrawHeight($val[ 'HEIGHT' ]);
+                    if ($val['HEIGHT'] > $cell->getCellDrawHeight()) {
+                        $cell->setCellDrawHeight($val['HEIGHT']);
                     }
 
                     $cell->render();
@@ -1571,7 +1572,7 @@ class Table
             $this->dataOnCurrentPage = true;
 
             //Go to the next line
-            $this->pdf->Ln($val[ 'HEIGHT' ]);
+            $this->pdf->Ln($val['HEIGHT']);
         }
 
         $this->pdf->SetAutoPageBreak($oldAutoPageBreak, $oldbMargin);
@@ -1622,17 +1623,18 @@ class Table
 
 
     /**
-     * Sets current tag to specified style
+     * Sets the attrbitues for the specified tag
      *
-     * @param $tag string - tag name
-     * @param $family string - text font family name
-     * @param $style string - text font style
-     * @param $size number - text font size
-     * @param $color string|array - text color
+     * @param string $tag tag name/key
+     * @param float|null $fontSize font size
+     * @param string|null $fontStyle font style
+     * @param string|array|null $color
+     * @param string|null $fontFamily font family
+     * @param string $inherit
      */
-    public function setStyle($tag, $family, $style, $size, $color)
+    public function setStyle($tag, $fontSize = null, $fontStyle = null, $color = null, $fontFamily = null, $inherit = 'base')
     {
-        $this->multicell->setStyle($tag, $family, $style, $size, $color);
+        $this->multicell->setStyle($tag, $fontSize, $fontStyle, $color, $fontFamily, $inherit);
     }
 
 
@@ -1647,8 +1649,8 @@ class Table
     public static function getValue($var, $index = '', $default = '')
     {
         if (is_array($var)) {
-            if (isset($var[ $index ])) {
-                return $var[ $index ];
+            if (isset($var[$index])) {
+                return $var[$index];
             }
         }
 
@@ -1665,7 +1667,7 @@ class Table
      */
     protected function getTableConfig($key)
     {
-        return self::getValue($this->configuration[ 'TABLE' ], $key);
+        return self::getValue($this->configuration['TABLE'], $key);
     }
 
 
@@ -1675,7 +1677,7 @@ class Table
      */
     public function setTableConfig($aConfig)
     {
-        $this->configuration[ 'TABLE' ] = array_merge($this->configuration[ 'TABLE' ], $aConfig);
+        $this->configuration['TABLE'] = array_merge($this->configuration['TABLE'], $aConfig);
 
         // update the Margin X
         // @see https://tracker.interpid.eu/issues/896
@@ -1689,7 +1691,7 @@ class Table
      */
     public function setHeaderConfig($aConfig)
     {
-        $this->configuration[ 'HEADER' ] = array_merge($this->configuration[ 'HEADER' ], $aConfig);
+        $this->configuration['HEADER'] = array_merge($this->configuration['HEADER'], $aConfig);
     }
 
     /**
@@ -1699,7 +1701,7 @@ class Table
      */
     public function setRowConfig($aConfig)
     {
-        $this->configuration[ 'ROW' ] = array_merge($this->configuration[ 'ROW' ], $aConfig);
+        $this->configuration['ROW'] = array_merge($this->configuration['ROW'], $aConfig);
     }
 
 
@@ -1712,7 +1714,7 @@ class Table
      */
     protected function getHeaderConfig($key)
     {
-        return self::getValue($this->configuration[ 'HEADER' ], $key);
+        return self::getValue($this->configuration['HEADER'], $key);
     }
 
 
@@ -1725,7 +1727,7 @@ class Table
      */
     protected function getRowConfig($key)
     {
-        return self::getValue($this->configuration[ 'ROW' ], $key);
+        return self::getValue($this->configuration['ROW'], $key);
     }
 
 
@@ -1734,14 +1736,13 @@ class Table
      * The array contains values for the Table style, Header Style and Data Style.
      * All these values can be overwritten when creating the table or in the case of CELLS for every individual cell
      *
-     * @return array The Defalt Configuration
+     * @return array The Default Configuration
      */
     protected function getDefaultConfiguration()
     {
         $aDefaultConfiguration = [];
 
         require PDF_TABLE_CONFIG_PATH . '/table.config.php';
-
         return $aDefaultConfiguration;
     }
 
@@ -1802,7 +1803,7 @@ class Table
             trigger_error("Invalid class specified: $class", E_USER_ERROR);
         }
 
-        $this->typeMap[ strtoupper($name) ] = $class;
+        $this->typeMap[strtoupper($name)] = $class;
     }
 
 
