@@ -1,0 +1,89 @@
+[
+    {
+        "wiki-page": "FPDF Table Examples",
+        "wiki-parent": "wiki",
+        "template": "docs/pages/fpdf-multicell-examples.md"
+    },
+    {
+        "wiki-page": "fpdf-table-examples-preview",
+        "wiki-parent": "wiki",
+        "template": "docs/pages/fpdf-multicell-examples-preview.md",
+        "attachments": [
+            "tests/data/example-table-1-overview.png",
+            "tests/data/example-table-2-overview.png",
+            "tests/data/example-table-3-detailed.png",
+            "tests/data/example-table-4-override.png"
+        ]
+    },
+    {
+        "wiki-page": "FPDF Table - Example 1 - Overview",
+        "wiki-parent": "FPDF Table Examples",
+        "title": "FPDF Table - Example 1 - Overview",
+        "code-files": [
+            "examples/example-table-1-overview.php"
+        ],
+        "image-inline": "example-table-1-overview.png",
+        "content": "",
+        "collapsed-files": [
+            "examples/table/code-example1.php",
+            "examples/table/code-example2.php",
+            "examples/table/code-example3.php",
+            "examples/table/code-example-transparent.php",
+            "examples/table/code-example-alignments.php",
+            "examples/table/settings.php"
+        ],
+        "template": "docs/templates/pdf-example.md",
+        "attachments": [
+            "tests/data/example-table-1-overview.pdf",
+            "tests/data/example-table-1-overview.png"
+        ]
+    },
+    {
+        "wiki-page": "FPDF Table - Example 2 - Overview",
+        "wiki-parent": "FPDF Table Examples",
+        "title": "FPDF Table - Example 2 - Overview",
+        "code-files": [
+            "examples/example-table-2-overview.php"
+        ],
+        "image-inline": "example-table-2-overview.png",
+        "collapsed-files": [
+        ],
+        "template": "docs/templates/pdf-example.md",
+        "attachments": [
+            "tests/data/example-table-2-overview.pdf",
+            "tests/data/example-table-2-overview.png"
+        ]
+    },
+    {
+        "wiki-page": "FPDF Table - Example 3 - Table Details",
+        "wiki-parent": "FPDF Table Examples",
+        "title": "FPDF Table - Example 3 - Table Details",
+        "code-files": [
+            "examples/example-table-3-detailed.php"
+        ],
+        "image-inline": "example-table-3-detailed.png",
+        "collapsed-files": [
+            "examples/table_example1.php",
+            "examples/table_example2.php"
+        ],
+        "template": "docs/templates/pdf-example.md",
+        "attachments": [
+            "tests/data/example-table-3-detailed.pdf",
+            "tests/data/example-table-3-detailed.png"
+        ]
+    },
+    {
+        "wiki-page": "FPDF Table - Example 4 - Override",
+        "wiki-parent": "FPDF Table Examples",
+        "title": "FPDF Table - Example 4 - Override",
+        "code-files": [
+            "examples/example-table-4-override.php"
+        ],
+        "image-inline": "example-table-4-override.png",
+        "template": "docs/templates/pdf-example.md",
+        "attachments": [
+            "tests/data/example-table-4-override.pdf",
+            "tests/data/example-table-4-override.png"
+        ]
+    }
+]

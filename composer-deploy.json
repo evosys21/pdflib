@@ -1,0 +1,24 @@
+{
+    "name": "interpid/fpdf",
+    "description": "FPDF Addons",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Interpid",
+            "email": "office@interpid.eu"
+        }
+    ],
+    "require": {
+        "ext-mbstring": "*",
+        "ext-json": "*",
+        "setasign/fpdf": "^1.8"
+    },
+    "autoload": {
+        "classmap": [
+            "library/interpid"
+        ],
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    }
+}
