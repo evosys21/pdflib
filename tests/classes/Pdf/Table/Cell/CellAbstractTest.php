@@ -12,8 +12,8 @@
 
 namespace Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell;
 
-use Interpid\PdfLib\BaseTestCase;
 use Interpid\PdfLib\PdfInterface;
+use Interpid\PdfLib\Tests\BaseTestCase;
 use PHPUnit\Framework\Error\Notice;
 
 /**
