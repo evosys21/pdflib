@@ -4,9 +4,11 @@
  */
 
 
-require_once 'AbstractMock.php';
+namespace Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell;
 
 use Interpid\PdfLib\PdfInterface;
+use Interpid\PdfLib\Tests\BaseTestCase;
+use PHPUnit\Framework\Error\Notice;
 
 class CellAbstractTest extends BaseTestCase
 {
@@ -17,14 +19,14 @@ class CellAbstractTest extends BaseTestCase
 
         $o = new CellAbstractMock($pdf);
 
-        $this->assertInstanceOf('CellAbstractMock', $o);
+        $this->assertInstanceOf(CellAbstractMock::class, $o);
 
         //case 2
         $pdfi = new PdfInterface($pdf);
 
         $o = new CellAbstractMock($pdfi);
 
-        $this->assertInstanceOf('CellAbstractMock', $o);
+        $this->assertInstanceOf(CellAbstractMock::class, $o);
     }
 
     public function testSimpleGettersAndSetters()
@@ -281,7 +283,7 @@ class CellAbstractTest extends BaseTestCase
         $pdf = $this->getPdfObject();
         $o = new CellAbstractMock($pdf);
 
-        PHPUnit\Framework\Error\Notice::$enabled = false;
+        Notice::$enabled = false;
         $error_level = ini_get('error_reporting');
 
         error_reporting(0);

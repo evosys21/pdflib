@@ -4,10 +4,9 @@
  * CellAbstractMock
  *
  * Mock class just to unit-test an abstract class
- *
- * @property mixed TEST
- * @property mixed TEST2
  */
+
+namespace Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell;
 
 use Interpid\PdfLib\Table\Cell\CellAbstract;
 
