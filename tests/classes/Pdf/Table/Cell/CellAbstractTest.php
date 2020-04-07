@@ -83,19 +83,19 @@ class CellAbstractTest extends BaseTestCase
     {
         $pdf = $this->getPdfObject();
 
-        $o = new CellAbstractMock($pdf);
+        $mock = new CellAbstractMock($pdf);
 
-        $o->setAlignVertical('');
-        $this->assertEquals('M', $o->getAlignVertical());
+        $mock->setAlignVertical('');
+        $this->assertEquals('M', $mock->getAlignVertical());
 
-        $a = ['T', 'B', 'M'];
-        foreach ($a as $val) {
-            $o->setAlignVertical($val);
-            $this->assertEquals($val, $o->getAlignVertical());
+        $data = ['T', 'B', 'M'];
+        foreach ($data as $val) {
+            $mock->setAlignVertical($val);
+            $this->assertEquals($val, $mock->getAlignVertical());
         }
 
-        $o->setAlignVertical('X');
-        $this->assertEquals('M', $o->getAlignVertical());
+        $mock->setAlignVertical('X');
+        $this->assertEquals('M', $mock->getAlignVertical());
     }
 
     public function _testSetAlign()
@@ -159,26 +159,26 @@ class CellAbstractTest extends BaseTestCase
         $pdf = $this->getPdfObject();
 
         $aProps[ 'COLSPAN' ] = 0;
-        $o = new CellAbstractMock($pdf);
-        $o->setProperties($aProps);
-        $this->assertEquals(1, $o->getColSpan());
+        $mock = new CellAbstractMock($pdf);
+        $mock->setProperties($aProps);
+        $this->assertEquals(1, $mock->getColSpan());
 
         $aProps[ 'COLSPAN' ] = 1;
-        $o = new CellAbstractMock($pdf);
-        $o->setProperties($aProps);
-        $this->assertEquals(1, $o->getColSpan());
+        $mock = new CellAbstractMock($pdf);
+        $mock->setProperties($aProps);
+        $this->assertEquals(1, $mock->getColSpan());
 
         $aProps[ 'COLSPAN' ] = 2;
-        $o = new CellAbstractMock($pdf);
-        $o->setProperties($aProps);
-        $this->assertEquals($aProps[ 'COLSPAN' ], $o->getColSpan());
+        $mock = new CellAbstractMock($pdf);
+        $mock->setProperties($aProps);
+        $this->assertEquals($aProps[ 'COLSPAN' ], $mock->getColSpan());
     }
 
 
     public function testSetProperties()
     {
         $pdf = $this->getPdfObject();
-        $o = new CellAbstractMock($pdf);
+        $mock = new CellAbstractMock($pdf);
 
         $aProps = array(
             'ALIGN' => 'R',
@@ -192,35 +192,35 @@ class CellAbstractTest extends BaseTestCase
             'BACKGROUND_COLOR' => [5, 6, 7],
         );
 
-        $o->setProperties($aProps);
+        $mock->setProperties($aProps);
         //$this->assertEquals($aProps['ALIGN'], $o->getAlignVertical())
-        $this->assertEquals($aProps[ 'VERTICAL_ALIGN' ], $o->getAlignVertical());
-        $this->assertEquals($aProps[ 'COLSPAN' ], $o->getColSpan());
-        $this->assertEquals($aProps[ 'ROWSPAN' ], $o->getRowSpan());
-        $this->assertEquals($aProps[ 'PADDING' ][ 0 ], $o->getPaddingTop());
-        $this->assertEquals($aProps[ 'PADDING' ][ 1 ], $o->getPaddingRight());
-        $this->assertEquals($aProps[ 'PADDING' ][ 2 ], $o->getPaddingBottom());
-        $this->assertEquals($aProps[ 'PADDING' ][ 3 ], $o->getPaddingLeft());
-        $this->assertEquals($aProps[ 'BORDER_TYPE' ], $o->getBorderType());
-        $this->assertEquals($aProps[ 'BORDER_SIZE' ], $o->getBorderSize());
-        $this->assertEquals($aProps[ 'BORDER_COLOR' ], $o->getBorderColor());
-        $this->assertEquals($aProps[ 'BACKGROUND_COLOR' ], $o->getBackgroundColor());
+        $this->assertEquals($aProps[ 'VERTICAL_ALIGN' ], $mock->getAlignVertical());
+        $this->assertEquals($aProps[ 'COLSPAN' ], $mock->getColSpan());
+        $this->assertEquals($aProps[ 'ROWSPAN' ], $mock->getRowSpan());
+        $this->assertEquals($aProps[ 'PADDING' ][ 0 ], $mock->getPaddingTop());
+        $this->assertEquals($aProps[ 'PADDING' ][ 1 ], $mock->getPaddingRight());
+        $this->assertEquals($aProps[ 'PADDING' ][ 2 ], $mock->getPaddingBottom());
+        $this->assertEquals($aProps[ 'PADDING' ][ 3 ], $mock->getPaddingLeft());
+        $this->assertEquals($aProps[ 'BORDER_TYPE' ], $mock->getBorderType());
+        $this->assertEquals($aProps[ 'BORDER_SIZE' ], $mock->getBorderSize());
+        $this->assertEquals($aProps[ 'BORDER_COLOR' ], $mock->getBorderColor());
+        $this->assertEquals($aProps[ 'BACKGROUND_COLOR' ], $mock->getBackgroundColor());
     }
 
     public function testSetInternValue()
     {
         $pdf = $this->getPdfObject();
-        $o = new CellAbstractMock($pdf);
-        $o->setProperties(['someValue' => 1, 'TEST' => 2]);
+        $mock = new CellAbstractMock($pdf);
+        $mock->setProperties(['someValue' => 1, 'TEST' => 2]);
 
-        $this->assertEquals(1, $o->getSomeValue());
-        $this->assertEquals(2, $o->TEST);
+        $this->assertEquals(1, $mock->getSomeValue());
+        $this->assertEquals(2, $mock->TEST);
     }
 
     public function testSetDefaultValues()
     {
         $pdf = $this->getPdfObject();
-        $o = new CellAbstractMock($pdf);
+        $mock = new CellAbstractMock($pdf);
 
         $aProps = array(
             'ALIGN' => 'R',
@@ -243,63 +243,63 @@ class CellAbstractTest extends BaseTestCase
         );
 
 
-        $o->setProperties($aProps);
-        $o->setDefaultValues($aDefault);
+        $mock->setProperties($aProps);
+        $mock->setDefaultValues($aDefault);
 
         //$this->assertEquals($aProps['ALIGN'], $o->getAlignVertical())
-        $this->assertEquals($aProps[ 'VERTICAL_ALIGN' ], $o->getAlignVertical());
-        $this->assertEquals($aProps[ 'COLSPAN' ], $o->getColSpan());
-        $this->assertEquals($aProps[ 'ROWSPAN' ], $o->getRowSpan());
-        $this->assertEquals($aDefault[ 'PADDING' ][ 1 ], $o->getPaddingRight());
-        $this->assertEquals($aDefault[ 'PADDING' ][ 2 ], $o->getPaddingBottom());
-        $this->assertEquals($aDefault[ 'PADDING' ][ 3 ], $o->getPaddingLeft());
-        $this->assertEquals($aDefault[ 'BORDER_TYPE' ], $o->getBorderType());
-        $this->assertEquals($aDefault[ 'BORDER_SIZE' ], $o->getBorderSize());
-        $this->assertEquals($aDefault[ 'BORDER_COLOR' ], $o->getBorderColor());
-        $this->assertEquals($aProps[ 'BACKGROUND_COLOR' ], $o->getBackgroundColor());
+        $this->assertEquals($aProps[ 'VERTICAL_ALIGN' ], $mock->getAlignVertical());
+        $this->assertEquals($aProps[ 'COLSPAN' ], $mock->getColSpan());
+        $this->assertEquals($aProps[ 'ROWSPAN' ], $mock->getRowSpan());
+        $this->assertEquals($aDefault[ 'PADDING' ][ 1 ], $mock->getPaddingRight());
+        $this->assertEquals($aDefault[ 'PADDING' ][ 2 ], $mock->getPaddingBottom());
+        $this->assertEquals($aDefault[ 'PADDING' ][ 3 ], $mock->getPaddingLeft());
+        $this->assertEquals($aDefault[ 'BORDER_TYPE' ], $mock->getBorderType());
+        $this->assertEquals($aDefault[ 'BORDER_SIZE' ], $mock->getBorderSize());
+        $this->assertEquals($aDefault[ 'BORDER_COLOR' ], $mock->getBorderColor());
+        $this->assertEquals($aProps[ 'BACKGROUND_COLOR' ], $mock->getBackgroundColor());
     }
 
     public function testCellWidth()
     {
         $pdf = $this->getPdfObject();
-        $o = new CellAbstractMock($pdf);
+        $mock = new CellAbstractMock($pdf);
 
-        $o->setCellWidth(-1);
-        $this->assertEquals(0, $o->getCellWidth());
+        $mock->setCellWidth(-1);
+        $this->assertEquals(0, $mock->getCellWidth());
 
-        $o->setCellWidth(0);
-        $this->assertEquals(0, $o->getCellWidth());
+        $mock->setCellWidth(0);
+        $this->assertEquals(0, $mock->getCellWidth());
 
-        $o->setCellWidth(10);
-        $this->assertEquals(10, $o->getCellWidth());
+        $mock->setCellWidth(10);
+        $this->assertEquals(10, $mock->getCellWidth());
     }
 
     public function testIsPropertySet()
     {
         $pdf = $this->getPdfObject();
-        $o = new CellAbstractMock($pdf);
+        $mock = new CellAbstractMock($pdf);
 
-        $this->assertFalse($o->isPropertySet('TEST'));
+        $this->assertFalse($mock->isPropertySet('TEST'));
 
-        $o->TEST = 2;
+        $mock->TEST = 2;
 
-        $this->assertTrue($o->isPropertySet('TEST'));
+        $this->assertTrue($mock->isPropertySet('TEST'));
 
         $this->expectException('PHPUnit\Framework\Error\Notice');
-        $this->assertInstanceOf('PHPUnit\Framework\Error\Notice', $o->TEST2);
+        $this->assertInstanceOf('PHPUnit\Framework\Error\Notice', $mock->TEST2);
     }
 
     public function testIsPropertySetReturnValue()
     {
         $pdf = $this->getPdfObject();
-        $o = new CellAbstractMock($pdf);
+        $mock = new CellAbstractMock($pdf);
 
         Notice::$enabled = false;
         $error_level = ini_get('error_reporting');
 
         error_reporting(0);
 
-        $this->assertEquals(null, $o->TEST2);
+        $this->assertEquals(null, $mock->TEST2);
 
         error_reporting($error_level);
     }
@@ -309,12 +309,12 @@ class CellAbstractTest extends BaseTestCase
     {
         $pdf = $this->getPdfObject();
 
-        $o = new CellAbstractMock($pdf);
+        $mock = new CellAbstractMock($pdf);
 
         $aValues = [-1, 0, 1, 2, '', 'bla', 'test'];
         foreach ($aValues as $val) {
-            $o->$setter($val);
-            $this->assertEquals($val, $o->$getter());
+            $mock->$setter($val);
+            $this->assertEquals($val, $mock->$getter());
         }
     }
 
@@ -322,33 +322,33 @@ class CellAbstractTest extends BaseTestCase
     {
         $pdf = $this->getPdfObject();
 
-        $o = new CellAbstractMock($pdf);
+        $mock = new CellAbstractMock($pdf);
 
-        $o->$setter(-1);
-        $this->assertEquals(1, $o->$getter());
+        $mock->$setter(-1);
+        $this->assertEquals(1, $mock->$getter());
 
-        $o->$setter(0);
-        $this->assertEquals(1, $o->$getter());
+        $mock->$setter(0);
+        $this->assertEquals(1, $mock->$getter());
 
-        $o->$setter(1);
-        $this->assertEquals(1, $o->$getter());
+        $mock->$setter(1);
+        $this->assertEquals(1, $mock->$getter());
 
-        $o->$setter(2);
-        $this->assertEquals(2, $o->$getter());
+        $mock->$setter(2);
+        $this->assertEquals(2, $mock->$getter());
     }
 
 
     public function testRenderCellLayout()
     {
         $pdf = $this->getPdfObject();
-        $o = new CellAbstractMock($pdf);
+        $mock = new CellAbstractMock($pdf);
 
-        $o->setCellWidth(10);
-        $o->setCellHeight(10);
-        $o->setCellDrawWidth(20);
-        $o->setCellDrawHeight(20);
+        $mock->setCellWidth(10);
+        $mock->setCellHeight(10);
+        $mock->setCellDrawWidth(20);
+        $mock->setCellDrawHeight(20);
 
-        $o->renderCellLayout();
+        $mock->renderCellLayout();
 
         $filename = tempnam(sys_get_temp_dir(), 'fpdf');
 
@@ -364,7 +364,7 @@ class CellAbstractTest extends BaseTestCase
     public function testCopyProperties()
     {
         $pdf = $this->getPdfObject();
-        $o = new CellAbstractMock($pdf);
+        $mock = new CellAbstractMock($pdf);
         $source = new CellAbstractMock($pdf);
 
         $aProps = array(
@@ -380,26 +380,26 @@ class CellAbstractTest extends BaseTestCase
         );
 
         $source->setProperties($aProps);
-        $o->copyProperties($source);
+        $mock->copyProperties($source);
 
-        $this->assertEquals($aProps[ 'VERTICAL_ALIGN' ], $o->getAlignVertical());
-        $this->assertEquals($aProps[ 'COLSPAN' ], $o->getColSpan());
-        $this->assertEquals($aProps[ 'ROWSPAN' ], $o->getRowSpan());
-        $this->assertEquals($aProps[ 'PADDING' ][ 0 ], $o->getPaddingTop());
-        $this->assertEquals($aProps[ 'PADDING' ][ 1 ], $o->getPaddingRight());
-        $this->assertEquals($aProps[ 'PADDING' ][ 2 ], $o->getPaddingBottom());
-        $this->assertEquals($aProps[ 'PADDING' ][ 3 ], $o->getPaddingLeft());
-        $this->assertEquals($aProps[ 'BORDER_TYPE' ], $o->getBorderType());
-        $this->assertEquals($aProps[ 'BORDER_SIZE' ], $o->getBorderSize());
-        $this->assertEquals($aProps[ 'BORDER_COLOR' ], $o->getBorderColor());
-        $this->assertEquals($aProps[ 'BACKGROUND_COLOR' ], $o->getBackgroundColor());
+        $this->assertEquals($aProps[ 'VERTICAL_ALIGN' ], $mock->getAlignVertical());
+        $this->assertEquals($aProps[ 'COLSPAN' ], $mock->getColSpan());
+        $this->assertEquals($aProps[ 'ROWSPAN' ], $mock->getRowSpan());
+        $this->assertEquals($aProps[ 'PADDING' ][ 0 ], $mock->getPaddingTop());
+        $this->assertEquals($aProps[ 'PADDING' ][ 1 ], $mock->getPaddingRight());
+        $this->assertEquals($aProps[ 'PADDING' ][ 2 ], $mock->getPaddingBottom());
+        $this->assertEquals($aProps[ 'PADDING' ][ 3 ], $mock->getPaddingLeft());
+        $this->assertEquals($aProps[ 'BORDER_TYPE' ], $mock->getBorderType());
+        $this->assertEquals($aProps[ 'BORDER_SIZE' ], $mock->getBorderSize());
+        $this->assertEquals($aProps[ 'BORDER_COLOR' ], $mock->getBorderColor());
+        $this->assertEquals($aProps[ 'BACKGROUND_COLOR' ], $mock->getBackgroundColor());
     }
 
     public function _testProcessContent()
     {
         $pdf = $this->getPdfObject();
-        $o = new CellAbstractMock($pdf);
-        $o->processContent();
+        $mock = new CellAbstractMock($pdf);
+        $mock->processContent();
     }
 
 
@@ -413,20 +413,20 @@ class CellAbstractTest extends BaseTestCase
     {
         $pdf = $this->getPdfObject();
 
-        $o = new CellAbstractMock($pdf);
+        $mock = new CellAbstractMock($pdf);
 
-        $o->$setter(-1);
-        $this->assertEquals(0, $o->$getter());
+        $mock->$setter(-1);
+        $this->assertEquals(0, $mock->$getter());
 
-        $o->$setter(0);
-        $this->assertEquals(0, $o->$getter());
+        $mock->$setter(0);
+        $this->assertEquals(0, $mock->$getter());
 
-        $o->$setter(0.1);
-        $this->assertEquals(0.1, $o->$getter());
+        $mock->$setter(0.1);
+        $this->assertEquals(0.1, $mock->$getter());
 
 
-        $o->$setter(1);
-        $this->assertEquals(1, $o->$getter());
+        $mock->$setter(1);
+        $this->assertEquals(1, $mock->$getter());
     }
 
     /**
@@ -439,19 +439,19 @@ class CellAbstractTest extends BaseTestCase
     {
         $pdf = $this->getPdfObject();
 
-        $o = new CellAbstractMock($pdf);
+        $mock = new CellAbstractMock($pdf);
 
         $aTrue = [1, 'true', true];
         $aFalse = [0, false, ''];
 
         foreach ($aTrue as $val) {
-            $o->$setter($val);
-            $this->assertEquals(true, $o->$getter());
+            $mock->$setter($val);
+            $this->assertEquals(true, $mock->$getter());
         }
 
         foreach ($aFalse as $val) {
-            $o->$setter($val);
-            $this->assertEquals(false, $o->$getter());
+            $mock->$setter($val);
+            $this->assertEquals(false, $mock->$getter());
         }
     }
 
@@ -459,15 +459,15 @@ class CellAbstractTest extends BaseTestCase
     {
         $pdf = $this->getPdfObject();
 
-        $o = new CellAbstractMock($pdf);
+        $mock = new CellAbstractMock($pdf);
 
-        $o->$setter(1, 2, 3);
-        $this->assertEquals([1, 2, 3], $o->$getter());
+        $mock->$setter(1, 2, 3);
+        $this->assertEquals([1, 2, 3], $mock->$getter());
 
-        $o->$setter(false);
-        $this->assertEquals(false, $o->$getter());
+        $mock->$setter(false);
+        $this->assertEquals(false, $mock->$getter());
 
-        $o->$setter([1, 2, 3]);
-        $this->assertEquals([1, 2, 3], $o->$getter());
+        $mock->$setter([1, 2, 3]);
+        $this->assertEquals([1, 2, 3], $mock->$getter());
     }
 }

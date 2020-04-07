@@ -22,7 +22,7 @@ php72-tests:
   image: klodoma/php72
   script:
     - composer install
-    - vendor/bin/phpunit --exclude-group functional
+    - vendor/bin/phpunit
 
 # Run phpunit tests for php 7.3
 php73-tests:
@@ -30,7 +30,7 @@ php73-tests:
   image: klodoma/php73
   script:
     - composer install
-    - vendor/bin/phpunit --exclude-group functional
+    - vendor/bin/phpunit
 
 # Run phpunit tests for php 7.4
 php74-tests:
