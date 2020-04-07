@@ -5,8 +5,8 @@
 $find = 'find';
 $mkdir = 'mkdir';
 $rm = 'rm';
-$nameTable = "fpdf_table";
-$nameMulticell = "fpdf_multicell";
+$nameTable = "fpdf-table";
+$nameMulticell = "fpdf-multicell";
 $cwd = dirname(__FILE__) . '/..';
 $eofind = "\\;";
 
@@ -81,15 +81,15 @@ execute("composer install");
 
 chdir($tmpDir);
 
-$dirTable = "{$nameTable}_{$versionTable}";
-$dirMulticell = "{$nameMulticell}_{$versionMulticell}";
+$dirTable = "{$nameTable}-{$versionTable}";
+$dirMulticell = "{$nameMulticell}-{$versionMulticell}";
 execute("$mkdir -p {$dirTable}");
 execute("$mkdir -p {$dirMulticell}");
 
 execute("cp -r $releaseDir/* $dirTable");
 execute("cp -r $releaseDir/* $dirMulticell");
 
-$archive = "{$nameTable}_{$versionTable}.zip";
+$archive = "{$nameTable}-{$versionTable}.zip";
 $tableRelease = $archive;
 $tableReleaseMessage = "Automatic release #$versionTable";
 
@@ -97,7 +97,7 @@ stdout("Archive: $archive");
 execute("rm -rf $archive");
 execute("cd $tmpDir && zip -rq $archive $dirTable");
 
-$archive = "{$nameMulticell}_{$versionMulticell}.zip";
+$archive = "{$nameMulticell}-{$versionMulticell}.zip";
 
 //clean the table part
 execute("$find $dirMulticell | grep -i table | xargs rm -rf");

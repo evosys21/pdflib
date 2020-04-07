@@ -81,5 +81,5 @@ release:
     - build-release
   script:
     - source ./bin/set-versions.sh
-    - eval "gitlab-release --message 'Automatic release Table ${VERSION_TABLE}' ./release/fpdf_table_${VERSION_TABLE}.zip"
-    - eval "gitlab-release --message 'Automatic release Multicell ${VERSION_MULTICELL}' ./release/fpdf_multicell_${VERSION_MULTICELL}.zip"
+    - eval "gitlab-release --message 'Automatic release Table ${VERSION_TABLE}' ./release/fpdf-table-${VERSION_TABLE}.zip"
+    - eval "gitlab-release --message 'Automatic release Multicell ${VERSION_MULTICELL}' ./release/fpdf-multicell-${VERSION_MULTICELL}.zip"
