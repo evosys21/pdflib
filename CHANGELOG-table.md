@@ -9,6 +9,7 @@ All notable changes to FPDF Advanced Table will be documented in this file.
 
 ### 6.0.0 [Unreleased]
 
+- Change, use Fpdf library from composer: `coomposer require "setasign/fpdf"`
 - Change, Implement Style Inheritance
 - Change, Use Single Quotes in code ([#1930](https://tracker.interpid.eu/issues/1930))
 - Change, Provide as composer package ([#1929](https://tracker.interpid.eu/issues/1929))
@@ -17,8 +18,6 @@ All notable changes to FPDF Advanced Table will be documented in this file.
 ### 5.4.5 (2019-06-07)
 
 - Fix, PHP 7.3 compatibility ([#1840](https://tracker.interpid.eu/issues/1840))
-- Fix, FPDF RTL Support for FPDF ([#1824](https://tracker.interpid.eu/issues/1824))
-
 
 ### 5.4.4 (2019-02-06)
 
@@ -26,11 +25,10 @@ All notable changes to FPDF Advanced Table will be documented in this file.
 
 ### 5.4.3 (2018-12-30)
 
-- Fix, UTF-8 problems TCPDF table ([#1708](https://tracker.interpid.eu/issues/1708))
+- Change, Version update for version compatibility with TCPDF AddOns
 
 ### 5.4.2 (2018-11-27)
 
-- Change, Upgrade TCPDF to 6.2.26 ([#1700](https://tracker.interpid.eu/issues/1700))
 - Fix, PHP 7.* deprecation issues ([#1680](https://tracker.interpid.eu/issues/1680))
 
 ### 5.4.1 (2018-09-19)
@@ -51,7 +49,6 @@ All notable changes to FPDF Advanced Table will be documented in this file.
 
 ### 4.3.0 (2016-09-12)
 
-- Change, Upgrade to Tcpdf 6.2.13 (tcpdf) ([#947](https://tracker.interpid.eu/issues/947))
 - Change, Code improvements ([#946](https://tracker.interpid.eu/issues/946))
 - Change, Upgrade to FPDF 1.8 ([#945](https://tracker.interpid.eu/issues/945))
 - Fix, PDF result differences between PHP5 and PHP7(fpdf) ([#944](https://tracker.interpid.eu/issues/944))
@@ -67,9 +64,6 @@ All notable changes to FPDF Advanced Table will be documented in this file.
 
 - Change, SVG Images support for tables - ONLY for Tcpdf ([#690](https://tracker.interpid.eu/issues/690))
 - Change, Code Refactoring ([#689](https://tracker.interpid.eu/issues/689))
-- Fix, Tcpdf Table - Page braking cells too long ([#688](https://tracker.interpid.eu/issues/688))
-- Change, Tcpdf Table - Upgrade to Tcpdf 6.0.090 ([#687](https://tracker.interpid.eu/issues/687))
-- Fix, Tcpdf Table - justified align not working ([#609](https://tracker.interpid.eu/issues/609))
 - Change, Disable page-break of a table ([#608](https://tracker.interpid.eu/issues/608))
 
 ### 4.0.1 (2013-11-20)

@@ -9,11 +9,12 @@ All notable changes to FPDF Advanced Multicell  will be documented in this file.
 
 ### 3.0.0 [Unreleased]
 
-- Change, Add support for a tag ```width``` and ```align``` attributes
+- Change, use Fpdf library from composer: `coomposer require "setasign/fpdf"`
+- Change, Add support for a tag `width` and `align` attributes
 - Change, Implement Style Inheritance
 - Change, Use single quotes in PHP code ([#1930](https://tracker.interpid.eu/issues/1930))
 - Change, Provide as composer package ([#1929](https://tracker.interpid.eu/issues/1929))
-- Change, ```"ypos"``` sub-superscript parameter is deprecated. Use ```"y"``` instead.
+- Change, `"ypos"` sub-superscript parameter is deprecated. Use `"y"` instead.
 
 ### 2.6.3 (2019-02-06)
 
@@ -21,7 +22,6 @@ All notable changes to FPDF Advanced Multicell  will be documented in this file.
 
 ### 2.6.2 (2018-11-27)
 
-- Change, Upgrade TCPDF to 6.2.26 ([#1700](https://tracker.interpid.eu/issues/1700))
 - Fix, PHP 7.* deprecation issues - each() function is deprecated ([#1680](https://tracker.interpid.eu/issues/1680))
 
 ### 2.6.1 (2018-09-19)
