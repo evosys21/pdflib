@@ -28,16 +28,16 @@ class CellAbstractTest extends BaseTestCase
         //case 1
         $pdf = $this->getPdfObject();
 
-        $o = new CellAbstractMock($pdf);
+        $mock = new CellAbstractMock($pdf);
 
-        $this->assertInstanceOf(CellAbstractMock::class, $o);
+        $this->assertInstanceOf(CellAbstractMock::class, $mock);
 
         //case 2
         $pdfi = new PdfInterface($pdf);
 
-        $o = new CellAbstractMock($pdfi);
+        $mock = new CellAbstractMock($pdfi);
 
-        $this->assertInstanceOf(CellAbstractMock::class, $o);
+        $this->assertInstanceOf(CellAbstractMock::class, $mock);
     }
 
     public function testSimpleGettersAndSetters()
