@@ -350,7 +350,7 @@ class CellAbstractTest extends BaseTestCase
 
         $mock->renderCellLayout();
 
-        $filename = tempnam(sys_get_temp_dir(), 'fpdf');
+        $filename = tempnam(sys_get_temp_dir(), 'pdf');
 
         $pdf->saveToFile($filename);
 

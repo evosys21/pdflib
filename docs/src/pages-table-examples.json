@@ -7,7 +7,7 @@
     {
         "wiki-page": "fpdf-table-examples-preview",
         "wiki-parent": "wiki",
-        "template": "docs/pages/page-multicell-examples-preview.md",
+        "template": "docs/pages/page-table-examples-preview.md",
         "attachments": [
             "tests/data/example-table-1-overview.png",
             "tests/data/example-table-2-overview.png",

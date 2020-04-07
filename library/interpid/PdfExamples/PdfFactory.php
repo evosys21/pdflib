@@ -27,7 +27,7 @@ use Interpid\PdfLib\Pdf;
 class PdfFactory
 {
     /**
-     * Creates a new Fpdf Object and Initializes it
+     * Creates a new PDF Object and Initializes it
      *
      * @param $type
      * @return MyPdf

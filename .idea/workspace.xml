@@ -5,25 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="Merge changes with TCPDF Version">
-      <change afterPath="$PROJECT_DIR$/bin/build-release.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/wiki1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.dist" beforeDir="false" afterPath="$PROJECT_DIR$/.env.dist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG-table.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG-table.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/pdf2images.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pdf2images.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/tcpdf-add-ons.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pages/page-add-ons.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/tcpdf-examples.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pages/page-examples.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/tcpdf-multicell-examples-preview.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pages/page-multicell-examples-preview.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/tcpdf-multicell-examples.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pages/page-multicell-examples.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/tcpdf-table-examples-preview.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pages/page-table-examples-preview.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/tcpdf-table-examples.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pages/page-table-examples.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/pages-multicell-examples.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-multicell-examples.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README-multicell.md" beforeDir="false" afterPath="$PROJECT_DIR$/README-multicell.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README-table.md" beforeDir="false" afterPath="$PROJECT_DIR$/README-table.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/src/pages-table-examples.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-table-examples.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/pages-wiki.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-wiki.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/wiki-pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/wiki-pages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tcpdf-multicell-user-manual.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/multicell-user-manual.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tcpdf-table-user-manual.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/table-user-manual.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example-multicell.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfExamples/PdfFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfExamples/PdfFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Classes/Pdf/Table/Cell/CellAbstractTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Classes/Pdf/Table/Cell/CellAbstractTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +101,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tcpdf-table" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="settings.editor.splitter.proportion" value="0.2304038" />
@@ -176,11 +163,11 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="PHP Script.wiki1.php" />
       <item itemvalue="PHPUnit.tests" />
       <item itemvalue="PHPUnit.CellAbstractTest (1)" />
       <item itemvalue="PHPUnit.CellAbstractTest.testSimpleGettersAndSetters" />
       <item itemvalue="PHPUnit.CellAbstractTest.testConstructor" />
-      <item itemvalue="PHP Script.wiki1.php" />
     </list>
     <recent_temporary>
       <list>
@@ -255,6 +242,7 @@
       <workItem from="1568011436313" duration="408000" />
       <workItem from="1586189632509" duration="3609000" />
       <workItem from="1586246931816" duration="6134000" />
+      <workItem from="1586264611951" duration="985000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
@@ -571,18 +559,18 @@
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
     <state x="782" y="224" width="644" height="724" key="#functional/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586190846248" />
-    <state x="752" y="181" key="CommitChangelistDialog2" timestamp="1586257688593">
+    <state x="752" y="181" key="CommitChangelistDialog2" timestamp="1586264895148">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state x="752" y="181" key="CommitChangelistDialog2/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586257688593" />
-    <state x="212" y="100" key="DiffContextDialog" timestamp="1586256649099">
+    <state x="752" y="181" key="CommitChangelistDialog2/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586264895148" />
+    <state x="212" y="100" key="DiffContextDialog" timestamp="1586264894830">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state x="212" y="100" key="DiffContextDialog/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586256649099" />
-    <state x="885" y="341" key="FileChooserDialogImpl" timestamp="1586191011345">
+    <state x="212" y="100" key="DiffContextDialog/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586264894830" />
+    <state x="885" y="341" key="FileChooserDialogImpl" timestamp="1586265242537">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state x="885" y="341" key="FileChooserDialogImpl/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586191011345" />
+    <state x="885" y="341" key="FileChooserDialogImpl/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586265242537" />
     <state width="2151" height="440" key="GridCell.Tab.0.bottom" timestamp="1586261715489">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
@@ -611,10 +599,10 @@
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
     <state x="906" y="504" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586257254296" />
-    <state x="791" y="318" width="741" height="606" key="find.popup" timestamp="1586258153906">
+    <state x="792" y="317" width="741" height="606" key="find.popup" timestamp="1586264826985">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state x="791" y="318" width="741" height="606" key="find.popup/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586258153906" />
+    <state x="792" y="317" width="741" height="606" key="find.popup/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586264826985" />
     <state x="760" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1586261001638">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
