@@ -1,4 +1,4 @@
-# Changelog for FPDF Advanced Multicell
+# FPDF Advanced Multicell Changelog
 
 All notable changes to FPDF Advanced Multicell  will be documented in this file.
 

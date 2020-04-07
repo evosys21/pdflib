@@ -5,18 +5,38 @@
         "template": "docs/pages/page-add-ons.md"
     },
     {
-        "wiki-page": "FPDF Examples",
+        "wiki-page": "Fpdf Multicell",
+        "wiki-parent": "FPDF Add-Ons",
+        "template": "docs/pages/page-multicell.md"
+    },
+    {
+        "wiki-page": "Fpdf Table",
+        "wiki-parent": "FPDF Add-Ons",
+        "template": "docs/pages/page-table.md"
+    },
+    {
+        "wiki-page": "Fpdf Examples",
         "wiki-parent": "FPDF Add-Ons",
         "template": "docs/pages/page-examples.md"
     },
     {
-        "wiki-page": "FPDF Multicell User Manual",
-        "wiki-parent": "FPDF Add-Ons",
+        "wiki-page": "Fpdf Multicell User Manual",
+        "wiki-parent": "Fpdf Multicell",
         "template": "docs/multicell-user-manual.md"
     },
     {
-        "wiki-page": "FPDF Table User Manual",
-        "wiki-parent": "FPDF Add-Ons",
+        "wiki-page": "Fpdf Table User Manual",
+        "wiki-parent": "Fpdf Table",
         "template": "docs/table-user-manual.md"
+    },
+    {
+        "wiki-page": "Fpdf Multicell Changelog",
+        "wiki-parent": "Fpdf Multicell",
+        "template": "docs/multicell-changelog.md"
+    },
+    {
+        "wiki-page": "Fpdf Table Changelog",
+        "wiki-parent": "Fpdf Table",
+        "template": "docs/table-changelog.md"
     }
 ]

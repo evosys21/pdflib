@@ -1,12 +1,12 @@
 [
     {
-        "wiki-page": "FPDF Table Examples",
-        "wiki-parent": "wiki",
+        "wiki-page": "Fpdf Table Examples",
+        "wiki-parent": "Fpdf Table",
         "template": "docs/pages/page-multicell-examples.md"
     },
     {
         "wiki-page": "fpdf-table-examples-preview",
-        "wiki-parent": "wiki",
+        "wiki-parent": "Fpdf Table",
         "template": "docs/pages/page-table-examples-preview.md",
         "attachments": [
             "tests/data/example-table-1-overview.png",
@@ -16,7 +16,7 @@
         ]
     },
     {
-        "wiki-page": "FPDF Table - Example 1 - Overview",
+        "wiki-page": "Fpdf Table - Example 1 - Overview",
         "wiki-parent": "FPDF Table Examples",
         "title": "FPDF Table - Example 1 - Overview",
         "code-files": [
@@ -39,7 +39,7 @@
         ]
     },
     {
-        "wiki-page": "FPDF Table - Example 2 - Overview",
+        "wiki-page": "Fpdf Table - Example 2 - Overview",
         "wiki-parent": "FPDF Table Examples",
         "title": "FPDF Table - Example 2 - Overview",
         "code-files": [
@@ -55,7 +55,7 @@
         ]
     },
     {
-        "wiki-page": "FPDF Table - Example 3 - Table Details",
+        "wiki-page": "Fpdf Table - Example 3 - Table Details",
         "wiki-parent": "FPDF Table Examples",
         "title": "FPDF Table - Example 3 - Table Details",
         "code-files": [
@@ -73,7 +73,7 @@
         ]
     },
     {
-        "wiki-page": "FPDF Table - Example 4 - Override",
+        "wiki-page": "Fpdf Table - Example 4 - Override",
         "wiki-parent": "FPDF Table Examples",
         "title": "FPDF Table - Example 4 - Override",
         "code-files": [

@@ -1,4 +1,4 @@
-# Changelog for FPDF Advanced Table
+# FPDF Advanced Table Changelog
 
 All notable changes to FPDF Advanced Table will be documented in this file.
 

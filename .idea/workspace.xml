@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="Merge changes with TCPDF Version">
+      <change afterPath="$PROJECT_DIR$/docs/pages/page-multicell.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/pages/page-table.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README-multicell.md" beforeDir="false" afterPath="$PROJECT_DIR$/README-multicell.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README-table.md" beforeDir="false" afterPath="$PROJECT_DIR$/README-table.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG-multicell.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/multicell-changelog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG-table.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/table-changelog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pages/page-add-ons.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pages/page-add-ons.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/pages-multicell-examples.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-multicell-examples.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/src/pages-table-examples.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-table-examples.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfExamples/PdfFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfExamples/PdfFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Classes/Pdf/Table/Cell/CellAbstractTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Classes/Pdf/Table/Cell/CellAbstractTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/pages-wiki.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-wiki.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,12 +104,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tcpdf-table" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/pages" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="settings.editor.splitter.proportion" value="0.2304038" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\pdf-addons\fpdf-table\docs\pages" />
+      <recent name="D:\Projects\pdf-addons\fpdf-table\docs" />
+      <recent name="D:\Projects\pdf-addons\fpdf-table\docs\src" />
+      <recent name="D:\Projects\pdf-addons\fpdf-table\bin" />
+      <recent name="D:\Projects\pdf-addons\fpdf-table\library\interpid\PdfExamples" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\pdf-addons\fpdf\bin" />
       <recent name="D:\Projects\pdf-addons\fpdf\library" />
@@ -114,15 +124,8 @@
       <recent name="D:\Projects\pdf-addons\fpdf\content" />
       <recent name="D:\Projects\pdf-addons\fpdf\vendor\interpid\PdfExamples" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projects\pdf-addons\fpdf-table\docs\src" />
-      <recent name="D:\Projects\pdf-addons\fpdf-table\bin" />
-      <recent name="D:\Projects\pdf-addons\fpdf-table\library\interpid\PdfExamples" />
-      <recent name="D:\Projects\pdf-addons\fpdf-table\examples" />
-      <recent name="D:\Projects\pdf-addons\fpdf-table\#1731" />
-    </key>
   </component>
-  <component name="RunManager" selected="PHP Script.wiki1.php">
+  <component name="RunManager" selected="PHP Script.update-redmine-wiki.php">
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="INTERPRETER_PATH" value="C:\bin\bash.exe" />
@@ -138,16 +141,14 @@
       <TestRunner class="Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell\CellAbstractTest" file="$PROJECT_DIR$/tests/Classes/Pdf/Table/Cell/CellAbstractTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="CellAbstractTest.testConstructor" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell\CellAbstractTest" file="$PROJECT_DIR$/tests/Classes/Pdf/Table/Cell/CellAbstractTest.php" method="testConstructor" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="CellAbstractTest.testSimpleGettersAndSetters" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell\CellAbstractTest" file="$PROJECT_DIR$/tests/Classes/Pdf/Table/Cell/CellAbstractTest.php" method="testSimpleGettersAndSetters" scope="Method" />
-      <method v="2" />
-    </configuration>
     <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner directory="$PROJECT_DIR$/tests" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev-redmine-1.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/docs/src/dev-redmine-1.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="update-redmine-wiki.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/docs/src/update-redmine-wiki.php">
       <method v="2" />
     </configuration>
     <configuration name="wiki1.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/docs/src/wiki1.php">
@@ -166,16 +167,16 @@
       <item itemvalue="PHP Script.wiki1.php" />
       <item itemvalue="PHPUnit.tests" />
       <item itemvalue="PHPUnit.CellAbstractTest (1)" />
-      <item itemvalue="PHPUnit.CellAbstractTest.testSimpleGettersAndSetters" />
-      <item itemvalue="PHPUnit.CellAbstractTest.testConstructor" />
+      <item itemvalue="PHP Script.dev-redmine-1.php" />
+      <item itemvalue="PHP Script.update-redmine-wiki.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.update-redmine-wiki.php" />
+        <item itemvalue="PHP Script.dev-redmine-1.php" />
         <item itemvalue="PHP Script.wiki1.php" />
         <item itemvalue="PHPUnit.tests" />
         <item itemvalue="PHPUnit.CellAbstractTest (1)" />
-        <item itemvalue="PHPUnit.CellAbstractTest.testConstructor" />
-        <item itemvalue="PHPUnit.CellAbstractTest.testSimpleGettersAndSetters" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +243,7 @@
       <workItem from="1568011436313" duration="408000" />
       <workItem from="1586189632509" duration="3609000" />
       <workItem from="1586246931816" duration="6134000" />
-      <workItem from="1586264611951" duration="985000" />
+      <workItem from="1586264611951" duration="3712000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
@@ -559,34 +560,34 @@
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
     <state x="782" y="224" width="644" height="724" key="#functional/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586190846248" />
-    <state x="752" y="181" key="CommitChangelistDialog2" timestamp="1586264895148">
+    <state x="752" y="181" key="CommitChangelistDialog2" timestamp="1586272547733">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state x="752" y="181" key="CommitChangelistDialog2/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586264895148" />
-    <state x="212" y="100" key="DiffContextDialog" timestamp="1586264894830">
+    <state x="752" y="181" key="CommitChangelistDialog2/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586272547733" />
+    <state x="212" y="100" key="DiffContextDialog" timestamp="1586272547120">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state x="212" y="100" key="DiffContextDialog/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586264894830" />
+    <state x="212" y="100" key="DiffContextDialog/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586272547120" />
     <state x="885" y="341" key="FileChooserDialogImpl" timestamp="1586265242537">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
     <state x="885" y="341" key="FileChooserDialogImpl/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586265242537" />
-    <state width="2151" height="440" key="GridCell.Tab.0.bottom" timestamp="1586261715489">
+    <state width="2151" height="265" key="GridCell.Tab.0.bottom" timestamp="1586272811129">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state width="2151" height="440" key="GridCell.Tab.0.bottom/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586261715489" />
-    <state width="2151" height="440" key="GridCell.Tab.0.center" timestamp="1586261715488">
+    <state width="2151" height="265" key="GridCell.Tab.0.bottom/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586272811129" />
+    <state width="2151" height="265" key="GridCell.Tab.0.center" timestamp="1586272811129">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state width="2151" height="440" key="GridCell.Tab.0.center/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586261715488" />
-    <state width="2151" height="440" key="GridCell.Tab.0.left" timestamp="1586261715488">
+    <state width="2151" height="265" key="GridCell.Tab.0.center/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586272811129" />
+    <state width="2151" height="265" key="GridCell.Tab.0.left" timestamp="1586272811129">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state width="2151" height="440" key="GridCell.Tab.0.left/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586261715488" />
-    <state width="2151" height="440" key="GridCell.Tab.0.right" timestamp="1586261715488">
+    <state width="2151" height="265" key="GridCell.Tab.0.left/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586272811129" />
+    <state width="2151" height="265" key="GridCell.Tab.0.right" timestamp="1586272811129">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state width="2151" height="440" key="GridCell.Tab.0.right/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586261715488" />
+    <state width="2151" height="265" key="GridCell.Tab.0.right/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586272811129" />
     <state x="918" y="298" key="RollbackChangesDialog" timestamp="1586191052348">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
@@ -599,10 +600,10 @@
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
     <state x="906" y="504" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586257254296" />
-    <state x="792" y="317" width="741" height="606" key="find.popup" timestamp="1586264826985">
+    <state x="792" y="333" width="741" height="606" key="find.popup" timestamp="1586273112761">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state x="792" y="317" width="741" height="606" key="find.popup/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586264826985" />
+    <state x="792" y="333" width="741" height="606" key="find.popup/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586273112761" />
     <state x="760" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1586261001638">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
