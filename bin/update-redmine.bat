@@ -1,0 +1,1 @@
+sh update-redmine.sh
