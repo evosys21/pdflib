@@ -1,1 +1,1 @@
-sh build-release.sh
+php ./bin/build-release.php

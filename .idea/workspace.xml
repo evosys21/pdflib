@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="Merge changes with TCPDF Version">
-      <change afterPath="$PROJECT_DIR$/docs/pages/page-multicell.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/pages/page-table.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG-multicell.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/multicell-changelog.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG-table.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/table-changelog.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/pages/page-add-ons.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pages/page-add-ons.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/pages-multicell-examples.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-multicell-examples.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/pages-table-examples.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-table-examples.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/pages-wiki.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-wiki.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/build-release.bat" beforeDir="false" afterPath="$PROJECT_DIR$/bin/build-release.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/build-release.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/build-release.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/build-release.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +238,7 @@
       <workItem from="1568011436313" duration="408000" />
       <workItem from="1586189632509" duration="3609000" />
       <workItem from="1586246931816" duration="6134000" />
-      <workItem from="1586264611951" duration="3712000" />
+      <workItem from="1586264611951" duration="4692000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
