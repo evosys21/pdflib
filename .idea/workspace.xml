@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="Merge changes with TCPDF Version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/set-versions.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bin/set-versions.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_multicell" beforeDir="false" afterPath="$PROJECT_DIR$/version_multicell" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_table" beforeDir="false" afterPath="$PROJECT_DIR$/version_table" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +100,7 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/pages" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="settings.editor.splitter.proportion" value="0.2304038" />
   </component>
   <component name="RecentsManager">
@@ -236,7 +237,7 @@
       <workItem from="1568011436313" duration="408000" />
       <workItem from="1586189632509" duration="3609000" />
       <workItem from="1586246931816" duration="6134000" />
-      <workItem from="1586264611951" duration="5572000" />
+      <workItem from="1586264611951" duration="6288000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
@@ -585,10 +586,10 @@
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
     <state x="918" y="298" key="RollbackChangesDialog/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586191052348" />
-    <state x="606" y="229" key="SettingsEditor" timestamp="1586275233891">
+    <state x="606" y="229" key="SettingsEditor" timestamp="1586276697576">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state x="606" y="229" key="SettingsEditor/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586275233891" />
+    <state x="606" y="229" key="SettingsEditor/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586276697576" />
     <state x="690" y="308" key="Vcs.Push.Dialog.v2" timestamp="1586257691471">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
