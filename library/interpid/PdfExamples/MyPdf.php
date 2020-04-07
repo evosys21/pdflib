@@ -1,9 +1,14 @@
 <?php
 
 /**
- * Custom PDF class extension for Header and Footer Definitions
  *
- * @author office@interpid.eu
+ * This file is part of the Interpid PDF Addon package.
+ *
+ * @author Interpid <office@interpid.eu>
+ * @copyright (c) Interpid, http://www.interpid.eu
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace Interpid\PdfExamples;
@@ -12,7 +17,7 @@ use Interpid\PdfLib\Pdf;
 use Interpid\PdfLib\Multicell;
 
 /**
- * Class MyPdf
+ * Custom PDF class extension for Header and Footer Definitions
  *
  * @package Interpid\PdfExamples
  * @SuppressWarnings(PHPMD.CamelCaseMethodName)
@@ -21,7 +26,7 @@ use Interpid\PdfLib\Multicell;
  */
 class MyPdf extends Pdf
 {
-    protected $headerSource = "header.txt";
+    protected $headerSource = 'header.txt';
 
     /**
      * Custom Header
@@ -37,10 +42,10 @@ class MyPdf extends Pdf
          */
         $multicell = Multicell::getInstance($this);
 
-        $multicell->setStyle("p", $this->getDefaultFontName(), "", 6, "160,160,160");
-        $multicell->setStyle("h1", $this->getDefaultFontName(), "", 6, "160,160,160");
-        $multicell->setStyle("h2", $this->getDefaultFontName(), "", 6, "0,119,220");
-        $multicell->setStyle("h4", $this->getDefaultFontName(), "", 6, "0,151,200");
+        $multicell->setStyle('p', 6, '', '160,160,160', $this->getDefaultFontName());
+        $multicell->setStyle('h1', 6, '', '160,160,160', $this->getDefaultFontName());
+        $multicell->setStyle('h2', 6, '', '0,119,220', $this->getDefaultFontName());
+        $multicell->setStyle('h4', 6, '', '0,151,200', $this->getDefaultFontName());
 
         $multicell->multiCell(100, 3, file_get_contents(PDF_APPLICATION_PATH . '/content/' . $this->headerSource));
 
@@ -114,6 +119,11 @@ class MyPdf extends Pdf
         } else {
             parent::_putinfo();
         }
+    }
+
+    protected static function isTesting()
+    {
+        return (isset($_SERVER['ENVIRONMENT']) && 'test' == $_SERVER['ENVIRONMENT']);
     }
 
     /**

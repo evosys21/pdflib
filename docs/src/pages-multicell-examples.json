@@ -1,0 +1,101 @@
+[
+    {
+        "wiki-page": "FPDF Multicell Examples",
+        "wiki-parent": "wiki",
+        "template": "docs/pages/page-multicell-examples.md"
+    },
+    {
+        "wiki-page": "fpdf-multicell-examples-preview",
+        "wiki-parent": "wiki",
+        "template": "docs/pages/page-multicell-examples-preview.md",
+        "attachments": [
+            "tests/data/example-multicell-1-overview.png",
+            "tests/data/example-multicell-2-overview-page-break.png",
+            "tests/data/example-multicell-3-line-breaking.png",
+            "tests/data/example-multicell-4-page-break.png",
+            "tests/data/example-multicell-5-max-lines.png"
+        ]
+    },
+    {
+        "wiki-page": "FPDF Multicell - Example 1 - Overview",
+        "wiki-parent": "FPDF Multicell Examples",
+        "title": "FPDF Multicell - Example 1 - Overview",
+        "code-files": [
+            "examples/example-multicell-1-overview.php"
+        ],
+        "collapsed-files": [
+            "content/multicell.txt",
+            "content/multicell-title.txt"
+        ],
+        "image-inline": "example-multicell-1-overview.png",
+        "template": "docs/templates/pdf-example.md",
+        "attachments": [
+            "tests/data/example-multicell-1-overview.pdf",
+            "tests/data/example-multicell-1-overview.png"
+        ]
+    },
+    {
+        "wiki-page": "FPDF Multicell - Example 2 - Overview with page break",
+        "wiki-parent": "FPDF Multicell Examples",
+        "title": "FPDF Multicell - Example 2 - Overview with page break",
+        "code-files": [
+            "examples/example-multicell-2-overview-page-break.php"
+        ],
+        "image-inline": "example-multicell-2-overview-page-break.png",
+        "collapsed-files": [
+            "content/multicell.txt",
+            "content/multicell-title.txt"
+        ],
+        "template": "docs/templates/pdf-example.md",
+        "attachments": [
+            "tests/data/example-multicell-2-overview-page-break.pdf",
+            "tests/data/example-multicell-2-overview-page-break.png"
+        ]
+    },
+    {
+        "wiki-page": "FPDF Multicell - Example 3 - Line Breaking",
+        "wiki-parent": "FPDF Multicell Examples",
+        "title": "FPDF Multicell - Example 3 - Line Breaking",
+        "code-files": [
+            "examples/example-multicell-3-line-breaking.php"
+        ],
+        "image-inline": "example-multicell-3-line-breaking.png",
+        "template": "docs/templates/pdf-example.md",
+        "attachments": [
+            "tests/data/example-multicell-3-line-breaking.pdf",
+            "tests/data/example-multicell-3-line-breaking.png"
+        ]
+    },
+    {
+        "wiki-page": "FPDF Multicell - Example 4 - Page Break",
+        "wiki-parent": "FPDF Multicell Examples",
+        "title": "FPDF Multicell - Example 4 - Page Break",
+        "code-files": [
+            "examples/example-multicell-4-page-break.php"
+        ],
+        "image-inline": "example-multicell-4-page-break.png",
+        "template": "docs/templates/pdf-example.md",
+        "attachments": [
+            "tests/data/example-multicell-4-page-break.pdf",
+            "tests/data/example-multicell-4-page-break.png"
+        ]
+    },
+    {
+        "wiki-page": "FPDF Multicell - Example 5 - Max Lines",
+        "wiki-parent": "FPDF Multicell Examples",
+        "title": "FPDF Multicell - Example 5 - Max Lines",
+        "code-files": [
+            "examples/example-multicell-5-max-lines.php"
+        ],
+        "image-inline": "example-multicell-5-max-lines.png",
+        "collapsed-files": [
+            "content/multicell.txt",
+            "content/multicell-title.txt"
+        ],
+        "template": "docs/templates/pdf-example.md",
+        "attachments": [
+            "tests/data/example-multicell-5-max-lines.pdf",
+            "tests/data/example-multicell-5-max-lines.png"
+        ]
+    }
+]

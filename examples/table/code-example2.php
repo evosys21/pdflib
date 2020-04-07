@@ -6,9 +6,9 @@ use Interpid\PdfLib\Table;
 
 $table = new Table($pdf);
 
-$table->setStyle("p", $pdf->getDefaultFontName(), "", 7, "130,0,30");
-$table->setStyle("b", $pdf->getDefaultFontName(), "B", 7, "130,0,30");
-$table->setStyle("bi", $pdf->getDefaultFontName(), "BI", 7, "0,0,120");
+$table->setStyle('p', 7, '', '130,0,30', $pdf->getDefaultFontName());
+$table->setStyle('b', 7, 'B', '130,0,30', $pdf->getDefaultFontName());
+$table->setStyle('bi', 7, 'BI', '0,0,120', $pdf->getDefaultFontName());
 
 $columns = 3;
 
@@ -35,16 +35,16 @@ $imageCell = [
 
 //row 1 - add data as Array
 $row = [];
-$row[ 0 ][ 'TEXT' ] = "Line <b>1</b>";
+$row[0]['TEXT'] = "Line <b>1</b>";
 
-$row[ 1 ] = array(
+$row[1] = array(
     'TYPE' => 'IMAGE',
     'FILE' => PDF_RESOURCES_IMAGES . '/dice.jpg',
     'WIDTH' => 10
 );
 
-$row[ 2 ][ 'TEXT' ] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='http://www.interpid.eu'>www.interpid.eu</bi></p>";
-$row[ 2 ][ 'ALIGN' ] = "L";
+$row[2]['TEXT'] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='http://www.interpid.eu'>www.interpid.eu</bi></p>";
+$row[2]['ALIGN'] = 'L';
 
 //add the data row
 $table->addRow($row);

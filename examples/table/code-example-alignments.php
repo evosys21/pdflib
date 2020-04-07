@@ -9,9 +9,9 @@ use Interpid\PdfLib\Tools;
 
 $table = new Table($pdf);
 
-$table->setStyle("p", $pdf->getDefaultFontName(), "", 6, "130,0,30");
-$table->setStyle("b", $pdf->getDefaultFontName(), "B", 6, "130,0,30");
-$table->setStyle("bi", $pdf->getDefaultFontName(), "BI", 6, "0,0,120");
+$table->setStyle('p', 6, '', '130,0,30', $pdf->getDefaultFontName());
+$table->setStyle('b', 6, 'B', '130,0,30', $pdf->getDefaultFontName());
+$table->setStyle('bi', 6, 'BI', '0,0,120', $pdf->getDefaultFontName());
 
 require('settings.php');
 
@@ -28,29 +28,29 @@ $table->addHeader($headerRow);
 for ($i = 0; $i < 6; $i++) {
     $row = $dataRow;
 
-    if ($i >= 0 && $i < 3) {
-        $row[ 0 ][ 'TEXT' ] = "Forced\nLine\nBreaks";
+    if ($i >= 0 and $i < 3) {
+        $row[0]['TEXT'] = "Forced\nLine\nBreaks";
         $align = Tools::getNextValue($alignments, $k);
-        $row[ 1 ][ 'TEXT' ] = "Align: <b>$align</b>";
-        $row[ 1 ][ 'ALIGN' ] = "$align";
+        $row[1]['TEXT'] = "Align: <b>$align</b>";
+        $row[1]['ALIGN'] = "$align";
         $align = Tools::getNextValue($alignments, $k);
-        $row[ 2 ][ 'TEXT' ] = "Align: <b>$align</b>";
-        $row[ 2 ][ 'ALIGN' ] = "$align";
+        $row[2]['TEXT'] = "Align: <b>$align</b>";
+        $row[2]['ALIGN'] = "$align";
         $align = Tools::getNextValue($alignments, $k);
-        $row[ 3 ][ 'TEXT' ] = "Align: <b>$align</b>";
-        $row[ 3 ][ 'ALIGN' ] = "$align";
+        $row[3]['TEXT'] = "Align: <b>$align</b>";
+        $row[3]['ALIGN'] = "$align";
     }
 
-    if ($i >= 3 && $i <= 5) {
-        $row[ 0 ][ 'TEXT' ] = "Forced\nLine\nForced\nLine\nForced\nLine";
-        $row[ 1 ] = $imageCell;
-        $row[ 1 ][ 'ALIGN' ] = Tools::getNextValue($alignments, $k);
+    if ($i >= 3 and $i <= 5) {
+        $row[0]['TEXT'] = "Forced\nLine\nForced\nLine\nForced\nLine";
+        $row[1] = $imageCell;
+        $row[1]['ALIGN'] = Tools::getNextValue($alignments, $k);
 
-        $row[ 2 ] = $imageCell;
-        $row[ 2 ][ 'ALIGN' ] = Tools::getNextValue($alignments, $k);
+        $row[2] = $imageCell;
+        $row[2]['ALIGN'] = Tools::getNextValue($alignments, $k);
 
-        $row[ 3 ] = $imageCell;
-        $row[ 3 ][ 'ALIGN' ] = Tools::getNextValue($alignments, $k);
+        $row[3] = $imageCell;
+        $row[3]['ALIGN'] = Tools::getNextValue($alignments, $k);
     }
 
 

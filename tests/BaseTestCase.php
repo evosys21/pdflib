@@ -1,11 +1,25 @@
 <?php
 
-require_once(__DIR__ . "/bootstrap.php");
+/**
+ * This file is part of the Interpid PDF Addon package.
+ *
+ * @author Interpid <office@interpid.eu>
+ * @copyright (c) Interpid, http://www.interpid.eu
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
-use Interpid\PdfLib\Pdf;
+namespace Interpid\PdfLib\Tests;
+
 use Interpid\PdfExamples\PdfFactory;
+use Interpid\PdfLib\Pdf;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class BaseTestCase
+ * @package Interpid\PdfLib
+ */
 class BaseTestCase extends TestCase
 {
 

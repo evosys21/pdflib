@@ -4,75 +4,103 @@
  * Copyright (c), Interpid, http://www.interpid.eu
  */
 
-require_once __DIR__ . "/../autoload.php";
+require_once __DIR__ . '/../autoload.php';
 
 use Interpid\PdfLib\Multicell;
-use Interpid\PdfExamples\PdfFactory;
 use Interpid\PdfLib\Pdf;
 
 // Pdf extends FPDF
 $pdf = new Pdf();
 
-// Initialize the pdf object. Set the margins, adds a page, set default fonts etc...
-PdfFactory::initPdf($pdf);
+// use the default FPDF configuration
+$pdf->SetAuthor('Interpid');
+$pdf->SetMargins(20, 20, 20);
+$pdf->SetAutoPageBreak(true, 20);
+
+$pdf->SetFont('helvetica', '', 11);
+$pdf->SetTextColor(200, 10, 10);
+$pdf->SetFillColor(254, 255, 245);
+
+// add a page
+$pdf->AddPage();
 
 // Create the Advanced Multicell Object and inject the PDF object
 $multicell = new Multicell($pdf);
 
 // Set the styles for the advanced multicell
-$multicell->setStyle("p", 'helvetica', "", 11, "130,0,30");
-$multicell->setStyle("b", 'helvetica', "B", 11, "130,0,30");
-$multicell->setStyle("i", 'helvetica', "I", 11, "80,80,260");
-$multicell->setStyle("u", 'helvetica', "U", 11, "80,80,260");
-$multicell->setStyle("h1", 'helvetica', "B", 14, "203,0,48");
-$multicell->setStyle("h3", 'helvetica', "B", 12, "203,0,48");
-$multicell->setStyle("h4", 'helvetica', "BI", 11, "0,151,200");
-$multicell->setStyle("hh", 'helvetica', "B", 11, "255,189,12");
-$multicell->setStyle("ss", 'helvetica', "", 7, "203,0,48");
-$multicell->setStyle("font", 'helvetica', "", 10, "0,0,255");
-$multicell->setStyle("style", 'helvetica', "BI", 10, "0,0,220");
-$multicell->setStyle("size", 'helvetica', "BI", 12, "0,0,120");
-$multicell->setStyle("color", 'helvetica', "BI", 12, "0,255,255");
+$multicell->setStyle('base', 11, '', [0, 0, 77], 'helvetica');
+$multicell->setStyle('p', null, null);
+$multicell->setStyle('b', null, 'B');
+$multicell->setStyle('i', null, 'I');
+$multicell->setStyle('bi', null, 'BI');
+$multicell->setStyle('u', null, 'U');
+$multicell->setStyle('h', null, 'B', '203,0,48');
+$multicell->setStyle('s', 8, null);
+$multicell->setStyle('title', 14, null, [102, 0, 0], null, 'h');
+$multicell->setStyle('h1', 16, null, null, null, 'h');
+$multicell->setStyle('h2', 14, null, null, null, 'h');
+$multicell->setStyle('h3', 12, null, null, null, 'h');
+$multicell->setStyle('h4', 11, null, null, null, 'h');
+$multicell->setStyle('super', 8, null, [255, 102, 153]);
 
-$pdf->Ln(10); //line break
+$s = <<<HEREDOC
+This line is a simple text with no formatting(text-formatting from the pdf defaults)
 
-// create the advanced multicell
-$multicell->multiCell(0, 5, "<h1>Fpdf Advanced Multicell</h1>", 1, "J", 1, 3, 3, 3, 3);
+<p>This line is a paragraph line</p>
 
-$pdf->Ln(10); //line break
+<p>This is <b>BOLD</b> text, this is <i>ITALIC</i>, this is <bi>BOLD ITALIC</bi></p>
 
-$txt = <<<EOF
-<h3>Description:</h3>
-<p>
-	This <b>FPDF addon</b> allows creation of an <b>Advanced Multicell</b> which uses as input a <b>TAG based formatted string</b> instead of a simple string. The use of tags allows to change the font, the style (<b>bold</b>, <i>italic</i>, <u>underline</u>), the size, and the color of characters and many other features.
-	The call of the function is pretty similar to the Multicell function in the FPDF base class with some extended parameters.
+<p>The following is <b>rendered as bold text.</b></p>
 
-<h3>Features:</h3>
+<p>The following is <i>rendered as italicized text.</i></p>
 
-	- Text can be <hh>aligned</hh>, <hh>centered</hh> or <hh>justified</hh>
-	- Different <font>Font</font>, <size>Sizes</size>, <style>Styles</style>, <color>Colors</color> can be used 
-	- The cell block can be framed and the background painted
-	- <style href='www.fpdf.org'>Links</style> can be used in any tag
-	- <h4>TAB</h4> spaces (<b>\	</b>) can be used
-	- Variable Y relative positions can be used for <ss ypos='-0.8'>Subscript</ss> or <ss ypos='1.1'>Superscript</ss>
-	- Cell padding (left, right, top, bottom)
-	- Controlled Tag Sizes can be used</p>
+<p>The following is <bi>rendered as bold and italicized text.</bi></p>
 
-	<size size='50' >Paragraph Example:~~~</size><font> - Paragraph 1</font>
-	<p size='60' > ~~~</p><font> - Paragraph 2</font>
-	<p size='60' > ~~~</p> - Paragraph 2
-	<p size='70' >Sample text~~~</p><p> - Paragraph 3</p>
-	<p size='50' >Sample text~~~</p> - Paragraph 1
-	<p size='60' > ~~~</p><h4> - Paragraph 2</h4>
+<p>The following is <u>rendered as underline text.</u></p>
 
-<h3>Observations:</h3><p>
+<p>The following is <s y='-1'>Subscript</s> and <s y='1'>Superscript</s></p>
 
-	- If no <h4><TAG></h4> is specified then the FPDF current settings(font, style, size, color) are used
-	- The <h4>ttags</h4> tag name is reserved for the TAB SPACES
-</p>
-EOF;
+This line is a simple text with no formatting(text-formatting from the pdf defaults)
 
-$multicell->multiCell(0, 5, $txt, 1, "J", 1, 3, 3, 3, 3);
+HEREDOC;
+
+$multicell->multiCell(0, 5, $s);
+
+$pdf->ln(10);
+
+$s = <<<HEREDOC
+<title>Typography:</title>
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+HEREDOC;
+
+$multicell->multiCell(0, 7, $s);
+
+$pdf->ln(10);
+
+$multicell->multiCell(0, 10, "<title>Table of Content:</title>");
+
+$s = <<<HEREDOC
+<p width='10'> </p><p> . Paragraph 1</p>
+<p width='10'> </p><p> . Paragraph 2</p>
+<p width='20'> </p><p> . Paragraph 2.1</p>
+<p width='20'> </p><p> . Paragraph 2.2</p>
+<p width='10'> </p><p> . Paragraph 3</p>
+HEREDOC;
+$multicell->multiCell(0, 5, $s);
+
+$pdf->ln(10);
+$multicell->multiCell(0, 10, "<title>Tag width and alignment:</title>");
+
+$s = <<<HEREDOC
+<p width="100" align="left"> Align Left </p>
+<p width="100" align="center"> Align Center </p>
+<p width="100" align="right"> Align Right </p>
+HEREDOC;
+$multicell->multiCell(100, 5, $s, 1, '', 1);
 
 // output the pdf
 $pdf->Output();

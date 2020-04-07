@@ -1,18 +1,35 @@
 <?php
 
+/**
+ * This file is part of the Interpid PDF Addon package.
+ *
+ * @author Interpid <office@interpid.eu>
+ * @copyright (c) Interpid, http://www.interpid.eu
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Interpid\PdfLib\Tests\Functional;
+
+use Interpid\PdfLib\Tests\Helper\Helper;
+use Interpid\PdfLib\Tests\Helper\TestPdf;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class TableTest
+ * @group functional
+ */
 class TableTest extends TestCase
 {
 
     /**
      * Returns the pdf object
      *
-     * @return testPdf
+     * @return TestPdf
      */
     protected function getPdfObject1()
     {
-        require_once TEST_PATH . '/helper/Helper.php';
         return Helper::pdfObject1();
     }
 
@@ -114,7 +131,7 @@ class TableTest extends TestCase
      */
     public function testTableModel1()
     {
-        $this->runTestModel1(__DIR__ . '/table/draw-table-model1.php', __FUNCTION__);
+        $this->runTestModel1( __DIR__ . '/table/draw-table-model1.php', __FUNCTION__);
     }
 
 
@@ -123,7 +140,7 @@ class TableTest extends TestCase
      */
     public function testTableModel2()
     {
-        $this->runTestModel1(__DIR__ . '/table/draw-table-model2.php', __FUNCTION__);
+        $this->runTestModel1( __DIR__ . '/table/draw-table-model2.php', __FUNCTION__);
     }
 
     /**
@@ -131,7 +148,7 @@ class TableTest extends TestCase
      */
     public function testTableModel3()
     {
-        $this->runTestModel1(__DIR__ . '/table/draw-table-model3.php', __FUNCTION__);
+        $this->runTestModel1( __DIR__ . '/table/draw-table-model3.php', __FUNCTION__);
     }
 
     /**
@@ -139,6 +156,6 @@ class TableTest extends TestCase
      */
     public function testDisablePageBreak()
     {
-        $this->runTestModelSimple(__DIR__ . '/table/disable-page-break.php', __FUNCTION__);
+        $this->runTestModelSimple( __DIR__ . '/table/disable-page-break.php', __FUNCTION__);
     }
 }

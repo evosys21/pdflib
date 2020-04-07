@@ -1,25 +1,23 @@
 <?php
 
 /**
- * Pdf Table Cell Interface
+ * This file is part of the Interpid PDF Addon package.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE.
+ * @author Interpid <office@interpid.eu>
+ * @copyright (c) Interpid, http://www.interpid.eu
  *
- * IN NO EVENT SHALL WE OR OUR SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT
- * OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS
- * OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION OR ANY OTHER
- * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
- * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
- *
- * @author    : Interpid <office@interpid.eu>
- * @copyright : Interpid, http://www.interpid.eu
- * @license   : http://www.interpid.eu/pdf-addons/eula
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace Interpid\PdfLib\Table\Cell;
 
+use Interpid\PdfLib\PdfInterface;
+
+/**
+ * Pdf Table Cell Interface
+ * @package Interpid\PdfLib\Table\Cell
+ */
 interface CellInterface
 {
 
@@ -67,9 +65,9 @@ interface CellInterface
     /**
      * Set the properties of the cell
      *
-     * @param array $aValues key=>value pair
+     * @param array $values key=>value pair
      */
-    public function setProperties(array $aValues = array());
+    public function setProperties(array $values = array());
 
     public function render();
 
@@ -184,7 +182,7 @@ interface CellInterface
 
     /**
      * Sets the border Type
-     * Can be: 0, 1 or a combination of: "LRTB"
+     * Can be: 0, 1 or a combination of: 'LRTB'
      *
      * @param string $borderType
      */

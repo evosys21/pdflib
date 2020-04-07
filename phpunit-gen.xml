@@ -10,8 +10,6 @@
          failOnWarning="true"
 >
     <php>
-        <!--<ini name="error_reporting" value="-1" />-->
-        <!--<env name="KERNEL_CLASS" value="App\Kernel" />-->
         <env name="APP_ENV" value="test"/>
         <env name="APP_DEBUG" value="1"/>
     </php>
@@ -21,4 +19,14 @@
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory>./</directory>
+            <exclude>
+                <directory>./Tests</directory>
+                <directory>./vendor</directory>
+            </exclude>
+        </whitelist>
+    </filter>
 </phpunit>

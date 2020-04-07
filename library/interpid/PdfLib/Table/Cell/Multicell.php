@@ -1,33 +1,12 @@
 <?php
 /**
- * Pdf Table Cell Multicell
+ * This file is part of the Interpid PDF Addon package.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE.
+ * @author Interpid <office@interpid.eu>
+ * @copyright (c) Interpid, http://www.interpid.eu
  *
- * IN NO EVENT SHALL WE OR OUR SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT
- * OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS
- * OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION OR ANY OTHER
- * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
- * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
- *
- * @author    : Interpid <office@interpid.eu>
- * @copyright : Interpid, http://www.interpid.eu
- * @license   : http://www.interpid.eu/pdf-addons/eula
- */
-
-/**
- * @property string TEXT
- * @property mixed|null TEXT_ALIGN
- * @property mixed|null TEXT_STRLINES
- * @property mixed|null LINE_SIZE
- * @property mixed|null TEXT_SIZE
- * @property mixed|null TEXT_TYPE
- * @property mixed|null TEXT_FONT
- * @property mixed|null TEXT_COLOR
- * @property float|int V_OFFSET
- * @property int nLines
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace Interpid\PdfLib\Table\Cell;
@@ -35,6 +14,8 @@ namespace Interpid\PdfLib\Table\Cell;
 use Interpid\PdfLib\Pdf;
 
 /**
+ * Pdf Table Cell Multicell
+ * @package Interpid\PdfLib\Table\Cell
  * @property mixed|array TEXT_STRLINES
  * @property mixed|null TEXT_ALIGN
  * @property mixed|null LINE_SIZE
@@ -59,7 +40,7 @@ class Multicell extends CellAbstract implements CellInterface
      * Class Constructor
      *
      * @param Pdf $pdf
-     * @param string $data
+     * @param string|array $data
      */
     public function __construct($pdf, $data = ' ')
     {
@@ -75,7 +56,7 @@ class Multicell extends CellAbstract implements CellInterface
 
     public function getDefaultValues()
     {
-        $aValues = array(
+        $values = array(
             'TEXT' => '',
             'TEXT_COLOR' => [0, 0, 0], //text color
             'TEXT_SIZE' => 6, //font size
@@ -85,7 +66,7 @@ class Multicell extends CellAbstract implements CellInterface
             'LINE_SIZE' => 4
         ); //line size for one row
 
-        return array_merge(parent::getDefaultValues(), $aValues);
+        return array_merge(parent::getDefaultValues(), $values);
     }
 
 
@@ -94,15 +75,15 @@ class Multicell extends CellAbstract implements CellInterface
      * Vertical values: TBMJ
      * Horizontal values: LRC
      *
-     * @see CellAbstract::setAlign()
      * @param string $alignment
+     * @see CellAbstract::setAlign()
      */
     public function setAlign($alignment)
     {
         parent::setAlign($alignment);
 
-        $vertical = "TBM";
-        $horizontal = "LRCJ";
+        $vertical = 'TBM';
+        $horizontal = 'LRCJ';
 
         foreach (str_split($horizontal) as $val) {
             if (false !== stripos($alignment, $val)) {
@@ -130,8 +111,8 @@ class Multicell extends CellAbstract implements CellInterface
     /**
      * (non-PHPdoc)
      *
-     * @see CellAbstract::setCellDrawWidth()
      * @param $value
+     * @see CellAbstract::setCellDrawWidth()
      */
     public function setCellDrawWidth($value)
     {

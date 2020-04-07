@@ -1,27 +1,26 @@
 <?php
+/**
+ * This file is part of the Interpid PDF Addon package.
+ *
+ * @author Interpid <office@interpid.eu>
+ * @copyright (c) Interpid, http://www.interpid.eu
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace Interpid\PdfLib;
 
 /**
  * FPDF extended class.
- * This class extends the FPDF class. In all subclasses we refer to this Pdf class and not FPDF.
- * Some methods and variables are set to Public in order to access them in the addons.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE.
+ * In order to implement the FPDF Add-on, we need access to private/protected properties from
+ * the FPDF class. As these are not provided by setters and getters the FPDF class was
+ * extended and these properties made public.
  *
- * IN NO EVENT SHALL WE OR OUR SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT
- * OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS
- * OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION OR ANY OTHER
- * PECUNIARY LAW) ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF WE
- * HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+ * In all subclasses we refer to Pdf class and not FPDF.
  *
- * @author    : Interpid <office@interpid.eu>
- * @package   : Interpid\PdfLib
- * @copyright : Interpid, http://www.interpid.eu
- * @license   : http://www.interpid.eu/pdf-addons/eula
- * @SuppressWarnings(PHPMD)
+ * @package Interpid\PdfLib
  */
 class Pdf extends \FPDF
 {
@@ -78,6 +77,7 @@ class Pdf extends \FPDF
         $txt = strval($txt);
         parent::Cell($w, $h, $txt, $border, $ln, $align, $fill, $link);
     }
+
     // phpcs:enable
 
     public function saveToFile($fileName)
