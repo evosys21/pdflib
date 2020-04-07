@@ -54,7 +54,7 @@ All notable changes to FPDF Advanced Table will be documented in this file.
 - Fix, PDF result differences between PHP5 and PHP7(fpdf) ([#944](https://tracker.interpid.eu/issues/944))
 - Fix, Passing TABLE_ALIGN to setTableConfig does not work ([#896](https://tracker.interpid.eu/issues/896))
 - Fix, Relative font size in MultiCell not working as expected ([#895](https://tracker.interpid.eu/issues/895))
-- Fix, Addons don't work in PHP7 ([#828](https://tracker.interpid.eu/issues/828))
+- Fix, Add-ons don't work in PHP7 ([#828](https://tracker.interpid.eu/issues/828))
 
 ### 4.2.0 (2015-08-23)
 

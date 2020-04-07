@@ -2,21 +2,21 @@
     {
         "wiki-page": "FPDF Add-Ons",
         "wiki-parent": "wiki",
-        "template": "docs/pages/fpdf-add-ons.md"
+        "template": "docs/pages/page-add-ons.md"
     },
     {
         "wiki-page": "FPDF Examples",
         "wiki-parent": "FPDF Add-Ons",
-        "template": "docs/pages/fpdf-examples.md"
+        "template": "docs/pages/page-examples.md"
     },
     {
         "wiki-page": "FPDF Multicell User Manual",
         "wiki-parent": "FPDF Add-Ons",
-        "template": "docs/fpdf-multicell-user-manual.md"
+        "template": "docs/multicell-user-manual.md"
     },
     {
         "wiki-page": "FPDF Table User Manual",
         "wiki-parent": "FPDF Add-Ons",
-        "template": "docs/fpdf-table-user-manual.md"
+        "template": "docs/table-user-manual.md"
     }
 ]

@@ -5,7 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="Merge changes with TCPDF Version">
+      <change afterPath="$PROJECT_DIR$/bin/build-release.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/src/wiki1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.dist" beforeDir="false" afterPath="$PROJECT_DIR$/.env.dist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG-table.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG-table.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pdf2images.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pdf2images.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pages/tcpdf-add-ons.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pages/page-add-ons.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pages/tcpdf-examples.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pages/page-examples.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pages/tcpdf-multicell-examples-preview.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pages/page-multicell-examples-preview.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pages/tcpdf-multicell-examples.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pages/page-multicell-examples.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pages/tcpdf-table-examples-preview.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pages/page-table-examples-preview.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pages/tcpdf-table-examples.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pages/page-table-examples.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/pages-multicell-examples.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-multicell-examples.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/pages-table-examples.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-table-examples.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/pages-wiki.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-wiki.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/wiki-pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/wiki-pages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/tcpdf-multicell-user-manual.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/multicell-user-manual.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/tcpdf-table-user-manual.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/table-user-manual.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-multicell.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +44,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="WARN_ABOUT_CRLF" value="false" />
   </component>
   <component name="PhpServers">
@@ -95,19 +114,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fpdf-table1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/src" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="settings.editor.splitter.proportion" value="0.2304038" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projects\pdf-addons\fpdf-table\library\interpid\PdfExamples" />
-      <recent name="D:\Projects\pdf-addons\fpdf-table\examples" />
-      <recent name="D:\Projects\pdf-addons\fpdf-table\#1731" />
-      <recent name="D:\Projects\pdf-addons\fpdf-table" />
-      <recent name="D:\Projects\pdf-addons\fpdf" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\pdf-addons\fpdf\bin" />
       <recent name="D:\Projects\pdf-addons\fpdf\library" />
@@ -115,8 +127,15 @@
       <recent name="D:\Projects\pdf-addons\fpdf\content" />
       <recent name="D:\Projects\pdf-addons\fpdf\vendor\interpid\PdfExamples" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\pdf-addons\fpdf-table\docs\src" />
+      <recent name="D:\Projects\pdf-addons\fpdf-table\bin" />
+      <recent name="D:\Projects\pdf-addons\fpdf-table\library\interpid\PdfExamples" />
+      <recent name="D:\Projects\pdf-addons\fpdf-table\examples" />
+      <recent name="D:\Projects\pdf-addons\fpdf-table\#1731" />
+    </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.tests">
+  <component name="RunManager" selected="PHP Script.wiki1.php">
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="INTERPRETER_PATH" value="C:\bin\bash.exe" />
@@ -129,23 +148,22 @@
       <method v="2" />
     </configuration>
     <configuration name="CellAbstractTest (1)" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell\CellAbstractTest" file="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/CellAbstractTest.php" scope="Class" />
+      <TestRunner class="Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell\CellAbstractTest" file="$PROJECT_DIR$/tests/Classes/Pdf/Table/Cell/CellAbstractTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="CellAbstractTest.testConstructor" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell\CellAbstractTest" file="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/CellAbstractTest.php" method="testConstructor" scope="Method" />
+      <TestRunner class="Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell\CellAbstractTest" file="$PROJECT_DIR$/tests/Classes/Pdf/Table/Cell/CellAbstractTest.php" method="testConstructor" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="CellAbstractTest.testSimpleGettersAndSetters" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell\CellAbstractTest" file="$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/CellAbstractTest.php" method="testSimpleGettersAndSetters" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="functional" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner directory="$PROJECT_DIR$/tests/functional" />
+      <TestRunner class="Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell\CellAbstractTest" file="$PROJECT_DIR$/tests/Classes/Pdf/Table/Cell/CellAbstractTest.php" method="testSimpleGettersAndSetters" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner directory="$PROJECT_DIR$/tests" />
+      <method v="2" />
+    </configuration>
+    <configuration name="wiki1.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/docs/src/wiki1.php">
       <method v="2" />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp">
@@ -159,18 +177,18 @@
     </configuration>
     <list>
       <item itemvalue="PHPUnit.tests" />
-      <item itemvalue="PHPUnit.functional" />
       <item itemvalue="PHPUnit.CellAbstractTest (1)" />
       <item itemvalue="PHPUnit.CellAbstractTest.testSimpleGettersAndSetters" />
       <item itemvalue="PHPUnit.CellAbstractTest.testConstructor" />
+      <item itemvalue="PHP Script.wiki1.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHP Script.wiki1.php" />
         <item itemvalue="PHPUnit.tests" />
+        <item itemvalue="PHPUnit.CellAbstractTest (1)" />
         <item itemvalue="PHPUnit.CellAbstractTest.testConstructor" />
         <item itemvalue="PHPUnit.CellAbstractTest.testSimpleGettersAndSetters" />
-        <item itemvalue="PHPUnit.CellAbstractTest (1)" />
-        <item itemvalue="PHPUnit.functional" />
       </list>
     </recent_temporary>
   </component>
@@ -236,6 +254,7 @@
       <workItem from="1563608772894" duration="1651000" />
       <workItem from="1568011436313" duration="408000" />
       <workItem from="1586189632509" duration="3609000" />
+      <workItem from="1586246931816" duration="6134000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
@@ -440,7 +459,35 @@
       <option name="project" value="LOCAL" />
       <updated>1586200739926</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Update unit-test classes">
+      <created>1586247418623</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1586247418623</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Merge changes with TCPDF Version">
+      <created>1586247949118</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1586247949118</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Merge changes with TCPDF Version">
+      <created>1586256653894</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1586256653894</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Changelog Updates">
+      <created>1586257688986</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1586257688986</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TodoView">
@@ -487,6 +534,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="#828 - Addons don't work in PHP7" />
     <MESSAGE value="#946 - Code improvements" />
     <MESSAGE value="#896 - Passing TABLE_ALIGN to setTableConfig does not work" />
@@ -500,8 +549,10 @@
     <MESSAGE value="#1701 - PHPCS, Mess Detector Integration" />
     <MESSAGE value="#1755 - Examples folder clean-up" />
     <MESSAGE value="Merge changes with TCPDF Version, initial commit" />
+    <MESSAGE value="Update unit-test classes" />
     <MESSAGE value="Merge changes with TCPDF Version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge changes with TCPDF Version" />
+    <MESSAGE value="Changelog Updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changelog Updates" />
   </component>
   <component name="WindowStateProjectService">
     <state x="812" y="177" key="#PHP" timestamp="1586190809403">
@@ -512,60 +563,68 @@
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
     <state x="685" y="241" key="#Test_Frameworks/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586190845651" />
+    <state x="828" y="342" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586247151192">
+      <screen x="0" y="0" width="2194" height="1173" />
+    </state>
+    <state x="828" y="342" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586247151192" />
     <state x="782" y="224" width="644" height="724" key="#functional" timestamp="1586190846248">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
     <state x="782" y="224" width="644" height="724" key="#functional/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586190846248" />
-    <state x="752" y="181" key="CommitChangelistDialog2" timestamp="1586200739512">
+    <state x="752" y="181" key="CommitChangelistDialog2" timestamp="1586257688593">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state x="752" y="181" key="CommitChangelistDialog2/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586200739512" />
-    <state x="212" y="100" key="DiffContextDialog" timestamp="1586200733313">
+    <state x="752" y="181" key="CommitChangelistDialog2/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586257688593" />
+    <state x="212" y="100" key="DiffContextDialog" timestamp="1586256649099">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state x="212" y="100" key="DiffContextDialog/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586200733313" />
+    <state x="212" y="100" key="DiffContextDialog/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586256649099" />
     <state x="885" y="341" key="FileChooserDialogImpl" timestamp="1586191011345">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
     <state x="885" y="341" key="FileChooserDialogImpl/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586191011345" />
-    <state width="2151" height="387" key="GridCell.Tab.0.bottom" timestamp="1586192214696">
+    <state width="2151" height="440" key="GridCell.Tab.0.bottom" timestamp="1586261715489">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state width="2151" height="387" key="GridCell.Tab.0.bottom/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586192214696" />
-    <state width="2151" height="387" key="GridCell.Tab.0.center" timestamp="1586192214696">
+    <state width="2151" height="440" key="GridCell.Tab.0.bottom/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586261715489" />
+    <state width="2151" height="440" key="GridCell.Tab.0.center" timestamp="1586261715488">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state width="2151" height="387" key="GridCell.Tab.0.center/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586192214696" />
-    <state width="2151" height="387" key="GridCell.Tab.0.left" timestamp="1586192214696">
+    <state width="2151" height="440" key="GridCell.Tab.0.center/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586261715488" />
+    <state width="2151" height="440" key="GridCell.Tab.0.left" timestamp="1586261715488">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state width="2151" height="387" key="GridCell.Tab.0.left/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586192214696" />
-    <state width="2151" height="387" key="GridCell.Tab.0.right" timestamp="1586192214696">
+    <state width="2151" height="440" key="GridCell.Tab.0.left/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586261715488" />
+    <state width="2151" height="440" key="GridCell.Tab.0.right" timestamp="1586261715488">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state width="2151" height="387" key="GridCell.Tab.0.right/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586192214696" />
+    <state width="2151" height="440" key="GridCell.Tab.0.right/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586261715488" />
     <state x="918" y="298" key="RollbackChangesDialog" timestamp="1586191052348">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
     <state x="918" y="298" key="RollbackChangesDialog/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586191052348" />
-    <state x="690" y="308" key="Vcs.Push.Dialog.v2" timestamp="1586200741612">
+    <state x="690" y="308" key="Vcs.Push.Dialog.v2" timestamp="1586257691471">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state x="690" y="308" key="Vcs.Push.Dialog.v2/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586200741612" />
-    <state x="791" y="318" width="741" height="536" key="find.popup" timestamp="1586192210020">
+    <state x="690" y="308" key="Vcs.Push.Dialog.v2/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586257691471" />
+    <state x="906" y="504" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586257254296">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state x="791" y="318" width="741" height="536" key="find.popup/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586192210020" />
-    <state x="760" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1586191455374">
+    <state x="906" y="504" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586257254296" />
+    <state x="791" y="318" width="741" height="606" key="find.popup" timestamp="1586258153906">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state x="760" y="258" width="672" height="678" key="search.everywhere.popup/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586191455374" />
+    <state x="791" y="318" width="741" height="606" key="find.popup/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586258153906" />
+    <state x="760" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1586261001638">
+      <screen x="0" y="0" width="2194" height="1173" />
+    </state>
+    <state x="760" y="258" width="672" height="678" key="search.everywhere.popup/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586261001638" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/tests/classes/Pdf/Table/Cell/CellAbstractTest.php</url>
+          <url>file://$PROJECT_DIR$/tests/Classes/Pdf/Table/Cell/CellAbstractTest.php</url>
           <line>342</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>

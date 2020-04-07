@@ -2,12 +2,12 @@
     {
         "wiki-page": "FPDF Table Examples",
         "wiki-parent": "wiki",
-        "template": "docs/pages/fpdf-multicell-examples.md"
+        "template": "docs/pages/page-multicell-examples.md"
     },
     {
         "wiki-page": "fpdf-table-examples-preview",
         "wiki-parent": "wiki",
-        "template": "docs/pages/fpdf-multicell-examples-preview.md",
+        "template": "docs/pages/page-multicell-examples-preview.md",
         "attachments": [
             "tests/data/example-table-1-overview.png",
             "tests/data/example-table-2-overview.png",

@@ -16,7 +16,10 @@ $prefix = '';
 
 $client = new Redmine\Client(getenv('REDMINE_URL'), getenv('REDMINE_API_KEY'));
 
-$redmineWiki = new RedmineWiki($client, $project, $prefix);
-$redmineWiki->wikiPages(__DIR__ . '/pages-wiki.json');
-$redmineWiki->wikiPages(__DIR__ . '/pages-multicell-examples.json');
-$redmineWiki->wikiPages(__DIR__ . '/pages-table-examples.json');
+$response = $client->wiki->all($project);
+foreach ($response[ 'wiki_pages' ] as $page) {
+    if (preg_match("/TCPDF|fpdf/i", $page['title'])){
+        print_r($page);
+        $client->wiki->remove($project, $page['title']);
+    }
+}
