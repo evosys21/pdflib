@@ -64,7 +64,7 @@ build-release:
   except:
     - schedules
   script:
-    - php bin/build_release.php
+    - sh bin/build-release.sh
   artifacts:
     paths:
       - release
