@@ -3,46 +3,62 @@
 {{>toc}}
 
 ## Installation
-The PHP Pdf Addons will work right out of the box. All you need is a webserver with Php 5.5 (or greater). No further configurations are required.
+
+The PHP Pdf Addons will work right out of the box. All you need is a webserver with Php 5.5 (or greater). 
+No further configurations are required.
+
 Just download the files, extract the content in a directory where your webserver is configured and call the url. 
+
 Every add-on has multiple example files that cover the full functionality.
 
-## Download
-Please go to your account on https://www.interpid.eu/my-account to download the latest versions of the addons. 
+### Include the library into the project
 
-## Usage
-In order to create a FPDF Advanced Multicell the following steps are required:
+Normally, from the downloaded package you need only the files from `library\interpid\PdfLib` folder in order to run it. 
 
-* have a valid FPDF/PDF object
-* create the advanced multicell object instance
-* add the multicells to the pdf document
+#### Using "require_once"
 
-```php
-use Interpid\PdfLib\Multicell;
-use Interpid\PdfLib\Pdf; // Pdf extends FPDF
+In order to include the full interpid library, just include the `autoload.php` provided in the root folder. This will provide you the Fpdf and all Interpid PdfLib library classes.
 
-// create the Pdf Object
-$pdf = new Pdf();
-
-// do some pdf initialization settings
-// $pdf->SetMargins(20, 20, 20);
-...
-
-// create the Multicell Object
-$multicell = new Multicell($pdf);
-
-// set the style definitions
-$table->setStyle('p', 11, '', '130,0,30', 'helvetica');
-$table->setStyle('b', 11, 'B', '130,0,30', 'helvetica');
-
-// create the advanced multicells
-$multicell->multiCell(0, 5, 'This is a simple cell');
-$multicell->multiCell(0, 5, '<p>This is a <b>BOLD</b> text</p>');
-
+Assuming you downloaded `fpdf-table-3.0.0` and placed in your project `libs` folder:
+```
+<?php
+require_once 'libs/fpdf-table-6.0.0/autoload.php';
 ```
 
+#### With composer.json
+
+If your project uses composer, then include the pdf library path to your composer file:
+
+In `composer.json`
+```
+    "autoload": {
+        "classmap": [
+            "libs/fpdf-table-6.0.0/library/interpid"
+        ],
+    },
+```
+
+or you can use the PSR-4 autoload capabilities
+
+In `composer.json`
+```
+    "autoload": {
+        "psr-4": {
+            "Interpid\\PdfLib\\": "libs/fpdf-table-6.0.0/library/interpid/PdfLib/"
+        }
+    },
+```
+
+then run `composer dump-autoload` to regenerate the autoload classmap.
+
+
+## Download
+
+Please go to your account on https://www.interpid.eu/my-account to download the latest versions of the addons. 
+
 ## Why use the \Interpid\PdfLib\Pdf object instead of FPDF
-In order to implement the FPDF Add-on, we need access to private/protected properties from the FPDF class like widths, margins, fonts etc... As these properties are not provided by setters and getters the FPDF class was extended and these properties made public. 
+
+To implement the FPDF Add-on, we need access to private/protected properties from the FPDF class like widths, margins, fonts etc... As these properties are not provided by setters and getters the FPDF class was extended and these properties made public. 
 
 
 ```php
@@ -58,6 +74,7 @@ class Pdf extends \FPDF
 ```
 
 ## Create the Pdf object
+
 Please refer to the FPDF class manual in order to get this done correctly. Example:
 
 ```php
@@ -81,6 +98,7 @@ $pdf->AddPage();
 ```
 
 ## Create the Advanced Table object
+
 ```php
 // Create the Advanced Multicell Object and inject the PDF object
 use Interpid\PdfLib\Table;

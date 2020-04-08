@@ -1623,19 +1623,35 @@ class Table
 
 
     /**
-     * Sets the attrbitues for the specified tag
+     * Sets the attributes for the specified tag
      *
      * @param string $tag tag name/key
      * @param float|null $fontSize font size
      * @param string|null $fontStyle font style
      * @param string|array|null $color
      * @param string|null $fontFamily font family
-     * @param string $inherit
+     * @param string $inherit Tag to be inherited
      */
     public function setStyle($tag, $fontSize = null, $fontStyle = null, $color = null, $fontFamily = null, $inherit = 'base')
     {
         $this->multicell->setStyle($tag, $fontSize, $fontStyle, $color, $fontFamily, $inherit);
     }
+
+    /**
+     * Sets the attributes for the specified tag.
+     * Deprecated function. Use $this->setStyle function.
+     * 
+     * @deprecated
+     * @param string $tagName tag name
+     * @param string $fontFamily font family
+     * @param string $fontStyle font style
+     * @param float $fontSize font size
+     * @param mixed(string|array) $color font color
+     */
+    public function setStyleDep($tagName, $fontFamily, $fontStyle, $fontSize, $color){
+        $$this->multicell->setStyle($tagName, $fontSize, $fontStyle, $color, $fontFamily);
+    }
+
 
 
     /**

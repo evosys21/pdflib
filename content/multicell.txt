@@ -10,7 +10,7 @@
 	- The cell block can be framed and the background painted
 	- <style href='www.fpdf.org'>Links</style> can be used in any tag
 	- <h4>TAB</h4> spaces (<b>\	</b>) can be used
-	- Variable Y relative positions can be used for <ss ypos='-0.8'>Subscript</ss> or <ss ypos='1.1'>Superscript</ss>
+	- Variable Y relative positions can be used for <ss y='-0.8'>Subscript</ss> or <ss y='1.1'>Superscript</ss>
 	- Cell padding (left, right, top, bottom)
 	- Controlled Tag Sizes can be used</p>
 

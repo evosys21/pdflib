@@ -9,7 +9,7 @@ All notable changes to FPDF Advanced Table will be documented in this file.
 
 ### 6.0.0 [Unreleased]
 
-- Change, use Fpdf library from composer: `coomposer require "setasign/fpdf"`
+- Change, use Fpdf library from composer: `composer require "setasign/fpdf"`
 - Change, Implement Style Inheritance
 - Change, Use Single Quotes in code ([#1930](https://tracker.interpid.eu/issues/1930))
 - Change, Provide as composer package ([#1929](https://tracker.interpid.eu/issues/1929))

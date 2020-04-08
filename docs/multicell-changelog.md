@@ -9,9 +9,9 @@ All notable changes to FPDF Advanced Multicell  will be documented in this file.
 
 ### 3.0.0 [Unreleased]
 
-- Change, use Fpdf library from composer: `coomposer require "setasign/fpdf"`
-- Change, Add support for a tag `width` and `align` attributes
-- Change, Implement Style Inheritance
+- Change, use Fpdf library from composer: `composer require "setasign/fpdf"`
+- Change, Add support for tag `width` and `align` attributes
+- Change, Implement Style Inheritance ([#1931](https://tracker.interpid.eu/issues/1931))
 - Change, Use single quotes in PHP code ([#1930](https://tracker.interpid.eu/issues/1930))
 - Change, Provide as composer package ([#1929](https://tracker.interpid.eu/issues/1929))
 - Change, `"ypos"` sub-superscript parameter is deprecated. Use `"y"` instead.

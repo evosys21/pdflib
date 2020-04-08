@@ -3,15 +3,62 @@
 {{>toc}}
 
 ## Installation
-The PHP Pdf Addons will work right out of the box. All you need is a webserver with Php 5.5 (or greater). No further configurations are required.
+
+The PHP Pdf Addons will work right out of the box. All you need is a webserver with Php 5.5 (or greater). 
+No further configurations are required.
+
 Just download the files, extract the content in a directory where your webserver is configured and call the url. 
+
 Every add-on has multiple example files that cover the full functionality.
 
+### Include the library into the project
+
+Normally, from the downloaded package you need only the files from `library\interpid\PdfLib` folder in order to run it. 
+
+#### Using "require_once"
+
+In order to include the full interpid library, just include the `autoload.php` provided in the root folder. This will provide you the Fpdf and all Interpid PdfLib library classes.
+
+Assuming you downloaded `fpdf-multicell-3.0.0` and placed in your project `libs` folder:
+```
+<?php
+require_once 'libs/fpdf-multicell-6.0.0/autoload.php';
+```
+
+#### With composer.json
+
+If your project uses composer, then include the pdf library path to your composer file:
+
+In `composer.json`
+```
+    "autoload": {
+        "classmap": [
+            "libs/fpdf-multicell-6.0.0/library/interpid"
+        ],
+    },
+```
+
+or you can use the PSR-4 autoload capabilities
+
+In `composer.json`
+```
+    "autoload": {
+        "psr-4": {
+            "Interpid\\PdfLib\\": "libs/fpdf-multicell-6.0.0/library/interpid/PdfLib/"
+        }
+    },
+```
+
+then run `composer dump-autoload` to regenerate the autoload classmap.
+
+
 ## Download
+
 Please go to your account on https://www.interpid.eu/my-account to download the latest versions of the addons. 
 
 ## Usage
-In order to create a FPDF Advanced Multicell the following steps are required:
+
+To generate an "Advanced Multicell" the followings are required:
 
 * have a valid FPDF/PDF object
 * create the advanced multicell object instance
@@ -42,7 +89,8 @@ $multicell->multiCell(0, 5, '<p>This is a <b>BOLD</b> text</p>');
 ```
 
 ## Why use the \Interpid\PdfLib\Pdf object instead of FPDF
-In order to implement the FPDF Add-on, we need access to private/protected properties from the FPDF class like widths, margins, fonts etc... As these properties are not provided by setters and getters the FPDF class was extended and these properties made public. 
+
+To implement the FPDF Add-on, we need access to private/protected properties from the FPDF class like widths, margins, fonts etc... As these properties are not provided by setters and getters the FPDF class was extended and these properties made public. 
 
 
 ```php
@@ -110,7 +158,7 @@ $multicell->setStyle('i', 11, 'I', '80,80,260', 'helvetica');
 
 ### Style Inheritance
 
-Styles are inherited. All styles inherit a "base" style (IF it's defined). In order to inherit a "property" set it to `null`
+Styles are inherited. All styles inherit a "base" style (If it's defined). In order to inherit a "property" set it to `null`
 
 ```php
 // define the "base" style
@@ -162,11 +210,11 @@ $multicell->multiCell(0, 5, $s);
 ```
 
 ### Subscripts and superscripts
-Subscript and superscripts can be adjusted with the ypos attribute. See example:
+Subscript and superscripts can be adjusted with the y attribute. See example:
 
 ```php
-// subscripts and superscripts (the ypos can be adjusted)
-$s = "<p ypos='-0.8'>Subscript</p> or <p ypos='1.1'>Superscript</p>";
+// subscripts and superscripts (the y can be adjusted)
+$s = "<p y='-0.8'>Subscript</p> or <p y='1.1'>Superscript</p>";
 $multicell->multiCell(0, 5, $s)
 ```
 
@@ -174,7 +222,7 @@ $multicell->multiCell(0, 5, $s)
 You can create links by using the href attribute in a tag.
 
 ```php
-$s = "<p>Created by <h1 href='mailto:andy@interpid.eu'>Andrei Bintintan</h1>
+$s = "<p>Created by <h1 href='mailto:office@interpid.eu'>Interpid Office</h1>
 <h1 href='www.interpid.eu'>www.interpid.eu</h1></p>";
 $multicell->multiCell(0, 5, $s);
 ```
