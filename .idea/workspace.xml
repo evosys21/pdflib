@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="Merge changes with TCPDF Version">
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/commands.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/build-release.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/build-release.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/multicell-changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/multicell-changelog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/multicell-upgrade-3.0.0.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/multicell-upgrade-3.0.0.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/table-changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/table-changelog.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +239,7 @@
       <workItem from="1568011436313" duration="408000" />
       <workItem from="1586189632509" duration="3609000" />
       <workItem from="1586246931816" duration="6134000" />
-      <workItem from="1586264611951" duration="7052000" />
+      <workItem from="1586264611951" duration="8592000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
@@ -594,10 +596,10 @@
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
     <state x="690" y="308" key="Vcs.Push.Dialog.v2/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586257691471" />
-    <state x="906" y="504" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586257254296">
+    <state x="906" y="504" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586334803695">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state x="906" y="504" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586257254296" />
+    <state x="906" y="504" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586334803695" />
     <state x="792" y="333" width="741" height="606" key="find.popup" timestamp="1586275417840">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>

@@ -1,24 +1,45 @@
-# FPDF Advanced Multicell Upgrade to version 3.0.0
+# FPDF Advanced Multicell Upgrade to version 3.0.0 <!-- omit in toc -->
+
+<!--toc-start -->
+
+## Table of content <!-- omit in toc -->
+- [Multicell `setStyle` function](#multicell-setstyle-function)
+  - [Backward compatibility](#backward-compatibility)
+- [Subscripts and superscripts](#subscripts-and-superscripts)
+
+<!--toc-end -->
 
 With the release of version 3.0.0 there are some functional changes to the Advanced Multicell class.
 
 ## Multicell `setStyle` function
 
-With the implementation of **Style Inheritance**([#1931](https://tracker.interpid.eu/issues/1931)) 
-the `$multicell->setStyle` method changed the order if it's parameters
-
+With the implementation of **Style Inheritance**([#1931](https://tracker.interpid.eu/issues/1931)) the `$multicell->setStyle` method arguments changed it's order. 
 ```php
 
-    //new 
+    //new implementation
     public function setStyle($tag, $fontSize = null, $fontStyle = null, $color = null, $fontFamily = null, $inherit = 'base'){
     }
 
-    //old 
+    //old implementation
     public function setStyle($tagName, $fontFamily, $fontStyle, $fontSize, $color){
     }
 ```
 
-The `$multicell->setStyleDep` method is provided for backward compatibility with the old `setStyle` method.
+### Backward compatibility
+
+The `$multicell->setStyleDep` method is provided for backward compatibility with the old `setStyle` method, so in order to keep the "old" version, please rename all your `->setStyle` to `->setStyleDep`. 
+
+```php
+//from version 3.0.0
+$multicell->setStyle('p', 11, '', '130,0,30', 'helvetica');
+$multicell->setStyle('b', 11, 'B', '130,0,30', 'helvetica');
+$multicell->setStyle('i', 11, 'I', '80,80,260', 'helvetica');
+
+//backward compatibility
+$multicell->setStyleDep("p", 'helvetica', "", 11, "130,0,30");
+$multicell->setStyleDep("b", 'helvetica', "B", 11, "130,0,30");
+$multicell->setStyleDep("i", 'helvetica', "I", 11, "80,80,260");
+```
 
 ## Subscripts and superscripts
 

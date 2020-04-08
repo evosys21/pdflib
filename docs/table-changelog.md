@@ -7,13 +7,13 @@ All notable changes to FPDF Advanced Table will be documented in this file.
 ##X.Y.X (2019-01-01)
 -->
 
-### 6.0.0 [Unreleased]
+### 6.0.0 (2020-04-08)
 
 - Change, use Fpdf library from composer: `composer require "setasign/fpdf"`
+- Change, Upgrade to `Advanced Multicell 3.0.0`
 - Change, Implement Style Inheritance
 - Change, Use Single Quotes in code ([#1930](https://tracker.interpid.eu/issues/1930))
 - Change, Provide as composer package ([#1929](https://tracker.interpid.eu/issues/1929))
-- Change, Integrate Advanced Multicell Version 3.0.0
 
 ### 5.4.5 (2019-06-07)
 
