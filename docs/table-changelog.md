@@ -14,7 +14,7 @@ All notable changes to FPDF Advanced Table will be documented in this file.
 
 ### 6.0.0 (2020-04-08)
 
-- Change, use Fpdf library from composer: `composer require "setasign/fpdf"`
+- Change, use FPDF library from composer: `composer require "setasign/fpdf"`
 - Change, Upgrade to `Advanced Multicell 3.0.0`
 - Change, Implement Style Inheritance
 - Change, Use Single Quotes in code ([#1930](https://tracker.interpid.eu/issues/1930))
@@ -49,7 +49,7 @@ All notable changes to FPDF Advanced Table will be documented in this file.
 
 ### 4.3.1 (2017-08-29)
 
-- Change, Update Fpdf Utf8 version to the latest version ([#1234](https://tracker.interpid.eu/issues/1234))
+- Change, Update FPDF Utf8 version to the latest version ([#1234](https://tracker.interpid.eu/issues/1234))
 - Change, Unable to open saved PDF in Acrobat Reader ([#1234](https://tracker.interpid.eu/issues/1234))
 
 ### 4.3.0 (2016-09-12)

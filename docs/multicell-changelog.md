@@ -13,7 +13,7 @@ All notable changes to FPDF Advanced Multicell  will be documented in this file.
 
 ### 3.0.0 (2020-04-08)
 
-- Change, use Fpdf library from composer: `composer require "setasign/fpdf"`
+- Change, use FPDF library from composer: `composer require "setasign/fpdf"`
 - Change, Add support for tag `width` and `align` attributes
 - Change, `"ypos"` sub-superscript parameter is deprecated. Use `"y"` instead.
 - Change, Implement Style Inheritance ([#1931](https://tracker.interpid.eu/issues/1931))
@@ -41,7 +41,7 @@ All notable changes to FPDF Advanced Multicell  will be documented in this file.
 
 ### 2.5.1 (2017-08-29)
 
-- Change, Update Fpdf Utf8 version to the latest version ([#1257](https://tracker.interpid.eu/issues/1257))
+- Change, Update FPDF Utf8 version to the latest version ([#1257](https://tracker.interpid.eu/issues/1257))
 - Change, Unable to open saved PDF in Acrobat Reader ([#1043](https://tracker.interpid.eu/issues/1043))
 
 ### 2.5.0 (2016-09-12)
@@ -82,8 +82,8 @@ All notable changes to FPDF Advanced Multicell  will be documented in this file.
 
 ### 2.0.3 (2012-03-12)
 
-- Change, Fpdf ws incorrect when writing the content to the pdf ([#284](https://tracker.interpid.eu/issues/284))
-- Fix, Fpdf Table - Empty content generated(multiple pdf documents) ([#283](https://tracker.interpid.eu/issues/283))
+- Change, FPDF ws incorrect when writing the content to the pdf ([#284](https://tracker.interpid.eu/issues/284))
+- Fix, FPDF Table - Empty content generated(multiple pdf documents) ([#283](https://tracker.interpid.eu/issues/283))
 
 ### 2.0.0 (2012-01-14)
 

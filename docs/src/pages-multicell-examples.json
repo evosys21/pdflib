@@ -1,12 +1,12 @@
 [
     {
-        "wiki-page": "Fpdf Multicell Examples",
-        "wiki-parent": "Fpdf Multicell",
+        "wiki-page": "FPDF Multicell Examples",
+        "wiki-parent": "FPDF Multicell",
         "template": "docs/pages/page-multicell-examples.md"
     },
     {
         "wiki-page": "fpdf-multicell-examples-preview",
-        "wiki-parent": "Fpdf Multicell",
+        "wiki-parent": "FPDF Multicell",
         "template": "docs/pages/page-multicell-examples-preview.md",
         "attachments": [
             "tests/data/example-multicell-1-overview.png",
@@ -17,7 +17,7 @@
         ]
     },
     {
-        "wiki-page": "Fpdf Multicell - Example 1 - Overview",
+        "wiki-page": "FPDF Multicell - Example 1 - Overview",
         "wiki-parent": "FPDF Multicell Examples",
         "title": "FPDF Multicell - Example 1 - Overview",
         "code-files": [
@@ -35,7 +35,7 @@
         ]
     },
     {
-        "wiki-page": "Fpdf Multicell - Example 2 - Overview with page break",
+        "wiki-page": "FPDF Multicell - Example 2 - Overview with page break",
         "wiki-parent": "FPDF Multicell Examples",
         "title": "FPDF Multicell - Example 2 - Overview with page break",
         "code-files": [
@@ -53,7 +53,7 @@
         ]
     },
     {
-        "wiki-page": "Fpdf Multicell - Example 3 - Line Breaking",
+        "wiki-page": "FPDF Multicell - Example 3 - Line Breaking",
         "wiki-parent": "FPDF Multicell Examples",
         "title": "FPDF Multicell - Example 3 - Line Breaking",
         "code-files": [
@@ -67,7 +67,7 @@
         ]
     },
     {
-        "wiki-page": "Fpdf Multicell - Example 4 - Page Break",
+        "wiki-page": "FPDF Multicell - Example 4 - Page Break",
         "wiki-parent": "FPDF Multicell Examples",
         "title": "FPDF Multicell - Example 4 - Page Break",
         "code-files": [
@@ -81,7 +81,7 @@
         ]
     },
     {
-        "wiki-page": "Fpdf Multicell - Example 5 - Max Lines",
+        "wiki-page": "FPDF Multicell - Example 5 - Max Lines",
         "wiki-parent": "FPDF Multicell Examples",
         "title": "FPDF Multicell - Example 5 - Max Lines",
         "code-files": [

@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="Merge changes with TCPDF Version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_multicell" beforeDir="false" afterPath="$PROJECT_DIR$/version_multicell" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/multicell-changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/multicell-changelog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/multicell-user-manual.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/multicell-user-manual.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/pages-table-examples.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-table-examples.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/pages-wiki.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-wiki.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/table-changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/table-changelog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/table-upgrade-guide.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/table-upgrade-guide.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/table-user-manual.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/table-user-manual.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +245,7 @@
       <workItem from="1586264611951" duration="12193000" />
       <workItem from="1586851614566" duration="697000" />
       <workItem from="1586852325197" duration="1257000" />
-      <workItem from="1586853715540" duration="1743000" />
+      <workItem from="1586853715540" duration="1846000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
@@ -600,10 +606,10 @@
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
     <state x="906" y="504" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586334803695" />
-    <state x="480" y="305" width="741" height="606" key="find.popup" timestamp="1586854153146">
+    <state x="480" y="305" width="741" height="606" key="find.popup" timestamp="1586861415830">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state x="480" y="305" width="741" height="606" key="find.popup/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586854153146" />
+    <state x="480" y="305" width="741" height="606" key="find.popup/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586861415830" />
     <state x="760" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1586854004027">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>

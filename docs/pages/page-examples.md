@@ -2,8 +2,8 @@
 
 ## FPDF Multicell Examples
 
-{{include(Fpdf-multicell-examples-preview)}}
+{{include(FPDF-multicell-examples-preview)}}
 
 ## FPDF Table Examples
 
-{{include(Fpdf-table-examples-preview)}}
+{{include(FPDF-table-examples-preview)}}

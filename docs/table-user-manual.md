@@ -17,7 +17,7 @@ Normally, from the downloaded package you need only the files from `library\inte
 
 #### Using "require_once"
 
-In order to include the full interpid library, just include the `autoload.php` provided in the root folder. This will provide you the Fpdf and all Interpid PdfLib library classes.
+In order to include the full interpid library, just include the `autoload.php` provided in the root folder. This will provide you the FPDF and all Interpid PdfLib library classes.
 
 Assuming you downloaded `fpdf-table-6.0.0` and placed in your project `libs` folder:
 ```

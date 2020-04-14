@@ -2,4 +2,4 @@
 
 {{child_pages}}
 
-{{include(Fpdf-table-examples-preview)}}
+{{include(FPDF-table-examples-preview)}}

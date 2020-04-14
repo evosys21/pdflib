@@ -4,21 +4,21 @@
 
 Please go to your account on https://www.interpid.eu/my-account to download the latest versions of the addons. 
 
-## Fpdf Add-ons
+## FPDF Add-ons
 
-### Fpdf Advanced Multicell
+### FPDF Advanced Multicell
 
-* [[Fpdf Multicell Examples|Examples]]
-* [[Fpdf Multicell User Manual|User Manual]]
-* [[Fpdf Multicell Changelog|Changelog]]
-* [[Fpdf Multicell Upgrade Guide|Upgrade Guide]]
+* [[FPDF Multicell Examples|Examples]]
+* [[FPDF Multicell User Manual|User Manual]]
+* [[FPDF Multicell Changelog|Changelog]]
+* [[FPDF Multicell Upgrade Guide|Upgrade Guide]]
 
-### Fpdf Advanced Table
+### FPDF Advanced Table
 
-* [[Fpdf Table Examples|Examples]]
-* [[Fpdf Table User Manual|User Manual]]
-* [[Fpdf Table Changelog|Changelog]]
-* [[Fpdf Table Upgrade Guide|Upgrade Guide]]
+* [[FPDF Table Examples|Examples]]
+* [[FPDF Table User Manual|User Manual]]
+* [[FPDF Table Changelog|Changelog]]
+* [[FPDF Table Upgrade Guide|Upgrade Guide]]
 
 ## TCPDF Add-ons
 
