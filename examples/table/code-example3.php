@@ -10,11 +10,11 @@ use Interpid\PdfLib\Table;
 
 $table = new Table($pdf);
 
-$table->setStyle('p', 6, '', '130,0,30', $pdf->getDefaultFontName());
-$table->setStyle('b', 6, 'B', '130,0,30', $pdf->getDefaultFontName());
-$table->setStyle('bi', 6, 'BI', '0,0,120', $pdf->getDefaultFontName());
-$table->setStyle('s1', 6, 'I', '0,0,120', $pdf->getDefaultFontName());
-$table->setStyle('s2', 7, '', '110,50,120', $pdf->getDefaultFontName());
+$table->setStyle('p', 6, '', '130,0,30', 'helvetica');
+$table->setStyle('b', 6, 'B', '130,0,30', 'helvetica');
+$table->setStyle('bi', 6, 'BI', '0,0,120', 'helvetica');
+$table->setStyle('s1', 6, 'I', '0,0,120', 'helvetica');
+$table->setStyle('s2', 7, '', '110,50,120', 'helvetica');
 
 $nColumns = 5;
 

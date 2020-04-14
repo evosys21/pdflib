@@ -12,9 +12,9 @@ use Interpid\PdfLib\Table;
 
 $table = new Table($pdf);
 
-$table->setStyle('p', 7, '', '130,0,30', $pdf->getDefaultFontName());
-$table->setStyle('b', 7, 'B', '130,0,30', $pdf->getDefaultFontName());
-$table->setStyle('bi', 7, 'BI', '0,0,120', $pdf->getDefaultFontName());
+$table->setStyle('p', 7, '', '130,0,30', 'helvetica');
+$table->setStyle('b', 7, 'B', '130,0,30', 'helvetica');
+$table->setStyle('bi', 7, 'BI', '0,0,120', 'helvetica');
 
 $columns = 3;
 

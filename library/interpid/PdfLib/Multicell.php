@@ -229,9 +229,9 @@ class Multicell
     }
 
     /**
-     * Sets the attributes for the specified tag. 
+     * Sets the attributes for the specified tag.
      * Deprecated function. Use $this->setStyle function.
-     * 
+     *
      * @deprecated
      * @param string $tagName tag name
      * @param string $fontFamily font family
@@ -239,7 +239,8 @@ class Multicell
      * @param float $fontSize font size
      * @param mixed(string|array) $color font color
      */
-    public function setStyleDep($tagName, $fontFamily, $fontStyle, $fontSize, $color){
+    public function setStyleDep($tagName, $fontFamily, $fontStyle, $fontSize, $color)
+    {
         $this->setStyle($tagName, $fontSize, $fontStyle, $color, $fontFamily);
     }
 
@@ -809,7 +810,6 @@ class Multicell
      * @param int|number $paddingBottom Bottom pad
      * @param $bDataIsString boolean - true if $data is a string - false if $data is an array containing lines formatted with $this->makeLine($width) function (the false option is used in relation
      * with stringToLines, to avoid double formatting of a string
-     * @return void
      * @internal param \or $string number $border Indicates if borders must be drawn around the cell block. The value can be either a number: 0 = no border 1 = frame border or a string containing some or all of
      * the following characters (in any order): L: left T: top R: right B: bottom
      */
@@ -1217,11 +1217,11 @@ class Multicell
     {
         //if this font was not used untill now,
         $this->applyStyle($tag);
-        $fw[ $tag ][ 'w' ] = $this->pdf->CurrentFont[ 'cw' ]; //width
-        $fw[ $tag ][ 's' ] = $this->pdf->FontSize; //size
+        $fw[$tag]['w'] = $this->pdf->CurrentFont['cw']; //width
+        $fw[$tag]['s'] = $this->pdf->FontSize; //size
 
 
-        return $fw[ $tag ][ 'w' ][ chr($char) ] * $fw[ $tag ][ 's' ] / 1000;
+        return $fw[$tag]['w'][chr($char)] * $fw[$tag]['s'] / 1000;
     }
 
 

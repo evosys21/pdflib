@@ -4,7 +4,7 @@
 defined('APPLICATION_PATH') || define('APPLICATION_PATH', realpath(__DIR__ . '/../'));
 
 defined('TEST_PATH') || define('TEST_PATH', realpath(__DIR__));
-$_SERVER[ 'ENVIRONMENT' ] = 'test';
+$_SERVER['ENVIRONMENT'] = 'test';
 
 define('PDF_RESOURCES_IMAGES', APPLICATION_PATH . '/content/images');
 

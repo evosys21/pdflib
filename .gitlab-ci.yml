@@ -1,4 +1,3 @@
-
 variables:
   PAGES_DEPLOY: public/${CI_COMMIT_REF_NAME}
 

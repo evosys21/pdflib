@@ -72,7 +72,7 @@ class PdfFactory
         $pdf->AliasNbPages();
 
         //disable compression for unit-testing!
-        if (isset($_SERVER[ 'ENVIRONMENT' ]) && 'test' == $_SERVER[ 'ENVIRONMENT' ]) {
+        if (isset($_SERVER['ENVIRONMENT']) && 'test' == $_SERVER['ENVIRONMENT']) {
             $pdf->SetCompression(false);
         }
 

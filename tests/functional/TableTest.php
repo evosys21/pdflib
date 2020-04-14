@@ -131,7 +131,7 @@ class TableTest extends TestCase
      */
     public function testTableModel1()
     {
-        $this->runTestModel1( __DIR__ . '/table/draw-table-model1.php', __FUNCTION__);
+        $this->runTestModel1(__DIR__ . '/table/draw-table-model1.php', __FUNCTION__);
     }
 
 
@@ -140,7 +140,7 @@ class TableTest extends TestCase
      */
     public function testTableModel2()
     {
-        $this->runTestModel1( __DIR__ . '/table/draw-table-model2.php', __FUNCTION__);
+        $this->runTestModel1(__DIR__ . '/table/draw-table-model2.php', __FUNCTION__);
     }
 
     /**
@@ -148,7 +148,7 @@ class TableTest extends TestCase
      */
     public function testTableModel3()
     {
-        $this->runTestModel1( __DIR__ . '/table/draw-table-model3.php', __FUNCTION__);
+        $this->runTestModel1(__DIR__ . '/table/draw-table-model3.php', __FUNCTION__);
     }
 
     /**
@@ -156,6 +156,6 @@ class TableTest extends TestCase
      */
     public function testDisablePageBreak()
     {
-        $this->runTestModelSimple( __DIR__ . '/table/disable-page-break.php', __FUNCTION__);
+        $this->runTestModelSimple(__DIR__ . '/table/disable-page-break.php', __FUNCTION__);
     }
 }

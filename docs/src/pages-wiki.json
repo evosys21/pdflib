@@ -38,5 +38,15 @@
         "wiki-page": "Fpdf Table Changelog",
         "wiki-parent": "Fpdf Table",
         "template": "docs/table-changelog.md"
+    },
+    {
+        "wiki-page": "Fpdf Multicell Upgrade Guide",
+        "wiki-parent": "Fpdf Multicell",
+        "template": "docs/multicell-upgrade-guide.md"
+    },
+    {
+        "wiki-page": "Fpdf Table Upgrade Guide",
+        "wiki-parent": "Fpdf Table",
+        "template": "docs/table-upgrade-guide.md"
     }
 ]

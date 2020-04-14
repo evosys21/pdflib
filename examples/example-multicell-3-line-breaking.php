@@ -18,7 +18,7 @@ $pdf = PdfFactory::newPdf('multicell');
 $multicell = new Multicell($pdf);
 
 // Set the styles for the advanced multicell
-$multicell->setStyle('b', 11, 'B', '130,0,30', $pdf->getDefaultFontName());
+$multicell->setStyle('b', 11, 'B', '130,0,30', 'helvetica');
 
 $txt = 'This is a demo of <b>NON BREAKING > S P>A C E EXAMPLE</b>';
 

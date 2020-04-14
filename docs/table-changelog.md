@@ -7,6 +7,11 @@ All notable changes to FPDF Advanced Table will be documented in this file.
 ##X.Y.X (2019-01-01)
 -->
 
+### 6.0.1 (2020-04-15)
+
+- Fix, typo in `$table->setStyleDep` function
+- Change, improved examples
+
 ### 6.0.0 (2020-04-08)
 
 - Change, use Fpdf library from composer: `composer require "setasign/fpdf"`

@@ -12,10 +12,10 @@ $pdf->SetFontSize(7);
 
 $table = new Table($pdf);
 
-$table->setStyle('p', 6, '', '130,0,30', $pdf->getDefaultFontName());
-$table->setStyle('b', 8, '', '80,80,260', $pdf->getDefaultFontName());
-$table->setStyle('h1', 10, '', '0,151,200', $pdf->getDefaultFontName());
-$table->setStyle('bi', 12, 'BI', '0,0,120', $pdf->getDefaultFontName());
+$table->setStyle('p', 6, '', '130,0,30', 'helvetica');
+$table->setStyle('b', 8, '', '80,80,260', 'helvetica');
+$table->setStyle('h1', 10, '', '0,151,200', 'helvetica');
+$table->setStyle('bi', 12, 'BI', '0,0,120', 'helvetica');
 
 //default text color
 $pdf->SetTextColor(118, 0, 3);
@@ -37,15 +37,15 @@ $header = [];
 
 //Table Header
 for ($i = 0; $i < $columns; $i++) {
-    $header[ $i ][ 'TEXT' ] = "Header #" . ($i + 1);
+    $header[$i]['TEXT'] = "Header #" . ($i + 1);
 }
 
 $header1 = $header;
 
-$header[ 0 ][ 'COLSPAN' ] = 2;
+$header[0]['COLSPAN'] = 2;
 
-$header[ 2 ][ 'COLSPAN' ] = 2;
-$header[ 2 ][ 'ROWSPAN' ] = 2;
+$header[2]['COLSPAN'] = 2;
+$header[2]['ROWSPAN'] = 2;
 
 //add the header
 $table->addHeader($header);
@@ -58,16 +58,16 @@ $sDefaultLongText2 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
 
 $aDefaultRow = [];
 for ($i = 0; $i < $columns; $i++) {
-    $aDefaultRow[ $i ][ 'TEXT' ] = $sDefaultText;
+    $aDefaultRow[$i]['TEXT'] = $sDefaultText;
 }
-$aDefaultRow[ 0 ][ 'TEXT' ] = $sDefaultText2;
+$aDefaultRow[0]['TEXT'] = $sDefaultText2;
 
 $table->setDisablePageBreak(true);
 
 for ($i = 1; $i < 15; $i++) {
     $row = $aDefaultRow;
 
-    $row[ 0 ][ 'TEXT' ] = "Line #$i";
+    $row[0]['TEXT'] = "Line #$i";
 
     $table->addRow($row);
     $rowLast = $row;

@@ -1648,10 +1648,10 @@ class Table
      * @param float $fontSize font size
      * @param mixed(string|array) $color font color
      */
-    public function setStyleDep($tagName, $fontFamily, $fontStyle, $fontSize, $color){
-        $$this->multicell->setStyle($tagName, $fontSize, $fontStyle, $color, $fontFamily);
+    public function setStyleDep($tagName, $fontFamily, $fontStyle, $fontSize, $color)
+    {
+        $this->multicell->setStyle($tagName, $fontSize, $fontStyle, $color, $fontFamily);
     }
-
 
 
     /**

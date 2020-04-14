@@ -3,16 +3,16 @@
  * Default configuration values for the PDF Advanced table
  */
 
-$aDefaultConfiguration = array(
+$aDefaultConfiguration = [
 
-    'TABLE' => array(
+    'TABLE' => [
         'TABLE_ALIGN' => 'C', //table align on page
         'TABLE_LEFT_MARGIN' => 0, //space to the left margin
         'BORDER_COLOR' => [0, 92, 177], //border color
         'BORDER_SIZE' => '0.3', //border size
         'BORDER_TYPE' => '1', //border type, can be: 0, 1
-    ),
-    'HEADER' => array(
+    ],
+    'HEADER' => [
         'TEXT_COLOR' => [220, 230, 240], //text color
         'TEXT_SIZE' => 8, //font size
         'TEXT_FONT' => 'Times', //font family
@@ -30,8 +30,8 @@ $aDefaultConfiguration = array(
         'PADDING_RIGHT' => 1, //padding right
         'PADDING_LEFT' => 1, //padding left
         'PADDING_BOTTOM' => 0, //padding bottom
-    ),
-    'ROW' => array(
+    ],
+    'ROW' => [
         'TEXT_COLOR' => [0, 0, 0], //text color
         'TEXT_SIZE' => 6, //font size
         'TEXT_FONT' => 'Times', //font family
@@ -49,5 +49,5 @@ $aDefaultConfiguration = array(
         'PADDING_RIGHT' => 1,
         'PADDING_LEFT' => 1,
         'PADDING_BOTTOM' => 2,
-    ),
-);
+    ],
+];

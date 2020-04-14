@@ -5,7 +5,107 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="Merge changes with TCPDF Version">
+      <change afterPath="$PROJECT_DIR$/docs/multicell-upgrade-guide.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/pages/wiki.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/table-upgrade-guide.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/example-table-dev.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.php-censor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.php-censor.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/commands.md" beforeDir="false" afterPath="$PROJECT_DIR$/bin/commands.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/multicell.txt" beforeDir="false" afterPath="$PROJECT_DIR$/content/multicell.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/define-colors.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-includes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-multicell-transparent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-mypdf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table-images.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table-images1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table-test-bug1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table-test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table1-simple-table-page-break.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table2-simple-table-page-break.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table3.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table4-line-breaks.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table5-line-breaks.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/dev-table6-bug1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/images/dev-table-images.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/images/dev-table-images1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/pic1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/settings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/table.config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/table/dev-table1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/table/draw-table1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/table/example-table-1-overview.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/multicell-changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/multicell-changelog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/multicell-upgrade-3.0.0.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/multicell-user-manual.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/multicell-user-manual.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/dev-redmine-1.php" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/dev-redmine-1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/pages-multicell-examples.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-multicell-examples.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/pages-wiki.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-wiki.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/update-redmine-wiki.php" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/update-redmine-wiki.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/table-changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/table-changelog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/table-user-manual.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/table-user-manual.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-multicell-1-overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-1-overview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-multicell-2-overview-page-break.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-2-overview-page-break.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-multicell-3-line-breaking.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-3-line-breaking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-multicell-4-page-break.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-4-page-break.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-multicell-5-max-lines.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-5-max-lines.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-multicell.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-table-1-overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-table-1-overview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-table-2-overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-table-2-overview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-table-3-detailed.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-table-3-detailed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-table-4-override.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-table-4-override.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/example-table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table/code-example-alignments.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example-alignments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table/code-example-transparent.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example-transparent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table/code-example1.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table/code-example2.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table/code-example3.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/table_example2.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table_example2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfExamples/MyPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfExamples/MyPdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfExamples/PdfFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfExamples/PdfFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Multicell.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Multicell.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/PdfInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/PdfInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Table.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpmd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpmd.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit-ci.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit-ci.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Classes/Pdf/Table/Cell/CellAbstractTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Classes/Pdf/Table/Cell/CellAbstractTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-1-overview.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-1-overview.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-1-overview.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-1-overview.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-2-overview-page-break.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-2-overview-page-break.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-2-overview-page-break.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-2-overview-page-break.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-3-line-breaking.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-3-line-breaking.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-3-line-breaking.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-3-line-breaking.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-4-page-break.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-4-page-break.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-4-page-break.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-4-page-break.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-5-max-lines.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-5-max-lines.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-5-max-lines.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-5-max-lines.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-table-1-overview.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-table-1-overview.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-table-1-overview.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-table-1-overview.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-table-2-overview.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-table-2-overview.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-table-2-overview.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-table-2-overview.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-table-3-detailed.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-table-3-detailed.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-table-3-detailed.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-table-3-detailed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-table-4-override.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-table-4-override.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/example-table-4-override.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-table-4-override.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data/table-code-example2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/table-code-example2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/functional/TableTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/TableTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/functional/table/disable-page-break.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/table/disable-page-break.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/functional/table/draw-table-model1.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/table/draw-table-model1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/functional/table/draw-table-model2.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/table/draw-table-model2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/functional/table/table.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/table/table.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_table" beforeDir="false" afterPath="$PROJECT_DIR$/version_table" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,15 +196,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="settings.editor.splitter.proportion" value="0.2304038" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projects\pdf-addons\fpdf-table\docs\pages" />
       <recent name="D:\Projects\pdf-addons\fpdf-table\docs" />
+      <recent name="D:\Projects\pdf-addons\fpdf-table\docs\pages" />
       <recent name="D:\Projects\pdf-addons\fpdf-table\docs\src" />
       <recent name="D:\Projects\pdf-addons\fpdf-table\bin" />
       <recent name="D:\Projects\pdf-addons\fpdf-table\library\interpid\PdfExamples" />
@@ -157,10 +257,10 @@
     </configuration>
     <list>
       <item itemvalue="PHP Script.wiki1.php" />
-      <item itemvalue="PHPUnit.tests" />
-      <item itemvalue="PHPUnit.CellAbstractTest (1)" />
       <item itemvalue="PHP Script.dev-redmine-1.php" />
       <item itemvalue="PHP Script.update-redmine-wiki.php" />
+      <item itemvalue="PHPUnit.tests" />
+      <item itemvalue="PHPUnit.CellAbstractTest (1)" />
     </list>
     <recent_temporary>
       <list>
@@ -235,7 +335,10 @@
       <workItem from="1568011436313" duration="408000" />
       <workItem from="1586189632509" duration="3609000" />
       <workItem from="1586246931816" duration="6134000" />
-      <workItem from="1586264611951" duration="9805000" />
+      <workItem from="1586264611951" duration="12193000" />
+      <workItem from="1586851614566" duration="697000" />
+      <workItem from="1586852325197" duration="1257000" />
+      <workItem from="1586853715540" duration="1035000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
@@ -564,22 +667,22 @@
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
     <state x="885" y="341" key="FileChooserDialogImpl/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586265242537" />
-    <state width="2151" height="265" key="GridCell.Tab.0.bottom" timestamp="1586272811129">
+    <state width="2151" height="265" key="GridCell.Tab.0.bottom" timestamp="1586354955579">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state width="2151" height="265" key="GridCell.Tab.0.bottom/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586272811129" />
-    <state width="2151" height="265" key="GridCell.Tab.0.center" timestamp="1586272811129">
+    <state width="2151" height="265" key="GridCell.Tab.0.bottom/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586354955579" />
+    <state width="2151" height="265" key="GridCell.Tab.0.center" timestamp="1586354955579">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state width="2151" height="265" key="GridCell.Tab.0.center/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586272811129" />
-    <state width="2151" height="265" key="GridCell.Tab.0.left" timestamp="1586272811129">
+    <state width="2151" height="265" key="GridCell.Tab.0.center/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586354955579" />
+    <state width="2151" height="265" key="GridCell.Tab.0.left" timestamp="1586354955579">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state width="2151" height="265" key="GridCell.Tab.0.left/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586272811129" />
-    <state width="2151" height="265" key="GridCell.Tab.0.right" timestamp="1586272811129">
+    <state width="2151" height="265" key="GridCell.Tab.0.left/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586354955579" />
+    <state width="2151" height="265" key="GridCell.Tab.0.right" timestamp="1586354955579">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state width="2151" height="265" key="GridCell.Tab.0.right/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586272811129" />
+    <state width="2151" height="265" key="GridCell.Tab.0.right/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586354955579" />
     <state x="918" y="298" key="RollbackChangesDialog" timestamp="1586191052348">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
@@ -596,14 +699,14 @@
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
     <state x="906" y="504" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586334803695" />
-    <state x="792" y="333" width="741" height="606" key="find.popup" timestamp="1586275417840">
+    <state x="480" y="305" width="741" height="606" key="find.popup" timestamp="1586854153146">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state x="792" y="333" width="741" height="606" key="find.popup/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586275417840" />
-    <state x="760" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1586261001638">
+    <state x="480" y="305" width="741" height="606" key="find.popup/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586854153146" />
+    <state x="760" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1586854004027">
       <screen x="0" y="0" width="2194" height="1173" />
     </state>
-    <state x="760" y="258" width="672" height="678" key="search.everywhere.popup/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586261001638" />
+    <state x="760" y="258" width="672" height="678" key="search.everywhere.popup/0.0.2194.1173/3840.0.1707.929@0.0.2194.1173" timestamp="1586854004027" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

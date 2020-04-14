@@ -25,19 +25,19 @@ $table = new Table($pdf);
 /**
  * Set the tag styles
  */
-$table->setStyle('p', 10, '', '130,0,30', $pdf->getDefaultFontName());
-$table->setStyle('b', 9, '', '80,80,260', $pdf->getDefaultFontName());
-$table->setStyle('h1', 10, '', '0,151,200', $pdf->getDefaultFontName());
-$table->setStyle('bi', 12, 'BI', '0,0,120', $pdf->getDefaultFontName());
-$table->setStyle('size', 13, 'BI', '0,0,120', $pdf->getDefaultFontName());
+$table->setStyle('p', 10, '', '130,0,30', 'helvetica');
+$table->setStyle('b', 9, '', '80,80,260', 'helvetica');
+$table->setStyle('h1', 10, '', '0,151,200', 'helvetica');
+$table->setStyle('bi', 12, 'BI', '0,0,120', 'helvetica');
+$table->setStyle('size', 13, 'BI', '0,0,120', 'helvetica');
 
 //default text color
 $pdf->SetTextColor(118, 0, 3);
 
 //create an advanced multicell
 $multicell = Multicell::getInstance($pdf);
-$multicell->setStyle('s1', 8, '', '118,0,3', $pdf->getDefaultFontName());
-$multicell->setStyle('s2', 6, '', '0,49,159', $pdf->getDefaultFontName());
+$multicell->setStyle('s1', 8, '', '118,0,3', 'helvetica');
+$multicell->setStyle('s2', 6, '', '0,49,159', 'helvetica');
 $multicell->multiCell(100, 4, "<s1>Example - Override Default Configuration Values</s1>", 0);
 
 $columns = 3;

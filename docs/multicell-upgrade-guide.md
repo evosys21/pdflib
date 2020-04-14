@@ -1,13 +1,8 @@
-# FPDF Advanced Multicell Upgrade to version 3.0.0 <!-- omit in toc -->
+# FPDF Advanced Multicell Upgrade Guide
 
-<!--toc-start -->
+{{>toc}}
 
-## Table of content <!-- omit in toc -->
-- [Multicell `setStyle` function](#multicell-setstyle-function)
-  - [Backward compatibility](#backward-compatibility)
-- [Subscripts and superscripts](#subscripts-and-superscripts)
-
-<!--toc-end -->
+# 3.0.0
 
 With the release of version 3.0.0 there are some functional changes to the Advanced Multicell class.
 

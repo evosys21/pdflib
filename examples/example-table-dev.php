@@ -72,8 +72,8 @@ $table->addRow($row);
 
 $row = [
     new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10),
-    "<p><b>SVG Images</b> are supported\n<bi>(see right image >>>)</bi></p>",
-    new Table\Cell\ImageSVG($pdf, PDF_RESOURCES_IMAGES . '/Tiger.svg', 35, 35)
+    "<p><b>Images</b> are supported\n<bi></bi></p>",
+    new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/telescope.jpg', 35, 35)
 ];
 
 //add the row to the table
@@ -81,10 +81,10 @@ $table->addRow($row);
 
 $row = [
     new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10),
-    "<p><b>SVG Images</b> are supported\n<bi>(see right image >>>)</bi></p>",
+    "<p><b>Images</b> are supported\n<bi></bi></p>",
     [
-        'TYPE' => 'ImageSVG',
-        'FILE' => PDF_RESOURCES_IMAGES . '/Tiger.svg',
+        'TYPE' => 'Image',
+        'FILE' => PDF_RESOURCES_IMAGES . '/telescope.jpg',
         'WIDTH' => 35,
         'HEIGHT' => 35,
     ]

@@ -84,11 +84,11 @@ $pdf->ln(10);
 $multicell->multiCell(0, 10, "<title>Table of Content:</title>");
 
 $s = <<<HEREDOC
-<p width='10'> </p><p> . Paragraph 1</p>
-<p width='10'> </p><p> . Paragraph 2</p>
-<p width='20'> </p><p> . Paragraph 2.1</p>
-<p width='20'> </p><p> . Paragraph 2.2</p>
-<p width='10'> </p><p> . Paragraph 3</p>
+<p width='10'> </p><p> • Paragraph 1</p>
+<p width='10'> </p><p> • Paragraph 2</p>
+<p width='20'> </p><p> • Paragraph 2.1</p>
+<p width='20'> </p><p> • Paragraph 2.2</p>
+<p width='10'> </p><p> • Paragraph 3</p>
 HEREDOC;
 $multicell->multiCell(0, 5, $s);
 

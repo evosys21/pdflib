@@ -6,9 +6,9 @@ use Interpid\PdfLib\Table;
 
 $table = new Table($pdf);
 
-$table->setStyle('p', 7, '', '130,0,30', $pdf->getDefaultFontName());
-$table->setStyle('b', 7, 'B', '130,0,30', $pdf->getDefaultFontName());
-$table->setStyle('bi', 7, 'BI', '0,0,120', $pdf->getDefaultFontName());
+$table->setStyle('p', 7, '', '130,0,30', 'helvetica');
+$table->setStyle('b', 7, 'B', '130,0,30', 'helvetica');
+$table->setStyle('bi', 7, 'BI', '0,0,120', 'helvetica');
 
 $columns = 3;
 
@@ -53,13 +53,13 @@ $table->addRow($row);
 $row = [];
 
 //alternatively you can create directly the cell object
-$row[ 0 ] = new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10);
-$row[ 1 ] = array(
+$row[0] = new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10);
+$row[1] = array(
     'TEXT' => "<p>This is another <b>Multicell</b></p>",
-    'BACKGROUND_COLOR' => $aColor[ 0 ]
+    'BACKGROUND_COLOR' => $aColor[0]
 );
-$row[ 2 ] = new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/pensil.jpg', 10);
-$row[ 2 ]->setAlign("L");
+$row[2] = new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/pensil.jpg', 10);
+$row[2]->setAlign("R");
 
 //add the data row
 $table->addRow($row);

@@ -92,7 +92,7 @@ class PdfInterface
         $aResult = [];
         $strlen = strlen($str);
         for ($i = 0; $i < $strlen; $i++) {
-            $aResult[] = ord($str[ $i ]);
+            $aResult[] = ord($str[$i]);
         }
 
         return $aResult;
@@ -160,7 +160,7 @@ class PdfInterface
     public function getImageParams($file, $w = 0, $h = 0)
     {
         // Put an image on the page
-        if (!isset($this->pdf->images[ $file ])) {
+        if (!isset($this->pdf->images[$file])) {
             $pos = strrpos($file, '.');
             $type = substr($file, $pos + 1);
             $type = strtolower($type);
@@ -172,10 +172,10 @@ class PdfInterface
                 $this->pdf->Error('Unsupported image type: ' . $type);
             }
             $info = $this->pdf->$mtd($file);
-            $info[ 'i' ] = count($this->pdf->images) + 1;
-            $this->pdf->images[ $file ] = $info;
+            $info['i'] = count($this->pdf->images) + 1;
+            $this->pdf->images[$file] = $info;
         } else {
-            $info = $this->pdf->images[ $file ];
+            $info = $this->pdf->images[$file];
         }
 
         // Automatic width and height calculation if needed
@@ -185,16 +185,16 @@ class PdfInterface
             $h = -96;
         }
         if ($w < 0) {
-            $w = -$info[ 'w' ] * 72 / $w / $this->pdf->k;
+            $w = -$info['w'] * 72 / $w / $this->pdf->k;
         }
         if ($h < 0) {
-            $h = -$info[ 'h' ] * 72 / $h / $this->pdf->k;
+            $h = -$info['h'] * 72 / $h / $this->pdf->k;
         }
         if ($w == 0) {
-            $w = $h * $info[ 'w' ] / $info[ 'h' ];
+            $w = $h * $info['w'] / $info['h'];
         }
         if ($h == 0) {
-            $h = $w * $info[ 'h' ] / $info[ 'w' ];
+            $h = $w * $info['h'] / $info['w'];
         }
 
         return array(

@@ -19,8 +19,8 @@ $multicell = new Multicell($pdf);
 
 //Set the styles for the advanced multicell
 $multicell = new Multicell($pdf);
-$multicell->setStyle('p', 7, '', '130,0,30', $pdf->getDefaultFontName());
-$multicell->setStyle('b', 7, 'B', '130,0,30', $pdf->getDefaultFontName());
+$multicell->setStyle('p', 7, '', '130,0,30', 'helvetica');
+$multicell->setStyle('b', 7, 'B', '130,0,30', 'helvetica');
 
 //simple table
 $multicell->multiCell(0, 5, "<p size='10' > ~~~Simple table:</p>");

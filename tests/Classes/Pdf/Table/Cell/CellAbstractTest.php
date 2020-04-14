@@ -120,11 +120,11 @@ class CellAbstractTest extends BaseTestCase
 
         foreach ($aValues as $val) {
             list($set, $get) = $val;
-            $o->setPadding($set[ 0 ], $set[ 1 ], $set[ 2 ], $set[ 3 ]);
-            $this->assertEquals($get[ 0 ], $o->getPaddingTop());
-            $this->assertEquals($get[ 1 ], $o->getPaddingRight());
-            $this->assertEquals($get[ 2 ], $o->getPaddingBottom());
-            $this->assertEquals($get[ 3 ], $o->getPaddingLeft());
+            $o->setPadding($set[0], $set[1], $set[2], $set[3]);
+            $this->assertEquals($get[0], $o->getPaddingTop());
+            $this->assertEquals($get[1], $o->getPaddingRight());
+            $this->assertEquals($get[2], $o->getPaddingBottom());
+            $this->assertEquals($get[3], $o->getPaddingLeft());
         }
     }
 
@@ -158,20 +158,20 @@ class CellAbstractTest extends BaseTestCase
     {
         $pdf = $this->getPdfObject();
 
-        $aProps[ 'COLSPAN' ] = 0;
+        $aProps['COLSPAN'] = 0;
         $mock = new CellAbstractMock($pdf);
         $mock->setProperties($aProps);
         $this->assertEquals(1, $mock->getColSpan());
 
-        $aProps[ 'COLSPAN' ] = 1;
+        $aProps['COLSPAN'] = 1;
         $mock = new CellAbstractMock($pdf);
         $mock->setProperties($aProps);
         $this->assertEquals(1, $mock->getColSpan());
 
-        $aProps[ 'COLSPAN' ] = 2;
+        $aProps['COLSPAN'] = 2;
         $mock = new CellAbstractMock($pdf);
         $mock->setProperties($aProps);
-        $this->assertEquals($aProps[ 'COLSPAN' ], $mock->getColSpan());
+        $this->assertEquals($aProps['COLSPAN'], $mock->getColSpan());
     }
 
 
@@ -194,17 +194,17 @@ class CellAbstractTest extends BaseTestCase
 
         $mock->setProperties($aProps);
         //$this->assertEquals($aProps['ALIGN'], $o->getAlignVertical())
-        $this->assertEquals($aProps[ 'VERTICAL_ALIGN' ], $mock->getAlignVertical());
-        $this->assertEquals($aProps[ 'COLSPAN' ], $mock->getColSpan());
-        $this->assertEquals($aProps[ 'ROWSPAN' ], $mock->getRowSpan());
-        $this->assertEquals($aProps[ 'PADDING' ][ 0 ], $mock->getPaddingTop());
-        $this->assertEquals($aProps[ 'PADDING' ][ 1 ], $mock->getPaddingRight());
-        $this->assertEquals($aProps[ 'PADDING' ][ 2 ], $mock->getPaddingBottom());
-        $this->assertEquals($aProps[ 'PADDING' ][ 3 ], $mock->getPaddingLeft());
-        $this->assertEquals($aProps[ 'BORDER_TYPE' ], $mock->getBorderType());
-        $this->assertEquals($aProps[ 'BORDER_SIZE' ], $mock->getBorderSize());
-        $this->assertEquals($aProps[ 'BORDER_COLOR' ], $mock->getBorderColor());
-        $this->assertEquals($aProps[ 'BACKGROUND_COLOR' ], $mock->getBackgroundColor());
+        $this->assertEquals($aProps['VERTICAL_ALIGN'], $mock->getAlignVertical());
+        $this->assertEquals($aProps['COLSPAN'], $mock->getColSpan());
+        $this->assertEquals($aProps['ROWSPAN'], $mock->getRowSpan());
+        $this->assertEquals($aProps['PADDING'][0], $mock->getPaddingTop());
+        $this->assertEquals($aProps['PADDING'][1], $mock->getPaddingRight());
+        $this->assertEquals($aProps['PADDING'][2], $mock->getPaddingBottom());
+        $this->assertEquals($aProps['PADDING'][3], $mock->getPaddingLeft());
+        $this->assertEquals($aProps['BORDER_TYPE'], $mock->getBorderType());
+        $this->assertEquals($aProps['BORDER_SIZE'], $mock->getBorderSize());
+        $this->assertEquals($aProps['BORDER_COLOR'], $mock->getBorderColor());
+        $this->assertEquals($aProps['BACKGROUND_COLOR'], $mock->getBackgroundColor());
     }
 
     public function testSetInternValue()
@@ -247,16 +247,16 @@ class CellAbstractTest extends BaseTestCase
         $mock->setDefaultValues($aDefault);
 
         //$this->assertEquals($aProps['ALIGN'], $o->getAlignVertical())
-        $this->assertEquals($aProps[ 'VERTICAL_ALIGN' ], $mock->getAlignVertical());
-        $this->assertEquals($aProps[ 'COLSPAN' ], $mock->getColSpan());
-        $this->assertEquals($aProps[ 'ROWSPAN' ], $mock->getRowSpan());
-        $this->assertEquals($aDefault[ 'PADDING' ][ 1 ], $mock->getPaddingRight());
-        $this->assertEquals($aDefault[ 'PADDING' ][ 2 ], $mock->getPaddingBottom());
-        $this->assertEquals($aDefault[ 'PADDING' ][ 3 ], $mock->getPaddingLeft());
-        $this->assertEquals($aDefault[ 'BORDER_TYPE' ], $mock->getBorderType());
-        $this->assertEquals($aDefault[ 'BORDER_SIZE' ], $mock->getBorderSize());
-        $this->assertEquals($aDefault[ 'BORDER_COLOR' ], $mock->getBorderColor());
-        $this->assertEquals($aProps[ 'BACKGROUND_COLOR' ], $mock->getBackgroundColor());
+        $this->assertEquals($aProps['VERTICAL_ALIGN'], $mock->getAlignVertical());
+        $this->assertEquals($aProps['COLSPAN'], $mock->getColSpan());
+        $this->assertEquals($aProps['ROWSPAN'], $mock->getRowSpan());
+        $this->assertEquals($aDefault['PADDING'][1], $mock->getPaddingRight());
+        $this->assertEquals($aDefault['PADDING'][2], $mock->getPaddingBottom());
+        $this->assertEquals($aDefault['PADDING'][3], $mock->getPaddingLeft());
+        $this->assertEquals($aDefault['BORDER_TYPE'], $mock->getBorderType());
+        $this->assertEquals($aDefault['BORDER_SIZE'], $mock->getBorderSize());
+        $this->assertEquals($aDefault['BORDER_COLOR'], $mock->getBorderColor());
+        $this->assertEquals($aProps['BACKGROUND_COLOR'], $mock->getBackgroundColor());
     }
 
     public function testCellWidth()
@@ -382,17 +382,17 @@ class CellAbstractTest extends BaseTestCase
         $source->setProperties($aProps);
         $mock->copyProperties($source);
 
-        $this->assertEquals($aProps[ 'VERTICAL_ALIGN' ], $mock->getAlignVertical());
-        $this->assertEquals($aProps[ 'COLSPAN' ], $mock->getColSpan());
-        $this->assertEquals($aProps[ 'ROWSPAN' ], $mock->getRowSpan());
-        $this->assertEquals($aProps[ 'PADDING' ][ 0 ], $mock->getPaddingTop());
-        $this->assertEquals($aProps[ 'PADDING' ][ 1 ], $mock->getPaddingRight());
-        $this->assertEquals($aProps[ 'PADDING' ][ 2 ], $mock->getPaddingBottom());
-        $this->assertEquals($aProps[ 'PADDING' ][ 3 ], $mock->getPaddingLeft());
-        $this->assertEquals($aProps[ 'BORDER_TYPE' ], $mock->getBorderType());
-        $this->assertEquals($aProps[ 'BORDER_SIZE' ], $mock->getBorderSize());
-        $this->assertEquals($aProps[ 'BORDER_COLOR' ], $mock->getBorderColor());
-        $this->assertEquals($aProps[ 'BACKGROUND_COLOR' ], $mock->getBackgroundColor());
+        $this->assertEquals($aProps['VERTICAL_ALIGN'], $mock->getAlignVertical());
+        $this->assertEquals($aProps['COLSPAN'], $mock->getColSpan());
+        $this->assertEquals($aProps['ROWSPAN'], $mock->getRowSpan());
+        $this->assertEquals($aProps['PADDING'][0], $mock->getPaddingTop());
+        $this->assertEquals($aProps['PADDING'][1], $mock->getPaddingRight());
+        $this->assertEquals($aProps['PADDING'][2], $mock->getPaddingBottom());
+        $this->assertEquals($aProps['PADDING'][3], $mock->getPaddingLeft());
+        $this->assertEquals($aProps['BORDER_TYPE'], $mock->getBorderType());
+        $this->assertEquals($aProps['BORDER_SIZE'], $mock->getBorderSize());
+        $this->assertEquals($aProps['BORDER_COLOR'], $mock->getBorderColor());
+        $this->assertEquals($aProps['BACKGROUND_COLOR'], $mock->getBackgroundColor());
     }
 
     public function _testProcessContent()

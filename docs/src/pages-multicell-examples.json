@@ -1,12 +1,12 @@
 [
     {
         "wiki-page": "Fpdf Multicell Examples",
-         "wiki-parent": "Fpdf Multicell",
+        "wiki-parent": "Fpdf Multicell",
         "template": "docs/pages/page-multicell-examples.md"
     },
     {
         "wiki-page": "fpdf-multicell-examples-preview",
-         "wiki-parent": "Fpdf Multicell",
+        "wiki-parent": "Fpdf Multicell",
         "template": "docs/pages/page-multicell-examples-preview.md",
         "attachments": [
             "tests/data/example-multicell-1-overview.png",

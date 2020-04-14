@@ -9,9 +9,9 @@ use Interpid\PdfLib\Tools;
 
 $table = new Table($pdf);
 
-$table->setStyle('p', 6, '', '130,0,30', $pdf->getDefaultFontName());
-$table->setStyle('b', 6, 'B', '130,0,30', $pdf->getDefaultFontName());
-$table->setStyle('bi', 6, 'BI', '0,0,120', $pdf->getDefaultFontName());
+$table->setStyle('p', 6, '', '130,0,30', 'helvetica');
+$table->setStyle('b', 6, 'B', '130,0,30', 'helvetica');
+$table->setStyle('bi', 6, 'BI', '0,0,120', 'helvetica');
 
 require('settings.php');
 

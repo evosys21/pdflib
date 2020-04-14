@@ -9,7 +9,7 @@
 	- Different <font>Font</font>, <size>Sizes</size>, <style>Styles</style>, <color>Colors</color> can be used 
 	- The cell block can be framed and the background painted
 	- <style href='www.fpdf.org'>Links</style> can be used in any tag
-	- <h4>TAB</h4> spaces (<b>\	</b>) can be used
+	- <h4>TAB</h4> spaces (<b>\t</b>) can be used
 	- Variable Y relative positions can be used for <ss y='-0.8'>Subscript</ss> or <ss y='1.1'>Superscript</ss>
 	- Cell padding (left, right, top, bottom)
 	- Controlled Tag Sizes can be used</p>

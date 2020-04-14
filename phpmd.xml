@@ -16,15 +16,15 @@
         <priority>3</priority>
         <properties>
             <property name="minimum" description="Minimum length for a variable, property or parameter name" value="3"/>
-            <property name="exceptions" value="id,em,i,j,k,x,y,w,h,ln" />
+            <property name="exceptions" value="id,em,i,j,k,x,y,w,h,ln"/>
         </properties>
     </rule>
-    <rule ref="rulesets/design.xml/ExitExpression" />
-    <rule ref="rulesets/design.xml/EvalExpression" />
-    <rule ref="rulesets/design.xml/GotoStatement" />
-    <rule ref="rulesets/design.xml/DepthOfInheritance" />
-    <rule ref="rulesets/design.xml/CouplingBetweenObjects" />
-    <rule ref="rulesets/design.xml/NumberOfChildren" />
-    <rule ref="rulesets/unusedcode.xml" />
-    <rule ref="rulesets/controversial.xml" />
+    <rule ref="rulesets/design.xml/ExitExpression"/>
+    <rule ref="rulesets/design.xml/EvalExpression"/>
+    <rule ref="rulesets/design.xml/GotoStatement"/>
+    <rule ref="rulesets/design.xml/DepthOfInheritance"/>
+    <rule ref="rulesets/design.xml/CouplingBetweenObjects"/>
+    <rule ref="rulesets/design.xml/NumberOfChildren"/>
+    <rule ref="rulesets/unusedcode.xml"/>
+    <rule ref="rulesets/controversial.xml"/>
 </ruleset>

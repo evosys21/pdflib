@@ -22,7 +22,7 @@ In order to include the full interpid library, just include the `autoload.php` p
 Assuming you downloaded `fpdf-multicell-3.0.0` and placed in your project `libs` folder:
 ```
 <?php
-require_once 'libs/fpdf-multicell-6.0.0/autoload.php';
+require_once 'libs/fpdf-multicell-3.0.0/autoload.php';
 ```
 
 #### With composer.json
@@ -33,7 +33,7 @@ In `composer.json`
 ```
     "autoload": {
         "classmap": [
-            "libs/fpdf-multicell-6.0.0/library/interpid"
+            "libs/fpdf-multicell-3.0.0/library/interpid"
         ],
     },
 ```
@@ -44,7 +44,7 @@ In `composer.json`
 ```
     "autoload": {
         "psr-4": {
-            "Interpid\\PdfLib\\": "libs/fpdf-multicell-6.0.0/library/interpid/PdfLib/"
+            "Interpid\\PdfLib\\": "libs/fpdf-multicell-3.0.0/library/interpid/PdfLib/"
         }
     },
 ```

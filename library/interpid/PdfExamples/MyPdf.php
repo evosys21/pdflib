@@ -27,6 +27,7 @@ use Interpid\PdfLib\Multicell;
 class MyPdf extends Pdf
 {
     protected $headerSource = 'header.txt';
+    public $defaultFont = 'helvetica';
 
     /**
      * Custom Header
@@ -42,18 +43,20 @@ class MyPdf extends Pdf
          */
         $multicell = Multicell::getInstance($this);
 
-        $multicell->setStyle('p', 6, '', '160,160,160', $this->getDefaultFontName());
-        $multicell->setStyle('h1', 6, '', '160,160,160', $this->getDefaultFontName());
-        $multicell->setStyle('h2', 6, '', '0,119,220', $this->getDefaultFontName());
-        $multicell->setStyle('h4', 6, '', '0,151,200', $this->getDefaultFontName());
+        $multicell->setStyle('p', 6, '', '160,160,160', 'helvetica');
+        $multicell->setStyle('h1', 6, '', '160,160,160', 'helvetica');
+        $multicell->setStyle('h2', 6, '', '0,119,220', 'helvetica');
+        $multicell->setStyle('h4', 6, '', '0,151,200', 'helvetica');
 
         $multicell->multiCell(100, 3, file_get_contents(PDF_APPLICATION_PATH . '/content/' . $this->headerSource));
 
+        $width = 40;
+
         $this->Image(
             PDF_APPLICATION_PATH . '/content/images/interpid_logo.png',
-            160,
+            $this->w - $this->rMargin - $width,
             10,
-            40,
+            $width,
             0,
             '',
             'http://www.interpid.eu'
@@ -70,7 +73,7 @@ class MyPdf extends Pdf
     public function Footer()
     {
         $this->SetY(-10);
-        $this->SetFont($this->getDefaultFontName(), 'I', 7);
+        $this->SetFont('helvetica', 'I', 7);
         $this->SetTextColor(170, 170, 170);
         $this->MultiCell(0, 4, "Page {$this->PageNo()} / {nb}", 0, 'C');
     }
@@ -80,9 +83,9 @@ class MyPdf extends Pdf
      *
      * @return string
      */
-    public function getDefaultFontName()
+    public function getDefaultFont()
     {
-        return 'helvetica';
+        return $this->defaultFont;
     }
 
     /**
@@ -92,13 +95,13 @@ class MyPdf extends Pdf
     public function drawMarginLines()
     {
         //draw the top and bottom margins
-        $ytop = $this->tMargin;
-        $ybottom = $this->h - 20;
+        $top = $this->tMargin;
+        $bottom = $this->h - 20;
 
         $this->SetLineWidth(0.1);
         $this->SetDrawColor(150, 150, 150);
-        $this->Line(0, $ytop, $this->w, $ytop);
-        $this->Line(0, $ybottom, $this->w, $ybottom);
+        $this->Line(0, $top, $this->w, $top);
+        $this->Line(0, $bottom, $this->w, $bottom);
         $this->Line($this->rMargin, 0, $this->rMargin, $this->h);
         $this->Line($this->w - $this->rMargin, 0, $this->w - $this->rMargin, $this->h);
     }
@@ -110,9 +113,9 @@ class MyPdf extends Pdf
      */
     public function _putinfo()
     {
-        if (isset($_SERVER[ 'ENVIRONMENT' ]) && 'test' == $_SERVER[ 'ENVIRONMENT' ]) {
-            $this->metadata[ 'Producer' ] = 'FPDF - UNIT-TEST';
-            $this->metadata[ 'CreationDate' ] = 'D:' . @date('YmdHis', 1483228800);
+        if (isset($_SERVER['ENVIRONMENT']) && 'test' == $_SERVER['ENVIRONMENT']) {
+            $this->metadata['Producer'] = 'FPDF - UNIT-TEST';
+            $this->metadata['CreationDate'] = 'D:' . @date('YmdHis', 1483228800);
             foreach ($this->metadata as $key => $value) {
                 $this->_put('/' . $key . ' ' . $this->_textstring($value));
             }

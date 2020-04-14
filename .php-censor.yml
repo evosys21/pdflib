@@ -14,7 +14,7 @@ test:
   php_code_sniffer:
     allowed_warnings: -1
     allowed_errors: -1
-#    standard: "PSR1,PSR2"
+    #    standard: "PSR1,PSR2"
     standard: "phpcs.xml"
   php_mess_detector:
     allowed_warnings: -1

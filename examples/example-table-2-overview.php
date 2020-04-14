@@ -29,15 +29,17 @@ $table = new Table($pdf);
 /**
  * Set the tag styles
  */
-$table->setStyle('p', 10, '', '130,0,30', $pdf->getDefaultFontName());
-$table->setStyle('b', 9, '', '80,80,260', $pdf->getDefaultFontName());
-$table->setStyle('h1', 10, '', '0,151,200', $pdf->getDefaultFontName());
-$table->setStyle('bi', 12, 'BI', '0,0,120', $pdf->getDefaultFontName());
+$table->setStyle('p', 10, '', '130,0,30', 'helvetica');
+$table->setStyle('b', 9, '', '80,80,260', 'helvetica');
+$table->setStyle('h1', 10, '', '0,151,200', 'helvetica');
+$table->setStyle('bi', 12, 'BI', '0,0,120', 'helvetica');
 
 $txt1 = $title = file_get_contents(PDF_APPLICATION_PATH . '/content/table-cell-text.txt');
 
 //Initialize the table, 5 columns with the specified widths
-$table->initialize([20, 30, 40, 40, 20]);
+$table->initialize([35, 30, 40, 40, 25], [
+    'TABLE' => ['TABLE_LEFT_MARGIN' => 0]
+]);
 
 $header = [
     ['TEXT' => 'Header 1'],
