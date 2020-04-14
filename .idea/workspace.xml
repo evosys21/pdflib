@@ -5,107 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaba1380-5f2a-438c-b573-53b5d872b2c6" name="Default" comment="Merge changes with TCPDF Version">
-      <change afterPath="$PROJECT_DIR$/docs/multicell-upgrade-guide.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/pages/wiki.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/table-upgrade-guide.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/example-table-dev.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.php-censor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.php-censor.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/commands.md" beforeDir="false" afterPath="$PROJECT_DIR$/bin/commands.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/bin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/multicell.txt" beforeDir="false" afterPath="$PROJECT_DIR$/content/multicell.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/define-colors.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/dev-includes.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/dev-multicell-transparent.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/dev-mypdf.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/dev-table-images.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/dev-table-images1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/dev-table-test-bug1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/dev-table-test.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/dev-table1-simple-table-page-break.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/dev-table1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/dev-table2-simple-table-page-break.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/dev-table2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/dev-table3.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/dev-table4-line-breaks.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/dev-table5-line-breaks.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/dev-table6-bug1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/images/dev-table-images.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/images/dev-table-images1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/pic1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/settings.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/table.config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/table/dev-table1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/table/draw-table1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/table/example-table-1-overview.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/multicell-changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/multicell-changelog.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/multicell-upgrade-3.0.0.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/multicell-user-manual.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/multicell-user-manual.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/dev-redmine-1.php" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/dev-redmine-1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/pages-multicell-examples.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-multicell-examples.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/pages-wiki.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/pages-wiki.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/update-redmine-wiki.php" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/update-redmine-wiki.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/table-changelog.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/table-changelog.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/table-user-manual.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/table-user-manual.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example-multicell-1-overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-1-overview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example-multicell-2-overview-page-break.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-2-overview-page-break.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example-multicell-3-line-breaking.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-3-line-breaking.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example-multicell-4-page-break.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-4-page-break.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example-multicell-5-max-lines.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell-5-max-lines.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example-multicell.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-multicell.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example-table-1-overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-table-1-overview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example-table-2-overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-table-2-overview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example-table-3-detailed.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-table-3-detailed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example-table-4-override.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example-table-4-override.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example-table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/table/code-example-alignments.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example-alignments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/table/code-example-transparent.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example-transparent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/table/code-example1.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/table/code-example2.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/table/code-example3.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table/code-example3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/table_example2.php" beforeDir="false" afterPath="$PROJECT_DIR$/examples/table_example2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfExamples/MyPdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfExamples/MyPdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfExamples/PdfFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfExamples/PdfFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Multicell.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Multicell.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/PdfInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/PdfInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/interpid/PdfLib/Table.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/interpid/PdfLib/Table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpmd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpmd.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit-ci.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit-ci.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Classes/Pdf/Table/Cell/CellAbstractTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Classes/Pdf/Table/Cell/CellAbstractTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-1-overview.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-1-overview.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-1-overview.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-1-overview.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-2-overview-page-break.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-2-overview-page-break.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-2-overview-page-break.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-2-overview-page-break.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-3-line-breaking.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-3-line-breaking.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-3-line-breaking.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-3-line-breaking.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-4-page-break.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-4-page-break.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-4-page-break.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-4-page-break.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-5-max-lines.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-5-max-lines.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-multicell-5-max-lines.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-multicell-5-max-lines.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-table-1-overview.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-table-1-overview.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-table-1-overview.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-table-1-overview.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-table-2-overview.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-table-2-overview.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-table-2-overview.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-table-2-overview.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-table-3-detailed.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-table-3-detailed.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-table-3-detailed.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-table-3-detailed.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-table-4-override.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-table-4-override.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/example-table-4-override.png" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/example-table-4-override.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data/table-code-example2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data/table-code-example2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/functional/TableTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/TableTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/functional/table/disable-page-break.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/table/disable-page-break.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/functional/table/draw-table-model1.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/table/draw-table-model1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/functional/table/draw-table-model2.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/table/draw-table-model2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/functional/table/table.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/functional/table/table.config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version_table" beforeDir="false" afterPath="$PROJECT_DIR$/version_table" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/version_multicell" beforeDir="false" afterPath="$PROJECT_DIR$/version_multicell" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,7 +239,7 @@
       <workItem from="1586264611951" duration="12193000" />
       <workItem from="1586851614566" duration="697000" />
       <workItem from="1586852325197" duration="1257000" />
-      <workItem from="1586853715540" duration="1035000" />
+      <workItem from="1586853715540" duration="1743000" />
     </task>
     <task id="LOCAL-00001" summary="#828 - Addons don't work in PHP7">
       <created>1473507297747</created>
