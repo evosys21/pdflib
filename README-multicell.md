@@ -9,8 +9,8 @@ Just copy the project content to your web-server and call the example files (see
 
 # Support and Documentation
 
- - Examples: <https://tracker.interpid.eu/projects/pdf-addons/wiki/FPDF_Multicell_Examples>
- - User Manual: <https://tracker.interpid.eu/projects/pdf-addons/wiki/FPDF_Multicell_User_Manual>
+ - Examples: <https://tracker.interpid.eu/projects/pdf-addons/wiki/Fpdf_Multicell_Examples>
+ - User Manual: <https://tracker.interpid.eu/projects/pdf-addons/wiki/Fpdf_Multicell_User_Manual>
  - Documentation Site: <https://tracker.interpid.eu/projects/pdf-addons/wiki>
  - Community forum: <https://tracker.interpid.eu/projects/pdf-addons/boards>
  - Issues, please report any issues here: <https://tracker.interpid.eu/projects/pdf-addons/issues>
