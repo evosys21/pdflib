@@ -22,11 +22,7 @@
     {
         "wiki-page": "FPDF Multicell User Manual",
         "wiki-parent": "FPDF Multicell",
-        "template": "docs/multicell-user-manual.md",
-        "attachments": [
-            "docs/images/text-strikethrough.png",
-            "docs/images/text-sub-superscript.png"
-        ]
+        "template": "docs/multicell-user-manual.md"
     },
     {
         "wiki-page": "FPDF Table User Manual",

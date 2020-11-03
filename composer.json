@@ -17,7 +17,7 @@
         "phpunit/phpunit": "^7.5",
         "phpmetrics/phpmetrics": "^2.4",
         "interpid/redmine": "^1.0",
-        "kbsali/redmine-api": "dev-master",
+        "kbsali/redmine-api": "^1.0",
         "vlucas/phpdotenv": "^4.1"
     },
     "autoload": {

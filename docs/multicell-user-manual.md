@@ -214,7 +214,7 @@ Subscript and superscripts can be adjusted with the y attribute. See example:
 ```php
 $s = "<p>The following is <s y='-1'>Subscript</s> and <s y='1'>Superscript</s></p>";
 ```
-<img src="./images/text-sub-superscript.png" width="300"/>
+<!-- <img src="./images/text-sub-superscript.png" width="300"/> -->
 
 <br/><br/>
 
@@ -227,7 +227,7 @@ Text strikethrough can be defined using the `strike` attribute in any tag:
 $s = "<p>The following is <n strike=''>Text Strikethrough</n> and <bi strike='.5'>Text Strikethrough bolder line</bi></p>";
 $multicell->multiCell(0, 5, $s);
 ```
-<img src="./images/text-strikethrough.png" width="500"/>
+<!-- <img src="./images/text-strikethrough.png" width="500"/> -->
 
 <br/><br/>
 
