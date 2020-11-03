@@ -41,6 +41,8 @@ class Pdf extends \FPDF
     public $FontSizePt;
     public $CurrentFont;
     public $TextColor;
+    public $DrawColor;
+    public $LineWidth;
     public $FillColor;
     public $ColorFlag;
     public $AutoPageBreak;

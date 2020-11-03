@@ -60,6 +60,8 @@ This line is a simple text with no formatting(text-formatting from the pdf defau
 
 <p>The following is <s y='-1'>Subscript</s> and <s y='1'>Superscript</s></p>
 
+<p>The following is <n strike=''>Text Strikethrough</n> and <bi strike='.5'>Text Strikethrough bolder line</bi></p>
+
 This line is a simple text with no formatting(text-formatting from the pdf defaults)
 
 HEREDOC;
@@ -84,11 +86,11 @@ $pdf->ln(10);
 $multicell->multiCell(0, 10, "<title>Table of Content:</title>");
 
 $s = <<<HEREDOC
-<p width='10'> </p><p> • Paragraph 1</p>
-<p width='10'> </p><p> • Paragraph 2</p>
-<p width='20'> </p><p> • Paragraph 2.1</p>
-<p width='20'> </p><p> • Paragraph 2.2</p>
-<p width='10'> </p><p> • Paragraph 3</p>
+<p width='10'> </p><p> - Paragraph 1</p>
+<p width='10'> </p><p> - Paragraph 2</p>
+<p width='20'> </p><p> - Paragraph 2.1</p>
+<p width='20'> </p><p> - Paragraph 2.2</p>
+<p width='10'> </p><p> - Paragraph 3</p>
 HEREDOC;
 $multicell->multiCell(0, 5, $s);
 
