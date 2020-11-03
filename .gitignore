@@ -7,3 +7,5 @@ composer.lock
 /.idea/workspace.xml
 /release
 /.env
+/.idea
+/.vscode

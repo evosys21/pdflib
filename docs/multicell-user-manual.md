@@ -198,7 +198,6 @@ $s = "<p>This is a paragraph</p>";
 $multicell->multiCell(0, 5, $s);
 ```
 
-
 ### Nested tags
 
 In case of nested tags, the styles are NOT inherited
@@ -207,18 +206,32 @@ In case of nested tags, the styles are NOT inherited
 // nested tags
 $s = "<p>This is <b>BOLD</b> text, this is <i>ITALIC</i></p>";
 $multicell->multiCell(0, 5, $s);
-```
+``` 
 
 ### Subscripts and superscripts
 Subscript and superscripts can be adjusted with the y attribute. See example:
 
 ```php
-// subscripts and superscripts (the y can be adjusted)
-$s = "<p y='-0.8'>Subscript</p> or <p y='1.1'>Superscript</p>";
-$multicell->multiCell(0, 5, $s)
+$s = "<p>The following is <s y='-1'>Subscript</s> and <s y='1'>Superscript</s></p>";
 ```
+<img src="./images/text-sub-superscript.png" width="300"/>
 
-###Links
+<br/><br/>
+
+### Strikethrough
+Text strikethrough can be defined using the `strike` attribute in any tag:
+    - `<p strike=''>...` - default strikethrough line width
+    - `<p strike='0.6'>...` - strikethrough line width: 0.6
+
+```php
+$s = "<p>The following is <n strike=''>Text Strikethrough</n> and <bi strike='.5'>Text Strikethrough bolder line</bi></p>";
+$multicell->multiCell(0, 5, $s);
+```
+<img src="./images/text-strikethrough.png" width="500"/>
+
+<br/><br/>
+
+### Links
 You can create links by using the href attribute in a tag.
 
 ```php

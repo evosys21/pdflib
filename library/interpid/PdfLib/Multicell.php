@@ -232,12 +232,12 @@ class Multicell
      * Sets the attributes for the specified tag.
      * Deprecated function. Use $this->setStyle function.
      *
-     * @deprecated
      * @param string $tagName tag name
      * @param string $fontFamily font family
      * @param string $fontStyle font style
      * @param float $fontSize font size
      * @param mixed(string|array) $color font color
+     * @deprecated
      */
     public function setStyleDep($tagName, $fontFamily, $fontStyle, $fontSize, $color)
     {
@@ -376,10 +376,6 @@ class Multicell
             $tag = 'DEFAULT';
         }
 
-        if (!isset($this->tagStyle[$tag])) {
-            $tag = 'DEFAULT';
-        }
-
         if (isset($this->tagStyle[$tag][$attribute])) {
             return $this->tagStyle[$tag][$attribute];
         }
@@ -395,8 +391,9 @@ class Multicell
      * If the tag is not found then the DEFAULT tag is being used
      *
      * @param string $tag tag name
+     * @param bool|string $strike !empty if the tag contains a strikethrough
      */
-    protected function applyStyle($tag)
+    protected function applyStyle($tag, $strike = false)
     {
         if ($this->currentTag == $tag) {
             return;
@@ -419,12 +416,18 @@ class Multicell
 
         if ($textColorPdf) {
             $this->pdf->TextColor = $textColorPdf;
+            if ($strike) {
+                $this->pdf->DrawColor = $textColorPdf;
+            }
             $this->pdf->ColorFlag = ($this->pdf->FillColor != $this->pdf->TextColor);
         } else {
             if ($color) {
                 $colorData = is_array($color) ? $color : explode(',', $color);
                 // added to support Grayscale, RGB and CMYK
                 call_user_func_array([$this->pdf, 'SetTextColor'], $colorData);
+                if ($strike) {
+                    call_user_func_array([$this->pdf, 'SetDrawColor'], $colorData);
+                }
             }
         }
     }
@@ -661,6 +664,7 @@ class Multicell
                 'spaces' => $nSpaces,
                 'align' => Tools::getValue($val, 'align'),
                 'href' => Tools::getValue($val, 'href', ''),
+                'strike' => $this->getStrikeValue($val),
                 'y' => $y
             ];
 
@@ -1101,10 +1105,11 @@ class Multicell
             $bYPosUsed = false;
 
             //apply current tag style
-            $this->applyStyle($val['tag']);
+            $this->applyStyle($val['tag'], $val['strike']);
 
             //If > 0 then we will move the current X Position
             $extra_X = 0;
+            $x = $this->pdf->x;
 
             if ($val['y'] != 0) {
                 $lastY = $this->pdf->y;
@@ -1158,6 +1163,17 @@ class Multicell
             } else {
                 //Output the Text/Links
                 $this->pdf->Cell($width, $height, $val['text'], self::DEBUG_CELL_BORDERS, 0, 'C', 0, $val['href']);
+            }
+
+            // Strikethrough text #1950
+            if ($val['strike']) {
+                $strikeY = $this->pdf->y + ($height / 2);
+                $lineWidth = $this->pdf->LineWidth; //store the line width
+                if (is_numeric($val['strike'])) {
+                    $this->pdf->SetLineWidth($val['strike']);
+                }
+                $this->pdf->line($x, $strikeY, $x + $width, $strikeY);
+                $this->pdf->SetLineWidth($lineWidth); //restore the line width
             }
 
             $last_width -= $width; //last column width
@@ -1372,5 +1388,24 @@ class Multicell
     {
         $this->maxLines = $maxLines;
         return $this;
+    }
+
+    /**
+     * Returns the strike tag value.
+     * If "strike" is specified in the tag and it has a value the value specifies the line width
+     *
+     * @param $val
+     * @return bool|mixed
+     */
+    protected function getStrikeValue($val)
+    {
+        if (isset($val['strike'])) {
+            if (empty($val['strike'])) {
+                return true;
+            }
+            return $val['strike'];
+        }
+
+        return false;
     }
 }

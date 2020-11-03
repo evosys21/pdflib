@@ -7,6 +7,11 @@ All notable changes to FPDF Advanced Multicell  will be documented in this file.
 ##X.Y.X (2020-01-01)
 -->
 
+### 3.1.0 (2020-10-03)
+
+- Change, Add support for Strikethrough text ([#1950](https://tracker.interpid.eu/issues/1950))
+- Fix, Nested tags uses default style ([#1951](https://tracker.interpid.eu/issues/1951))
+
 ### 3.0.1 (2020-04-15)
 
 - Change, improved examples
