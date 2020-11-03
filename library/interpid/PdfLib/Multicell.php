@@ -376,10 +376,6 @@ class Multicell
             $tag = 'DEFAULT';
         }
 
-        if (!isset($this->tagStyle[$tag])) {
-            $tag = 'DEFAULT';
-        }
-
         if (isset($this->tagStyle[$tag][$attribute])) {
             return $this->tagStyle[$tag][$attribute];
         }
