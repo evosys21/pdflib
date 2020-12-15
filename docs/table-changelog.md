@@ -9,8 +9,8 @@ All notable changes to FPDF Advanced Table will be documented in this file.
 
 ### 6.1.1 (2020-12-15)
 
-- Use classes instead of `php require` in examples
-- Remove unused code from table class
+- Use classes instead of `php require` in examples ([#1964](https://tracker.interpid.eu/issues/1964))
+- Remove unused code from table class ([#1964](https://tracker.interpid.eu/issues/1964))
 
 ### 6.1.0 (2020-10-03)
 
