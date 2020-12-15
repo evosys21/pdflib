@@ -25,9 +25,6 @@ if (!defined('PDF_TABLE_CONFIG_PATH')) {
  */
 class Table
 {
-    const TB_DATA_TYPE_DATA = 'data';
-    const TB_DATA_TYPE_HEADER = 'header';
-    const TB_DATA_TYPE_NEW_PAGE = 'new_page';
     const TB_DATA_TYPE_INSERT_NEW_PAGE = 'insert_new_page';
 
     /**
@@ -137,18 +134,6 @@ class Table
      * number. @example: 20
      */
     const TABLE_LEFT_MARGIN = 'TABLE_LEFT_MARGIN';
-
-    /**
-     * Table draw header.
-     * Boolean @example: true or false
-     */
-    const TABLE_DRAW_HEADER = 'DRAW_HEADER';
-
-    /**
-     * Table draw header.
-     * Boolean @example: true or false
-     */
-    const TABLE_DRAW_BORDER = 'DRAW_BORDER';
 
     /**
      * Number of Columns of the Table
@@ -764,14 +749,10 @@ class Table
      */
     public function addPageBreak()
     {
-        //$this->insertNewPage();
-        $aData = [];
-        $aData['ADD_PAGE_BREAK'] = true;
         $this->dataCache[] = array(
             'HEIGHT' => 0,
             'DATATYPE' => self::TB_DATA_TYPE_INSERT_NEW_PAGE
         );
-        //$this->addRow($aData);
     }
 
 
@@ -809,11 +790,9 @@ class Table
         switch ($sDataType) {
             case 'header':
                 return $this->configuration['HEADER'];
-                break;
 
             default:
                 return $this->configuration['ROW'];
-                break;
         }
     }
 
@@ -941,10 +920,6 @@ class Table
                 }
             }
 
-            //set the font settings
-            //$this->pdf->SetFont($data[$i]TEXT_FONT'], $data[$i]['TEXT_TYPE'], $data[$i]['TEXT_SIZE']);
-
-
             /**
              * If we have colspan then we ignore the 'colspanned' cells
              */
@@ -993,7 +968,6 @@ class Table
             'ROWSPAN' => $rowSpan //rowspan ID array
         );
         //@formatter:on
-
 
         //we set the rowspan in cache variable to true if we have a rowspan
         if (!empty($rowSpan) && (!$this->rowSpanInCache)) {
@@ -1116,12 +1090,12 @@ class Table
      */
     protected function cachePaginate()
     {
-        $iPageHeight = $this->PageHeight();
+        $pageHeight = $this->PageHeight();
 
         /**
          * This Variable will contain the remained page Height
          */
-        $iLeftHeight = $iPageHeight - $this->pdf->GetY() + $this->pdf->tMargin;
+        $iLeftHeight = $pageHeight - $this->pdf->GetY() + $this->pdf->tMargin;
 
         $bWasData = true; //can be deleted
         $iLastOkKey = 0; //can be deleted
@@ -1144,7 +1118,7 @@ class Table
             switch ($val['DATATYPE']) {
                 case self::TB_DATA_TYPE_INSERT_NEW_PAGE:
                     $rowSpans = [];
-                    $iLeftHeight = $iPageHeight;
+                    $iLeftHeight = $pageHeight;
                     $this->dataOnCurrentPage = false; //new page
                     $this->insertNewPage($i, null, true, true);
                     break 2;
@@ -1177,7 +1151,6 @@ class Table
             $iLeftHeightRowspan = $iLeftHeight - $iRowHeightRowspan;
             $iLeftHeight -= $iRowHeight;
 
-            //if (isset($val['DATA'][0]['IGNORE_PAGE_BREAK']) && ($iLeftHeight < 0)) {
             if (isset($val['DATA'][0]->IGNORE_PAGE_BREAK) && ($iLeftHeight < 0)) {
                 $iLeftHeight = 0;
             }
@@ -1235,7 +1208,7 @@ class Table
                         $bSplitCommand = $this->tableSplit;
 
                         //SITUATION 2:
-                        if ($val['HEIGHT'] > ($iPageHeight - $this->headerHeight)) {
+                        if ($val['HEIGHT'] > ($pageHeight - $this->headerHeight)) {
                             //even if the tableSplit is OFF - split the data!!!
                             $bSplitCommand = true;
                         }
@@ -1309,8 +1282,6 @@ class Table
 
                             $bNeedParseCache = false;
 
-                            $rowSpan = $aDC[$i]['ROWSPAN'];
-
                             foreach ($rowSpans as $rws) {
                                 $rData = &$aDC[$rws[0]]['DATA'][$rws[1]];
                                 /** @var $rData CellAbstract */
@@ -1324,7 +1295,7 @@ class Table
                                      */
 
                                     if ($rData->isSplittable()) {
-                                        list($aTData[$rws[1]], $fHeightSplit) = $rData->split(
+                                        list($aTData[$rws[1]]) = $rData->split(
                                             $rData->getCellDrawHeight(),
                                             $rData->HEIGHT_LEFT_RW
                                         );
@@ -1391,7 +1362,7 @@ class Table
                                      * HEIGHT_LEFT_RW
                                      */
 
-                                    list($aTData, $fHeightSplit) = $rData->split(
+                                    list($aTData) = $rData->split(
                                         $rData->getCellDrawHeight(),
                                         $rData->HEIGHT_LEFT_RW - $iLeftHeightLast
                                     );
@@ -1420,7 +1391,7 @@ class Table
                         }
                 }
 
-                $iLeftHeight = $iPageHeight;
+                $iLeftHeight = $pageHeight;
                 $rowSpans = [];
                 $this->dataOnCurrentPage = false; //new page
             }
@@ -1640,13 +1611,13 @@ class Table
     /**
      * Sets the attributes for the specified tag.
      * Deprecated function. Use $this->setStyle function.
-     * 
-     * @deprecated
+     *
      * @param string $tagName tag name
      * @param string $fontFamily font family
      * @param string $fontStyle font style
      * @param float $fontSize font size
      * @param mixed(string|array) $color font color
+     * @deprecated
      */
     public function setStyleDep($tagName, $fontFamily, $fontStyle, $fontSize, $color)
     {
