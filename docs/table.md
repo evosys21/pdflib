@@ -326,7 +326,8 @@ $header = [
 ## Table Row(s)
 
 Table rows are added with ```php $table->addRow()``` function. The input is an array. The array elements correspond to the [Table Cells](#table-cells). 
-A table cell can be a `text`, `array` or `object` that represents the table cell.
+
+A table cell can be a `text`, `array` or `object` that represents the table cell. 
 
 ### Adding table rows
 
