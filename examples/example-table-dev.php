@@ -93,6 +93,28 @@ $row = [
 //add the data row
 $table->addRow($row);
 
+$row = [[
+    'TEXT' => 'some text',
+    'PADDING_TOP' => 0,
+    'PADDING_BOTTOM' => 0,
+    'LINE_SIZE' => 42.3
+],[
+    'PADDING_TOP' => 0,
+    'PADDING_BOTTOM' => 0,
+    'TEXT' => '<h1>Second Column</h1>',
+]];
+//add the data row
+$table->addRow($row);
+
+$row = [[
+    'TEXT' => 'some text',
+    'PADDING_TOP' => 0,
+    'LINE_SIZE' => 20
+]];
+//add the data row
+$table->addRow($row);
+
+
 $table->close();
 
 $pdf->output();

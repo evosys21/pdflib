@@ -56,18 +56,20 @@ $row = [
 ];
 
 //add the row to the table
-$table->addRow($row);
+//$table->addRow($row);
 
 $row = [
     'I am cell 1',
     'I am cell 2',
 ];
 
-$table->addRow($row);
+//$table->addRow($row);
 
-$table->addRow($row);
+//$table->addRow($row);
 
-$table->addPageBreak();
+//$table->addPageBreak();
+
+$row = [[    'TEXT'=> "Cell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\n", 'HEIGHT' => 40, 'PADDING_TOP' => 20]];
 
 $table->addRow($row);
 
