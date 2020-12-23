@@ -33,6 +33,7 @@ class TableExamplesTest extends BaseExamplesTestCase
             'example-table-2-overview.php',
             'example-table-3-detailed.php',
             'example-table-4-override.php',
+            'example-table-5-row-height.php',
         );
 
         foreach ($aSources as $source) {
