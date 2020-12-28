@@ -192,6 +192,7 @@ $aDefaultConfiguration = [
         'VERTICAL_ALIGN' => 'M', //vertical alignment, possible values: TMB(top, middle, bottom)
         'TEXT_TYPE' => 'B', //font type
         'LINE_SIZE' => 4, //line size for one row
+        'HEIGHT' => '', //enforced row height for row cell
         'BACKGROUND_COLOR' => [41, 80, 132], //background color
         'BORDER_COLOR' => [0, 92, 177], //border color
         'BORDER_SIZE' => 0.2, //border size
@@ -212,6 +213,7 @@ $aDefaultConfiguration = [
         'VERTICAL_ALIGN' => 'M', //vertical alignment, possible values: TMB(top, middle, bottom)
         'TEXT_TYPE' => '', //font type
         'LINE_SIZE' => 4, //line size for one row
+        'HEIGHT' => '', //enforced row height for row cell
         'BACKGROUND_COLOR' => [255, 255, 255], //background color
         'BORDER_COLOR' => [0, 92, 177], //border color
         'BORDER_SIZE' => 0.1, //border size
@@ -400,6 +402,28 @@ $row = [
 $table->addRow($row);
 ```
 
+### The row height
+
+The row height is determined by the cell heights. The cell height depends on the cell content and cell type.   
+
+A fixed height can be set by specifying the `HEIGHT` parameter for a cell. In this case no content overflow checks are done. 
+The user has to make sure that the cell content fits the specified area. 
+
+For example:
+
+```php
+$row = [
+    [
+        'TEXT' => '<p>This is <b>Fixed Height Cell</b></p>',
+        'HEIGHT' => '30'
+    ],
+    ['TEXT' => '<p>This is a <b>Multicell</b></p>'],
+    ['TEXT' => '<p>This is a <b>Multicell</b></p>'],
+];
+
+//add the row to the table
+$table->addRow($row);
+```
 
 ## Table Cells
 
@@ -410,7 +434,7 @@ By default table cells are Advanced Multicells.
 ```php
 $row = [
     'I am a cell', 
-    '<p> I am also a cell</p' // this is an Advanced Multicell
+    '<p> I am also a cell</p>' // this is an Advanced Multicell
 ];
 ```
 
@@ -422,7 +446,7 @@ $row = [
         'TEXT' => 'I am Right Aligned', 
         'TEXT_ALIGN' => 'R'
     ],
-    '<p> I am also a cell</p'
+    '<p> I am also a cell</p>'
 ];
 ```
 
@@ -470,7 +494,7 @@ use Interpid\PdfLib\Table\Cell\ImageSVG;
 
 ## Finalize the table
 
-In order to add/render the table to the to the PDF document you have to close it. 
+In order to add/render the table to the PDF document you have to close it. 
 
 ```php
 //close the table, add it to the pdf document
