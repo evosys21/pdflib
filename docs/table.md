@@ -403,7 +403,7 @@ $row = [
 $table->addRow($row);
 ```
 
-### The row height
+### Row height
 
 The row height is determined by the cell heights. The cell height depends on the cell content and cell type.   
 
