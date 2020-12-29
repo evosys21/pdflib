@@ -45,6 +45,14 @@ php74-tests:
       - build
     expire_in: 1 year
 
+# Run phpunit tests for php 80
+php80-tests:
+  stage: test
+  image: klodoma/php80
+  script:
+    - composer install
+    - vendor/bin/phpunit
+
 pages:
   stage: deploy
   script:

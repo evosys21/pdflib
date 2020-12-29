@@ -159,6 +159,9 @@ class PdfInterface
      */
     public function getImageParams($file, $w = 0, $h = 0)
     {
+        $h = floatval($h);
+        $w = floatval($w);
+
         // Put an image on the page
         if (!isset($this->pdf->images[$file])) {
             $pos = strrpos($file, '.');
