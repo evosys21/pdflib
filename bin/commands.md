@@ -12,10 +12,10 @@ git add * && git commit -am "Upgrade table 6.0.1 and multicell 3.0.1" && git pus
 
 ```shell script
 git.cc Documentation/Deploy Updates
-git push --delete origin 6.2.0
-git tag -a -f 6.2.0 -m "Release 6.2.0" && git push origin "6.2.0" -f
+git push --delete origin 6.2.1
+git tag -a -f 6.2.1 -m "Release 6.2.1" && git push origin "6.2.1" -f
 
-git push --delete origin 6.2.0 && git.cc Documentation/Deploy Updates && git tag -a -f 6.2.0 -m "Release 6.1.0" && git push origin "6.2.0" -f
+git push --delete origin 6.2.1 && git.cc Documentation/Deploy Updates && git tag -a -f 6.2.1 -m "Release 6.1.0" && git push origin "6.2.1" -f
 ```
 
 
