@@ -14,7 +14,7 @@
         "setasign/fpdf": "^1.8"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5",
+        "phpunit/phpunit": "^9.0",
         "phpmetrics/phpmetrics": "^2.4",
         "interpid/redmine": "^1.0",
         "kbsali/redmine-api": "^1.0",
