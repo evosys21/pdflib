@@ -284,9 +284,8 @@ class CellAbstractTest extends BaseTestCase
         $mock->TEST = 2;
 
         $this->assertTrue($mock->isPropertySet('TEST'));
-
-        $this->expectException('PHPUnit\Framework\Error\Notice');
-        $this->assertInstanceOf('PHPUnit\Framework\Error\Notice', $mock->TEST2);
+        $this->expectNotice();
+        $this->assertInstanceOf('', $mock->TEST2);
     }
 
     public function testIsPropertySetReturnValue()
@@ -294,9 +293,7 @@ class CellAbstractTest extends BaseTestCase
         $pdf = $this->getPdfObject();
         $mock = new CellAbstractMock($pdf);
 
-        Notice::$enabled = false;
         $error_level = ini_get('error_reporting');
-
         error_reporting(0);
 
         $this->assertEquals(null, $mock->TEST2);
