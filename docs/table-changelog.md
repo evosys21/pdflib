@@ -7,6 +7,20 @@ All notable changes to FPDF Advanced Table will be documented in this file.
 ##X.Y.X (2019-01-01)
 -->
 
+### 6.2.1 (2020-12-29)
+
+- Fix, PHP 8 support ([#1969](https://tracker.interpid.eu/issues/1969))
+
+### 6.2.0 (2020-12-28)
+
+- Change, Fixed height for table cell ([#1968](https://tracker.interpid.eu/issues/1968))
+- Change, Code quality improvements ([#1964](https://tracker.interpid.eu/issues/1964))
+
+### 6.1.1 (2020-12-15)
+
+- Change, Use classes instead of `php require` in examples ([#1964](https://tracker.interpid.eu/issues/1964))
+- Change, Remove unused code from table class ([#1964](https://tracker.interpid.eu/issues/1964))
+
 ### 6.1.0 (2020-10-03)
 
 - Change, Add support for Strikethrough text ([#1950](https://tracker.interpid.eu/issues/1950))

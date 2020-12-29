@@ -7,6 +7,12 @@ All notable changes to FPDF Advanced Multicell  will be documented in this file.
 ##X.Y.X (2020-01-01)
 -->
 
+### 3.1.2 (2020-12-29)
+- Fix, PHP 8 support ([#1969](https://tracker.interpid.eu/issues/1969))
+
+### 3.1.1 (2020-12-28)
+- Change, Code quality improvements ([#1964](https://tracker.interpid.eu/issues/1964))
+
 ### 3.1.0 (2020-10-03)
 
 - Change, Add support for Strikethrough text ([#1950](https://tracker.interpid.eu/issues/1950))

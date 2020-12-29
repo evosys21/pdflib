@@ -56,64 +56,22 @@ $row = [
 ];
 
 //add the row to the table
-$table->addRow($row);
+//$table->addRow($row);
 
 $row = [
     'I am cell 1',
     'I am cell 2',
-    [
-        'TEXT' => 'I am cell 3',
-        'TEXT_ALIGN' => 'R'
-    ],
 ];
 
-//add the row to the table
+//$table->addRow($row);
+
+//$table->addRow($row);
+
+//$table->addPageBreak();
+
+$row = [[    'TEXT'=> "Cell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\n", 'HEIGHT' => 60, 'PADDING_TOP' => 20]];
+
 $table->addRow($row);
-
-$row = [
-    new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10),
-    "<p><b>Images</b> are supported\n<bi></bi></p>",
-    new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/telescope.jpg', 35, 35)
-];
-
-//add the row to the table
-$table->addRow($row);
-
-$row = [
-    new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10),
-    "<p><b>Images</b> are supported\n<bi></bi></p>",
-    [
-        'TYPE' => 'Image',
-        'FILE' => PDF_RESOURCES_IMAGES . '/telescope.jpg',
-        'WIDTH' => 35,
-        'HEIGHT' => 35,
-    ]
-];
-
-//add the data row
-$table->addRow($row);
-
-$row = [[
-    'TEXT' => 'some text',
-    'PADDING_TOP' => 0,
-    'PADDING_BOTTOM' => 0,
-    'LINE_SIZE' => 42.3
-],[
-    'PADDING_TOP' => 0,
-    'PADDING_BOTTOM' => 0,
-    'TEXT' => '<h1>Second Column</h1>',
-]];
-//add the data row
-$table->addRow($row);
-
-$row = [[
-    'TEXT' => 'some text',
-    'PADDING_TOP' => 0,
-    'LINE_SIZE' => 20
-]];
-//add the data row
-$table->addRow($row);
-
 
 $table->close();
 

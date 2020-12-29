@@ -15,14 +15,6 @@ cache:
   paths:
     - vendor/
 
-# Run phpunit tests for php 7.2
-php72-tests:
-  stage: test
-  image: klodoma/php72
-  script:
-    - composer install
-    - vendor/bin/phpunit
-
 # Run phpunit tests for php 7.3
 php73-tests:
   stage: test
@@ -44,6 +36,14 @@ php74-tests:
     paths:
       - build
     expire_in: 1 year
+
+# Run phpunit tests for php 80
+php80-tests:
+  stage: test
+  image: klodoma/php80
+  script:
+    - composer install
+    - vendor/bin/phpunit
 
 pages:
   stage: deploy

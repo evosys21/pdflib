@@ -1,12 +1,12 @@
 <?php
 
-require('settings.php');
+use Interpid\PdfExamples\MyPdf;
+use Interpid\PdfExamples\PdfSettings;
+use Interpid\PdfLib\Table;
 
 if (!isset($pdf)) {
-    $pdf = new \Interpid\PdfExamples\MyPdf();
+    $pdf = new MyPdf();
 }
-
-use Interpid\PdfLib\Table;
 
 $table = new Table($pdf);
 
@@ -24,12 +24,12 @@ $nColumns = 5;
 
 $table->initialize([20, 30, 40, 50]);
 
-$header1 = $headerRow;
+$header1 = PdfSettings::headerRow();
 $header1[2]['TEXT'] = 'Colspan in Header';
 $header1[2]['COLSPAN'] = 2;
 
-$header2 = $headerRow;
-$header3 = $headerRow;
+$header2 = PdfSettings::headerRow();
+$header3 = PdfSettings::headerRow();
 
 $header2[1]['TEXT'] = "Colspan/Rowspan in Header";
 $header2[1]['COLSPAN'] = 2;
@@ -41,7 +41,7 @@ $table->addHeader($header3);
 
 
 for ($i = 0; $i < 8; $i++) {
-    $row = $dataRow;
+    $row = PdfSettings::dataRow();
 
     if (0 == $i) {
         $row[1]['COLSPAN'] = 2;
@@ -52,18 +52,18 @@ for ($i = 0; $i < 8; $i++) {
     }
 
     if (2 == $i) {
-        $row[1]['TEXT'] = $sTextExtraLong . "\n\n" . $sTextSubSuperscript;
+        $row[1]['TEXT'] = PdfSettings::$textExtraLong . "\n\n" . PdfSettings::$textSubSuperscript;
         $row[1]['ALIGN'] = 'J';
         $row[1]['COLSPAN'] = 3;
         $row[1]['ROWSPAN'] = 3;
     }
 
     if (3 == $i) {
-        $row[0] = $imageCell;
+        $row[0] = PdfSettings::$imageCell;
     }
 
     if (5 == $i) {
-        $row[1] = $imageCell;
+        $row[1] = PdfSettings::$imageCell;
         $row[1]['COLSPAN'] = 2;
         $row[1]['ROWSPAN'] = 2;
     }

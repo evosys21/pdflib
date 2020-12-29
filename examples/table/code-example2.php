@@ -1,8 +1,12 @@
 <?php
 
-require('settings.php');
-
+use Interpid\PdfExamples\MyPdf;
+use Interpid\PdfExamples\PdfSettings;
 use Interpid\PdfLib\Table;
+
+if (!isset($pdf)) {
+    $pdf = new MyPdf();
+}
 
 $table = new Table($pdf);
 
@@ -56,8 +60,9 @@ $row = [];
 $row[0] = new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10);
 $row[1] = array(
     'TEXT' => "<p>This is another <b>Multicell</b></p>",
-    'BACKGROUND_COLOR' => $aColor[0]
+    'BACKGROUND_COLOR' => PdfSettings::$colors[0]
 );
+
 $row[2] = new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/pensil.jpg', 10);
 $row[2]->setAlign("R");
 

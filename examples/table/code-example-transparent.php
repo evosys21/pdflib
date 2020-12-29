@@ -1,14 +1,18 @@
 <?php
 
+use Interpid\PdfExamples\MyPdf;
+use Interpid\PdfLib\Table;
+use Interpid\PdfExamples\PdfSettings;
+
+if (!isset($pdf)) {
+    $pdf = new MyPdf();
+}
+
 $y = $pdf->GetY();
 $pdf->SetX(50);
 $pdf->Image(PDF_RESOURCES_IMAGES . "/sample-pdf.jpg");
 
 $pdf->SetY($y);
-
-require('settings.php');
-
-use Interpid\PdfLib\Table;
 
 $table = new Table($pdf);
 
@@ -43,7 +47,7 @@ $header = array(
 //add the header row
 $table->addHeader($header);
 
-$imageCell = array(
+PdfSettings::$imageCell = array(
     'TYPE' => 'IMAGE',
     'FILE' => PDF_RESOURCES_IMAGES . '/dice.jpg',
     'WIDTH' => 10
@@ -72,7 +76,7 @@ $row = [];
 $row[0] = new \Interpid\PdfLib\Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10);
 $row[1] = new \Interpid\PdfLib\Table\Cell\Multicell($pdf, "<p>This is another <b>Multicell</b></p>");
 $row[2]['TEXT'] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='http://www.interpid.eu'>www.interpid.eu</bi></p>";
-$row[2]['BACKGROUND_COLOR'] = $aColor[1];
+$row[2]['BACKGROUND_COLOR'] = PdfSettings::$colors[1];
 
 //add the data row
 $table->addRow($row);

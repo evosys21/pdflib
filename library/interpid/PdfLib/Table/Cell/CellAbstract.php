@@ -29,6 +29,7 @@ abstract class CellAbstract implements CellInterface
         'VERTICAL_ALIGN' => 'setAlignVertical',
         'COLSPAN' => 'setColSpan',
         'ROWSPAN' => 'setRowSpan',
+        'HEIGHT' => 'setHeight',
         'PADDING' => 'setPadding',
         'PADDING_TOP' => 'setPaddingTop',
         'PADDING_RIGHT' => 'setPaddingRight',
@@ -71,6 +72,8 @@ abstract class CellAbstract implements CellInterface
     protected $properties = [];
 
     protected $internValueSet = [];
+
+    protected $height = '';
 
     protected $cellWidth = 0;
 
@@ -290,6 +293,9 @@ abstract class CellAbstract implements CellInterface
 
     public function getCellDrawHeight()
     {
+        if ($this->height > 0) {
+            return Validate::float($this->height, 0);
+        }
         return $this->cellDrawHeight;
     }
 
@@ -568,5 +574,21 @@ abstract class CellAbstract implements CellInterface
     public function getDefaultValues()
     {
         return [];
+    }
+
+    /**
+     * @return string|int|null
+     */
+    public function getHeight()
+    {
+        return $this->height;
+    }
+
+    /**
+     * @param $height
+     */
+    public function setHeight($height)
+    {
+        $this->height = $height;
     }
 }
