@@ -3,7 +3,6 @@
 tests/build
 tests/old
 vendor/
-composer.lock
 /.idea/workspace.xml
 /release
 /.env
