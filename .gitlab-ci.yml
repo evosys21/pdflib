@@ -72,8 +72,7 @@ build-release:
 release:
   image: inetprocess/gitlab-release
   stage: release
-  only:
-    - tags
+  when: manual
   except:
     - schedules
   dependencies:
