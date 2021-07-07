@@ -13,7 +13,8 @@
 	- <h4>TAB</h4> spaces (<b>\t</b>) can be used
 	- Variable Y relative positions can be used for <ss y='-0.8'>Subscript</ss> or <ss y='1.1'>Superscript</ss>
 	- Cell padding (left, right, top, bottom)
-	- Controlled Tag Sizes can be used</p>
+	- Controlled Tag Sizes can be used
+	- <b>nowrap</b> can be used for a tag</p>
 
 	<size size='50' >Paragraph Example:~~~</size><font> - Paragraph 1</font>
 	<p size='60' > ~~~</p><font> - Paragraph 2</font>
@@ -22,8 +23,8 @@
 	<p size='50' >Sample text~~~</p> - Paragraph 1
 	<p size='60' > ~~~</p><h4> - Paragraph 2</h4>
 
-<h3>Observations:</h3><p>
-
-	- If no <h4><TAG></h4> is specified then the FPDF current settings(font, style, size, color) are used
+<h3>Observations:</h3>
+<p>
+	- If no <h4><TAG/></h4> is specified then the PDF current settings(font, style, size, color) are used
 	- The <h4>ttags</h4> tag name is reserved for the TAB SPACES
 </p>

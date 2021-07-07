@@ -286,3 +286,13 @@ Valid values are: `left|center|right|L|C|R`
 
 `size` is used in case of paragraphs. This value will become deprecated in future versions and `width` is to be preferred instead.
 
+### nowrap
+
+`nowrap` is used if you the text in a paragraph to break or be separated on a new line
+
+For example, you want the price to always be written on the same line:
+```php
+$s = "The price is <b nowrap='1'>USD 5.344,23</b>";
+$multicell->multiCell(50, 5, $s);
+```
+

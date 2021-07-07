@@ -167,11 +167,11 @@ class Multicell
     /**
      * Sets the list of characters that will allow a line-breaking
      *
-     * @param $sChars string
+     * @param $string string
      */
-    public function setLineBreakingCharacters($sChars)
+    public function setLineBreakingCharacters(string $string)
     {
-        $this->lineBreakingChars = $sChars;
+        $this->lineBreakingChars = $string;
     }
 
 
@@ -478,20 +478,21 @@ class Multicell
 
         $last_sepch = ''; //last separator character
 
-
         foreach ($this->dataInfo as $key => $val) {
             $s = $val['text'];
 
             $tag = $val['tag'];
 
-            $bParagraph = false;
+            $isParagraph = false;
             if (($s == "\t") && (strpos($tag, 'pparg') !== false)) {
-                $bParagraph = true;
+                $isParagraph = true;
                 $s = "\t"; //place instead a TAB
             }
 
+            $nowrap = isset($val['nowrap']) && $val['nowrap'];
+
             $i = 0; //from where is the string remain
-            $j = 0; //untill where is the string good to copy -- leave this == 1->> copy at least one character!!!
+            $j = 0; //until where is the string good to copy
             $currentWidth = 0; //string width
             $last_sep = -1; //last separator position
             $last_sepwidth = 0;
@@ -532,7 +533,7 @@ class Multicell
                 $char_width = $this->mt_getCharWidth($tag, $c);
 
                 //separators
-                if (in_array($c, array_map('ord', str_split($this->lineBreakingChars)))) {
+                if (!$nowrap && in_array($c, array_map('ord', str_split($this->lineBreakingChars)))) {
                     $ante_last_sep = $last_sep;
                     $ante_last_sepch = $last_sepch;
                     $ante_last_sepwidth = $last_sepwidth;
@@ -550,7 +551,7 @@ class Multicell
                     $char_width = $this->dataExtraInfo['TAB_WIDTH'];
                 }
 
-                if ($bParagraph == true) {
+                if ($isParagraph == true) {
                     $c = ord('');
                     $s = substr_replace($s, ' ', $i, 1);
                     $char_width = $this->tempData['LAST_TAB_REQSIZE'] - $this->tempData['LAST_TAB_SIZE'];
@@ -664,6 +665,7 @@ class Multicell
                 'spaces' => $nSpaces,
                 'align' => Tools::getValue($val, 'align'),
                 'href' => Tools::getValue($val, 'href', ''),
+                'nowrap' => Tools::getValue($val, 'nowrap', ''),
                 'strike' => $this->getStrikeValue($val),
                 'y' => $y
             ];
@@ -765,7 +767,7 @@ class Multicell
             //Number of rows that have space on this page:
             $iRows = floor($iLeftHeight / $height);
             // Added check for 'AcceptPageBreak'
-            if (count($aRecData) > $iRows && $this->pdf->AcceptPageBreak()) {
+            if ($iRows > 0 && count($aRecData) > $iRows && $this->pdf->AcceptPageBreak()) {
                 $aSendData = array_slice($aRecData, 0, $iRows);
                 $aRecData = array_slice($aRecData, $iRows);
                 $bAddNewPage = true;
