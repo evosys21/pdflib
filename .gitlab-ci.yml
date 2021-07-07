@@ -58,10 +58,8 @@ pages:
 build-release:
   stage: pre-release
   image: klodoma/php74
-  when: manual
   only:
     - tags
-    - manual
   except:
     - schedules
   script:
@@ -76,10 +74,9 @@ release:
   stage: release
   only:
     - tags
-    - manual
   except:
     - schedules
-  needs:
+  dependencies:
     - build-release
   script:
     - source ./bin/set-versions.sh
