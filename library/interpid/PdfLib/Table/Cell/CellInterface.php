@@ -50,7 +50,7 @@ interface CellInterface
      *
      * @param array $aValues
      */
-    public function setDefaultValues(array $aValues = array());
+    public function setDefaultValues(array $aValues = []);
 
 
     /**
@@ -67,7 +67,7 @@ interface CellInterface
      *
      * @param array $values key=>value pair
      */
-    public function setProperties(array $values = array());
+    public function setProperties(array $values = []);
 
     public function render();
 

@@ -335,7 +335,7 @@ A table cell can be a `text`, `array` or `object` that represents the table cell
 //add table rows
 for ($i=1; $i<5; $i++)
 {
-    $row = Array();
+    $row = [];
     $row[0]['TEXT'] = "Line $i Text 1";    //text for column 0
     $row[1]['TEXT'] = "Line $i Text 2";    //text for column 1
     $row[2]['TEXT'] = "Line $i Text 3";    //text for column 2

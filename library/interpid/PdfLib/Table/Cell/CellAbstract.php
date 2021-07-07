@@ -128,7 +128,7 @@ abstract class CellAbstract implements CellInterface
         }
     }
 
-    public function setProperties(array $values = array())
+    public function setProperties(array $values = [])
     {
         $this->setInternValues($values, false);
     }
@@ -139,7 +139,7 @@ abstract class CellAbstract implements CellInterface
      * @param array $aValues The values to be set
      * @param bool $bCheckSet If the values are already set, the values will NOT be set
      */
-    protected function setInternValues(array $aValues = array(), $bCheckSet = true)
+    protected function setInternValues(array $aValues = [], $bCheckSet = true)
     {
         foreach ($aValues as $key => $value) {
             if ($bCheckSet && $this->isInternValueSet($key)) {
@@ -381,7 +381,7 @@ abstract class CellAbstract implements CellInterface
     }
 
 
-    public function setDefaultValues(array $aValues = array())
+    public function setDefaultValues(array $aValues = [])
     {
         $this->setInternValues($aValues, true);
     }
