@@ -60,6 +60,7 @@ build-release:
   image: klodoma/php74
   only:
     - tags
+    - manual
   except:
     - schedules
   script:
@@ -72,7 +73,6 @@ build-release:
 release:
   image: inetprocess/gitlab-release
   stage: release
-  when: manual
   except:
     - schedules
   dependencies:
