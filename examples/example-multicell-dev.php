@@ -65,22 +65,31 @@ $multicell->setStyle('super', null, null, 8);
 //$multicell->multiCell(0, 5, $s);
 //
 //$pdf->ln(10);
-//
-$s = "<size size='100' >Paragraph Example:~~~</size><font> - Paragraph 1</font>
-<p width='50' align='left'>This is a text: </p><font> - Paragraph 2</font>
-<p width='50' align='center'>This is a text: </p><font> - Paragraph 2</font>
-<p width='50' align='right'>This is a text: </p><font> - Paragraph 2</font>
-<p width='50'> </p><font> - Paragraph 3</font>
-<p width='50'> </p><font> - Paragraph 4</font>
-<p size='60'> ~~~</p> - Paragraph 2
-<p size='70'>Sample text~~~</p><p> - Paragraph 3</p>
-<p width='50'>Sample text50</p> - Paragraph 1
-<p size='60'> ~~~</p><h4> - Paragraph 2</h4>";
-$multicell->multiCell(0, 5, $s);
 
-$s = "<p size='100'> ~~~</p> - Paragraph 2
-<p width='50'>xxx</p><font> - Paragraph 2</font>";
-$multicell->multiCell(0, 5, $s);
+$s = "The price is <b nowrap='1'>USD 5.344,23</b>";
+$s1 = "The price is <b>USD 5.344,23</b>";
+foreach ([40, 45, 50] as $width){
+    $multicell->multiCell($width, 5, $s, 0, 'L');
+    $multicell->multiCell($width, 5, $s1, 0, 'L');
+    $pdf->ln(5);
+}
+
+//
+//$s = "<size size='100' >Paragraph Example:~~~</size><font> - Paragraph 1</font>
+//<p width='50' align='left'>This is a text: </p><font> - Paragraph 2</font>
+//<p width='50' align='center'>This is a text: </p><font> - Paragraph 2</font>
+//<p width='50' align='right'>This is a text: </p><font> - Paragraph 2</font>
+//<p width='50'> </p><font> - Paragraph 3</font>
+//<p width='50'> </p><font> - Paragraph 4</font>
+//<p size='60'> ~~~</p> - Paragraph 2
+//<p size='70'>Sample text~~~</p><p> - Paragraph 3</p>
+//<p width='50'>Sample text50</p> - Paragraph 1
+//<p size='60'> ~~~</p><h4> - Paragraph 2</h4>";
+//$multicell->multiCell(0, 5, $s);
+//
+//$s = "<p size='100'> ~~~</p> - Paragraph 2
+//<p width='50'>xxx</p><font> - Paragraph 2</font>";
+//$multicell->multiCell(0, 5, $s);
 
 
 // output the pdf

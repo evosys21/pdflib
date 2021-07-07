@@ -166,7 +166,14 @@ $table->initialize([40, 50, 30], $config);
 
 ### Default configuration File
 
-The default table configuration file can be found in: `table.config.php` file. This file is being looked up in the `PDF_TABLE_CONFIG_PATH` directory. Adjust this path and file to your needs.
+The table requires a "default" configuration file in order to run. The configuration file contains information regarding basic table styling.
+
+The default table configuration file can be found in: `table.config.php` file, but can be specified in the table constructor:
+```php
+$table = new Table($pdf, 'path/to/my-table.config.php');
+```
+
+If `PDF_TABLE_CONFIG_PATH` value is defined, then the `table.config.php` is being looked up in that folder too. 
 
 The values specified in this file are used by default. The configuration file content looks like the following and it contains all the values that you can specify for a header/row.
 
@@ -174,7 +181,7 @@ The values specified in this file are used by default. The configuration file co
 /**
  * Default configuration values for the PDF Advanced table
  */
-$aDefaultConfiguration = [
+return [
 
     'TABLE' => [
         'TABLE_ALIGN' => 'L', //table align on page
@@ -226,15 +233,16 @@ $aDefaultConfiguration = [
         'PADDING_BOTTOM' => 1,
     ],
 ];
+
 ```
 ### Overwriting the default configuration values
 
-When creating the table object the second parameter of the constructor can be an array similar to the one from the Table Configuration File. This array does not need to contain the complete configuration structure, only the values that are overwritten.
+The second parameter of the table initialization can be an array similar to the one from the Table Configuration File. This array does not need to contain the complete configuration structure, only the values that are overwritten.
 
 
 ```php
 //changing header text color and row text color and size
-$tableConfig = [
+$config = [
     'HEADER' => [
         'TEXT_COLOR'        => array(25, 60, 170),  //text color
     ],
@@ -243,6 +251,8 @@ $tableConfig = [
         'TEXT_SIZE'         => 6,                   //font size
     ],
 );
+
+$table->initialize([40, 50, 30], $config);
 ```
 
 ## Table Header(s)

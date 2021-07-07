@@ -15,10 +15,6 @@ use Interpid\PdfLib\Table\Cell\CellInterface;
 use Interpid\PdfLib\Table\Cell\CellAbstract;
 use Interpid\PdfLib\Table\Cell\EmptyCell;
 
-if (!defined('PDF_TABLE_CONFIG_PATH')) {
-    define('PDF_TABLE_CONFIG_PATH', __DIR__);
-}
-
 /**
  * Pdf Table Class
  * @package Interpid\PdfLib
@@ -305,17 +301,26 @@ class Table
      */
     protected $disablePageBreak = false;
 
+    /**
+     * Configuration file path
+     * @var string|null
+     */
+    protected $configFile = null;
+
 
     /**
      * Class constructor.
      *
      * @param Pdf $pdf object Instance of the PDF class
+     * @param string|null $configFile
      */
-    public function __construct($pdf)
+    public function __construct($pdf, $configFile = 'table.config.php')
     {
         //pdf object
         $this->pdf = $pdf;
         $this->pdfi = new PdfInterface($pdf);
+
+        $this->configFile = $configFile;
 
         //call the multicell instance
         $this->multicell = new Multicell($pdf);
@@ -360,7 +365,7 @@ class Table
      * @param array $aColumnWidths
      * @param array $configuration
      */
-    public function initialize(array $aColumnWidths, $configuration = [])
+    public function initialize(array $aColumnWidths, array $configuration = [])
     {
         //set the no of columns
         $this->columns = count($aColumnWidths);
@@ -380,18 +385,9 @@ class Table
         $this->dataOnCurrentPage = false;
         $this->headerOnCurrentPage = false;
 
-        $aKeys = array(
-            'TABLE',
-            'HEADER',
-            'ROW'
-        );
-
-        foreach ($aKeys as $val) {
-            if (!isset($configuration[$val])) {
-                continue;
-            }
-
-            $this->configuration[$val] = array_merge($this->configuration[$val], $configuration[$val]);
+        foreach ($configuration as $key => $value) {
+            if (!in_array($key, ['TABLE', 'HEADER', 'ROW'])) continue;
+            $this->configuration[$key] = array_merge($this->configuration[$key], $value);
         }
 
         $this->markMarginX();
@@ -1727,17 +1723,31 @@ class Table
      */
     protected function getDefaultConfiguration(): array
     {
-        $config = require PDF_TABLE_CONFIG_PATH . '/table.config.php';
-        return $config;
-    }
+        $files = [
+            $this->configFile,
+            __DIR__ . '/' . $this->configFile,
+        ];
 
+        if (defined('PDF_TABLE_CONFIG_PATH')) {
+            array_unshift($files, PDF_TABLE_CONFIG_PATH . $this->configFile);
+        }
+
+        foreach($files as $file){
+            if (is_readable($file)){
+                return require($file);
+            }
+        }
+
+        trigger_error("Table Configuration file not found. Please check your settings");
+        return [];
+    }
 
     /**
      * Returns the compatibility map between STRINGS and Constrants
      *
      * @return array
      */
-    protected function compatibilityMap()
+    protected function compatibilityMap(): array
     {
         //@formatter:off
         return array(
