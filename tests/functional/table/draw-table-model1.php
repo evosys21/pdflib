@@ -6,7 +6,7 @@ if (!isset($bSplitMode)) {
     $bSplitMode = true;
 }
 
-require __DIR__ . '/table.config.php';
+$tableConfig = require __DIR__ . '/table.config.php';
 
 $pdf->SetFontSize(7);
 
@@ -25,11 +25,7 @@ $columns = 4;
 $pdf->Ln(30);
 
 //Initialize the table, 3 columns
-$table->initialize(array(
-    20,
-    40,
-    20
-), $aDefaultConfiguration);
+$table->initialize([20, 40, 20], $tableConfig);
 
 $table->setSplitMode($bSplitMode);
 

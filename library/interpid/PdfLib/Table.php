@@ -360,7 +360,7 @@ class Table
      * @param array $aColumnWidths
      * @param array $configuration
      */
-    public function initialize(array $aColumnWidths, $configuration = array())
+    public function initialize(array $aColumnWidths, $configuration = [])
     {
         //set the no of columns
         $this->columns = count($aColumnWidths);
@@ -522,7 +522,7 @@ class Table
      *
      * @param $headerRow array
      */
-    public function addHeader($headerRow = array())
+    public function addHeader($headerRow = [])
     {
         $this->tableHeaderType[] = $headerRow;
     }
@@ -734,7 +734,7 @@ class Table
      *
      * @param array $rowData Data to be Drawed
      */
-    public function addRow($rowData = array())
+    public function addRow($rowData = [])
     {
         if (!$this->headerOnCurrentPage) {
             $this->drawHeader();
@@ -1725,12 +1725,10 @@ class Table
      *
      * @return array The Default Configuration
      */
-    protected function getDefaultConfiguration()
+    protected function getDefaultConfiguration(): array
     {
-        $aDefaultConfiguration = [];
-
-        require PDF_TABLE_CONFIG_PATH . '/table.config.php';
-        return $aDefaultConfiguration;
+        $config = require PDF_TABLE_CONFIG_PATH . '/table.config.php';
+        return $config;
     }
 
 

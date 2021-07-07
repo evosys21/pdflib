@@ -3,7 +3,7 @@
  * Default configuration values for the PDF Advanced table
  */
 
-$aDefaultConfiguration = [
+return [
 
     'TABLE' => [
         'TABLE_ALIGN' => 'L', //table align on page
