@@ -55,7 +55,7 @@ class Image extends CellAbstract implements CellInterface
     }
 
 
-    public function setProperties(array $values = array())
+    public function setProperties(array $values = [])
     {
         //call the parent function
         parent::setProperties($values);
