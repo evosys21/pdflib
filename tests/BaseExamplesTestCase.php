@@ -50,22 +50,26 @@ class BaseExamplesTestCase extends TestCase
         require $require;
         $content = ob_get_clean();
 
-        $sResultFile = TEST_PATH . '/data/' . $name . '.pdf';
+        $expectedFile = TEST_PATH . '/data/' . $name . '.pdf';
 
         if (defined('GENERATE_RESULT_FILES')) {
-            $sPdfFile = $sResultFile;
+            $generatedFile = $expectedFile;
         } else {
-            $sPdfFile = tempnam(sys_get_temp_dir(), 'pdf_test');
+            $generatedFile = tempnam(sys_get_temp_dir(), 'pdf_test');
         }
 
-        file_put_contents($sPdfFile, $content);
+        //CreationDate (D:20210707150635)
+        $content = preg_replace("#CreationDate \(D:[0-9]+#", "CreationDate (D:20170101010000", $content);
+        $content = preg_replace("#LastModified \(D:[0-9]+#", "LastModified (D:20170101010000", $content);
 
-        $this->assertTrue(file_exists($sPdfFile), $require);
-        $this->assertFileEquals($sResultFile, $sPdfFile, $require);
-        $this->assertSame(sha1_file($sResultFile), sha1_file($sPdfFile), $require);
+        file_put_contents($generatedFile, $content);
+
+        $this->assertTrue(file_exists($generatedFile), $require);
+        $this->assertFileEquals($expectedFile, $generatedFile, $require);
+        $this->assertSame(sha1_file($expectedFile), sha1_file($generatedFile), $require);
 
         if (!defined('GENERATE_RESULT_FILES')) {
-            unlink($sPdfFile);
+            unlink($generatedFile);
         }
     }
 }
