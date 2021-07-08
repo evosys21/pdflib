@@ -1,7 +1,6 @@
 variables:
   PAGES_DEPLOY: public/${CI_COMMIT_REF_NAME}
   PACKAGE_REGISTRY_URL: "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/releases/${CI_COMMIT_TAG}"
-  VARIABLES_FILE: ./variables.txt
 
 stages:
   - build
@@ -66,33 +65,31 @@ build-release:
   script:
     - php ./bin/build-release.php
     - source ./bin/set-versions.sh
-    - echo "export VERSION_TABLE=$VERSION_TABLE" > $VARIABLES_FILE
-    - echo "export VERSION_MULTICELL=$VERSION_MULTICELL" >> $VARIABLES_FILE
   artifacts:
     paths:
       - release
       - $VARIABLES_FILE
     expire_in: 1 year
 
-upload:
+upload-release:
   stage: upload-release
   image: curlimages/curl:latest
   rules:
     - if: $CI_COMMIT_TAG
   script:
-    - source $VARIABLES_FILE
+    - source ./bin/set-versions.sh
     - |
       curl --header "JOB-TOKEN: ${CI_JOB_TOKEN}" --upload-file ./release/fpdf-table-${VERSION_TABLE}.zip ${PACKAGE_REGISTRY_URL}/fpdf-table-${VERSION_TABLE}.zip
     - |
       curl --header "JOB-TOKEN: ${CI_JOB_TOKEN}" --upload-file ./release/fpdf-multicell-${VERSION_MULTICELL}.zip ${PACKAGE_REGISTRY_URL}/fpdf-multicell-${VERSION_MULTICELL}.zip
 
-release:
+create-release:
   stage: release
   image: registry.gitlab.com/gitlab-org/release-cli:latest
   rules:
     - if: $CI_COMMIT_TAG                  # Run this job when a tag is created manually
   script:
-    - source $VARIABLES_FILE
+    - source ./bin/set-versions.sh
     - |
       release-cli create --name "Release $CI_COMMIT_TAG" --tag-name $CI_COMMIT_TAG \
         --assets-link "{\"name\":\"fpdf-table-${VERSION_TABLE}.zip\",\"url\":\"${PACKAGE_REGISTRY_URL}/fpdf-table-${VERSION_TABLE}.zip\"}" \
