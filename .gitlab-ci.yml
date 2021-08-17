@@ -20,7 +20,7 @@ cache:
 # Run phpunit tests for php 7.3
 php73-tests:
   stage: test
-  image: klodoma/php73
+  image: dockerhub.interpid.eu/php73
   script:
     - composer install
     - vendor/bin/phpunit
@@ -28,7 +28,7 @@ php73-tests:
 # Run phpunit tests for php 7.4
 php74-tests:
   stage: test
-  image: klodoma/php74
+  image: dockerhub.interpid.eu/php74
   script:
     - composer install
     - vendor/bin/phpunit --configuration phpunit-ci.xml
@@ -42,7 +42,7 @@ php74-tests:
 # Run phpunit tests for php 80
 php80-tests:
   stage: test
-  image: klodoma/php80
+  image: dockerhub.interpid.eu/php80
   script:
     - composer install
     - vendor/bin/phpunit
@@ -59,7 +59,7 @@ php80-tests:
 # Run the release build
 build-release:
   stage: build-release
-  image: klodoma/php74
+  image: dockerhub.interpid.eu/php74
   rules:
     - if: $CI_COMMIT_TAG
   script:
