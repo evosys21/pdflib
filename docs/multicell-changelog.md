@@ -7,6 +7,9 @@ All notable changes to FPDF Advanced Multicell  will be documented in this file.
 ##X.Y.X (2020-01-01)
 -->
 
+### 3.2.1 (2020-08-29)
+- Fix, Multicell Bottom Padding Issue ([#1980](https://tracker.interpid.eu/issues/1980))
+
 ### 3.2.0 (2020-07-07)
 - Change, Tag nowrap attribute ([#1976](https://tracker.interpid.eu/issues/1976))
 

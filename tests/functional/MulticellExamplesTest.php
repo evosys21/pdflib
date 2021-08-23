@@ -22,12 +22,12 @@ class MulticellExamplesTest extends BaseExamplesTestCase
 {
 
     /**
-     * Tests testExample1
+     * Tests testExamples
      */
     public function testExamples()
     {
         $aSources = array(
-            'example-multicell.php',
+//            'example-multicell.php',
             'example-multicell-1-overview.php',
             'example-multicell-2-overview-page-break.php',
             'example-multicell-3-line-breaking.php',
@@ -38,6 +38,21 @@ class MulticellExamplesTest extends BaseExamplesTestCase
         foreach ($aSources as $source) {
             $require = APPLICATION_PATH . '/examples/' . $source;
             $this->runTestWithExample($require, basename($require));
+        }
+    }
+
+    /**
+     * Tests testDevSamples
+     */
+    public function testDevSamples()
+    {
+        $aSources = array(
+            'test-multicell-align.php',
+        );
+
+        foreach ($aSources as $source) {
+            $require = APPLICATION_PATH . '/dev/' . $source;
+            $this->runTestWithExample($require, 'dev-' . basename($require));
         }
     }
 }
