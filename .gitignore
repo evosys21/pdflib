@@ -8,3 +8,5 @@ vendor/
 /.env
 /.idea
 /.vscode
+/tests/data-old
+/.phpunit.result.cache
