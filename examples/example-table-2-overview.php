@@ -30,7 +30,7 @@ $table = new Table($pdf);
  * Set the tag styles
  */
 $table->setStyle('p', 10, '', '130,0,30', 'helvetica');
-$table->setStyle('b', 9, '', '80,80,260', 'helvetica');
+$table->setStyle('b', 9, 'B', '80,80,260', 'helvetica');
 $table->setStyle('h1', 10, '', '0,151,200', 'helvetica');
 $table->setStyle('bi', 12, 'BI', '0,0,120', 'helvetica');
 

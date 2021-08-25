@@ -1,0 +1,80 @@
+<?php
+/**
+ * Pdf Advanced Multicell - Example
+ * Copyright (c), Interpid, http://www.interpid.eu
+ */
+
+require_once __DIR__ . '/../autoload.php';
+
+use Interpid\PdfLib\Multicell;
+use Interpid\PdfExamples\PdfFactory;
+
+$factory = new PdfFactory();
+
+//get the PDF object
+$pdf = PdfFactory::newPdf('multicell');
+
+// Create the Advanced Multicell Object and inject the PDF object
+$multicell = new Multicell($pdf);
+
+// Set the styles for the advanced multicell
+// Notice: 'base' style is always inherited
+$multicell->setStyle('base', 11, '', '130,0,30', 'helvetica');
+$multicell->setStyle('p', null);
+$multicell->setStyle('b', null, 'B');
+$multicell->setStyle('i', null, 'I', '80,80,260');
+$multicell->setStyle('u', null, 'U', '80,80,260');
+$multicell->setStyle('h1', 14, 'B', '203,0,48');
+$multicell->setStyle('h3', 12, 'B', '203,0,48');
+$multicell->setStyle('h4', 11, 'BI', '0,151,200');
+$multicell->setStyle('hh', 11, 'B', '255,189,12');
+$multicell->setStyle('ss', 7, '', '203,0,48');
+$multicell->setStyle('font', 10, '', '0,0,255');
+$multicell->setStyle('style', 10, 'BI', '0,0,220');
+$multicell->setStyle('size', 12, 'BI', '0,0,120');
+$multicell->setStyle('color', 12, 'BI', '0,255,255');
+
+$pdf->Ln(5); //line break
+$multicell->multiCell(120, 5, "<h1>Multicell text shrinking feature</h1>");
+$pdf->Ln(10); //line break
+
+$txt = <<<EOL
+This <b>TCPDF addon</b> allows creation of an <b>Advanced Multicell</b> which uses as input a <b>TAG based formatted string</b> instead of a simple string. The use of tags allows to change the font, the style (<b>bold</b>, <i>italic</i>, <u>underline</u>), the size, and the color of characters and many other features.
+
+<h3>Features:</h3>
+  - Text can be <hh>aligned</hh>, <hh>centered</hh> or <hh>justified</hh>
+  - Different <font>Font</font>, <size>Sizes</size>, <style>Styles</style>, <color>Colors</color> can be used
+EOL;
+
+foreach(range(50, 10, 10) as $height){
+    $multicell->multiCell(130, 5, "Height: $height");
+    $pdf->Ln(1);
+    $multicell->maxHeight($height)->shrinkToFit();
+    $multicell->multiCell(140, 5, $txt, 1, 'J', 1, 3, 3, 3, 3);
+    $pdf->Ln(5);
+}
+
+$pdf->AddPage();
+
+foreach(range(50, 10, 10) as $height){
+    $width = 130 - $height;
+    $multicell->multiCell(120, 5, "Height: <b>$height</b> Width: <b>$width</b>");
+    $pdf->Ln(1);
+    $multicell->maxHeight($height)->shrinkToFit();
+    $multicell->multiCell($width, 5, $txt, 1, 'J', 1, 3, 3, 3, 3);
+    $pdf->Ln(5);
+}
+
+$pdf->AddPage();
+
+$txt = <<<EOL
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+EOL;
+
+foreach(range(50, 10, 10) as $height){
+    $multicell->maxHeight($height)->shrinkToFit();
+    $multicell->multiCell(100, 5, $txt, 1, 'J', 1, 3, 3, 3, 3);
+}
+
+// output the pdf
+$pdf->Output();

@@ -20,7 +20,7 @@ Normally, from the downloaded package you need only the files from `library\inte
 In order to include the full interpid library, just include the `autoload.php` provided in the root folder. This will provide you the FPDF and all Interpid PdfLib library classes.
 
 Assuming you downloaded `fpdf-multicell-3.0.0` and placed in your project `libs` folder:
-```
+```php
 <?php
 require_once 'libs/fpdf-multicell-3.0.0/autoload.php';
 ```
@@ -30,7 +30,7 @@ require_once 'libs/fpdf-multicell-3.0.0/autoload.php';
 If your project uses composer, then include the pdf library path to your composer file:
 
 In `composer.json`
-```
+```json
     "autoload": {
         "classmap": [
             "libs/fpdf-multicell-3.0.0/library/interpid"
@@ -41,7 +41,7 @@ In `composer.json`
 or you can use the PSR-4 autoload capabilities
 
 In `composer.json`
-```
+```json
     "autoload": {
         "psr-4": {
             "Interpid\\PdfLib\\": "libs/fpdf-multicell-3.0.0/library/interpid/PdfLib/"
@@ -161,6 +161,7 @@ $multicell->setStyle('i', 11, 'I', '80,80,260', 'helvetica');
 Styles are inherited. All styles inherit a "base" style (If it's defined). In order to inherit a "property" set it to `null`
 
 ```php
+<?php
 // define the "base" style
 $multicell->setStyle('base', 11, '', [0, 0, 77], 'helvetica');
 
@@ -184,7 +185,7 @@ $multicell->setStyle('h4', 11, null, null, null, 'h');
 The default PDF formatting is used in this case(font, font-size and color)
 
 ```php
-// no formatting - the defaul
+// no formatting - the default
 
 //t pdf font, font-size, colors are used
 $s = "This is a simple text";
@@ -214,7 +215,7 @@ Subscript and superscripts can be adjusted with the y attribute. See example:
 ```php
 $s = "<p>The following is <s y='-1'>Subscript</s> and <s y='1'>Superscript</s></p>";
 ```
-<!-- <img src="./images/text-sub-superscript.png" width="300"/> -->
+![Sub-Superscript](https://tracker.interpid.eu/attachments/download/2560/text-sub-superscript.png)
 
 <br/><br/>
 
@@ -227,7 +228,7 @@ Text strikethrough can be defined using the `strike` attribute in any tag:
 $s = "<p>The following is <n strike=''>Text Strikethrough</n> and <bi strike='.5'>Text Strikethrough bolder line</bi></p>";
 $multicell->multiCell(0, 5, $s);
 ```
-<!-- <img src="./images/text-strikethrough.png" width="500"/> -->
+<img src="https://tracker.interpid.eu/attachments/download/2561/text-strikethrough.png" width="500" alt=""/>
 
 <br/><br/>
 
@@ -296,3 +297,72 @@ $s = "The price is <b nowrap='1'>USD 5.344,23</b>";
 $multicell->multiCell(50, 5, $s);
 ```
 
+## FEATURES
+
+### Height Limitations
+
+#### Max Lines
+Limit the number of lines that will be in the multicell
+```php
+//set a limit to the maximum number of lines 
+$multicell->maxLines(10);
+$multicell->multiCell(0, 5, "...Some text...");
+```
+
+#### Max Height
+Limit the height that a multicell can have
+```php
+//set a limit to the maximum number of lines 
+$multicell->maxHeight(50);
+$multicell->multiCell(0, 5, "...Some text...");
+```
+
+If height limits are hit, the following text is cut-off from the multicell. 
+
+### Text shrinking
+Text and line height will shrink in order to fit into a specific `maxHeight` or `maxLines`
+If the text doesn't fit the `font-size` will be decreased with `1` and the `line-height` with `0.5` units until the text fits.
+
+**Notice**
+
+There is a possibility that the shrinking fails if the input and shrinking settings are invalid.
+
+For example: you set maxLines to `5` and your input text has 10 EOLs in it `$multicell->maxLines(5)`
+
+**Limit the number of lines that will be in the multicell**
+```php
+$multicell->maxLines(10)->shrinkToFit();
+$multicell->multiCell(0, 5, "...Some text...");
+```
+
+**Limit the height that a multicell can have**
+```php
+$multicell->maxHeight(50)->shrinkToFit();
+$multicell->multiCell(0, 5, "...Some text...");
+```
+
+```php
+// shrink, max-height and all cells 
+$multicell->maxHeight(50)->shrinkToFit()->applyAll();
+$multicell->multiCell(0, 5, "...Some text...");
+
+...
+$multicell->reset();
+```
+
+#### Change shrinking units
+
+```php
+$multicell->shrinkToFit()->shrinkFontStep(2)->shrinkLineHeightStep(0.2)->maxHeight(50);
+$multicell->multiCell(0, 5, "...Some text...");
+
+...
+$multicell->reset();
+```
+
+### Apply features to all cells and reset
+Features like: `maxHeight`,  `maxLines`, `shrinkToFit`, `shrinkLineHeightStep`, `shrinkFontStep` are
+applied to the next cell only. 
+
+In order to apply these features to all following cells, use `$multicell->applyAll();`<br>
+In order to reset these features use `$multicell->reset();`

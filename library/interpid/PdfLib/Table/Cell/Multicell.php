@@ -11,6 +11,7 @@
 
 namespace Interpid\PdfLib\Table\Cell;
 
+use Interpid\PdfLib\MulticellData;
 use Interpid\PdfLib\Pdf;
 
 /**
@@ -261,7 +262,14 @@ class Multicell extends CellAbstract implements CellInterface
         //Set the font, font type and size
         $this->pdf->SetFont($this->TEXT_FONT, $this->TEXT_TYPE, $this->TEXT_SIZE);
 
-        $this->TEXT_STRLINES = $this->multicell->stringToLines($this->getContentWidth(), $this->getText());
+        $multicellData = new MulticellData($this->pdf);
+        $multicellData->string = $this->getText();
+        $multicellData->width = $this->getContentWidth();
+        $multicellData->initialize();
+
+        $this->multicell->saveStyles();
+        $this->TEXT_STRLINES = $this->multicell->stringToLines($multicellData);
+        $this->multicell->restoreStyles();
 
         $this->calculateCellHeight();
     }
@@ -332,7 +340,8 @@ class Multicell extends CellAbstract implements CellInterface
         $pad_top = 0,
         $pad_right = 0,
         $pad_bottom = 0
-    ) {
+    )
+    {
         $wh_Top = 0;
 
         if ($vtop > 0) { //if this parameter is set
@@ -360,18 +369,19 @@ class Multicell extends CellAbstract implements CellInterface
                 $wh_T = $wh_Top; //Top width
         }
 
-        $this->multicell->multiCellSec(
-            $w,
-            $h,
-            $txtData,
-            0,
-            $hAlign,
-            1,
-            $pad_left,
-            $pad_top + $wh_T,
-            $pad_right,
-            $pad_bottom,
-            false
-        );
+        $multicellData = new MulticellData($this->pdf);
+        $multicellData->width = $w;
+        $multicellData->lineHeight = $h;
+        $multicellData->border = 0;
+        $multicellData->align = $hAlign;
+        $multicellData->fill = 1;
+        $multicellData->paddingLeft = $pad_left;
+        $multicellData->paddingTop = $pad_top + $wh_T;
+        $multicellData->paddingRight = $pad_right;
+        $multicellData->paddingBottom = $pad_bottom;
+
+        $this->multicell->saveStyles();
+        $this->multicell->multiCellSec($multicellData, $txtData);
+        $this->multicell->restoreStyles();
     }
 }

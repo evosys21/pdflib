@@ -33,6 +33,7 @@ class MulticellExamplesTest extends BaseExamplesTestCase
             'example-multicell-3-line-breaking.php',
             'example-multicell-4-page-break.php',
             'example-multicell-5-max-lines.php',
+            'example-multicell-6-shrinking.php',
         );
 
         foreach ($aSources as $source) {
@@ -48,6 +49,8 @@ class MulticellExamplesTest extends BaseExamplesTestCase
     {
         $aSources = array(
             'test-multicell-align.php',
+            'test-multicell-shrinking.php',
+            'test-multicell-shrinking2.php',
         );
 
         foreach ($aSources as $source) {

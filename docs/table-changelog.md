@@ -7,6 +7,9 @@ All notable changes to FPDF Advanced Table will be documented in this file.
 ##X.Y.X (2019-01-01)
 -->
 
+### 6.4.0 (2020-)
+- Change, Text Shrinking Feature ([#1979](https://tracker.interpid.eu/issues/1979))
+
 ### 6.3.1 (2020-08-28)
 - Fix, Multicell Bottom Padding Issue ([#1980](https://tracker.interpid.eu/issues/1980))
 - Fix, PHP 5.6 errors ([#1981](https://tracker.interpid.eu/issues/1981))

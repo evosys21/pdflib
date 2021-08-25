@@ -28,6 +28,8 @@ class MyPdf extends Pdf
 {
     protected $headerSource = 'header.txt';
     public $defaultFont = 'helvetica';
+    public $showHeader = true;
+    public $showFooter = true;
 
     /**
      * Custom Header
@@ -36,6 +38,8 @@ class MyPdf extends Pdf
      */
     public function Header()
     {
+        if (!$this->showHeader) return;
+
         $this->SetY(10);
 
         /**
@@ -72,6 +76,8 @@ class MyPdf extends Pdf
      */
     public function Footer()
     {
+        if (!$this->showFooter) return;
+
         $this->SetY(-10);
         $this->SetFont('helvetica', 'I', 7);
         $this->SetTextColor(170, 170, 170);

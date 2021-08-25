@@ -7,13 +7,14 @@ require_once __DIR__ . '/../autoload.php';
 
 use Interpid\PdfLib\Multicell;
 use Interpid\PdfExamples\PdfFactory;
+use Interpid\PdfLib\Table;
 
 class DevFactory
 {
     public static function multicell()
     {
         //get the PDF object
-        $pdf = PdfFactory::newPdf('multicell');
+        $pdf = PdfFactory::newPdf('multicell', false, false);
 
         // Create the Advanced Multicell Object and inject the PDF object
         $multicell = new Multicell($pdf);
@@ -35,7 +36,26 @@ class DevFactory
         $multicell->setStyle('size', 12, 'BI', '0,0,120');
         $multicell->setStyle('color', 12, 'BI', '0,255,255');
 
+        //set the style for utf8 texts, use 'dejavusans' fonts
+        $multicell->setStyle('u8', null, '', [0, 45, 179], 'dejavusans');
+        $multicell->setStyle('u8b', null, 'B', null, null, 'u8');
+
         return $multicell;
+    }
+    public static function table()
+    {
+        //get the PDF object
+        $pdf = PdfFactory::newPdf('table', false, false);
+
+        $table = new Table($pdf);
+
+        $table->setStyle('p', 6, '', '130,0,30', 'helvetica');
+        $table->setStyle('b', 6, 'B', '130,0,30', 'helvetica');
+        $table->setStyle('bi', 6, 'BI', '0,0,120', 'helvetica');
+        $table->setStyle('s1', 6, 'I', '0,0,120', 'helvetica');
+        $table->setStyle('s2', 10, '', '110,50,120', 'helvetica');
+
+        return $table;
     }
 }
 

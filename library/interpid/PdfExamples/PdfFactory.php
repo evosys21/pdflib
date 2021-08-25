@@ -30,9 +30,11 @@ class PdfFactory
      * Creates a new PDF Object and Initializes it
      *
      * @param $type
+     * @param bool $header Show the header
+     * @param bool $footer Show the footer
      * @return MyPdf
      */
-    public static function newPdf($type)
+    public static function newPdf($type, $header = true, $footer = true)
     {
         $pdf = new MyPdf();
 
@@ -46,7 +48,7 @@ class PdfFactory
         }
 
         //initialize the pdf document
-        self::initPdf($pdf);
+        self::initPdf($pdf, $header, $footer);
 
         return $pdf;
     }
@@ -55,11 +57,15 @@ class PdfFactory
      * Initializes the pdf object.
      * Set the margins, adds a page, adds default fonts etc...
      *
-     * @param Pdf $pdf
-     * @return Pdf $pdf
+     * @param MyPdf $pdf
+     * @param bool $header
+     * @param bool $footer
+     * @return MyPdf $pdf
      */
-    public static function initPdf($pdf)
+    public static function initPdf($pdf, $header = true, $footer = true)
     {
+        $pdf->showHeader = $header;
+        $pdf->showFooter = $footer;
         $pdf->SetMargins(20, 20, 20);
 
         //set default font/colors
