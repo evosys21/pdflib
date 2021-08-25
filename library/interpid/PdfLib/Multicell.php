@@ -169,7 +169,7 @@ class Multicell
      *
      * @param $string string
      */
-    public function setLineBreakingCharacters(string $string)
+    public function setLineBreakingCharacters($string)
     {
         $this->lineBreakingChars = $string;
     }

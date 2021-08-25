@@ -1721,7 +1721,7 @@ class Table
      *
      * @return array The Default Configuration
      */
-    protected function getDefaultConfiguration(): array
+    protected function getDefaultConfiguration()
     {
         $files = [
             $this->configFile,
@@ -1747,7 +1747,7 @@ class Table
      *
      * @return array
      */
-    protected function compatibilityMap(): array
+    protected function compatibilityMap()
     {
         //@formatter:off
         return array(
