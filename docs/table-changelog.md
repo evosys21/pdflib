@@ -9,6 +9,8 @@ All notable changes to FPDF Advanced Table will be documented in this file.
 
 ### 6.3.1 (2020-08-28)
 - Fix, Multicell Bottom Padding Issue ([#1980](https://tracker.interpid.eu/issues/1980))
+- Fix, PHP 5.6 errors ([#1981](https://tracker.interpid.eu/issues/1981))
+- Change, Improve testing over multiple php versions
 
 ### 6.3.0 (2020-07-07)
 - Change, Improve Table Configuration Settings ([#1974](https://tracker.interpid.eu/issues/1974))
