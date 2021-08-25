@@ -491,6 +491,11 @@ class Multicell
 
             $tag = $val['tag'];
 
+            $this->applyStyle($tag);
+            $fw[$tag]['CurrentFont'] = &$this->pdf->CurrentFont; //this can be copied by reference!
+            $fw[$tag]['FontSize'] = $this->pdf->FontSize;
+            $fw[$tag]['unifontSubset'] = $this->pdf->unifontSubset;
+
             $isParagraph = false;
             if (($s == "\t") && (strpos($tag, 'pparg') !== false)) {
                 $isParagraph = true;
@@ -528,14 +533,6 @@ class Multicell
                 //space
                 if ($c == ord(" ")) {
                     $nSpaces++;
-                }
-
-                //    Font Width / Size Array
-                if (!isset($fw[$tag]) || ($tag == '') || ($this->doubleTags)) {
-                    //if this font was not used until now,
-                    $this->applyStyle($tag);
-                    $fw[$tag]['CurrentFont'] = &$this->pdf->CurrentFont; //this can be copied by reference!
-                    $fw[$tag]['FontSize'] = $this->pdf->FontSize;
                 }
 
                 $char_width = $this->mt_getCharWidth($tag, $c);
