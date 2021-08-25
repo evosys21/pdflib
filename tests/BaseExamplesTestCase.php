@@ -65,8 +65,8 @@ class BaseExamplesTestCase extends TestCase
         file_put_contents($generatedFile, $content);
 
         $this->assertTrue(file_exists($generatedFile), $require);
-        $this->assertFileEquals($expectedFile, $generatedFile, $require);
-        $this->assertSame(sha1_file($expectedFile), sha1_file($generatedFile), $require);
+//        $this->assertFileEquals($expectedFile, $generatedFile, $require);
+        $this->assertSame(sha1_file($expectedFile), sha1_file($generatedFile), "FAILED: " . basename($expectedFile) . " / $require");
 
         if (!defined('GENERATE_RESULT_FILES')) {
             unlink($generatedFile);

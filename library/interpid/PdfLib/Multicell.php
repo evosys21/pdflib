@@ -494,7 +494,6 @@ class Multicell
             $this->applyStyle($tag);
             $fw[$tag]['CurrentFont'] = &$this->pdf->CurrentFont; //this can be copied by reference!
             $fw[$tag]['FontSize'] = $this->pdf->FontSize;
-            $fw[$tag]['unifontSubset'] = $this->pdf->unifontSubset;
 
             $isParagraph = false;
             if (($s == "\t") && (strpos($tag, 'pparg') !== false)) {

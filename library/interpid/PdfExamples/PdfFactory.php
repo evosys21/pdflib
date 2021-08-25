@@ -16,8 +16,6 @@ if (!defined('PDF_RESOURCES_IMAGES')) {
     define('PDF_RESOURCES_IMAGES', __DIR__ . '/images');
 }
 
-use Interpid\PdfLib\Pdf;
-
 /**
  * Pdf Factory
  * Contains functions that creates and initializes the PDF class
