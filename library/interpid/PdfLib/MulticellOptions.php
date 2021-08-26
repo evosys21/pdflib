@@ -161,8 +161,7 @@ class MulticellOptions
         $this->styles['DEFAULT']['family'] = $this->pdfi->getFontFamily();
         $this->styles['DEFAULT']['style'] = $this->pdfi->getFontStyle();
         $this->styles['DEFAULT']['size'] = $this->pdfi->getFontSizePt();
-        $this->styles['DEFAULT']['textcolor_pdf'] = $this->pdf->TextColor;
-        $this->styles['DEFAULT']['color'] = '';
+        $this->styles['DEFAULT']['color'] = PdfInterface::RAW . $this->pdf->TextColor;
     }
 
 

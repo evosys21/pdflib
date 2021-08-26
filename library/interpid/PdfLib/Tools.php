@@ -194,4 +194,80 @@ class Tools
         }
         return $array1;
     }
+
+    /**
+     * Parses html attributes and returns an associative array
+     * color: #0000BB; font-size: 20px
+     *
+     * @param $value
+     * @return array
+     */
+    public static function parseHtmlAttribute($value)
+    {
+        $values = array_map('trim', explode(";", $value));
+        $result = [];
+        foreach ($values as $entry) {
+            $entries = array_map('trim', explode(":", $entry));
+            if (isset($entries[0]) && isset($entries[1])) {
+                $result[$entries[0]] = $entries[1];
+            }
+        }
+        return $result;
+    }
+
+    public static function parseColor($color)
+    {
+        if (is_array($color)) {
+            return $color;
+        }
+
+        if (preg_match("#\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*#", $color, $matches)) {
+            array_shift($matches); //remove first element
+            $matches = array_map("intval", $matches);
+            return $matches;
+        }
+
+        $result = self::hex2rgb($color);
+        if ($result) {
+            return $result;
+        }
+
+        return array_map('trim', explode(",", $color));
+    }
+
+    /**
+     * Convert a hexa decimal color code to its RGB equivalent
+     *
+     * @param $hex_color
+     * @return array
+     */
+    public static function hex2rgb($hex_color)
+    {
+        $values = str_replace('#', '', $hex_color);
+        switch (strlen($values)) {
+            case 3;
+                list($r, $g, $b) = sscanf($values, "%1s%1s%1s");
+                return [hexdec("$r$r"), hexdec("$g$g"), hexdec("$b$b")];
+            case 6;
+                return array_map('hexdec', sscanf($values, "%2s%2s%2s"));
+            default:
+                return null;
+        }
+    }
+
+    /**
+     * Converts code highlight for the Multicell Output
+     *
+     * @param $content
+     * @return string|string[]
+     */
+    public static function convertHighlight($content)
+    {
+        $content = preg_replace("#<br\s?/>#", "\n", $content);
+        $replacements = [
+            "&nbsp;" => " "
+        ];
+        $content = str_replace(array_keys($replacements), array_values($replacements), $content);
+        return $content;
+    }
 }

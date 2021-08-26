@@ -83,11 +83,6 @@ class Tags
             }
         }
 
-        if (in_array($p_tag, $tags)) {
-            return false;
-        } //tag already opened
-
-
         if (in_array("</$p_tag>", $p_array)) {
             array_push($tags, $p_tag);
             array_push($hRef, $sHREF);

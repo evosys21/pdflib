@@ -19,12 +19,17 @@ namespace Interpid\PdfLib;
 class PdfInterface
 {
 
+    const RAW = '__RAW__';
+
     /**
      * Pointer to the pdf object
      *
      * @var Pdf
      */
     protected $pdf;
+
+    protected $backupDrawColor;
+    public $textColor;
 
 
     public function __construct($pdf)
@@ -220,5 +225,55 @@ class PdfInterface
     public function Cell($w, $h = 0, $txt = '', $border = 0, $ln = 0, $align = '', $fill = false, $link = '')
     {
         $this->pdf->Cell($w, $h, $txt, $border, $ln, $align, $fill, $link);
+    }
+
+    /**
+     * Sets the PDF TextColor
+     *
+     * @param $color
+     * @return $this
+     */
+    public function setTextColor($color)
+    {
+        $this->textColor = $color;
+
+        if (is_string($color) && strpos($color, self::RAW) === 0) {
+            $this->pdf->TextColor = substr($color, strlen(self::RAW));
+            $this->pdf->ColorFlag = ($this->pdf->FillColor != $this->pdf->TextColor);
+            return $this;
+        }
+        $colorData = Tools::parseColor($color);
+        call_user_func_array([$this->pdf, 'SetTextColor'], $colorData);
+        return $this;
+    }
+
+    /**
+     * Sets the PDF DrawColor
+     *
+     * @param $color
+     * @return $this
+     */
+    public function setDrawColor($color)
+    {
+        $this->backupDrawColor = $this->pdf->DrawColor;
+        if (is_string($color) && strpos($color, self::RAW) === 0) {
+            $this->pdf->DrawColor = substr($color, strlen(self::RAW));
+            return $this;
+        }
+        $colorData = Tools::parseColor($color);
+        call_user_func_array([$this->pdf, 'SetDrawColor'], $colorData);
+        return $this;
+    }
+
+    /**
+     * Restores the DrawColor from the backup
+     * @return $this
+     */
+    public function restoreDrawColor()
+    {
+        if ($this->backupDrawColor) {
+            $this->pdf->DrawColor = $this->backupDrawColor;
+        }
+        return $this;
     }
 }

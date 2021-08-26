@@ -51,6 +51,7 @@ class MulticellExamplesTest extends BaseExamplesTestCase
             'test-multicell-align.php',
             'test-multicell-shrinking.php',
             'test-multicell-shrinking2.php',
+            'test-multicell-style.php',
         );
 
         foreach ($aSources as $source) {

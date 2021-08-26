@@ -53,7 +53,8 @@ class TableTest extends TestCase
 
         $this->assertTrue(file_exists($sPdfFile));
 
-        $this->assertFileEquals($sPdfFile, $sResultFile);
+        // $this->assertFileEquals($sPdfFile, $sResultFile);
+        $this->assertSame(sha1_file($sPdfFile), sha1_file($sResultFile), "FAILED: " . basename($sResultFile) . " / $require");
 
         if (!defined('GENERATE_RESULT_FILES')) {
             unlink($sPdfFile);
@@ -92,7 +93,8 @@ class TableTest extends TestCase
 
         $this->assertTrue(file_exists($sPdfFile));
 
-        $this->assertFileEquals($sPdfFile, $sResultFile);
+        // $this->assertFileEquals($sPdfFile, $sResultFile);
+        $this->assertSame(sha1_file($sPdfFile), sha1_file($sResultFile), "FAILED: " . basename($sResultFile) . " / $require");
 
         if (!defined('GENERATE_RESULT_FILES')) {
             unlink($sPdfFile);
@@ -119,7 +121,8 @@ class TableTest extends TestCase
 
         $this->assertTrue(file_exists($sPdfFile));
 
-        $this->assertFileEquals($sPdfFile, $sResultFile);
+        // $this->assertFileEquals($sPdfFile, $sResultFile);
+        $this->assertSame(sha1_file($sPdfFile), sha1_file($sResultFile), "FAILED: " . basename($sResultFile) . " / $require");
 
         if (!defined('GENERATE_RESULT_FILES')) {
             unlink($sPdfFile);

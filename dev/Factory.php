@@ -35,10 +35,7 @@ class DevFactory
         $multicell->setStyle('style', 10, 'BI', '0,0,220');
         $multicell->setStyle('size', 12, 'BI', '0,0,120');
         $multicell->setStyle('color', 12, 'BI', '0,255,255');
-
-        //set the style for utf8 texts, use 'dejavusans' fonts
-        $multicell->setStyle('u8', null, '', [0, 45, 179], 'dejavusans');
-        $multicell->setStyle('u8b', null, 'B', null, null, 'u8');
+        $multicell->setStyle('code', 9, '', null, 'courier');
 
         return $multicell;
     }

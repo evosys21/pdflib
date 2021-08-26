@@ -239,7 +239,6 @@ class Multicell
             'style' => Tools::string($fontStyle),
             'size' => Tools::string($fontSize),
             'color' => Tools::color($color),
-            'textcolor_pdf' => '',
         ];
 
         if ($inherit && $inherit !== $tag) {
@@ -414,20 +413,29 @@ class Multicell
      * If the tag is not found then the DEFAULT tag is being used
      *
      * @param string $tag tag name
-     * @param bool|string $strike !empty if the tag contains a strikethrough
+     * @param array $style
      */
-    protected function applyStyle($tag, $strike = false)
+    protected function applyStyle($tag, $style = [])
     {
-        if ($this->currentTag == $tag) {
+
+        $tagKey = $tag . md5(serialize($style));
+
+        if ($this->currentTag == $tagKey) {
             return;
         }
 
-        $this->currentTag = $tag;
+        $this->currentTag = $tagKey;
 
         $fontFamily = $this->getTagFont($tag);
         $fontStyle = $this->getTagFontStyle($tag);
-        $fontSize = $this->getTagSize($tag);
-        $color = $this->getTagColor($tag);
+        $color = Tools::getValue($style, 'color');
+        if (!$color) {
+            $color = $this->getTagColor($tag);
+        }
+        $fontSize = intval(Tools::getValue($style, 'font-size'));
+        if (!$fontSize) {
+            $fontSize = $this->getTagSize($tag);
+        }
 
         if (strpos($fontSize, '%') !== false) {
             $fontSize = $this->pdf->FontSizePt * (((float)$fontSize) / 100);
@@ -435,23 +443,8 @@ class Multicell
 
         $this->pdf->SetFont($fontFamily, $fontStyle, $fontSize);
 
-        $textColorPdf = $this->getTagAttribute($tag, 'textcolor_pdf');
-
-        if ($textColorPdf) {
-            $this->pdf->TextColor = $textColorPdf;
-            if ($strike) {
-                $this->pdf->DrawColor = $textColorPdf;
-            }
-            $this->pdf->ColorFlag = ($this->pdf->FillColor != $this->pdf->TextColor);
-        } else {
-            if ($color) {
-                $colorData = is_array($color) ? $color : explode(',', $color);
-                // added to support Grayscale, RGB and CMYK
-                call_user_func_array([$this->pdf, 'SetTextColor'], $colorData);
-                if ($strike) {
-                    call_user_func_array([$this->pdf, 'SetDrawColor'], $colorData);
-                }
-            }
+        if ($color) {
+            $this->pdfi->setTextColor($color);
         }
     }
 
@@ -491,7 +484,16 @@ class Multicell
 
             $tag = $val['tag'];
 
-            $this->applyStyle($tag);
+            $cellData = [
+                'align' => Tools::getValue($val, 'align'),
+                'href' => Tools::getValue($val, 'href', ''),
+                'nowrap' => Tools::getValue($val, 'nowrap', ''),
+                'style' => Tools::parseHtmlAttribute(Tools::getValue($val, 'style', '')),
+                'strike' => $this->getStrikeValue($val),
+            ];
+
+            $this->applyStyle($tag, $cellData['style']);
+
             $fw[$tag]['CurrentFont'] = &$this->pdf->CurrentFont; //this can be copied by reference!
             $fw[$tag]['FontSize'] = $this->pdf->FontSize;
 
@@ -659,7 +661,7 @@ class Multicell
 
             $y = isset($val['y']) ? $val['y'] : (isset($val['ypos']) ? $val['ypos'] : 0);
 
-            $cellData = [
+            $cellData = array_merge([
                 'text' => $str,
                 'char' => $totalChars,
                 'tag' => $val['tag'],
@@ -667,13 +669,8 @@ class Multicell
                 'width_real' => $currentWidth,
                 'width' => $currentWidth,
                 'spaces' => $nSpaces,
-                'align' => Tools::getValue($val, 'align'),
-                'href' => Tools::getValue($val, 'href', ''),
-                'nowrap' => Tools::getValue($val, 'nowrap', ''),
-                'strike' => $this->getStrikeValue($val),
                 'y' => $y
-            ];
-
+            ], $cellData);
 
             if (isset($val['width'])) {
                 $cellData['custom_width'] = $val['width'];
@@ -980,6 +977,7 @@ class Multicell
         }
 
         $this->divideByTags($multicellData->string);
+//        print_r($multicellData->string);
 
         $dataInfo = $this->dataInfo;
 
@@ -1088,7 +1086,7 @@ class Multicell
             $bYPosUsed = false;
 
             //apply current tag style
-            $this->applyStyle($val['tag'], $val['strike']);
+            $this->applyStyle($val['tag'], $val['style']);
 
             //If > 0 then we will move the current X Position
             $extra_X = 0;
@@ -1150,13 +1148,15 @@ class Multicell
 
             // Strikethrough text #1950
             if ($val['strike']) {
+                $this->pdfi->setDrawColor($this->pdfi->textColor);
+                $lineWidth = $this->pdf->LineWidth;
                 $strikeY = $this->pdf->y + ($height / 2);
-                $lineWidth = $this->pdf->LineWidth; //store the line width
                 if (is_numeric($val['strike'])) {
                     $this->pdf->SetLineWidth($val['strike']);
                 }
                 $this->pdf->line($x, $strikeY, $x + $width, $strikeY);
                 $this->pdf->SetLineWidth($lineWidth); //restore the line width
+                $this->pdfi->restoreDrawColor();
             }
 
             $last_width -= $width; //last column width
