@@ -1,6 +1,6 @@
 # FPDF Advanced Multicell Changelog
 
-All notable changes to FPDF Advanced Multicell  will be documented in this file.
+All notable changes to FPDF Advanced Multicell will be documented in this file.
 
 <!---
 ## [Unreleased]
@@ -8,20 +8,28 @@ All notable changes to FPDF Advanced Multicell  will be documented in this file.
 -->
 
 ### 3.3.0 (2020-)
-- Change, Text Shrinking Feature ([#1979](https://tracker.interpid.eu/issues/1979)) 
+
+- Change, Text Shrinking Feature ([#1979](https://tracker.interpid.eu/issues/1979))
+- Change, Add inline style support ([#1983](https://tracker.interpid.eu/issues/1983))
+- Fix, (Multicell) Text - Text Strike-through invalid Multicell Border
+  Color, ([#1982](https://tracker.interpid.eu/issues/1982))
 
 ### 3.2.1 (2020-08-29)
+
 - Fix, Multicell Bottom Padding Issue ([#1980](https://tracker.interpid.eu/issues/1980))
 - Fix, PHP 5.6 errors ([#1981](https://tracker.interpid.eu/issues/1981))
 - Change, Improve testing over multiple php versions
 
 ### 3.2.0 (2020-07-07)
+
 - Change, Tag nowrap attribute ([#1976](https://tracker.interpid.eu/issues/1976))
 
 ### 3.1.2 (2020-12-29)
+
 - Fix, PHP 8 support ([#1969](https://tracker.interpid.eu/issues/1969))
 
 ### 3.1.1 (2020-12-28)
+
 - Change, Code quality improvements ([#1964](https://tracker.interpid.eu/issues/1964))
 
 ### 3.1.0 (2020-10-03)
@@ -115,7 +123,7 @@ All notable changes to FPDF Advanced Multicell  will be documented in this file.
 * no need to extend FPDF class anymore, the fpdf object will be passed as a parameter to the multicell class
 * class names, filenames and functions are changed
 
+##### Note
 
-##### Note 
-
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres
+to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)

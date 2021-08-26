@@ -8,7 +8,9 @@ With the release of version 3.0.0 there are some functional changes to the Advan
 
 ## Multicell `setStyle` function
 
-With the implementation of **Style Inheritance**([#1931](https://tracker.interpid.eu/issues/1931)) the `$multicell->setStyle` method arguments changed it's order. 
+With the implementation of **Style Inheritance**([#1931](https://tracker.interpid.eu/issues/1931))
+the `$multicell->setStyle` method arguments changed it's order.
+
 ```php
 
     //new implementation
@@ -22,7 +24,8 @@ With the implementation of **Style Inheritance**([#1931](https://tracker.interpi
 
 ### Backward compatibility
 
-The `$multicell->setStyleDep` method is provided for backward compatibility with the old `setStyle` method, so in order to keep the "old" version, please rename all your `->setStyle` to `->setStyleDep`. 
+The `$multicell->setStyleDep` method is provided for backward compatibility with the old `setStyle` method, so in order
+to keep the "old" version, please rename all your `->setStyle` to `->setStyleDep`.
 
 ```php
 //from version 3.0.0
@@ -38,4 +41,5 @@ $multicell->setStyleDep("i", 'helvetica', "I", 11, "80,80,260");
 
 ## Subscripts and superscripts
 
-The `ypos` sub-superscript parameter is deprecated. Use `y` instead. `ypos` is still available; it can be removed in future releases.
+The `ypos` sub-superscript parameter is deprecated. Use `y` instead. `ypos` is still available; it can be removed in
+future releases.

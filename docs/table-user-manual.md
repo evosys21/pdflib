@@ -4,22 +4,24 @@
 
 ## Installation
 
-The PHP Pdf Addons will work right out of the box. All you need is a webserver with Php 5.5 (or greater). 
-No further configurations are required.
+The PHP Pdf Addons will work right out of the box. All you need is a webserver with Php 5.5 (or greater). No further
+configurations are required.
 
-Just download the files, extract the content in a directory where your webserver is configured and call the url. 
+Just download the files, extract the content in a directory where your webserver is configured and call the url.
 
 Every add-on has multiple example files that cover the full functionality.
 
 ### Include the library into the project
 
-Normally, from the downloaded package you need only the files from `library\interpid\PdfLib` folder in order to run it. 
+Normally, from the downloaded package you need only the files from `library\interpid\PdfLib` folder in order to run it.
 
 #### Using "require_once"
 
-In order to include the full interpid library, just include the `autoload.php` provided in the root folder. This will provide you the FPDF and all Interpid PdfLib library classes.
+In order to include the full interpid library, just include the `autoload.php` provided in the root folder. This will
+provide you the FPDF and all Interpid PdfLib library classes.
 
 Assuming you downloaded `fpdf-table-6.0.0` and placed in your project `libs` folder:
+
 ```
 <?php
 require_once 'libs/fpdf-table-6.0.0/autoload.php';
@@ -30,6 +32,7 @@ require_once 'libs/fpdf-table-6.0.0/autoload.php';
 If your project uses composer, then include the pdf library path to your composer file:
 
 In `composer.json`
+
 ```
     "autoload": {
         "classmap": [
@@ -41,6 +44,7 @@ In `composer.json`
 or you can use the PSR-4 autoload capabilities
 
 In `composer.json`
+
 ```
     "autoload": {
         "psr-4": {
@@ -51,15 +55,15 @@ In `composer.json`
 
 then run `composer dump-autoload` to regenerate the autoload classmap.
 
-
 ## Download
 
-Please go to your account on https://www.interpid.eu/my-account to download the latest versions of the addons. 
+Please go to your account on https://www.interpid.eu/my-account to download the latest versions of the addons.
 
 ## Why use the \Interpid\PdfLib\Pdf object instead of FPDF
 
-To implement the FPDF Add-on, we need access to private/protected properties from the FPDF class like widths, margins, fonts etc... As these properties are not provided by setters and getters the FPDF class was extended and these properties made public. 
-
+To implement the FPDF Add-on, we need access to private/protected properties from the FPDF class like widths, margins,
+fonts etc... As these properties are not provided by setters and getters the FPDF class was extended and these
+properties made public.
 
 ```php
 namespace Interpid\PdfLib;
@@ -107,7 +111,8 @@ $table = new Table($pdf);
 
 ## Styling
 
-All the table cells(header and rows) are fully functional FPDF Advanced Multicells. This adds a lot of flexibility when creating your table. Please have a look at the multicell documentation for details about styling and text formatting. 
+All the table cells(header and rows) are fully functional FPDF Advanced Multicells. This adds a lot of flexibility when
+creating your table. Please have a look at the multicell documentation for details about styling and text formatting.
 
 Examples:
 
@@ -120,7 +125,7 @@ $table->setStyle('i', 11, 'I', '80,80,260', 'helvetica');
 
 ## Initialize the table
 
-Just specify an `array` with the column widths. The size of the `array` will be used as the number of columns. 
+Just specify an `array` with the column widths. The size of the `array` will be used as the number of columns.
 
 ```php
 //Initialize the table, 5 columns with the specified widths
@@ -130,7 +135,7 @@ $table->initialize([20, 30, 40, 40, 20]);
 $table->initialize([50, 50, 40]);
 ```
 
-Optionally you can pass a configuration array to the table `initialize` function. 
+Optionally you can pass a configuration array to the table `initialize` function.
 
 ```php
 $config = array(
@@ -166,16 +171,20 @@ $table->initialize([40, 50, 30], $config);
 
 ### Default configuration File
 
-The table requires a "default" configuration file in order to run. The configuration file contains information regarding basic table styling.
+The table requires a "default" configuration file in order to run. The configuration file contains information regarding
+basic table styling.
 
-The default table configuration file can be found in: `table.config.php` file, but can be specified in the table constructor:
+The default table configuration file can be found in: `table.config.php` file, but can be specified in the table
+constructor:
+
 ```php
 $table = new Table($pdf, 'path/to/my-table.config.php');
 ```
 
-If `PDF_TABLE_CONFIG_PATH` value is defined, then the `table.config.php` is being looked up in that folder too. 
+If `PDF_TABLE_CONFIG_PATH` value is defined, then the `table.config.php` is being looked up in that folder too.
 
-The values specified in this file are used by default. The configuration file content looks like the following and it contains all the values that you can specify for a header/row.
+The values specified in this file are used by default. The configuration file content looks like the following and it
+contains all the values that you can specify for a header/row.
 
 ```php
 /**
@@ -235,10 +244,11 @@ return [
 ];
 
 ```
+
 ### Overwriting the default configuration values
 
-The second parameter of the table initialization can be an array similar to the one from the Table Configuration File. This array does not need to contain the complete configuration structure, only the values that are overwritten.
-
+The second parameter of the table initialization can be an array similar to the one from the Table Configuration File.
+This array does not need to contain the complete configuration structure, only the values that are overwritten.
 
 ```php
 //changing header text color and row text color and size
@@ -257,7 +267,8 @@ $table->initialize([40, 50, 30], $config);
 
 ## Table Header(s)
 
-You can add **none**, **one** or **multiple** header rows to a table. The header rows are added to the table on every new page by default. 
+You can add **none**, **one** or **multiple** header rows to a table. The header rows are added to the table on every
+new page by default.
 
 ### No Header
 
@@ -316,7 +327,8 @@ $table->addHeader();
 
 ### Header configuration values
 
-All the possible configuration values for the header can be found in the Table Configuration File. See the HEADER section. 
+All the possible configuration values for the header can be found in the Table Configuration File. See the HEADER
+section.
 
 The configuration values can be overwritten in the configuration array:
 
@@ -334,9 +346,10 @@ $header = [
 
 ## Table Row(s)
 
-Table rows are added with ```php $table->addRow()``` function. The input is an array. The array elements correspond to the [Table Cells](#table-cells). 
+Table rows are added with ```php $table->addRow()``` function. The input is an array. The array elements correspond to
+the [Table Cells](#table-cells).
 
-A table cell can be a `text`, `array` or `object` that represents the table cell. 
+A table cell can be a `text`, `array` or `object` that represents the table cell.
 
 ### Adding table rows
 
@@ -360,6 +373,7 @@ for ($i=1; $i<5; $i++)
 ```
 
 ### A simple row
+
 ```php
 
 $row = [
@@ -414,10 +428,10 @@ $table->addRow($row);
 
 ### Row height
 
-The row height is determined by the cell heights. The cell height depends on the cell content and cell type.   
+The row height is determined by the cell heights. The cell height depends on the cell content and cell type.
 
-A fixed height can be set by specifying the `HEIGHT` parameter for a cell. In this case no content overflow checks are done. 
-The user has to make sure that the cell content fits the specified area. 
+A fixed height can be set by specifying the `HEIGHT` parameter for a cell. In this case no content overflow checks are
+done. The user has to make sure that the cell content fits the specified area.
 
 For example:
 
@@ -437,7 +451,7 @@ $table->addRow($row);
 
 ## Table Cells
 
-By default table cells are Advanced Multicells. 
+By default table cells are Advanced Multicells.
 
 ### Text
 
@@ -473,6 +487,7 @@ $table->addRow([$imageCell, $svgImageCell])
 ```
 
 #### Images as array
+
 Alternatively, you can specify an image as an array:
 
 ```php
@@ -490,10 +505,9 @@ this is equivalent to:
 $cell = new Table\Cell\ImageSVG($pdf, 'tiger.svg', 35, 35);
 ```
 
-
 ### Objects
 
-All input values for cells are converted into objects. The following objects are available in the distributed package. 
+All input values for cells are converted into objects. The following objects are available in the distributed package.
 
 ```php
 use Interpid\PdfLib\Table\Cell\EmptyCell;
@@ -504,7 +518,7 @@ use Interpid\PdfLib\Table\Cell\ImageSVG;
 
 ## Finalize the table
 
-In order to add/render the table to the PDF document you have to close it. 
+In order to add/render the table to the PDF document you have to close it.
 
 ```php
 //close the table, add it to the pdf document
