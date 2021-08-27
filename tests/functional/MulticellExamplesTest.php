@@ -27,7 +27,7 @@ class MulticellExamplesTest extends BaseExamplesTestCase
     public function testExamples()
     {
         $aSources = array(
-            'example-multicell.php',
+            // 'example-multicell.php',
             'example-multicell-1-overview.php',
             'example-multicell-2-overview-page-break.php',
             'example-multicell-3-line-breaking.php',
