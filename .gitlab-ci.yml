@@ -37,7 +37,6 @@ tests-php56:
     - rm -r ./vendor/php*
     - rm -r ./vendor/nikic/
     - composer dump-autoload
-    - cp ./tests/php5/* ./tests/
     - wget -O phpunit.phar https://phar.phpunit.de/phpunit-5.phar
     - php phpunit.phar --version
     - php phpunit.phar --bootstrap ./tests/bootstrap.php ./tests/functional
