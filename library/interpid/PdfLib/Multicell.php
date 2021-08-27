@@ -625,7 +625,6 @@ class Multicell
                                 $temp['width'] -= $this->mt_getCharWidth($temp['tag'], ord(' '));
                                 $temp['spaces']--;
 
-                                //imediat return from this function
                                 break 2;
                             }
                         }
