@@ -627,8 +627,6 @@ class Multicell
 
                                 //imediat return from this function
                                 break 2;
-                            } else {
-                                #die("should not be!!!");
                             }
                         }
                     }
@@ -977,7 +975,6 @@ class Multicell
         }
 
         $this->divideByTags($multicellData->string);
-//        print_r($multicellData->string);
 
         $dataInfo = $this->dataInfo;
 

@@ -273,6 +273,7 @@ class PdfInterface
     {
         if ($this->backupDrawColor) {
             $this->pdf->DrawColor = $this->backupDrawColor;
+            $this->pdf->_out($this->pdf->DrawColor);
         }
         return $this;
     }

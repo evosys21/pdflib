@@ -1,5 +1,5 @@
 # Description
-This FPDF addon class allows creation of a "Advanced Tables" in the pdf document in a very simple way
+This FPDF addon class allows creation of an "Advanced Table" in the pdf document in a very simple way
 
 See <https://www.interpid.eu/fpdf/table> for full details. 
 
