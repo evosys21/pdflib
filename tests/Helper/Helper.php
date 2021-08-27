@@ -60,8 +60,17 @@ class Helper
             '-density',
             '300',
             $pdf . "[$page]",
+            '-flatten',
             $dest
         ]);
+
+        // print_r($process->getCommandLine());
+
+        $dir = dirname($dest);
+        if (!is_dir($dir)) {
+            mkdir($dir);
+        }
+
         $process->run();
         if (!$process->isSuccessful()) {
             echo $process->getErrorOutput() . PHP_EOL;

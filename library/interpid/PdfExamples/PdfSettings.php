@@ -114,7 +114,7 @@ class PdfSettings
         $multicell->setStyle('color', 12, 'BI', '0,255,255');
         $multicell->setStyle('s1', 8, null, '118,0,3');
         $multicell->setStyle('s2', 6, null, '0,49,159');
-
+        $multicell->setStyle('code', 9, '', null, 'courier');
     }
     /**
      * @param $table Table

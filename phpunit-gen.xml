@@ -16,7 +16,7 @@
     <env name="APP_ENV" value="test"/>
     <env name="APP_DEBUG" value="1"/>
     <env name="FAILED_SCREENSHOTS" value="0"/>
-    <env name="SCREENSHOTS" value="1"/>
+    <env name="SCREENSHOTS" value="0"/>
   </php>
   <testsuites>
     <testsuite name="Project Test Suite">

@@ -64,7 +64,6 @@ class TableExamples2Test extends BaseTestCase
 
         $this->assertTrue(file_exists($sPdfFile));
 
-        // $this->assertFileEquals($sPdfFile, $sResultFile);
         $this->assertComparePdf($sPdfFile, $sResultFile, "FAILED: " . basename($sResultFile) . " / $require");
 
         if (!defined('GENERATE_RESULT_FILES')) {
