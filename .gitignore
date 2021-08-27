@@ -10,3 +10,7 @@ fonts/
 tests/build
 tests/old
 tests/data-old
+
+/library/tfpdf/font/unifont/dejavusans*.php
+/library/tfpdf/font/unifont/dejavuserif*.php
+

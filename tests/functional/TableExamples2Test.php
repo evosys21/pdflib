@@ -13,14 +13,14 @@
 namespace Interpid\PdfLib\Tests\Functional;
 
 use Interpid\PdfExamples\PdfFactory;
+use Interpid\PdfLib\Tests\BaseTestCase;
 use Interpid\PdfLib\Tests\Helper\TestPdf;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Class TableExamples2Test
  * @package Interpid\PdfLib\Tests\Functional
  */
-class TableExamples2Test extends TestCase
+class TableExamples2Test extends BaseTestCase
 {
     /**
      * Returns the pdf object
@@ -65,7 +65,7 @@ class TableExamples2Test extends TestCase
         $this->assertTrue(file_exists($sPdfFile));
 
         // $this->assertFileEquals($sPdfFile, $sResultFile);
-        $this->assertSame(sha1_file($sPdfFile), sha1_file($sResultFile), "FAILED: " . basename($sResultFile) . " / $require");
+        $this->assertComparePdf($sPdfFile, $sResultFile, "FAILED: " . basename($sResultFile) . " / $require");
 
         if (!defined('GENERATE_RESULT_FILES')) {
             unlink($sPdfFile);

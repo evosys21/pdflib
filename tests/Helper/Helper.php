@@ -12,8 +12,10 @@
 
 namespace Interpid\PdfLib\Tests\Helper;
 
+use Imagick;
 use Interpid\PdfExamples\PdfFactory;
 use Interpid\PdfLib\Pdf;
+use Symfony\Component\Process\Process;
 
 
 class Helper
@@ -47,5 +49,23 @@ class Helper
     {
         $pdf->SetFont('helvetica', 'I', 7);
         $pdf->SetTextColor(170, 170, 170);
+    }
+
+    public static function pdfScreenshot($pdf, $dest, $page = 0)
+    {
+        $process = new Process([
+            'magick',
+            '-background',
+            'white',
+            '-density',
+            '300',
+            $pdf . "[$page]",
+            $dest
+        ]);
+        $process->run();
+        if (!$process->isSuccessful()) {
+            echo $process->getErrorOutput() . PHP_EOL;
+        }
+        return $dest;
     }
 }

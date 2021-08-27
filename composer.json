@@ -19,7 +19,8 @@
         "interpid/redmine": "^1.0",
         "kbsali/redmine-api": "^1.0",
         "vlucas/phpdotenv": "^4.1",
-        "ext-fileinfo": "*"
+        "ext-fileinfo": "*",
+        "symfony/process": "^5.3"
     },
     "autoload": {
         "classmap": [

@@ -20,7 +20,7 @@ use PHPUnit\Framework\TestCase;
  * Class BaseExamplesTestCase
  * @package Interpid\PdfLib\Tests
  */
-class BaseExamplesTestCase extends TestCase
+class BaseExamplesTestCase extends BaseTestCase
 {
     /**
      * Returns the pdf object
@@ -65,8 +65,7 @@ class BaseExamplesTestCase extends TestCase
         file_put_contents($generatedFile, $content);
 
         $this->assertTrue(file_exists($generatedFile), $require);
-//        $this->assertFileEquals($expectedFile, $generatedFile, $require);
-        $this->assertSame(sha1_file($expectedFile), sha1_file($generatedFile), "FAILED: " . basename($expectedFile) . " / $require");
+        $this->assertComparePdf($expectedFile, $generatedFile, "FAILED: " . basename($expectedFile) . " / $require");
 
         if (!defined('GENERATE_RESULT_FILES')) {
             unlink($generatedFile);
