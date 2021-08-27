@@ -58,7 +58,7 @@ class BaseExamplesTestCase extends TestCase
             $generatedFile = tempnam(sys_get_temp_dir(), 'pdf_test');
         }
 
-        //CreationDate (D:20210707150635)
+        //CreationDate (D:20170101010000)
         $content = preg_replace("#CreationDate \(D:[0-9]+#", "CreationDate (D:20170101010000", $content);
         $content = preg_replace("#LastModified \(D:[0-9]+#", "LastModified (D:20170101010000", $content);
 

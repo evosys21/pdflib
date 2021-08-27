@@ -10,6 +10,7 @@ require_once __DIR__ . "/../autoload.php";
 use Interpid\PdfLib\Multicell;
 use Interpid\PdfLib\Table;
 use Interpid\PdfExamples\PdfFactory;
+use Interpid\PdfExamples\PdfSettings;
 
 $factory = new PdfFactory();
 
@@ -33,13 +34,9 @@ $bgColor7 = [216, 243, 228];
  */
 $table = new Table($pdf);
 
-/**
- * Set the tag styles
- */
-$table->setStyle('p', 10, '', '130,0,30', 'helvetica');
-$table->setStyle('b', 9, '', '80,80,260', 'helvetica');
-$table->setStyle('h1', 10, '', '0,151,200', 'helvetica');
-$table->setStyle('bi', 12, 'BI', '0,0,120', 'helvetica');
+// Set the styles for the advanced table
+PdfSettings::setTableStyles($table);
+
 
 //default text color
 $pdf->SetTextColor(118, 0, 3);

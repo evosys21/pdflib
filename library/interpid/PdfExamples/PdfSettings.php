@@ -11,6 +11,9 @@
 
 namespace Interpid\PdfExamples;
 
+use Interpid\PdfLib\Multicell;
+use Interpid\PdfLib\Table;
+
 if (!defined('PDF_APPLICATION_PATH')) {
     define('PDF_APPLICATION_PATH', __DIR__ . '/../../..');
 }
@@ -30,7 +33,8 @@ class PdfSettings
 
 
     //top, right, bottom, left
-    public static $paddings = [[0, 0, 0, 0],
+    public static $paddings = [
+        [0, 0, 0, 0],
         [1, 1, 1, 1],
         [2, 2, 2, 2],
         [3, 3, 3, 3],
@@ -86,5 +90,41 @@ class PdfSettings
             $dataRow[$i]['TEXT'] = "Cool <b>cell</b>";
         }
         return $dataRow;
+    }
+
+    /**
+     * @param $multicell Multicell
+     */
+    public static function setMulticellStyles($multicell)
+    {
+        // Set the styles for the advanced multicell
+        $multicell->setStyle('base', 11, '', '130,0,30', 'helvetica');
+        $multicell->setStyle('p', null);
+        $multicell->setStyle('b', null, 'B');
+        $multicell->setStyle('i', null, 'I', '80,80,260');
+        $multicell->setStyle('u', null, 'U', '80,80,260');
+        $multicell->setStyle('h1', 14, 'B', '203,0,48');
+        $multicell->setStyle('h3', 12, 'B', '203,0,48');
+        $multicell->setStyle('h4', 11, 'BI', '0,151,200');
+        $multicell->setStyle('hh', 11, 'B', '255,189,12');
+        $multicell->setStyle('ss', 7, '', '203,0,48');
+        $multicell->setStyle('font', 10, '', '0,0,255');
+        $multicell->setStyle('style', 10, 'BI', '0,0,220');
+        $multicell->setStyle('size', 12, 'BI', '0,0,120');
+        $multicell->setStyle('color', 12, 'BI', '0,255,255');
+        $multicell->setStyle('s1', 8, null, '118,0,3');
+        $multicell->setStyle('s2', 6, null, '0,49,159');
+
+    }
+    /**
+     * @param $table Table
+     */
+    public static function setTableStyles($table)
+    {
+        // Set the styles for the advanced table
+        $table->setStyle('p', 10, '', '130,0,30', 'helvetica');
+        $table->setStyle('b', 9, 'B', '80,80,260', 'helvetica');
+        $table->setStyle('h1', 10, '', '0,151,200', 'helvetica');
+        $table->setStyle('bi', 12, 'BI', '0,0,120', 'helvetica');
     }
 }
