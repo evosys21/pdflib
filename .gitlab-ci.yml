@@ -71,6 +71,7 @@ code-coverage:
   stage: quality
   image: dockerhub.interpid.eu/php74
   script:
+    - echo "xdebug.mode=coverage" >> /etc/php/7.4/cli/php.ini
     - vendor/bin/phpunit --configuration phpunit-ci.xml
     - vendor/bin/phpmetrics --report-html=./build/php/phpmetrics ./library/interpid/PdfLib
   coverage: '/Lines:\s*(\d+\.\d+)/'
