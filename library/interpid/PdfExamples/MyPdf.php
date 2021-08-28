@@ -119,7 +119,7 @@ class MyPdf extends Pdf
      */
     public function _putinfo()
     {
-        if (isset($_SERVER['ENVIRONMENT']) && 'test' == $_SERVER['ENVIRONMENT']) {
+        if (static::isTesting()) {
             $this->metadata['Producer'] = 'FPDF - UNIT-TEST';
             $this->metadata['CreationDate'] = 'D:' . @date('YmdHis', 1483228800);
             foreach ($this->metadata as $key => $value) {

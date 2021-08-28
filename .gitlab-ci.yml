@@ -34,13 +34,7 @@ tests-php56:
   dependencies:
     - install
   script:
-    - rm -r ./vendor/php*
-    - rm -r ./vendor/nikic/
-    - rm -r ./vendor/symfony/
-    - composer dump-autoload
-    - wget -O phpunit.phar https://phar.phpunit.de/phpunit-5.phar
-    - php phpunit.phar --version
-    - php phpunit.phar --bootstrap ./tests/bootstrap.php ./tests/functional
+    - sh ./bin/phpunit-php70.sh
   parallel:
     matrix:
       - PHP:
@@ -52,12 +46,7 @@ tests-php70:
   dependencies:
     - install
   script:
-    - rm -r ./vendor/php*
-    - rm -r ./vendor/nikic/
-    - composer dump-autoload
-    - wget -O phpunit.phar https://phar.phpunit.de/phpunit-6.phar
-    - php phpunit.phar --version
-    - php phpunit.phar --bootstrap ./tests/bootstrap.php ./tests/functional
+    - sh ./bin/phpunit-php70.sh
   parallel:
     matrix:
       - PHP:

@@ -50,7 +50,7 @@ class BaseTestCase extends TestCase
         $basename = basename($expected);
         $coreName = substr($basename, 0, strrpos($basename, "."));
 
-        if (($shaExpected !== $shaGenerated) && $_ENV['FAILED_SCREENSHOTS']) {
+        if (($shaExpected !== $shaGenerated) && getenv('FAILED_SCREENSHOTS')) {
             $screenshotExpect = dirname($expected) . "/expected/$coreName.png";
             $screenshotIs = dirname($expected) . "/is/$coreName.png";
             Helper::pdfScreenshot($expected, $screenshotExpect);
@@ -61,7 +61,7 @@ class BaseTestCase extends TestCase
 
         $this->assertSame($shaExpected, $shaGenerated, $message);
 
-        if ($_ENV['SCREENSHOTS']) {
+        if (getenv('SCREENSHOTS')) {
             $screenshot = dirname($expected) . "/$coreName.png";
             Helper::pdfScreenshot($generated, $screenshot);
         }

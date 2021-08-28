@@ -38,7 +38,6 @@ function execute($cmd)
         $error_str = implode(',', $result);
         trigger_error("Error executing command: $cmd Error: $error_str"); //write the real error
         die();
-        return false;
     } //fi
 
     return true;
