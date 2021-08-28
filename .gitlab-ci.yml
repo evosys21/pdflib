@@ -34,7 +34,7 @@ tests-php56:
   dependencies:
     - install
   script:
-    - sh ./bin/phpunit-php70.sh
+    - sh ./bin/phpunit-php5.sh
   parallel:
     matrix:
       - PHP:
