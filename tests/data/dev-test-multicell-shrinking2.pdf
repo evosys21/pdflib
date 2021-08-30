@@ -1,0 +1,1395 @@
+%PDF-1.3
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/Contents 4 0 R>>
+endobj
+4 0 obj
+<</Length 20391>>
+stream
+2 J
+0.57 w
+BT /F1 11.00 Tf ET
+0.996 1.000 0.961 rg
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F3 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F3 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F3 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F3 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F4 9.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F4 7.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F4 9.00 Tf ET
+BT /F1 8.00 Tf ET
+56.69 785.20 283.46 -8.50 re f 56.69 785.20 m 56.69 776.69 l S 56.69 785.20 m 340.16 785.20 l S 340.16 785.20 m 340.16 776.69 l S 
+56.69 776.69 283.46 -9.92 re f 
+0.461 Tw
+q 0.784 0.039 0.039 rg BT 65.20 769.33 Td (This ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.461 Tw
+q 0.510 0.000 0.118 rg BT 82.99 769.33 Td (TCPDF addon) Tj ET Q
+BT /F1 8.00 Tf ET
+0.461 Tw
+q 0.784 0.039 0.039 rg BT 136.34 769.33 Td ( allows creation of an ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.461 Tw
+q 0.510 0.000 0.118 rg BT 216.01 769.33 Td (Advanced Multicell) Tj ET Q
+BT /F1 8.00 Tf ET
+0.461 Tw
+q 0.784 0.039 0.039 rg BT 288.94 769.33 Td ( which uses) Tj ET Q
+56.69 776.69 m 56.69 766.77 l S 340.16 776.69 m 340.16 766.77 l S 
+56.69 766.77 283.46 -9.92 re f 
+1.235 Tw
+q 0.784 0.039 0.039 rg BT 65.20 759.41 Td (as input a ) Tj ET Q
+BT /F2 8.00 Tf ET
+1.235 Tw
+q 0.510 0.000 0.118 rg BT 105.81 759.41 Td (TAG based formatted string) Tj ET Q
+BT /F1 8.00 Tf ET
+1.235 Tw
+q 0.784 0.039 0.039 rg BT 215.31 759.41 Td ( instead of a simple string. The) Tj ET Q
+56.69 766.77 m 56.69 756.85 l S 340.16 766.77 m 340.16 756.85 l S 
+56.69 756.85 283.46 -9.92 re f 
+0.350 Tw
+q 0.784 0.039 0.039 rg BT 65.20 749.49 Td (use of tags allows to change the font, the style \() Tj ET Q
+BT /F2 8.00 Tf ET
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 237.68 749.49 Td (bold) Tj ET Q
+BT /F1 8.00 Tf ET
+0.350 Tw
+q 0.784 0.039 0.039 rg BT 254.57 749.49 Td (, ) Tj ET Q
+BT /F3 8.00 Tf ET
+0.000 Tw
+q 0.314 0.314 1.020 rg BT 259.37 749.49 Td (italic) Tj ET Q
+BT /F1 8.00 Tf ET
+0.350 Tw
+q 0.784 0.039 0.039 rg BT 275.37 749.49 Td (, ) Tj ET Q
+0.000 Tw
+q 0.314 0.314 1.020 rg BT 280.17 749.49 Td (underline) Tj ET 280.17 748.69 32.90 -0.40 re f Q
+0.350 Tw
+q 0.784 0.039 0.039 rg BT 313.07 749.49 Td (\), the) Tj ET Q
+56.69 756.85 m 56.69 746.93 l S 340.16 756.85 m 340.16 746.93 l S 
+56.69 746.93 283.46 -9.92 re f 
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 65.20 739.57 Td (size, and the color of characters and many other features.) Tj ET Q
+56.69 746.93 m 56.69 737.01 l S 340.16 746.93 m 340.16 737.01 l S 
+56.69 737.01 283.46 -9.92 re f 
+56.69 737.01 m 56.69 727.09 l S 340.16 737.01 m 340.16 727.09 l S 
+56.69 727.09 283.46 -9.92 re f 
+BT /F2 9.00 Tf ET
+0.000 Tw
+q 0.796 0.000 0.188 rg BT 65.20 719.43 Td (Features:) Tj ET Q
+BT /F1 8.00 Tf ET
+56.69 727.09 m 56.69 717.17 l S 340.16 727.09 m 340.16 717.17 l S 
+56.69 717.17 283.46 -9.92 re f 
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 65.20 709.80 Td (  - Text can be ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 118.56 709.80 Td (aligned) Tj ET Q
+BT /F1 8.00 Tf ET
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 146.56 709.80 Td (, ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 151.01 709.80 Td (centered) Tj ET Q
+BT /F1 8.00 Tf ET
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 184.36 709.80 Td ( or ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 195.92 709.80 Td (justified) Tj ET Q
+BT /F1 8.00 Tf ET
+56.69 717.17 m 56.69 707.24 l S 340.16 717.17 m 340.16 707.24 l S 
+56.69 707.24 283.46 -9.92 re f 
+0 Tw
+q 0.784 0.039 0.039 rg BT 65.20 699.88 Td (  - Different ) Tj ET Q
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 0.000 1.000 rg BT 106.99 700.18 Td (Font) Tj ET Q
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 121.00 699.88 Td (, ) Tj ET Q
+BT /F4 9.00 Tf ET
+0 Tw
+q 0.000 0.000 0.471 rg BT 125.44 699.58 Td (Sizes) Tj ET Q
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 148.46 699.88 Td (, ) Tj ET Q
+BT /F4 7.00 Tf ET
+0 Tw
+q 0.000 0.000 0.863 rg BT 152.90 700.18 Td (Styles) Tj ET Q
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 173.53 699.88 Td (, ) Tj ET Q
+BT /F4 9.00 Tf ET
+0 Tw
+q 0.000 1.000 1.000 rg BT 177.97 699.58 Td (Colors) Tj ET Q
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 206.48 699.88 Td ( can be used) Tj ET Q
+56.69 707.24 m 56.69 697.32 l S 340.16 707.24 m 340.16 697.32 l S 
+56.69 697.32 283.46 -8.50 re f 56.69 697.32 m 56.69 688.82 l S 340.16 697.32 m 340.16 688.82 l S 56.69 688.82 m 340.16 688.82 l S 
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F3 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 12.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F4 12.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F4 10.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F4 12.00 Tf ET
+BT /F1 11.00 Tf ET
+56.69 688.82 283.46 -8.50 re f 56.69 688.82 m 56.69 680.32 l S 56.69 688.82 m 340.16 688.82 l S 340.16 688.82 m 340.16 680.32 l S 
+56.69 680.32 283.46 -14.17 re f 
+1.564 Tw
+q 0.784 0.039 0.039 rg BT 65.20 669.93 Td (This ) Tj ET Q
+BT /F2 11.00 Tf ET
+1.564 Tw
+q 0.510 0.000 0.118 rg BT 90.60 669.93 Td (TCPDF addon) Tj ET Q
+BT /F1 11.00 Tf ET
+1.564 Tw
+q 0.784 0.039 0.039 rg BT 164.88 669.93 Td ( allows creation of an ) Tj ET Q
+BT /F2 11.00 Tf ET
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 279.08 669.93 Td (Advanced) Tj ET Q
+56.69 680.32 m 56.69 666.14 l S 340.16 680.32 m 340.16 666.14 l S 
+56.69 666.14 283.46 -14.17 re f 
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 65.20 655.76 Td (Multicell) Tj ET Q
+BT /F1 11.00 Tf ET
+7.586 Tw
+q 0.784 0.039 0.039 rg BT 109.21 655.76 Td ( which uses as input a ) Tj ET Q
+BT /F2 11.00 Tf ET
+7.586 Tw
+q 0.510 0.000 0.118 rg BT 266.00 655.76 Td (TAG based) Tj ET Q
+56.69 666.14 m 56.69 651.97 l S 340.16 666.14 m 340.16 651.97 l S 
+56.69 651.97 283.46 -14.17 re f 
+1.443 Tw
+q 0.510 0.000 0.118 rg BT 65.20 641.58 Td (formatted string) Tj ET Q
+BT /F1 11.00 Tf ET
+1.443 Tw
+q 0.784 0.039 0.039 rg BT 150.98 641.58 Td ( instead of a simple string. The use) Tj ET Q
+56.69 651.97 m 56.69 637.80 l S 340.16 651.97 m 340.16 637.80 l S 
+56.69 637.80 283.46 -14.17 re f 
+0.050 Tw
+q 0.784 0.039 0.039 rg BT 65.20 627.41 Td (of tags allows to change the font, the style \() Tj ET Q
+BT /F2 11.00 Tf ET
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 277.21 627.41 Td (bold) Tj ET Q
+BT /F1 11.00 Tf ET
+0.050 Tw
+q 0.784 0.039 0.039 rg BT 300.43 627.41 Td (, ) Tj ET Q
+BT /F3 11.00 Tf ET
+0.000 Tw
+q 0.314 0.314 1.020 rg BT 306.60 627.41 Td (italic) Tj ET Q
+BT /F1 11.00 Tf ET
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 328.60 627.41 Td (,) Tj ET Q
+56.69 637.80 m 56.69 623.62 l S 340.16 637.80 m 340.16 623.62 l S 
+56.69 623.62 283.46 -14.17 re f 
+0.000 Tw
+q 0.314 0.314 1.020 rg BT 65.20 613.24 Td (underline) Tj ET 65.20 612.14 45.24 -0.55 re f Q
+1.972 Tw
+q 0.784 0.039 0.039 rg BT 110.44 613.24 Td (\), the size, and the color of characters and) Tj ET Q
+56.69 623.62 m 56.69 609.45 l S 340.16 623.62 m 340.16 609.45 l S 
+56.69 609.45 283.46 -14.17 re f 
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 65.20 599.06 Td (many other features.) Tj ET Q
+56.69 609.45 m 56.69 595.28 l S 340.16 609.45 m 340.16 595.28 l S 
+56.69 595.28 283.46 -14.17 re f 
+56.69 595.28 m 56.69 581.10 l S 340.16 595.28 m 340.16 581.10 l S 
+56.69 581.10 283.46 -14.17 re f 
+BT /F2 12.00 Tf ET
+0.000 Tw
+q 0.796 0.000 0.188 rg BT 65.20 570.42 Td (Features:) Tj ET Q
+BT /F1 11.00 Tf ET
+56.69 581.10 m 56.69 566.93 l S 340.16 581.10 m 340.16 566.93 l S 
+56.69 566.93 283.46 -14.17 re f 
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 65.20 556.54 Td (  - Text can be ) Tj ET Q
+BT /F2 11.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 138.57 556.54 Td (aligned) Tj ET Q
+BT /F1 11.00 Tf ET
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 177.08 556.54 Td (, ) Tj ET Q
+BT /F2 11.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 183.19 556.54 Td (centered) Tj ET Q
+BT /F1 11.00 Tf ET
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 229.04 556.54 Td ( or ) Tj ET Q
+BT /F2 11.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 244.94 556.54 Td (justified) Tj ET Q
+BT /F1 11.00 Tf ET
+56.69 566.93 m 56.69 552.76 l S 340.16 566.93 m 340.16 552.76 l S 
+56.69 552.76 283.46 -14.17 re f 
+0 Tw
+q 0.784 0.039 0.039 rg BT 65.20 542.37 Td (  - Different ) Tj ET Q
+BT /F1 10.00 Tf ET
+0 Tw
+q 0.000 0.000 1.000 rg BT 122.66 542.67 Td (Font) Tj ET Q
+BT /F1 11.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 142.67 542.37 Td (, ) Tj ET Q
+BT /F4 12.00 Tf ET
+0 Tw
+q 0.000 0.000 0.471 rg BT 148.79 542.07 Td (Sizes) Tj ET Q
+BT /F1 11.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 179.47 542.37 Td (, ) Tj ET Q
+BT /F4 10.00 Tf ET
+0 Tw
+q 0.000 0.000 0.863 rg BT 185.59 542.67 Td (Styles) Tj ET Q
+BT /F1 11.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 215.05 542.37 Td (, ) Tj ET Q
+BT /F4 12.00 Tf ET
+0 Tw
+q 0.000 1.000 1.000 rg BT 221.16 542.07 Td (Colors) Tj ET Q
+BT /F1 11.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 259.17 542.37 Td ( can be used) Tj ET Q
+56.69 552.76 m 56.69 538.58 l S 340.16 552.76 m 340.16 538.58 l S 
+56.69 538.58 283.46 -8.50 re f 56.69 538.58 m 56.69 530.08 l S 340.16 538.58 m 340.16 530.08 l S 56.69 530.08 m 340.16 530.08 l S 
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F3 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 12.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F3 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F4 11.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F4 9.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F4 11.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F3 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F4 10.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F4 8.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F4 10.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F3 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F4 9.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F4 7.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F4 9.00 Tf ET
+BT /F1 8.00 Tf ET
+56.69 521.58 283.46 -8.50 re f 56.69 521.58 m 56.69 513.07 l S 56.69 521.58 m 340.16 521.58 l S 340.16 521.58 m 340.16 513.07 l S 
+56.69 513.07 283.46 -9.92 re f 
+0.461 Tw
+q 0.784 0.039 0.039 rg BT 65.20 505.71 Td (This ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.461 Tw
+q 0.510 0.000 0.118 rg BT 82.99 505.71 Td (TCPDF addon) Tj ET Q
+BT /F1 8.00 Tf ET
+0.461 Tw
+q 0.784 0.039 0.039 rg BT 136.34 505.71 Td ( allows creation of an ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.461 Tw
+q 0.510 0.000 0.118 rg BT 216.01 505.71 Td (Advanced Multicell) Tj ET Q
+BT /F1 8.00 Tf ET
+0.461 Tw
+q 0.784 0.039 0.039 rg BT 288.94 505.71 Td ( which uses) Tj ET Q
+56.69 513.07 m 56.69 503.15 l S 340.16 513.07 m 340.16 503.15 l S 
+56.69 503.15 283.46 -9.92 re f 
+1.235 Tw
+q 0.784 0.039 0.039 rg BT 65.20 495.79 Td (as input a ) Tj ET Q
+BT /F2 8.00 Tf ET
+1.235 Tw
+q 0.510 0.000 0.118 rg BT 105.81 495.79 Td (TAG based formatted string) Tj ET Q
+BT /F1 8.00 Tf ET
+1.235 Tw
+q 0.784 0.039 0.039 rg BT 215.31 495.79 Td ( instead of a simple string. The) Tj ET Q
+56.69 503.15 m 56.69 493.23 l S 340.16 503.15 m 340.16 493.23 l S 
+56.69 493.23 283.46 -9.92 re f 
+0.350 Tw
+q 0.784 0.039 0.039 rg BT 65.20 485.87 Td (use of tags allows to change the font, the style \() Tj ET Q
+BT /F2 8.00 Tf ET
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 237.68 485.87 Td (bold) Tj ET Q
+BT /F1 8.00 Tf ET
+0.350 Tw
+q 0.784 0.039 0.039 rg BT 254.57 485.87 Td (, ) Tj ET Q
+BT /F3 8.00 Tf ET
+0.000 Tw
+q 0.314 0.314 1.020 rg BT 259.37 485.87 Td (italic) Tj ET Q
+BT /F1 8.00 Tf ET
+0.350 Tw
+q 0.784 0.039 0.039 rg BT 275.37 485.87 Td (, ) Tj ET Q
+0.000 Tw
+q 0.314 0.314 1.020 rg BT 280.17 485.87 Td (underline) Tj ET 280.17 485.07 32.90 -0.40 re f Q
+0.350 Tw
+q 0.784 0.039 0.039 rg BT 313.07 485.87 Td (\), the) Tj ET Q
+56.69 493.23 m 56.69 483.31 l S 340.16 493.23 m 340.16 483.31 l S 
+56.69 483.31 283.46 -9.92 re f 
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 65.20 475.95 Td (size, and the color of characters and many other features.) Tj ET Q
+56.69 483.31 m 56.69 473.39 l S 340.16 483.31 m 340.16 473.39 l S 
+56.69 473.39 283.46 -9.92 re f 
+56.69 473.39 m 56.69 463.46 l S 340.16 473.39 m 340.16 463.46 l S 
+56.69 463.46 283.46 -9.92 re f 
+BT /F2 9.00 Tf ET
+0.000 Tw
+q 0.796 0.000 0.188 rg BT 65.20 455.80 Td (Features:) Tj ET Q
+BT /F1 8.00 Tf ET
+56.69 463.46 m 56.69 453.54 l S 340.16 463.46 m 340.16 453.54 l S 
+56.69 453.54 283.46 -9.92 re f 
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 65.20 446.18 Td (  - Text can be ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 118.56 446.18 Td (aligned) Tj ET Q
+BT /F1 8.00 Tf ET
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 146.56 446.18 Td (, ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 151.01 446.18 Td (centered) Tj ET Q
+BT /F1 8.00 Tf ET
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 184.36 446.18 Td ( or ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 195.92 446.18 Td (justified) Tj ET Q
+BT /F1 8.00 Tf ET
+56.69 453.54 m 56.69 443.62 l S 340.16 453.54 m 340.16 443.62 l S 
+56.69 443.62 283.46 -9.92 re f 
+0 Tw
+q 0.784 0.039 0.039 rg BT 65.20 436.26 Td (  - Different ) Tj ET Q
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 0.000 1.000 rg BT 106.99 436.56 Td (Font) Tj ET Q
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 121.00 436.26 Td (, ) Tj ET Q
+BT /F4 9.00 Tf ET
+0 Tw
+q 0.000 0.000 0.471 rg BT 125.44 435.96 Td (Sizes) Tj ET Q
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 148.46 436.26 Td (, ) Tj ET Q
+BT /F4 7.00 Tf ET
+0 Tw
+q 0.000 0.000 0.863 rg BT 152.90 436.56 Td (Styles) Tj ET Q
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 173.53 436.26 Td (, ) Tj ET Q
+BT /F4 9.00 Tf ET
+0 Tw
+q 0.000 1.000 1.000 rg BT 177.97 435.96 Td (Colors) Tj ET Q
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 206.48 436.26 Td ( can be used) Tj ET Q
+56.69 443.62 m 56.69 433.70 l S 340.16 443.62 m 340.16 433.70 l S 
+56.69 433.70 283.46 -8.50 re f 56.69 433.70 m 56.69 425.20 l S 340.16 433.70 m 340.16 425.20 l S 56.69 425.20 m 340.16 425.20 l S 
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F3 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 12.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F4 12.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F4 10.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F4 12.00 Tf ET
+BT /F1 11.00 Tf ET
+56.69 425.20 283.46 -8.50 re f 56.69 425.20 m 56.69 416.69 l S 56.69 425.20 m 340.16 425.20 l S 340.16 425.20 m 340.16 416.69 l S 
+56.69 416.69 283.46 -14.17 re f 
+1.564 Tw
+q 0.784 0.039 0.039 rg BT 65.20 406.31 Td (This ) Tj ET Q
+BT /F2 11.00 Tf ET
+1.564 Tw
+q 0.510 0.000 0.118 rg BT 90.60 406.31 Td (TCPDF addon) Tj ET Q
+BT /F1 11.00 Tf ET
+1.564 Tw
+q 0.784 0.039 0.039 rg BT 164.88 406.31 Td ( allows creation of an ) Tj ET Q
+BT /F2 11.00 Tf ET
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 279.08 406.31 Td (Advanced) Tj ET Q
+56.69 416.69 m 56.69 402.52 l S 340.16 416.69 m 340.16 402.52 l S 
+56.69 402.52 283.46 -14.17 re f 
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 65.20 392.13 Td (Multicell) Tj ET Q
+BT /F1 11.00 Tf ET
+7.586 Tw
+q 0.784 0.039 0.039 rg BT 109.21 392.13 Td ( which uses as input a ) Tj ET Q
+BT /F2 11.00 Tf ET
+7.586 Tw
+q 0.510 0.000 0.118 rg BT 266.00 392.13 Td (TAG based) Tj ET Q
+56.69 402.52 m 56.69 388.35 l S 340.16 402.52 m 340.16 388.35 l S 
+56.69 388.35 283.46 -14.17 re f 
+1.443 Tw
+q 0.510 0.000 0.118 rg BT 65.20 377.96 Td (formatted string) Tj ET Q
+BT /F1 11.00 Tf ET
+1.443 Tw
+q 0.784 0.039 0.039 rg BT 150.98 377.96 Td ( instead of a simple string. The use) Tj ET Q
+56.69 388.35 m 56.69 374.17 l S 340.16 388.35 m 340.16 374.17 l S 
+56.69 374.17 283.46 -14.17 re f 
+0.050 Tw
+q 0.784 0.039 0.039 rg BT 65.20 363.79 Td (of tags allows to change the font, the style \() Tj ET Q
+BT /F2 11.00 Tf ET
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 277.21 363.79 Td (bold) Tj ET Q
+BT /F1 11.00 Tf ET
+0.050 Tw
+q 0.784 0.039 0.039 rg BT 300.43 363.79 Td (, ) Tj ET Q
+BT /F3 11.00 Tf ET
+0.000 Tw
+q 0.314 0.314 1.020 rg BT 306.60 363.79 Td (italic) Tj ET Q
+BT /F1 11.00 Tf ET
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 328.60 363.79 Td (,) Tj ET Q
+56.69 374.17 m 56.69 360.00 l S 340.16 374.17 m 340.16 360.00 l S 
+56.69 360.00 283.46 -14.17 re f 
+0.000 Tw
+q 0.314 0.314 1.020 rg BT 65.20 349.61 Td (underline) Tj ET 65.20 348.51 45.24 -0.55 re f Q
+1.972 Tw
+q 0.784 0.039 0.039 rg BT 110.44 349.61 Td (\), the size, and the color of characters and) Tj ET Q
+56.69 360.00 m 56.69 345.83 l S 340.16 360.00 m 340.16 345.83 l S 
+56.69 345.83 283.46 -14.17 re f 
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 65.20 335.44 Td (many other features.) Tj ET Q
+56.69 345.83 m 56.69 331.65 l S 340.16 345.83 m 340.16 331.65 l S 
+56.69 331.65 283.46 -14.17 re f 
+56.69 331.65 m 56.69 317.48 l S 340.16 331.65 m 340.16 317.48 l S 
+56.69 317.48 283.46 -14.17 re f 
+BT /F2 12.00 Tf ET
+0.000 Tw
+q 0.796 0.000 0.188 rg BT 65.20 306.79 Td (Features:) Tj ET Q
+BT /F1 11.00 Tf ET
+56.69 317.48 m 56.69 303.31 l S 340.16 317.48 m 340.16 303.31 l S 
+56.69 303.31 283.46 -14.17 re f 
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 65.20 292.92 Td (  - Text can be ) Tj ET Q
+BT /F2 11.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 138.57 292.92 Td (aligned) Tj ET Q
+BT /F1 11.00 Tf ET
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 177.08 292.92 Td (, ) Tj ET Q
+BT /F2 11.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 183.19 292.92 Td (centered) Tj ET Q
+BT /F1 11.00 Tf ET
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 229.04 292.92 Td ( or ) Tj ET Q
+BT /F2 11.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 244.94 292.92 Td (justified) Tj ET Q
+BT /F1 11.00 Tf ET
+56.69 303.31 m 56.69 289.13 l S 340.16 303.31 m 340.16 289.13 l S 
+56.69 289.13 283.46 -14.17 re f 
+0 Tw
+q 0.784 0.039 0.039 rg BT 65.20 278.75 Td (  - Different ) Tj ET Q
+BT /F1 10.00 Tf ET
+0 Tw
+q 0.000 0.000 1.000 rg BT 122.66 279.05 Td (Font) Tj ET Q
+BT /F1 11.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 142.67 278.75 Td (, ) Tj ET Q
+BT /F4 12.00 Tf ET
+0 Tw
+q 0.000 0.000 0.471 rg BT 148.79 278.45 Td (Sizes) Tj ET Q
+BT /F1 11.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 179.47 278.75 Td (, ) Tj ET Q
+BT /F4 10.00 Tf ET
+0 Tw
+q 0.000 0.000 0.863 rg BT 185.59 279.05 Td (Styles) Tj ET Q
+BT /F1 11.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 215.05 278.75 Td (, ) Tj ET Q
+BT /F4 12.00 Tf ET
+0 Tw
+q 0.000 1.000 1.000 rg BT 221.16 278.45 Td (Colors) Tj ET Q
+BT /F1 11.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 259.17 278.75 Td ( can be used) Tj ET Q
+56.69 289.13 m 56.69 274.96 l S 340.16 289.13 m 340.16 274.96 l S 
+56.69 274.96 283.46 -8.50 re f 56.69 274.96 m 56.69 266.46 l S 340.16 274.96 m 340.16 266.46 l S 56.69 266.46 m 340.16 266.46 l S 
+
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/Contents 6 0 R>>
+endobj
+6 0 obj
+<</Length 16258>>
+stream
+2 J
+0.57 w
+BT /F1 11.00 Tf ET
+0.996 1.000 0.961 rg
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F3 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 12.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F3 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F4 11.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F4 9.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F4 11.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F3 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F4 10.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F4 8.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F4 10.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F3 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F4 9.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F4 7.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F4 9.00 Tf ET
+BT /F1 8.00 Tf ET
+56.69 785.20 283.46 -8.50 re f 56.69 785.20 m 56.69 776.69 l S 56.69 785.20 m 340.16 785.20 l S 340.16 785.20 m 340.16 776.69 l S 
+56.69 776.69 283.46 -9.92 re f 
+0.461 Tw
+q 0.784 0.039 0.039 rg BT 65.20 769.33 Td (This ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.461 Tw
+q 0.510 0.000 0.118 rg BT 82.99 769.33 Td (TCPDF addon) Tj ET Q
+BT /F1 8.00 Tf ET
+0.461 Tw
+q 0.784 0.039 0.039 rg BT 136.34 769.33 Td ( allows creation of an ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.461 Tw
+q 0.510 0.000 0.118 rg BT 216.01 769.33 Td (Advanced Multicell) Tj ET Q
+BT /F1 8.00 Tf ET
+0.461 Tw
+q 0.784 0.039 0.039 rg BT 288.94 769.33 Td ( which uses) Tj ET Q
+56.69 776.69 m 56.69 766.77 l S 340.16 776.69 m 340.16 766.77 l S 
+56.69 766.77 283.46 -9.92 re f 
+1.235 Tw
+q 0.784 0.039 0.039 rg BT 65.20 759.41 Td (as input a ) Tj ET Q
+BT /F2 8.00 Tf ET
+1.235 Tw
+q 0.510 0.000 0.118 rg BT 105.81 759.41 Td (TAG based formatted string) Tj ET Q
+BT /F1 8.00 Tf ET
+1.235 Tw
+q 0.784 0.039 0.039 rg BT 215.31 759.41 Td ( instead of a simple string. The) Tj ET Q
+56.69 766.77 m 56.69 756.85 l S 340.16 766.77 m 340.16 756.85 l S 
+56.69 756.85 283.46 -9.92 re f 
+0.350 Tw
+q 0.784 0.039 0.039 rg BT 65.20 749.49 Td (use of tags allows to change the font, the style \() Tj ET Q
+BT /F2 8.00 Tf ET
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 237.68 749.49 Td (bold) Tj ET Q
+BT /F1 8.00 Tf ET
+0.350 Tw
+q 0.784 0.039 0.039 rg BT 254.57 749.49 Td (, ) Tj ET Q
+BT /F3 8.00 Tf ET
+0.000 Tw
+q 0.314 0.314 1.020 rg BT 259.37 749.49 Td (italic) Tj ET Q
+BT /F1 8.00 Tf ET
+0.350 Tw
+q 0.784 0.039 0.039 rg BT 275.37 749.49 Td (, ) Tj ET Q
+0.000 Tw
+q 0.314 0.314 1.020 rg BT 280.17 749.49 Td (underline) Tj ET 280.17 748.69 32.90 -0.40 re f Q
+0.350 Tw
+q 0.784 0.039 0.039 rg BT 313.07 749.49 Td (\), the) Tj ET Q
+56.69 756.85 m 56.69 746.93 l S 340.16 756.85 m 340.16 746.93 l S 
+56.69 746.93 283.46 -9.92 re f 
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 65.20 739.57 Td (size, and the color of characters and many other features.) Tj ET Q
+56.69 746.93 m 56.69 737.01 l S 340.16 746.93 m 340.16 737.01 l S 
+56.69 737.01 283.46 -9.92 re f 
+56.69 737.01 m 56.69 727.09 l S 340.16 737.01 m 340.16 727.09 l S 
+56.69 727.09 283.46 -9.92 re f 
+BT /F2 9.00 Tf ET
+0.000 Tw
+q 0.796 0.000 0.188 rg BT 65.20 719.43 Td (Features:) Tj ET Q
+BT /F1 8.00 Tf ET
+56.69 727.09 m 56.69 717.17 l S 340.16 727.09 m 340.16 717.17 l S 
+56.69 717.17 283.46 -9.92 re f 
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 65.20 709.80 Td (  - Text can be ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 118.56 709.80 Td (aligned) Tj ET Q
+BT /F1 8.00 Tf ET
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 146.56 709.80 Td (, ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 151.01 709.80 Td (centered) Tj ET Q
+BT /F1 8.00 Tf ET
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 184.36 709.80 Td ( or ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 195.92 709.80 Td (justified) Tj ET Q
+BT /F1 8.00 Tf ET
+56.69 717.17 m 56.69 707.24 l S 340.16 717.17 m 340.16 707.24 l S 
+56.69 707.24 283.46 -9.92 re f 
+0 Tw
+q 0.784 0.039 0.039 rg BT 65.20 699.88 Td (  - Different ) Tj ET Q
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 0.000 1.000 rg BT 106.99 700.18 Td (Font) Tj ET Q
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 121.00 699.88 Td (, ) Tj ET Q
+BT /F4 9.00 Tf ET
+0 Tw
+q 0.000 0.000 0.471 rg BT 125.44 699.58 Td (Sizes) Tj ET Q
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 148.46 699.88 Td (, ) Tj ET Q
+BT /F4 7.00 Tf ET
+0 Tw
+q 0.000 0.000 0.863 rg BT 152.90 700.18 Td (Styles) Tj ET Q
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 173.53 699.88 Td (, ) Tj ET Q
+BT /F4 9.00 Tf ET
+0 Tw
+q 0.000 1.000 1.000 rg BT 177.97 699.58 Td (Colors) Tj ET Q
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 206.48 699.88 Td ( can be used) Tj ET Q
+56.69 707.24 m 56.69 697.32 l S 340.16 707.24 m 340.16 697.32 l S 
+56.69 697.32 283.46 -8.50 re f 56.69 697.32 m 56.69 688.82 l S 340.16 697.32 m 340.16 688.82 l S 56.69 688.82 m 340.16 688.82 l S 
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F3 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 12.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F3 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F4 11.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F4 9.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F4 11.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F3 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 10.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F4 10.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F4 8.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F4 10.00 Tf ET
+BT /F1 9.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F3 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 9.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F2 8.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F1 7.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F4 9.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F4 7.00 Tf ET
+BT /F1 8.00 Tf ET
+BT /F4 9.00 Tf ET
+BT /F1 8.00 Tf ET
+56.69 688.82 283.46 -8.50 re f 56.69 688.82 m 56.69 680.32 l S 56.69 688.82 m 340.16 688.82 l S 340.16 688.82 m 340.16 680.32 l S 
+56.69 680.32 283.46 -9.92 re f 
+0.461 Tw
+q 0.784 0.039 0.039 rg BT 65.20 672.95 Td (This ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.461 Tw
+q 0.510 0.000 0.118 rg BT 82.99 672.95 Td (TCPDF addon) Tj ET Q
+BT /F1 8.00 Tf ET
+0.461 Tw
+q 0.784 0.039 0.039 rg BT 136.34 672.95 Td ( allows creation of an ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.461 Tw
+q 0.510 0.000 0.118 rg BT 216.01 672.95 Td (Advanced Multicell) Tj ET Q
+BT /F1 8.00 Tf ET
+0.461 Tw
+q 0.784 0.039 0.039 rg BT 288.94 672.95 Td ( which uses) Tj ET Q
+56.69 680.32 m 56.69 670.39 l S 340.16 680.32 m 340.16 670.39 l S 
+56.69 670.39 283.46 -9.92 re f 
+1.235 Tw
+q 0.784 0.039 0.039 rg BT 65.20 663.03 Td (as input a ) Tj ET Q
+BT /F2 8.00 Tf ET
+1.235 Tw
+q 0.510 0.000 0.118 rg BT 105.81 663.03 Td (TAG based formatted string) Tj ET Q
+BT /F1 8.00 Tf ET
+1.235 Tw
+q 0.784 0.039 0.039 rg BT 215.31 663.03 Td ( instead of a simple string. The) Tj ET Q
+56.69 670.39 m 56.69 660.47 l S 340.16 670.39 m 340.16 660.47 l S 
+56.69 660.47 283.46 -9.92 re f 
+0.350 Tw
+q 0.784 0.039 0.039 rg BT 65.20 653.11 Td (use of tags allows to change the font, the style \() Tj ET Q
+BT /F2 8.00 Tf ET
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 237.68 653.11 Td (bold) Tj ET Q
+BT /F1 8.00 Tf ET
+0.350 Tw
+q 0.784 0.039 0.039 rg BT 254.57 653.11 Td (, ) Tj ET Q
+BT /F3 8.00 Tf ET
+0.000 Tw
+q 0.314 0.314 1.020 rg BT 259.37 653.11 Td (italic) Tj ET Q
+BT /F1 8.00 Tf ET
+0.350 Tw
+q 0.784 0.039 0.039 rg BT 275.37 653.11 Td (, ) Tj ET Q
+0.000 Tw
+q 0.314 0.314 1.020 rg BT 280.17 653.11 Td (underline) Tj ET 280.17 652.31 32.90 -0.40 re f Q
+0.350 Tw
+q 0.784 0.039 0.039 rg BT 313.07 653.11 Td (\), the) Tj ET Q
+56.69 660.47 m 56.69 650.55 l S 340.16 660.47 m 340.16 650.55 l S 
+56.69 650.55 283.46 -9.92 re f 
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 65.20 643.19 Td (size, and the color of characters and many other features.) Tj ET Q
+56.69 650.55 m 56.69 640.63 l S 340.16 650.55 m 340.16 640.63 l S 
+56.69 640.63 283.46 -9.92 re f 
+56.69 640.63 m 56.69 630.71 l S 340.16 640.63 m 340.16 630.71 l S 
+56.69 630.71 283.46 -9.92 re f 
+BT /F2 9.00 Tf ET
+0.000 Tw
+q 0.796 0.000 0.188 rg BT 65.20 623.05 Td (Features:) Tj ET Q
+BT /F1 8.00 Tf ET
+56.69 630.71 m 56.69 620.79 l S 340.16 630.71 m 340.16 620.79 l S 
+56.69 620.79 283.46 -9.92 re f 
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 65.20 613.43 Td (  - Text can be ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 118.56 613.43 Td (aligned) Tj ET Q
+BT /F1 8.00 Tf ET
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 146.56 613.43 Td (, ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 151.01 613.43 Td (centered) Tj ET Q
+BT /F1 8.00 Tf ET
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 184.36 613.43 Td ( or ) Tj ET Q
+BT /F2 8.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 195.92 613.43 Td (justified) Tj ET Q
+BT /F1 8.00 Tf ET
+56.69 620.79 m 56.69 610.87 l S 340.16 620.79 m 340.16 610.87 l S 
+56.69 610.87 283.46 -9.92 re f 
+0 Tw
+q 0.784 0.039 0.039 rg BT 65.20 603.51 Td (  - Different ) Tj ET Q
+BT /F1 7.00 Tf ET
+0 Tw
+q 0.000 0.000 1.000 rg BT 106.99 603.81 Td (Font) Tj ET Q
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 121.00 603.51 Td (, ) Tj ET Q
+BT /F4 9.00 Tf ET
+0 Tw
+q 0.000 0.000 0.471 rg BT 125.44 603.21 Td (Sizes) Tj ET Q
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 148.46 603.51 Td (, ) Tj ET Q
+BT /F4 7.00 Tf ET
+0 Tw
+q 0.000 0.000 0.863 rg BT 152.90 603.81 Td (Styles) Tj ET Q
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 173.53 603.51 Td (, ) Tj ET Q
+BT /F4 9.00 Tf ET
+0 Tw
+q 0.000 1.000 1.000 rg BT 177.97 603.21 Td (Colors) Tj ET Q
+BT /F1 8.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 206.48 603.51 Td ( can be used) Tj ET Q
+56.69 610.87 m 56.69 600.95 l S 340.16 610.87 m 340.16 600.95 l S 
+56.69 600.95 283.46 -8.50 re f 56.69 600.95 m 56.69 592.44 l S 340.16 600.95 m 340.16 592.44 l S 56.69 592.44 m 340.16 592.44 l S 
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F3 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 12.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F2 11.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F1 10.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F4 12.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F4 10.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F4 12.00 Tf ET
+BT /F1 11.00 Tf ET
+56.69 592.44 283.46 -8.50 re f 56.69 592.44 m 56.69 583.94 l S 56.69 592.44 m 340.16 592.44 l S 340.16 592.44 m 340.16 583.94 l S 
+56.69 583.94 283.46 -14.17 re f 
+1.564 Tw
+q 0.784 0.039 0.039 rg BT 65.20 573.55 Td (This ) Tj ET Q
+BT /F2 11.00 Tf ET
+1.564 Tw
+q 0.510 0.000 0.118 rg BT 90.60 573.55 Td (TCPDF addon) Tj ET Q
+BT /F1 11.00 Tf ET
+1.564 Tw
+q 0.784 0.039 0.039 rg BT 164.88 573.55 Td ( allows creation of an ) Tj ET Q
+BT /F2 11.00 Tf ET
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 279.08 573.55 Td (Advanced) Tj ET Q
+56.69 583.94 m 56.69 569.76 l S 340.16 583.94 m 340.16 569.76 l S 
+56.69 569.76 283.46 -14.17 re f 
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 65.20 559.38 Td (Multicell) Tj ET Q
+BT /F1 11.00 Tf ET
+7.586 Tw
+q 0.784 0.039 0.039 rg BT 109.21 559.38 Td ( which uses as input a ) Tj ET Q
+BT /F2 11.00 Tf ET
+7.586 Tw
+q 0.510 0.000 0.118 rg BT 266.00 559.38 Td (TAG based) Tj ET Q
+56.69 569.76 m 56.69 555.59 l S 340.16 569.76 m 340.16 555.59 l S 
+56.69 555.59 283.46 -14.17 re f 
+1.443 Tw
+q 0.510 0.000 0.118 rg BT 65.20 545.20 Td (formatted string) Tj ET Q
+BT /F1 11.00 Tf ET
+1.443 Tw
+q 0.784 0.039 0.039 rg BT 150.98 545.20 Td ( instead of a simple string. The use) Tj ET Q
+56.69 555.59 m 56.69 541.42 l S 340.16 555.59 m 340.16 541.42 l S 
+56.69 541.42 283.46 -14.17 re f 
+0.050 Tw
+q 0.784 0.039 0.039 rg BT 65.20 531.03 Td (of tags allows to change the font, the style \() Tj ET Q
+BT /F2 11.00 Tf ET
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 277.21 531.03 Td (bold) Tj ET Q
+BT /F1 11.00 Tf ET
+0.050 Tw
+q 0.784 0.039 0.039 rg BT 300.43 531.03 Td (, ) Tj ET Q
+BT /F3 11.00 Tf ET
+0.000 Tw
+q 0.314 0.314 1.020 rg BT 306.60 531.03 Td (italic) Tj ET Q
+BT /F1 11.00 Tf ET
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 328.60 531.03 Td (,) Tj ET Q
+56.69 541.42 m 56.69 527.24 l S 340.16 541.42 m 340.16 527.24 l S 
+56.69 527.24 283.46 -14.17 re f 
+0.000 Tw
+q 0.314 0.314 1.020 rg BT 65.20 516.86 Td (underline) Tj ET 65.20 515.76 45.24 -0.55 re f Q
+1.972 Tw
+q 0.784 0.039 0.039 rg BT 110.44 516.86 Td (\), the size, and the color of characters and) Tj ET Q
+56.69 527.24 m 56.69 513.07 l S 340.16 527.24 m 340.16 513.07 l S 
+56.69 513.07 283.46 -14.17 re f 
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 65.20 502.68 Td (many other features.) Tj ET Q
+56.69 513.07 m 56.69 498.90 l S 340.16 513.07 m 340.16 498.90 l S 
+56.69 498.90 283.46 -14.17 re f 
+56.69 498.90 m 56.69 484.72 l S 340.16 498.90 m 340.16 484.72 l S 
+56.69 484.72 283.46 -14.17 re f 
+BT /F2 12.00 Tf ET
+0.000 Tw
+q 0.796 0.000 0.188 rg BT 65.20 474.04 Td (Features:) Tj ET Q
+BT /F1 11.00 Tf ET
+56.69 484.72 m 56.69 470.55 l S 340.16 484.72 m 340.16 470.55 l S 
+56.69 470.55 283.46 -14.17 re f 
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 65.20 460.16 Td (  - Text can be ) Tj ET Q
+BT /F2 11.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 138.57 460.16 Td (aligned) Tj ET Q
+BT /F1 11.00 Tf ET
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 177.08 460.16 Td (, ) Tj ET Q
+BT /F2 11.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 183.19 460.16 Td (centered) Tj ET Q
+BT /F1 11.00 Tf ET
+0.000 Tw
+q 0.784 0.039 0.039 rg BT 229.04 460.16 Td ( or ) Tj ET Q
+BT /F2 11.00 Tf ET
+0.000 Tw
+q 1.000 0.741 0.047 rg BT 244.94 460.16 Td (justified) Tj ET Q
+BT /F1 11.00 Tf ET
+56.69 470.55 m 56.69 456.38 l S 340.16 470.55 m 340.16 456.38 l S 
+56.69 456.38 283.46 -14.17 re f 
+0 Tw
+q 0.784 0.039 0.039 rg BT 65.20 445.99 Td (  - Different ) Tj ET Q
+BT /F1 10.00 Tf ET
+0 Tw
+q 0.000 0.000 1.000 rg BT 122.66 446.29 Td (Font) Tj ET Q
+BT /F1 11.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 142.67 445.99 Td (, ) Tj ET Q
+BT /F4 12.00 Tf ET
+0 Tw
+q 0.000 0.000 0.471 rg BT 148.79 445.69 Td (Sizes) Tj ET Q
+BT /F1 11.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 179.47 445.99 Td (, ) Tj ET Q
+BT /F4 10.00 Tf ET
+0 Tw
+q 0.000 0.000 0.863 rg BT 185.59 446.29 Td (Styles) Tj ET Q
+BT /F1 11.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 215.05 445.99 Td (, ) Tj ET Q
+BT /F4 12.00 Tf ET
+0 Tw
+q 0.000 1.000 1.000 rg BT 221.16 445.69 Td (Colors) Tj ET Q
+BT /F1 11.00 Tf ET
+0 Tw
+q 0.784 0.039 0.039 rg BT 259.17 445.99 Td ( can be used) Tj ET Q
+56.69 456.38 m 56.69 442.20 l S 340.16 456.38 m 340.16 442.20 l S 
+56.69 442.20 283.46 -8.50 re f 56.69 442.20 m 56.69 433.70 l S 340.16 442.20 m 340.16 433.70 l S 56.69 433.70 m 340.16 433.70 l S 
+
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R ]
+/Count 2
+/MediaBox [0 0 595.28 841.89]
+>>
+endobj
+7 0 obj
+<</Length 675>>
+stream
+/CIDInit /ProcSet findresource begin
+12 dict begin
+begincmap
+/CIDSystemInfo
+<</Registry (Adobe)
+/Ordering (UCS)
+/Supplement 0
+>> def
+/CMapName /Adobe-Identity-UCS def
+/CMapType 2 def
+1 begincodespacerange
+<00> <FF>
+endcodespacerange
+6 beginbfrange
+<00> <7F> <0000>
+<86> <87> <2020>
+<91> <92> <2018>
+<93> <94> <201C>
+<96> <97> <2013>
+<A0> <FF> <00A0>
+endbfrange
+19 beginbfchar
+<80> <20AC>
+<82> <201A>
+<83> <0192>
+<84> <201E>
+<85> <2026>
+<88> <02C6>
+<89> <2030>
+<8A> <0160>
+<8B> <2039>
+<8C> <0152>
+<8E> <017D>
+<95> <2022>
+<98> <02DC>
+<99> <2122>
+<9A> <0161>
+<9B> <203A>
+<9C> <0153>
+<9E> <017E>
+<9F> <0178>
+endbfchar
+endcmap
+CMapName currentdict /CMap defineresource pop
+end
+end
+endstream
+endobj
+8 0 obj
+<</Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/ToUnicode 7 0 R
+>>
+endobj
+9 0 obj
+<</Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/ToUnicode 7 0 R
+>>
+endobj
+10 0 obj
+<</Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/ToUnicode 7 0 R
+>>
+endobj
+11 0 obj
+<</Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/ToUnicode 7 0 R
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 8 0 R
+/F2 9 0 R
+/F3 10 0 R
+/F4 11 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+12 0 obj
+<<
+/Producer (FPDF - UNIT-TEST)
+/CreationDate (D:20170101010000)
+>>
+endobj
+13 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+>>
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000036916 00000 n 
+0000038212 00000 n 
+0000000009 00000 n 
+0000000087 00000 n 
+0000020529 00000 n 
+0000020607 00000 n 
+0000037009 00000 n 
+0000037733 00000 n 
+0000037846 00000 n 
+0000037964 00000 n 
+0000038086 00000 n 
+0000038348 00000 n 
+0000038432 00000 n 
+trailer
+<<
+/Size 14
+/Root 13 0 R
+/Info 12 0 R
+>>
+startxref
+38482
+%%EOF

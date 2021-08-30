@@ -34,13 +34,7 @@ tests-php56:
   dependencies:
     - install
   script:
-    - rm -r ./vendor/php*
-    - rm -r ./vendor/nikic/
-    - composer dump-autoload
-    - cp ./tests/php5/* ./tests/
-    - wget -O phpunit.phar https://phar.phpunit.de/phpunit-5.phar
-    - php phpunit.phar --version
-    - php phpunit.phar --bootstrap ./tests/bootstrap.php ./tests/functional
+    - sh ./bin/phpunit-php5.sh
   parallel:
     matrix:
       - PHP:
@@ -52,12 +46,7 @@ tests-php70:
   dependencies:
     - install
   script:
-    - rm -r ./vendor/php*
-    - rm -r ./vendor/nikic/
-    - composer dump-autoload
-    - wget -O phpunit.phar https://phar.phpunit.de/phpunit-6.phar
-    - php phpunit.phar --version
-    - php phpunit.phar --bootstrap ./tests/bootstrap.php ./tests/functional
+    - sh ./bin/phpunit-php70.sh
   parallel:
     matrix:
       - PHP:
@@ -82,6 +71,7 @@ code-coverage:
   stage: quality
   image: dockerhub.interpid.eu/php74
   script:
+    - echo "xdebug.mode=coverage" >> /etc/php/7.4/cli/php.ini
     - vendor/bin/phpunit --configuration phpunit-ci.xml
     - vendor/bin/phpmetrics --report-html=./build/php/phpmetrics ./library/interpid/PdfLib
   coverage: '/Lines:\s*(\d+\.\d+)/'

@@ -1814,4 +1814,14 @@ class Table
 
         return $this;
     }
+
+    /**
+     * Returns the PDF object
+     *
+     * @return Pdf
+     */
+    public function getPdfObject()
+    {
+        return $this->pdf;
+    }
 }

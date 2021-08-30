@@ -4,23 +4,25 @@
 
 ## Installation
 
-The PHP Pdf Addons will work right out of the box. All you need is a webserver with Php 5.5 (or greater). 
-No further configurations are required.
+The PHP Pdf Addons will work right out of the box. All you need is a webserver with Php 5.5 (or greater). No further
+configurations are required.
 
-Just download the files, extract the content in a directory where your webserver is configured and call the url. 
+Just download the files, extract the content in a directory where your webserver is configured and call the url.
 
 Every add-on has multiple example files that cover the full functionality.
 
 ### Include the library into the project
 
-Normally, from the downloaded package you need only the files from `library\interpid\PdfLib` folder in order to run it. 
+Normally, from the downloaded package you need only the files from `library\interpid\PdfLib` folder in order to run it.
 
 #### Using "require_once"
 
-In order to include the full interpid library, just include the `autoload.php` provided in the root folder. This will provide you the FPDF and all Interpid PdfLib library classes.
+In order to include the full interpid library, just include the `autoload.php` provided in the root folder. This will
+provide you the FPDF and all Interpid PdfLib library classes.
 
 Assuming you downloaded `fpdf-multicell-3.0.0` and placed in your project `libs` folder:
-```
+
+```php
 <?php
 require_once 'libs/fpdf-multicell-3.0.0/autoload.php';
 ```
@@ -30,7 +32,8 @@ require_once 'libs/fpdf-multicell-3.0.0/autoload.php';
 If your project uses composer, then include the pdf library path to your composer file:
 
 In `composer.json`
-```
+
+```json
     "autoload": {
         "classmap": [
             "libs/fpdf-multicell-3.0.0/library/interpid"
@@ -41,7 +44,8 @@ In `composer.json`
 or you can use the PSR-4 autoload capabilities
 
 In `composer.json`
-```
+
+```json
     "autoload": {
         "psr-4": {
             "Interpid\\PdfLib\\": "libs/fpdf-multicell-3.0.0/library/interpid/PdfLib/"
@@ -51,10 +55,9 @@ In `composer.json`
 
 then run `composer dump-autoload` to regenerate the autoload classmap.
 
-
 ## Download
 
-Please go to your account on https://www.interpid.eu/my-account to download the latest versions of the addons. 
+Please go to your account on https://www.interpid.eu/my-account to download the latest versions of the addons.
 
 ## Usage
 
@@ -90,8 +93,9 @@ $multicell->multiCell(0, 5, '<p>This is a <b>BOLD</b> text</p>');
 
 ## Why use the \Interpid\PdfLib\Pdf object instead of FPDF
 
-To implement the FPDF Add-on, we need access to private/protected properties from the FPDF class like widths, margins, fonts etc... As these properties are not provided by setters and getters the FPDF class was extended and these properties made public. 
-
+To implement the FPDF Add-on, we need access to private/protected properties from the FPDF class like widths, margins,
+fonts etc... As these properties are not provided by setters and getters the FPDF class was extended and these
+properties made public.
 
 ```php
 namespace Interpid\PdfLib;
@@ -106,6 +110,7 @@ class Pdf extends \FPDF
 ```
 
 ## Create the Pdf object
+
 Please refer to the FPDF class manual in order to get this done correctly. Example:
 
 ```php
@@ -129,6 +134,7 @@ $pdf->AddPage();
 ```
 
 ## Create the Advanced Multicell object
+
 ```php
 // Create the Advanced Multicell Object and inject the PDF object
 use Interpid\PdfLib\Multicell;
@@ -139,13 +145,13 @@ $multicell = new Multicell($pdf);
 
 A style can be used to specify the text properties. The following properties can be set:
 
- * font-size: `8`, `9`, `10` ... 
- * font-style: one or a combination of the following values: 
-   * `B` (Bold), `U` (Underline), `I` (Italic)
-   * examples: ` "B" `, `"BI"`
- * color: specify a string or array: `'130,0,30'` or `[130,0,30]`
- * font-family: example `'Arial'`, `'helvetica'` or any other font family
- * inherit: the **style name** that will be inherited.
+* font-size: `8`, `9`, `10` ...
+* font-style: one or a combination of the following values:
+    * `B` (Bold), `U` (Underline), `I` (Italic)
+    * examples: ` "B" `, `"BI"`
+* color: specify a string or array: `'130,0,30'` or `[130,0,30]`
+* font-family: example `'Arial'`, `'helvetica'` or any other font family
+* inherit: the **style name** that will be inherited.
 
 Examples:
 
@@ -158,9 +164,11 @@ $multicell->setStyle('i', 11, 'I', '80,80,260', 'helvetica');
 
 ### Style Inheritance
 
-Styles are inherited. All styles inherit a "base" style (If it's defined). In order to inherit a "property" set it to `null`
+Styles are inherited. All styles inherit a "base" style (If it's defined). In order to inherit a "property" set it
+to `null`
 
 ```php
+<?php
 // define the "base" style
 $multicell->setStyle('base', 11, '', [0, 0, 77], 'helvetica');
 
@@ -181,10 +189,11 @@ $multicell->setStyle('h4', 11, null, null, null, 'h');
 ## Text Formatting
 
 ### No formatting
+
 The default PDF formatting is used in this case(font, font-size and color)
 
 ```php
-// no formatting - the defaul
+// no formatting - the default
 
 //t pdf font, font-size, colors are used
 $s = "This is a simple text";
@@ -192,6 +201,7 @@ $multicell->multiCell(0, 5, $s);
 ```
 
 ### Simple formatting
+
 ```php
 // simple formatting
 $s = "<p>This is a paragraph</p>";
@@ -209,29 +219,33 @@ $multicell->multiCell(0, 5, $s);
 ``` 
 
 ### Subscripts and superscripts
+
 Subscript and superscripts can be adjusted with the y attribute. See example:
 
 ```php
 $s = "<p>The following is <s y='-1'>Subscript</s> and <s y='1'>Superscript</s></p>";
 ```
-<!-- <img src="./images/text-sub-superscript.png" width="300"/> -->
+
+![Sub-Superscript](https://tracker.interpid.eu/attachments/download/2560/text-sub-superscript.png)
 
 <br/><br/>
 
 ### Strikethrough
+
 Text strikethrough can be defined using the `strike` attribute in any tag:
-    - `<p strike=''>...` - default strikethrough line width
-    - `<p strike='0.6'>...` - strikethrough line width: 0.6
+- `<p strike=''>...` - default strikethrough line width - `<p strike='0.6'>...` - strikethrough line width: 0.6
 
 ```php
 $s = "<p>The following is <n strike=''>Text Strikethrough</n> and <bi strike='.5'>Text Strikethrough bolder line</bi></p>";
 $multicell->multiCell(0, 5, $s);
 ```
-<!-- <img src="./images/text-strikethrough.png" width="500"/> -->
+
+<img src="https://tracker.interpid.eu/attachments/download/2561/text-strikethrough.png" width="500" alt=""/>
 
 <br/><br/>
 
 ### Links
+
 You can create links by using the href attribute in a tag.
 
 ```php
@@ -241,7 +255,9 @@ $multicell->multiCell(0, 5, $s);
 ```
 
 ### Paragraphs
-Paragraphs can be created by using the size attribute and the ~~~ reserved pattern for paragraphs. See the following example:
+
+Paragraphs can be created by using the size attribute and the ~~~ reserved pattern for paragraphs. See the following
+example:
 
 ```php
 $s = "<size size='50' >Paragraph Example:~~~</size><font> - Paragraph 1</font>
@@ -253,12 +269,11 @@ $s = "<size size='50' >Paragraph Example:~~~</size><font> - Paragraph 1</font>
 $multicell->multiCell(0, 5, $s);
 ```
 
-
 ## Tag Attributes
 
 ### href
 
-The `href` attribute will provide you a link in the pdf document. 
+The `href` attribute will provide you a link in the pdf document.
 
 ```html
 <h1 href="www.interpid.eu">Visit our website</h1>
@@ -266,33 +281,114 @@ The `href` attribute will provide you a link in the pdf document.
 
 ### width
 
-By default, the width of a tag is calculated. Use `width` to set a fixed width for your tag. No checks are being done for text-overflow!
+By default, the width of a tag is calculated. Use `width` to set a fixed width for your tag. No checks are being done
+for text-overflow!
 
 ### align
 
-`align` is to be used only in combination width `width`, to specify where the text should be aligned. 
+`align` is to be used only in combination width `width`, to specify where the text should be aligned.
 
 Valid values are: `left|center|right|L|C|R`
 
 #### Example with `width` and `align`
+
 ```html
 <p width="100" align="left"> Align Left </p>
 <p width="100" align="center"> Align Center </p>
 <p width="100" align="right"> Align Right </p>
 ```
 
-
 ### size
 
-`size` is used in case of paragraphs. This value will become deprecated in future versions and `width` is to be preferred instead.
+`size` is used in case of paragraphs. This value will become deprecated in future versions and `width` is to be
+preferred instead.
 
 ### nowrap
 
 `nowrap` is used if you the text in a paragraph to break or be separated on a new line
 
 For example, you want the price to always be written on the same line:
+
 ```php
 $s = "The price is <b nowrap='1'>USD 5.344,23</b>";
 $multicell->multiCell(50, 5, $s);
 ```
 
+## FEATURES
+
+### Height Limitations
+
+#### Max Lines
+
+Limit the number of lines that will be in the multicell
+
+```php
+//set a limit to the maximum number of lines 
+$multicell->maxLines(10);
+$multicell->multiCell(0, 5, "...Some text...");
+```
+
+#### Max Height
+
+Limit the height that a multicell can have
+
+```php
+//set a limit to the maximum number of lines 
+$multicell->maxHeight(50);
+$multicell->multiCell(0, 5, "...Some text...");
+```
+
+If height limits are hit, the following text is cut-off from the multicell.
+
+### Text shrinking
+
+Text and line height will shrink in order to fit into a specific `maxHeight` or `maxLines`
+If the text doesn't fit the `font-size` will be decreased with `1` and the `line-height` with `0.5` units until the text
+fits.
+
+**Notice**
+
+There is a possibility that the shrinking fails if the input and shrinking settings are invalid.
+
+For example: you set maxLines to `5` and your input text has 10 EOLs in it `$multicell->maxLines(5)`
+
+**Limit the number of lines that will be in the multicell**
+
+```php
+$multicell->maxLines(10)->shrinkToFit();
+$multicell->multiCell(0, 5, "...Some text...");
+```
+
+**Limit the height that a multicell can have**
+
+```php
+$multicell->maxHeight(50)->shrinkToFit();
+$multicell->multiCell(0, 5, "...Some text...");
+```
+
+```php
+// shrink, max-height and all cells 
+$multicell->maxHeight(50)->shrinkToFit()->applyAll();
+$multicell->multiCell(0, 5, "...Some text...");
+
+...
+$multicell->reset();
+```
+
+#### Change shrinking units
+
+```php
+$multicell->shrinkToFit()->shrinkFontStep(2)->shrinkLineHeightStep(0.2)->maxHeight(50);
+$multicell->multiCell(0, 5, "...Some text...");
+
+...
+$multicell->reset();
+```
+
+### Apply features to all cells and reset
+
+Features like: `maxHeight`,  `maxLines`, `shrinkToFit`, `shrinkLineHeightStep`, `shrinkFontStep` are applied to the next
+cell only.
+
+In order to apply these features to all following cells, use `$multicell->applyAll();`<br>
+In order to reset these features use `$multicell->reset();`

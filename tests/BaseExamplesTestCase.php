@@ -20,7 +20,7 @@ use PHPUnit\Framework\TestCase;
  * Class BaseExamplesTestCase
  * @package Interpid\PdfLib\Tests
  */
-class BaseExamplesTestCase extends TestCase
+class BaseExamplesTestCase extends BaseTestCase
 {
     /**
      * Returns the pdf object
@@ -58,15 +58,14 @@ class BaseExamplesTestCase extends TestCase
             $generatedFile = tempnam(sys_get_temp_dir(), 'pdf_test');
         }
 
-        //CreationDate (D:20210707150635)
+        //CreationDate (D:20170101010000)
         $content = preg_replace("#CreationDate \(D:[0-9]+#", "CreationDate (D:20170101010000", $content);
         $content = preg_replace("#LastModified \(D:[0-9]+#", "LastModified (D:20170101010000", $content);
 
         file_put_contents($generatedFile, $content);
 
         $this->assertTrue(file_exists($generatedFile), $require);
-        $this->assertFileEquals($expectedFile, $generatedFile, $require);
-        $this->assertSame(sha1_file($expectedFile), sha1_file($generatedFile), $require);
+        $this->assertComparePdf($expectedFile, $generatedFile, "FAILED: " . basename($expectedFile) . " / $require");
 
         if (!defined('GENERATE_RESULT_FILES')) {
             unlink($generatedFile);

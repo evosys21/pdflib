@@ -27,12 +27,13 @@ class MulticellExamplesTest extends BaseExamplesTestCase
     public function testExamples()
     {
         $aSources = array(
-//            'example-multicell.php',
+            // 'example-multicell.php',
             'example-multicell-1-overview.php',
             'example-multicell-2-overview-page-break.php',
             'example-multicell-3-line-breaking.php',
             'example-multicell-4-page-break.php',
             'example-multicell-5-max-lines.php',
+            'example-multicell-6-shrinking.php',
         );
 
         foreach ($aSources as $source) {
@@ -48,6 +49,9 @@ class MulticellExamplesTest extends BaseExamplesTestCase
     {
         $aSources = array(
             'test-multicell-align.php',
+            'test-multicell-shrinking.php',
+            'test-multicell-shrinking2.php',
+            'test-multicell-style.php',
         );
 
         foreach ($aSources as $source) {

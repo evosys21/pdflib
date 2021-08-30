@@ -1,8 +1,8 @@
-#PDF Add-Ons Support Site
+# PDF Add-Ons Support Site
 
 ## Download
 
-Please go to your account on https://www.interpid.eu/my-account to download the latest versions of the addons. 
+Please go to your account on https://www.interpid.eu/my-account to download the latest versions of the addons.
 
 ## FPDF Add-ons
 

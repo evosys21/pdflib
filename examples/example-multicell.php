@@ -63,7 +63,6 @@ This line is a simple text with no formatting(text-formatting from the pdf defau
 <p>The following is <n strike=''>Text Strikethrough</n> and <bi strike='.5'>Text Strikethrough bolder line</bi></p>
 
 This line is a simple text with no formatting(text-formatting from the pdf defaults)
-
 HEREDOC;
 
 $multicell->multiCell(0, 5, $s);

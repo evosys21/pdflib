@@ -4,23 +4,22 @@
  * Copyright (c), Interpid, http://www.interpid.eu
  */
 
-require_once __DIR__ . "/../autoload.php";
+require_once __DIR__ . '/../autoload.php';
 
 use Interpid\PdfLib\Multicell;
 use Interpid\PdfExamples\PdfFactory;
+use Interpid\PdfExamples\PdfSettings;
 
 $factory = new PdfFactory();
 
 //get the PDF object
 $pdf = PdfFactory::newPdf('table');
 
-//Create the Advanced Multicell Object and inject the PDF object
+// Create the Advanced Multicell Object and inject the PDF object
 $multicell = new Multicell($pdf);
 
-//Set the styles for the advanced multicell
-$multicell = new Multicell($pdf);
-$multicell->setStyle('p', 7, '', '130,0,30', 'helvetica');
-$multicell->setStyle('b', 7, 'B', '130,0,30', 'helvetica');
+// Set the styles for the advanced multicell
+PdfSettings::setMulticellStyles($multicell);
 
 //simple table
 $multicell->multiCell(0, 5, "<p size='10' > ~~~Simple table:</p>");

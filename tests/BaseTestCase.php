@@ -14,6 +14,7 @@ namespace Interpid\PdfLib\Tests;
 
 use Interpid\PdfExamples\PdfFactory;
 use Interpid\PdfLib\Pdf;
+use Interpid\PdfLib\Tests\Helper\Helper;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -22,26 +23,6 @@ use PHPUnit\Framework\TestCase;
  */
 class BaseTestCase extends TestCase
 {
-
-
-    /**
-     * Prepares the environment before running a test.
-     */
-    protected function setUp(): void
-    {
-        parent::setUp();
-    }
-
-
-    /**
-     * Cleans up the environment after running a test.
-     */
-    protected function tearDown(): void
-    {
-        parent::tearDown();
-    }
-
-
     /**
      * Returns the pdf object
      *
@@ -59,5 +40,30 @@ class BaseTestCase extends TestCase
         $pdf->SetCompression(false);
 
         return $pdf;
+    }
+
+    public function assertComparePdf($expected, $generated, $message)
+    {
+        $shaGenerated = sha1_file($generated);
+        $shaExpected = is_readable($expected) ? sha1_file($expected) : $shaGenerated;
+
+        $basename = basename($expected);
+        $coreName = substr($basename, 0, strrpos($basename, "."));
+
+        if (($shaExpected !== $shaGenerated) && getenv('FAILED_SCREENSHOTS')) {
+            $screenshotExpect = dirname($expected) . "/expected/$coreName.png";
+            $screenshotIs = dirname($expected) . "/is/$coreName.png";
+            Helper::pdfScreenshot($expected, $screenshotExpect);
+            Helper::pdfScreenshot($generated, $screenshotIs);
+            copy($generated, dirname($expected) . "/is/" . basename($expected));
+            copy($expected, dirname($expected) . "/expected/" . basename($expected));
+        }
+
+        $this->assertSame($shaExpected, $shaGenerated, $message);
+
+        if (getenv('SCREENSHOTS')) {
+            $screenshot = dirname($expected) . "/$coreName.png";
+            Helper::pdfScreenshot($generated, $screenshot);
+        }
     }
 }

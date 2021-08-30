@@ -1,6 +1,6 @@
 <?php
 /**
- * Pdf Advanced table - Example
+ * Pdf Advanced Table - Example
  * Copyright (c), Interpid, http://www.interpid.eu
  */
 
@@ -9,10 +9,10 @@ require_once __DIR__ . '/../autoload.php';
 use Interpid\PdfLib\Table;
 use Interpid\PdfLib\Pdf;
 
-// Pdf extends FPDF
+// Pdf extends TCPDF
 $pdf = new Pdf();
 
-// use the default FPDF configuration
+// use the default TCPDF configuration
 $pdf->SetAuthor('Interpid');
 $pdf->SetMargins(20, 20, 20);
 $pdf->SetAutoPageBreak(true, 20);
@@ -56,21 +56,41 @@ $row = [
 ];
 
 //add the row to the table
-//$table->addRow($row);
+$table->addRow($row);
 
 $row = [
     'I am cell 1',
     'I am cell 2',
+    [
+        'TEXT' => 'I am cell 3',
+        'TEXT_ALIGN' => 'R'
+    ],
 ];
 
-//$table->addRow($row);
+//add the row to the table
+$table->addRow($row);
 
-//$table->addRow($row);
+$row = [
+    new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10),
+    "<p><b>SVG Images</b> are supported\n<bi>(see right image >>>)</bi></p>",
+    new Table\Cell\ImageSVG($pdf, PDF_RESOURCES_IMAGES . '/Tiger.svg', 35, 35)
+];
 
-//$table->addPageBreak();
+//add the row to the table
+$table->addRow($row);
 
-$row = [[    'TEXT'=> "Cell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\n", 'HEIGHT' => 60, 'PADDING_TOP' => 20]];
+$row = [
+    new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10),
+    "<p><b>SVG Images</b> are supported\n<bi>(see right image >>>)</bi></p>",
+    [
+        'TYPE' => 'ImageSVG',
+        'FILE' => PDF_RESOURCES_IMAGES . '/Tiger.svg',
+        'WIDTH' => 35,
+        'HEIGHT' => 35,
+    ]
+];
 
+//add the data row
 $table->addRow($row);
 
 $table->close();

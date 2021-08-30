@@ -8,6 +8,7 @@ require_once __DIR__ . '/../autoload.php';
 
 use Interpid\PdfLib\Multicell;
 use Interpid\PdfExamples\PdfFactory;
+use Interpid\PdfExamples\PdfSettings;
 
 $factory = new PdfFactory();
 
@@ -18,7 +19,7 @@ $pdf = PdfFactory::newPdf('multicell');
 $multicell = new Multicell($pdf);
 
 // Set the styles for the advanced multicell
-$multicell->setStyle('b', 11, 'B', '130,0,30', 'helvetica');
+PdfSettings::setMulticellStyles($multicell);
 
 $txt = 'This is a demo of <b>NON BREAKING > S P>A C E EXAMPLE</b>';
 

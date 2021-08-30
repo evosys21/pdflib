@@ -12,15 +12,15 @@
 
 namespace Interpid\PdfLib\Tests\Functional;
 
+use Interpid\PdfLib\Tests\BaseTestCase;
 use Interpid\PdfLib\Tests\Helper\Helper;
 use Interpid\PdfLib\Tests\Helper\TestPdf;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Class TableTest
  * @group functional
  */
-class TableTest extends TestCase
+class TableTest extends BaseTestCase
 {
 
     /**
@@ -53,7 +53,8 @@ class TableTest extends TestCase
 
         $this->assertTrue(file_exists($sPdfFile));
 
-        $this->assertFileEquals($sPdfFile, $sResultFile);
+        // $this->assertFileEquals($sPdfFile, $sResultFile);
+        $this->assertComparePdf($sPdfFile, $sResultFile, "FAILED: " . basename($sResultFile) . " / $require");
 
         if (!defined('GENERATE_RESULT_FILES')) {
             unlink($sPdfFile);
@@ -92,7 +93,8 @@ class TableTest extends TestCase
 
         $this->assertTrue(file_exists($sPdfFile));
 
-        $this->assertFileEquals($sPdfFile, $sResultFile);
+        // $this->assertFileEquals($sPdfFile, $sResultFile);
+        $this->assertComparePdf($sPdfFile, $sResultFile, "FAILED: " . basename($sResultFile) . " / $require");
 
         if (!defined('GENERATE_RESULT_FILES')) {
             unlink($sPdfFile);
@@ -119,7 +121,8 @@ class TableTest extends TestCase
 
         $this->assertTrue(file_exists($sPdfFile));
 
-        $this->assertFileEquals($sPdfFile, $sResultFile);
+        // $this->assertFileEquals($sPdfFile, $sResultFile);
+        $this->assertComparePdf($sPdfFile, $sResultFile, "FAILED: " . basename($sResultFile) . " / $require");
 
         if (!defined('GENERATE_RESULT_FILES')) {
             unlink($sPdfFile);
