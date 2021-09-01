@@ -68,6 +68,7 @@ $releaseDir = realpath($releaseDir);
 execute("$find ./ -maxdepth 1 -type f -name '*.md' -exec cp -v {} $releaseDir $eofind");
 execute("$find ./ -maxdepth 1 -type f -name '*.txt' -exec cp -v {} $releaseDir $eofind");
 execute("cp autoload.php $releaseDir");
+execute("cp LICENSE $releaseDir");
 execute("cp composer-deploy.json $releaseDir/composer.json");
 execute("cp -r ./examples $releaseDir");
 execute("cp -r ./content $releaseDir");
