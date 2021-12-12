@@ -247,12 +247,15 @@ class Tools
         switch (strlen($values)) {
             case 3;
                 list($r, $g, $b) = sscanf($values, "%1s%1s%1s");
-                return [hexdec("$r$r"), hexdec("$g$g"), hexdec("$b$b")];
+                if (ctype_xdigit($r) && ctype_xdigit($g) && ctype_xdigit($b)) {
+                    return [hexdec("$r$r"), hexdec("$g$g"), hexdec("$b$b")];
+                }
+                break;
             case 6;
                 return array_map('hexdec', sscanf($values, "%2s%2s%2s"));
-            default:
-                return null;
         }
+
+        return null;
     }
 
     /**

@@ -20,6 +20,27 @@ Please go to your account on https://www.interpid.eu/my-account to download the 
 * [[FPDF Table Changelog|Changelog]]
 * [[FPDF Table Upgrade Guide|Upgrade Guide]]
 
+## FPDF Add-ons UTF8 (tFPDF Add-ons)
+
+The UTF8 version of FPDF are identical with the FPDF Add-Ons with the major difference that they have UTF8 support.
+
+The main PDF class is based on the [tFPDF](http://www.fpdf.org/en/script/script92.php) script
+of [FPDF](http://www.fpdf.org).
+
+### FPDF Advanced Multicell UTF8
+
+* [[tFPDF Multicell Examples|Examples]]
+* [[tFPDF Multicell User Manual|User Manual]]
+* [[tFPDF Multicell Changelog|Changelog]]
+* [[tFPDF Multicell Upgrade Guide|Upgrade Guide]]
+
+### FPDF Advanced Table UTF8
+
+* [[tFPDF Table Examples|Examples]]
+* [[tFPDF Table User Manual|User Manual]]
+* [[tFPDF Table Changelog|Changelog]]
+* [[tFPDF Table Upgrade Guide|Upgrade Guide]]
+
 ## TCPDF Add-ons
 
 ### TCPDF Advanced Multicell

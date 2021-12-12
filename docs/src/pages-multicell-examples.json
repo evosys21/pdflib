@@ -13,7 +13,8 @@
       "tests/data/example-multicell-2-overview-page-break.png",
       "tests/data/example-multicell-3-line-breaking.png",
       "tests/data/example-multicell-4-page-break.png",
-      "tests/data/example-multicell-5-max-lines.png"
+      "tests/data/example-multicell-5-max-lines.png",
+      "tests/data/example-multicell-6-shrinking.png"
     ]
   },
   {
@@ -96,6 +97,24 @@
     "attachments": [
       "tests/data/example-multicell-5-max-lines.pdf",
       "tests/data/example-multicell-5-max-lines.png"
+    ]
+  },
+  {
+    "wiki-page": "FPDF Multicell - Example 6 - Text Shrinking",
+    "wiki-parent": "FPDF Multicell Examples",
+    "title": "FPDF Multicell - Example 6 - Text Shrinking",
+    "code-files": [
+      "examples/example-multicell-6-shrinking.php"
+    ],
+    "image-inline": "example-multicell-6-shrinking.png",
+    "collapsed-files": [
+      "content/multicell.txt",
+      "content/multicell-title.txt"
+    ],
+    "template": "docs/templates/pdf-example.md",
+    "attachments": [
+      "tests/data/example-multicell-6-shrinking.pdf",
+      "tests/data/example-multicell-6-shrinking.png"
     ]
   }
 ]

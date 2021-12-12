@@ -9,6 +9,7 @@ Just copy the project content to your web-server and call the example files (see
 
 # Support and Documentation
 
+ - Changelog: <https://tracker.interpid.eu/projects/pdf-addons/wiki/Fpdf_Table_Changelog>
  - Examples: <https://tracker.interpid.eu/projects/pdf-addons/wiki/FPDF_Table_Examples>
  - User Manual: <https://tracker.interpid.eu/projects/pdf-addons/wiki/FPDF_Table_User_Manual>
  - Documentation Site: <https://tracker.interpid.eu/projects/pdf-addons/wiki>

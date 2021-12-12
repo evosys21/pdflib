@@ -85,5 +85,19 @@
       "tests/data/example-table-4-override.pdf",
       "tests/data/example-table-4-override.png"
     ]
+  },
+  {
+    "wiki-page": "FPDF Table - Example 5 - Row Height",
+    "wiki-parent": "FPDF Table Examples",
+    "title": "FPDF Table - Example 5 - Row Height",
+    "code-files": [
+      "examples/example-table-5-row-height.php"
+    ],
+    "image-inline": "example-table-5-row-height.png",
+    "template": "docs/templates/pdf-example.md",
+    "attachments": [
+      "tests/data/example-table-5-row-height.pdf",
+      "tests/data/example-table-5-row-height.png"
+    ]
   }
 ]

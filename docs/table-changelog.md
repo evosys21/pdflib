@@ -2,20 +2,10 @@
 
 All notable changes to FPDF Advanced Table will be documented in this file.
 
-<!---
-## [Unreleased]
-##X.Y.X (2019-01-01)
--->
+### 6.4.0 (2020-12-13)
 
-### 6.4.0 (2020-)
-
-- Change, Text Shrinking Feature ([#1979](https://tracker.interpid.eu/issues/1979))
 - Change, Add inline style support ([#1983](https://tracker.interpid.eu/issues/1983))
-- Fix, (Multicell) Text - Text Strike-through invalid Multicell Border
-  Color, ([#1982](https://tracker.interpid.eu/issues/1982))
-
-### 6.3.1 (2020-08-28)
-
+- Fix, (Multicell) Text - Text Strike-through invalid Multicell Border Color ([#1982](https://tracker.interpid.eu/issues/1982))
 - Fix, Multicell Bottom Padding Issue ([#1980](https://tracker.interpid.eu/issues/1980))
 - Fix, PHP 5.6 errors ([#1981](https://tracker.interpid.eu/issues/1981))
 - Change, Improve testing over multiple php versions

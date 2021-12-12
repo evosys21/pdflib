@@ -2,20 +2,10 @@
 
 All notable changes to FPDF Advanced Multicell will be documented in this file.
 
-<!---
-## [Unreleased]
-##X.Y.X (2020-01-01)
--->
+### 3.3.0 (2020-12-13)
 
-### 3.3.0 (2020-)
-
-- Change, Text Shrinking Feature ([#1979](https://tracker.interpid.eu/issues/1979))
-- Change, Add inline style support ([#1983](https://tracker.interpid.eu/issues/1983))
-- Fix, (Multicell) Text - Text Strike-through invalid Multicell Border
-  Color, ([#1982](https://tracker.interpid.eu/issues/1982))
-
-### 3.2.1 (2020-08-29)
-
+- Change, Text Shrinking Feature, Height Limitations, Max Lines, Max Height ([#1979](https://tracker.interpid.eu/issues/1979))
+- Fix, Multicell Text - Text Strike-through invalid Multicell Border Color ([#1982](https://tracker.interpid.eu/issues/1982))
 - Fix, Multicell Bottom Padding Issue ([#1980](https://tracker.interpid.eu/issues/1980))
 - Fix, PHP 5.6 errors ([#1981](https://tracker.interpid.eu/issues/1981))
 - Change, Improve testing over multiple php versions
