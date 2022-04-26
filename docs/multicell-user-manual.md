@@ -88,7 +88,6 @@ $multicell->setStyle('b', 11, 'B', '130,0,30', 'helvetica');
 // create the advanced multicells
 $multicell->multiCell(0, 5, 'This is a simple cell');
 $multicell->multiCell(0, 5, '<p>This is a <b>BOLD</b> text</p>');
-
 ```
 
 ## Why use the \Interpid\PdfLib\Pdf object instead of FPDF
@@ -141,22 +140,28 @@ use Interpid\PdfLib\Multicell;
 $multicell = new Multicell($pdf);
 ```
 
-## Styling
+## Tag styling
 
-A style can be used to specify the text properties. The following properties can be set:
+A tag style is used specify the text display properties. The following properties can be set:
 
-* font-size: `8`, `9`, `10` ...
-* font-style: one or a combination of the following values:
+* size/font_size: `8`, `9`, `10` ...
+* style/font_style: one or a combination of the following values:
     * `B` (Bold), `U` (Underline), `I` (Italic)
     * examples: ` "B" `, `"BI"`
-* color: specify a string or array: `'130,0,30'` or `[130,0,30]`
-* font-family: example `'Arial'`, `'helvetica'` or any other font family
+* color/text_color: specify a string or array: `'130,0,30'` or `[130,0,30]`
+* family/font_family: example `'Arial'`, `'helvetica'` or any other font family
 * inherit: the **style name** that will be inherited.
 
 Examples:
 
 ```php
-// Set the styles for the advanced multicell
+// define a tag style using associative array
+$multicell->setTagStyle('p', ['size' => 11, 'style' => '', 'color' => '130,0,30', 'family' => 'helvetica']);
+
+// define only a few properties
+$multicell->setTagStyle('b', ['style' => 'B', 'color' => '130,0,30']);
+
+// Set the styles for the advanced multicell using `setStyle`
 $multicell->setStyle('p', 11, '', '130,0,30', 'helvetica');
 $multicell->setStyle('b', 11, 'B', '130,0,30', 'helvetica');
 $multicell->setStyle('i', 11, 'I', '80,80,260', 'helvetica');
@@ -164,19 +169,10 @@ $multicell->setStyle('i', 11, 'I', '80,80,260', 'helvetica');
 
 ### Style Inheritance
 
-Styles are inherited. All styles inherit a "base" style (If it's defined). In order to inherit a "property" set it
-to `null`
+Styles can be inherited if specified so.
 
 ```php
 <?php
-// define the "base" style
-$multicell->setStyle('base', 11, '', [0, 0, 77], 'helvetica');
-
-// all styles inherit this style
-$multicell->setStyle('p', null, null);
-$multicell->setStyle('b', null, 'B');
-$multicell->setStyle('i', null, 'I');
-
 // you can specify which style should be inherited
 // example: define a base "h" style and h1, h2, h3, h4 will inherit h
 $multicell->setStyle('h', null, 'B', '203,0,48');
@@ -184,6 +180,12 @@ $multicell->setStyle('h1', 16, null, null, null, 'h');
 $multicell->setStyle('h2', 14, null, null, null, 'h');
 $multicell->setStyle('h3', 12, null, null, null, 'h');
 $multicell->setStyle('h4', 11, null, null, null, 'h');
+
+// a more simple approach: use the `style` function
+$multicell->setTagStyle('h1', ['size' => 16], 'h');
+$multicell->setTagStyle('h2', ['size' => 14], 'h');
+$multicell->setTagStyle('h3', ['size' => 12], 'h');
+$multicell->setTagStyle('h4', ['size' => 11], 'h');
 ```
 
 ## Text Formatting

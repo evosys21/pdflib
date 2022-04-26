@@ -17,6 +17,7 @@ if (!defined('PARAGRAPH_STRING')) {
 }
 
 use Interpid\PdfLib\String\Tags;
+use Interpid\PdfLib\Utils\Arr;
 
 /**
  * Pdf Multicell
@@ -251,6 +252,25 @@ class Multicell
     }
 
     /**
+     * Define a tag style with a configuration array
+     *
+     * @param string $tag Tag name
+     * @param array $properties Tag properties
+     * @param null $inherit Tag to inherit
+     */
+    public function setTagStyle(string $tag, array $properties = [], $inherit = null)
+    {
+        $this->setStyle(
+            $tag,
+            Arr::firstKey($properties, ['size', 'font_size']),
+            Arr::firstKey($properties, ['style', 'font_style']),
+            Arr::firstKey($properties, ['color', 'text_color']),
+            Arr::firstKey($properties, ['family', 'font_family']),
+            $inherit
+        );
+    }
+
+    /**
      * Sets the attributes for the specified tag.
      * Deprecated function. Use $this->setStyle function.
      *
@@ -270,11 +290,11 @@ class Multicell
     /**
      * Sets the Tags Maximum width
      *
-     * @param int|number $iWidth the width of the tags
+     * @param int $width the width of the tags
      */
-    public function setTagWidthMax($iWidth = 25)
+    public function setTagWidthMax(int $width = 25)
     {
-        $this->tagWidthMax = $iWidth;
+        $this->tagWidthMax = $width;
     }
 
 

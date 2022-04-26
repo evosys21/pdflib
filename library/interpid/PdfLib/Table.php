@@ -1605,6 +1605,18 @@ class Table
     }
 
     /**
+     * Define a style with a configuration array
+     *
+     * @param string $tag Tag name
+     * @param array $config Tag configuration
+     * @param null $inherit Tag to inherit
+     */
+    public function setTagStyle($tag, array $config = [], $inherit = null)
+    {
+        $this->multicell->setTagStyle($tag, $config, $inherit);
+    }
+
+    /**
      * Sets the attributes for the specified tag.
      * Deprecated function. Use $this->setStyle function.
      *
@@ -1732,8 +1744,8 @@ class Table
             array_unshift($files, PDF_TABLE_CONFIG_PATH . $this->configFile);
         }
 
-        foreach($files as $file){
-            if (is_readable($file)){
+        foreach ($files as $file) {
+            if (is_readable($file)) {
                 return require($file);
             }
         }
