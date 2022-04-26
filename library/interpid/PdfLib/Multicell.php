@@ -218,7 +218,7 @@ class Multicell
      * @param string|null $fontFamily font family
      * @param string $inherit Tag to be inherited
      */
-    public function setStyle($tag, $fontSize = null, $fontStyle = null, $color = null, $fontFamily = null, $inherit = 'base')
+    public function setStyle($tag, $fontSize = null, $fontStyle = null, $color = null, $fontFamily = null, $inherit = null)
     {
         if ($tag == 'ttags') {
             $this->pdf->Error(">> ttags << is reserved TAG Name.");

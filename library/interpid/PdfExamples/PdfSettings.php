@@ -98,8 +98,7 @@ class PdfSettings
     public static function setMulticellStyles($multicell)
     {
         // Set the styles for the advanced multicell
-        $multicell->setStyle('base', 11, '', '130,0,30', 'helvetica');
-        $multicell->setStyle('p', null);
+        $multicell->setStyle('p', 11, '', '130,0,30', 'helvetica');
         $multicell->setStyle('b', null, 'B');
         $multicell->setStyle('i', null, 'I', '80,80,260');
         $multicell->setStyle('u', null, 'U', '80,80,260');

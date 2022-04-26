@@ -13,11 +13,11 @@ $multicell = DevFactory::multicell();
 $pdf = $multicell->getPdfObject();
 
 $txt = <<<EOL
-This <b>TCPDF addon</b> allows creation of an <b>Advanced Multicell</b> which uses as input a <b>TAG based formatted string</b> instead of a simple string. The use of tags allows to change the font, the style (<b>bold</b>, <i>italic</i>, <u>underline</u>), the size, and the color of characters and many other features.
+<p>This <b>TCPDF addon</b> allows creation of an <b>Advanced Multicell</b> which uses as input a <b>TAG based formatted string</b> instead of a simple string. The use of tags allows to change the font, the style (<b>bold</b>, <i>italic</i>, <u>underline</u>), the size, and the color of characters and many other features.
 
 <h3>Features:</h3>
   - Text can be <hh>aligned</hh>, <hh>centered</hh> or <hh>justified</hh>
-  - Different <font>Font</font>, <size>Sizes</size>, <style>Styles</style>, <color>Colors</color> can be used
+  - Different <font>Font</font>, <size>Sizes</size>, <style>Styles</style>, <color>Colors</color> can be used</p>
 EOL;
 
 foreach(range(50, 10, 10) as $height){

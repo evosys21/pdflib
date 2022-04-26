@@ -28,8 +28,7 @@ $pdf->AddPage();
 $multicell = new Multicell($pdf);
 
 // Set the styles for the advanced multicell
-$multicell->setStyle('base', 11, '', [0, 0, 77], 'helvetica');
-$multicell->setStyle('p', null, null);
+$multicell->setStyle('p', 11, '', [0, 0, 77], 'helvetica');
 $multicell->setStyle('b', null, 'B');
 $multicell->setStyle('i', null, 'I');
 $multicell->setStyle('bi', null, 'BI');
