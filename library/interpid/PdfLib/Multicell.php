@@ -26,6 +26,8 @@ use Interpid\PdfLib\Utils\Arr;
 class Multicell
 {
     const SEPARATOR = ' ,.:;';
+    const DEFAULT_TAG = 'default';
+    const PDF_CURRENT = '__current__';
 
     /**
      * Set to 1 to debug cell borders
@@ -377,20 +379,17 @@ class Multicell
      */
     protected function getTagAttribute($tag, $attribute)
     {
-
-        $tags = explode('/', $tag);
+        // explode and remove empty values
+        $tags = array_filter(explode('/', $tag));
         //reverse the array - the latter is going to be first
         $tags = array_reverse($tags);
+        $tags[] = static::DEFAULT_TAG;
+        $tags[] = static::PDF_CURRENT;
         foreach ($tags as $oneTag) {
             $val = $this->getOneTagAttribute($oneTag, $attribute);
             if (!is_null($val)) {
                 return $val;
             }
-        }
-
-        if ($tag !== 'DEFAULT') {
-            //avoid recursivity
-            return $this->getOneTagAttribute('DEFAULT', $attribute);
         }
 
         return '';
@@ -409,13 +408,13 @@ class Multicell
         $tag = strtoupper($tag);
 
         if ('TTAGS' === $tag) {
-            $tag = 'DEFAULT';
+            $tag = static::DEFAULT_TAG;
         }
         if ('PPARG' === $tag) {
-            $tag = 'DEFAULT';
+            $tag = static::DEFAULT_TAG;
         }
         if ('' === $tag) {
-            $tag = 'DEFAULT';
+            $tag = static::DEFAULT_TAG;
         }
 
         if (isset($this->options->styles[$tag][$attribute])) {
@@ -770,7 +769,6 @@ class Multicell
         $paddingBottom = 0
     )
     {
-
         $this->multicellData = new MulticellData($this->pdf);
         $this->multicellData->width = $width;
         $this->multicellData->lineHeight = $height;
@@ -811,7 +809,7 @@ class Multicell
 
             $this->multiCellSec($this->multicellData, $aSendData);
 
-            if (true == $bAddNewPage) {
+            if ($bAddNewPage) {
                 $this->beforeAddPage();
                 $this->pdf->AddPage();
                 $this->afterAddPage();
@@ -819,10 +817,7 @@ class Multicell
             }
         } while ((($iCounter--) > 0) && (false == $doBreak));
 
-        //unset the multicell Data
-
         $this->restoreStyles();
-
         $this->multicellData = null;
     }
 
@@ -1031,8 +1026,8 @@ class Multicell
             $lastLine = !(count($this->dataInfo) > 0);
         }
 
-        //APPLY THE DEFAULT STYLE
-        $this->applyStyle('DEFAULT');
+//        //APPLY THE DEFAULT STYLE
+//        $this->applyStyle(static::DEFAULT_TAG);
 
         if (!$options->applyAll) {
             $this->reset();
@@ -1314,17 +1309,19 @@ class Multicell
      * Enable or disable background fill.
      *
      * @param boolean $value
+     * @return $this
      */
-    public function enableFill($value)
+    public function enableFill(bool $value): self
     {
         $this->fill = $value;
+        return $this;
     }
 
     /**
      * @param int $maxLines
      * @return $this
      */
-    public function setMaxLines($maxLines)
+    public function setMaxLines(int $maxLines): self
     {
         $this->maxLines($maxLines - 1);
         return $this;
@@ -1334,7 +1331,7 @@ class Multicell
      * @param int $maxLines
      * @return $this
      */
-    public function maxLines($maxLines)
+    public function maxLines(int $maxLines): self
     {
         $this->options->maxLines = $maxLines;
         return $this;
@@ -1344,7 +1341,7 @@ class Multicell
      * @param int $maxHeight
      * @return self
      */
-    public function maxHeight($maxHeight)
+    public function maxHeight(int $maxHeight): self
     {
         $this->options->maxHeight = $maxHeight;
         return $this;
@@ -1354,7 +1351,7 @@ class Multicell
      * @param bool $shrinkToFit
      * @return self
      */
-    public function shrinkToFit($shrinkToFit = true)
+    public function shrinkToFit(bool $shrinkToFit = true): self
     {
         $this->options->shrinkToFit = $shrinkToFit;
         return $this;
@@ -1364,7 +1361,7 @@ class Multicell
      * @param int|float $step
      * @return self
      */
-    public function shrinkFontStep($step = 1)
+    public function shrinkFontStep($step = 1): self
     {
         $this->options->shrinkFontStep = $step;
         return $this;
@@ -1374,7 +1371,7 @@ class Multicell
      * @param int|float $step
      * @return self
      */
-    public function shrinkLineHeightStep($step)
+    public function shrinkLineHeightStep($step): self
     {
         $this->options->shrinkLineHeightStep = $step;
         return $this;
@@ -1383,7 +1380,7 @@ class Multicell
     /**
      * @return self
      */
-    public function applyAll()
+    public function applyAll(): self
     {
         $this->options->applyAll = true;
         return $this;
@@ -1418,7 +1415,7 @@ class Multicell
     public function restoreStyles()
     {
         $this->options->restoreStyles();
-        $this->applyStyle('DEFAULT');
+        $this->applyStyle(static::PDF_CURRENT);
     }
 
 }

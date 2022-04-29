@@ -107,9 +107,10 @@ class MulticellOptions
 
     /**
      * Restore the used TagStyles from backup
-     * @return $this
+     *
+     * @return self
      */
-    public function restoreStyles()
+    public function restoreStyles(): self
     {
         if ($this->stylesBackup) {
             $this->styles = $this->stylesBackup;
@@ -120,9 +121,9 @@ class MulticellOptions
     /**
      * Shrink all font-sizes by the specified step
      *
-     * @return $this
+     * @return self
      */
-    public function shrinkStyleFonts()
+    public function shrinkStyleFonts(): self
     {
         foreach ($this->styles as &$style) {
             if (!isset($style['size'])) {
@@ -142,7 +143,7 @@ class MulticellOptions
      * @param int $minValue
      * @return int|mixed
      */
-    public function shrinkValue($value, $step, $minValue = 1)
+    public function shrinkValue($value, $step, int $minValue = 1)
     {
         $value -= $step;
         if ($value < $minValue) {
@@ -152,20 +153,22 @@ class MulticellOptions
     }
 
     /**
-     * Save the current settings as a tag default style under the DEFAULT tag name
+     * Save the current pdf settings as "current" style
      *
-     * @return void
+     * @return self
      */
-    public function saveCurrentStyle()
+    public function saveCurrentStyle(): self
     {
-        $this->styles['DEFAULT']['family'] = $this->pdfi->getFontFamily();
-        $this->styles['DEFAULT']['style'] = $this->pdfi->getFontStyle();
-        $this->styles['DEFAULT']['size'] = $this->pdfi->getFontSizePt();
-        $this->styles['DEFAULT']['color'] = PdfInterface::RAW . $this->pdf->TextColor;
+        // use uppercase - make styling case insensitive
+        $current = strtoupper(Multicell::PDF_CURRENT);
+        $this->styles[$current]['family'] = $this->pdfi->getFontFamily();
+        $this->styles[$current]['style'] = $this->pdfi->getFontStyle();
+        $this->styles[$current]['size'] = $this->pdfi->getFontSizePt();
+        $this->styles[$current]['color'] = PdfInterface::RAW . $this->pdf->TextColor;
+        return $this;
     }
 
-
-    public function resetCellOptions()
+    public function resetCellOptions(): self
     {
         $this->maxHeight = 0;
         $this->maxLines = 0;
@@ -173,5 +176,6 @@ class MulticellOptions
         $this->shrinkLineHeightStep = 0.5;
         $this->shrinkToFit = false;
         $this->applyAll = false;
+        return $this;
     }
 }
