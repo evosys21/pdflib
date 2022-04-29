@@ -273,23 +273,6 @@ class Multicell
     }
 
     /**
-     * Sets the attributes for the specified tag.
-     * Deprecated function. Use $this->setStyle function.
-     *
-     * @param string $tagName tag name
-     * @param string $fontFamily font family
-     * @param string $fontStyle font style
-     * @param float $fontSize font size
-     * @param mixed(string|array) $color font color
-     * @deprecated
-     */
-    public function setStyleDep($tagName, $fontFamily, $fontStyle, $fontSize, $color)
-    {
-        $this->setStyle($tagName, $fontSize, $fontStyle, $color, $fontFamily);
-    }
-
-
-    /**
      * Sets the Tags Maximum width
      *
      * @param int $width the width of the tags

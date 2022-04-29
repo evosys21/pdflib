@@ -39,23 +39,5 @@ class MulticellTest extends TestCase
         $this->assertSame('12', $multicell->getTagSize('b'));
         $this->assertSame('B', $multicell->getTagFontStyle('b'));
     }
-
-    public function testSetStyleDep()
-    {
-        $pdf = Helper::pdfObject1();
-        $multicell = new Multicell($pdf);
-        $multicell->setStyleDep("p", 'helvetica', "", 12, "0,0,0");
-        $multicell->setStyleDep("b", 'arial', "B", 12, "10,10,10");
-
-        $this->assertSame('helvetica', $multicell->getTagFont('p'));
-        $this->assertSame('0,0,0', $multicell->getTagColor('p'));
-        $this->assertSame('12', $multicell->getTagSize('p'));
-        $this->assertSame('', $multicell->getTagFontStyle('p'));
-
-        $this->assertSame('arial', $multicell->getTagFont('b'));
-        $this->assertSame('10,10,10', $multicell->getTagColor('b'));
-        $this->assertSame('12', $multicell->getTagSize('b'));
-        $this->assertSame('B', $multicell->getTagFontStyle('b'));
-    }
 }
 

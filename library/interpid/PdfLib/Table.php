@@ -1612,23 +1612,6 @@ class Table
     }
 
     /**
-     * Sets the attributes for the specified tag.
-     * Deprecated function. Use $this->setStyle function.
-     *
-     * @param string $tagName tag name
-     * @param string $fontFamily font family
-     * @param string $fontStyle font style
-     * @param float $fontSize font size
-     * @param mixed(string|array) $color font color
-     * @deprecated
-     */
-    public function setStyleDep($tagName, $fontFamily, $fontStyle, $fontSize, $color)
-    {
-        $this->multicell->setStyle($tagName, $fontSize, $fontStyle, $color, $fontFamily);
-    }
-
-
-    /**
      * Returns the array value if set otherwise the default
      *
      * @param $var mixed
@@ -1646,7 +1629,6 @@ class Table
 
         return $default;
     }
-
 
     /**
      * Returns the table configuration value specified by the input key

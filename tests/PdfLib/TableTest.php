@@ -46,8 +46,6 @@ class TableTest extends TestCase
     {
         $pdf = Helper::pdfObject1();
         $table = new Table($pdf);
-        $table->setStyleDep("p", 'helvetica', "", 12, "0,0,0");
-        $table->setStyleDep("b", 'arial', "B", 12, "10,10,10");
 
         $multicell = $table->getMulticellInstance();
 
