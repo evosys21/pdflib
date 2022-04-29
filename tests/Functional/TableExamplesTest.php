@@ -12,6 +12,7 @@
 
 namespace Interpid\PdfLib\Tests\Functional;
 
+use Generator;
 use Interpid\PdfLib\Tests\BaseExamplesTestCase;
 
 
@@ -22,13 +23,18 @@ use Interpid\PdfLib\Tests\BaseExamplesTestCase;
  */
 class TableExamplesTest extends BaseExamplesTestCase
 {
-
     /**
      * Tests testExample1
+     * @dataProvider getTestSources
      */
-    public function testExamples()
+    public function testExamples($source)
     {
-        $aSources = array(
+        $this->runTestWithExample($source, basename($source));
+    }
+
+    public function getTestSources(): Generator
+    {
+        $sources = array(
             'example-table-1-overview.php',
             'example-table-2-overview.php',
             'example-table-3-detailed.php',
@@ -36,9 +42,9 @@ class TableExamplesTest extends BaseExamplesTestCase
             'example-table-5-row-height.php',
         );
 
-        foreach ($aSources as $source) {
-            $require = APPLICATION_PATH . '/examples/' . $source;
-            $this->runTestWithExample($require, basename($require));
+        foreach ($sources as $source) {
+            $source = APPLICATION_PATH . '/examples/' . $source;
+            yield [$source];
         }
     }
 }

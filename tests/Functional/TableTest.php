@@ -131,14 +131,14 @@ class TableTest extends BaseTestCase
     }
 
     /**
-     * @dataProvider testModelSources
+     * @dataProvider getTestModelSources
      */
     public function testTableModels($source)
     {
         $this->runTestModel1($source);
     }
 
-    public function testModelSources(): Generator
+    public function getTestModelSources(): Generator
     {
         yield [__DIR__ . '/table/draw-table-model1.php'];
         yield [__DIR__ . '/table/draw-table-model2.php'];
