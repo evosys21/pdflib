@@ -14,7 +14,7 @@ the `$multicell->setStyle` method arguments changed it's order.
 ```php
 
     //new implementation
-    public function setStyle($tag, $fontSize = null, $fontStyle = null, $color = null, $fontFamily = null, $inherit = 'base'){
+    public function setStyle($tag, $fontSize = null, $fontStyle = null, $color = null, $fontFamily = null, $inherit = 'default'){
     }
 
     //old implementation

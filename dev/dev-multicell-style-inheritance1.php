@@ -29,7 +29,7 @@ $pdf->AddPage();
 $multicell = new Multicell($pdf);
 
 // Set the styles for the advanced multicell
-$multicell->setStyle('base', 11, '', [0, 0, 77], 'helvetica');
+$multicell->setStyle('default', 11, '', [0, 0, 77], 'helvetica');
 $multicell->setStyle('h', null, 'B', '203,0,48');
 $multicell->setTagStyle('b', ['style' => 'B']);
 $multicell->setTagStyle('i', ['style' => 'I']);
@@ -37,9 +37,9 @@ $multicell->setTagStyle('bi', ['style' => 'BI']);
 $multicell->setTagStyle('u', ['style' => 'U']);
 $multicell->setTagStyle('red', ['color' => '255,0,0']);
 $multicell->setTagStyle('green', ['color' => '0,255,0']);
-$multicell->setTagStyle('h1', ['size' => 16], 'base');
-$multicell->setTagStyle('h2', ['size' => 14], 'base');
-$multicell->setTagStyle('h3', ['size' => 12], 'base');
+$multicell->setTagStyle('h1', ['size' => 16], 'default');
+$multicell->setTagStyle('h2', ['size' => 14], 'default');
+$multicell->setTagStyle('h3', ['size' => 12], 'default');
 
 $multicell->setTagStyle('p', ['size' => 11, 'style' => '', 'color' => '130,0,30', 'family' => 'helvetica']);
 
