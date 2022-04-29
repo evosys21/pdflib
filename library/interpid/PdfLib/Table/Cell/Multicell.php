@@ -130,7 +130,7 @@ class Multicell extends CellAbstract implements CellInterface
     public function isSplittable()
     {
         if ($this->isPropertySet('SPLITTABLE')) {
-            return true && $this->isPropertySet('SPLITTABLE');
+            return $this->isPropertySet('SPLITTABLE');
         }
 
         return true;

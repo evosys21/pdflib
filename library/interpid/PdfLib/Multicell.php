@@ -576,7 +576,7 @@ class Multicell
                     $char_width = $this->dataExtraInfo['TAB_WIDTH'];
                 }
 
-                if ($isParagraph == true) {
+                if ($isParagraph) {
                     $c = ord('');
                     $s = substr_replace($s, ' ', $i, 1);
                     $char_width = $this->tempData['LAST_TAB_REQSIZE'] - $this->tempData['LAST_TAB_SIZE'];
@@ -694,7 +694,7 @@ class Multicell
             }
 
             //we have a partial result
-            array_push($aLine, $cellData);
+            $aLine[] = $cellData;
 
 
             $this->tempData['LAST_TAB_SIZE'] = $currentWidth;
@@ -1004,7 +1004,7 @@ class Multicell
 
             //make a line
             $str_data = $this->makeLine($multicellData->textWidth);
-            array_push($parsedLines, $str_data);
+            $parsedLines[] = $str_data;
 
             #1247 - limit the maximum number of lines
             if ($options->isHeightOverflow($lines, $height)) {

@@ -79,13 +79,13 @@ class Tags
             preg_match_all("|([^ ]*)=[\"'](.*)[\"']|U", $reg[2], $out, PREG_PATTERN_ORDER);
             for ($i = 0; $i < count($out[0]); $i++) {
                 $out[2][$i] = preg_replace("/(\"|')/i", '', $out[2][$i]);
-                array_push($sHREF, [$out[1][$i], $out[2][$i]]);
+                $sHREF[] = [$out[1][$i], $out[2][$i]];
             }
         }
 
         if (in_array("</$p_tag>", $p_array)) {
-            array_push($tags, $p_tag);
-            array_push($hRef, $sHREF);
+            $tags[] = $p_tag;
+            $hRef[] = $sHREF;
 
             return true;
         }
@@ -172,7 +172,7 @@ class Tags
                 $current['text'] .= $result[$i]['text'];
             } else {
                 $current = $this->expand_parameters($current);
-                array_push($res_result, $current);
+                $res_result[] = $current;
                 $current = $result[$i];
             }
 
@@ -180,7 +180,7 @@ class Tags
         }
 
         $current = $this->expand_parameters($current);
-        array_push($res_result, $current);
+        $res_result[] = $current;
 
         return $res_result;
     }
@@ -218,7 +218,7 @@ class Tags
                 $href = (($temp = end($hRef)) != null) ? $temp : '';
             } else {
                 if ($val != '') {
-                    array_push($result, ['text' => $val, 'tag' => implode('/', $tags), 'params' => $href]);
+                    $result[] = ['text' => $val, 'tag' => implode('/', $tags), 'params' => $href];
                 }
             }
         }

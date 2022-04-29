@@ -820,7 +820,6 @@ class Table
         }
 
         if ($cell instanceof Table\Cell\Multicell) {
-            /** @var $cell Table\Cell\Multicell */
             $cell->attachMulticell($this->multicell);
         }
 
@@ -1073,7 +1072,7 @@ class Table
 
             $cell->setCellDrawHeight($h_rows);
 
-            if (false == $this->tableSplit) {
+            if (!$this->tableSplit) {
                 $aRefCache[$val1['row_id']]['HEIGHT_ROWSPAN'] = $h_rows;
             }
         }
@@ -1092,10 +1091,7 @@ class Table
          * This Variable will contain the remained page Height
          */
         $iLeftHeight = $pageHeight - $this->pdf->GetY() + $this->pdf->tMargin;
-
-        $bWasData = true; //can be deleted
-        $iLastOkKey = 0; //can be deleted
-
+        $iLastOkKey = 0;
 
         $this->dataOnCurrentPage = false;
         $bHeaderOnThisPage = false;
@@ -1111,18 +1107,17 @@ class Table
         for ($i = 0; $i < $iItems; $i++) {
             $val = &$aDC[$i];
 
-            switch ($val['DATATYPE']) {
-                case self::TB_DATA_TYPE_INSERT_NEW_PAGE:
-                    $rowSpans = [];
-                    $iLeftHeight = $pageHeight;
-                    $this->dataOnCurrentPage = false; //new page
-                    $this->insertNewPage($i, null, true, true);
-                    break 2;
+            if ($val['DATATYPE'] == self::TB_DATA_TYPE_INSERT_NEW_PAGE) {
+                $rowSpans = [];
+                $iLeftHeight = $pageHeight;
+                $this->dataOnCurrentPage = false; //new page
+                $this->insertNewPage($i, null, true, true);
+                break;
             }
 
-            $bIsHeader = $val['DATATYPE'] == 'header';
+            $isHeader = $val['DATATYPE'] == 'header';
 
-            if (($bIsHeader) && ($bWasData)) {
+            if ($isHeader) {
                 $iLastDataKey = $iLastOkKey;
             }
 
@@ -1140,7 +1135,7 @@ class Table
 
             $iRowHeight = $val['HEIGHT'];
             $iRowHeightRowspan = 0;
-            if ((false == $this->tableSplit) && (isset($val['HEIGHT_ROWSPAN']))) {
+            if (!$this->tableSplit && (isset($val['HEIGHT_ROWSPAN']))) {
                 $iRowHeightRowspan = $val['HEIGHT_ROWSPAN'];
             }
 
@@ -1153,7 +1148,7 @@ class Table
 
             if (($iLeftHeight >= 0) && ($iLeftHeightRowspan >= 0)) {
                 //this row has enough space on the page
-                if (true == $bIsHeader) {
+                if ($isHeader) {
                     $bHeaderOnThisPage = true;
                 } else {
                     $iLastDataKey = $i;
@@ -1190,13 +1185,13 @@ class Table
                     case 1:
 
                         //SITUATION 1:
-                        if ((true == $bIsHeader) or
-                            ((false == $bHeaderOnThisPage) and (false == $this->dataOnCurrentPage) and (false == $this->tableSplit) and ($iLastDataKey > 0))
+                        if ($isHeader or
+                            (!$bHeaderOnThisPage and !$this->dataOnCurrentPage and !$this->tableSplit and ($iLastDataKey > 0))
                         ) {
                             $iItems = $this->insertNewPage(
                                 $iLastDataKey,
                                 null,
-                                (!$bIsHeader) && (!$bHeaderOnThisPage)
+                                (!$isHeader) && (!$bHeaderOnThisPage)
                             );
                             break; //exit from switch(1);
                         }
@@ -1213,7 +1208,7 @@ class Table
                             $bSplitCommand = false;
                         }
 
-                        if (true == $bSplitCommand) {
+                        if ($bSplitCommand) {
                             /**
                              * *************************************************
                              * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -1417,7 +1412,7 @@ class Table
         $this->parseHeader();
 
         //the number of lines that the header contains
-        if ((true == $this->drawHeader) && (true == $bInsertHeader) && ($this->headerOnNewPage)) {
+        if ($this->drawHeader && $bInsertHeader && ($this->headerOnNewPage)) {
             $nHeaderLines = count($this->headerCache);
         } else {
             $nHeaderLines = 0;
@@ -1434,7 +1429,7 @@ class Table
         }
 
         //if we have a header and no data on the current page, remove the header from the current page!
-        if ($nHeaderLines > 0 && false == $this->dataOnCurrentPage) {
+        if ($nHeaderLines > 0 && !$this->dataOnCurrentPage) {
             $iShift -= $nHeaderLines;
         }
 
