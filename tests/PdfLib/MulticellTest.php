@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\Tests\PdfLib;
+namespace Interpid\PdfLib\Tests\PdfLib;
 
 use Interpid\PdfLib\Multicell;
 use Interpid\PdfLib\Tests\Helper\Helper;
@@ -25,7 +25,7 @@ class MulticellTest extends TestCase
     {
         $pdf = Helper::pdfObject1();
         $multicell = new Multicell($pdf);
-        $multicell->setStyle('base', 11, '', '0,0,0', 'helvetica');
+        $multicell->setStyle('default', 11, '', '0,0,0', 'helvetica');
         $multicell->setStyle('p', 12);
         $multicell->setStyle('b', 12, 'B', '10,10,10', 'arial');
 

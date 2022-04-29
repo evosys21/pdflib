@@ -12,6 +12,7 @@
 
 namespace Interpid\PdfLib\Tests\Functional;
 
+use Generator;
 use Interpid\PdfLib\Tests\BaseTestCase;
 use Interpid\PdfLib\Tests\Helper\Helper;
 use Interpid\PdfLib\Tests\Helper\TestPdf;
@@ -61,10 +62,10 @@ class TableTest extends BaseTestCase
         }
     }
 
-
-    protected function runTestModel1($require, $name)
+    protected function runTestModel1($require)
     {
         $pdf = $this->getPdfObject1();
+        $name = str_replace('.php', '', basename($require));
 
         $height = $pdf->h - 60;
         $y = $pdf->GetY();
@@ -80,24 +81,24 @@ class TableTest extends BaseTestCase
             $y += 2;
         }
 
-        $sResultFile = TEST_PATH . '/data/' . $name . '.pdf';
+        $expected = TEST_PATH . '/data/' . $name . '.pdf';
 
         if (defined('GENERATE_RESULT_FILES')) {
-            $sPdfFile = $sResultFile;
+            $generated = $expected;
         } else {
-            $sPdfFile = tempnam(sys_get_temp_dir(), 'pdf_test');
+            $generated = tempnam(sys_get_temp_dir(), 'pdf_test');
         }
 
         //send the pdf to the browser
-        $pdf->saveToFile($sPdfFile);
+        $pdf->saveToFile($generated);
 
-        $this->assertTrue(file_exists($sPdfFile));
+        $this->assertTrue(file_exists($generated));
 
         // $this->assertFileEquals($sPdfFile, $sResultFile);
-        $this->assertComparePdf($sPdfFile, $sResultFile, "FAILED: " . basename($sResultFile) . " / $require");
+        $this->assertComparePdf($expected, $generated, "FAILED: " . basename($expected) . " / $require");
 
         if (!defined('GENERATE_RESULT_FILES')) {
-            unlink($sPdfFile);
+            unlink($generated);
         }
     }
 
@@ -130,28 +131,18 @@ class TableTest extends BaseTestCase
     }
 
     /**
-     * Tests testTableModel1
+     * @dataProvider testModelSources
      */
-    public function testTableModel1()
+    public function testTableModels($source)
     {
-        $this->runTestModel1(__DIR__ . '/table/draw-table-model1.php', __FUNCTION__);
+        $this->runTestModel1($source);
     }
 
-
-    /**
-     * Tests testTableModel2
-     */
-    public function testTableModel2()
+    public function testModelSources(): Generator
     {
-        $this->runTestModel1(__DIR__ . '/table/draw-table-model2.php', __FUNCTION__);
-    }
-
-    /**
-     * Tests testTableModel3
-     */
-    public function testTableModel3()
-    {
-        $this->runTestModel1(__DIR__ . '/table/draw-table-model3.php', __FUNCTION__);
+        yield [__DIR__ . '/table/draw-table-model1.php'];
+        yield [__DIR__ . '/table/draw-table-model2.php'];
+        yield [__DIR__ . '/table/draw-table-model3.php'];
     }
 
     /**
