@@ -35,10 +35,10 @@ In `composer.json`
 
 ```json
     "autoload": {
-        "classmap": [
-            "libs/fpdf-multicell-3.0.0/library/interpid"
-        ],
-    },
+"classmap": [
+"libs/fpdf-multicell-3.0.0/library/interpid"
+],
+},
 ```
 
 or you can use the PSR-4 autoload capabilities
@@ -47,10 +47,10 @@ In `composer.json`
 
 ```json
     "autoload": {
-        "psr-4": {
-            "Interpid\\PdfLib\\": "libs/fpdf-multicell-3.0.0/library/interpid/PdfLib/"
-        }
-    },
+"psr-4": {
+"Interpid\\PdfLib\\": "libs/fpdf-multicell-3.0.0/library/interpid/PdfLib/"
+}
+},
 ```
 
 then run `composer dump-autoload` to regenerate the autoload classmap.
@@ -82,8 +82,10 @@ $pdf = new Pdf();
 $multicell = new Multicell($pdf);
 
 // set the style definitions
+// `default` is applied to all tags
+$multicell->setStyle('default', 11, '', '130,0,30', 'helvetica');
 $multicell->setStyle('p', 11, '', '130,0,30', 'helvetica');
-$multicell->setStyle('b', 11, 'B', '130,0,30', 'helvetica');
+$multicell->setStyle('b', null, 'B', null, null);
 
 // create the advanced multicells
 $multicell->multiCell(0, 5, 'This is a simple cell');
@@ -156,10 +158,11 @@ Examples:
 
 ```php
 // define a tag style using associative array
-$multicell->setTagStyle('p', ['size' => 11, 'style' => '', 'color' => '130,0,30', 'family' => 'helvetica']);
+$multicell->setStyleAssoc('p', ['size' => 11, 'style' => '', 'color' => '130,0,30', 'family' => 'helvetica']);
 
 // define only a few properties
-$multicell->setTagStyle('b', ['style' => 'B', 'color' => '130,0,30']);
+$multicell->setStyleAssoc('b', ['style' => 'B']);
+$multicell->setStyleAssoc('fancy-bi', ['style' => 'BI', 'color' => '130,0,30']);
 
 // Set the styles for the advanced multicell using `setStyle`
 $multicell->setStyle('p', 11, '', '130,0,30', 'helvetica');
@@ -179,13 +182,13 @@ $multicell->setStyle('h', null, 'B', '203,0,48');
 $multicell->setStyle('h1', 16, null, null, null, 'h');
 $multicell->setStyle('h2', 14, null, null, null, 'h');
 $multicell->setStyle('h3', 12, null, null, null, 'h');
-$multicell->setStyle('h4', 11, null, null, null, 'h');
+$multicell->setStyle('h4', 11, 'B', null, null, 'h');
 
 // a more simple approach: use the `style` function
-$multicell->setTagStyle('h1', ['size' => 16], 'h');
-$multicell->setTagStyle('h2', ['size' => 14], 'h');
-$multicell->setTagStyle('h3', ['size' => 12], 'h');
-$multicell->setTagStyle('h4', ['size' => 11], 'h');
+$multicell->setStyleAssoc('h1', ['size' => 16], 'h');
+$multicell->setStyleAssoc('h2', ['size' => 14], 'h');
+$multicell->setStyleAssoc('h3', ['size' => 12], 'h');
+$multicell->setStyleAssoc('h4', ['size' => 11, 'style' => 'B'], 'h');
 ```
 
 ## Text Formatting
@@ -235,6 +238,7 @@ $s = "<p>The following is <s y='-1'>Subscript</s> and <s y='1'>Superscript</s></
 ### Strikethrough
 
 Text strikethrough can be defined using the `strike` attribute in any tag:
+
 - `<p strike=''>...` - default strikethrough line width - `<p strike='0.6'>...` - strikethrough line width: 0.6
 
 ```php

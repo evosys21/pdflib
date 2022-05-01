@@ -1606,9 +1606,9 @@ class Table
      * @param array $config Tag configuration
      * @param null $inherit Tag to inherit
      */
-    public function setTagStyle($tag, array $config = [], $inherit = null)
+    public function setStyleAssoc($tag, array $config = [], $inherit = null)
     {
-        $this->multicell->setTagStyle($tag, $config, $inherit);
+        $this->multicell->setStyleAssoc($tag, $config, $inherit);
     }
 
     /**

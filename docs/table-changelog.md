@@ -2,6 +2,15 @@
 
 All notable changes to FPDF Advanced Table will be documented in this file.
 
+### 6.5.0 (2022-05-05)
+
+- Change, Simplify style inheritance and definition.
+  - use `default` tag for default styling
+  - remove `base` default style
+  - remove style deprecated functions
+  - create `setStyleAssoc` function, for associative style defining
+- Change, Drop support for PHP5
+
 ### 6.4.0 (2020-12-13)
 
 - Change, Add inline style support ([#1983](https://tracker.interpid.eu/issues/1983))

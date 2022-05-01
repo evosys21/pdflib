@@ -4,10 +4,12 @@ All notable changes to FPDF Advanced Multicell will be documented in this file.
 
 ### 3.4.0 (2022-05-05)
 
-- Change, Improve style inheritance ([#1986](https://tracker.interpid.eu/issues/1986))
-- Change, Simplify style definition. New `setTagStyle` function. 
+- Change, Simplify style inheritance and definition.
+  - use `default` tag for default styling
+  - remove `base` default style
+  - remove deprecated functions
+  - create `setStyleAssoc` function, for associative style defining
 - Change, Drop support for PHP5
-- Change, Disable/Remove default "base" style inheritance
 
 ### 3.3.0 (2021-12-13)
 

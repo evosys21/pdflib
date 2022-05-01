@@ -260,7 +260,7 @@ class Multicell
      * @param array $properties Tag properties
      * @param null $inherit Tag to inherit
      */
-    public function setTagStyle(string $tag, array $properties = [], $inherit = null)
+    public function setStyleAssoc(string $tag, array $properties = [], $inherit = null)
     {
         $this->setStyle(
             $tag,
