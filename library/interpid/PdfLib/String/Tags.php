@@ -68,7 +68,7 @@ class Tags
         $hRef = &$this->hRef;
         $maxElem = &$this->maxLength;
 
-        if (!preg_match("/^<([a-zA-Z0-9]{1,$maxElem}) *(.*)>$/i", $tag, $reg)) {
+        if (!preg_match("/^<([a-zA-Z\d]{1,$maxElem}) *(.*)>$/i", $tag, $reg)) {
             return false;
         }
 
@@ -78,7 +78,7 @@ class Tags
         if (isset($reg[2])) {
             preg_match_all("|([^ ]*)=[\"'](.*)[\"']|U", $reg[2], $out, PREG_PATTERN_ORDER);
             for ($i = 0; $i < count($out[0]); $i++) {
-                $out[2][$i] = preg_replace("/(\"|')/i", '', $out[2][$i]);
+                $out[2][$i] = preg_replace("/([\"'])/i", '', $out[2][$i]);
                 $sHREF[] = [$out[1][$i], $out[2][$i]];
             }
         }
@@ -106,7 +106,7 @@ class Tags
         $hRef = &$this->hRef;
         $maxElem = &$this->maxLength;
 
-        if (!preg_match("/^<\/([a-zA-Z0-9]{1,$maxElem})>$/i", $tag, $reg)) {
+        if (!preg_match("/^<\/([a-zA-Z\d]{1,$maxElem})>$/i", $tag, $reg)) {
             return false;
         }
 
@@ -196,25 +196,20 @@ class Tags
 
         $reg = preg_split('/(<.*>)/U', $string, -1, PREG_SPLIT_DELIM_CAPTURE);
 
-        $tag = '';
         $href = '';
 
-        foreach ($reg as $key => $val) {
+        foreach ($reg as $val) {
 
             if ($val == '') {
                 continue;
             }
 
             if ($this->isOpenTag($val, $reg)) {
-                $tag = (($temp = end($tags)) != null) ? $temp : '';
                 $href = (($temp = end($hRef)) != null) ? $temp : '';
             } elseif ($this->isCloseTag($val)) {
-                $tag = (($temp = end($tags)) != null) ? $temp : '';
                 $href = (($temp = end($hRef)) != null) ? $temp : '';
             } else {
-                if ($val != '') {
-                    $result[] = ['text' => $val, 'tag' => implode('/', $tags), 'params' => $href];
-                }
+                $result[] = ['text' => $val, 'tag' => implode('/', $tags), 'params' => $href];
             }
         }
 
