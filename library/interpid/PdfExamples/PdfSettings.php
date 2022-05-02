@@ -92,17 +92,6 @@ class PdfSettings
         return $dataRow;
     }
 
-    /**
-     * @param $table Table
-     */
-    public static function setTableStyles($table)
-    {
-        // Set the styles for the advanced table
-        $table->setStyle('p', 10, '', '130,0,30', 'helvetica');
-        $table->setStyle('b', 9, 'B', '80,80,260', 'helvetica');
-        $table->setStyle('h1', 10, '', '0,151,200', 'helvetica');
-        $table->setStyle('bi', 12, 'BI', '0,0,120', 'helvetica');
-    }
 
     /**
      * Set the styles for the advanced multicell
@@ -128,5 +117,20 @@ class PdfSettings
         $multicell->setStyle('s1', 8, null, '118,0,3');
         $multicell->setStyle('s2', 6, null, '0,49,159');
         $multicell->setStyle('code', 9, '', null, 'courier');
+    }
+    
+    
+    /**
+     * Set the styles for the advanced table
+     * 
+     * @param $table Table
+     */
+    public static function setTableStyles($table)
+    {
+        // Set the styles for the advanced table
+        $table->setStyle('p', 10, '', '130,0,30', 'helvetica');
+        $table->setStyle('b', 9, 'B', '80,80,260', 'helvetica');
+        $table->setStyle('h1', 10, '', '0,151,200', 'helvetica');
+        $table->setStyle('bi', 12, 'BI', '0,0,120', 'helvetica');
     }
 }

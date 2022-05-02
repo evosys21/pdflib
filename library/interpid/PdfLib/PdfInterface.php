@@ -1,4 +1,6 @@
 <?php
+/** @noinspection PhpDocMissingThrowsInspection */
+
 /**
  * This file is part of the Interpid PDF Addon package.
  *

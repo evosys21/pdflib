@@ -1,4 +1,5 @@
 <?php
+/** @noinspection PhpDocMissingThrowsInspection */
 
 /**
  * This file is part of the Interpid PDF Addon package.
@@ -652,13 +653,13 @@ class Multicell
             $sTmpStr = $this->dataInfo[0]['text'];
             $sTmpStr = self::substr($sTmpStr, $i, self::strlen($sTmpStr));
 
-            if (($sTmpStr == '') || ($sTmpStr === false)) {
+            if ($sTmpStr == '') {
                 array_shift($this->dataInfo);
             } else {
                 $this->dataInfo[0]['text'] = $sTmpStr;
             }
 
-            $y = isset($val['y']) ? $val['y'] : (isset($val['ypos']) ? $val['ypos'] : 0);
+            $y = $val['y'] ?? ($val['ypos'] ?? 0);
 
             $cellData = array_merge([
                 'text' => $str,
