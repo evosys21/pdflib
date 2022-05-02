@@ -39,36 +39,36 @@ class Tags
      *
      * @var integer
      */
-    protected $tagMaxElem;
+    protected $maxLength;
 
 
     /**
      * Constructor
      *
-     * @param int|number $p_tagmax number - the number of characters allowed in a tag
+     * @param int $maxLength number - the number of characters allowed in a tag
      */
-    public function __construct($p_tagmax = 10)
+    public function __construct(int $maxLength = 10)
     {
         $this->tags = [];
         $this->hRef = [];
-        $this->tagMaxElem = $p_tagmax;
+        $this->maxLength = $maxLength;
     }
 
 
     /**
      * Returns TRUE if the specified tag name is an "<open tag>", (it is not already opened)
      *
-     * @param $p_tag string - tag name
-     * @param $p_array array - tag arrays
+     * @param string $tag - tag name
+     * @param array $data - tag arrays
      * @return boolean
      */
-    protected function OpenTag($p_tag, $p_array)
+    protected function isOpenTag(string $tag, array $data): bool
     {
         $tags = &$this->tags;
         $hRef = &$this->hRef;
-        $maxElem = &$this->tagMaxElem;
+        $maxElem = &$this->maxLength;
 
-        if (!preg_match("/^<([a-zA-Z0-9]{1,$maxElem}) *(.*)>$/i", $p_tag, $reg)) {
+        if (!preg_match("/^<([a-zA-Z0-9]{1,$maxElem}) *(.*)>$/i", $tag, $reg)) {
             return false;
         }
 
@@ -83,7 +83,7 @@ class Tags
             }
         }
 
-        if (in_array("</$p_tag>", $p_array)) {
+        if (in_array("</$p_tag>", $data)) {
             $tags[] = $p_tag;
             $hRef[] = $sHREF;
 
@@ -95,30 +95,24 @@ class Tags
 
 
     /**
-     * returnes true if $p_tag is a "<close tag>"
+     * Returns true if $tag is a "<close tag>"
      *
-     * @param $p_tag - tag string $p_array - tag array;
-     * @return true/false
-     */
-    /**
-     * Returns true if $p_tag is a "<close tag>"
-     *
-     * @param $p_tag string - tag name
+     * @param string $tag tag name
      * @return boolean
      */
-    protected function CloseTag($p_tag)
+    protected function isCloseTag(string $tag): bool
     {
         $tags = &$this->tags;
         $hRef = &$this->hRef;
-        $maxElem = &$this->tagMaxElem;
+        $maxElem = &$this->maxLength;
 
-        if (!preg_match("/^<\/([a-zA-Z0-9]{1,$maxElem})>$/i", $p_tag, $reg)) {
+        if (!preg_match("/^<\/([a-zA-Z0-9]{1,$maxElem})>$/i", $tag, $reg)) {
             return false;
         }
 
-        $p_tag = $reg[1];
+        $tag = $reg[1];
 
-        if (in_array("$p_tag", $tags)) {
+        if (in_array("$tag", $tags)) {
             array_pop($tags);
             array_pop($hRef);
 
@@ -130,23 +124,23 @@ class Tags
 
 
     /**
-     * Expands the paramteres that are kept in Href field
+     * Expands the parameters that are kept in Href field
      *
-     * @param $pResult
-     * @return string
+     * @param array $data
+     * @return array
      */
-    protected function expand_parameters($pResult)
+    protected function expandParams(array $data): array
     {
-        $aTmp = $pResult['params'];
-        if ($aTmp != '') {
-            for ($i = 0; $i < count($aTmp); $i++) {
-                $pResult[$aTmp[$i][0]] = $aTmp[$i][1];
+        $tmp = $data['params'];
+        if ($tmp != '') {
+            for ($i = 0; $i < count($tmp); $i++) {
+                $data[$tmp[$i][0]] = $tmp[$i][1];
             }
         }
 
-        unset($pResult['params']);
+        unset($data['params']);
 
-        return $pResult;
+        return $data;
     }
 
 
@@ -156,7 +150,7 @@ class Tags
      * @param $result array - the array that has to be optimized
      * @return array - optimized result
      */
-    protected function optimizeTags($result)
+    protected function optimizeTags(array $result): array
     {
         if (count($result) == 0) {
             return $result;
@@ -171,7 +165,7 @@ class Tags
             if (($current['tag'] == $result[$i]['tag']) && ($current['params'] == $result[$i]['params'])) {
                 $current['text'] .= $result[$i]['text'];
             } else {
-                $current = $this->expand_parameters($current);
+                $current = $this->expandParams($current);
                 $res_result[] = $current;
                 $current = $result[$i];
             }
@@ -179,7 +173,7 @@ class Tags
             $i++;
         }
 
-        $current = $this->expand_parameters($current);
+        $current = $this->expandParams($current);
         $res_result[] = $current;
 
         return $res_result;
@@ -187,12 +181,13 @@ class Tags
 
 
     /**
-     * Parses a string and returnes an array of TAG - SRTING correspondent array The result has the following structure: [ array (string1, tag1), array (string2, tag2), ... etc ]
+     * Parses a string and returns an array of TAG - STRING correspondent array
+     * The result has the following structure: [ array (string1, tag1), array (string2, tag2), ... etc ]
      *
      * @param $string string - the Input String
      * @return array - the result array
      */
-    public function getTags($string)
+    public function getTags(string $string): array
     {
         $tags = &$this->tags;
         $hRef = &$this->hRef;
@@ -210,10 +205,10 @@ class Tags
                 continue;
             }
 
-            if ($this->OpenTag($val, $reg)) {
+            if ($this->isOpenTag($val, $reg)) {
                 $tag = (($temp = end($tags)) != null) ? $temp : '';
                 $href = (($temp = end($hRef)) != null) ? $temp : '';
-            } elseif ($this->CloseTag($val)) {
+            } elseif ($this->isCloseTag($val)) {
                 $tag = (($temp = end($tags)) != null) ? $temp : '';
                 $href = (($temp = end($hRef)) != null) ? $temp : '';
             } else {
