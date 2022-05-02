@@ -72,20 +72,20 @@ class Tags
             return false;
         }
 
-        $p_tag = $reg[1];
+        $match = $reg[1];
 
-        $sHREF = [];
+        $hrefs = [];
         if (isset($reg[2])) {
             preg_match_all("|([^ ]*)=[\"'](.*)[\"']|U", $reg[2], $out, PREG_PATTERN_ORDER);
             for ($i = 0; $i < count($out[0]); $i++) {
                 $out[2][$i] = preg_replace("/([\"'])/i", '', $out[2][$i]);
-                $sHREF[] = [$out[1][$i], $out[2][$i]];
+                $hrefs[] = [$out[1][$i], $out[2][$i]];
             }
         }
 
-        if (in_array("</$p_tag>", $data)) {
-            $tags[] = $p_tag;
-            $hRef[] = $sHREF;
+        if (in_array("</$match>", $data)) {
+            $tags[] = $match;
+            $hRef[] = $hrefs;
 
             return true;
         }
@@ -104,7 +104,7 @@ class Tags
     {
         $tags = &$this->tags;
         $hRef = &$this->hRef;
-        $maxElem = &$this->maxLength;
+        $maxElem = $this->maxLength;
 
         if (!preg_match("/^<\/([a-zA-Z\d]{1,$maxElem})>$/i", $tag, $reg)) {
             return false;
@@ -196,7 +196,7 @@ class Tags
 
         $reg = preg_split('/(<.*>)/U', $string, -1, PREG_SPLIT_DELIM_CAPTURE);
 
-        $href = '';
+        $params = '';
 
         foreach ($reg as $val) {
 
@@ -205,11 +205,11 @@ class Tags
             }
 
             if ($this->isOpenTag($val, $reg)) {
-                $href = (($temp = end($hRef)) != null) ? $temp : '';
+                $params = (($temp = end($hRef)) != null) ? $temp : '';
             } elseif ($this->isCloseTag($val)) {
-                $href = (($temp = end($hRef)) != null) ? $temp : '';
+                $params = (($temp = end($hRef)) != null) ? $temp : '';
             } else {
-                $result[] = ['text' => $val, 'tag' => implode('/', $tags), 'params' => $href];
+                $result[] = ['text' => $val, 'tag' => implode('/', $tags), 'params' => $params];
             }
         }
 
