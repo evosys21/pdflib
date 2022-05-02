@@ -86,4 +86,9 @@ class Pdf extends \FPDF
     {
         $this->Output("F", $fileName);
     }
+
+    public function getRTL(): bool
+    {
+        return false;
+    }
 }

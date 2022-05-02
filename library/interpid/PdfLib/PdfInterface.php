@@ -279,4 +279,27 @@ class PdfInterface
         }
         return $this;
     }
+
+    /**
+     * Set the Internal Encoding to used in PDF Class.
+     */
+    public function setEncoding()
+    {
+        // nop
+    }
+    
+    /**
+     * Returns the Available Width to draw the Text.
+     *
+     * @param number $length
+     * @return string
+     */
+    public static function substr($str, $start, $length = null)
+    {
+        if (null === $length) {
+            return substr($str, $start);
+        } else {
+            return substr($str, $start, $length);
+        }
+    }
 }

@@ -161,6 +161,10 @@ class Image extends CellAbstract implements CellInterface
             $y += ($this->getCellDrawHeight() - $this->getContentHeight()) / 2;
         }
 
+        if ($this->pdf->getRTL()) {
+            $x = $this->pdf->getPageWidth() - $x;
+        }
+
         $this->pdf->Image(
             $this->sFile,
             $x,

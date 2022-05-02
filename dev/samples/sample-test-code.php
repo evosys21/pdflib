@@ -15,7 +15,7 @@ $pdf = PdfFactory::newPdf('multicell');
 $multicell = new Multicell($pdf);
 
 // Set the styles for the advanced multicell
-// Notice: 'default' style is valid for all tags(if definedhp)
+// Notice: 'default' style is valid for all tags(if defined)
 $multicell->setStyle('default', 11, '', '130,0,30', 'helvetica');
 $multicell->setStyle('p', null);
 $multicell->setStyle('b', null, 'B');

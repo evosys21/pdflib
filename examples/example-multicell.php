@@ -28,7 +28,7 @@ $pdf->AddPage();
 $multicell = new Multicell($pdf);
 
 // Set the styles for the advanced multicell
-$multicell->setStyle('p', 11, '', [0, 0, 77], 'helvetica');
+$multicell->setStyle('default', 11, '', [0, 0, 77], 'helvetica');
 $multicell->setStyle('b', null, 'B');
 $multicell->setStyle('i', null, 'I');
 $multicell->setStyle('bi', null, 'BI');
@@ -43,7 +43,7 @@ $multicell->setStyle('h4', 11, null, null, null, 'h');
 $multicell->setStyle('super', 8, null, [255, 102, 153]);
 
 $s = <<<HEREDOC
-This line is a simple text with no formatting(text-formatting from the pdf settings)
+This line is a simple text with no formatting(text-formatting from the pdf defaults)
 
 <p>This line is a paragraph line</p>
 

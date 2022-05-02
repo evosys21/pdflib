@@ -97,9 +97,9 @@ class MulticellOptions
 
     /**
      * Save the TagStyles to a backup variable
-     * @return $this
+     * @return self
      */
-    public function saveStyles()
+    public function saveStyles():self
     {
         $this->stylesBackup = $this->styles;
         return $this;

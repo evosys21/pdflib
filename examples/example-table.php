@@ -29,7 +29,6 @@ $table = new Table($pdf);
 
 // Set the styles for the advanced table
 $table->setStyle('default', 11, '', [0, 0, 77], 'helvetica');
-$table->setStyle('p', null, null);
 $table->setStyle('b', null, 'B');
 $table->setStyle('i', null, 'I');
 $table->setStyle('bi', null, 'BI');

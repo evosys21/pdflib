@@ -115,7 +115,6 @@ class Multicell
      */
     private static $_singleton = []; //implements the Singleton Pattern
 
-
     protected $fill = true;
 
     /**
@@ -174,12 +173,12 @@ class Multicell
 
 
     /**
-     * Returnes the Singleton Instance of this class.
+     * Returns the Singleton Instance of this class.
      *
      * @param Pdf $pdf Instance of the pdf class
      * @return self
      */
-    public static function getInstance($pdf)
+    public static function getInstance(Pdf $pdf): Multicell
     {
         $instance = &self::$_singleton[spl_object_hash($pdf)];
 
@@ -418,9 +417,8 @@ class Multicell
      * @param string $tag tag name
      * @param array $style
      */
-    protected function applyStyle($tag, $style = [])
+    protected function applyStyle(string $tag, array $style = [])
     {
-
         $tagKey = $tag . md5(serialize($style));
 
         if ($this->currentTag == $tagKey) {
@@ -766,6 +764,9 @@ class Multicell
         $this->multicellData->paddingBottom = $paddingBottom;
 
         $this->multicellData->initialize();
+
+        // set the proper encoding
+        $this->pdfi->setEncoding();
 
         $this->saveStyles();
 
@@ -1205,11 +1206,11 @@ class Multicell
      *
      * @param string $tag inner tag
      * @param string $char character specified by ascii/unicode code
-     * @return number the char width
+     * @return float|int the char width
      */
-    protected function mt_getCharWidth($tag, $char)
+    protected function mt_getCharWidth(string $tag, string $char)
     {
-        //if this font was not used untill now,
+        //if this font was not used until now,
         $this->applyStyle($tag);
         $fw[$tag]['w'] = $this->pdf->CurrentFont['cw']; //width
         $fw[$tag]['s'] = $this->pdf->FontSize; //size
@@ -1279,13 +1280,9 @@ class Multicell
      * @param number $length
      * @return string
      */
-    public static function substr($str, $start, $length = null)
+    public static function substr(string $str, $start, $length = null): string
     {
-        if (null === $length) {
-            return substr($str, $start);
-        } else {
-            return substr($str, $start, $length);
-        }
+        return PdfInterface::substr($str, $start, $length);
     }
 
 

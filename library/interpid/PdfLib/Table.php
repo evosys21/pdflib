@@ -292,6 +292,7 @@ class Table
         'EMPTY' => '\Interpid\PdfLib\Table\Cell\EmptyCell',
         'MULTICELL' => '\Interpid\PdfLib\Table\Cell\Multicell',
         'IMAGE' => '\Interpid\PdfLib\Table\Cell\Image',
+        'IMAGESVG' => '\Interpid\PdfLib\Table\Cell\ImageSVG',
     );
 
     /**
@@ -327,6 +328,8 @@ class Table
 
         //get the default configuration
         $this->configuration = $this->getDefaultConfiguration();
+
+        $this->pdfi->setEncoding();
     }
 
 
@@ -643,9 +646,14 @@ class Table
         //set the line width
         $this->pdf->SetLineWidth($this->getTableConfig('BORDER_SIZE'));
 
+        $x = $this->tableStartX;
+        if ($this->pdf->getRTL()) {
+            $x = $this->pdf->getPageWidth() - $x - $this->getWidth();
+        }
+
         //draw the border
         $this->pdf->Rect(
-            $this->tableStartX,
+            $x,
             $this->tableStartY,
             $this->getWidth(),
             $this->pdf->GetY() - $this->tableStartY
