@@ -54,6 +54,7 @@ tests-php:
           - php73
           - php74
           - php80
+          - php81
 
 code-coverage:
   stage: quality
