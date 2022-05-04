@@ -9,7 +9,7 @@ All notable changes to FPDF Advanced Multicell will be documented in this file.
   - remove `base` default style
   - remove deprecated functions
   - create `setStyleAssoc` function, for associative style defining
-- Change, Drop support for PHP5
+- Change, Drop support for PHP5, min PHP 7.1 required
 
 ### 3.3.0 (2021-12-13)
 
