@@ -1,4 +1,5 @@
-<?php /** @noinspection SpellCheckingInspection */
+<?php
+/** @noinspection SpellCheckingInspection */
 
 /**
  * This file is part of the Interpid PDF Addon package.
