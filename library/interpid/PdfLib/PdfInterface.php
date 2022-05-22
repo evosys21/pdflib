@@ -78,7 +78,7 @@ class PdfInterface
      *
      * @return int|float The remaining width
      */
-    public function getRemainingWidth(): int
+    public function getRemainingWidth()
     {
         $n = $this->getPageWidth() - $this->getX();
 

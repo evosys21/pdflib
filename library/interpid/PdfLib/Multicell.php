@@ -164,6 +164,17 @@ class Multicell
     }
 
     /**
+     * Returns the Pdf Interface Object
+     *
+     * @return PdfInterface
+     */
+    public function getPdfInterfaceObject()
+    {
+        return $this->pdfi;
+    }
+
+
+    /**
      * Returns the Singleton Instance of this class.
      *
      * @param Pdf $pdf Instance of the pdf class
@@ -269,7 +280,6 @@ class Multicell
      * Sets the Tags Maximum width
      *
      * @param int $width the width of the tags
-     * @noinspection PhpUnused
      */
     public function setTagWidthMax(int $width = 25)
     {

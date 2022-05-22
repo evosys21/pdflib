@@ -2,7 +2,7 @@
 
 All notable changes to FPDF Advanced Table will be documented in this file.
 
-### 6.5.0 (2022-05-05)
+### 6.5.0 (2022-05-23)
 
 - Change, Simplify style inheritance and definition.
   - use `default` tag for default styling

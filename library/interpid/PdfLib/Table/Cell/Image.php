@@ -1,6 +1,5 @@
 <?php
 /** @noinspection PhpUnused */
-/** @noinspection PhpUnused */
 
 /**
  * This file is part of the Interpid PDF Addon package.

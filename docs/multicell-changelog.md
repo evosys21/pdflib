@@ -2,7 +2,7 @@
 
 All notable changes to FPDF Advanced Multicell will be documented in this file.
 
-### 3.4.0 (2022-05-05)
+### 3.4.0 (2022-05-23)
 
 - Change, Simplify style inheritance and definition.
   - use `default` tag for default styling
