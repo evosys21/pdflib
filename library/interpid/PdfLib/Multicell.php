@@ -1,4 +1,6 @@
 <?php
+/** @noinspection PhpUnhandledExceptionInspection */
+/** @noinspection PhpDocMissingThrowsInspection */
 
 /**
  * This file is part of the Interpid PDF Addon package.
@@ -16,7 +18,9 @@ if (!defined('PARAGRAPH_STRING')) {
     define('PARAGRAPH_STRING', '~~~');
 }
 
+use Exception;
 use Interpid\PdfLib\String\Tags;
+use Interpid\PdfLib\Utils\Arr;
 
 /**
  * Pdf Multicell
@@ -25,6 +29,8 @@ use Interpid\PdfLib\String\Tags;
 class Multicell
 {
     const SEPARATOR = ' ,.:;';
+    const DEFAULT_TAG = 'default';
+    const PDF_CURRENT = '__current__';
 
     /**
      * Set to 1 to debug cell borders
@@ -111,7 +117,6 @@ class Multicell
      */
     private static $_singleton = []; //implements the Singleton Pattern
 
-
     protected $fill = true;
 
     /**
@@ -129,7 +134,7 @@ class Multicell
      *
      * @param Pdf $pdf Instance of the pdf class
      */
-    public function __construct($pdf)
+    public function __construct(Pdf $pdf)
     {
         $this->pdf = $pdf;
         $this->pdfi = new PdfInterface($pdf);
@@ -141,7 +146,7 @@ class Multicell
      * Reset the multicell options
      * @return self
      */
-    public function reset()
+    public function reset(): self
     {
         $this->options->resetCellOptions();
         return $this;
@@ -151,9 +156,9 @@ class Multicell
     /**
      * Returns the PDF object
      *
-     * @return Pdf
+     * @return Pdf|null
      */
-    public function getPdfObject()
+    public function getPdfObject(): ?Pdf
     {
         return $this->pdf;
     }
@@ -163,19 +168,19 @@ class Multicell
      *
      * @return PdfInterface
      */
-    public function getPdfInterfaceObject()
+    public function getPdfInterfaceObject(): PdfInterface
     {
         return $this->pdfi;
     }
 
 
     /**
-     * Returnes the Singleton Instance of this class.
+     * Returns the Singleton Instance of this class.
      *
      * @param Pdf $pdf Instance of the pdf class
      * @return self
      */
-    public static function getInstance($pdf)
+    public static function getInstance(Pdf $pdf): self
     {
         $instance = &self::$_singleton[spl_object_hash($pdf)];
 
@@ -192,7 +197,7 @@ class Multicell
      *
      * @param $string string
      */
-    public function setLineBreakingCharacters($string)
+    public function setLineBreakingCharacters(string $string)
     {
         $this->lineBreakingChars = $string;
     }
@@ -211,13 +216,14 @@ class Multicell
      * Sets the attributes for the specified tag
      *
      * @param string $tag tag name/key
-     * @param float|null $fontSize font size
+     * @param int|float|null $fontSize font size
      * @param string|null $fontStyle font style
      * @param string|array|null $color
      * @param string|null $fontFamily font family
-     * @param string $inherit Tag to be inherited
+     * @param string|null $inherit Tag to be inherited
+     * @return self
      */
-    public function setStyle($tag, $fontSize = null, $fontStyle = null, $color = null, $fontFamily = null, $inherit = 'base')
+    public function setStyle(string $tag, $fontSize = null, ?string $fontStyle = null, $color = null, ?string $fontFamily = null, ?string $inherit = null):self
     {
         if ($tag == 'ttags') {
             $this->pdf->Error(">> ttags << is reserved TAG Name.");
@@ -248,33 +254,36 @@ class Multicell
         }
 
         $this->options->styles[$tag] = $tagData;
+        return $this;
     }
 
     /**
-     * Sets the attributes for the specified tag.
-     * Deprecated function. Use $this->setStyle function.
+     * Define a tag style with a configuration array
      *
-     * @param string $tagName tag name
-     * @param string $fontFamily font family
-     * @param string $fontStyle font style
-     * @param float $fontSize font size
-     * @param mixed(string|array) $color font color
-     * @deprecated
+     * @param string $tag Tag name
+     * @param array $properties Tag properties
+     * @param null $inherit Tag to inherit
      */
-    public function setStyleDep($tagName, $fontFamily, $fontStyle, $fontSize, $color)
+    public function setStyleAssoc(string $tag, array $properties = [], $inherit = null)
     {
-        $this->setStyle($tagName, $fontSize, $fontStyle, $color, $fontFamily);
+        $this->setStyle(
+            $tag,
+            Arr::firstKey($properties, ['size', 'font_size']),
+            Arr::firstKey($properties, ['style', 'font_style']),
+            Arr::firstKey($properties, ['color', 'text_color']),
+            Arr::firstKey($properties, ['family', 'font_family']),
+            $inherit
+        );
     }
-
 
     /**
      * Sets the Tags Maximum width
      *
-     * @param int|number $iWidth the width of the tags
+     * @param int $width the width of the tags
      */
-    public function setTagWidthMax($iWidth = 25)
+    public function setTagWidthMax(int $width = 25)
     {
-        $this->tagWidthMax = $iWidth;
+        $this->tagWidthMax = $width;
     }
 
 
@@ -305,7 +314,7 @@ class Multicell
      * @param string $tag tag name
      * @return string The font family
      */
-    public function getTagFont($tag)
+    public function getTagFont(string $tag): string
     {
         return $this->getTagAttribute($tag, 'family');
     }
@@ -317,7 +326,7 @@ class Multicell
      * @param string $tag tag name
      * @return string The font style
      */
-    public function getTagFontStyle($tag)
+    public function getTagFontStyle(string $tag): string
     {
         return $this->getTagAttribute($tag, 'style');
     }
@@ -329,7 +338,7 @@ class Multicell
      * @param string $tag tag name
      * @return string The font size
      */
-    public function getTagSize($tag)
+    public function getTagSize(string $tag): string
     {
         return $this->getTagAttribute($tag, 'size');
     }
@@ -339,9 +348,9 @@ class Multicell
      * Returns the specified tag text color
      *
      * @param string $tag tag name
-     * @return string The tag color
+     * @return string|array The tag color
      */
-    public function getTagColor($tag)
+    public function getTagColor(string $tag)
     {
         return $this->getTagAttribute($tag, 'color');
     }
@@ -353,24 +362,21 @@ class Multicell
      * @param string $tag tag name
      * @param string $attribute attribute name
      * @return mixed
-     * @throws \Exception
+     * @throws Exception
      */
-    protected function getTagAttribute($tag, $attribute)
+    protected function getTagAttribute(string $tag, string $attribute)
     {
-
-        $tags = explode('/', $tag);
+        // explode and remove empty values
+        $tags = array_filter(explode('/', $tag));
         //reverse the array - the latter is going to be first
         $tags = array_reverse($tags);
+        $tags[] = static::DEFAULT_TAG;
+        $tags[] = static::PDF_CURRENT;
         foreach ($tags as $oneTag) {
             $val = $this->getOneTagAttribute($oneTag, $attribute);
             if (!is_null($val)) {
                 return $val;
             }
-        }
-
-        if ($tag !== 'DEFAULT') {
-            //avoid recursivity
-            return $this->getOneTagAttribute('DEFAULT', $attribute);
         }
 
         return '';
@@ -383,19 +389,19 @@ class Multicell
      * @param string $attribute attribute name
      * @return mixed
      */
-    protected function getOneTagAttribute($tag, $attribute)
+    protected function getOneTagAttribute(string $tag, string $attribute)
     {
         //tags are saved uppercase!
         $tag = strtoupper($tag);
 
         if ('TTAGS' === $tag) {
-            $tag = 'DEFAULT';
+            $tag = static::DEFAULT_TAG;
         }
         if ('PPARG' === $tag) {
-            $tag = 'DEFAULT';
+            $tag = static::DEFAULT_TAG;
         }
         if ('' === $tag) {
-            $tag = 'DEFAULT';
+            $tag = static::DEFAULT_TAG;
         }
 
         if (isset($this->options->styles[$tag][$attribute])) {
@@ -415,9 +421,8 @@ class Multicell
      * @param string $tag tag name
      * @param array $style
      */
-    protected function applyStyle($tag, $style = [])
+    protected function applyStyle(string $tag, array $style = [])
     {
-
         $tagKey = $tag . md5(serialize($style));
 
         if ($this->currentTag == $tagKey) {
@@ -456,7 +461,7 @@ class Multicell
      * @return array $aLine - array() -> contains information to draw a line
      * @internal param number $width the width of the cell
      */
-    protected function makeLine($width)
+    protected function makeLine($width): array
     {
         //last line break >> current line break
         $this->dataExtraInfo['LAST_LINE_BR'] = $this->dataExtraInfo['CURRENT_LINE_BR'];
@@ -466,29 +471,29 @@ class Multicell
             $width = $this->pdfi->getRemainingWidth();
         }
 
-        $nMaximumWidth = $width;
+        $maximumWidth = $width;
 
-        $aLine = []; //this will contain the result
-        $bReturnResult = false; //if break and return result
-        $bResetSpaces = false;
+        $lineData = []; //this will contain the result
+        $returnResult = false; //if break and return result
+        $resetSpaces = false;
 
-        $nLineWith = 0; //line string width
+        $lineWith = 0; //line string width
         $totalChars = 0; //total characters included in the result string
         $fw = &$this->fontInfo; //font info array
 
 
-        $last_sepch = ''; //last separator character
+        $lastSeparator = ''; //last separator character
 
-        foreach ($this->dataInfo as $key => $val) {
+        foreach ($this->dataInfo as $val) {
             $s = $val['text'];
 
             $tag = $val['tag'];
 
             $cellData = [
                 'align' => Tools::getValue($val, 'align'),
-                'href' => Tools::getValue($val, 'href', ''),
-                'nowrap' => Tools::getValue($val, 'nowrap', ''),
-                'style' => Tools::parseHtmlAttribute(Tools::getValue($val, 'style', '')),
+                'href' => Tools::getValue($val, 'href'),
+                'nowrap' => Tools::getValue($val, 'nowrap'),
+                'style' => Tools::parseHtmlAttribute(Tools::getValue($val, 'style')),
                 'strike' => $this->getStrikeValue($val),
             ];
 
@@ -508,46 +513,46 @@ class Multicell
             $i = 0; //from where is the string remain
             $j = 0; //until where is the string good to copy
             $currentWidth = 0; //string width
-            $last_sep = -1; //last separator position
-            $last_sepwidth = 0;
-            $last_sepch_width = 0;
-            $ante_last_sep = -1; //ante last separator position
-            $ante_last_sepch = '';
-            $ante_last_sepwidth = 0;
-            $nSpaces = 0;
+            $lastSeparatorPosition = -1; //last separator position
+            $lastSeparatorWidth = 0;
+            $lastSeparatorCharWidth = 0;
+            $anteSeparatorPosition = -1; //ante last separator position
+            $anteSeparatorWitdh = '';
+            $anteSeparatorCharWidth = 0;
+            $spaces = 0;
 
-            $aString = $this->pdfi->stringToArray($s);
-            $nStringLength = count($aString);
+            $string = $this->pdfi->stringToArray($s);
+            $stringLength = count($string);
 
             //parse the whole string
-            while ($i < $nStringLength) {
-                $c = $aString[$i];
+            while ($i < $stringLength) {
+                $c = $string[$i];
 
                 if ($c == ord("\n")) { //Explicit line break
                     $i++; //ignore/skip this character
                     $this->dataExtraInfo['CURRENT_LINE_BR'] = 'BREAK';
-                    $bReturnResult = true;
-                    $bResetSpaces = true;
+                    $returnResult = true;
+                    $resetSpaces = true;
                     break;
                 }
 
                 //space
                 if ($c == ord(" ")) {
-                    $nSpaces++;
+                    $spaces++;
                 }
 
                 $char_width = $this->mt_getCharWidth($tag, $c);
 
                 //separators
                 if (!$nowrap && in_array($c, array_map('ord', str_split($this->lineBreakingChars)))) {
-                    $ante_last_sep = $last_sep;
-                    $ante_last_sepch = $last_sepch;
-                    $ante_last_sepwidth = $last_sepwidth;
+                    $anteSeparatorPosition = $lastSeparatorPosition;
+                    $anteSeparatorWitdh = $lastSeparator;
+                    $anteSeparatorCharWidth = $lastSeparatorWidth;
 
-                    $last_sep = $i; //last separator position
-                    $last_sepch = $c; //last separator char
-                    $last_sepch_width = $char_width; //last separator char
-                    $last_sepwidth = $currentWidth;
+                    $lastSeparatorPosition = $i; //last separator position
+                    $lastSeparator = $c; //last separator char
+                    $lastSeparatorCharWidth = $char_width; //last separator char
+                    $lastSeparatorWidth = $currentWidth;
                 }
 
                 if ($c == ord("\t")) { //TAB
@@ -557,7 +562,7 @@ class Multicell
                     $char_width = $this->dataExtraInfo['TAB_WIDTH'];
                 }
 
-                if ($isParagraph == true) {
+                if ($isParagraph) {
                     $c = ord('');
                     $s = substr_replace($s, ' ', $i, 1);
                     $char_width = $this->tempData['LAST_TAB_REQSIZE'] - $this->tempData['LAST_TAB_SIZE'];
@@ -566,10 +571,10 @@ class Multicell
                     }
                 }
 
-                $nLineWith += $char_width;
+                $lineWith += $char_width;
 
                 //round these values to a precision of 5! should be enough
-                if (round($nLineWith, 5) > round($nMaximumWidth, 5)) { //Automatic line break
+                if (round($lineWith, 5) > round($maximumWidth, 5)) { //Automatic line break
 
 
                     $this->dataExtraInfo['CURRENT_LINE_BR'] = 'AUTO';
@@ -580,43 +585,43 @@ class Multicell
                          */
                         $i = 1;
                         $j = 1;
-                        $bReturnResult = true; //YES RETURN THE RESULT!!!
+                        $returnResult = true; //YES RETURN THE RESULT!!!
                         break;
                     }
 
 
-                    if ($last_sep != -1) {
+                    if ($lastSeparatorPosition != -1) {
                         //we have a separator in this tag!!!
                         //untill now there one separator
-                        if (($last_sepch == $c) && ($last_sepch != ord(" ")) && ($ante_last_sep != -1)) {
+                        if (($lastSeparator == $c) && ($lastSeparator != ord(" ")) && ($anteSeparatorPosition != -1)) {
                             /*
                              * this is the last character and it is a separator, if it is a space the leave it... Have to jump back to the last separator... even a space
                              */
-                            $last_sep = $ante_last_sep;
-                            $last_sepch = $ante_last_sepch;
-                            $last_sepwidth = $ante_last_sepwidth;
+                            $lastSeparatorPosition = $anteSeparatorPosition;
+                            $lastSeparator = $anteSeparatorWitdh;
+                            $lastSeparatorWidth = $anteSeparatorCharWidth;
                         }
 
-                        if ($last_sepch == ord(" ")) {
-                            $j = $last_sep; //just ignore the last space (it is at end of line)
-                            $i = $last_sep + 1;
-                            if ($nSpaces > 0) {
-                                $nSpaces--;
+                        if ($lastSeparator == ord(" ")) {
+                            $j = $lastSeparatorPosition; //just ignore the last space (it is at end of line)
+                            $i = $lastSeparatorPosition + 1;
+                            if ($spaces > 0) {
+                                $spaces--;
                             }
-                            $currentWidth = $last_sepwidth;
+                            $currentWidth = $lastSeparatorWidth;
                         } else {
-                            $j = $last_sep + 1;
-                            $i = $last_sep + 1;
-                            $currentWidth = $last_sepwidth + $last_sepch_width;
+                            $j = $lastSeparatorPosition + 1;
+                            $i = $lastSeparatorPosition + 1;
+                            $currentWidth = $lastSeparatorWidth + $lastSeparatorCharWidth;
                         }
-                    } elseif (count($aLine) > 0) {
+                    } elseif (count($lineData) > 0) {
                         //we have elements in the last tag!!!!
-                        if ($last_sepch == ord(" ")) { //the last tag ends with a space, have to remove it
+                        if ($lastSeparator == ord(" ")) { //the last tag ends with a space, have to remove it
 
 
-                            $temp = &$aLine[count($aLine) - 1];
+                            $temp = &$lineData[count($lineData) - 1];
 
-                            if (' ' == self::strchar($temp['text'], -1)) {
+                            if (' ' == self::strChar($temp['text'], -1)) {
                                 $temp['text'] = self::substr(
                                     $temp['text'],
                                     0,
@@ -631,7 +636,7 @@ class Multicell
                     }
 
 
-                    $bReturnResult = true;
+                    $returnResult = true;
                     break;
                 }
 
@@ -650,13 +655,13 @@ class Multicell
             $sTmpStr = $this->dataInfo[0]['text'];
             $sTmpStr = self::substr($sTmpStr, $i, self::strlen($sTmpStr));
 
-            if (($sTmpStr == '') || ($sTmpStr === false)) {
+            if ($sTmpStr == '') {
                 array_shift($this->dataInfo);
             } else {
                 $this->dataInfo[0]['text'] = $sTmpStr;
             }
 
-            $y = isset($val['y']) ? $val['y'] : (isset($val['ypos']) ? $val['ypos'] : 0);
+            $y = $val['y'] ?? ($val['ypos'] ?? 0);
 
             $cellData = array_merge([
                 'text' => $str,
@@ -665,7 +670,7 @@ class Multicell
                 'custom_width' => 0,
                 'width_real' => $currentWidth,
                 'width' => $currentWidth,
-                'spaces' => $nSpaces,
+                'spaces' => $spaces,
                 'y' => $y
             ], $cellData);
 
@@ -675,25 +680,25 @@ class Multicell
             }
 
             //we have a partial result
-            array_push($aLine, $cellData);
+            $lineData[] = $cellData;
 
 
             $this->tempData['LAST_TAB_SIZE'] = $currentWidth;
             $this->tempData['LAST_TAB_REQSIZE'] = (isset($val['size'])) ? $val['size'] : 0;
 
-            if ($bReturnResult) {
+            if ($returnResult) {
                 break;
             } //break this for
         }
 
 
         // Check the first and last tag -> if first and last caracters are " " space remove them!!!"
-        if ((count($aLine) > 0) && ($this->dataExtraInfo['LAST_LINE_BR'] == 'AUTO')) {
+        if ((count($lineData) > 0) && ($this->dataExtraInfo['LAST_LINE_BR'] == 'AUTO')) {
 
             // first tag
             // If the first character is a space, then cut it off
-            $temp = &$aLine[0];
-            if ((self::strlen($temp['text']) > 0) && (" " == self::strchar($temp['text'], 0))) {
+            $temp = &$lineData[0];
+            if ((self::strlen($temp['text']) > 0) && (" " == self::strChar($temp['text'], 0))) {
                 $temp['text'] = self::substr($temp['text'], 1, self::strlen($temp['text']));
                 $temp['width'] -= $this->mt_getCharWidth($temp['tag'], ord(" "));
                 $temp['width_real'] -= $this->mt_getCharWidth($temp['tag'], ord(" "));
@@ -701,8 +706,8 @@ class Multicell
             }
 
             // If the last character is a space, then cut it off
-            $temp = &$aLine[count($aLine) - 1];
-            if ((self::strlen($temp['text']) > 0) && (" " == self::strchar($temp['text'], -1))) {
+            $temp = &$lineData[count($lineData) - 1];
+            if ((self::strlen($temp['text']) > 0) && (" " == self::strChar($temp['text'], -1))) {
                 $temp['text'] = self::substr($temp['text'], 0, self::strlen($temp['text']) - 1);
                 $temp['width'] -= $this->mt_getCharWidth($temp['tag'], ord(" "));
                 $temp['width_real'] -= $this->mt_getCharWidth($temp['tag'], ord(" "));
@@ -710,14 +715,14 @@ class Multicell
             }
         }
 
-        if ($bResetSpaces) { //this is used in case of a "Explicit Line Break"
+        if ($resetSpaces) { //this is used in case of a "Explicit Line Break"
             //put all spaces to 0 so in case of 'J' align there is no space extension
-            for ($k = 0; $k < count($aLine); $k++) {
-                $aLine[$k]['spaces'] = 0;
+            for ($k = 0; $k < count($lineData); $k++) {
+                $lineData[$k]['spaces'] = 0;
             }
         }
 
-        return $aLine;
+        return $lineData;
     }
 
 
@@ -725,32 +730,30 @@ class Multicell
      * Draws a MultiCell with a TAG Based Formatted String as an Input
      *
      *
-     * @param number $width width of the cell
-     * @param number $height height of the lines in the cell
-     * @param mixed(string|array) $data string or formatted data to be put in the multicell
-     * @param mixed(string|number) $border Indicates if borders must be drawn around the cell block. The value can be either a number: 0 = no border 1 = frame border or a string containing some or
-     * all of the following characters (in any order): L: left T: top R: right B: bottom
+     * @param float $width width of the cell
+     * @param float $height height of the lines in the cell
+     * @param $data
+     * @param string|int $border
      * @param string $align Sets the text alignment Possible values: L: left R: right C: center J: justified
-     * @param int|number $fill Indicates if the cell background must be painted (1) or transparent (0). Default value: 0.
-     * @param int|number $paddingLeft Left padding
-     * @param int|number $paddingTop Top padding
-     * @param int|number $paddingRight Right padding
-     * @param int|number $paddingBottom Bottom padding
+     * @param int $fill Indicates if the cell background must be painted (1) or transparent (0). Default value: 0.
+     * @param float $paddingLeft Left padding
+     * @param float $paddingTop Top padding
+     * @param float $paddingRight Right padding
+     * @param float $paddingBottom Bottom padding
      */
     public function multiCell(
-        $width,
-        $height,
-        $data,
-        $border = 0,
-        $align = 'J',
-        $fill = 0,
-        $paddingLeft = 0,
-        $paddingTop = 0,
-        $paddingRight = 0,
-        $paddingBottom = 0
+        float  $width,
+        float  $height,
+               $data,
+               $border = 0,
+        string $align = 'J',
+        int    $fill = 0,
+        float  $paddingLeft = 0,
+        float  $paddingTop = 0,
+        float  $paddingRight = 0,
+        float  $paddingBottom = 0
     )
     {
-
         $this->multicellData = new MulticellData($this->pdf);
         $this->multicellData->width = $width;
         $this->multicellData->lineHeight = $height;
@@ -764,6 +767,9 @@ class Multicell
         $this->multicellData->paddingBottom = $paddingBottom;
 
         $this->multicellData->initialize();
+
+        // set the proper encoding
+        $this->pdfi->setEncoding();
 
         $this->saveStyles();
 
@@ -791,7 +797,7 @@ class Multicell
 
             $this->multiCellSec($this->multicellData, $aSendData);
 
-            if (true == $bAddNewPage) {
+            if ($bAddNewPage) {
                 $this->beforeAddPage();
                 $this->pdf->AddPage();
                 $this->afterAddPage();
@@ -799,10 +805,7 @@ class Multicell
             }
         } while ((($iCounter--) > 0) && (false == $doBreak));
 
-        //unset the multicell Data
-
         $this->restoreStyles();
-
         $this->multicellData = null;
     }
 
@@ -817,7 +820,7 @@ class Multicell
      * The value can be either a number: 0 = no border 1 = frame border or a string containing some or all of
      * the following characters (in any order): L: left T: top R: right B: bottom
      */
-    public function multiCellSec($multicellData, $data)
+    public function multiCellSec(MulticellData $multicellData, $data)
     {
         $this->resetData();
 
@@ -837,7 +840,6 @@ class Multicell
                 $b2 = 'LR'; //without the top and bottom
                 $b3 = 'LRB'; //without the top
             } else {
-                $b2 = '';
                 if (is_int(strpos($border, 'L'))) {
                     $b2 .= 'L';
                 }
@@ -849,7 +851,6 @@ class Multicell
             }
 
             //used if there is only one line
-            $b = '';
             $b .= is_int(strpos($border, 'L')) ? 'L' : '';
             $b .= is_int(strpos($border, 'R')) ? 'R' : '';
             $b .= is_int(strpos($border, 'T')) ? 'T' : '';
@@ -867,7 +868,7 @@ class Multicell
                  */
                 $x = $this->pdf->GetX();
                 $y = $this->pdf->GetY();
-                $this->pdfi->Cell($multicellData->width, $multicellData->paddingTop, '', $b1, 0, $align, $this->fill, '');
+                $this->pdfi->Cell($multicellData->width, $multicellData->paddingTop, '', $b1, 0, $align, $this->fill);
                 $b1 = str_replace('T', '', $b1);
                 $b = str_replace('T', '', $b);
                 $this->pdf->SetXY($x, $y + $multicellData->paddingTop);
@@ -935,7 +936,7 @@ class Multicell
      *
      * @param string $string string to be parsed
      */
-    protected function divideByTags($string)
+    protected function divideByTags(string $string)
     {
         $string = str_replace("\t", "<ttags>\t</ttags>", $string);
         $string = str_replace(PARAGRAPH_STRING, "<pparg>\t</pparg>", $string);
@@ -960,7 +961,7 @@ class Multicell
      * @param MulticellData $multicellData
      * @return array $aStrLines - contains parsed text information.
      */
-    public function stringToLines(MulticellData $multicellData)
+    public function stringToLines(MulticellData $multicellData): array
     {
         //save the current style settings, this will be the default in case of no style is specified
         $options = $this->options;
@@ -989,7 +990,7 @@ class Multicell
 
             //make a line
             $str_data = $this->makeLine($multicellData->textWidth);
-            array_push($parsedLines, $str_data);
+            $parsedLines[] = $str_data;
 
             #1247 - limit the maximum number of lines
             if ($options->isHeightOverflow($lines, $height)) {
@@ -998,7 +999,7 @@ class Multicell
                     $parsedLines = [];
                     $lines = 0;
                     $options->shrinkStyleFonts();
-                    $multicellData->lineHeight = $options->shrinkValue($multicellData->lineHeight, $options->shrinkLineHeightStep, 1);
+                    $multicellData->lineHeight = $options->shrinkValue($multicellData->lineHeight, $options->shrinkLineHeightStep);
                     $this->dataInfo = $dataInfo;
                     $this->currentTag = '__UNDEFINED__';
                     continue;
@@ -1011,8 +1012,8 @@ class Multicell
             $lastLine = !(count($this->dataInfo) > 0);
         }
 
-        //APPLY THE DEFAULT STYLE
-        $this->applyStyle('DEFAULT');
+//        //APPLY THE DEFAULT STYLE
+//        $this->applyStyle(static::DEFAULT_TAG);
 
         if (!$options->applyAll) {
             $this->reset();
@@ -1030,7 +1031,7 @@ class Multicell
      * @param array $data data with text to be draw
      * @param string $align align of the text
      */
-    protected function printLine($width, $height, $data, $align = 'J')
+    protected function printLine($width, $height, array $data, string $align = 'J')
     {
         if (0 == $width) {
             $width = $this->pdfi->getRemainingWidth();
@@ -1057,8 +1058,6 @@ class Multicell
             case 'J':
                 if ($totalSpaces > 0) {
                     $extra_space = ($nMaximumWidth - $totalWidth) / $totalSpaces;
-                } else {
-                    $extra_space = 0;
                 }
                 break;
             case 'L':
@@ -1120,7 +1119,7 @@ class Multicell
             }
 
             if ($val['custom_width']) {
-                $cellAlign = Tools::getCellAlign(Tools::getValue($val, 'align', ''));
+                $cellAlign = Tools::getCellAlign(Tools::getValue($val, 'align'));
 
                 switch ($cellAlign) {
                     case 'C':
@@ -1178,7 +1177,7 @@ class Multicell
 
     /**
      * Function executed BEFORE a new page is added for further actions on the current page.
-     * Usually overwritted.
+     * Usually overwritten.
      */
     public function beforeAddPage()
     {
@@ -1190,7 +1189,7 @@ class Multicell
 
     /**
      * Function executed AFTER a new page is added for pre - actions on the current page.
-     * Usually overwritted.
+     * Usually overwritten.
      */
     public function afterAddPage()
     {
@@ -1206,11 +1205,11 @@ class Multicell
      *
      * @param string $tag inner tag
      * @param string $char character specified by ascii/unicode code
-     * @return number the char width
+     * @return float|int the char width
      */
-    protected function mt_getCharWidth($tag, $char)
+    protected function mt_getCharWidth(string $tag, string $char)
     {
-        //if this font was not used untill now,
+        //if this font was not used until now,
         $this->applyStyle($tag);
         $fw[$tag]['w'] = $this->pdf->CurrentFont['cw']; //width
         $fw[$tag]['s'] = $this->pdf->FontSize; //size
@@ -1223,12 +1222,13 @@ class Multicell
     /**
      * Returns the Available Width to draw the Text.
      *
-     * @param number $width
-     * @param int|number $paddingLeft
-     * @param int|number $paddingRight
-     * @return number the width
+     * @param float $width
+     * @param float $paddingLeft
+     * @param float $paddingRight
+     * @return float the width
+     * @noinspection PhpUnused
      */
-    protected function mt_getAvailableTextWidth($width, $paddingLeft = 0, $paddingRight = 0)
+    protected function mt_getAvailableTextWidth(float $width, float $paddingLeft = 0, float $paddingRight = 0): float
     {
         //if with is == 0
         if (0 == $width) {
@@ -1250,13 +1250,13 @@ class Multicell
     /**
      * Returns the character found in the string at the specified position
      *
-     * @param string $sString
-     * @param int $nPosition
+     * @param string $string
+     * @param int $position
      * @return string
      */
-    protected static function strchar($sString, $nPosition)
+    protected static function strChar(string $string, int $position): string
     {
-        return self::substr($sString, $nPosition, 1);
+        return self::substr($string, $position, 1);
     }
 
 
@@ -1266,7 +1266,7 @@ class Multicell
      * @param string $sStr
      * @return int
      */
-    public static function strlen($sStr)
+    public static function strlen(string $sStr): int
     {
         return strlen($sStr);
     }
@@ -1280,13 +1280,9 @@ class Multicell
      * @param number $length
      * @return string
      */
-    public static function substr($str, $start, $length = null)
+    public static function substr(string $str, $start, $length = null): string
     {
-        if (null === $length) {
-            return substr($str, $start);
-        } else {
-            return substr($str, $start, $length);
-        }
+        return PdfInterface::substr($str, $start, $length);
     }
 
 
@@ -1294,17 +1290,20 @@ class Multicell
      * Enable or disable background fill.
      *
      * @param boolean $value
+     * @return $this
      */
-    public function enableFill($value)
+    public function enableFill(bool $value): self
     {
         $this->fill = $value;
+        return $this;
     }
 
     /**
      * @param int $maxLines
      * @return $this
+     * @noinspection PhpUnused
      */
-    public function setMaxLines($maxLines)
+    public function setMaxLines(int $maxLines): self
     {
         $this->maxLines($maxLines - 1);
         return $this;
@@ -1314,7 +1313,7 @@ class Multicell
      * @param int $maxLines
      * @return $this
      */
-    public function maxLines($maxLines)
+    public function maxLines(int $maxLines): self
     {
         $this->options->maxLines = $maxLines;
         return $this;
@@ -1324,7 +1323,7 @@ class Multicell
      * @param int $maxHeight
      * @return self
      */
-    public function maxHeight($maxHeight)
+    public function maxHeight(int $maxHeight): self
     {
         $this->options->maxHeight = $maxHeight;
         return $this;
@@ -1334,7 +1333,7 @@ class Multicell
      * @param bool $shrinkToFit
      * @return self
      */
-    public function shrinkToFit($shrinkToFit = true)
+    public function shrinkToFit(bool $shrinkToFit = true): self
     {
         $this->options->shrinkToFit = $shrinkToFit;
         return $this;
@@ -1343,8 +1342,9 @@ class Multicell
     /**
      * @param int|float $step
      * @return self
+     * @noinspection PhpUnused
      */
-    public function shrinkFontStep($step = 1)
+    public function shrinkFontStep($step = 1): self
     {
         $this->options->shrinkFontStep = $step;
         return $this;
@@ -1353,8 +1353,9 @@ class Multicell
     /**
      * @param int|float $step
      * @return self
+     * @noinspection PhpUnused
      */
-    public function shrinkLineHeightStep($step)
+    public function shrinkLineHeightStep($step): self
     {
         $this->options->shrinkLineHeightStep = $step;
         return $this;
@@ -1363,7 +1364,7 @@ class Multicell
     /**
      * @return self
      */
-    public function applyAll()
+    public function applyAll(): self
     {
         $this->options->applyAll = true;
         return $this;
@@ -1398,7 +1399,7 @@ class Multicell
     public function restoreStyles()
     {
         $this->options->restoreStyles();
-        $this->applyStyle('DEFAULT');
+        $this->applyStyle(static::PDF_CURRENT);
     }
 
 }

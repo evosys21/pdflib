@@ -2,7 +2,16 @@
 
 All notable changes to FPDF Advanced Multicell will be documented in this file.
 
-### 3.3.0 (2020-12-13)
+### 3.4.0 (2022-05-23)
+
+- Change, Simplify style inheritance and definition.
+  - use `default` tag for default styling
+  - remove `base` default style
+  - remove deprecated functions
+  - create `setStyleAssoc` function, for associative style defining
+- Change, Drop support for PHP5, min PHP 7.1 required
+
+### 3.3.0 (2021-12-13)
 
 - Change, Text Shrinking Feature, Height Limitations, Max Lines, Max Height ([#1979](https://tracker.interpid.eu/issues/1979))
 - Fix, Multicell Text - Text Strike-through invalid Multicell Border Color ([#1982](https://tracker.interpid.eu/issues/1982))
@@ -10,7 +19,7 @@ All notable changes to FPDF Advanced Multicell will be documented in this file.
 - Fix, PHP 5.6 errors ([#1981](https://tracker.interpid.eu/issues/1981))
 - Change, Improve testing over multiple php versions
 
-### 3.2.0 (2020-07-07)
+### 3.2.0 (2021-07-07)
 
 - Change, Tag nowrap attribute ([#1976](https://tracker.interpid.eu/issues/1976))
 

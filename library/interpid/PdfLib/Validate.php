@@ -25,7 +25,7 @@ class Validate
      * @param $value
      * @return int
      */
-    public static function intPositive($value)
+    public static function intPositive($value): int
     {
         $value = intval($value);
         if ($value < 1) {
@@ -40,12 +40,12 @@ class Validate
      * Returns a float value.
      * If min and max are specified, then $value will have to be between $min and $max
      *
-     * @param float $value
-     * @param null|float $min
-     * @param null|float $max
+     * @param mixed $value
+     * @param int|float|null $min
+     * @param int|float|null $max
      * @return float
      */
-    public static function float($value, $min = null, $max = null)
+    public static function float($value, $min = null, $max = null): float
     {
         $value = floatval($value);
 
@@ -73,7 +73,7 @@ class Validate
      * @param $value
      * @return string
      */
-    public static function alignVertical($value)
+    public static function alignVertical($value): string
     {
         $value = strtoupper($value);
 

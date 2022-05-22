@@ -110,7 +110,7 @@ class CellAbstractTest extends BaseTestCase
 
         $o = new CellAbstractMock($pdf);
 
-        $aValues = array(
+        $values = array(
             [[0, 0, 0, 0], [0, 0, 0, 0]],
             [[-1, -1, -1, -1], [0, 0, 0, 0]],
             [[1, 1, 1, 1], [1, 1, 1, 1]],
@@ -118,7 +118,7 @@ class CellAbstractTest extends BaseTestCase
             [[-1, 1, -1, 1], [0, 1, 0, 1]],
         );
 
-        foreach ($aValues as $val) {
+        foreach ($values as $val) {
             list($set, $get) = $val;
             $o->setPadding($set[0], $set[1], $set[2], $set[3]);
             $this->assertEquals($get[0], $o->getPaddingTop());
@@ -308,8 +308,8 @@ class CellAbstractTest extends BaseTestCase
 
         $mock = new CellAbstractMock($pdf);
 
-        $aValues = [-1, 0, 1, 2, '', 'bla', 'test'];
-        foreach ($aValues as $val) {
+        $values = [-1, 0, 1, 2, '', 'bla', 'test'];
+        foreach ($values as $val) {
             $mock->$setter($val);
             $this->assertEquals($val, $mock->$getter());
         }

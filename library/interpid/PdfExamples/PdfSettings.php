@@ -1,4 +1,6 @@
 <?php
+/** @noinspection PhpUnused */
+
 /**
  * This file is part of the Interpid PDF Addon package.
  *
@@ -74,7 +76,7 @@ class PdfSettings
         'WIDTH' => 10
     );
 
-    public static function headerRow()
+    public static function headerRow(): array
     {
         $headerRow = [];
         for ($i = 0; $i < static::$columns; $i++) {
@@ -83,7 +85,7 @@ class PdfSettings
         return $headerRow;
     }
 
-    public static function dataRow()
+    public static function dataRow(): array
     {
         $dataRow = [];
         for ($i = 0; $i < static::$columns; $i++) {
@@ -92,14 +94,16 @@ class PdfSettings
         return $dataRow;
     }
 
+
     /**
+     * Set the styles for the advanced multicell
+     *
      * @param $multicell Multicell
      */
-    public static function setMulticellStyles($multicell)
+    public static function setMulticellStyles(Multicell $multicell)
     {
-        // Set the styles for the advanced multicell
-        $multicell->setStyle('base', 11, '', '130,0,30', 'helvetica');
-        $multicell->setStyle('p', null);
+        // 'default' style will be applied to all tags
+        $multicell->setStyle('default', 11, '', '130,0,30', 'helvetica');
         $multicell->setStyle('b', null, 'B');
         $multicell->setStyle('i', null, 'I', '80,80,260');
         $multicell->setStyle('u', null, 'U', '80,80,260');
@@ -116,10 +120,14 @@ class PdfSettings
         $multicell->setStyle('s2', 6, null, '0,49,159');
         $multicell->setStyle('code', 9, '', null, 'courier');
     }
+    
+    
     /**
-     * @param $table Table
+     * Set the styles for the advanced table
+     * 
+     * @param Table $table
      */
-    public static function setTableStyles($table)
+    public static function setTableStyles(Table $table)
     {
         // Set the styles for the advanced table
         $table->setStyle('p', 10, '', '130,0,30', 'helvetica');

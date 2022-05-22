@@ -1,4 +1,5 @@
 <?php
+/** @noinspection DuplicatedCode */
 
 /**
  * This file is part of the Interpid PDF Addon package.

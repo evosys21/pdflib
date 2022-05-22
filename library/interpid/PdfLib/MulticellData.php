@@ -88,7 +88,7 @@ class MulticellData
      *
      * @return self
      */
-    public function initialize()
+    public function initialize(): self
     {
         //if with is == 0
         if (0 == $this->width) {

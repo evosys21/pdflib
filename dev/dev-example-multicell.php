@@ -28,7 +28,7 @@ $pdf->AddPage();
 $multicell = new Multicell($pdf);
 
 // Set the styles for the advanced multicell
-$multicell->setStyle('default', 11, '', [0, 0, 77], 'helvetica');
+$multicell->setStyle('p', 11, '', [0, 0, 77], 'helvetica');
 $multicell->setStyle('b', null, 'B');
 $multicell->setStyle('i', null, 'I');
 $multicell->setStyle('bi', null, 'BI');
@@ -43,20 +43,7 @@ $multicell->setStyle('h4', 11, null, null, null, 'h');
 $multicell->setStyle('super', 8, null, [255, 102, 153]);
 
 $s = <<<HEREDOC
-This line is a simple text with no formatting(text-formatting from the pdf defaults)
-
-<p>This line is a paragraph line</p>
-
-<p>This is <b>BOLD</b> text, this is <i>ITALIC</i>, this is <bi>BOLD ITALIC</bi></p>
-
-<p>The following is <b>rendered as bold text.</b></p>
-
-<p>The following is <i>rendered as italicized text.</i></p>
-
-<p>The following is <bi>rendered as bold and italicized text.</bi></p>
-
-<p>The following is <u>rendered as underline text.</u></p>
-
+This line is a simple text with no formatting(text-formatting from the pdf settings)
 <p>The following is <s y='-1'>Subscript</s> and <s y='1'>Superscript</s></p>
 
 <p>The following is <n strike=''>Text Strikethrough</n> and <bi strike='.5'>Text Strikethrough bolder line</bi></p>

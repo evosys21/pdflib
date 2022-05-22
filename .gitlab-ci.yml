@@ -28,18 +28,6 @@ install:
   script:
     - composer install
 
-tests-php56:
-  stage: test
-  image: dockerhub.interpid.eu/$PHP
-  dependencies:
-    - install
-  script:
-    - sh ./bin/phpunit-php5.sh
-  parallel:
-    matrix:
-      - PHP:
-          - php56
-
 tests-php70:
   stage: test
   image: dockerhub.interpid.eu/$PHP
@@ -66,6 +54,7 @@ tests-php:
           - php73
           - php74
           - php80
+          - php81
 
 code-coverage:
   stage: quality

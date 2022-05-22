@@ -1,4 +1,5 @@
 <?php
+/** @noinspection PhpUnused */
 
 /**
  * This file is part of the Interpid PDF Addon package.
@@ -12,6 +13,7 @@
 
 namespace Interpid\PdfLib\Table\Cell;
 
+use Interpid\PdfLib\Pdf;
 use Interpid\PdfLib\PdfInterface;
 
 /**
@@ -20,12 +22,10 @@ use Interpid\PdfLib\PdfInterface;
  */
 interface CellInterface
 {
-
-
     /**
      * Class constructor
      *
-     * @param PdfInterface $pdf
+     * @param PdfInterface|Pdf $pdf
      */
     public function __construct($pdf);
 
@@ -38,19 +38,20 @@ interface CellInterface
     /**
      * Splits the current cell
      *
-     * @param number $nRowHeight - the Height of the row that contains this cell
-     * @param number $nMaxHeight - the Max height available
+     * @param number $rowHeight - the Height of the row that contains this cell
+     * @param number $maxHeight - the Max height available
      * @return array(oNewCell, iSplitHeight)
      */
-    public function split($nRowHeight, $nMaxHeight);
+    public function split($rowHeight, $maxHeight): array;
 
 
     /**
      * Set the default values
      *
-     * @param array $aValues
+     * @param array $values
+     * @return self
      */
-    public function setDefaultValues(array $aValues = []);
+    public function setDefaultValues(array $values = []): self;
 
 
     /**
@@ -66,8 +67,9 @@ interface CellInterface
      * Set the properties of the cell
      *
      * @param array $values key=>value pair
+     * @return self
      */
-    public function setProperties(array $values = []);
+    public function setProperties(array $values = []): self;
 
     public function render();
 
@@ -76,107 +78,115 @@ interface CellInterface
      *
      * @return integer
      */
-    public function getColSpan();
+    public function getColSpan(): int;
 
     /**
      * Sets the colspan value
      *
-     * @param integer $value
+     * @param int $value
+     * @return self
      */
-    public function setColSpan($value);
+    public function setColSpan(int $value): self;
 
     /**
      * Returns the rowspan value
      *
-     * @return integer
+     * @return int
      */
-    public function getRowSpan();
+    public function getRowSpan(): int;
 
     /**
      * Sets the rowspan value
      *
-     * @param integer $value
+     * @param int $value
+     * @return self
      */
-    public function setRowSpan($value);
+    public function setRowSpan(int $value): self;
 
 
     /**
      * Sets the paddings
      *
-     * @param int $top Top padding
-     * @param int $right Right padding
-     * @param int $bottom Bottom padding
-     * @param int $left Left padding
+     * @param int|float $top Top padding
+     * @param int|float $right Right padding
+     * @param int|float $bottom Bottom padding
+     * @param int|float $left Left padding
+     * @return self
      */
-    public function setPadding($top = 0, $right = 0, $bottom = 0, $left = 0);
+    public function setPadding($top = 0, $right = 0, $bottom = 0, $left = 0): self;
 
     /**
      * Sets the padding bottom
      *
-     * @param int $paddingBottom
+     * @param int|float $paddingBottom
+     * @return self
      */
-    public function setPaddingBottom($paddingBottom);
+    public function setPaddingBottom($paddingBottom): self;
 
     /**
      * Returns the padding bottom
      *
-     * @return int
+     * @return int|float
      */
     public function getPaddingBottom();
 
     /**
      * Sets the padding left
      *
-     * @param int $paddingLeft
+     * @param int|float $paddingLeft
+     * @return self
      */
-    public function setPaddingLeft($paddingLeft);
+    public function setPaddingLeft($paddingLeft): self;
 
     /**
      * Returns the padding left
      *
-     * @return int
+     * @return int|float
      */
     public function getPaddingLeft();
 
     /**
      * Sets the padding right
      *
-     * @param int $paddingRight
+     * @param int|float $paddingRight
+     * @return self
      */
-    public function setPaddingRight($paddingRight);
+    public function setPaddingRight($paddingRight): self;
 
     /**
      * Returns the padding right
      *
-     * @return int
+     * @return int|float
      */
     public function getPaddingRight();
 
     /**
      * Sets the padding top
      *
-     * @param int $paddingTop
+     * @param int|float $paddingTop
+     * @return self
      */
-    public function setPaddingTop($paddingTop);
+    public function setPaddingTop($paddingTop): self;
 
     /**
      * Returns the padding top
      *
-     * @return int
+     * @return int|float
      */
     public function getPaddingTop();
 
     /**
      * Sets the border Size
      *
-     * @param float $borderSize
+     * @param int|float $borderSize
+     * @return self
      */
-    public function setBorderSize($borderSize);
+    public function setBorderSize($borderSize): self;
 
     /**
      * Returns the border Size
      *
-     * @return float
+     * @return int|float
      */
     public function getBorderSize();
 
@@ -184,14 +194,15 @@ interface CellInterface
      * Sets the border Type
      * Can be: 0, 1 or a combination of: 'LRTB'
      *
-     * @param string $borderType
+     * @param int|string $borderType
+     * @return self
      */
-    public function setBorderType($borderType);
+    public function setBorderType($borderType): self;
 
     /**
      * Returns the border Type
      *
-     * @return string
+     * @return int|string
      */
     public function getBorderType();
 
@@ -199,16 +210,17 @@ interface CellInterface
      * Sets the Border Color.
      * If the value is set to FALSE, 0 or '0' then we assume transparency
      *
-     * @param int | bool | array $r
-     * @param int | null $g
-     * @param int | null $b
+     * @param int|bool|array $r
+     * @param int|null $g
+     * @param int|null $b
+     * @return self
      */
-    public function setBorderColor($r, $g = null, $b = null);
+    public function setBorderColor($r, ?int $g = null, ?int $b = null): self;
 
     /**
      * Returns the Border Color
      *
-     * @return array
+     * @return string|array
      */
     public function getBorderColor();
 
@@ -216,71 +228,60 @@ interface CellInterface
      * Sets the Align Vertical
      *
      * @param string $alignVertical
+     * @return self
      */
-    public function setAlignVertical($alignVertical);
+    public function setAlignVertical(string $alignVertical): self;
 
     /**
      * Returns the Align Vertical
      *
      * @return string
      */
-    public function getAlignVertical();
+    public function getAlignVertical(): string;
 
     /**
      * Sets the Background Color.
      * If the value is set to FALSE, 0 or '0' then we assume transparency
      *
-     * @param int | bool | array $r
-     * @param int | null $g
-     * @param int | null $b
+     * @param int|bool|array $r
+     * @param int|null $g
+     * @param int|null $b
+     * @return self
      */
-    public function setBackgroundColor($r, $g = null, $b = null);
+    public function setBackgroundColor($r, ?int $g = null, ?int $b = null): self;
 
     /**
      * Returns the Background Color
      *
-     * @return array
+     * @return string|array
      */
     public function getBackgroundColor();
 
-
-    public function setCellWidth($value);
-
+    public function setCellWidth($value): self;
 
     public function getCellWidth();
 
-
-    public function setCellHeight($value);
-
+    public function setCellHeight($value): self;
 
     public function getCellHeight();
 
-
-    public function setCellDrawHeight($value);
+    public function setCellDrawHeight($value): self;
 
     public function getCellDrawHeight();
 
-
-    public function setCellDrawWidth($value);
-
+    public function setCellDrawWidth($value): self;
 
     public function getCellDrawWidth();
 
-
-    public function setContentWidth($value);
-
+    public function setContentWidth($value): self;
 
     public function getContentWidth();
 
-
-    public function setContentHeight($value);
-
+    public function setContentHeight($value): self;
 
     public function getContentHeight();
 
+    public function setSkipped(bool $value): self;
 
-    public function setSkipped($value);
-
-
-    public function getSkipped();
+    public function getSkipped(): bool;
 }

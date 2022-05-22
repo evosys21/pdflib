@@ -1,4 +1,5 @@
 <?php
+/** @noinspection PhpUnused */
 
 /**
  *
@@ -28,13 +29,12 @@ class MyPdf extends Pdf
 {
     protected $headerSource = 'header.txt';
     public $defaultFont = 'helvetica';
-    public $showHeader = true;
-    public $showFooter = true;
 
     /**
      * Custom Header
      *
      * @see Pdf::Header()
+     * @noinspection HttpUrlsUsage
      */
     public function Header()
     {
@@ -89,7 +89,7 @@ class MyPdf extends Pdf
      *
      * @return string
      */
-    public function getDefaultFont()
+    public function getDefaultFont(): string
     {
         return $this->defaultFont;
     }
@@ -130,7 +130,7 @@ class MyPdf extends Pdf
         }
     }
 
-    protected static function isTesting()
+    protected static function isTesting(): bool
     {
         return (isset($_SERVER['ENVIRONMENT']) && 'test' == $_SERVER['ENVIRONMENT']);
     }
@@ -139,7 +139,7 @@ class MyPdf extends Pdf
      * @param string $headerSource
      * @return $this
      */
-    public function setHeaderSource($headerSource)
+    public function setHeaderSource(string $headerSource): self
     {
         $this->headerSource = $headerSource;
         return $this;

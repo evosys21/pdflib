@@ -1,4 +1,9 @@
 <?php
+/** @noinspection PhpUnused */
+/** @noinspection PhpMissingParamTypeInspection */
+/** @noinspection PhpUnhandledExceptionInspection */
+/** @noinspection PhpDocMissingThrowsInspection */
+
 /**
  * This file is part of the Interpid PDF Addon package.
  *
@@ -42,7 +47,7 @@ class PdfInterface
      *
      * @return Pdf
      */
-    public function getPdfObject()
+    public function getPdfObject(): Pdf
     {
         return $this->pdf;
     }
@@ -51,7 +56,7 @@ class PdfInterface
     /**
      * Returns the page width
      */
-    public function getPageWidth()
+    public function getPageWidth(): int
     {
         return (int)$this->pdf->w - $this->pdf->rMargin - $this->pdf->lMargin;
     }
@@ -60,7 +65,7 @@ class PdfInterface
     /**
      * Returns the current X position
      *
-     * @return number
+     * @return int|float
      */
     public function getX()
     {
@@ -71,7 +76,7 @@ class PdfInterface
     /**
      * Returns the remaining width to the end of the current line
      *
-     * @return number The remaining width
+     * @return int|float The remaining width
      */
     public function getRemainingWidth()
     {
@@ -91,7 +96,7 @@ class PdfInterface
      * @param string $str The input string
      * @return array List of codes
      */
-    public function stringToArray($str)
+    public function stringToArray(string $str): array
     {
         // split string into array of equivalent codes
         $aResult = [];
@@ -109,7 +114,7 @@ class PdfInterface
      *
      * @return string The font family
      */
-    public function getFontFamily()
+    public function getFontFamily(): string
     {
         return $this->pdf->FontFamily;
     }
@@ -120,7 +125,7 @@ class PdfInterface
      *
      * @return string the font style
      */
-    public function getFontStyle()
+    public function getFontStyle(): string
     {
         return $this->pdf->FontStyle;
     }
@@ -129,7 +134,7 @@ class PdfInterface
     /**
      * Returns the active font size in PT
      *
-     * @return number The font size
+     * @return int|float The font size
      */
     public function getFontSizePt()
     {
@@ -141,8 +146,8 @@ class PdfInterface
      * Adds an image to the pdf document
      *
      * @param string $file File Path
-     * @param number $x
-     * @param number $y
+     * @param int|float $x
+     * @param int|float $y
      * @param int $w Width
      * @param int $h Height
      * @param string $type Type
@@ -158,11 +163,11 @@ class PdfInterface
      * Returns the image width and height in PDF values!
      *
      * @param string $file Image file
-     * @param int|number $w
-     * @param int|number $h
+     * @param int $w
+     * @param int $h
      * @return array(width, height)
      */
-    public function getImageParams($file, $w = 0, $h = 0)
+    public function getImageParams($file, $w = 0, $h = 0): array
     {
         $h = floatval($h);
         $w = floatval($w);
@@ -233,7 +238,7 @@ class PdfInterface
      * @param $color
      * @return $this
      */
-    public function setTextColor($color)
+    public function setTextColor($color): self
     {
         $this->textColor = $color;
 
@@ -253,7 +258,7 @@ class PdfInterface
      * @param $color
      * @return $this
      */
-    public function setDrawColor($color)
+    public function setDrawColor($color): self
     {
         $this->backupDrawColor = $this->pdf->DrawColor;
         if (is_string($color) && strpos($color, self::RAW) === 0) {
@@ -269,12 +274,42 @@ class PdfInterface
      * Restores the DrawColor from the backup
      * @return $this
      */
-    public function restoreDrawColor()
+    public function restoreDrawColor(): self
     {
         if ($this->backupDrawColor) {
             $this->pdf->DrawColor = $this->backupDrawColor;
             $this->pdf->_out($this->pdf->DrawColor);
         }
         return $this;
+    }
+
+    public function getEncoding(): string
+    {
+        return 'iso-8859-1';
+    }
+    
+    /**
+     * Set the Internal Encoding to used in PDF Class.
+     */
+    public function setEncoding()
+    {
+        // nop
+    }
+
+    /**
+     * Returns the Available Width to draw the Text.
+     *
+     * @param string $str
+     * @param int $start
+     * @param int|float|null $length
+     * @return string
+     */
+    public static function substr(string $str, int $start, $length = null): string
+    {
+        if (null === $length) {
+            return substr($str, $start);
+        } else {
+            return substr($str, $start, $length);
+        }
     }
 }

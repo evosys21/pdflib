@@ -12,6 +12,7 @@
 
 namespace Interpid\PdfLib\Tests\Functional;
 
+use Generator;
 use Interpid\PdfLib\Tests\BaseExamplesTestCase;
 
 /**
@@ -23,10 +24,17 @@ class MulticellExamplesTest extends BaseExamplesTestCase
 
     /**
      * Tests testExamples
+     * @dataProvider getExampleSources
      */
-    public function testExamples()
+    public function testExamples($source)
     {
-        $aSources = array(
+        $require = APPLICATION_PATH . '/examples/' . $source;
+        $this->runTestWithExample($require, basename($require));
+    }
+
+    public function getExampleSources(): Generator
+    {
+        $sources = [
             // 'example-multicell.php',
             'example-multicell-1-overview.php',
             'example-multicell-2-overview-page-break.php',
@@ -34,29 +42,34 @@ class MulticellExamplesTest extends BaseExamplesTestCase
             'example-multicell-4-page-break.php',
             'example-multicell-5-max-lines.php',
             'example-multicell-6-shrinking.php',
-        );
+        ];
 
-        foreach ($aSources as $source) {
-            $require = APPLICATION_PATH . '/examples/' . $source;
-            $this->runTestWithExample($require, basename($require));
+        foreach ($sources as $source) {
+            yield [$source];
         }
     }
 
     /**
      * Tests testDevSamples
+     * @dataProvider getDevSources
      */
-    public function testDevSamples()
+    public function testDevSamples($source)
     {
-        $aSources = array(
+        $require = APPLICATION_PATH . '/dev/' . $source;
+        $this->runTestWithExample($require, 'dev-' . basename($require));
+    }
+
+    public function getDevSources(): Generator
+    {
+        $sources = array(
             'test-multicell-align.php',
             'test-multicell-shrinking.php',
             'test-multicell-shrinking2.php',
             'test-multicell-style.php',
         );
 
-        foreach ($aSources as $source) {
-            $require = APPLICATION_PATH . '/dev/' . $source;
-            $this->runTestWithExample($require, 'dev-' . basename($require));
+        foreach ($sources as $source) {
+            yield [$source];
         }
     }
 }

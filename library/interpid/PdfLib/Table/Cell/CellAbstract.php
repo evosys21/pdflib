@@ -1,4 +1,6 @@
 <?php
+/** @noinspection PhpUnused */
+
 /**
  * This file is part of the Interpid PDF Addon package.
  *
@@ -55,36 +57,96 @@ abstract class CellAbstract implements CellInterface
      */
     protected $rowSpan = 1;
 
+    /**
+     * @var float
+     */
     protected $paddingTop = 0;
+
+    /**
+     * @var float
+     */
     protected $paddingRight = 0;
+
+    /**
+     * @var float
+     */
     protected $paddingBottom = 0;
+
+    /**
+     * @var float
+     */
     protected $paddingLeft = 0;
 
     protected $backgroundColor = [255, 255, 255];
 
+    /**
+     * @var string|int
+     */
     protected $borderType = '1';
+
+    /**
+     * @var float
+     */
     protected $borderSize = 0.1;
+
+    /**
+     * @var string|array
+     */
     protected $borderColor = [0, 0, 0];
 
+    /**
+     * @var string
+     */
     protected $align = 'L';
+
+    /**
+     * @var string
+     */
     protected $alignVertical = 'M';
 
+    /**
+     * @var array
+     */
     protected $properties = [];
 
+    /**
+     * @var array
+     */
     protected $internValueSet = [];
 
-    protected $height = '';
+    /**
+     * @var float|int
+     */
+    protected $height = 0;
 
+    /**
+     * @var float|int
+     */
     protected $cellWidth = 0;
 
+    /**
+     * @var float|int
+     */
     protected $cellHeight = 0;
 
+    /**
+     * @var float|int
+     */
     protected $cellDrawWidth = 0;
 
+    /**
+     * @var float|int
+     */
     protected $cellDrawHeight = 0;
 
+    /**
+     * @var float|int
+     */
     protected $contentWidth = 0;
 
+    /**
+     * @var float|int
+     */
     protected $contentHeight = 0;
 
     /**
@@ -128,21 +190,22 @@ abstract class CellAbstract implements CellInterface
         }
     }
 
-    public function setProperties(array $values = [])
+    public function setProperties(array $values = []): CellInterface
     {
         $this->setInternValues($values, false);
+        return $this;
     }
 
     /**
      * Sets the intern variable values
      *
-     * @param array $aValues The values to be set
-     * @param bool $bCheckSet If the values are already set, the values will NOT be set
+     * @param array $values The values to be set
+     * @param bool $checkSet If the values are already set, the values will NOT be set
      */
-    protected function setInternValues(array $aValues = [], $bCheckSet = true)
+    protected function setInternValues(array $values = [], bool $checkSet = true)
     {
-        foreach ($aValues as $key => $value) {
-            if ($bCheckSet && $this->isInternValueSet($key)) {
+        foreach ($values as $key => $value) {
+            if ($checkSet && $this->isInternValueSet($key)) {
                 //property is already set, ignore the value
                 continue;
             }
@@ -158,7 +221,7 @@ abstract class CellAbstract implements CellInterface
      * @param string $key
      * @return bool
      */
-    protected function isInternValueSet($key)
+    protected function isInternValueSet(string $key): bool
     {
         return array_key_exists($key, $this->internValueSet);
     }
@@ -168,7 +231,7 @@ abstract class CellAbstract implements CellInterface
      *
      * @param string $key
      */
-    protected function markInternValueAsSet($key)
+    protected function markInternValueAsSet(string $key)
     {
         $this->internValueSet[$key] = true;
     }
@@ -215,37 +278,39 @@ abstract class CellAbstract implements CellInterface
      *
      * @param string $alignment
      */
-    public function setAlign($alignment)
+    public function setAlign(string $alignment)
     {
         $this->alignment = strtoupper($alignment);
     }
 
 
-    public function setColSpan($value)
+    public function setColSpan(int $value): CellInterface
     {
         $this->colSpan = Validate::intPositive($value);
+        return $this;
     }
 
 
-    public function getColSpan()
+    public function getColSpan(): int
     {
         return $this->colSpan;
     }
 
 
-    public function setRowSpan($value)
+    public function setRowSpan(int $value): CellInterface
     {
         $this->rowSpan = Validate::intPositive($value);
+        return $this;
     }
 
 
-    public function getRowSpan()
+    public function getRowSpan(): int
     {
         return $this->rowSpan;
     }
 
 
-    public function setCellWidth($value)
+    public function setCellWidth($value): CellInterface
     {
         $value = Validate::float($value, 0);
 
@@ -254,16 +319,17 @@ abstract class CellAbstract implements CellInterface
         if ($value > $this->getCellDrawWidth()) {
             $this->setCellDrawWidth($value);
         }
+        return $this;
     }
 
 
-    public function getCellWidth()
+    public function getCellWidth(): float
     {
         return $this->cellWidth;
     }
 
 
-    public function setCellHeight($value)
+    public function setCellHeight($value): CellInterface
     {
         $value = Validate::float($value, 0);
 
@@ -272,22 +338,24 @@ abstract class CellAbstract implements CellInterface
         if ($value > $this->getCellDrawHeight()) {
             $this->setCellDrawHeight($value);
         }
+        return $this;
     }
 
 
-    public function getCellHeight()
+    public function getCellHeight(): float
     {
         return $this->cellHeight;
     }
 
 
-    public function setCellDrawHeight($value)
+    public function setCellDrawHeight($value): CellInterface
     {
         $value = Validate::float($value, 0);
 
         if ($this->getCellHeight() <= $value) {
             $this->cellDrawHeight = $value;
         }
+        return $this;
     }
 
 
@@ -300,12 +368,13 @@ abstract class CellAbstract implements CellInterface
     }
 
 
-    public function setCellDrawWidth($value)
+    public function setCellDrawWidth($value): CellInterface
     {
         $value = Validate::float($value, 0);
 
         $this->cellDrawWidth = $value;
         $this->setCellWidth($value);
+        return $this;
     }
 
 
@@ -315,9 +384,10 @@ abstract class CellAbstract implements CellInterface
     }
 
 
-    public function setContentWidth($value)
+    public function setContentWidth($value): CellInterface
     {
         $this->contentWidth = Validate::float($value, 0);
+        return $this;
     }
 
 
@@ -327,9 +397,10 @@ abstract class CellAbstract implements CellInterface
     }
 
 
-    public function setContentHeight($value)
+    public function setContentHeight($value): CellInterface
     {
         $this->contentHeight = Validate::float($value, 0);
+        return $this;
     }
 
 
@@ -339,13 +410,14 @@ abstract class CellAbstract implements CellInterface
     }
 
 
-    public function setSkipped($value)
+    public function setSkipped(bool $value): CellInterface
     {
-        $this->bSkip = (bool)$value;
+        $this->bSkip = $value;
+        return $this;
     }
 
 
-    public function getSkipped()
+    public function getSkipped(): bool
     {
         return $this->bSkip;
     }
@@ -371,7 +443,7 @@ abstract class CellAbstract implements CellInterface
     }
 
 
-    public function isPropertySet($property)
+    public function isPropertySet($property): bool
     {
         if (isset($this->properties[$property])) {
             return true;
@@ -381,9 +453,10 @@ abstract class CellAbstract implements CellInterface
     }
 
 
-    public function setDefaultValues(array $aValues = [])
+    public function setDefaultValues(array $values = []): CellInterface
     {
-        $this->setInternValues($aValues, true);
+        $this->setInternValues($values);
+        return $this;
     }
 
 
@@ -422,7 +495,7 @@ abstract class CellAbstract implements CellInterface
     }
 
 
-    protected function isTransparent()
+    protected function isTransparent(): bool
     {
         return Tools::isFalse($this->getBackgroundColor());
     }
@@ -453,18 +526,20 @@ abstract class CellAbstract implements CellInterface
     }
 
 
-    public function setPadding($top = 0, $right = 0, $bottom = 0, $left = 0)
+    public function setPadding($top = 0, $right = 0, $bottom = 0, $left = 0): CellInterface
     {
         $this->setPaddingTop($top);
         $this->setPaddingRight($right);
         $this->setPaddingBottom($bottom);
         $this->setPaddingLeft($left);
+        return $this;
     }
 
 
-    public function setPaddingBottom($paddingBottom)
+    public function setPaddingBottom($paddingBottom): CellInterface
     {
         $this->paddingBottom = Validate::float($paddingBottom, 0);
+        return $this;
     }
 
 
@@ -474,9 +549,10 @@ abstract class CellAbstract implements CellInterface
     }
 
 
-    public function setPaddingLeft($paddingLeft)
+    public function setPaddingLeft($paddingLeft): CellInterface
     {
         $this->paddingLeft = Validate::float($paddingLeft, 0);
+        return $this;
     }
 
 
@@ -486,9 +562,10 @@ abstract class CellAbstract implements CellInterface
     }
 
 
-    public function setPaddingRight($paddingRight)
+    public function setPaddingRight($paddingRight): CellInterface
     {
         $this->paddingRight = Validate::float($paddingRight, 0);
+        return $this;
     }
 
 
@@ -498,9 +575,10 @@ abstract class CellAbstract implements CellInterface
     }
 
 
-    public function setPaddingTop($paddingTop)
+    public function setPaddingTop($paddingTop): CellInterface
     {
         $this->paddingTop = Validate::float($paddingTop, 0);
+        return $this;
     }
 
 
@@ -510,32 +588,35 @@ abstract class CellAbstract implements CellInterface
     }
 
 
-    public function setBorderSize($borderSize)
+    public function setBorderSize($borderSize): CellInterface
     {
         $this->borderSize = Validate::float($borderSize, 0);
+        return $this;
     }
 
 
-    public function getBorderSize()
+    public function getBorderSize(): float
     {
         return $this->borderSize;
     }
 
 
-    public function setBorderType($borderType)
+    public function setBorderType($borderType): CellInterface
     {
         $this->borderType = $borderType;
+        return $this;
     }
 
 
-    public function getBorderType()
+    public function getBorderType(): string
     {
         return $this->borderType;
     }
 
-    public function setBorderColor($r, $b = null, $g = null)
+    public function setBorderColor($r, ?int $g = null, ?int $b = null): CellInterface
     {
-        $this->borderColor = Tools::getColor($r, $b, $g);
+        $this->borderColor = Tools::getColor($r, $g, $b);
+        return $this;
     }
 
     public function getBorderColor()
@@ -544,21 +625,23 @@ abstract class CellAbstract implements CellInterface
     }
 
 
-    public function setAlignVertical($alignVertical)
+    public function setAlignVertical(string $alignVertical): CellInterface
     {
         $this->markInternValueAsSet('VERTICAL_ALIGN');
         $this->alignVertical = Validate::alignVertical($alignVertical);
+        return $this;
     }
 
 
-    public function getAlignVertical()
+    public function getAlignVertical(): string
     {
         return $this->alignVertical;
     }
 
-    public function setBackgroundColor($r, $b = null, $g = null)
+    public function setBackgroundColor($r, ?int $g = null, ?int $b = null): CellInterface
     {
-        $this->backgroundColor = Tools::getColor($r, $b, $g);
+        $this->backgroundColor = Tools::getColor($r, $g, $b);
+        return $this;
     }
 
     public function getBackgroundColor()
@@ -566,19 +649,16 @@ abstract class CellAbstract implements CellInterface
         return $this->backgroundColor;
     }
 
-    public function split($nRowHeight, $nMaxHeight)
+    public function split($rowHeight, $maxHeight): array
     {
         return [$this, 0];
     }
 
-    public function getDefaultValues()
+    public function getDefaultValues(): array
     {
         return [];
     }
 
-    /**
-     * @return string|int|null
-     */
     public function getHeight()
     {
         return $this->height;

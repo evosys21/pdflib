@@ -12,7 +12,6 @@
 
 namespace Interpid\PdfLib\Tests\Helper;
 
-use Imagick;
 use Interpid\PdfExamples\PdfFactory;
 use Interpid\PdfLib\Pdf;
 use Symfony\Component\Process\Process;
