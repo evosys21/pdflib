@@ -283,6 +283,11 @@ class PdfInterface
         return $this;
     }
 
+    public function getEncoding()
+    {
+        return 'iso-8859-1';
+    }
+    
     /**
      * Set the Internal Encoding to used in PDF Class.
      */
