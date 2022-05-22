@@ -1,4 +1,5 @@
 <?php
+/** @noinspection DuplicatedCode */
 /**
  * Default configuration values for the PDF Advanced table
  */
