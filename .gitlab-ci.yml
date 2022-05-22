@@ -67,7 +67,7 @@ code-coverage:
   artifacts:
     paths:
       - build
-    expire_in: 1 year
+    expire_in: 5 days
 
 #pages:
 #  stage: deploy
@@ -91,7 +91,7 @@ build-release:
     paths:
       - release
       - $VARIABLES_FILE
-    expire_in: 1 year
+    expire_in: 5 days
 
 upload-release:
   stage: upload-release
