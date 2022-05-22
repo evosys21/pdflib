@@ -43,7 +43,7 @@ class Tools
      *
      * @param mixed $value
      * @param bool $trim
-     * @return string
+     * @return string|null
      */
     public static function string($value, bool $trim = true): ?string
     {
@@ -239,7 +239,7 @@ class Tools
      * Convert a hexa decimal color code to its RGB equivalent
      *
      * @param $hex_color
-     * @return array
+     * @return array|null
      */
     public static function hex2rgb($hex_color): ?array
     {

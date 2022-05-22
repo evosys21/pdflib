@@ -283,7 +283,7 @@ class PdfInterface
         return $this;
     }
 
-    public function getEncoding()
+    public function getEncoding(): string
     {
         return 'iso-8859-1';
     }

@@ -1815,7 +1815,7 @@ class Table
     /**
      * Returns the PDF object
      *
-     * @return Pdf
+     * @return Pdf|null
      */
     public function getPdfObject(): ?Pdf
     {
