@@ -348,9 +348,9 @@ class Multicell
      * Returns the specified tag text color
      *
      * @param string $tag tag name
-     * @return string The tag color
+     * @return string|array The tag color
      */
-    public function getTagColor(string $tag): string
+    public function getTagColor(string $tag)
     {
         return $this->getTagAttribute($tag, 'color');
     }
