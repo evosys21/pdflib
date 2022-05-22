@@ -1,4 +1,6 @@
 <?php
+/** @noinspection PhpUnused */
+
 /**
  * This file is part of the Interpid PDF Addon package.
  *
@@ -286,7 +288,7 @@ class Table
      * @var array
      *
      */
-    protected $aColumnWidth = [];
+    protected $columnWidths = [];
 
     protected $typeMap = array(
         'EMPTY' => '\Interpid\PdfLib\Table\Cell\EmptyCell',
@@ -315,7 +317,7 @@ class Table
      * @param Pdf $pdf object Instance of the PDF class
      * @param string|null $configFile
      */
-    public function __construct($pdf, $configFile = 'table.config.php')
+    public function __construct(Pdf $pdf, ?string $configFile = 'table.config.php')
     {
         //pdf object
         $this->pdf = $pdf;
@@ -339,7 +341,7 @@ class Table
      * @param Pdf $pdf object the pdf Object
      * @return self
      */
-    public static function getInstance($pdf)
+    public static function getInstance(Pdf $pdf): Table
     {
         $oInstance = &self::$singleton[spl_object_hash($pdf)];
 
@@ -365,14 +367,14 @@ class Table
     /**
      * Table Initialization Function
      *
-     * @param array $aColumnWidths
+     * @param array $columnWidths
      * @param array $configuration
      */
-    public function initialize(array $aColumnWidths, array $configuration = [])
+    public function initialize(array $columnWidths, array $configuration = [])
     {
         //set the no of columns
-        $this->columns = count($aColumnWidths);
-        $this->setColumnsWidths($aColumnWidths);
+        $this->columns = count($columnWidths);
+        $this->setColumnsWidths($columnWidths);
 
         //heeader is not parsed
         $this->headerParsed = false;
@@ -414,14 +416,14 @@ class Table
     /**
      * Set the width of all columns with one function call
      *
-     * @param $aColumnWidths array the width of columns, example: 50, 40, 40, 20
+     * @param $columnWidths array|null the width of columns, example: 50, 40, 40, 20
      */
-    public function setColumnsWidths($aColumnWidths = null)
+    public function setColumnsWidths(array $columnWidths = null)
     {
-        if (is_array($aColumnWidths)) {
-            $this->aColumnWidth = $aColumnWidths;
+        if (is_array($columnWidths)) {
+            $this->columnWidths = $columnWidths;
         } else {
-            $this->aColumnWidth = func_get_args();
+            $this->columnWidths = func_get_args();
         }
     }
 
@@ -429,31 +431,31 @@ class Table
     /**
      * Set the Width for the specified Column
      *
-     * @param $nColumnIndex number the column index, 0 based ( first column starts with 0)
-     * @param $width number
+     * @param int $columnIndex the column index, 0 based ( first column starts with 0)
+     * @param int|float $width number
      *
      */
-    public function setColumnWidth($nColumnIndex, $width)
+    public function setColumnWidth(int $columnIndex, $width)
     {
-        $this->aColumnWidth[$nColumnIndex] = $width;
+        $this->columnWidths[$columnIndex] = $width;
     }
 
 
     /**
      * Get the Width for the specified Column
      *
-     * @param integer $nColumnIndex the column index, 0 based ( first column starts with 0)
-     * @return number $width The column Width
+     * @param int $columnIndex the column index, 0 based ( first column starts with 0)
+     * @return int|float $width The column Width
      */
-    public function getColumnWidth($nColumnIndex)
+    public function getColumnWidth(int $columnIndex)
     {
-        if (!isset($this->aColumnWidth[$nColumnIndex])) {
-            trigger_error("Undefined width for column $nColumnIndex");
+        if (!isset($this->columnWidths[$columnIndex])) {
+            trigger_error("Undefined width for column $columnIndex");
 
             return 0;
         }
 
-        return $this->aColumnWidth[$nColumnIndex];
+        return $this->columnWidths[$columnIndex];
     }
 
 
@@ -462,7 +464,7 @@ class Table
      *
      * @return integer - the Page Width
      */
-    protected function pageWidth()
+    protected function pageWidth(): int
     {
         return (int)$this->pdf->w - $this->pdf->rMargin - $this->pdf->lMargin;
     }
@@ -471,7 +473,7 @@ class Table
     /**
      * Returns the current page Height
      *
-     * @return number - the Page Height
+     * @return int|float - the Page Height
      */
     protected function pageHeight()
     {
@@ -485,7 +487,7 @@ class Table
      *
      * @param $bSplit boolean - if TRUE then Split is Active
      */
-    public function setSplitMode($bSplit = true)
+    public function setSplitMode(bool $bSplit = true)
     {
         $this->tableSplit = $bSplit;
     }
@@ -497,9 +499,9 @@ class Table
      * @param $bValue boolean
      *
      */
-    public function setHeaderNewPage($bValue)
+    public function setHeaderNewPage(bool $bValue)
     {
-        $this->headerOnNewPage = (bool)$bValue;
+        $this->headerOnNewPage = $bValue;
     }
 
 
@@ -521,7 +523,7 @@ class Table
      *
      * @param $headerRow array
      */
-    public function addHeader($headerRow = [])
+    public function addHeader(array $headerRow = [])
     {
         $this->tableHeaderType[] = $headerRow;
     }
@@ -535,7 +537,7 @@ class Table
      * @param $sPropertyValue mixed the Property Value value for the Key Index
      * @param $nRow integer The header Row. If the header row does not exists, then they will be created with default values.
      */
-    public function setHeaderProperty($nColumn, $sPropertyKey, $sPropertyValue, $nRow = 0)
+    public function setHeaderProperty(int $nColumn, string $sPropertyKey, $sPropertyValue, int $nRow = 0)
     {
         for ($i = 0; $i <= $nRow; $i++) {
             if (!isset($this->tableHeaderType[$i])) {
@@ -556,7 +558,7 @@ class Table
      *
      * @param $bForce boolean
      */
-    protected function parseHeader($bForce = false)
+    protected function parseHeader(bool $bForce = false)
     {
         //if the header was parsed don't parse it again!
         if ($this->headerParsed && !$bForce) {
@@ -590,7 +592,7 @@ class Table
         }
 
         if ($this->headerHeight > $this->pageHeight()) {
-            die("Header Height({$this->headerHeight}) bigger than Page Height({$this->pageHeight()})");
+            die("Header Height($this->headerHeight) bigger than Page Height({$this->pageHeight()})");
         }
     }
 
@@ -738,7 +740,7 @@ class Table
      *
      * @param array $rowData Data to be Drawed
      */
-    public function addRow($rowData = [])
+    public function addRow(array $rowData = [])
     {
         if (!$this->headerOnCurrentPage) {
             $this->drawHeader();
@@ -767,7 +769,7 @@ class Table
      * @param $sDataType string
      * @return array The Data with default values
      */
-    protected function applyDefaultValues($aData, $sDataType)
+    protected function applyDefaultValues(array $aData, string $sDataType): array
     {
         switch ($sDataType) {
             case 'header':
@@ -789,7 +791,7 @@ class Table
      * @param $sDataType string
      * @return array The Data with default values
      */
-    protected function getDefaultValues($sDataType)
+    protected function getDefaultValues(string $sDataType): array
     {
         switch ($sDataType) {
             case 'header':
@@ -808,7 +810,7 @@ class Table
         } elseif (is_object($data)) {
             $cell = $data;
         } else {
-            $type = isset($data['TYPE']) ? $data['TYPE'] : 'MULTICELL';
+            $type = $data['TYPE'] ?? 'MULTICELL';
             $type = strtoupper($type);
 
             if (!isset($this->typeMap[$type])) {
@@ -841,13 +843,8 @@ class Table
      * @param $data array - array containing the data to be added
      * @param $sDataType string - data type. Can be 'data' or 'header'. Depending on this data the $data is put in the selected cache
      */
-    protected function addDataToCache($data, $sDataType = 'data')
+    protected function addDataToCache(array $data, string $sDataType = 'data')
     {
-        if (!is_array($data)) {
-            //this is fatal error
-            trigger_error("Invalid data value 0x00012. (not array)", E_USER_ERROR);
-        }
-
         if ($sDataType == 'header') {
             $aRefCache = &$this->headerCache;
         } else { //data
@@ -987,7 +984,7 @@ class Table
      * @param $iStartIndex integer - the index from which to parse
      * @param $sCacheType string - what type has the cache - possible values: 'header' && 'data'
      */
-    protected function cacheParseRowspan($iStartIndex = 0, $sCacheType = 'data')
+    protected function cacheParseRowspan(int $iStartIndex = 0, string $sCacheType = 'data')
     {
         if ($sCacheType == 'data') {
             $aRefCache = &$this->dataCache;
@@ -1116,7 +1113,9 @@ class Table
             $val = &$aDC[$i];
 
             if ($val['DATATYPE'] == self::TB_DATA_TYPE_INSERT_NEW_PAGE) {
+                /** @noinspection PhpUnusedLocalVariableInspection */
                 $rowSpans = [];
+                /** @noinspection PhpUnusedLocalVariableInspection */
                 $iLeftHeight = $pageHeight;
                 $this->dataOnCurrentPage = false; //new page
                 $this->insertNewPage($i, null, true, true);
@@ -1408,7 +1407,7 @@ class Table
      * @param bool $bRemoveCurrentRow
      * @return integer the new number of lines that the Data Cache Contains.
      */
-    protected function insertNewPage($iIndex = 0, $rNewData = null, $bInsertHeader = true, $bRemoveCurrentRow = false)
+    protected function insertNewPage(int $iIndex = 0, $rNewData = null, bool $bInsertHeader = true, bool $bRemoveCurrentRow = false): int
     {
         if ($this->disablePageBreak) {
             return 0;
@@ -1601,6 +1600,7 @@ class Table
      * @param string|array|null $color
      * @param string|null $fontFamily font family
      * @param string $inherit Tag to be inherited
+     * @noinspection PhpMissingParamTypeInspection
      */
     public function setStyle($tag, $fontSize = null, $fontStyle = null, $color = null, $fontFamily = null, $inherit = 'base')
     {
@@ -1614,7 +1614,7 @@ class Table
      * @param array $config Tag configuration
      * @param null $inherit Tag to inherit
      */
-    public function setStyleAssoc($tag, array $config = [], $inherit = null)
+    public function setStyleAssoc(string $tag, array $config = [], $inherit = null)
     {
         $this->multicell->setStyleAssoc($tag, $config, $inherit);
     }
@@ -1625,7 +1625,7 @@ class Table
      * @param $var mixed
      * @param $index mixed
      * @param $default mixed
-     * @return array value or default
+     * @return mixed value or default
      */
     public static function getValue($var, $index = '', $default = '')
     {
@@ -1641,11 +1641,11 @@ class Table
     /**
      * Returns the table configuration value specified by the input key
      *
-     * @param $key string
+     * @param string $key
      * @return mixed
      *
      */
-    protected function getTableConfig($key)
+    protected function getTableConfig(string $key)
     {
         return self::getValue($this->configuration['TABLE'], $key);
     }
@@ -1655,7 +1655,7 @@ class Table
      * Sets the Table Config
      * @param $aConfig array - array containing the Table Configuration
      */
-    public function setTableConfig($aConfig)
+    public function setTableConfig(array $aConfig)
     {
         $this->configuration['TABLE'] = array_merge($this->configuration['TABLE'], $aConfig);
 
@@ -1669,7 +1669,7 @@ class Table
      *
      * @param array $aConfig
      */
-    public function setHeaderConfig($aConfig)
+    public function setHeaderConfig(array $aConfig)
     {
         $this->configuration['HEADER'] = array_merge($this->configuration['HEADER'], $aConfig);
     }
@@ -1679,7 +1679,7 @@ class Table
      *
      * @param array $aConfig
      */
-    public function setRowConfig($aConfig)
+    public function setRowConfig(array $aConfig)
     {
         $this->configuration['ROW'] = array_merge($this->configuration['ROW'], $aConfig);
     }
@@ -1688,11 +1688,11 @@ class Table
     /**
      * Returns the header configuration value specified by the input key
      *
-     * @param $key string
+     * @param string $key
      * @return mixed
      *
      */
-    protected function getHeaderConfig($key)
+    protected function getHeaderConfig(string $key)
     {
         return self::getValue($this->configuration['HEADER'], $key);
     }
@@ -1701,11 +1701,11 @@ class Table
     /**
      * Returns the row configuration value specified by the input key
      *
-     * @param $key string
+     * @param string $key
      * @return mixed
      *
      */
-    protected function getRowConfig($key)
+    protected function getRowConfig(string $key)
     {
         return self::getValue($this->configuration['ROW'], $key);
     }
@@ -1718,7 +1718,7 @@ class Table
      *
      * @return array The Default Configuration
      */
-    protected function getDefaultConfiguration()
+    protected function getDefaultConfiguration(): array
     {
         $files = [
             $this->configFile,
@@ -1740,11 +1740,11 @@ class Table
     }
 
     /**
-     * Returns the compatibility map between STRINGS and Constrants
+     * Returns the compatibility map between STRINGS and Constants
      *
      * @return array
      */
-    protected function compatibilityMap()
+    protected function compatibilityMap(): array
     {
         //@formatter:off
         return array(
@@ -1776,7 +1776,7 @@ class Table
      *
      * @return array
      */
-    protected function getTypeMap()
+    protected function getTypeMap(): array
     {
         return $this->typeMap;
     }
@@ -1788,7 +1788,7 @@ class Table
      * @param string $name
      * @param string $class
      */
-    public function addTypeMap($name, $class)
+    public function addTypeMap(string $name, string $class)
     {
         if (!class_exists($class)) {
             //fatal error
@@ -1805,9 +1805,9 @@ class Table
      * @param boolean $value
      * @return $this
      */
-    public function setDisablePageBreak($value)
+    public function setDisablePageBreak(bool $value): Table
     {
-        $this->disablePageBreak = (bool)$value;
+        $this->disablePageBreak = $value;
 
         return $this;
     }
@@ -1817,7 +1817,7 @@ class Table
      *
      * @return Pdf
      */
-    public function getPdfObject()
+    public function getPdfObject(): ?Pdf
     {
         return $this->pdf;
     }

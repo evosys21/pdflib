@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection PhpUnused */
 
 /**
  * This file is part of the Interpid PDF Addon package.
@@ -44,10 +44,10 @@ class Tools
      * @param bool $trim
      * @return string
      */
-    public static function string($value, $trim = true)
+    public static function string($value, bool $trim = true): ?string
     {
         if (is_null($value)) {
-            return $value;
+            return null;
         }
         $value = strval($value);
         if ($trim) {
@@ -57,10 +57,10 @@ class Tools
     }
 
     /**
-     * String with NULL Allowed
+     * String|Array with NULL Allowed
      *
-     * @param mixed $value
-     * @return string
+     * @param array|string $value
+     * @return array|string
      */
     public static function color($value)
     {
@@ -94,28 +94,28 @@ class Tools
     /**
      * Returns the color array of the 3 parameters or the 1st param if the others are not specified
      *
-     * @param int|false $r
-     * @param int|null $b
+     * @param string|int $r
      * @param int|null $g
-     * @return array|false
+     * @param int|null $b
+     * @return array|string
      */
-    public static function getColor($r, $b = null, $g = null)
+    public static function getColor($r, ?int $g = null, ?int $b = null)
     {
         if ($g !== null && $b !== null) {
-            return [$r, $b, $g];
+            return [$r, $g, $b];
         }
 
         return $r;
     }
 
     /**
-     * Returns an array. If the input paramter is array then this array will be returned.
+     * Returns an array. If the input parameter is array then this array will be returned.
      * Otherwise a array($value) will be returned;
      *
      * @param mixed $value
      * @return array
      */
-    public static function makeArray($value)
+    public static function makeArray($value): array
     {
         if (is_array($value)) {
             return $value;
@@ -131,7 +131,7 @@ class Tools
      * @param mixed $value
      * @return bool
      */
-    public static function isFalse($value)
+    public static function isFalse($value): bool
     {
         if (false === $value) {
             return true;
@@ -148,7 +148,7 @@ class Tools
         return false;
     }
 
-    public static function getCellAlign($align)
+    public static function getCellAlign($align): string
     {
         $align = strtoupper($align);
         switch ($align) {
@@ -173,7 +173,7 @@ class Tools
      * @param int $precision
      * @return bool
      */
-    public static function compareFloats($value1, $value2, $precision = 5)
+    public static function compareFloats(float $value1, float $value2, int $precision = 5): bool
     {
         return round($value1, $precision) === round($value2, $precision);
     }
@@ -185,7 +185,7 @@ class Tools
      * @param array $array2
      * @return array
      */
-    public static function mergeNonNull($array1, $array2)
+    public static function mergeNonNull(array $array1, array $array2): array
     {
         foreach ($array1 as $key => $value) {
             if (is_null($value) && isset($array2[$key])) {
@@ -202,7 +202,7 @@ class Tools
      * @param $value
      * @return array
      */
-    public static function parseHtmlAttribute($value)
+    public static function parseHtmlAttribute($value): array
     {
         $values = array_map('trim', explode(";", $value));
         $result = [];
@@ -215,7 +215,7 @@ class Tools
         return $result;
     }
 
-    public static function parseColor($color)
+    public static function parseColor($color): array
     {
         if (is_array($color)) {
             return $color;
@@ -223,8 +223,7 @@ class Tools
 
         if (preg_match("#\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*#", $color, $matches)) {
             array_shift($matches); //remove first element
-            $matches = array_map("intval", $matches);
-            return $matches;
+            return array_map("intval", $matches);
         }
 
         $result = self::hex2rgb($color);
@@ -241,7 +240,7 @@ class Tools
      * @param $hex_color
      * @return array
      */
-    public static function hex2rgb($hex_color)
+    public static function hex2rgb($hex_color): ?array
     {
         $values = str_replace('#', '', $hex_color);
         switch (strlen($values)) {
@@ -270,7 +269,6 @@ class Tools
         $replacements = [
             "&nbsp;" => " "
         ];
-        $content = str_replace(array_keys($replacements), array_values($replacements), $content);
-        return $content;
+        return str_replace(array_keys($replacements), array_values($replacements), $content);
     }
 }

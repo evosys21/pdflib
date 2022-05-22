@@ -1,4 +1,5 @@
-<?php
+<?php 
+/** @noinspection PhpUnused */
 
 /**
  * This file is part of the Interpid PDF Addon package.
@@ -11,6 +12,8 @@
  */
 
 namespace Interpid\PdfExamples;
+
+use Interpid\PdfLib\Pdf;
 
 if (!defined('PDF_RESOURCES_IMAGES')) {
     define('PDF_RESOURCES_IMAGES', __DIR__ . '/images');
@@ -27,12 +30,12 @@ class PdfFactory
     /**
      * Creates a new PDF Object and Initializes it
      *
-     * @param $type
+     * @param string $type
      * @param bool $header Show the header
      * @param bool $footer Show the footer
      * @return MyPdf
      */
-    public static function newPdf($type, $header = true, $footer = true)
+    public static function newPdf(string $type, bool $header = true, bool $footer = true): MyPdf
     {
         $pdf = new MyPdf();
 
@@ -55,12 +58,12 @@ class PdfFactory
      * Initializes the pdf object.
      * Set the margins, adds a page, adds default fonts etc...
      *
-     * @param MyPdf $pdf
+     * @param Pdf $pdf
      * @param bool $header
      * @param bool $footer
-     * @return MyPdf $pdf
+     * @return Pdf $pdf
      */
-    public static function initPdf($pdf, $header = true, $footer = true)
+    public static function initPdf(Pdf $pdf, bool $header = true, bool $footer = true): Pdf
     {
         $pdf->showHeader = $header;
         $pdf->showFooter = $footer;

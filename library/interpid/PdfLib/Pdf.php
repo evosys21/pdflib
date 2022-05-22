@@ -1,4 +1,5 @@
-<?php
+<?php /** @noinspection SpellCheckingInspection */
+
 /**
  * This file is part of the Interpid PDF Addon package.
  *
@@ -11,6 +12,8 @@
 
 namespace Interpid\PdfLib;
 
+use FPDF;
+
 /**
  * FPDF extended class.
  *
@@ -22,7 +25,7 @@ namespace Interpid\PdfLib;
  *
  * @package Interpid\PdfLib
  */
-class Pdf extends \FPDF
+class Pdf extends FPDF
 {
     public $images;
     public $w;
@@ -48,23 +51,26 @@ class Pdf extends \FPDF
     public $AutoPageBreak;
     public $CurOrientation;
 
+    public $showHeader = true;
+    public $showFooter = true;
+
     // phpcs:disable
     public function _out($s)
     {
         parent::_out($s);
     }
 
-    public function _parsejpg($file)
+    public function _parsejpg($file): array
     {
         return parent::_parsejpg($file);
     }
 
-    public function _parsegif($file)
+    public function _parsegif($file): array
     {
         return parent::_parsegif($file);
     }
 
-    public function _parsepng($file)
+    public function _parsepng($file): array
     {
         return parent::_parsepng($file);
     }

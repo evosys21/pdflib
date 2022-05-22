@@ -16,7 +16,7 @@ class Arr
      * @param  mixed  $value
      * @return bool
      */
-    public static function accessible($value)
+    public static function accessible($value): bool
     {
         return is_array($value) || $value instanceof ArrayAccess;
     }
@@ -24,11 +24,11 @@ class Arr
     /**
      * Check if an item or items exist in an array using "dot" notation.
      *
-     * @param  \ArrayAccess|array  $array
+     * @param ArrayAccess|array  $array
      * @param  string|array  $keys
      * @return bool
      */
-    public static function has($array, $keys)
+    public static function has($array, $keys): bool
     {
         $keys = (array) $keys;
 
@@ -62,7 +62,7 @@ class Arr
      * @param  string|int  $key
      * @return bool
      */
-    public static function exists($array, $key)
+    public static function exists($array, $key): bool
     {
         if ($array instanceof ArrayAccess) {
             return $array->offsetExists($key);

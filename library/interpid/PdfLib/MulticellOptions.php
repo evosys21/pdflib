@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection PhpUnused */
 
 /**
  * This file is part of the Interpid PDF Addon package.
@@ -80,7 +80,7 @@ class MulticellOptions
         $this->resetCellOptions();
     }
 
-    public function isHeightOverflow($lines, $height)
+    public function isHeightOverflow($lines, $height): bool
     {
         $maxLines = $this->maxLines;
         if ($maxLines > 0 && $lines > $maxLines) {
@@ -129,7 +129,7 @@ class MulticellOptions
             if (!isset($style['size'])) {
                 continue;
             }
-            $style['size'] = $this->shrinkValue($style['size'], $this->shrinkFontStep, 1);
+            $style['size'] = $this->shrinkValue($style['size'], $this->shrinkFontStep);
         }
         unset($style);
         return $this;

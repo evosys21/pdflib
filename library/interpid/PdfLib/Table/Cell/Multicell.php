@@ -55,7 +55,7 @@ class Multicell extends CellAbstract implements CellInterface
     }
 
 
-    public function getDefaultValues()
+    public function getDefaultValues(): array
     {
         $values = array(
             'TEXT' => '',
@@ -79,7 +79,7 @@ class Multicell extends CellAbstract implements CellInterface
      * @param string $alignment
      * @see CellAbstract::setAlign()
      */
-    public function setAlign($alignment)
+    public function setAlign(string $alignment)
     {
         parent::setAlign($alignment);
 
@@ -109,25 +109,15 @@ class Multicell extends CellAbstract implements CellInterface
     }
 
 
-    /**
-     * (non-PHPdoc)
-     *
-     * @param $value
-     * @see CellAbstract::setCellDrawWidth()
-     */
-    public function setCellDrawWidth($value)
+    public function setCellDrawWidth($value): CellInterface
     {
         parent::setCellDrawWidth($value);
         $this->calculateContentWidth();
+        return $this;
     }
 
 
-    /**
-     * (non-PHPdoc)
-     *
-     * @see CellInterface::isSplittable()
-     */
-    public function isSplittable()
+    public function isSplittable(): bool
     {
         if ($this->isPropertySet('SPLITTABLE')) {
             return $this->isPropertySet('SPLITTABLE');
@@ -140,11 +130,11 @@ class Multicell extends CellAbstract implements CellInterface
     /**
      * Splits the current cell
      *
-     * @param number $nRowHeight - the Height of the row that contains this cell
-     * @param number $nMaxHeight - the Max height available
-     * @return array(oNewCell, iSplitHeight)
+     * @param int|float $rowHeight - the Height of the row that contains this cell
+     * @param int|float $maxHeight - the Max height available
+     * @return array
      */
-    public function split($nRowHeight, $nMaxHeight)
+    public function split($rowHeight, $maxHeight): array
     {
         $oCell2 = clone $this;
 
@@ -154,22 +144,22 @@ class Multicell extends CellAbstract implements CellInterface
         switch ($this->getAlignVertical()) {
             case 'M':
                 //Middle align
-                $x = ($nRowHeight - $this->getCellHeight()) / 2;
+                $x = ($rowHeight - $this->getCellHeight()) / 2;
 
-                if ($nMaxHeight <= $x) {
+                if ($maxHeight <= $x) {
                     //CASE 1
-                    $fHeightSplit = 0;
-                    $this->V_OFFSET = $x - $nMaxHeight;
+                    $splitHeight = 0;
+                    $this->V_OFFSET = $x - $maxHeight;
                     $this->setAlignVertical('T'); //top align
-                } elseif (($x + $this->getCellHeight()) >= $nMaxHeight) {
+                } elseif (($x + $this->getCellHeight()) >= $maxHeight) {
                     //CASE 2
-                    $fHeightSplit = $nMaxHeight - $x;
+                    $splitHeight = $maxHeight - $x;
 
                     $this->setAlignVertical('B'); //top align
                     $oCell2->setAlignVertical('T'); //top align
                 } else { //{
                     //CASE 3
-                    $fHeightSplit = $nMaxHeight;
+                    $splitHeight = $maxHeight;
                     $this->V_OFFSET = $x;
                     $this->setAlignVertical('B'); //bottom align
                 }
@@ -177,12 +167,12 @@ class Multicell extends CellAbstract implements CellInterface
 
             case 'B':
                 //Bottom Align
-                if (($nRowHeight - $this->getCellHeight()) > $nMaxHeight) {
+                if (($rowHeight - $this->getCellHeight()) > $maxHeight) {
                     //if the text has enough place on the other page then we show nothing on this page
-                    $fHeightSplit = 0;
+                    $splitHeight = 0;
                 } else {
                     //calculate the space that the text needs on this page
-                    $fHeightSplit = $nMaxHeight - ($nRowHeight - $this->getCellHeight());
+                    $splitHeight = $maxHeight - ($rowHeight - $this->getCellHeight());
                 }
 
                 break;
@@ -190,20 +180,20 @@ class Multicell extends CellAbstract implements CellInterface
             case 'T':
             default:
                 //Top Align and default align
-                $fHeightSplit = $nMaxHeight;
+                $splitHeight = $maxHeight;
                 break;
         }
 
-        $fHeightSplit = $fHeightSplit - $this->getPaddingTop();
-        if ($fHeightSplit < 0) {
-            $fHeightSplit = 0;
+        $splitHeight = $splitHeight - $this->getPaddingTop();
+        if ($splitHeight < 0) {
+            $splitHeight = 0;
         }
 
-        //calculate the number of the lines that have space on the $fHeightSplit
-        $iNoLinesCPage = floor($fHeightSplit / $this->LINE_SIZE);
+        //calculate the number of the lines that have space on the $splitHeight
+        $splitLines = floor($splitHeight / $this->LINE_SIZE);
 
         //check which paddings we need to set
-        if ($iNoLinesCPage == 0) {
+        if ($splitLines == 0) {
             //there are no lines on the current cell - all paddings are 0
             $this->setPaddingTop(0);
             $this->setPaddingBottom(0);
@@ -214,34 +204,34 @@ class Multicell extends CellAbstract implements CellInterface
             $oCell2->setPaddingTop(0);
         }
 
-        $iCurrentLines = count($this->TEXT_STRLINES);
+        $currentLines = count($this->TEXT_STRLINES);
 
         //if the number of the lines is bigger than the number of the lines in the cell decrease the number of the lines
-        if ($iNoLinesCPage > $iCurrentLines) {
-            $iNoLinesCPage = $iCurrentLines;
+        if ($splitLines > $currentLines) {
+            $splitLines = $currentLines;
         }
 
-        $aLines = $this->TEXT_STRLINES;
-        $aLines2 = array_splice($aLines, $iNoLinesCPage);
-        $this->TEXT_STRLINES = $aLines;
+        $lines = $this->TEXT_STRLINES;
+        $lines2 = array_splice($lines, $splitLines);
+        $this->TEXT_STRLINES = $lines;
         $this->calculateCellHeight();
 
         //this is the second cell from the splitted one
-        $oCell2->TEXT_STRLINES = $aLines2;
+        $oCell2->TEXT_STRLINES = $lines2;
         $oCell2->calculateCellHeight();
-        //$oCell2->setCellDrawHeight($nRowHeight);
+        //$oCell2->setCellDrawHeight($rowHeight);
 
 
-        $this->setCellDrawHeight($nMaxHeight);
+        $this->setCellDrawHeight($maxHeight);
 
         return array(
             $oCell2,
-            $fHeightSplit
+            $splitHeight
         );
     }
 
 
-    public function getText()
+    public function getText(): string
     {
         return $this->TEXT;
     }

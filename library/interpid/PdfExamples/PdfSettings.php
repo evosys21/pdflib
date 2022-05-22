@@ -1,4 +1,6 @@
 <?php
+/** @noinspection PhpUnused */
+
 /**
  * This file is part of the Interpid PDF Addon package.
  *
@@ -74,7 +76,7 @@ class PdfSettings
         'WIDTH' => 10
     );
 
-    public static function headerRow()
+    public static function headerRow(): array
     {
         $headerRow = [];
         for ($i = 0; $i < static::$columns; $i++) {
@@ -83,7 +85,7 @@ class PdfSettings
         return $headerRow;
     }
 
-    public static function dataRow()
+    public static function dataRow(): array
     {
         $dataRow = [];
         for ($i = 0; $i < static::$columns; $i++) {
@@ -123,9 +125,9 @@ class PdfSettings
     /**
      * Set the styles for the advanced table
      * 
-     * @param $table Table
+     * @param Table $table
      */
-    public static function setTableStyles($table)
+    public static function setTableStyles(Table $table)
     {
         // Set the styles for the advanced table
         $table->setStyle('p', 10, '', '130,0,30', 'helvetica');

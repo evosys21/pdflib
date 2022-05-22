@@ -1,4 +1,5 @@
-<?php
+<?php /** @noinspection PhpUnused */
+/** @noinspection PhpUnused */
 
 /**
  * This file is part of the Interpid PDF Addon package.
@@ -12,6 +13,8 @@
 
 namespace Interpid\PdfLib\Table\Cell;
 
+use Interpid\PdfLib\Pdf;
+use Interpid\PdfLib\PdfInterface;
 use Interpid\PdfLib\Tools;
 
 /**
@@ -21,11 +24,11 @@ use Interpid\PdfLib\Tools;
  */
 class Image extends CellAbstract implements CellInterface
 {
-    protected $sFile;
+    protected $file;
 
-    protected $sType = '';
+    protected $type = '';
 
-    protected $sLink = '';
+    protected $link = '';
 
     /**
      * Default alignment is Middle Center
@@ -38,14 +41,14 @@ class Image extends CellAbstract implements CellInterface
     /**
      * Image cell constructor
      *
-     * @param $pdf
+     * @param Pdf|PdfInterface $pdf
      * @param string $file
      * @param int $width
      * @param int $height
      * @param string $type
      * @param string $link
      */
-    public function __construct($pdf, $file = '', $width = 0, $height = 0, $type = '', $link = '')
+    public function __construct($pdf, string $file = '', int $width = 0, int $height = 0, string $type = '', string $link = '')
     {
         parent::__construct($pdf);
 
@@ -55,7 +58,7 @@ class Image extends CellAbstract implements CellInterface
     }
 
 
-    public function setProperties(array $values = [])
+    public function setProperties(array $values = []): CellInterface
     {
         //call the parent function
         parent::setProperties($values);
@@ -68,14 +71,16 @@ class Image extends CellAbstract implements CellInterface
             Tools::getValue($values, 'IMAGE_TYPE'),
             Tools::getValue($values, 'LINK')
         );
+
+        return $this;
     }
 
 
     public function setImage($file = '', $width = 0, $height = 0, $type = '', $link = '')
     {
-        $this->sFile = $file;
-        $this->sType = $type;
-        $this->sLink = $link;
+        $this->file = $file;
+        $this->type = $type;
+        $this->link = $link;
 
         //check if file exists etc...
         $this->doChecks();
@@ -96,27 +101,27 @@ class Image extends CellAbstract implements CellInterface
      * @param string $alignment
      * @todo: check if this function is REALLY used
      */
-    public function setAlign($alignment)
+    public function setAlign(string $alignment)
     {
         $this->alignment = strtoupper($alignment);
     }
 
 
-    public function isSplittable()
+    public function isSplittable(): bool
     {
         return false;
     }
 
 
-    public function getType()
+    public function getType(): string
     {
-        return $this->sType;
+        return $this->type;
     }
 
 
-    public function getLink()
+    public function getLink(): string
     {
-        return $this->sLink;
+        return $this->link;
     }
 
 
@@ -130,12 +135,9 @@ class Image extends CellAbstract implements CellInterface
         $x = $this->pdf->GetX() + $this->getBorderSize();
         $y = $this->pdf->GetY() + $this->getBorderSize();
 
-        $width = $this->getContentWidth();
-        $height = $this->getContentHeight();
-
         //Horizontal Alignment
         if (strpos($this->alignment, 'J') !== false) {
-            //justified - image is fully streched
+            //justified - image is fully stretched
             $x += $this->getPaddingLeft();
             $this->setContentWidth($this->getCellDrawWidth() - 2 * $this->getBorderSize() - $this->getPaddingLeft() - $this->getPaddingRight());
         } elseif (strpos($this->alignment, 'C') !== false) {
@@ -166,13 +168,13 @@ class Image extends CellAbstract implements CellInterface
         }
 
         $this->pdf->Image(
-            $this->sFile,
+            $this->file,
             $x,
             $y,
             $this->getContentWidth(),
             $this->getContentHeight(),
-            $this->sType,
-            $this->sLink
+            $this->type,
+            $this->link
         );
     }
 
@@ -183,12 +185,12 @@ class Image extends CellAbstract implements CellInterface
     protected function doChecks()
     {
         //check if the image is set
-        if (0 == strlen($this->sFile)) {
+        if (0 == strlen($this->file)) {
             trigger_error("Image File not set!", E_USER_ERROR);
         }
 
-        if (!file_exists($this->sFile)) {
-            trigger_error("Image File Not found: {$this->sFile}!", E_USER_ERROR);
+        if (!file_exists($this->file)) {
+            trigger_error("Image File Not found: $this->file!", E_USER_ERROR);
         }
     }
 

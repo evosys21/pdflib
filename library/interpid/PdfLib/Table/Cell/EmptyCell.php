@@ -20,7 +20,7 @@ namespace Interpid\PdfLib\Table\Cell;
  */
 class EmptyCell extends CellAbstract implements CellInterface
 {
-    public function isSplittable()
+    public function isSplittable(): bool
     {
         return false;
     }
