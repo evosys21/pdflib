@@ -461,18 +461,18 @@ class Multicell
             $width = $this->pdfi->getRemainingWidth();
         }
 
-        $nMaximumWidth = $width;
+        $maximumWidth = $width;
 
-        $aLine = []; //this will contain the result
-        $bReturnResult = false; //if break and return result
-        $bResetSpaces = false;
+        $lineData = []; //this will contain the result
+        $returnResult = false; //if break and return result
+        $resetSpaces = false;
 
-        $nLineWith = 0; //line string width
+        $lineWith = 0; //line string width
         $totalChars = 0; //total characters included in the result string
         $fw = &$this->fontInfo; //font info array
 
 
-        $last_sepch = ''; //last separator character
+        $lastSeparator = ''; //last separator character
 
         foreach ($this->dataInfo as $val) {
             $s = $val['text'];
@@ -503,13 +503,13 @@ class Multicell
             $i = 0; //from where is the string remain
             $j = 0; //until where is the string good to copy
             $currentWidth = 0; //string width
-            $last_sep = -1; //last separator position
-            $last_sepwidth = 0;
-            $last_sepch_width = 0;
-            $ante_last_sep = -1; //ante last separator position
-            $ante_last_sepch = '';
-            $ante_last_sepwidth = 0;
-            $nSpaces = 0;
+            $lastSeparatorPosition = -1; //last separator position
+            $lastSeparatorWidth = 0;
+            $lastSeparatorCharWidth = 0;
+            $anteSeparatorPosition = -1; //ante last separator position
+            $anteSeparatorWitdh = '';
+            $anteSeparatorCharWidth = 0;
+            $spaces = 0;
 
             $string = $this->pdfi->stringToArray($s);
             $stringLength = count($string);
@@ -521,28 +521,28 @@ class Multicell
                 if ($c == ord("\n")) { //Explicit line break
                     $i++; //ignore/skip this character
                     $this->dataExtraInfo['CURRENT_LINE_BR'] = 'BREAK';
-                    $bReturnResult = true;
-                    $bResetSpaces = true;
+                    $returnResult = true;
+                    $resetSpaces = true;
                     break;
                 }
 
                 //space
                 if ($c == ord(" ")) {
-                    $nSpaces++;
+                    $spaces++;
                 }
 
                 $char_width = $this->mt_getCharWidth($tag, $c);
 
                 //separators
                 if (!$nowrap && in_array($c, array_map('ord', str_split($this->lineBreakingChars)))) {
-                    $ante_last_sep = $last_sep;
-                    $ante_last_sepch = $last_sepch;
-                    $ante_last_sepwidth = $last_sepwidth;
+                    $anteSeparatorPosition = $lastSeparatorPosition;
+                    $anteSeparatorWitdh = $lastSeparator;
+                    $anteSeparatorCharWidth = $lastSeparatorWidth;
 
-                    $last_sep = $i; //last separator position
-                    $last_sepch = $c; //last separator char
-                    $last_sepch_width = $char_width; //last separator char
-                    $last_sepwidth = $currentWidth;
+                    $lastSeparatorPosition = $i; //last separator position
+                    $lastSeparator = $c; //last separator char
+                    $lastSeparatorCharWidth = $char_width; //last separator char
+                    $lastSeparatorWidth = $currentWidth;
                 }
 
                 if ($c == ord("\t")) { //TAB
@@ -561,10 +561,10 @@ class Multicell
                     }
                 }
 
-                $nLineWith += $char_width;
+                $lineWith += $char_width;
 
                 //round these values to a precision of 5! should be enough
-                if (round($nLineWith, 5) > round($nMaximumWidth, 5)) { //Automatic line break
+                if (round($lineWith, 5) > round($maximumWidth, 5)) { //Automatic line break
 
 
                     $this->dataExtraInfo['CURRENT_LINE_BR'] = 'AUTO';
@@ -575,41 +575,41 @@ class Multicell
                          */
                         $i = 1;
                         $j = 1;
-                        $bReturnResult = true; //YES RETURN THE RESULT!!!
+                        $returnResult = true; //YES RETURN THE RESULT!!!
                         break;
                     }
 
 
-                    if ($last_sep != -1) {
+                    if ($lastSeparatorPosition != -1) {
                         //we have a separator in this tag!!!
                         //untill now there one separator
-                        if (($last_sepch == $c) && ($last_sepch != ord(" ")) && ($ante_last_sep != -1)) {
+                        if (($lastSeparator == $c) && ($lastSeparator != ord(" ")) && ($anteSeparatorPosition != -1)) {
                             /*
                              * this is the last character and it is a separator, if it is a space the leave it... Have to jump back to the last separator... even a space
                              */
-                            $last_sep = $ante_last_sep;
-                            $last_sepch = $ante_last_sepch;
-                            $last_sepwidth = $ante_last_sepwidth;
+                            $lastSeparatorPosition = $anteSeparatorPosition;
+                            $lastSeparator = $anteSeparatorWitdh;
+                            $lastSeparatorWidth = $anteSeparatorCharWidth;
                         }
 
-                        if ($last_sepch == ord(" ")) {
-                            $j = $last_sep; //just ignore the last space (it is at end of line)
-                            $i = $last_sep + 1;
-                            if ($nSpaces > 0) {
-                                $nSpaces--;
+                        if ($lastSeparator == ord(" ")) {
+                            $j = $lastSeparatorPosition; //just ignore the last space (it is at end of line)
+                            $i = $lastSeparatorPosition + 1;
+                            if ($spaces > 0) {
+                                $spaces--;
                             }
-                            $currentWidth = $last_sepwidth;
+                            $currentWidth = $lastSeparatorWidth;
                         } else {
-                            $j = $last_sep + 1;
-                            $i = $last_sep + 1;
-                            $currentWidth = $last_sepwidth + $last_sepch_width;
+                            $j = $lastSeparatorPosition + 1;
+                            $i = $lastSeparatorPosition + 1;
+                            $currentWidth = $lastSeparatorWidth + $lastSeparatorCharWidth;
                         }
-                    } elseif (count($aLine) > 0) {
+                    } elseif (count($lineData) > 0) {
                         //we have elements in the last tag!!!!
-                        if ($last_sepch == ord(" ")) { //the last tag ends with a space, have to remove it
+                        if ($lastSeparator == ord(" ")) { //the last tag ends with a space, have to remove it
 
 
-                            $temp = &$aLine[count($aLine) - 1];
+                            $temp = &$lineData[count($lineData) - 1];
 
                             if (' ' == self::strChar($temp['text'], -1)) {
                                 $temp['text'] = self::substr(
@@ -626,7 +626,7 @@ class Multicell
                     }
 
 
-                    $bReturnResult = true;
+                    $returnResult = true;
                     break;
                 }
 
@@ -660,7 +660,7 @@ class Multicell
                 'custom_width' => 0,
                 'width_real' => $currentWidth,
                 'width' => $currentWidth,
-                'spaces' => $nSpaces,
+                'spaces' => $spaces,
                 'y' => $y
             ], $cellData);
 
@@ -670,24 +670,24 @@ class Multicell
             }
 
             //we have a partial result
-            $aLine[] = $cellData;
+            $lineData[] = $cellData;
 
 
             $this->tempData['LAST_TAB_SIZE'] = $currentWidth;
             $this->tempData['LAST_TAB_REQSIZE'] = (isset($val['size'])) ? $val['size'] : 0;
 
-            if ($bReturnResult) {
+            if ($returnResult) {
                 break;
             } //break this for
         }
 
 
         // Check the first and last tag -> if first and last caracters are " " space remove them!!!"
-        if ((count($aLine) > 0) && ($this->dataExtraInfo['LAST_LINE_BR'] == 'AUTO')) {
+        if ((count($lineData) > 0) && ($this->dataExtraInfo['LAST_LINE_BR'] == 'AUTO')) {
 
             // first tag
             // If the first character is a space, then cut it off
-            $temp = &$aLine[0];
+            $temp = &$lineData[0];
             if ((self::strlen($temp['text']) > 0) && (" " == self::strChar($temp['text'], 0))) {
                 $temp['text'] = self::substr($temp['text'], 1, self::strlen($temp['text']));
                 $temp['width'] -= $this->mt_getCharWidth($temp['tag'], ord(" "));
@@ -696,7 +696,7 @@ class Multicell
             }
 
             // If the last character is a space, then cut it off
-            $temp = &$aLine[count($aLine) - 1];
+            $temp = &$lineData[count($lineData) - 1];
             if ((self::strlen($temp['text']) > 0) && (" " == self::strChar($temp['text'], -1))) {
                 $temp['text'] = self::substr($temp['text'], 0, self::strlen($temp['text']) - 1);
                 $temp['width'] -= $this->mt_getCharWidth($temp['tag'], ord(" "));
@@ -705,14 +705,14 @@ class Multicell
             }
         }
 
-        if ($bResetSpaces) { //this is used in case of a "Explicit Line Break"
+        if ($resetSpaces) { //this is used in case of a "Explicit Line Break"
             //put all spaces to 0 so in case of 'J' align there is no space extension
-            for ($k = 0; $k < count($aLine); $k++) {
-                $aLine[$k]['spaces'] = 0;
+            for ($k = 0; $k < count($lineData); $k++) {
+                $lineData[$k]['spaces'] = 0;
             }
         }
 
-        return $aLine;
+        return $lineData;
     }
 
 
