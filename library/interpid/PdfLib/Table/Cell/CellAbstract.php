@@ -429,9 +429,7 @@ abstract class CellAbstract implements CellInterface
             return $this->properties[$property];
         }
 
-        trigger_error("Undefined property $property");
-
-        return null;
+         return null;
     }
 
 

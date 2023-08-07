@@ -20,7 +20,7 @@ cache:
     - vendor/
 
 install:
-  image: dockerhub.interpid.eu/php74
+  image: evosys21/php:7.4
   stage: install
   artifacts:
     expire_in: 5 days
@@ -30,7 +30,7 @@ install:
 
 tests-php70:
   stage: test
-  image: dockerhub.interpid.eu/$PHP
+  image: evosys21/php:$PHP
   dependencies:
     - install
   script:
@@ -38,12 +38,12 @@ tests-php70:
   parallel:
     matrix:
       - PHP:
-          - php71
-          - php72
+          - "7.1"
+          - "7.2"
 
 tests-php:
   stage: test
-  image: dockerhub.interpid.eu/$PHP
+  image: evosys21/php:$PHP
   dependencies:
     - install
   script:
@@ -51,14 +51,15 @@ tests-php:
   parallel:
     matrix:
       - PHP:
-          - php73
-          - php74
-          - php80
-          - php81
+          - "7.3"
+          - "7.4"
+          - "8.0"
+          - "8.1"
+          - "8.2"
 
 code-coverage:
   stage: quality
-  image: dockerhub.interpid.eu/php74
+  image: evosys21/php:7.4
   script:
     - echo "xdebug.mode=coverage" >> /etc/php/7.4/cli/php.ini
     - vendor/bin/phpunit --configuration phpunit-ci.xml
@@ -81,7 +82,7 @@ code-coverage:
 # Run the release build
 build-release:
   stage: build-release
-  image: dockerhub.interpid.eu/php74
+  image: evosys21/php:7.4
   rules:
     - if: $CI_COMMIT_TAG
   script:

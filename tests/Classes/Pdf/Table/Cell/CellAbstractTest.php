@@ -284,8 +284,6 @@ class CellAbstractTest extends BaseTestCase
         $mock->TEST = 2;
 
         $this->assertTrue($mock->isPropertySet('TEST'));
-        $this->expectNotice();
-        $this->assertInstanceOf('', $mock->TEST2);
     }
 
     public function testIsPropertySetReturnValue()

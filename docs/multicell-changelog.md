@@ -2,6 +2,10 @@
 
 All notable changes to FPDF Advanced Multicell will be documented in this file.
 
+### 3.5.0 (2023-08-07)
+
+- Fix, PHP 8.2 support
+
 ### 3.4.0 (2022-05-23)
 
 - Change, Simplify style inheritance and definition.
