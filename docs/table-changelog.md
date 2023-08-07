@@ -2,6 +2,11 @@
 
 All notable changes to FPDF Advanced Table will be documented in this file.
 
+
+### 6.6.0 (2023-08-07)
+
+- Fix, PHP 8.2 support
+
 ### 6.5.0 (2022-05-23)
 
 - Change, Simplify style inheritance and definition.

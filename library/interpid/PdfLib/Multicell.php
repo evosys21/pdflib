@@ -156,7 +156,7 @@ class Multicell
     /**
      * Returns the PDF object
      *
-     * @return Pdf|null
+     * @return Pdf
      */
     public function getPdfObject(): ?Pdf
     {
@@ -220,10 +220,10 @@ class Multicell
      * @param string|null $fontStyle font style
      * @param string|array|null $color
      * @param string|null $fontFamily font family
-     * @param string|null $inherit Tag to be inherited
+     * @param string $inherit Tag to be inherited
      * @return self
      */
-    public function setStyle(string $tag, $fontSize = null, ?string $fontStyle = null, $color = null, ?string $fontFamily = null, ?string $inherit = null):self
+    public function setStyle(string $tag, $fontSize = null, ?string $fontStyle = null, $color = null, ?string $fontFamily = null, string $inherit = ""):self
     {
         if ($tag == 'ttags') {
             $this->pdf->Error(">> ttags << is reserved TAG Name.");
@@ -262,9 +262,9 @@ class Multicell
      *
      * @param string $tag Tag name
      * @param array $properties Tag properties
-     * @param null $inherit Tag to inherit
+     * @param string $inherit Tag to inherit
      */
-    public function setStyleAssoc(string $tag, array $properties = [], $inherit = null)
+    public function setStyleAssoc(string $tag, array $properties = [], $inherit = "")
     {
         $this->setStyle(
             $tag,
