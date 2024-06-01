@@ -10,7 +10,7 @@
  */
 
 
-namespace Interpid\PdfLib\Table\Cell;
+namespace evosys21\PdfLib\Table\Cell;
 
 /**
  * Pdf Table Cell EmptyCell

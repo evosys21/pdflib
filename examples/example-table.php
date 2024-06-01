@@ -6,8 +6,8 @@
 
 require_once __DIR__ . '/../autoload.php';
 
-use Interpid\PdfLib\Table;
-use Interpid\PdfLib\Pdf;
+use evosys21\PdfLib\Fpdf\Pdf;
+use evosys21\PdfLib\Table;
 
 // Pdf extends TCPDF
 $pdf = new Pdf();
@@ -70,7 +70,7 @@ $row = [
 $table->addRow($row);
 
 $row = [
-    new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10),
+    new \evosys21\PdfLib\Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10),
     "<p><b>SVG Images</b> are supported\n<bi>(see right image >>>)</bi></p>",
     new Table\Cell\ImageSVG($pdf, PDF_RESOURCES_IMAGES . '/Tiger.svg', 35, 35)
 ];
@@ -79,7 +79,7 @@ $row = [
 $table->addRow($row);
 
 $row = [
-    new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10),
+    new \evosys21\PdfLib\Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10),
     "<p><b>SVG Images</b> are supported\n<bi>(see right image >>>)</bi></p>",
     [
         'TYPE' => 'ImageSVG',

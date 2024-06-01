@@ -1,8 +1,8 @@
 <?php
 
+use evosys21\PdfLib\Table;
 use Interpid\PdfExamples\MyPdf;
 use Interpid\PdfExamples\PdfSettings;
-use Interpid\PdfLib\Table;
 
 if (!isset($pdf)) {
     $pdf = new MyPdf();
@@ -57,13 +57,13 @@ $table->addRow($row);
 $row = [];
 
 //alternatively you can create directly the cell object
-$row[0] = new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10);
+$row[0] = new \evosys21\PdfLib\Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10);
 $row[1] = array(
     'TEXT' => "<p>This is another <b>Multicell</b></p>",
     'BACKGROUND_COLOR' => PdfSettings::$colors[0]
 );
 
-$row[2] = new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/pensil.jpg', 10);
+$row[2] = new \evosys21\PdfLib\Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/pensil.jpg', 10);
 $row[2]->setAlign("R");
 
 //add the data row

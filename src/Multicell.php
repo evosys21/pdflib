@@ -12,15 +12,17 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\PdfLib;
+namespace evosys21\PdfLib;
 
 if (!defined('PARAGRAPH_STRING')) {
     define('PARAGRAPH_STRING', '~~~');
 }
 
+use evosys21\PdfLib\Fpdf\Pdf;
+use evosys21\PdfLib\Fpdf\PdfInterface;
+use evosys21\PdfLib\String\Tags;
+use evosys21\PdfLib\Utils\Arr;
 use Exception;
-use Interpid\PdfLib\String\Tags;
-use Interpid\PdfLib\Utils\Arr;
 
 /**
  * Pdf Multicell

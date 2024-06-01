@@ -4,7 +4,7 @@
  * Copyright (c), Interpid, http://www.interpid.eu
  */
 
-use Interpid\PdfLib\Tools;
+use evosys21\PdfLib\Tools;
 
 require_once 'Factory.php';
 

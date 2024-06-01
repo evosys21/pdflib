@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\PdfLib\String;
+namespace evosys21\PdfLib\String;
 
 /**
  * String Tag extraction class

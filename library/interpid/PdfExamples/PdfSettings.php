@@ -13,8 +13,8 @@
 
 namespace Interpid\PdfExamples;
 
-use Interpid\PdfLib\Multicell;
-use Interpid\PdfLib\Table;
+use evosys21\PdfLib\Multicell;
+use evosys21\PdfLib\Table;
 
 if (!defined('PDF_APPLICATION_PATH')) {
     define('PDF_APPLICATION_PATH', __DIR__ . '/../../..');
@@ -120,11 +120,11 @@ class PdfSettings
         $multicell->setStyle('s2', 6, null, '0,49,159');
         $multicell->setStyle('code', 9, '', null, 'courier');
     }
-    
-    
+
+
     /**
      * Set the styles for the advanced table
-     * 
+     *
      * @param Table $table
      */
     public static function setTableStyles(Table $table)

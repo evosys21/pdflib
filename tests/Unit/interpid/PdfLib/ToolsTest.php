@@ -2,13 +2,13 @@
 
 namespace Tests\Unit\Interpid\PdfLib;
 
-use Interpid\PdfLib\Tools;
+use evosys21\PdfLib\Tools;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class ToolsTest.
  *
- * @covers \Interpid\PdfLib\Tools
+ * @covers \evosys21\PdfLib\Tools
  */
 class ToolsTest extends TestCase
 {

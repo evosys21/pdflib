@@ -14,7 +14,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\PdfLib;
+namespace evosys21\PdfLib\Fpdf;
+
+use evosys21\PdfLib\Tools;
 
 /**
  * Pdf Class Interface
@@ -287,7 +289,7 @@ class PdfInterface
     {
         return 'iso-8859-1';
     }
-    
+
     /**
      * Set the Internal Encoding to used in PDF Class.
      */

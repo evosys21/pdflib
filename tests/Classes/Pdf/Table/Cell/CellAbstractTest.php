@@ -12,9 +12,8 @@
 
 namespace Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell;
 
-use Interpid\PdfLib\PdfInterface;
+use evosys21\PdfLib\Fpdf\PdfInterface;
 use Interpid\PdfLib\Tests\BaseTestCase;
-use PHPUnit\Framework\Error\Notice;
 
 /**
  * Class CellAbstractTest

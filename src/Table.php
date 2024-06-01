@@ -11,11 +11,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\PdfLib;
+namespace evosys21\PdfLib;
 
-use Interpid\PdfLib\Table\Cell\CellInterface;
-use Interpid\PdfLib\Table\Cell\CellAbstract;
-use Interpid\PdfLib\Table\Cell\EmptyCell;
+use evosys21\PdfLib\Fpdf\Pdf;
+use evosys21\PdfLib\Fpdf\PdfInterface;
+use evosys21\PdfLib\Table\Cell\CellAbstract;
+use evosys21\PdfLib\Table\Cell\CellInterface;
+use evosys21\PdfLib\Table\Cell\EmptyCell;
 
 /**
  * Pdf Table Class
@@ -291,9 +293,9 @@ class Table
     protected $columnWidths = [];
 
     protected $typeMap = array(
-        'EMPTY' => '\Interpid\PdfLib\Table\Cell\EmptyCell',
-        'MULTICELL' => '\Interpid\PdfLib\Table\Cell\Multicell',
-        'IMAGE' => '\Interpid\PdfLib\Table\Cell\Image',
+        'EMPTY' => '\evosys21\PdfLib\Table\Cell\EmptyCell',
+        'MULTICELL' => '\evosys21\PdfLib\Table\Cell\Multicell',
+        'IMAGE' => '\evosys21\PdfLib\Table\Cell\Image',
         'IMAGESVG' => '\Interpid\PdfLib\Table\Cell\ImageSVG',
     );
 
@@ -806,7 +808,7 @@ class Table
     protected function getCellObject($data = null)
     {
         if (null === $data) {
-            $cell = new Table\Cell\Multicell($this->pdf);
+            $cell = new \evosys21\PdfLib\Table\Cell\Multicell($this->pdf);
         } elseif (is_object($data)) {
             $cell = $data;
         } else {
@@ -829,7 +831,7 @@ class Table
             $cell->setProperties($data);
         }
 
-        if ($cell instanceof Table\Cell\Multicell) {
+        if ($cell instanceof \evosys21\PdfLib\Table\Cell\Multicell) {
             $cell->attachMulticell($this->multicell);
         }
 

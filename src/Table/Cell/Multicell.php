@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\PdfLib\Table\Cell;
+namespace evosys21\PdfLib\Table\Cell;
 
-use Interpid\PdfLib\MulticellData;
-use Interpid\PdfLib\Pdf;
+use evosys21\PdfLib\Fpdf\Pdf;
+use evosys21\PdfLib\MulticellData;
 
 /**
  * Pdf Table Cell Multicell
@@ -33,7 +33,7 @@ class Multicell extends CellAbstract implements CellInterface
 
     /**
      *
-     * @var \Interpid\PdfLib\Multicell
+     * @var \evosys21\PdfLib\Multicell
      */
     protected $multicell;
 

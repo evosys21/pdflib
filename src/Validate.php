@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\PdfLib;
+namespace evosys21\PdfLib;
 
 /**
  * Class Validate

@@ -1,8 +1,9 @@
 <?php
 /** @noinspection ALL */
 
-use Interpid\PdfLib\Pdf;
-use Interpid\PdfLib\Table;
+use evosys21\PdfLib\Fpdf\Pdf;
+use evosys21\PdfLib\Table;
+use evosys21\PdfLib\Table;
 
 $pdf = new Pdf();
 $table = new Table($pdf);
@@ -111,11 +112,9 @@ $table->addRow($row);
 //row 2 - add data as Objects
 $row = [];
 
-use Interpid\PdfLib\Table;
-
 //alternatively you can create directly the cell object
-$row[0] = new Table\Cell\Image($pdf, '/blog.jpg', 10);
-$row[1] = new Table\Cell\Multicell($pdf, "<p>This is another <b>Multicell</b></p>");
+$row[0] = new \evosys21\PdfLib\Table\Cell\Image($pdf, '/blog.jpg', 10);
+$row[1] = new \evosys21\PdfLib\Table\Cell\Multicell($pdf, "<p>This is another <b>Multicell</b></p>");
 $row[2]['TEXT'] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='http://www.interpid.eu'>www.interpid.eu</bi></p>";
 $row[2]['BACKGROUND_COLOR'] = $aColor[1];
 

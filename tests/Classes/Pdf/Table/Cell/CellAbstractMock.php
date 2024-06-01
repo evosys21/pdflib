@@ -12,7 +12,7 @@
 
 namespace Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell;
 
-use Interpid\PdfLib\Table\Cell\CellAbstract;
+use evosys21\PdfLib\Table\Cell\CellAbstract;
 
 /**
  * Class CellAbstractMock

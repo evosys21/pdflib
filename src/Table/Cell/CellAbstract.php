@@ -11,12 +11,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\PdfLib\Table\Cell;
+namespace evosys21\PdfLib\Table\Cell;
 
-use Interpid\PdfLib\PdfInterface;
-use Interpid\PdfLib\Tools;
-use Interpid\PdfLib\Pdf;
-use Interpid\PdfLib\Validate;
+use evosys21\PdfLib\Fpdf\Pdf;
+use evosys21\PdfLib\Fpdf\PdfInterface;
+use evosys21\PdfLib\Tools;
+use evosys21\PdfLib\Validate;
 
 /**
  * Pdf Table Cell Abstract Class

@@ -12,7 +12,7 @@
 
 namespace Interpid\PdfLib\Tests\PdfLib;
 
-use Interpid\PdfLib\Table;
+use evosys21\PdfLib\Table;
 use Interpid\PdfLib\Tests\Helper\Helper;
 use PHPUnit\Framework\TestCase;
 

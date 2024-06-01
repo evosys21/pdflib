@@ -5,10 +5,10 @@
  */
 require_once __DIR__ . '/../autoload.php';
 
-use Interpid\PdfExamples\PdfSettings;
-use Interpid\PdfLib\Multicell;
+use evosys21\PdfLib\Multicell;
+use evosys21\PdfLib\Table;
 use Interpid\PdfExamples\PdfFactory;
-use Interpid\PdfLib\Table;
+use Interpid\PdfExamples\PdfSettings;
 
 class DevFactory
 {

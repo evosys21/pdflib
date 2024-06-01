@@ -11,7 +11,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\PdfLib;
+namespace evosys21\PdfLib;
+
+use evosys21\PdfLib\Fpdf\Pdf;
+use evosys21\PdfLib\Fpdf\PdfInterface;
 
 /**
  * Class MulticellOptions

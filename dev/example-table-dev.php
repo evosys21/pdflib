@@ -6,8 +6,8 @@
 
 require_once __DIR__ . '/../autoload.php';
 
-use Interpid\PdfLib\Table;
-use Interpid\PdfLib\Pdf;
+use evosys21\PdfLib\Fpdf\Pdf;
+use evosys21\PdfLib\Table;
 
 // Pdf extends FPDF
 $pdf = new Pdf();
@@ -71,16 +71,16 @@ $row = [
 $table->addRow($row);
 
 $row = [
-    new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10),
+    new \evosys21\PdfLib\Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10),
     "<p><b>Images</b> are supported\n<bi></bi></p>",
-    new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/telescope.jpg', 35, 35)
+    new \evosys21\PdfLib\Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/telescope.jpg', 35, 35)
 ];
 
 //add the row to the table
 $table->addRow($row);
 
 $row = [
-    new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10),
+    new \evosys21\PdfLib\Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10),
     "<p><b>Images</b> are supported\n<bi></bi></p>",
     [
         'TYPE' => 'Image',

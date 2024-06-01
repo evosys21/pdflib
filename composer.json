@@ -1,39 +1,35 @@
 {
-    "name": "interpid/fpdf",
-    "description": "Fpdf Addons",
+    "name": "evosys21/pdflib",
+    "description": "Fpdf Tcpdf Library",
     "type": "library",
     "authors": [
         {
-            "name": "Interpid",
-            "email": "office@interpid.eu"
+            "name": "EvoSys21",
+            "email": "office@evosys21.com"
         }
     ],
     "require": {
         "ext-mbstring": "*",
-        "ext-json": "*",
-        "setasign/fpdf": "^1.8"
+        "ext-json": "*"
     },
     "require-dev": {
+        "setasign/fpdf": "^1.8.6",
+        "tecnickcom/tcpdf": "^6.7.0",
+        "setasign/tfpdf": "^1.33.0",
         "phpunit/phpunit": "^9.0",
         "phpmetrics/phpmetrics": "^2.4",
-        "interpid/redmine": "^1.0",
-        "kbsali/redmine-api": "^1.0",
         "vlucas/phpdotenv": "^4.1",
         "ext-fileinfo": "*",
         "symfony/process": "^5.3"
     },
     "autoload": {
-        "classmap": [
-            "library/interpid"
-        ],
-        "exclude-from-classmap": [
-            "/Tests/"
-        ]
+        "psr-4": {
+            "evosys21\\PdfLib\\": "src/"
+        }
     },
     "autoload-dev": {
         "psr-4": {
-            "Interpid\\PdfLib\\Tests\\": "tests/",
-            "Interpid\\PdfExamples\\": "library/interpid/PdfExamples/"
+            "evosys21\\PdfLib\\Tests\\": "tests/"
         }
     },
     "repositories": [
