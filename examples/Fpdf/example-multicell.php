@@ -4,7 +4,7 @@
  * Copyright (c), Interpid, http://www.interpid.eu
  */
 
-require_once __DIR__ . '/../autoload.php';
+require_once 'autoload.php';
 
 use evosys21\PdfLib\Fpdf\Pdf;
 use evosys21\PdfLib\Multicell;

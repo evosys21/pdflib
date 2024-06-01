@@ -13,7 +13,7 @@
 namespace Interpid\PdfLib\Tests\Helper;
 
 use evosys21\PdfLib\Fpdf\Pdf;
-use Interpid\PdfExamples\MyPdf;
+use evosys21\PdfLib\Examples\Fpdf\MyPdf;
 
 /**
  * TestPdf Class

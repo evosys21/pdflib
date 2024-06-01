@@ -13,7 +13,7 @@
 namespace Interpid\PdfLib\Tests\Helper;
 
 use evosys21\PdfLib\Fpdf\Pdf;
-use Interpid\PdfExamples\PdfFactory;
+use evosys21\PdfLib\Examples\Fpdf\PdfFactory;
 use Symfony\Component\Process\Process;
 
 

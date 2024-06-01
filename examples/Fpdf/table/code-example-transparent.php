@@ -1,8 +1,8 @@
 <?php
 
 use evosys21\PdfLib\Table;
-use Interpid\PdfExamples\MyPdf;
-use Interpid\PdfExamples\PdfSettings;
+use evosys21\PdfLib\Examples\Fpdf\MyPdf;
+use evosys21\PdfLib\Examples\Fpdf\PdfSettings;
 
 if (!isset($pdf)) {
     $pdf = new MyPdf();

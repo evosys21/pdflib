@@ -4,11 +4,11 @@
  * Copyright (c), Interpid, http://www.interpid.eu
  */
 
-require_once __DIR__ . '/../autoload.php';
+require_once 'autoload.php';
 
 use evosys21\PdfLib\Multicell;
-use Interpid\PdfExamples\PdfFactory;
-use Interpid\PdfExamples\PdfSettings;
+use evosys21\PdfLib\Examples\Fpdf\PdfFactory;
+use evosys21\PdfLib\Examples\Fpdf\PdfSettings;
 
 $factory = new PdfFactory();
 
@@ -29,9 +29,15 @@ $multicell->multiCell(0, 5, $title, 1, 'J', 1, 3, 3, 3, 3);
 
 $pdf->Ln(10); //line break
 
+
 //read TAG formatted text from file
 $txt = file_get_contents(PDF_APPLICATION_PATH . '/content/multicell.txt');
-$multicell->multiCell(0, 5, $txt, 1, 'J', 1, 3, 3, 3, 3);
+$s = $txt . "\n\n\n\nRepeat the text to trigger a page break \n\n\n" . $txt;
+
+//create an advanced multicell
+$multicell->multiCell(0, 5, $s, 1, 'J', 1, 3, 3, 3, 3);
+
+$pdf->Ln(10); //new line
 
 // output the pdf
 $pdf->Output();

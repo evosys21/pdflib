@@ -12,8 +12,8 @@
 
 namespace Interpid\PdfLib\Tests;
 
-use Interpid\PdfExamples\MyPdf;
-use Interpid\PdfExamples\PdfFactory;
+use evosys21\PdfLib\Examples\Fpdf\MyPdf;
+use evosys21\PdfLib\Examples\Fpdf\PdfFactory;
 use PHPUnit\Framework\TestCase;
 
 /**

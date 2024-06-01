@@ -12,7 +12,7 @@
 
 namespace Interpid\PdfLib\Tests\Functional;
 
-use Interpid\PdfExamples\PdfFactory;
+use evosys21\PdfLib\Examples\Fpdf\PdfFactory;
 use Interpid\PdfLib\Tests\BaseTestCase;
 use Interpid\PdfLib\Tests\Helper\TestPdf;
 

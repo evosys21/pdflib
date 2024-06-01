@@ -2,8 +2,8 @@
 
 use evosys21\PdfLib\Table;
 use evosys21\PdfLib\Tools;
-use Interpid\PdfExamples\MyPdf;
-use Interpid\PdfExamples\PdfSettings;
+use evosys21\PdfLib\Examples\Fpdf\MyPdf;
+use evosys21\PdfLib\Examples\Fpdf\PdfSettings;
 
 if (!isset($pdf)) {
     $pdf = new myPdf();

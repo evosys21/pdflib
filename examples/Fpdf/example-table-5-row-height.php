@@ -4,12 +4,12 @@
  * Copyright (c), Interpid, http://www.interpid.eu
  */
 
-require_once __DIR__ . "/../autoload.php";
+require_once 'autoload.php';;
 
 use evosys21\PdfLib\Multicell;
 use evosys21\PdfLib\Table;
-use Interpid\PdfExamples\PdfFactory;
-use Interpid\PdfExamples\PdfSettings;
+use evosys21\PdfLib\Examples\Fpdf\PdfFactory;
+use evosys21\PdfLib\Examples\Fpdf\PdfSettings;
 
 $factory = new PdfFactory();
 

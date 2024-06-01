@@ -29,7 +29,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "evosys21\\PdfLib\\Tests\\": "tests/"
+            "evosys21\\PdfLib\\Tests\\": "tests/",
+            "evosys21\\PdfLib\\Examples\\": "examples/"
         }
     },
     "repositories": [
