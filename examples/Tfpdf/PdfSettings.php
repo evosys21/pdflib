@@ -4,8 +4,8 @@
 
 namespace Interpid\PdfExamples;
 
-use Interpid\PdfLib\Multicell;
-use Interpid\PdfLib\Table;
+use evosys21\PdfLib\Multicell;
+use evosys21\PdfLib\Table;
 
 if (!defined('PDF_APPLICATION_PATH')) {
     define('PDF_APPLICATION_PATH', __DIR__ . '/../../..');

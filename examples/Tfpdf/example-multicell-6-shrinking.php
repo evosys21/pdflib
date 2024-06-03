@@ -5,9 +5,9 @@
 
 require_once 'autoload.php';
 
-use Interpid\PdfLib\Multicell;
-use Interpid\PdfExamples\PdfFactory;
-use Interpid\PdfExamples\PdfSettings;
+use evosys21\PdfLib\Multicell;
+use evosys21\PdfLib\Examples\Tfpdf\PdfFactory;
+use evosys21\PdfLib\Examples\Tfpdf\PdfSettings;
 
 $factory = new PdfFactory();
 

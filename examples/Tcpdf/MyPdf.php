@@ -3,8 +3,8 @@
 
 namespace evosys21\PdfLib\Examples\Tcpdf;
 
-use Interpid\PdfLib\Pdf;
-use Interpid\PdfLib\Multicell;
+use evosys21\PdfLib\Pdf;
+use evosys21\PdfLib\Multicell;
 
 /**
  * Custom PDF class extension for Header and Footer Definitions

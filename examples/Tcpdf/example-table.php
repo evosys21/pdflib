@@ -5,8 +5,8 @@
 
 require_once 'autoload.php';
 
-use Interpid\PdfLib\Table;
-use Interpid\PdfLib\Pdf;
+use evosys21\PdfLib\Table;
+use evosys21\PdfLib\Pdf;
 
 // Pdf extends TCPDF
 $pdf = new Pdf();

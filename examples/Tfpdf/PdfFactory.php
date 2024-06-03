@@ -4,7 +4,7 @@
 
 namespace Interpid\PdfExamples;
 
-use Interpid\PdfLib\Pdf;
+use evosys21\PdfLib\Pdf;
 
 if (!defined('PDF_RESOURCES_IMAGES')) {
     define('PDF_RESOURCES_IMAGES', __DIR__ . '/images');

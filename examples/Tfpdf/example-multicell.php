@@ -5,8 +5,8 @@
 
 require_once 'autoload.php';
 
-use Interpid\PdfLib\Multicell;
-use Interpid\PdfLib\Pdf;
+use evosys21\PdfLib\Multicell;
+use evosys21\PdfLib\Pdf;
 
 // Pdf extends FPDF
 $pdf = new Pdf();

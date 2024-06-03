@@ -5,9 +5,9 @@
 
 require_once __DIR__ . "/../autoload.php";
 
-use Interpid\PdfLib\Table;
-use Interpid\PdfExamples\PdfFactory;
-use Interpid\PdfExamples\PdfSettings;
+use evosys21\PdfLib\Table;
+use evosys21\PdfLib\Examples\Tfpdf\PdfFactory;
+use evosys21\PdfLib\Examples\Tfpdf\PdfSettings;
 
 $factory = new PdfFactory();
 
