@@ -1,8 +1,19 @@
-<?php
+<?php 
 /** @noinspection PhpUnused */
+
+/**
+ * This file is part of the Interpid PDF Addon package.
+ *
+ * @author Interpid <office@interpid.eu>
+ * @copyright (c) Interpid, http://www.interpid.eu
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Interpid\PdfExamples;
 
-use evosys21\PdfLib\Fpdf\Pdf;
+use Interpid\PdfLib\Pdf;
 
 if (!defined('PDF_RESOURCES_IMAGES')) {
     define('PDF_RESOURCES_IMAGES', __DIR__ . '/images');
@@ -56,7 +67,11 @@ class PdfFactory
     {
         $pdf->showHeader = $header;
         $pdf->showFooter = $footer;
+        // use the default TCPDF configuration
+        $pdf->SetCreator('TCPDF');
+        $pdf->SetAuthor('Interpid');
         $pdf->SetMargins(20, 20, 20);
+        $pdf->SetAutoPageBreak(true, 20);
 
         //set default font/colors
         $pdf->SetFont('helvetica', '', 11);
@@ -65,11 +80,12 @@ class PdfFactory
 
         // add a page
         $pdf->AddPage();
-        $pdf->AliasNbPages();
 
         //disable compression for unit-testing!
         if (isset($_SERVER['ENVIRONMENT']) && 'test' == $_SERVER['ENVIRONMENT']) {
             $pdf->SetCompression(false);
+            $pdf->setDocCreationTimestamp(1420070400);
+            $pdf->setDocModificationTimestamp(1420070400);
         }
 
         return $pdf;

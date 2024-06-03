@@ -1,9 +1,20 @@
 <?php
 /** @noinspection PhpUnused */
+
+/**
+ * This file is part of the Interpid PDF Addon package.
+ *
+ * @author Interpid <office@interpid.eu>
+ * @copyright (c) Interpid, http://www.interpid.eu
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Interpid\PdfExamples;
 
-use evosys21\PdfLib\Multicell;
-use evosys21\PdfLib\Table;
+use Interpid\PdfLib\Multicell;
+use Interpid\PdfLib\Table;
 
 if (!defined('PDF_APPLICATION_PATH')) {
     define('PDF_APPLICATION_PATH', __DIR__ . '/../../..');
@@ -108,12 +119,16 @@ class PdfSettings
         $multicell->setStyle('s1', 8, null, '118,0,3');
         $multicell->setStyle('s2', 6, null, '0,49,159');
         $multicell->setStyle('code', 9, '', null, 'courier');
+
+        //set the style for utf8 texts, use 'dejavusans' fonts
+        $multicell->setStyle('u8', null, '', [0, 45, 179], 'dejavusans');
+        $multicell->setStyle('u8b', null, 'B', null, null, 'u8');
     }
-
-
+    
+    
     /**
      * Set the styles for the advanced table
-     *
+     * 
      * @param Table $table
      */
     public static function setTableStyles(Table $table)
@@ -123,5 +138,9 @@ class PdfSettings
         $table->setStyle('b', 9, 'B', '80,80,260', 'helvetica');
         $table->setStyle('h1', 10, '', '0,151,200', 'helvetica');
         $table->setStyle('bi', 12, 'BI', '0,0,120', 'helvetica');
+
+        //set the style for utf8 texts, use 'dejavusans' fonts
+        $table->setStyle('u8', null, '', [0, 45, 179], 'dejavusans');
+        $table->setStyle('u8b', null, 'B', null, null, 'u8');
     }
 }

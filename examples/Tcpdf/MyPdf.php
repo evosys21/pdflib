@@ -1,9 +1,21 @@
 <?php
 /** @noinspection PhpUnused */
+
+/**
+ *
+ * This file is part of the Interpid PDF Addon package.
+ *
+ * @author Interpid <office@interpid.eu>
+ * @copyright (c) Interpid, http://www.interpid.eu
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Interpid\PdfExamples;
 
-use evosys21\PdfLib\Fpdf\Pdf;
-use evosys21\PdfLib\Multicell;
+use Interpid\PdfLib\Pdf;
+use Interpid\PdfLib\Multicell;
 
 /**
  * Custom PDF class extension for Header and Footer Definitions
@@ -69,7 +81,7 @@ class MyPdf extends Pdf
         $this->SetY(-10);
         $this->SetFont('helvetica', 'I', 7);
         $this->SetTextColor(170, 170, 170);
-        $this->MultiCell(0, 4, "Page {$this->PageNo()} / {nb}", 0, 'C');
+        $this->MultiCell(0, 4, "Page {$this->PageNo()} / {$this->getNumPages()}", 0, 'C');
     }
 
     /**
@@ -108,13 +120,61 @@ class MyPdf extends Pdf
     public function _putinfo()
     {
         if (static::isTesting()) {
-            $this->metadata['Producer'] = 'FPDF - UNIT-TEST';
-            $this->metadata['CreationDate'] = 'D:' . @date('YmdHis', 1483228800);
-            foreach ($this->metadata as $key => $value) {
-                $this->_put('/' . $key . ' ' . $this->_textstring($value));
+            $this->file_id = '1234567890';
+            $this->tcpdf_version = 'x.x.x';
+
+            if (!empty($this->title)) {
+                $this->_out('/Title ' . $this->_textstring($this->title));
             }
+            if (!empty($this->subject)) {
+                $this->_out('/Subject ' . $this->_textstring($this->subject));
+            }
+            if (!empty($this->author)) {
+                $this->_out('/Author ' . $this->_textstring($this->author));
+            }
+            if (!empty($this->keywords)) {
+                $this->_out('/Keywords ' . $this->_textstring($this->keywords));
+            }
+            if (!empty($this->creator)) {
+                $this->_out('/Creator ' . $this->_textstring($this->creator));
+            }
+            return parent::_putinfo();
         } else {
-            parent::_putinfo();
+            return parent::_putinfo();
+        }
+    }
+
+    protected function _textstring($s, $n = 0)
+    {
+        $s = static::_testReplace($s);
+        return parent::_textstring($s, $n);
+    }
+
+    /**
+     * Static function to replace the TCPDF version in the unit-testing.
+     *
+     * @param $s
+     * @return string|string[]|null
+     */
+    protected static function _testReplace($s)
+    {
+        if (static::isTesting()) {
+            $s = preg_replace("/TCPDF \d+\.\d+\.\d+ /", 'TCPDF x.x.x ', $s);
+        }
+        return $s;
+    }
+
+    /**
+     * @param $s
+     * @return int|void
+     */
+    public function _out($s)
+    {
+        if (static::isTesting()) {
+            $s = static::_testReplace($s);
+            parent::_out($s);
+        } else {
+            parent::_out($s);
         }
     }
 
