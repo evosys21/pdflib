@@ -1,7 +1,7 @@
 <?php
 /** @noinspection PhpUnused */
 
-namespace evosys21\PdfLib\Examples\Fpdf;
+namespace evosys21\PdfLib\Examples\Tfpdf;
 
 use evosys21\PdfLib\Tfpdf\Pdf;
 use evosys21\PdfLib\Multicell;
@@ -41,12 +41,12 @@ class MyPdf extends Pdf
         $multicell->setStyle('h2', 6, '', '0,119,220', 'helvetica');
         $multicell->setStyle('h4', 6, '', '0,151,200', 'helvetica');
 
-        $multicell->multiCell(100, 3, file_get_contents(PDF_APPLICATION_PATH . '/content/' . $this->headerSource));
+        $multicell->multiCell(100, 3, file_get_contents(__DIR__ . '/content/' . $this->headerSource));
 
         $width = 40;
 
         $this->Image(
-            PDF_APPLICATION_PATH . '/content/images/interpid_logo.png',
+            __DIR__ . '/content/images/interpid_logo.png',
             $this->w - $this->rMargin - $width,
             10,
             $width,

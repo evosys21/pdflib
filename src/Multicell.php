@@ -51,13 +51,6 @@ class Multicell
     protected $currentTag = '__UNDEFINED__';
 
     /**
-     * Tags Font Information
-     *
-     * @var array
-     */
-    protected $fontInfo;
-
-    /**
      * Parsed string data info
      *
      * @var array
@@ -123,12 +116,12 @@ class Multicell
     /**
      * Class constructor.
      *
-     * @param Pdf $pdf Instance of the pdf class
+     * @param $pdf Instance of the pdf class
      */
-    public function __construct(Pdf $pdf)
+    public function __construct($pdf)
     {
         $this->pdf = $pdf;
-        $this->pdfi = new PdfInterface($pdf);
+        $this->pdfi = Factory::pdfInterface($pdf);
         $this->lineBreakingChars = self::SEPARATOR;
         $this->options = new MulticellOptions($this->pdfi);
     }
@@ -168,10 +161,10 @@ class Multicell
     /**
      * Returns the Singleton Instance of this class.
      *
-     * @param Pdf $pdf Instance of the pdf class
+     * @param $pdf Instance of the pdf class
      * @return self
      */
-    public static function getInstance(Pdf $pdf): self
+    public static function getInstance($pdf): self
     {
         $instance = &self::$_singleton[spl_object_hash($pdf)];
 
@@ -223,9 +216,11 @@ class Multicell
             $this->pdf->Error("Empty TAG Name.");
         }
 
+        $inherit = strval($inherit);
+
         //use case insensitive tags
         $tag = trim(strtoupper($tag));
-        $inherit = trim(strtoupper(strval($inherit)));
+        $inherit = trim(strtoupper($inherit));
 
         if (isset($this->options->styles[$tag])) {
             $this->doubleTags = true;
@@ -487,8 +482,6 @@ class Multicell
 
         $lineWith = 0; //line string width
         $totalChars = 0; //total characters included in the result string
-        $fw = &$this->fontInfo; //font info array
-
 
         $lastSeparator = ''; //last separator character
 
@@ -516,8 +509,10 @@ class Multicell
 
             $this->applyStyle($tag, $cellData['style']);
 
-            $fw[$tag]['CurrentFont'] = &$this->pdf->CurrentFont; //this can be copied by reference!
-            $fw[$tag]['FontSize'] = $this->pdf->FontSize;
+            $this->pdfi->fontInfo[$tag] = [
+                'CurrentFont' => &$this->pdf->CurrentFont,
+                'FontSize' => $this->pdf->FontSize,
+            ];
 
             $isParagraph = false;
             if (($s == "\t") && (strpos($tag, 'pparg') !== false)) {
@@ -1241,13 +1236,13 @@ class Multicell
      */
     protected function mt_getCharWidth(string $tag, string $char)
     {
-        //if this font was not used until now,
-        $this->applyStyle($tag);
-        $fw[$tag]['w'] = $this->pdf->CurrentFont['cw']; //width
-        $fw[$tag]['s'] = $this->pdf->FontSize; //size
-
-
-        return $fw[$tag]['w'][chr($char)] * $fw[$tag]['s'] / 1000;
+        return $this->pdfi->getCharStringWidth(
+            $tag,
+            $char,
+            $this->getTagFont($tag),
+            $this->getTagFontStyle($tag),
+            $this->getTagSize($tag)
+        );
     }
 
 

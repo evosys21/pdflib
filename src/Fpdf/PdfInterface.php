@@ -6,6 +6,8 @@
 
 namespace evosys21\PdfLib\Fpdf;
 
+use evosys21\PdfLib\AbstractPdfUtils;
+use evosys21\PdfLib\PdfInterfaceDef;
 use evosys21\PdfLib\Tools;
 
 /**
@@ -13,7 +15,7 @@ use evosys21\PdfLib\Tools;
  *
  * @package Interpid\PdfLib
  */
-class PdfInterface
+class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
 {
 
     const RAW = '__RAW__';
@@ -304,4 +306,21 @@ class PdfInterface
             return substr($str, $start, $length);
         }
     }
+
+    public function getCharStringWidth($tag, $char, $fontFamily, $fontStyle, $fontSize)
+    {
+        // apply the styles
+        if (strpos($fontSize, '%') !== false) {
+            $fontSize = $this->pdf->FontSizePt * (((float)$fontSize) / 100);
+        }
+
+        $this->pdf->SetFont($fontFamily, $fontStyle, $fontSize);
+
+        $width = &$this->pdf->CurrentFont['cw']; //width
+        $size = &$this->pdf->FontSize; //size
+
+
+        return $width[chr($char)] * $size / 1000;
+    }
+
 }

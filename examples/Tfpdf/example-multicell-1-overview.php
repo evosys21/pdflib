@@ -23,13 +23,13 @@ PdfSettings::setMulticellStyles($multicell);
 $pdf->Ln(10); //line break
 
 // create the advanced multicell
-$title = file_get_contents(PDF_APPLICATION_PATH . '/content/multicell-title.txt');
+$title = file_get_contents(__DIR__ . '/content/multicell-title.txt');
 $multicell->multiCell(0, 5, $title, 1, 'J', 1, 3, 3, 3, 3);
 
 $pdf->Ln(10); //line break
 
 //read TAG formatted text from file
-$txt = file_get_contents(PDF_APPLICATION_PATH . '/content/multicell.txt');
+$txt = file_get_contents(__DIR__ . '/content/multicell.txt');
 $multicell->multiCell(0, 5, $txt, 1, 'J', 1, 3, 3, 3, 3);
 
 // output the pdf

@@ -6,14 +6,17 @@
 
 namespace evosys21\PdfLib\Tfpdf;
 
+use evosys21\PdfLib\AbstractPdfUtils;
+use evosys21\PdfLib\PdfInterfaceDef;
+use evosys21\PdfLib\Tools;
+
 /**
  * Pdf Class Interface
  *
  * @package Interpid\PdfLib
  */
-class PdfInterface
+class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
 {
-
     const RAW = '__RAW__';
 
     /**
@@ -294,5 +297,28 @@ class PdfInterface
         } else {
             return mb_substr($str, $start, $length);
         }
+    }
+
+    public function getCharStringWidth($tag, $char, $fontFamily, $fontStyle, $fontSize): float|int
+    {
+        $fontInfo = &$this->fontInfo[$tag]; //font info array
+        $cw = &$fontInfo['CurrentFont']['cw']; //character widths
+        $w = 0;
+
+        if (isset($fontInfo['unifontSubset'])) {
+            if (isset($cw[$char]) && isset($cw[2 * $char]) && isset($cw[2 * $char + 1])) {
+                $w += (ord($cw[2 * $char]) << 8) + ord($cw[2 * $char + 1]);
+            } else {
+                if ($char > 0 && $char < 128 && isset($cw[chr($char)])) {
+                    $w += $cw[chr($char)];
+                } else {
+                    $w += $this->CurrentFont['desc']['MissingWidth'] ?? $this->CurrentFont['MissingWidth'] ?? 500;
+                }
+            }
+        } else {
+            $w += $cw[chr($char)];
+        }
+
+        return ($w * $fontInfo['FontSize']) / 1000;
     }
 }

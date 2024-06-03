@@ -6,12 +6,16 @@
 
 namespace evosys21\PdfLib\Tcpdf;
 
+use evosys21\PdfLib\AbstractPdfUtils;
+use evosys21\PdfLib\PdfInterfaceDef;
+use evosys21\PdfLib\Tools;
+
 /**
  * Pdf Class Interface
  *
  * @package Interpid\PdfLib
  */
-class PdfInterface
+class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
 {
 
     const RAW = '__RAW__';
@@ -89,7 +93,7 @@ class PdfInterface
      * @param $fontsize string
      * @return number The character width
      */
-    public function getCharStringWidth($char, $fontFamily, $fontStyle, $fontsize)
+    public function getCharStringWidth($tag, $char, $fontFamily, $fontStyle, $fontsize)
     {
         return $this->pdf->GetArrStringWidth(array(
             $char
@@ -310,5 +314,16 @@ class PdfInterface
         } else {
             return mb_substr($str, $start, $length);
         }
+    }
+
+    public function getCharStringWidth($tag, $char, $fontFamily, $fontStyle, $fontSize): float|int
+    {
+        $this->pdf->SetFont($fontFamily, $fontStyle, $fontSize);
+
+        $width = &$this->pdf->CurrentFont['cw']; //width
+        $size = &$this->pdf->FontSize; //size
+
+
+        return $width[chr($char)] * $size / 1000;
     }
 }

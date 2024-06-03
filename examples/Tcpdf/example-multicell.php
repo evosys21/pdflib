@@ -49,7 +49,7 @@ $pdf->AddFont('dejavusans', 'B', 'DejaVuSans-Bold.ttf', true);
 $multicell->setStyle('u8', null, '', [0, 45, 179], 'dejavusans');
 $multicell->setStyle('u8b', null, 'B', null, null, 'u8');
 
-$utf8Text = file_get_contents(PDF_APPLICATION_PATH . '/content/utf8-sample.txt');
+$utf8Text = file_get_contents(__DIR__ . '/content/utf8-sample.txt');
 
 $s = <<<HEREDOC
 This line is a simple text with no formatting(text-formatting from the pdf defaults)

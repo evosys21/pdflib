@@ -2,8 +2,12 @@
 /** @noinspection PhpUnused */
 namespace evosys21\PdfLib;
 
-use evosys21\PdfLib\Fpdf\Pdf;
-use evosys21\PdfLib\Fpdf\PdfInterface;
+use evosys21\PdfLib\Fpdf\Pdf as Fpdf;
+use evosys21\PdfLib\Fpdf\PdfInterface as FpdfInterface;
+use evosys21\PdfLib\Tcpdf\Pdf as Tcpdf;
+use evosys21\PdfLib\Tcpdf\PdfInterface as TcpdfInterface;
+use evosys21\PdfLib\Tfpdf\Pdf as Tfpdf;
+use evosys21\PdfLib\Tfpdf\PdfInterface as TfpdfInterface;
 use evosys21\PdfLib\Table\Cell\CellAbstract;
 use evosys21\PdfLib\Table\Cell\CellInterface;
 use evosys21\PdfLib\Table\Cell\EmptyCell;
@@ -305,14 +309,14 @@ class Table
     /**
      * Class constructor.
      *
-     * @param Pdf $pdf object Instance of the PDF class
+     * @param $pdf object Instance of the PDF class
      * @param string|null $configFile
      */
-    public function __construct(Pdf $pdf, ?string $configFile = 'table.config.php')
+    public function __construct($pdf, ?string $configFile = 'table.config.php')
     {
         //pdf object
         $this->pdf = $pdf;
-        $this->pdfi = new PdfInterface($pdf);
+        $this->pdfi = Factory::pdfInterface($pdf);
 
         $this->configFile = $configFile;
 
@@ -329,10 +333,10 @@ class Table
     /**
      * Returnes the Singleton Instance of this class.
      *
-     * @param Pdf $pdf object the pdf Object
+     * @param $pdf object the pdf Object
      * @return self
      */
-    public static function getInstance(Pdf $pdf): Table
+    public static function getInstance($pdf): Table
     {
         $oInstance = &self::$singleton[spl_object_hash($pdf)];
 

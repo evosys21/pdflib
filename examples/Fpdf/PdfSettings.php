@@ -6,8 +6,8 @@ namespace evosys21\PdfLib\Examples\Fpdf;
 use evosys21\PdfLib\Multicell;
 use evosys21\PdfLib\Table;
 
-if (!defined('PDF_APPLICATION_PATH')) {
-    define('PDF_APPLICATION_PATH', __DIR__ . '/../../..');
+if (!defined('__DIR__')) {
+    define('__DIR__', __DIR__ . '/../../..');
 }
 
 class PdfSettings
@@ -60,9 +60,9 @@ class PdfSettings
     public static $columns = 5;
 
     //prepare some default row settings
-    public static $imageCell = array(
+    public static array $imageCell = array(
         'TYPE' => 'IMAGE',
-        'FILE' => PDF_RESOURCES_IMAGES . '/dice.jpg',
+        'FILE' => __DIR__ . '/content/images/dice.jpg',
         'WIDTH' => 10
     );
 

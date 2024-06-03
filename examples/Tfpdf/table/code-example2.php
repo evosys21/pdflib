@@ -31,21 +31,13 @@ $header = [
 //add the header row
 $table->addHeader($header);
 
-$imageCell = [
-    'TYPE' => 'IMAGE',
-    'FILE' => PDF_RESOURCES_IMAGES . '/dice.jpg',
-    'WIDTH' => 10
-];
+$imageCell = PdfSettings::$imageCell;
 
 //row 1 - add data as Array
 $row = [];
 $row[0]['TEXT'] = "Line <b>1</b>";
 
-$row[1] = array(
-    'TYPE' => 'IMAGE',
-    'FILE' => PDF_RESOURCES_IMAGES . '/dice.jpg',
-    'WIDTH' => 10
-);
+$row[1] = PdfSettings::$imageCell;
 
 $row[2]['TEXT'] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='http://www.interpid.eu'>www.interpid.eu</bi></p>";
 $row[2]['ALIGN'] = 'L';

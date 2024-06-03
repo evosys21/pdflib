@@ -29,7 +29,7 @@ $table = new Table($pdf);
 // Set the styles for the advanced table
 PdfSettings::setTableStyles($table);
 
-$txt1 = $title = file_get_contents(PDF_APPLICATION_PATH . '/content/table-cell-text.txt');
+$txt1 = $title = file_get_contents(__DIR__ . '/content/table-cell-text.txt');
 
 //Initialize the table, 5 columns with the specified widths
 $table->initialize([35, 30, 40, 40, 25], [
@@ -107,7 +107,7 @@ for ($j = 0; $j < 45; $j++) {
         $row[1]['TEXT'] = "Cells can be images -->>>";
         $row[2] = array(
             'TYPE' => 'IMAGE',
-            'FILE' => PDF_RESOURCES_IMAGES . '/dice.jpg',
+            'FILE' => __DIR__ . '/content/images/dice.jpg',
             'WIDTH' => 15
         );
     }

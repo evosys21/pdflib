@@ -1,8 +1,8 @@
 <?php
 namespace evosys21\PdfLib\Tests;
 
-use evosys21\PdfLib\Examples\Fpdf\MyPdf;
-use evosys21\PdfLib\Examples\Fpdf\PdfFactory;
+use evosys21\PdfLib\Examples\Tfpdf\MyPdf;
+use evosys21\PdfLib\Examples\Tfpdf\PdfFactory;
 use PHPUnit\Framework\TestCase;
 
 /**

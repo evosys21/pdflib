@@ -1,7 +1,7 @@
 <?php
 namespace evosys21\PdfLib\Tests\Feature;
 
-use evosys21\PdfLib\Examples\Fpdf\PdfFactory;
+use evosys21\PdfLib\Examples\Tfpdf\PdfFactory;
 use evosys21\PdfLib\Tests\BaseTestCase;
 use evosys21\PdfLib\Tests\Helper\TestPdf;
 use Generator;

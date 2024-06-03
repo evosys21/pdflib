@@ -2,7 +2,7 @@
 namespace evosys21\PdfLib\Tests\Helper;
 
 use evosys21\PdfLib\Fpdf\Pdf;
-use evosys21\PdfLib\Examples\Fpdf\PdfFactory;
+use evosys21\PdfLib\Examples\Tfpdf\PdfFactory;
 use Symfony\Component\Process\Process;
 
 
