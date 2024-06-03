@@ -10,10 +10,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\PdfLib\Tests\Functional;
+namespace evosys21\PdfLib\Tests\Feature;
 
 use Generator;
-use Interpid\PdfLib\Tests\BaseExamplesTestCase;
+use evosys21\PdfLib\Tests\BaseExamplesTestCase;
 
 /**
  * Class MulticellExamplesTest
@@ -28,7 +28,7 @@ class MulticellExamplesTest extends BaseExamplesTestCase
      */
     public function testExamples($source)
     {
-        $require = APPLICATION_PATH . '/examples/' . $source;
+        $require = APPLICATION_PATH . '/examples/Fpdf/' . $source;
         $this->runTestWithExample($require, basename($require));
     }
 

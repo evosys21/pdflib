@@ -10,26 +10,24 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\PdfLib\Tests\PdfLib;
+namespace evosys21\PdfLib\Tests\Unit;
 
-use evosys21\PdfLib\Table;
-use Interpid\PdfLib\Tests\Helper\Helper;
+use evosys21\PdfLib\Multicell;
+use evosys21\PdfLib\Tests\Helper\Helper;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class TableTest
+ * Class MulticellTest
  */
-class TableTest extends TestCase
+class MulticellTest extends TestCase
 {
     public function testSetStyle()
     {
         $pdf = Helper::pdfObject1();
-        $table = new Table($pdf);
-        $table->setStyle('default', 11, '', '0,0,0', 'helvetica');
-        $table->setStyle('p', 12);
-        $table->setStyle('b', 12, 'B', '10,10,10', 'arial');
-
-        $multicell = $table->getMulticellInstance();
+        $multicell = new Multicell($pdf);
+        $multicell->setStyle('default', 11, '', '0,0,0', 'helvetica');
+        $multicell->setStyle('p', 12);
+        $multicell->setStyle('b', 12, 'B', '10,10,10', 'arial');
 
         $this->assertSame('helvetica', $multicell->getTagFont('p'));
         $this->assertSame('0,0,0', $multicell->getTagColor('p'));

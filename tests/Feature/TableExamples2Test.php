@@ -10,11 +10,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\PdfLib\Tests\Functional;
+namespace evosys21\PdfLib\Tests\Feature;
 
 use evosys21\PdfLib\Examples\Fpdf\PdfFactory;
-use Interpid\PdfLib\Tests\BaseTestCase;
-use Interpid\PdfLib\Tests\Helper\TestPdf;
+use evosys21\PdfLib\Tests\BaseTestCase;
+use evosys21\PdfLib\Tests\Helper\TestPdf;
+use Generator;
 
 /**
  * Class TableExamples2Test
@@ -42,8 +43,13 @@ class TableExamples2Test extends BaseTestCase
     }
 
 
-    protected function runTestWithExample($require, $name)
+    /**
+     * @dataProvider getExampleSources
+     * @return void
+     */
+    protected function runTestWithExample($require)
     {
+        $name = basename($require);
         //remove the .php extension
         $name = str_replace('.php', '', $name);
 
@@ -71,48 +77,18 @@ class TableExamples2Test extends BaseTestCase
         }
     }
 
-    /**
-     * Tests testExample1
-     */
-    public function testExample1()
+    public static function getExampleSources(): Generator
     {
-        $require = APPLICATION_PATH . '/examples/table/code-example1.php';
-
-        $this->runTestWithExample($require, 'table-' . basename($require));
-    }
-
-
-    /**
-     * Tests testExample2
-     */
-    public function testExample2()
-    {
-        $require = APPLICATION_PATH . '/examples/table/code-example2.php';
-
-        $this->runTestWithExample($require, 'table-' . basename($require));
-    }
-
-
-    public function testExample3()
-    {
-        $require = APPLICATION_PATH . '/examples/table/code-example3.php';
-
-        $this->runTestWithExample($require, 'table-' . basename($require));
-    }
-
-
-    public function testExampleAlignments()
-    {
-        $require = APPLICATION_PATH . '/examples/table/code-example-alignments.php';
-
-        $this->runTestWithExample($require, 'table-' . basename($require));
-    }
-
-
-    public function testExampleTransparent()
-    {
-        $require = APPLICATION_PATH . '/examples/table/code-example-transparent.php';
-
-        $this->runTestWithExample($require, 'table-' . basename($require));
+        $files = [
+            "code-example1.php",
+            "code-example2.php",
+            "code-example3.php",
+            "code-example-transparent.php",
+            "code-example-alignments.php",
+            "settings.php"
+        ];
+        foreach ($files as $file) {
+            yield [APPLICATION_PATH . "/examples/Fpdf/table/$file"];
+        }
     }
 }

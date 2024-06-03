@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\PdfLib\Tests;
+namespace evosys21\PdfLib\Tests;
 
 use evosys21\PdfLib\Examples\Fpdf\MyPdf;
 use evosys21\PdfLib\Examples\Fpdf\PdfFactory;

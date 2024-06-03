@@ -10,11 +10,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\PdfLib\Tests;
+namespace evosys21\PdfLib\Tests;
 
 use evosys21\PdfLib\Fpdf\Pdf;
 use evosys21\PdfLib\Examples\Fpdf\PdfFactory;
-use Interpid\PdfLib\Tests\Helper\Helper;
+use evosys21\PdfLib\Tests\Helper\Helper;
 use PHPUnit\Framework\TestCase;
 
 /**

@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell;
+namespace evosys21\PdfLib\Tests\Classes\Pdf\Table\Cell;
 
 use evosys21\PdfLib\Table\Cell\CellAbstract;
 

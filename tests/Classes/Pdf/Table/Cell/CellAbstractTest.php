@@ -10,10 +10,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell;
+namespace evosys21\PdfLib\Tests\Classes\Pdf\Table\Cell;
 
 use evosys21\PdfLib\Fpdf\PdfInterface;
-use Interpid\PdfLib\Tests\BaseTestCase;
+use evosys21\PdfLib\Tests\BaseTestCase;
 
 /**
  * Class CellAbstractTest

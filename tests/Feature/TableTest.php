@@ -10,12 +10,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\PdfLib\Tests\Functional;
+namespace evosys21\PdfLib\Tests\Feature;
 
 use Generator;
-use Interpid\PdfLib\Tests\BaseTestCase;
-use Interpid\PdfLib\Tests\Helper\Helper;
-use Interpid\PdfLib\Tests\Helper\TestPdf;
+use evosys21\PdfLib\Tests\BaseTestCase;
+use evosys21\PdfLib\Tests\Helper\Helper;
+use evosys21\PdfLib\Tests\Helper\TestPdf;
 
 /**
  * Class TableTest

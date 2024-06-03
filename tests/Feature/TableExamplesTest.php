@@ -10,10 +10,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Interpid\PdfLib\Tests\Functional;
+namespace evosys21\PdfLib\Tests\Feature;
 
 use Generator;
-use Interpid\PdfLib\Tests\BaseExamplesTestCase;
+use evosys21\PdfLib\Tests\BaseExamplesTestCase;
 
 
 /**
@@ -43,7 +43,7 @@ class TableExamplesTest extends BaseExamplesTestCase
         );
 
         foreach ($sources as $source) {
-            $source = APPLICATION_PATH . '/examples/' . $source;
+            $source = APPLICATION_PATH . '/examples/Fpdf/' . $source;
             yield [$source];
         }
     }
