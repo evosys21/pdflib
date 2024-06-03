@@ -1,8 +1,7 @@
 <?php
 /** @noinspection PhpUnused */
 
-
-namespace Interpid\PdfExamples;
+namespace evosys21\PdfLib\Examples\Tfpdf;
 
 use evosys21\PdfLib\Multicell;
 use evosys21\PdfLib\Table;

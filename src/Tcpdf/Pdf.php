@@ -1,8 +1,7 @@
 <?php
 /** @noinspection SpellCheckingInspection */
 
-
-namespace Interpid\PdfLib;
+namespace evosys21\PdfLib\Tcpdf;
 
 /**
  * TCPDF extended class.

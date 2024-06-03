@@ -1,8 +1,7 @@
 <?php
 /** @noinspection SpellCheckingInspection */
 
-
-namespace Interpid\PdfLib;
+namespace evosys21\PdfLib\Tfpdf;
 
 use tFPDF;
 
@@ -45,7 +44,7 @@ class Pdf extends tFPDF
 
     public $showHeader = true;
     public $showFooter = true;
-    
+
     public $unifontSubset;
 
     // phpcs:disable

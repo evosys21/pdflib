@@ -1,20 +1,9 @@
 <?php
 /** @noinspection PhpUnused */
 
-/**
- *
- * This file is part of the Interpid PDF Addon package.
- *
- * @author Interpid <office@interpid.eu>
- * @copyright (c) Interpid, http://www.interpid.eu
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
+namespace evosys21\PdfLib\Examples\Fpdf;
 
-namespace Interpid\PdfExamples;
-
-use evosys21\PdfLib\Pdf;
+use evosys21\PdfLib\Tfpdf\Pdf;
 use evosys21\PdfLib\Multicell;
 
 /**

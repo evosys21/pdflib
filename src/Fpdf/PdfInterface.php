@@ -3,6 +3,7 @@
 /** @noinspection PhpMissingParamTypeInspection */
 /** @noinspection PhpUnhandledExceptionInspection */
 /** @noinspection PhpDocMissingThrowsInspection */
+
 namespace evosys21\PdfLib\Fpdf;
 
 use evosys21\PdfLib\Tools;

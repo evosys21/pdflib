@@ -4,8 +4,7 @@
 /** @noinspection PhpUnhandledExceptionInspection */
 /** @noinspection PhpDocMissingThrowsInspection */
 
-
-namespace Interpid\PdfLib;
+namespace evosys21\PdfLib\Tcpdf;
 
 /**
  * Pdf Class Interface
@@ -287,7 +286,7 @@ class PdfInterface
     {
         return $this->pdf->encoding;
     }
-    
+
     /**
      * Set the Internal Encoding to used in PDF Class.
      */

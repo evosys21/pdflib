@@ -3,7 +3,7 @@
 
 namespace evosys21\PdfLib\Examples\Tcpdf;
 
-use evosys21\PdfLib\Pdf;
+use evosys21\PdfLib\Tcpdf\Pdf;
 use evosys21\PdfLib\Multicell;
 
 /**
