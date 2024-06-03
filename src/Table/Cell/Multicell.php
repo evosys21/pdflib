@@ -1,4 +1,6 @@
-<?phpnamespace evosys21\PdfLib\Table\Cell;
+<?php
+
+namespace evosys21\PdfLib\Table\Cell;
 
 use evosys21\PdfLib\Fpdf\Pdf;
 use evosys21\PdfLib\MulticellData;
