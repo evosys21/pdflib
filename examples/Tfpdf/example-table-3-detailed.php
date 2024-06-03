@@ -4,7 +4,7 @@
  */
 
 
-require_once __DIR__ . "/../autoload.php";
+require_once 'autoload.php';
 
 use evosys21\PdfLib\Multicell;
 use evosys21\PdfLib\Table;
