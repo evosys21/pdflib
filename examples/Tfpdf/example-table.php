@@ -1,4 +1,5 @@
 <?php
+/** @noinspection ALL */
 /**
  * Pdf Advanced Table - Example
  */
@@ -33,7 +34,7 @@ $table->setStyle('i', null, 'I');
 $table->setStyle('bi', null, 'BI');
 $table->setStyle('u', null, 'U');
 $table->setStyle('h', null, 'B', '203,0,48');
-$table->setStyle('s', 8, null);
+$table->setStyle('s', 8);
 $table->setStyle('title', 14, null, [102, 0, 0], null, 'h');
 $table->setStyle('h1', 16, null, null, null, 'h');
 $table->setStyle('h2', 14, null, null, null, 'h');

@@ -32,7 +32,7 @@ $pdf->SetTextColor(118, 0, 3);
 $multicell = Multicell::getInstance($pdf);
 PdfSettings::setMulticellStyles($multicell);
 
-$multicell->multiCell(100, 4, "<s1>Example - Override Default Configuration Values</s1>", 0);
+$multicell->multiCell(100, 4, "<s1>Example - Override Default Configuration Values</s1>");
 
 $columns = 3;
 
@@ -84,11 +84,7 @@ for ($j = 1; $j < 5; $j++) {
     //override some settings for row 2
     if (2 == $j) {
         $row[1]['TEXT_ALIGN'] = 'L';
-        $row[1]['VERTICAL_ALIGN'] = 'T';
-        $row[1]['PADDING_TOP'] = 5;
-        $row[1]['PADDING_LEFT'] = 5;
-        $row[1]['TEXT'] = "<p>This is a <b>Multicell</b>\n\nRow Height: 30</p>";
-        $row[1]['HEIGHT'] = 30; //enforce height:30
+        $row[1]['TEXT'] = "<p>This is a <b>Multicell</b></p>";
     }
 
     //add the row

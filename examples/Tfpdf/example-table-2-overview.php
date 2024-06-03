@@ -162,7 +162,6 @@ for ($j = 0; $j < 45; $j++) {
         $row[0]['VERTICAL_ALIGN'] = 'M';
         $row[0]['BACKGROUND_COLOR'] = [234, 255, 218];
         $row[0]['ROWSPAN'] = 5;
-        $row[0]['LINE_SIZE'] = 7;
         $row[0]['COLSPAN'] = 4;
     }
 

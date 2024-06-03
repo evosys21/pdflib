@@ -3,15 +3,15 @@
  * Pdf Advanced Multicell - Example
  */
 
-require_once 'autoload.php';
+require_once __DIR__ . '/../autoload.php';
 
-use evosys21\PdfLib\Tcpdf\Pdf;
-use evosys21\PdfLib\Multicell;
+use Interpid\PdfLib\Multicell;
+use Interpid\PdfLib\Pdf;
 
-// Pdf extends TCPDF
+// Pdf extends FPDF
 $pdf = new Pdf();
 
-// use the default TCPDF configuration
+// use the default FPDF configuration
 $pdf->SetAuthor('Interpid');
 $pdf->SetMargins(20, 20, 20);
 $pdf->SetAutoPageBreak(true, 20);
@@ -33,7 +33,7 @@ $multicell->setStyle('i', null, 'I');
 $multicell->setStyle('bi', null, 'BI');
 $multicell->setStyle('u', null, 'U');
 $multicell->setStyle('h', null, 'B', '203,0,48');
-$multicell->setStyle('s', 8, null);
+$multicell->setStyle('s', 8);
 $multicell->setStyle('title', 14, null, [102, 0, 0], null, 'h');
 $multicell->setStyle('h1', 16, null, null, null, 'h');
 $multicell->setStyle('h2', 14, null, null, null, 'h');
@@ -56,7 +56,7 @@ This line is a simple text with no formatting(text-formatting from the pdf defau
 
 <p>This line is a paragraph line</p>
 
-<p left="50">This is <b>BOLD</b> text, this is <i>I\nT\nA\nLIC</i>, this is <bi>BOLD ITALIC</bi></p>
+<p>This is <b>BOLD</b> text, this is <i>ITALIC</i>, this is <bi>BOLD ITALIC</bi></p>
 
 <p>The following is <b>rendered as bold text.</b></p>
 
