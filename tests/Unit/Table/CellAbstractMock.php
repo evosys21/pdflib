@@ -1,5 +1,5 @@
 <?php
-namespace evosys21\PdfLib\Tests\Classes\Pdf\Table\Cell;
+namespace evosys21\PdfLib\Tests\Unit\Table;
 
 use evosys21\PdfLib\Table\Cell\CellAbstract;
 
