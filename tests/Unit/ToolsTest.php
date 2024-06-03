@@ -1,6 +1,7 @@
 <?php
 
 namespace Tests\Unit\Interpid\PdfLib;
+namespace evosys21\PdfLib\Tests\Unit;
 
 use evosys21\PdfLib\Tools;
 use PHPUnit\Framework\TestCase;
