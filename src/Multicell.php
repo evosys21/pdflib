@@ -225,7 +225,7 @@ class Multicell
 
         //use case insensitive tags
         $tag = trim(strtoupper($tag));
-        $inherit = trim(strtoupper($inherit));
+        $inherit = trim(strtoupper(strval($inherit)));
 
         if (isset($this->options->styles[$tag])) {
             $this->doubleTags = true;
