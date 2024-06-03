@@ -1,5 +1,6 @@
 <?php
 /** @noinspection PhpUnused */
+
 namespace evosys21\PdfLib\Examples\Fpdf;
 
 use evosys21\PdfLib\Multicell;

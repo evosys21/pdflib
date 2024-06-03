@@ -1,20 +1,10 @@
 <?php
 /** @noinspection PhpUnused */
 
-/**
- * This file is part of the Interpid PDF Addon package.
- *
- * @author Interpid <office@interpid.eu>
- * @copyright (c) Interpid, http://www.interpid.eu
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
+namespace evosys21\PdfLib\Examples\Tcpdf;
 
-namespace Interpid\PdfExamples;
-
-use Interpid\PdfLib\Multicell;
-use Interpid\PdfLib\Table;
+use evosys21\PdfLib\Multicell;
+use evosys21\PdfLib\Table;
 
 if (!defined('PDF_APPLICATION_PATH')) {
     define('PDF_APPLICATION_PATH', __DIR__ . '/../../..');
@@ -124,11 +114,11 @@ class PdfSettings
         $multicell->setStyle('u8', null, '', [0, 45, 179], 'dejavusans');
         $multicell->setStyle('u8b', null, 'B', null, null, 'u8');
     }
-    
-    
+
+
     /**
      * Set the styles for the advanced table
-     * 
+     *
      * @param Table $table
      */
     public static function setTableStyles(Table $table)
