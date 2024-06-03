@@ -444,6 +444,16 @@ class Multicell
         }
     }
 
+    protected function getSpacer($line)
+    {
+        foreach ($this->options->spacers as $spacer) {
+            if ($spacer['from'] <= $line && $spacer['to'] >= $line) {
+                return $spacer;
+            }
+        }
+        return [];
+    }
+
 
     /**
      * Divides $this->dataInfo and returns a line from this variable
@@ -452,7 +462,7 @@ class Multicell
      * @return array $aLine - array() -> contains information to draw a line
      * @internal param number $width the width of the cell
      */
-    protected function makeLine($width): array
+    protected function makeLine($width, $line): array
     {
         //last line break >> current line break
         $this->dataExtraInfo['LAST_LINE_BR'] = $this->dataExtraInfo['CURRENT_LINE_BR'];
@@ -464,7 +474,14 @@ class Multicell
 
         $maximumWidth = $width;
 
+        //check for spacers
+        $spacer = $this->getSpacer($line);
+        if ($spacer) {
+            $maximumWidth = $maximumWidth - $spacer['left'] - $spacer['right'];
+        }
+
         $lineData = []; //this will contain the result
+        $lineProps = []; // contains the properties of the current line
         $returnResult = false; //if break and return result
         $resetSpaces = false;
 
@@ -475,8 +492,15 @@ class Multicell
 
         $lastSeparator = ''; //last separator character
 
+        $ww = 0;
+
         foreach ($this->dataInfo as $val) {
             $s = $val['text'];
+
+            $left = Arr::get($val, 'left', 0);
+            $right = Arr::get($val, 'right', 0);
+            $ww = Arr::get($val, 'ww', $ww);
+            $maximumWidth = $maximumWidth - $left - $right;
 
             $tag = $val['tag'];
 
@@ -486,6 +510,8 @@ class Multicell
                 'nowrap' => Tools::getValue($val, 'nowrap'),
                 'style' => Tools::parseHtmlAttribute(Tools::getValue($val, 'style')),
                 'strike' => $this->getStrikeValue($val),
+                'left' => $left,
+                'right' => $right,
             ];
 
             $this->applyStyle($tag, $cellData['style']);
@@ -583,7 +609,7 @@ class Multicell
 
                     if ($lastSeparatorPosition != -1) {
                         //we have a separator in this tag!!!
-                        //untill now there one separator
+                        //until now there one separator
                         if (($lastSeparator == $c) && ($lastSeparator != ord(" ")) && ($anteSeparatorPosition != -1)) {
                             /*
                              * this is the last character and it is a separator, if it is a space the leave it... Have to jump back to the last separator... even a space
@@ -765,34 +791,35 @@ class Multicell
         $this->saveStyles();
 
         $nStartX = $this->pdf->GetX();
-        $aRecData = $this->stringToLines($this->multicellData);
+        $lines = $this->stringToLines($this->multicellData);
         $iCounter = 9999; //avoid infinite loop for any reasons
 
         $doBreak = false;
 
         do {
             $iLeftHeight = $this->pdf->h - $this->pdf->bMargin - $this->pdf->GetY() - $paddingTop - $paddingBottom;
-            $bAddNewPage = false;
+            $addPage = false;
 
             //Number of rows that have space on this page:
             $iRows = floor($iLeftHeight / $height);
             // Added check for 'AcceptPageBreak'
-            if (count($aRecData) > $iRows && $this->pdf->AcceptPageBreak()) {
-                $aSendData = array_slice($aRecData, 0, $iRows);
-                $aRecData = array_slice($aRecData, $iRows);
-                $bAddNewPage = true;
+            if (count($lines) > $iRows && $this->pdf->AcceptPageBreak()) {
+                $printLines = array_slice($lines, 0, $iRows);
+                $lines = array_slice($lines, $iRows);
+                $addPage = true;
             } else {
-                $aSendData = &$aRecData;
+                $printLines = &$lines;
                 $doBreak = true;
             }
 
-            $this->multiCellSec($this->multicellData, $aSendData);
+            $this->multiCellSec($this->multicellData, $printLines);
 
-            if ($bAddNewPage) {
+            if ($addPage) {
                 $this->beforeAddPage();
                 $this->pdf->AddPage();
                 $this->afterAddPage();
                 $this->pdf->SetX($nStartX);
+                $this->resetSpacers();
             }
         } while ((($iCounter--) > 0) && (false == $doBreak));
 
@@ -851,8 +878,10 @@ class Multicell
         $bFirstLine = true;
 
         $bLastLine = !(count($data) > 0);
+        $line = 0;
 
         while (!$bLastLine) {
+            $line++;
             if ($bFirstLine && ($multicellData->paddingTop > 0)) {
                 /**
                  * If this is the first line and there is top_padding
@@ -883,8 +912,19 @@ class Multicell
             /**
              * Restore the X position with the corresponding padding if it exist The Right padding is done automatically by calculating the width of the text
              */
-            $this->pdf->SetX($startX + $multicellData->paddingLeft);
-            $this->printLine($multicellData->textWidth, $multicellData->lineHeight, $str_data, $align);
+            $x = $startX + $multicellData->paddingLeft;
+            $width = $multicellData->textWidth;
+            $spacer = $this->getSpacer($line);
+            $left = intval(Arr::get($str_data, 'left', 0));
+            $right = intval(Arr::get($str_data, 'right', 0));
+            if ($spacer) {
+                $width -= $spacer['left'] + $spacer['right'];
+                $x += $spacer['left'];
+            }
+            $width -= $left + $right;
+            $x += $left;
+            $this->pdf->SetX($x);
+            $this->printLine($width, $multicellData->lineHeight, $str_data, $align);
 
             //see what border we draw:
             if ($bFirstLine && $bLastLine) {
@@ -925,10 +965,11 @@ class Multicell
     /**
      * This method divides the string into the tags and puts the result into dataInfo variable.
      *
-     * @param string $string string to be parsed
+     * @param string|null $string $string string to be parsed
      */
-    protected function divideByTags(string $string)
+    protected function divideByTags(?string $string)
     {
+        $string = strval($string);
         $string = str_replace("\t", "<ttags>\t</ttags>", $string);
         $string = str_replace(PARAGRAPH_STRING, "<pparg>\t</pparg>", $string);
         $string = str_replace("\r", '', $string);
@@ -980,7 +1021,7 @@ class Multicell
             $height = $lines * $multicellData->lineHeight;
 
             //make a line
-            $str_data = $this->makeLine($multicellData->textWidth);
+            $str_data = $this->makeLine($multicellData->textWidth, $lines);
             $parsedLines[] = $str_data;
 
             #1247 - limit the maximum number of lines
@@ -1391,6 +1432,24 @@ class Multicell
     {
         $this->options->restoreStyles();
         $this->applyStyle(static::PDF_CURRENT);
+    }
+
+    public function setSpacers($from, $to, $left = 0, $right = 0): self
+    {
+        $this->options->spacers[] = [
+            'from' => $from,
+            'to' => $to,
+            'left' => $left,
+            'right' => $right,
+        ];
+
+        return $this;
+    }
+
+    public function resetSpacers(): self
+    {
+        $this->options->spacers = [];
+        return $this;
     }
 
 }

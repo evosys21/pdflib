@@ -12,6 +12,7 @@ use evosys21\PdfLib\Fpdf\PdfInterface;
 class MulticellOptions
 {
     public $styles = [];
+    public $spacers = [];
     protected $stylesBackup = null;
 
     /**

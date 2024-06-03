@@ -607,8 +607,11 @@ class Table
                     $this->getTableConfig('TABLE_LEFT_MARGIN') +
                     ($this->pageWidth() - $this->getWidth());
                 break;
-            default:
+            case 'L':
                 $this->tableStartX = $this->pdf->lMargin + $this->getTableConfig('TABLE_LEFT_MARGIN');
+                break;
+            default:
+                $this->tableStartX = $this->pdf->getX();
                 break;
         }
     }
