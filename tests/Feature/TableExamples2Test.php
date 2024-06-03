@@ -36,7 +36,7 @@ class TableExamples2Test extends BaseTestCase
      * @dataProvider getExampleSources
      * @return void
      */
-    protected function runTestWithExample($require)
+    public function testWithExample($require)
     {
         $name = basename($require);
         //remove the .php extension
@@ -46,7 +46,7 @@ class TableExamples2Test extends BaseTestCase
 
         require $require;
 
-        $sResultFile = TEST_PATH . '/data/' . $name . '.pdf';
+        $sResultFile = TEST_PATH . '/data/table-' . $name . '.pdf';
 
         if (defined('GENERATE_RESULT_FILES')) {
             $sPdfFile = $sResultFile;
@@ -74,7 +74,6 @@ class TableExamples2Test extends BaseTestCase
             "code-example3.php",
             "code-example-transparent.php",
             "code-example-alignments.php",
-            "settings.php"
         ];
         foreach ($files as $file) {
             yield [APPLICATION_PATH . "/examples/Fpdf/table/$file"];

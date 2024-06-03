@@ -1,7 +1,6 @@
 <?php
 /**
  * Pdf Advanced Table - Example
- * Copyright (c), Interpid, http://www.interpid.eu
  */
 
 require_once 'autoload.php';;

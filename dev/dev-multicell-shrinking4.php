@@ -1,7 +1,6 @@
 <?php
 /**
  * Pdf Advanced Multicell - Example
- * Copyright (c), Interpid, http://www.interpid.eu
  */
 
 use Interpid\PdfExamples\PdfSettings;

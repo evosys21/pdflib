@@ -1,7 +1,6 @@
 <?php
 /**
  * Pdf Advanced Multicell - Example
- * Copyright (c), Interpid, http://www.interpid.eu
  */
 
 use evosys21\PdfLib\Tools;
