@@ -3,7 +3,7 @@
  * Pdf Advanced Table - Example
  */
 
-require_once 'autoload.php';;
+require_once 'autoload.php';
 
 use evosys21\PdfLib\Table;
 use evosys21\PdfLib\Examples\Fpdf\PdfFactory;
