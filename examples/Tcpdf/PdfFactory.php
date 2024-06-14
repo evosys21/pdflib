@@ -5,10 +5,6 @@ namespace evosys21\PdfLib\Examples\Tcpdf;
 
 use evosys21\PdfLib\Tcpdf\Pdf;
 
-if (!defined('PDF_RESOURCES_IMAGES')) {
-    define('PDF_RESOURCES_IMAGES', __DIR__ . '/images');
-}
-
 /**
  * Pdf Factory
  * Contains functions that creates and initializes the PDF class

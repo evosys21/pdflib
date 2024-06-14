@@ -4,7 +4,7 @@
  * Pdf Advanced Table - Example
  */
 
-require_once 'autoload.php';
+require_once __DIR__ . '/autoload.php';
 
 use evosys21\PdfLib\Table;
 use evosys21\PdfLib\Pdf;
@@ -70,20 +70,20 @@ $row = [
 $table->addRow($row);
 
 $row = [
-    new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10),
+    new Table\Cell\Image($pdf, CONTENT_PATH . '/images/blog.jpg', 10),
     "<p><b>SVG Images</b> are supported\n<bi>(see right image >>>)</bi></p>",
-    new Table\Cell\ImageSVG($pdf, PDF_RESOURCES_IMAGES . '/Tiger.svg', 35, 35)
+    new Table\Cell\ImageSVG($pdf, CONTENT_PATH . '/images/Tiger.svg', 35, 35)
 ];
 
 //add the row to the table
 $table->addRow($row);
 
 $row = [
-    new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10),
+    new Table\Cell\Image($pdf, CONTENT_PATH . '/images/blog.jpg', 10),
     "<p><b>SVG Images</b> are supported\n<bi>(see right image >>>)</bi></p>",
     [
         'TYPE' => 'ImageSVG',
-        'FILE' => PDF_RESOURCES_IMAGES . '/Tiger.svg',
+        'FILE' => CONTENT_PATH . '/images/Tiger.svg',
         'WIDTH' => 35,
         'HEIGHT' => 35,
     ]

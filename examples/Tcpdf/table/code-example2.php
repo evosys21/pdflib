@@ -49,13 +49,13 @@ $table->addRow($row);
 $row = [];
 
 //alternatively you can create directly the cell object
-$row[0] = new Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10);
+$row[0] = new Table\Cell\Image($pdf, CONTENT_PATH . '/images/blog.jpg', 10);
 $row[1] = array(
     'TEXT' => "<p><b>SVG Images</b> are supported\n<bi>(see right image >>>)</bi></p>",
     'BACKGROUND_COLOR' => PdfSettings::$colors[0]
 );
 
-$row[2] = new Table\Cell\ImageSVG($pdf, PDF_RESOURCES_IMAGES . '/Tiger.svg', 35, 35);
+$row[2] = new Table\Cell\ImageSVG($pdf, CONTENT_PATH . '/images/Tiger.svg', 35, 35);
 
 //add the data row
 $table->addRow($row);

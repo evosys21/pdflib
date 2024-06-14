@@ -65,7 +65,7 @@ $table->addRow($row);
 $row = [];
 
 //alternatively you can create directly the cell object
-$row[0] = new \evosys21\PdfLib\Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10);
+$row[0] = new \evosys21\PdfLib\Table\Cell\Image($pdf, CONTENT_PATH . '/images/blog.jpg', 10);
 $row[1] = new \evosys21\PdfLib\Table\Cell\Multicell($pdf, "<p>This is another <b>Multicell</b></p>");
 $row[2]['TEXT'] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='http://www.interpid.eu'>www.interpid.eu</bi></p>";
 $row[2]['BACKGROUND_COLOR'] = PdfSettings::$colors[1];

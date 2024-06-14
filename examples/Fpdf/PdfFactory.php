@@ -5,10 +5,6 @@ namespace evosys21\PdfLib\Examples\Fpdf;
 
 use evosys21\PdfLib\Fpdf\Pdf;
 
-if (!defined('PDF_RESOURCES_IMAGES')) {
-    define('PDF_RESOURCES_IMAGES', __DIR__ . '/images');
-}
-
 /**
  * Pdf Factory
  * Contains functions that creates and initializes the PDF class

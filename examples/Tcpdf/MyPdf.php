@@ -46,7 +46,7 @@ class MyPdf extends Pdf
         $width = 40;
 
         $this->Image(
-            __DIR__ . '/content/images/interpid_logo.png',
+            CONTENT_PATH . '/images/logo.png',
             $this->w - $this->rMargin - $width,
             10,
             $width,

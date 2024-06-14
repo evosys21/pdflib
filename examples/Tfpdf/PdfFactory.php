@@ -1,13 +1,9 @@
-<?php 
+<?php
 /** @noinspection PhpUnused */
 
 namespace evosys21\PdfLib\Examples\Tfpdf;
 
 use evosys21\PdfLib\Tfpdf\Pdf;
-
-if (!defined('PDF_RESOURCES_IMAGES')) {
-    define('PDF_RESOURCES_IMAGES', __DIR__ . '/images');
-}
 
 /**
  * Pdf Factory

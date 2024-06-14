@@ -3,7 +3,7 @@
  * Pdf Advanced Table - Example
  */
 
-require_once 'autoload.php';
+require_once __DIR__ . '/autoload.php';
 
 use evosys21\PdfLib\Table;
 use evosys21\PdfLib\Examples\Tfpdf\PdfFactory;
@@ -107,7 +107,7 @@ for ($j = 0; $j < 45; $j++) {
         $row[1]['TEXT'] = "Cells can be images -->>>";
         $row[2] = array(
             'TYPE' => 'IMAGE',
-            'FILE' => __DIR__ . '/content/images/dice.jpg',
+            'FILE' => CONTENT_PATH . '/images/dice.jpg',
             'WIDTH' => 15
         );
     }

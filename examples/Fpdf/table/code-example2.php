@@ -49,13 +49,13 @@ $table->addRow($row);
 $row = [];
 
 //alternatively you can create directly the cell object
-$row[0] = new \evosys21\PdfLib\Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/blog.jpg', 10);
+$row[0] = new \evosys21\PdfLib\Table\Cell\Image($pdf, CONTENT_PATH . '/images/blog.jpg', 10);
 $row[1] = array(
     'TEXT' => "<p>This is another <b>Multicell</b></p>",
     'BACKGROUND_COLOR' => PdfSettings::$colors[0]
 );
 
-$row[2] = new \evosys21\PdfLib\Table\Cell\Image($pdf, PDF_RESOURCES_IMAGES . '/pensil.jpg', 10);
+$row[2] = new \evosys21\PdfLib\Table\Cell\Image($pdf, CONTENT_PATH . '/images/pensil.jpg', 10);
 $row[2]->setAlign("R");
 
 //add the data row
