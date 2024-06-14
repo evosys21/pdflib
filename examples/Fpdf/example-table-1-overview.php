@@ -28,22 +28,22 @@ require(__DIR__ . '/table/code-example1.php');
 $pdf->Ln(10);
 $multicell->multiCell(0, 5, "<p size='10' > ~~~Cells can be <b>advanced multicells</b> and <b>images</b>:</p>");
 require(__DIR__ . '/table/code-example2.php');
-//
-////example -   Multiple header rows, rowspans, colspans
-//$pdf->Ln(10);
-//$multicell->multiCell(0, 5, "<p size='10' > ~~~Multiple header rows, rowspans, colspans:</p>");
-//require(__DIR__ . '/table/code-example3.php');
-//
-////example - Transparent background
-//$pdf->Ln(10);
-//$multicell->multiCell(0, 5, "<p size='10' > ~~~ Transparent Background:</p>");
-//require(__DIR__ . '/table/code-example-transparent.php');
-//
-//
-////example - all parameters can be overwritten
-//$pdf->Ln(10);
-//$multicell->multiCell(0, 5, "<p size='10' > ~~~Different alignments:</p>");
-//require(__DIR__ . '/table/code-example-alignments.php');
+
+//example -   Multiple header rows, rowspans, colspans
+$pdf->Ln(10);
+$multicell->multiCell(0, 5, "<p size='10' > ~~~Multiple header rows, rowspans, colspans:</p>");
+require(__DIR__ . '/table/code-example3.php');
+
+//example - Transparent background
+$pdf->Ln(10);
+$multicell->multiCell(0, 5, "<p size='10' > ~~~ Transparent Background:</p>");
+require(__DIR__ . '/table/code-example-transparent.php');
+
+
+//example - all parameters can be overwritten
+$pdf->Ln(10);
+$multicell->multiCell(0, 5, "<p size='10' > ~~~Different alignments:</p>");
+require(__DIR__ . '/table/code-example-alignments.php');
 
 //send the pdf to the browser
 $pdf->Output();

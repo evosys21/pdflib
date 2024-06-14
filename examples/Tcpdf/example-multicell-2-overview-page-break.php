@@ -23,14 +23,14 @@ PdfSettings::setMulticellStyles($multicell);
 $pdf->Ln(10); //line break
 
 // create the advanced multicell
-$title = file_get_contents(CONTENT_PATH . '//multicell-title.txt');
+$title = file_get_contents(CONTENT_PATH . '/multicell-title.txt');
 $multicell->multiCell(0, 5, $title, 1, 'J', 1, 3, 3, 3, 3);
 
 $pdf->Ln(10); //line break
 
 
 //read TAG formatted text from file
-$txt = file_get_contents(CONTENT_PATH . '//multicell.txt');
+$txt = file_get_contents(CONTENT_PATH . '/multicell.txt');
 $s = $txt . "\n\n\n\nRepeat the text to trigger a page break \n\n\n" . $txt;
 
 //create an advanced multicell

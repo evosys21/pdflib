@@ -32,7 +32,7 @@ $pdf->SetTextColor(118, 0, 3);
 $multicell = Multicell::getInstance($pdf);
 PdfSettings::setMulticellStyles($multicell);
 
-$multicell->multiCell(100, 4, "<s1>Example - Override Default Configuration Values</s1>", 0);
+$multicell->multiCell(100, 4, "<s1>Example - Override Default Configuration Values</s1>");
 
 $columns = 3;
 

@@ -4,6 +4,8 @@ namespace evosys21\PdfLib;
 
 use evosys21\PdfLib\Fpdf\Pdf as Fpdf;
 use evosys21\PdfLib\Fpdf\PdfInterface as FpdfInterface;
+use evosys21\PdfLib\Table\Cell\Image;
+use evosys21\PdfLib\Table\Cell\ImageSVG;
 use evosys21\PdfLib\Tcpdf\Pdf as Tcpdf;
 use evosys21\PdfLib\Tcpdf\PdfInterface as TcpdfInterface;
 use evosys21\PdfLib\Tfpdf\Pdf as Tfpdf;
@@ -286,10 +288,10 @@ class Table
     protected $columnWidths = [];
 
     protected $typeMap = array(
-        'EMPTY' => '\evosys21\PdfLib\Table\Cell\EmptyCell',
-        'MULTICELL' => '\evosys21\PdfLib\Table\Cell\Multicell',
-        'IMAGE' => '\evosys21\PdfLib\Table\Cell\Image',
-        'IMAGESVG' => '\Interpid\PdfLib\Table\Cell\ImageSVG',
+        'EMPTY' => EmptyCell::class,
+        'MULTICELL' => \evosys21\PdfLib\Table\Cell\Multicell::class,
+        'IMAGE' => Image::class,
+        'IMAGESVG' => ImageSVG::class,
     );
 
     /**

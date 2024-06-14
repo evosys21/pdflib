@@ -60,7 +60,7 @@ class PdfSettings
     public static $columns = 5;
 
     //prepare some default row settings
-    public static $imageCell = array(
+    public static array $imageCell = array(
         'TYPE' => 'IMAGE',
         'FILE' => CONTENT_PATH . '/images/dice.jpg',
         'WIDTH' => 10

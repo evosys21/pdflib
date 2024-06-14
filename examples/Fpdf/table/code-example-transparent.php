@@ -10,7 +10,7 @@ if (!isset($pdf)) {
 
 $y = $pdf->GetY();
 $pdf->SetX(50);
-$pdf->Image(PDF_RESOURCES_IMAGES . "/sample-pdf.jpg");
+$pdf->Image(CONTENT_PATH . "/images/sample-pdf.jpg");
 
 $pdf->SetY($y);
 

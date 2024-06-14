@@ -3,6 +3,8 @@
 
 namespace evosys21\PdfLib\Tcpdf;
 
+use TCPDF;
+
 /**
  * TCPDF extended class.
  *
@@ -14,7 +16,7 @@ namespace evosys21\PdfLib\Tcpdf;
  *
  * @package Interpid\PdfLib
  */
-class Pdf extends \TCPDF
+class Pdf extends TCPDF
 {
     public $images;
     public $w;

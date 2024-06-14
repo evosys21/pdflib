@@ -11,7 +11,7 @@ $factory = new DevFactory();
 $multicell = DevFactory::multicell();
 $pdf = $multicell->getPdfObject();
 
-$txt = file_get_contents(CONTENT_PATH . '//multicell.txt');
+$txt = file_get_contents(CONTENT_PATH . '/multicell.txt');
 
 
 $multicell->maxHeight(100)->shrinkToFit();

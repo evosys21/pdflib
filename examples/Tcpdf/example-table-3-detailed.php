@@ -45,7 +45,7 @@ $multicell = Multicell::getInstance($pdf);
 $multicell->setStyle('s1', 8, '', '118,0,3', 'helvetica');
 $multicell->setStyle('s2', 6, '', '0,49,159', 'helvetica');
 
-$multicell->multiCell(100, 4, "<s1>Example 1 - Very Simple Table</s1>", 0);
+$multicell->multiCell(100, 4, "<s1>Example 1 - Very Simple Table</s1>");
 $pdf->Ln(1);
 
 require('table_example1.php');
@@ -55,7 +55,7 @@ $pdf->Ln(10);
 $txt = "<s1>Example 2 - More detailed Table</s1>\n<s2>\t- Table Align = Center\n\t- The header has multiple lines\n\t- Colspanning Example\n\t- Rowspanning Example\n\t- Text Alignments\n\t- Properties overwriting</s2>";
 
 $pdf->SetX(60);
-$multicell->multiCell(100, 2.5, $txt, 0);
+$multicell->multiCell(100, 2.5, $txt);
 $pdf->Ln(1);
 require('table_example2.php');
 
@@ -64,7 +64,7 @@ $pdf->Ln(10);
 $txt = "<s1>Example 3 - Table split end of the page</s1>\n<s2>\t- This is the table from Example 2 at the end of the page\n\t- Splitting mode = ON, you can see that the cells are splitted</s2>";
 
 $pdf->SetXY(60, 215);
-$multicell->multiCell(100, 2.5, $txt, 0);
+$multicell->multiCell(100, 2.5, $txt);
 $pdf->Ln(1);
 $tableSplitMode = true;
 require('table_example2.php');
@@ -74,7 +74,7 @@ $pdf->Ln(10);
 $txt = "<s1>Example 4 - Table split end of the page</s1>\n<s2>\t- This is the table from Example 2 at the end of the page\n\t- Splitting mode = OFF. In this case the cells are NOT splitted</s2>";
 
 $pdf->SetXY(60, 215);
-$multicell->multiCell(100, 2.5, $txt, 0);
+$multicell->multiCell(100, 2.5, $txt);
 $pdf->Ln(1);
 $tableSplitMode = false;
 require('table_example2.php');
