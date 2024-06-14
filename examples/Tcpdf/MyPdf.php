@@ -41,7 +41,7 @@ class MyPdf extends Pdf
         $multicell->setStyle('h2', 6, '', '0,119,220', 'helvetica');
         $multicell->setStyle('h4', 6, '', '0,151,200', 'helvetica');
 
-        $multicell->multiCell(100, 3, file_get_contents(CONTENT_PATH . '/content/' . $this->headerSource));
+        $multicell->multiCell(100, 3, file_get_contents(CONTENT_PATH . '/' . $this->headerSource));
 
         $width = 40;
 

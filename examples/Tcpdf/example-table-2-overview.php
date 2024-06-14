@@ -29,7 +29,7 @@ $table = new Table($pdf);
 // Set the styles for the advanced table
 PdfSettings::setTableStyles($table);
 
-$txt1 = $title = file_get_contents(CONTENT_PATH . '/content/table-cell-text.txt');
+$txt1 = $title = file_get_contents(CONTENT_PATH . '//table-cell-text.txt');
 
 //Initialize the table, 5 columns with the specified widths
 $table->initialize([35, 30, 40, 40, 25], [

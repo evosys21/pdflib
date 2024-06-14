@@ -315,15 +315,4 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
             return mb_substr($str, $start, $length);
         }
     }
-
-    public function getCharStringWidth($tag, $char, $fontFamily, $fontStyle, $fontSize): float|int
-    {
-        $this->pdf->SetFont($fontFamily, $fontStyle, $fontSize);
-
-        $width = &$this->pdf->CurrentFont['cw']; //width
-        $size = &$this->pdf->FontSize; //size
-
-
-        return $width[chr($char)] * $size / 1000;
-    }
 }
