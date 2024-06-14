@@ -42,8 +42,8 @@ class Pdf extends FPDF
     public $AutoPageBreak;
     public $CurOrientation;
 
-    public $showHeader = true;
-    public $showFooter = true;
+    public bool $showHeader = true;
+    public bool $showFooter = true;
 
     // phpcs:disable
     public function _out($s)

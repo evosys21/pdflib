@@ -49,14 +49,14 @@ $pdf->AddFont('dejavusans', 'B', 'DejaVuSans-Bold.ttf', true);
 $multicell->setStyle('u8', null, '', [0, 45, 179], 'dejavusans');
 $multicell->setStyle('u8b', null, 'B', null, null, 'u8');
 
-$utf8Text = file_get_contents(__DIR__ . '/content/utf8-sample.txt');
+$utf8Text = file_get_contents(CONTENT_PATH . '/content/utf8-sample.txt');
 
 $s = <<<HEREDOC
 This line is a simple text with no formatting(text-formatting from the pdf defaults)
 
 <p>This line is a paragraph line</p>
 
-<p left="50">This is <b>BOLD</b> text, this is <i>I\nT\nA\nLIC</i>, this is <bi>BOLD ITALIC</bi></p>
+<p>This is <b>BOLD</b> text, this is <i>ITALIC</i>, this is <bi>BOLD ITALIC</bi></p>
 
 <p>The following is <b>rendered as bold text.</b></p>
 
