@@ -15,7 +15,6 @@ use Exception;
 
 /**
  * Pdf Multicell
- * @package Interpid\PdfLib
  */
 class Multicell
 {
@@ -511,8 +510,12 @@ class Multicell
 
             $this->pdfi->fontInfo[$tag] = [
                 'CurrentFont' => &$this->pdf->CurrentFont,
-                'FontSize' => $this->pdf->FontSize,
+                'FontSize' => $this->pdf->FontSize
             ];
+
+            if (property_exists($this->pdf, 'unifontSubset')) {
+                $this->pdfi->fontInfo[$tag]['unifontSubset'] = $this->pdf->unifontSubset;
+            }
 
             $isParagraph = false;
             if (($s == "\t") && (strpos($tag, 'pparg') !== false)) {

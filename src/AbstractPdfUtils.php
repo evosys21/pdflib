@@ -8,7 +8,6 @@ use evosys21\PdfLib\Tools;
 /**
  * Pdf Class Interface
  *
- * @package Interpid\PdfLib
  */
 abstract class AbstractPdfUtils
 {

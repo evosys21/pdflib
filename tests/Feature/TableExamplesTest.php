@@ -6,8 +6,7 @@ use evosys21\PdfLib\Tests\BaseExamplesTestCase;
 
 
 /**
- * Class TableExamplesTest
- * @package Interpid\PdfLib\Tests\Functional
+ * Class TableExamplesTest\Tests\Functional
  * @group functional
  */
 class TableExamplesTest extends BaseExamplesTestCase

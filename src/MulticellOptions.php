@@ -7,7 +7,6 @@ use evosys21\PdfLib\Fpdf\PdfInterface;
 
 /**
  * Class MulticellOptions
- * @package Interpid\PdfLib
  */
 class MulticellOptions
 {

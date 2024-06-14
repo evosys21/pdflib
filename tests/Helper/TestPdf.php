@@ -7,8 +7,7 @@ use evosys21\PdfLib\Examples\Tfpdf\MyPdf;
 /**
  * TestPdf Class
  * Used for testing
- *
- * @package Interpid\PdfLib\Tests\Helper
+ *\Tests\Helper
  */
 class TestPdf extends MyPdf
 {

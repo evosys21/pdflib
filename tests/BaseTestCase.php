@@ -8,7 +8,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Class BaseTestCase
- * @package Interpid\PdfLib
  */
 class BaseTestCase extends TestCase
 {

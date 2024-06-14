@@ -8,9 +8,13 @@ use evosys21\PdfLib\Tcpdf\Pdf as Tcpdf;
 use evosys21\PdfLib\Tcpdf\PdfInterface as TcpdfInterface;
 use evosys21\PdfLib\Tfpdf\Pdf as Tfpdf;
 use evosys21\PdfLib\Tfpdf\PdfInterface as TfpdfInterface;
+use Exception;
 
 class Factory
 {
+    /**
+     * @throws Exception
+     */
     public static function pdfInterface($pdf): PdfInterfaceDef
     {
         if ($pdf instanceof Fpdf) {
@@ -20,7 +24,7 @@ class Factory
         } elseif ($pdf instanceof Tfpdf) {
             return new TfpdfInterface($pdf);
         } else {
-            throw new \Exception('Invalid PDF object');
+            throw new Exception('Invalid PDF object');
         }
     }
 }

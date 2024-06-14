@@ -6,8 +6,7 @@ use evosys21\PdfLib\Fpdf\Pdf;
 use evosys21\PdfLib\MulticellData;
 
 /**
- * Pdf Table Cell Multicell
- * @package Interpid\PdfLib\Table\Cell
+ * Pdf Table Cell Multicell\Table\Cell
  * @property mixed|array TEXT_STRLINES
  * @property mixed|null TEXT_ALIGN
  * @property mixed|null LINE_SIZE

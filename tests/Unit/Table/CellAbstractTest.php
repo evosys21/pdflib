@@ -1,13 +1,13 @@
 <?php
 namespace evosys21\PdfLib\Tests\Unit\Table;
 
+use evosys21\PdfLib\Factory;
 use evosys21\PdfLib\Fpdf\PdfInterface;
 use evosys21\PdfLib\Tests\BaseTestCase;
 
 /**
  * Class CellAbstractTest
- *
- * @package Interpid\PdfLib\Tests\Classes\Pdf\Table\Cell
+ *\Tests\Classes\Pdf\Table\Cell
  */
 class CellAbstractTest extends BaseTestCase
 {
@@ -21,7 +21,7 @@ class CellAbstractTest extends BaseTestCase
         $this->assertInstanceOf(CellAbstractMock::class, $mock);
 
         //case 2
-        $pdfi = new PdfInterface($pdf);
+        $pdfi = Factory::pdfInterface($pdf);
 
         $mock = new CellAbstractMock($pdfi);
 

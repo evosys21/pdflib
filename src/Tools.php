@@ -4,7 +4,6 @@ namespace evosys21\PdfLib;
 
 /**
  * Class Tools
- * @package Interpid\PdfLib
  */
 class Tools
 {

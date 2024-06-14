@@ -16,7 +16,6 @@ use evosys21\PdfLib\Table\Cell\EmptyCell;
 
 /**
  * Pdf Table Class
- * @package Interpid\PdfLib
  */
 class Table
 {
@@ -314,7 +313,7 @@ class Table
      * @param $pdf object Instance of the PDF class
      * @param string|null $configFile
      */
-    public function __construct($pdf, ?string $configFile = 'table.config.php')
+    public function __construct(object $pdf, ?string $configFile = 'table.config.php')
     {
         //pdf object
         $this->pdf = $pdf;

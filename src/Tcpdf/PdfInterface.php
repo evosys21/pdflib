@@ -13,7 +13,6 @@ use evosys21\PdfLib\Tools;
 /**
  * Pdf Class Interface
  *
- * @package Interpid\PdfLib
  */
 class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
 {

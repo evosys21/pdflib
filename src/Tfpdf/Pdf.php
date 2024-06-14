@@ -14,7 +14,6 @@ use tFPDF;
  *
  * In all subclasses we refer to Pdf class and not tFPDF.
  *
- * @package Interpid\PdfLib
  */
 class Pdf extends tFPDF
 {

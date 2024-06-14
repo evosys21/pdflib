@@ -2,6 +2,7 @@
 /** @noinspection PhpUnused */
 namespace evosys21\PdfLib\Table\Cell;
 
+use evosys21\PdfLib\Factory;
 use evosys21\PdfLib\Fpdf\Pdf;
 use evosys21\PdfLib\Fpdf\PdfInterface;
 use evosys21\PdfLib\Tools;
@@ -9,8 +10,7 @@ use evosys21\PdfLib\Validate;
 
 /**
  * Pdf Table Cell Abstract Class
- *
- * @package Interpid\PdfLib\Table\Cell
+ *\Table\Cell
  * @property mixed|null HEIGHT_LEFT_RW
  */
 abstract class CellAbstract implements CellInterface
@@ -175,7 +175,7 @@ abstract class CellAbstract implements CellInterface
         } else {
             //it must be an instance of a pdf object
             $this->pdf = $pdf;
-            $this->pdfi = new PdfInterface($pdf);
+            $this->pdfi = Factory::pdfInterface($pdf);
         }
     }
 

@@ -8,8 +8,7 @@ use evosys21\PdfLib\Tools;
 
 /**
  * Pdf Table Cell Image
- *
- * @package Interpid\PdfLib\Table\Cell
+ *\Table\Cell
  */
 class Image extends CellAbstract implements CellInterface
 {

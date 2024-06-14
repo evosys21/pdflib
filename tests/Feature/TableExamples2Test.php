@@ -7,8 +7,7 @@ use evosys21\PdfLib\Tests\Helper\TestPdf;
 use Generator;
 
 /**
- * Class TableExamples2Test
- * @package Interpid\PdfLib\Tests\Functional
+ * Class TableExamples2Test\Tests\Functional
  */
 class TableExamples2Test extends BaseTestCase
 {

@@ -6,8 +6,7 @@ use evosys21\PdfLib\Examples\Tfpdf\PdfFactory;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class BaseExamplesTestCase
- * @package Interpid\PdfLib\Tests
+ * Class BaseExamplesTestCase\Tests
  */
 class BaseExamplesTestCase extends BaseTestCase
 {

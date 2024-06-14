@@ -6,8 +6,7 @@ use evosys21\PdfLib\Fpdf\Pdf;
 use evosys21\PdfLib\Fpdf\PdfInterface;
 
 /**
- * Pdf Table Cell Interface
- * @package Interpid\PdfLib\Table\Cell
+ * Pdf Table Cell Interface\Table\Cell
  */
 interface CellInterface
 {

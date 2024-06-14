@@ -3,7 +3,6 @@ namespace evosys21\PdfLib;
 
 /**
  * Class MulticellOptions
- * @package Interpid\PdfLib
  */
 class MulticellData
 {

@@ -3,8 +3,7 @@ namespace evosys21\PdfLib\Table\Cell;
 
 /**
  * Pdf Table Cell EmptyCell
- *
- * @package Interpid\PdfLib\Table\Cell
+ *\Table\Cell
  * @property array aDefaultValues
  */
 class EmptyCell extends CellAbstract implements CellInterface

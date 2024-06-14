@@ -3,7 +3,6 @@ namespace evosys21\PdfLib;
 
 /**
  * Class Validate
- * @package Interpid\PdfLib
  */
 class Validate
 {

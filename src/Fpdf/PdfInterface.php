@@ -13,7 +13,6 @@ use evosys21\PdfLib\Tools;
 /**
  * Pdf Class Interface
  *
- * @package Interpid\PdfLib
  */
 class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
 {
@@ -176,6 +175,7 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
             }
             $mtd = '_parse' . $type;
             if (!method_exists($this->pdf, $mtd)) {
+                debug_print_backtrace();
                 $this->pdf->Error('Unsupported image type: ' . $type);
             }
             $info = $this->pdf->$mtd($file);

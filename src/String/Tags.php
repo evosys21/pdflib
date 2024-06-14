@@ -3,8 +3,7 @@ namespace evosys21\PdfLib\String;
 
 /**
  * String Tag extraction class
- *
- * @package Interpid\PdfLib\String
+ *\String
  */
 class Tags
 {
