@@ -35,6 +35,6 @@
     <env name="APP_ENV" value="testing"/>
     <env name="FAILED_SCREENSHOTS" value="0"/>
     <env name="SCREENSHOTS" value="0"/>
-    <env name="RESULT_WRITE" value="1"/>
+    <env name="RESULT_WRITE" value="0"/>
   </php>
 </phpunit>
