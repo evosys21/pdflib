@@ -71,6 +71,11 @@ class TestUtils
         return $force || (getenv('RESULT_WRITE'));
     }
 
+    public static function isDebug(): bool
+    {
+        return boolval(getenv('DEBUG'));
+    }
+
     public static function copy($src, $dst): bool
     {
         $dir = dirname($dst);
@@ -80,4 +85,27 @@ class TestUtils
         return copy($src, $dst);
     }
 
+    public static function relativePath(string $path): string
+    {
+        $path = realpath($path);
+        return str_replace(TEST_PATH, '', $path);
+    }
+
+    public static function failPath(string $path): string
+    {
+        $relative = static::relativePath($path);
+        return TEST_PATH . '/_fail/' . $relative;
+    }
+
+    public static function coreName(string $path): string
+    {
+        $pathInfo = pathinfo($path);
+        return $pathInfo['filename'];
+    }
+
+    public static function replaceExtension($path, $ext): string
+    {
+        $pathInfo = pathinfo($path);
+        return $pathInfo['dirname'] . DIRECTORY_SEPARATOR . $pathInfo['filename'] . '.' . $ext;
+    }
 }

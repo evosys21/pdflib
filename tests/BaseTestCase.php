@@ -41,17 +41,16 @@ class BaseTestCase extends TestCase
         $coreName = substr($basename, 0, strrpos($basename, "."));
 
         if (($shaExpected !== $shaGenerated) && getenv('TRACK_FAILED')) {
-            TestUtils::copy($pdfGenerated, dirname($pdfExpected) . "/is/" . basename($pdfExpected));
-            TestUtils::copy($pdfExpected, dirname($pdfExpected) . "/expected/" . basename($pdfExpected));
+            $pdf = TestUtils::failPath($pdfExpected);
+            TestUtils::copy($pdfGenerated, $pdf);
             if (getenv('SCREENSHOTS')) {
-                $screenshotExpect = dirname($pdfExpected) . "/expected/$coreName.png";
-                $screenshotIs = dirname($pdfExpected) . "/is/$coreName.png";
-                Helper::pdfScreenshot($pdfExpected, $screenshotExpect);
-                Helper::pdfScreenshot($pdfGenerated, $screenshotIs);
+                Helper::pdfScreenshot($pdf);
             }
         }
 
-        $this->assertSame(file_get_contents($pdfExpected), file_get_contents($pdfGenerated), $message);
+        if (TestUtils::isDebug()){
+            $this->assertSame(file_get_contents($pdfExpected), file_get_contents($pdfGenerated), $message);
+        }
         $this->assertSame($shaExpected, $shaGenerated, $message);
 
         if (getenv('SCREENSHOTS')) {

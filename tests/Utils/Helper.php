@@ -1,4 +1,5 @@
 <?php
+
 namespace evosys21\PdfLib\Tests\Utils;
 
 use evosys21\PdfLib\Fpdf\Pdf;
@@ -39,7 +40,7 @@ class Helper
         $pdf->SetTextColor(170, 170, 170);
     }
 
-    public static function pdfScreenshot($pdf, $dest, $page = 0)
+    public static function pdfScreenshot($pdf, $dest = null, $page = 0)
     {
         $process = new Process([
             'magick',
@@ -53,6 +54,10 @@ class Helper
         ]);
 
         // print_r($process->getCommandLine());
+
+        if (!$dest) {
+            $dest = TestUtils::replaceExtension($pdf, 'png');
+        }
 
         $dir = dirname($dest);
         if (!is_dir($dir)) {
