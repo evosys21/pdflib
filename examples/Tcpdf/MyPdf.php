@@ -169,7 +169,7 @@ class MyPdf extends Pdf
 
     protected static function isTesting(): bool
     {
-        return (isset($_SERVER['ENVIRONMENT']) && 'test' == $_SERVER['ENVIRONMENT']);
+        return (getenv('APP_ENV') === 'testing');
     }
 
     /**

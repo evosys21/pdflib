@@ -33,7 +33,6 @@ class BaseExamplesTestCase extends BaseTestCase
     protected function runTestWithExample($require, $folder, $name): void
     {
 //        echo "Running test for $require - $folder\n";
-        //remove the .php extension
         $name = str_replace('.php', '', $name);
 
         ob_start();
@@ -49,12 +48,9 @@ class BaseExamplesTestCase extends BaseTestCase
         $content = preg_replace("#CreationDate \(D:[0-9]+#", "CreationDate (D:20240101010000", $content);
         $content = preg_replace("#LastModified \(D:[0-9]+#", "LastModified (D:20240101010000", $content);
 
-        $uuid = '00620d33-a584-cac6-0d9c-4c1aec6e67b8';
-        foreach (['DocumentID', 'InstanceID'] as $id) {
-            $content = preg_replace("#<xmpMM:$id>uuid:[0-9a-f-]+</xmpMM:$id>#", "<xmpMM:$id>uuid:$uuid</xmpMM:$id>", $content);
-        }
-
-        TestUtils::toFile($generatedFile, $content, true);
+        echo "$generatedFile\n";
+        var_dump(TestUtils::generateOn());
+        file_put_contents($generatedFile, $content);
 
         $this->assertTrue(file_exists($generatedFile), $require);
         $this->assertComparePdf($expectedFile, $generatedFile, "FAILED: " . basename($expectedFile) . " / $require");

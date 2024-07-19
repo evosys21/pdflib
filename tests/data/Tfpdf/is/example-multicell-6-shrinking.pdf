@@ -1,2617 +1,0 @@
-%PDF-1.3
-3 0 obj
-<</Type /Page
-/Parent 1 0 R
-/Resources 2 0 R
-/Annots [5 0 R 6 0 R 7 0 R ]
-/Contents 4 0 R>>
-endobj
-4 0 obj
-<</Length 26746>>
-stream
-2 J
-0.57 w
-BT /F1 11.00 Tf ET
-0.996 1.000 0.961 rg
-BT /F3 6.00 Tf ET
-BT /F1 11.00 Tf ET
-BT /F3 6.00 Tf ET
-0.000 Tw
-q 0.627 0.627 0.627 rg BT 56.69 807.49 Td (Fpdf Advanced Multicell) Tj ET Q
-BT /F1 11.00 Tf ET
-BT /F3 6.00 Tf ET
-0 Tw
-q 0.000 0.592 0.784 rg BT 56.69 798.99 Td (office@interpid.eu) Tj ET Q
-0 Tw
-q 0.627 0.627 0.627 rg BT 105.14 798.99 Td (  -  ) Tj ET Q
-0 Tw
-q 0.000 0.592 0.784 rg BT 113.81 798.99 Td (www.interpid.eu/fpdf/multicell) Tj ET Q
-BT /F1 11.00 Tf ET
-q 113.39 0 0 14.29 425.20 799.26 cm /I1 Do Q
-BT /F4 14.00 Tf ET
-0 Tw
-q 0.796 0.000 0.188 rg BT 56.69 759.74 Td (Multicell text shrinking feature) Tj ET Q
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 56.69 718.12 Td (Height: 50) Tj ET Q
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F5 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 12.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F6 12.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F6 10.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F6 12.00 Tf ET
-BT /F3 11.00 Tf ET
-56.69 711.50 396.85 -8.50 re f 56.69 711.50 m 56.69 702.99 l S 56.69 711.50 m 453.54 711.50 l S 453.54 711.50 m 453.54 702.99 l S 
-56.69 702.99 396.85 -14.17 re f 
-0.466 Tw
-q 0.510 0.000 0.118 rg BT 65.20 692.61 Td (This ) Tj ET Q
-BT /F4 11.00 Tf ET
-0.466 Tw
-q 0.510 0.000 0.118 rg BT 89.50 692.61 Td (TCPDF addon) Tj ET Q
-BT /F3 11.00 Tf ET
-0.466 Tw
-q 0.510 0.000 0.118 rg BT 162.69 692.61 Td ( allows creation of an ) Tj ET Q
-BT /F4 11.00 Tf ET
-0.466 Tw
-q 0.510 0.000 0.118 rg BT 271.40 692.61 Td (Advanced Multicell) Tj ET Q
-BT /F3 11.00 Tf ET
-0.466 Tw
-q 0.510 0.000 0.118 rg BT 371.50 692.61 Td ( which uses as) Tj ET Q
-56.69 702.99 m 56.69 688.82 l S 453.54 702.99 m 453.54 688.82 l S 
-56.69 688.82 396.85 -14.17 re f 
-1.192 Tw
-q 0.510 0.000 0.118 rg BT 65.20 678.43 Td (input a ) Tj ET Q
-BT /F4 11.00 Tf ET
-1.192 Tw
-q 0.510 0.000 0.118 rg BT 103.66 678.43 Td (TAG based formatted string) Tj ET Q
-BT /F3 11.00 Tf ET
-1.192 Tw
-q 0.510 0.000 0.118 rg BT 252.70 678.43 Td ( instead of a simple string. The use of) Tj ET Q
-56.69 688.82 m 56.69 674.65 l S 453.54 688.82 m 453.54 674.65 l S 
-56.69 674.65 396.85 -14.17 re f 
-0.436 Tw
-q 0.510 0.000 0.118 rg BT 65.20 664.26 Td (tags allows to change the font, the style \() Tj ET Q
-BT /F4 11.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 268.01 664.26 Td (bold) Tj ET Q
-BT /F3 11.00 Tf ET
-0.436 Tw
-q 0.510 0.000 0.118 rg BT 291.24 664.26 Td (, ) Tj ET Q
-BT /F5 11.00 Tf ET
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 297.79 664.26 Td (italic) Tj ET Q
-BT /F3 11.00 Tf ET
-0.436 Tw
-q 0.510 0.000 0.118 rg BT 319.79 664.26 Td (, ) Tj ET Q
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 326.34 664.26 Td (underline) Tj ET 326.34 663.16 45.24 -0.55 re f Q
-0.436 Tw
-q 0.510 0.000 0.118 rg BT 371.58 664.26 Td (\), the size, and) Tj ET Q
-56.69 674.65 m 56.69 660.47 l S 453.54 674.65 m 453.54 660.47 l S 
-56.69 660.47 396.85 -14.17 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 650.09 Td (the color of characters and many other features.) Tj ET Q
-56.69 660.47 m 56.69 646.30 l S 453.54 660.47 m 453.54 646.30 l S 
-56.69 646.30 396.85 -14.17 re f 
-56.69 646.30 m 56.69 632.13 l S 453.54 646.30 m 453.54 632.13 l S 
-56.69 632.13 396.85 -14.17 re f 
-BT /F4 12.00 Tf ET
-0.000 Tw
-q 0.796 0.000 0.188 rg BT 65.20 621.44 Td (Features:) Tj ET Q
-BT /F3 11.00 Tf ET
-56.69 632.13 m 56.69 617.95 l S 453.54 632.13 m 453.54 617.95 l S 
-56.69 617.95 396.85 -14.17 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 607.57 Td (  - Text can be ) Tj ET Q
-BT /F4 11.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 138.57 607.57 Td (aligned) Tj ET Q
-BT /F3 11.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 177.08 607.57 Td (, ) Tj ET Q
-BT /F4 11.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 183.19 607.57 Td (centered) Tj ET Q
-BT /F3 11.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 229.04 607.57 Td ( or ) Tj ET Q
-BT /F4 11.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 244.94 607.57 Td (justified) Tj ET Q
-BT /F3 11.00 Tf ET
-56.69 617.95 m 56.69 603.78 l S 453.54 617.95 m 453.54 603.78 l S 
-56.69 603.78 396.85 -14.17 re f 
-0 Tw
-q 0.510 0.000 0.118 rg BT 65.20 593.39 Td (  - Different ) Tj ET Q
-BT /F3 10.00 Tf ET
-0 Tw
-q 0.000 0.000 1.000 rg BT 122.66 593.69 Td (Font) Tj ET Q
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 142.67 593.39 Td (, ) Tj ET Q
-BT /F6 12.00 Tf ET
-0 Tw
-q 0.000 0.000 0.471 rg BT 148.79 593.09 Td (Sizes) Tj ET Q
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 179.47 593.39 Td (, ) Tj ET Q
-BT /F6 10.00 Tf ET
-0 Tw
-q 0.000 0.000 0.863 rg BT 185.59 593.69 Td (Styles) Tj ET Q
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 215.05 593.39 Td (, ) Tj ET Q
-BT /F6 12.00 Tf ET
-0 Tw
-q 0.000 1.000 1.000 rg BT 221.16 593.09 Td (Colors) Tj ET Q
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 259.17 593.39 Td ( can be used) Tj ET Q
-56.69 603.78 m 56.69 589.61 l S 453.54 603.78 m 453.54 589.61 l S 
-56.69 589.61 396.85 -8.50 re f 56.69 589.61 m 56.69 581.10 l S 453.54 589.61 m 453.54 581.10 l S 56.69 581.10 m 453.54 581.10 l S 
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 56.69 556.54 Td (Height: 40) Tj ET Q
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F5 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 12.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F6 12.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F6 10.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F6 12.00 Tf ET
-BT /F3 11.00 Tf ET
-56.69 549.92 396.85 -8.50 re f 56.69 549.92 m 56.69 541.42 l S 56.69 549.92 m 453.54 549.92 l S 453.54 549.92 m 453.54 541.42 l S 
-56.69 541.42 396.85 -14.17 re f 
-0.466 Tw
-q 0.510 0.000 0.118 rg BT 65.20 531.03 Td (This ) Tj ET Q
-BT /F4 11.00 Tf ET
-0.466 Tw
-q 0.510 0.000 0.118 rg BT 89.50 531.03 Td (TCPDF addon) Tj ET Q
-BT /F3 11.00 Tf ET
-0.466 Tw
-q 0.510 0.000 0.118 rg BT 162.69 531.03 Td ( allows creation of an ) Tj ET Q
-BT /F4 11.00 Tf ET
-0.466 Tw
-q 0.510 0.000 0.118 rg BT 271.40 531.03 Td (Advanced Multicell) Tj ET Q
-BT /F3 11.00 Tf ET
-0.466 Tw
-q 0.510 0.000 0.118 rg BT 371.50 531.03 Td ( which uses as) Tj ET Q
-56.69 541.42 m 56.69 527.24 l S 453.54 541.42 m 453.54 527.24 l S 
-56.69 527.24 396.85 -14.17 re f 
-1.192 Tw
-q 0.510 0.000 0.118 rg BT 65.20 516.86 Td (input a ) Tj ET Q
-BT /F4 11.00 Tf ET
-1.192 Tw
-q 0.510 0.000 0.118 rg BT 103.66 516.86 Td (TAG based formatted string) Tj ET Q
-BT /F3 11.00 Tf ET
-1.192 Tw
-q 0.510 0.000 0.118 rg BT 252.70 516.86 Td ( instead of a simple string. The use of) Tj ET Q
-56.69 527.24 m 56.69 513.07 l S 453.54 527.24 m 453.54 513.07 l S 
-56.69 513.07 396.85 -14.17 re f 
-0.436 Tw
-q 0.510 0.000 0.118 rg BT 65.20 502.68 Td (tags allows to change the font, the style \() Tj ET Q
-BT /F4 11.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 268.01 502.68 Td (bold) Tj ET Q
-BT /F3 11.00 Tf ET
-0.436 Tw
-q 0.510 0.000 0.118 rg BT 291.24 502.68 Td (, ) Tj ET Q
-BT /F5 11.00 Tf ET
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 297.79 502.68 Td (italic) Tj ET Q
-BT /F3 11.00 Tf ET
-0.436 Tw
-q 0.510 0.000 0.118 rg BT 319.79 502.68 Td (, ) Tj ET Q
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 326.34 502.68 Td (underline) Tj ET 326.34 501.58 45.24 -0.55 re f Q
-0.436 Tw
-q 0.510 0.000 0.118 rg BT 371.58 502.68 Td (\), the size, and) Tj ET Q
-56.69 513.07 m 56.69 498.90 l S 453.54 513.07 m 453.54 498.90 l S 
-56.69 498.90 396.85 -14.17 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 488.51 Td (the color of characters and many other features.) Tj ET Q
-56.69 498.90 m 56.69 484.72 l S 453.54 498.90 m 453.54 484.72 l S 
-56.69 484.72 396.85 -14.17 re f 
-56.69 484.72 m 56.69 470.55 l S 453.54 484.72 m 453.54 470.55 l S 
-56.69 470.55 396.85 -14.17 re f 
-BT /F4 12.00 Tf ET
-0.000 Tw
-q 0.796 0.000 0.188 rg BT 65.20 459.86 Td (Features:) Tj ET Q
-BT /F3 11.00 Tf ET
-56.69 470.55 m 56.69 456.38 l S 453.54 470.55 m 453.54 456.38 l S 
-56.69 456.38 396.85 -14.17 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 445.99 Td (  - Text can be ) Tj ET Q
-BT /F4 11.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 138.57 445.99 Td (aligned) Tj ET Q
-BT /F3 11.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 177.08 445.99 Td (, ) Tj ET Q
-BT /F4 11.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 183.19 445.99 Td (centered) Tj ET Q
-BT /F3 11.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 229.04 445.99 Td ( or ) Tj ET Q
-BT /F4 11.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 244.94 445.99 Td (justified) Tj ET Q
-BT /F3 11.00 Tf ET
-56.69 456.38 m 56.69 442.20 l S 453.54 456.38 m 453.54 442.20 l S 
-56.69 442.20 396.85 -14.17 re f 
-0 Tw
-q 0.510 0.000 0.118 rg BT 65.20 431.82 Td (  - Different ) Tj ET Q
-BT /F3 10.00 Tf ET
-0 Tw
-q 0.000 0.000 1.000 rg BT 122.66 432.12 Td (Font) Tj ET Q
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 142.67 431.82 Td (, ) Tj ET Q
-BT /F6 12.00 Tf ET
-0 Tw
-q 0.000 0.000 0.471 rg BT 148.79 431.52 Td (Sizes) Tj ET Q
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 179.47 431.82 Td (, ) Tj ET Q
-BT /F6 10.00 Tf ET
-0 Tw
-q 0.000 0.000 0.863 rg BT 185.59 432.12 Td (Styles) Tj ET Q
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 215.05 431.82 Td (, ) Tj ET Q
-BT /F6 12.00 Tf ET
-0 Tw
-q 0.000 1.000 1.000 rg BT 221.16 431.52 Td (Colors) Tj ET Q
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 259.17 431.82 Td ( can be used) Tj ET Q
-56.69 442.20 m 56.69 428.03 l S 453.54 442.20 m 453.54 428.03 l S 
-56.69 428.03 396.85 -8.50 re f 56.69 428.03 m 56.69 419.53 l S 453.54 428.03 m 453.54 419.53 l S 56.69 419.53 m 453.54 419.53 l S 
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 56.69 394.97 Td (Height: 30) Tj ET Q
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F5 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 12.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F5 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F5 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F6 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F6 8.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F6 10.00 Tf ET
-BT /F3 9.00 Tf ET
-56.69 388.35 396.85 -8.50 re f 56.69 388.35 m 56.69 379.84 l S 56.69 388.35 m 453.54 388.35 l S 453.54 388.35 m 453.54 379.84 l S 
-56.69 379.84 396.85 -11.34 re f 
-1.588 Tw
-q 0.510 0.000 0.118 rg BT 65.20 371.47 Td (This ) Tj ET Q
-BT /F4 9.00 Tf ET
-1.588 Tw
-q 0.510 0.000 0.118 rg BT 86.29 371.47 Td (TCPDF addon) Tj ET Q
-BT /F3 9.00 Tf ET
-1.588 Tw
-q 0.510 0.000 0.118 rg BT 147.38 371.47 Td ( allows creation of an ) Tj ET Q
-BT /F4 9.00 Tf ET
-1.588 Tw
-q 0.510 0.000 0.118 rg BT 242.36 371.47 Td (Advanced Multicell) Tj ET Q
-BT /F3 9.00 Tf ET
-1.588 Tw
-q 0.510 0.000 0.118 rg BT 325.47 371.47 Td ( which uses as input a ) Tj ET Q
-BT /F4 9.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 426.04 371.47 Td (TAG) Tj ET Q
-56.69 379.84 m 56.69 368.50 l S 453.54 379.84 m 453.54 368.50 l S 
-56.69 368.50 396.85 -11.34 re f 
-0.543 Tw
-q 0.510 0.000 0.118 rg BT 65.20 360.13 Td (based formatted string) Tj ET Q
-BT /F3 9.00 Tf ET
-0.543 Tw
-q 0.510 0.000 0.118 rg BT 163.80 360.13 Td ( instead of a simple string. The use of tags allows to change the font,) Tj ET Q
-56.69 368.50 m 56.69 357.17 l S 453.54 368.50 m 453.54 357.17 l S 
-56.69 357.17 396.85 -11.34 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 348.80 Td (the style \() Tj ET Q
-BT /F4 9.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 104.21 348.80 Td (bold) Tj ET Q
-BT /F3 9.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 123.21 348.80 Td (, ) Tj ET Q
-BT /F5 9.00 Tf ET
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 128.21 348.80 Td (italic) Tj ET Q
-BT /F3 9.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 146.21 348.80 Td (, ) Tj ET Q
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 151.22 348.80 Td (underline) Tj ET 151.22 347.90 37.02 -0.45 re f Q
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 188.24 348.80 Td (\), the size, and the color of characters and many other features.) Tj ET Q
-56.69 357.17 m 56.69 345.83 l S 453.54 357.17 m 453.54 345.83 l S 
-56.69 345.83 396.85 -11.34 re f 
-56.69 345.83 m 56.69 334.49 l S 453.54 345.83 m 453.54 334.49 l S 
-56.69 334.49 396.85 -11.34 re f 
-BT /F4 10.00 Tf ET
-0.000 Tw
-q 0.796 0.000 0.188 rg BT 65.20 325.82 Td (Features:) Tj ET Q
-BT /F3 9.00 Tf ET
-56.69 334.49 m 56.69 323.15 l S 453.54 334.49 m 453.54 323.15 l S 
-56.69 323.15 396.85 -11.34 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 314.78 Td (  - Text can be ) Tj ET Q
-BT /F4 9.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 125.23 314.78 Td (aligned) Tj ET Q
-BT /F3 9.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 156.74 314.78 Td (, ) Tj ET Q
-BT /F4 9.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 161.74 314.78 Td (centered) Tj ET Q
-BT /F3 9.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 199.25 314.78 Td ( or ) Tj ET Q
-BT /F4 9.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 212.26 314.78 Td (justified) Tj ET Q
-BT /F3 9.00 Tf ET
-56.69 323.15 m 56.69 311.81 l S 453.54 323.15 m 453.54 311.81 l S 
-56.69 311.81 396.85 -11.34 re f 
-0 Tw
-q 0.510 0.000 0.118 rg BT 65.20 303.44 Td (  - Different ) Tj ET Q
-BT /F3 8.00 Tf ET
-0 Tw
-q 0.000 0.000 1.000 rg BT 112.21 303.74 Td (Font) Tj ET Q
-BT /F3 9.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 128.22 303.44 Td (, ) Tj ET Q
-BT /F6 10.00 Tf ET
-0 Tw
-q 0.000 0.000 0.471 rg BT 133.22 303.14 Td (Sizes) Tj ET Q
-BT /F3 9.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 158.79 303.44 Td (, ) Tj ET Q
-BT /F6 8.00 Tf ET
-0 Tw
-q 0.000 0.000 0.863 rg BT 163.80 303.74 Td (Styles) Tj ET Q
-BT /F3 9.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 187.37 303.44 Td (, ) Tj ET Q
-BT /F6 10.00 Tf ET
-0 Tw
-q 0.000 1.000 1.000 rg BT 192.37 303.14 Td (Colors) Tj ET Q
-BT /F3 9.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 224.04 303.44 Td ( can be used) Tj ET Q
-56.69 311.81 m 56.69 300.47 l S 453.54 311.81 m 453.54 300.47 l S 
-56.69 300.47 396.85 -8.50 re f 56.69 300.47 m 56.69 291.97 l S 453.54 300.47 m 453.54 291.97 l S 56.69 291.97 m 453.54 291.97 l S 
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 56.69 267.41 Td (Height: 20) Tj ET Q
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F5 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F5 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F5 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F5 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F5 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F6 8.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F6 6.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F6 8.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F5 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F6 7.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F6 5.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F6 7.00 Tf ET
-BT /F3 6.00 Tf ET
-56.69 260.79 396.85 -8.50 re f 56.69 260.79 m 56.69 252.28 l S 56.69 260.79 m 453.54 260.79 l S 453.54 260.79 m 453.54 252.28 l S 
-56.69 252.28 396.85 -7.09 re f 
-0.230 Tw
-q 0.510 0.000 0.118 rg BT 65.20 246.94 Td (This ) Tj ET Q
-BT /F4 6.00 Tf ET
-0.230 Tw
-q 0.510 0.000 0.118 rg BT 78.43 246.94 Td (TCPDF addon) Tj ET Q
-BT /F3 6.00 Tf ET
-0.230 Tw
-q 0.510 0.000 0.118 rg BT 118.33 246.94 Td ( allows creation of an ) Tj ET Q
-BT /F4 6.00 Tf ET
-0.230 Tw
-q 0.510 0.000 0.118 rg BT 177.50 246.94 Td (Advanced Multicell) Tj ET Q
-BT /F3 6.00 Tf ET
-0.230 Tw
-q 0.510 0.000 0.118 rg BT 232.08 246.94 Td ( which uses as input a ) Tj ET Q
-BT /F4 6.00 Tf ET
-0.230 Tw
-q 0.510 0.000 0.118 rg BT 294.16 246.94 Td (TAG based formatted string) Tj ET Q
-BT /F3 6.00 Tf ET
-0.230 Tw
-q 0.510 0.000 0.118 rg BT 374.19 246.94 Td ( instead of a simple string.) Tj ET Q
-56.69 252.28 m 56.69 245.20 l S 453.54 252.28 m 453.54 245.20 l S 
-56.69 245.20 396.85 -7.09 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 239.85 Td (The use of tags allows to change the font, the style \() Tj ET Q
-BT /F4 6.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 203.94 239.85 Td (bold) Tj ET Q
-BT /F3 6.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 216.61 239.85 Td (, ) Tj ET Q
-BT /F5 6.00 Tf ET
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 219.94 239.85 Td (italic) Tj ET Q
-BT /F3 6.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 231.94 239.85 Td (, ) Tj ET Q
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 235.28 239.85 Td (underline) Tj ET 235.28 239.25 24.68 -0.30 re f Q
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 259.96 239.85 Td (\), the size, and the color of characters and many other features.) Tj ET Q
-56.69 245.20 m 56.69 238.11 l S 453.54 245.20 m 453.54 238.11 l S 
-56.69 238.11 396.85 -7.09 re f 
-56.69 238.11 m 56.69 231.02 l S 453.54 238.11 m 453.54 231.02 l S 
-56.69 231.02 396.85 -7.09 re f 
-BT /F4 7.00 Tf ET
-0.000 Tw
-q 0.796 0.000 0.188 rg BT 65.20 225.38 Td (Features:) Tj ET Q
-BT /F3 6.00 Tf ET
-56.69 231.02 m 56.69 223.94 l S 453.54 231.02 m 453.54 223.94 l S 
-56.69 223.94 396.85 -7.09 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 218.59 Td (  - Text can be ) Tj ET Q
-BT /F4 6.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 105.22 218.59 Td (aligned) Tj ET Q
-BT /F3 6.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 126.22 218.59 Td (, ) Tj ET Q
-BT /F4 6.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 129.56 218.59 Td (centered) Tj ET Q
-BT /F3 6.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 154.57 218.59 Td ( or ) Tj ET Q
-BT /F4 6.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 163.24 218.59 Td (justified) Tj ET Q
-BT /F3 6.00 Tf ET
-56.69 223.94 m 56.69 216.85 l S 453.54 223.94 m 453.54 216.85 l S 
-56.69 216.85 396.85 -7.09 re f 
-0 Tw
-q 0.510 0.000 0.118 rg BT 65.20 211.51 Td (  - Different ) Tj ET Q
-BT /F3 5.00 Tf ET
-0 Tw
-q 0.000 0.000 1.000 rg BT 96.54 211.81 Td (Font) Tj ET Q
-BT /F3 6.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 106.55 211.51 Td (, ) Tj ET Q
-BT /F6 7.00 Tf ET
-0 Tw
-q 0.000 0.000 0.471 rg BT 109.88 211.21 Td (Sizes) Tj ET Q
-BT /F3 6.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 127.78 211.51 Td (, ) Tj ET Q
-BT /F6 5.00 Tf ET
-0 Tw
-q 0.000 0.000 0.863 rg BT 131.12 211.81 Td (Styles) Tj ET Q
-BT /F3 6.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 145.85 211.51 Td (, ) Tj ET Q
-BT /F6 7.00 Tf ET
-0 Tw
-q 0.000 1.000 1.000 rg BT 149.18 211.21 Td (Colors) Tj ET Q
-BT /F3 6.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 171.35 211.51 Td ( can be used) Tj ET Q
-56.69 216.85 m 56.69 209.76 l S 453.54 216.85 m 453.54 209.76 l S 
-56.69 209.76 396.85 -8.50 re f 56.69 209.76 m 56.69 201.26 l S 453.54 209.76 m 453.54 201.26 l S 56.69 201.26 m 453.54 201.26 l S 
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 56.69 176.70 Td (Height: 10) Tj ET Q
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F5 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F5 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F5 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F5 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F5 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F5 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F4 5.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F4 5.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F4 5.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F4 5.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F5 5.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F4 5.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F4 5.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F4 5.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F6 6.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F6 4.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F6 6.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F4 4.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F4 4.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F4 4.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F4 4.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F5 4.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F4 5.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F4 4.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F4 4.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F4 4.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F3 3.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F6 5.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F6 3.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F6 5.00 Tf ET
-BT /F3 4.00 Tf ET
-56.69 170.08 396.85 -8.50 re f 56.69 170.08 m 56.69 161.58 l S 56.69 170.08 m 453.54 170.08 l S 453.54 170.08 m 453.54 161.58 l S 
-56.69 161.58 396.85 -4.25 re f 
-0.474 Tw
-q 0.510 0.000 0.118 rg BT 65.20 158.25 Td (This ) Tj ET Q
-BT /F4 4.00 Tf ET
-0.474 Tw
-q 0.510 0.000 0.118 rg BT 74.34 158.25 Td (TCPDF addon) Tj ET Q
-BT /F3 4.00 Tf ET
-0.474 Tw
-q 0.510 0.000 0.118 rg BT 101.26 158.25 Td ( allows creation of an ) Tj ET Q
-BT /F4 4.00 Tf ET
-0.474 Tw
-q 0.510 0.000 0.118 rg BT 142.31 158.25 Td (Advanced Multicell) Tj ET Q
-BT /F3 4.00 Tf ET
-0.474 Tw
-q 0.510 0.000 0.118 rg BT 179.02 158.25 Td ( which uses as input a ) Tj ET Q
-BT /F4 4.00 Tf ET
-0.474 Tw
-q 0.510 0.000 0.118 rg BT 222.33 158.25 Td (TAG based formatted string) Tj ET Q
-BT /F3 4.00 Tf ET
-0.474 Tw
-q 0.510 0.000 0.118 rg BT 276.65 158.25 Td ( instead of a simple string. The use of tags allows to change the font, the style \() Tj ET Q
-BT /F4 4.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 424.79 158.25 Td (bold) Tj ET Q
-BT /F3 4.00 Tf ET
-0.474 Tw
-q 0.510 0.000 0.118 rg BT 433.23 158.25 Td (, ) Tj ET Q
-BT /F5 4.00 Tf ET
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 435.93 158.25 Td (italic) Tj ET Q
-BT /F3 4.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 443.93 158.25 Td (,) Tj ET Q
-56.69 161.58 m 56.69 157.32 l S 453.54 161.58 m 453.54 157.32 l S 
-56.69 157.32 396.85 -4.25 re f 
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 65.20 154.00 Td (underline) Tj ET 65.20 153.60 16.45 -0.20 re f Q
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 81.65 154.00 Td (\), the size, and the color of characters and many other features.) Tj ET Q
-56.69 157.32 m 56.69 153.07 l S 453.54 157.32 m 453.54 153.07 l S 
-56.69 153.07 396.85 -4.25 re f 
-56.69 153.07 m 56.69 148.82 l S 453.54 153.07 m 453.54 148.82 l S 
-56.69 148.82 396.85 -4.25 re f 
-BT /F4 5.00 Tf ET
-0.000 Tw
-q 0.796 0.000 0.188 rg BT 65.20 145.19 Td (Features:) Tj ET Q
-BT /F3 4.00 Tf ET
-56.69 148.82 m 56.69 144.57 l S 453.54 148.82 m 453.54 144.57 l S 
-56.69 144.57 396.85 -4.25 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 141.24 Td (  - Text can be ) Tj ET Q
-BT /F4 4.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 91.88 141.24 Td (aligned) Tj ET Q
-BT /F3 4.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 105.88 141.24 Td (, ) Tj ET Q
-BT /F4 4.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 108.10 141.24 Td (centered) Tj ET Q
-BT /F3 4.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 124.78 141.24 Td ( or ) Tj ET Q
-BT /F4 4.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 130.56 141.24 Td (justified) Tj ET Q
-BT /F3 4.00 Tf ET
-56.69 144.57 m 56.69 140.32 l S 453.54 144.57 m 453.54 140.32 l S 
-56.69 140.32 396.85 -4.25 re f 
-0 Tw
-q 0.510 0.000 0.118 rg BT 65.20 136.99 Td (  - Different ) Tj ET Q
-BT /F3 3.00 Tf ET
-0 Tw
-q 0.000 0.000 1.000 rg BT 86.09 137.29 Td (Font) Tj ET Q
-BT /F3 4.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 92.10 136.99 Td (, ) Tj ET Q
-BT /F6 5.00 Tf ET
-0 Tw
-q 0.000 0.000 0.471 rg BT 94.32 136.69 Td (Sizes) Tj ET Q
-BT /F3 4.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 107.10 136.99 Td (, ) Tj ET Q
-BT /F6 3.00 Tf ET
-0 Tw
-q 0.000 0.000 0.863 rg BT 109.33 137.29 Td (Styles) Tj ET Q
-BT /F3 4.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 118.17 136.99 Td (, ) Tj ET Q
-BT /F6 5.00 Tf ET
-0 Tw
-q 0.000 1.000 1.000 rg BT 120.39 136.69 Td (Colors) Tj ET Q
-BT /F3 4.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 136.23 136.99 Td ( can be used) Tj ET Q
-56.69 140.32 m 56.69 136.06 l S 453.54 140.32 m 453.54 136.06 l S 
-56.69 136.06 396.85 -8.50 re f 56.69 136.06 m 56.69 127.56 l S 453.54 136.06 m 453.54 127.56 l S 56.69 127.56 m 453.54 127.56 l S 
-BT /F1 11.00 Tf ET
-BT /F5 7.00 Tf ET
-q 0.667 0.667 0.667 rg BT 277.40 20.58 Td (Page 1 / 3) Tj ET Q
-
-endstream
-endobj
-5 0 obj
-<</Type /Annot /Subtype /Link /Rect [56.69 803.79 105.14 797.79] /Border [0 0 0] /A <</S /URI /URI (mailto:office@interpid.eu)>>>>
-endobj
-6 0 obj
-<</Type /Annot /Subtype /Link /Rect [113.81 803.79 191.49 797.79] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu/fpdf/multicell)>>>>
-endobj
-7 0 obj
-<</Type /Annot /Subtype /Link /Rect [425.20 813.54 538.59 799.26] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu)>>>>
-endobj
-8 0 obj
-<</Type /Page
-/Parent 1 0 R
-/Resources 2 0 R
-/Annots [10 0 R 11 0 R 12 0 R ]
-/Contents 9 0 R>>
-endobj
-9 0 obj
-<</Length 30390>>
-stream
-2 J
-0.57 w
-BT /F1 11.00 Tf ET
-0.996 1.000 0.961 rg
-BT /F3 6.00 Tf ET
-BT /F1 11.00 Tf ET
-BT /F3 6.00 Tf ET
-0.000 Tw
-q 0.627 0.627 0.627 rg BT 56.69 807.49 Td (Fpdf Advanced Multicell) Tj ET Q
-BT /F1 11.00 Tf ET
-BT /F3 6.00 Tf ET
-0 Tw
-q 0.000 0.592 0.784 rg BT 56.69 798.99 Td (office@interpid.eu) Tj ET Q
-0 Tw
-q 0.627 0.627 0.627 rg BT 105.14 798.99 Td (  -  ) Tj ET Q
-0 Tw
-q 0.000 0.592 0.784 rg BT 113.81 798.99 Td (www.interpid.eu/fpdf/multicell) Tj ET Q
-BT /F1 11.00 Tf ET
-q 113.39 0 0 14.29 425.20 799.26 cm /I1 Do Q
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 56.69 774.81 Td (Height: ) Tj ET Q
-BT /F4 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 94.60 774.81 Td (50) Tj ET Q
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 106.83 774.81 Td ( Width: ) Tj ET Q
-BT /F4 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 144.12 774.81 Td (80) Tj ET Q
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F5 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 12.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F5 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F6 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F6 9.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F6 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F5 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F6 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F6 8.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F6 10.00 Tf ET
-BT /F3 9.00 Tf ET
-56.69 768.19 226.77 -8.50 re f 56.69 768.19 m 56.69 759.69 l S 56.69 768.19 m 283.46 768.19 l S 283.46 768.19 m 283.46 759.69 l S 
-56.69 759.69 226.77 -11.34 re f 
-0.102 Tw
-q 0.510 0.000 0.118 rg BT 65.20 751.32 Td (This ) Tj ET Q
-BT /F4 9.00 Tf ET
-0.102 Tw
-q 0.510 0.000 0.118 rg BT 84.80 751.32 Td (TCPDF addon) Tj ET Q
-BT /F3 9.00 Tf ET
-0.102 Tw
-q 0.510 0.000 0.118 rg BT 144.40 751.32 Td ( allows creation of an ) Tj ET Q
-BT /F4 9.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 231.95 751.32 Td (Advanced) Tj ET Q
-56.69 759.69 m 56.69 748.35 l S 283.46 759.69 m 283.46 748.35 l S 
-56.69 748.35 226.77 -11.34 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 739.98 Td (Multicell) Tj ET Q
-BT /F3 9.00 Tf ET
-5.029 Tw
-q 0.510 0.000 0.118 rg BT 101.21 739.98 Td ( which uses as input a ) Tj ET Q
-BT /F4 9.00 Tf ET
-5.029 Tw
-q 0.510 0.000 0.118 rg BT 222.42 739.98 Td (TAG based) Tj ET Q
-56.69 748.35 m 56.69 737.01 l S 283.46 748.35 m 283.46 737.01 l S 
-56.69 737.01 226.77 -11.34 re f 
-0.150 Tw
-q 0.510 0.000 0.118 rg BT 65.20 728.64 Td (formatted string) Tj ET Q
-BT /F3 9.00 Tf ET
-0.150 Tw
-q 0.510 0.000 0.118 rg BT 134.35 728.64 Td ( instead of a simple string. The use) Tj ET Q
-56.69 737.01 m 56.69 725.67 l S 283.46 737.01 m 283.46 725.67 l S 
-56.69 725.67 226.77 -11.34 re f 
-1.685 Tw
-q 0.510 0.000 0.118 rg BT 65.20 717.30 Td (of tags allows to change the font, the style \() Tj ET Q
-BT /F4 9.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 253.46 717.30 Td (bold) Tj ET Q
-BT /F3 9.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 272.46 717.30 Td (,) Tj ET Q
-56.69 725.67 m 56.69 714.33 l S 283.46 725.67 m 283.46 714.33 l S 
-56.69 714.33 226.77 -11.34 re f 
-BT /F5 9.00 Tf ET
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 65.20 705.96 Td (italic) Tj ET Q
-BT /F3 9.00 Tf ET
-6.241 Tw
-q 0.510 0.000 0.118 rg BT 83.20 705.96 Td (, ) Tj ET Q
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 94.44 705.96 Td (underline) Tj ET 94.44 705.06 37.02 -0.45 re f Q
-6.241 Tw
-q 0.510 0.000 0.118 rg BT 131.46 705.96 Td (\), the size, and the color of) Tj ET Q
-56.69 714.33 m 56.69 702.99 l S 283.46 714.33 m 283.46 702.99 l S 
-56.69 702.99 226.77 -11.34 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 694.62 Td (characters and many other features.) Tj ET Q
-56.69 702.99 m 56.69 691.65 l S 283.46 702.99 m 283.46 691.65 l S 
-56.69 691.65 226.77 -11.34 re f 
-56.69 691.65 m 56.69 680.32 l S 283.46 691.65 m 283.46 680.32 l S 
-56.69 680.32 226.77 -11.34 re f 
-BT /F4 10.00 Tf ET
-0.000 Tw
-q 0.796 0.000 0.188 rg BT 65.20 671.65 Td (Features:) Tj ET Q
-BT /F3 9.00 Tf ET
-56.69 680.32 m 56.69 668.98 l S 283.46 680.32 m 283.46 668.98 l S 
-56.69 668.98 226.77 -11.34 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 660.61 Td (  - Text can be ) Tj ET Q
-BT /F4 9.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 125.23 660.61 Td (aligned) Tj ET Q
-BT /F3 9.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 156.74 660.61 Td (, ) Tj ET Q
-BT /F4 9.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 161.74 660.61 Td (centered) Tj ET Q
-BT /F3 9.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 199.25 660.61 Td ( or ) Tj ET Q
-BT /F4 9.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 212.26 660.61 Td (justified) Tj ET Q
-BT /F3 9.00 Tf ET
-56.69 668.98 m 56.69 657.64 l S 283.46 668.98 m 283.46 657.64 l S 
-56.69 657.64 226.77 -11.34 re f 
-2.378 Tw
-q 0.510 0.000 0.118 rg BT 65.20 649.27 Td (  - Different ) Tj ET Q
-BT /F3 8.00 Tf ET
-0.000 Tw
-q 0.000 0.000 1.000 rg BT 121.72 649.57 Td (Font) Tj ET Q
-BT /F3 9.00 Tf ET
-2.378 Tw
-q 0.510 0.000 0.118 rg BT 137.73 649.27 Td (, ) Tj ET Q
-BT /F6 10.00 Tf ET
-0.000 Tw
-q 0.000 0.000 0.471 rg BT 145.11 648.97 Td (Sizes) Tj ET Q
-BT /F3 9.00 Tf ET
-2.378 Tw
-q 0.510 0.000 0.118 rg BT 170.68 649.27 Td (, ) Tj ET Q
-BT /F6 8.00 Tf ET
-0.000 Tw
-q 0.000 0.000 0.863 rg BT 178.07 649.57 Td (Styles) Tj ET Q
-BT /F3 9.00 Tf ET
-2.378 Tw
-q 0.510 0.000 0.118 rg BT 201.63 649.27 Td (, ) Tj ET Q
-BT /F6 10.00 Tf ET
-0.000 Tw
-q 0.000 1.000 1.000 rg BT 209.02 648.97 Td (Colors) Tj ET Q
-BT /F3 9.00 Tf ET
-2.378 Tw
-q 0.510 0.000 0.118 rg BT 240.69 649.27 Td ( can be) Tj ET Q
-56.69 657.64 m 56.69 646.30 l S 283.46 657.64 m 283.46 646.30 l S 
-56.69 646.30 226.77 -11.34 re f 
-0 Tw
-q 0.510 0.000 0.118 rg BT 65.20 637.93 Td (used) Tj ET Q
-56.69 646.30 m 56.69 634.96 l S 283.46 646.30 m 283.46 634.96 l S 
-56.69 634.96 226.77 -8.50 re f 56.69 634.96 m 56.69 626.46 l S 283.46 634.96 m 283.46 626.46 l S 56.69 626.46 m 283.46 626.46 l S 
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 56.69 601.90 Td (Height: ) Tj ET Q
-BT /F4 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 94.60 601.90 Td (40) Tj ET Q
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 106.83 601.90 Td ( Width: ) Tj ET Q
-BT /F4 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 144.12 601.90 Td (90) Tj ET Q
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F5 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 12.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F5 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F5 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F6 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F6 8.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F6 10.00 Tf ET
-BT /F3 9.00 Tf ET
-56.69 595.28 255.12 -8.50 re f 56.69 595.28 m 56.69 586.77 l S 56.69 595.28 m 311.81 595.28 l S 311.81 595.28 m 311.81 586.77 l S 
-56.69 586.77 255.12 -11.34 re f 
-4.151 Tw
-q 0.510 0.000 0.118 rg BT 65.20 578.40 Td (This ) Tj ET Q
-BT /F4 9.00 Tf ET
-4.151 Tw
-q 0.510 0.000 0.118 rg BT 88.85 578.40 Td (TCPDF addon) Tj ET Q
-BT /F3 9.00 Tf ET
-4.151 Tw
-q 0.510 0.000 0.118 rg BT 152.50 578.40 Td ( allows creation of an ) Tj ET Q
-BT /F4 9.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 260.30 578.40 Td (Advanced) Tj ET Q
-56.69 586.77 m 56.69 575.43 l S 311.81 586.77 m 311.81 575.43 l S 
-56.69 575.43 255.12 -11.34 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 567.06 Td (Multicell) Tj ET Q
-BT /F3 9.00 Tf ET
-2.443 Tw
-q 0.510 0.000 0.118 rg BT 101.21 567.06 Td ( which uses as input a ) Tj ET Q
-BT /F4 9.00 Tf ET
-2.443 Tw
-q 0.510 0.000 0.118 rg BT 206.91 567.06 Td (TAG based formatted) Tj ET Q
-56.69 575.43 m 56.69 564.09 l S 311.81 575.43 m 311.81 564.09 l S 
-56.69 564.09 255.12 -11.34 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 555.73 Td (string) Tj ET Q
-BT /F3 9.00 Tf ET
-0.592 Tw
-q 0.510 0.000 0.118 rg BT 90.20 555.73 Td ( instead of a simple string. The use of tags allows to) Tj ET Q
-56.69 564.09 m 56.69 552.76 l S 311.81 564.09 m 311.81 552.76 l S 
-56.69 552.76 255.12 -11.34 re f 
-0.723 Tw
-q 0.510 0.000 0.118 rg BT 65.20 544.39 Td (change the font, the style \() Tj ET Q
-BT /F4 9.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 174.88 544.39 Td (bold) Tj ET Q
-BT /F3 9.00 Tf ET
-0.723 Tw
-q 0.510 0.000 0.118 rg BT 193.87 544.39 Td (, ) Tj ET Q
-BT /F5 9.00 Tf ET
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 199.60 544.39 Td (italic) Tj ET Q
-BT /F3 9.00 Tf ET
-0.723 Tw
-q 0.510 0.000 0.118 rg BT 217.60 544.39 Td (, ) Tj ET Q
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 223.33 544.39 Td (underline) Tj ET 223.33 543.49 37.02 -0.45 re f Q
-0.723 Tw
-q 0.510 0.000 0.118 rg BT 260.34 544.39 Td (\), the size,) Tj ET Q
-56.69 552.76 m 56.69 541.42 l S 311.81 552.76 m 311.81 541.42 l S 
-56.69 541.42 255.12 -11.34 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 533.05 Td (and the color of characters and many other features.) Tj ET Q
-56.69 541.42 m 56.69 530.08 l S 311.81 541.42 m 311.81 530.08 l S 
-56.69 530.08 255.12 -11.34 re f 
-56.69 530.08 m 56.69 518.74 l S 311.81 530.08 m 311.81 518.74 l S 
-56.69 518.74 255.12 -11.34 re f 
-BT /F4 10.00 Tf ET
-0.000 Tw
-q 0.796 0.000 0.188 rg BT 65.20 510.07 Td (Features:) Tj ET Q
-BT /F3 9.00 Tf ET
-56.69 518.74 m 56.69 507.40 l S 311.81 518.74 m 311.81 507.40 l S 
-56.69 507.40 255.12 -11.34 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 499.03 Td (  - Text can be ) Tj ET Q
-BT /F4 9.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 125.23 499.03 Td (aligned) Tj ET Q
-BT /F3 9.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 156.74 499.03 Td (, ) Tj ET Q
-BT /F4 9.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 161.74 499.03 Td (centered) Tj ET Q
-BT /F3 9.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 199.25 499.03 Td ( or ) Tj ET Q
-BT /F4 9.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 212.26 499.03 Td (justified) Tj ET Q
-BT /F3 9.00 Tf ET
-56.69 507.40 m 56.69 496.06 l S 311.81 507.40 m 311.81 496.06 l S 
-56.69 496.06 255.12 -11.34 re f 
-0 Tw
-q 0.510 0.000 0.118 rg BT 65.20 487.69 Td (  - Different ) Tj ET Q
-BT /F3 8.00 Tf ET
-0 Tw
-q 0.000 0.000 1.000 rg BT 112.21 487.99 Td (Font) Tj ET Q
-BT /F3 9.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 128.22 487.69 Td (, ) Tj ET Q
-BT /F6 10.00 Tf ET
-0 Tw
-q 0.000 0.000 0.471 rg BT 133.22 487.39 Td (Sizes) Tj ET Q
-BT /F3 9.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 158.79 487.69 Td (, ) Tj ET Q
-BT /F6 8.00 Tf ET
-0 Tw
-q 0.000 0.000 0.863 rg BT 163.80 487.99 Td (Styles) Tj ET Q
-BT /F3 9.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 187.37 487.69 Td (, ) Tj ET Q
-BT /F6 10.00 Tf ET
-0 Tw
-q 0.000 1.000 1.000 rg BT 192.37 487.39 Td (Colors) Tj ET Q
-BT /F3 9.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 224.04 487.69 Td ( can be used) Tj ET Q
-56.69 496.06 m 56.69 484.72 l S 311.81 496.06 m 311.81 484.72 l S 
-56.69 484.72 255.12 -8.50 re f 56.69 484.72 m 56.69 476.22 l S 311.81 484.72 m 311.81 476.22 l S 56.69 476.22 m 311.81 476.22 l S 
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 56.69 451.66 Td (Height: ) Tj ET Q
-BT /F4 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 94.60 451.66 Td (30) Tj ET Q
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 106.83 451.66 Td ( Width: ) Tj ET Q
-BT /F4 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 144.12 451.66 Td (100) Tj ET Q
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F5 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F5 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F5 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F5 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F6 9.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F6 7.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F6 9.00 Tf ET
-BT /F3 8.00 Tf ET
-56.69 445.04 283.46 -8.50 re f 56.69 445.04 m 56.69 436.54 l S 56.69 445.04 m 340.16 445.04 l S 340.16 445.04 m 340.16 436.54 l S 
-56.69 436.54 283.46 -9.92 re f 
-0.461 Tw
-q 0.510 0.000 0.118 rg BT 65.20 429.18 Td (This ) Tj ET Q
-BT /F4 8.00 Tf ET
-0.461 Tw
-q 0.510 0.000 0.118 rg BT 82.99 429.18 Td (TCPDF addon) Tj ET Q
-BT /F3 8.00 Tf ET
-0.461 Tw
-q 0.510 0.000 0.118 rg BT 136.34 429.18 Td ( allows creation of an ) Tj ET Q
-BT /F4 8.00 Tf ET
-0.461 Tw
-q 0.510 0.000 0.118 rg BT 216.01 429.18 Td (Advanced Multicell) Tj ET Q
-BT /F3 8.00 Tf ET
-0.461 Tw
-q 0.510 0.000 0.118 rg BT 288.94 429.18 Td ( which uses) Tj ET Q
-56.69 436.54 m 56.69 426.61 l S 340.16 436.54 m 340.16 426.61 l S 
-56.69 426.61 283.46 -9.92 re f 
-1.235 Tw
-q 0.510 0.000 0.118 rg BT 65.20 419.25 Td (as input a ) Tj ET Q
-BT /F4 8.00 Tf ET
-1.235 Tw
-q 0.510 0.000 0.118 rg BT 105.81 419.25 Td (TAG based formatted string) Tj ET Q
-BT /F3 8.00 Tf ET
-1.235 Tw
-q 0.510 0.000 0.118 rg BT 215.31 419.25 Td ( instead of a simple string. The) Tj ET Q
-56.69 426.61 m 56.69 416.69 l S 340.16 426.61 m 340.16 416.69 l S 
-56.69 416.69 283.46 -9.92 re f 
-0.350 Tw
-q 0.510 0.000 0.118 rg BT 65.20 409.33 Td (use of tags allows to change the font, the style \() Tj ET Q
-BT /F4 8.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 237.68 409.33 Td (bold) Tj ET Q
-BT /F3 8.00 Tf ET
-0.350 Tw
-q 0.510 0.000 0.118 rg BT 254.57 409.33 Td (, ) Tj ET Q
-BT /F5 8.00 Tf ET
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 259.37 409.33 Td (italic) Tj ET Q
-BT /F3 8.00 Tf ET
-0.350 Tw
-q 0.510 0.000 0.118 rg BT 275.37 409.33 Td (, ) Tj ET Q
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 280.17 409.33 Td (underline) Tj ET 280.17 408.53 32.90 -0.40 re f Q
-0.350 Tw
-q 0.510 0.000 0.118 rg BT 313.07 409.33 Td (\), the) Tj ET Q
-56.69 416.69 m 56.69 406.77 l S 340.16 416.69 m 340.16 406.77 l S 
-56.69 406.77 283.46 -9.92 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 399.41 Td (size, and the color of characters and many other features.) Tj ET Q
-56.69 406.77 m 56.69 396.85 l S 340.16 406.77 m 340.16 396.85 l S 
-56.69 396.85 283.46 -9.92 re f 
-56.69 396.85 m 56.69 386.93 l S 340.16 396.85 m 340.16 386.93 l S 
-56.69 386.93 283.46 -9.92 re f 
-BT /F4 9.00 Tf ET
-0.000 Tw
-q 0.796 0.000 0.188 rg BT 65.20 379.27 Td (Features:) Tj ET Q
-BT /F3 8.00 Tf ET
-56.69 386.93 m 56.69 377.01 l S 340.16 386.93 m 340.16 377.01 l S 
-56.69 377.01 283.46 -9.92 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 369.65 Td (  - Text can be ) Tj ET Q
-BT /F4 8.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 118.56 369.65 Td (aligned) Tj ET Q
-BT /F3 8.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 146.56 369.65 Td (, ) Tj ET Q
-BT /F4 8.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 151.01 369.65 Td (centered) Tj ET Q
-BT /F3 8.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 184.36 369.65 Td ( or ) Tj ET Q
-BT /F4 8.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 195.92 369.65 Td (justified) Tj ET Q
-BT /F3 8.00 Tf ET
-56.69 377.01 m 56.69 367.09 l S 340.16 377.01 m 340.16 367.09 l S 
-56.69 367.09 283.46 -9.92 re f 
-0 Tw
-q 0.510 0.000 0.118 rg BT 65.20 359.73 Td (  - Different ) Tj ET Q
-BT /F3 7.00 Tf ET
-0 Tw
-q 0.000 0.000 1.000 rg BT 106.99 360.03 Td (Font) Tj ET Q
-BT /F3 8.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 121.00 359.73 Td (, ) Tj ET Q
-BT /F6 9.00 Tf ET
-0 Tw
-q 0.000 0.000 0.471 rg BT 125.44 359.43 Td (Sizes) Tj ET Q
-BT /F3 8.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 148.46 359.73 Td (, ) Tj ET Q
-BT /F6 7.00 Tf ET
-0 Tw
-q 0.000 0.000 0.863 rg BT 152.90 360.03 Td (Styles) Tj ET Q
-BT /F3 8.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 173.53 359.73 Td (, ) Tj ET Q
-BT /F6 9.00 Tf ET
-0 Tw
-q 0.000 1.000 1.000 rg BT 177.97 359.43 Td (Colors) Tj ET Q
-BT /F3 8.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 206.48 359.73 Td ( can be used) Tj ET Q
-56.69 367.09 m 56.69 357.17 l S 340.16 367.09 m 340.16 357.17 l S 
-56.69 357.17 283.46 -8.50 re f 56.69 357.17 m 56.69 348.66 l S 340.16 357.17 m 340.16 348.66 l S 56.69 348.66 m 340.16 348.66 l S 
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 56.69 324.10 Td (Height: ) Tj ET Q
-BT /F4 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 94.60 324.10 Td (20) Tj ET Q
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 106.83 324.10 Td ( Width: ) Tj ET Q
-BT /F4 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 144.12 324.10 Td (110) Tj ET Q
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F5 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F5 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F5 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F5 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F5 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F6 8.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F6 6.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F6 8.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F5 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F6 7.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F6 5.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F6 7.00 Tf ET
-BT /F3 6.00 Tf ET
-56.69 317.48 311.81 -8.50 re f 56.69 317.48 m 56.69 308.98 l S 56.69 317.48 m 368.50 317.48 l S 368.50 317.48 m 368.50 308.98 l S 
-56.69 308.98 311.81 -7.09 re f 
-0.504 Tw
-q 0.510 0.000 0.118 rg BT 65.20 303.63 Td (This ) Tj ET Q
-BT /F4 6.00 Tf ET
-0.504 Tw
-q 0.510 0.000 0.118 rg BT 78.70 303.63 Td (TCPDF addon) Tj ET Q
-BT /F3 6.00 Tf ET
-0.504 Tw
-q 0.510 0.000 0.118 rg BT 118.87 303.63 Td ( allows creation of an ) Tj ET Q
-BT /F4 6.00 Tf ET
-0.504 Tw
-q 0.510 0.000 0.118 rg BT 179.42 303.63 Td (Advanced Multicell) Tj ET Q
-BT /F3 6.00 Tf ET
-0.504 Tw
-q 0.510 0.000 0.118 rg BT 234.27 303.63 Td ( which uses as input a ) Tj ET Q
-BT /F4 6.00 Tf ET
-0.504 Tw
-q 0.510 0.000 0.118 rg BT 297.98 303.63 Td (TAG based formatted) Tj ET Q
-56.69 308.98 m 56.69 301.89 l S 368.50 308.98 m 368.50 301.89 l S 
-56.69 301.89 311.81 -7.09 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 296.55 Td (string) Tj ET Q
-BT /F3 6.00 Tf ET
-0.439 Tw
-q 0.510 0.000 0.118 rg BT 81.86 296.55 Td ( instead of a simple string. The use of tags allows to change the font, the style \() Tj ET Q
-BT /F4 6.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 299.44 296.55 Td (bold) Tj ET Q
-BT /F3 6.00 Tf ET
-0.439 Tw
-q 0.510 0.000 0.118 rg BT 312.11 296.55 Td (, ) Tj ET Q
-BT /F5 6.00 Tf ET
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 315.88 296.55 Td (italic) Tj ET Q
-BT /F3 6.00 Tf ET
-0.439 Tw
-q 0.510 0.000 0.118 rg BT 327.88 296.55 Td (, ) Tj ET Q
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 331.66 296.55 Td (underline) Tj ET 331.66 295.95 24.68 -0.30 re f Q
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 356.33 296.55 Td (\),) Tj ET Q
-56.69 301.89 m 56.69 294.80 l S 368.50 301.89 m 368.50 294.80 l S 
-56.69 294.80 311.81 -7.09 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 289.46 Td (the size, and the color of characters and many other features.) Tj ET Q
-56.69 294.80 m 56.69 287.72 l S 368.50 294.80 m 368.50 287.72 l S 
-56.69 287.72 311.81 -7.09 re f 
-56.69 287.72 m 56.69 280.63 l S 368.50 287.72 m 368.50 280.63 l S 
-56.69 280.63 311.81 -7.09 re f 
-BT /F4 7.00 Tf ET
-0.000 Tw
-q 0.796 0.000 0.188 rg BT 65.20 274.99 Td (Features:) Tj ET Q
-BT /F3 6.00 Tf ET
-56.69 280.63 m 56.69 273.54 l S 368.50 280.63 m 368.50 273.54 l S 
-56.69 273.54 311.81 -7.09 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 268.20 Td (  - Text can be ) Tj ET Q
-BT /F4 6.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 105.22 268.20 Td (aligned) Tj ET Q
-BT /F3 6.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 126.22 268.20 Td (, ) Tj ET Q
-BT /F4 6.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 129.56 268.20 Td (centered) Tj ET Q
-BT /F3 6.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 154.57 268.20 Td ( or ) Tj ET Q
-BT /F4 6.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 163.24 268.20 Td (justified) Tj ET Q
-BT /F3 6.00 Tf ET
-56.69 273.54 m 56.69 266.46 l S 368.50 273.54 m 368.50 266.46 l S 
-56.69 266.46 311.81 -7.09 re f 
-0 Tw
-q 0.510 0.000 0.118 rg BT 65.20 261.11 Td (  - Different ) Tj ET Q
-BT /F3 5.00 Tf ET
-0 Tw
-q 0.000 0.000 1.000 rg BT 96.54 261.41 Td (Font) Tj ET Q
-BT /F3 6.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 106.55 261.11 Td (, ) Tj ET Q
-BT /F6 7.00 Tf ET
-0 Tw
-q 0.000 0.000 0.471 rg BT 109.88 260.81 Td (Sizes) Tj ET Q
-BT /F3 6.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 127.78 261.11 Td (, ) Tj ET Q
-BT /F6 5.00 Tf ET
-0 Tw
-q 0.000 0.000 0.863 rg BT 131.12 261.41 Td (Styles) Tj ET Q
-BT /F3 6.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 145.85 261.11 Td (, ) Tj ET Q
-BT /F6 7.00 Tf ET
-0 Tw
-q 0.000 1.000 1.000 rg BT 149.18 260.81 Td (Colors) Tj ET Q
-BT /F3 6.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 171.35 261.11 Td ( can be used) Tj ET Q
-56.69 266.46 m 56.69 259.37 l S 368.50 266.46 m 368.50 259.37 l S 
-56.69 259.37 311.81 -8.50 re f 56.69 259.37 m 56.69 250.87 l S 368.50 259.37 m 368.50 250.87 l S 56.69 250.87 m 368.50 250.87 l S 
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 56.69 226.31 Td (Height: ) Tj ET Q
-BT /F4 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 94.60 226.31 Td (10) Tj ET Q
-BT /F3 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 106.83 226.31 Td ( Width: ) Tj ET Q
-BT /F4 11.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 144.12 226.31 Td (120) Tj ET Q
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F4 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F4 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F5 10.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F4 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F5 9.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F4 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F5 8.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F5 7.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F5 6.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F4 7.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F4 5.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F4 5.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F4 5.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F4 5.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F5 5.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F4 6.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F4 5.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F4 5.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F4 5.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F6 6.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F6 4.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F6 6.00 Tf ET
-BT /F3 5.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F4 4.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F4 4.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F4 4.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F4 4.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F5 4.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F4 5.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F4 4.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F4 4.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F4 4.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F3 3.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F6 5.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F6 3.00 Tf ET
-BT /F3 4.00 Tf ET
-BT /F6 5.00 Tf ET
-BT /F3 4.00 Tf ET
-56.69 219.69 340.16 -8.50 re f 56.69 219.69 m 56.69 211.18 l S 56.69 219.69 m 396.85 219.69 l S 396.85 219.69 m 396.85 211.18 l S 
-56.69 211.18 340.16 -4.25 re f 
-0.235 Tw
-q 0.510 0.000 0.118 rg BT 65.20 207.86 Td (This ) Tj ET Q
-BT /F4 4.00 Tf ET
-0.235 Tw
-q 0.510 0.000 0.118 rg BT 74.10 207.86 Td (TCPDF addon) Tj ET Q
-BT /F3 4.00 Tf ET
-0.235 Tw
-q 0.510 0.000 0.118 rg BT 100.78 207.86 Td ( allows creation of an ) Tj ET Q
-BT /F4 4.00 Tf ET
-0.235 Tw
-q 0.510 0.000 0.118 rg BT 140.63 207.86 Td (Advanced Multicell) Tj ET Q
-BT /F3 4.00 Tf ET
-0.235 Tw
-q 0.510 0.000 0.118 rg BT 177.10 207.86 Td ( which uses as input a ) Tj ET Q
-BT /F4 4.00 Tf ET
-0.235 Tw
-q 0.510 0.000 0.118 rg BT 218.97 207.86 Td (TAG based formatted string) Tj ET Q
-BT /F3 4.00 Tf ET
-0.235 Tw
-q 0.510 0.000 0.118 rg BT 272.57 207.86 Td ( instead of a simple string. The use of tags allows to change the) Tj ET Q
-56.69 211.18 m 56.69 206.93 l S 396.85 211.18 m 396.85 206.93 l S 
-56.69 206.93 340.16 -4.25 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 203.60 Td (font, the style \() Tj ET Q
-BT /F4 4.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 91.43 203.60 Td (bold) Tj ET Q
-BT /F3 4.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 99.88 203.60 Td (, ) Tj ET Q
-BT /F5 4.00 Tf ET
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 102.10 203.60 Td (italic) Tj ET Q
-BT /F3 4.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 110.10 203.60 Td (, ) Tj ET Q
-0.000 Tw
-q 0.314 0.314 1.020 rg BT 112.32 203.60 Td (underline) Tj ET 112.32 203.20 16.45 -0.20 re f Q
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 128.78 203.60 Td (\), the size, and the color of characters and many other features.) Tj ET Q
-56.69 206.93 m 56.69 202.68 l S 396.85 206.93 m 396.85 202.68 l S 
-56.69 202.68 340.16 -4.25 re f 
-56.69 202.68 m 56.69 198.43 l S 396.85 202.68 m 396.85 198.43 l S 
-56.69 198.43 340.16 -4.25 re f 
-BT /F4 5.00 Tf ET
-0.000 Tw
-q 0.796 0.000 0.188 rg BT 65.20 194.80 Td (Features:) Tj ET Q
-BT /F3 4.00 Tf ET
-56.69 198.43 m 56.69 194.17 l S 396.85 198.43 m 396.85 194.17 l S 
-56.69 194.17 340.16 -4.25 re f 
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 65.20 190.85 Td (  - Text can be ) Tj ET Q
-BT /F4 4.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 91.88 190.85 Td (aligned) Tj ET Q
-BT /F3 4.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 105.88 190.85 Td (, ) Tj ET Q
-BT /F4 4.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 108.10 190.85 Td (centered) Tj ET Q
-BT /F3 4.00 Tf ET
-0.000 Tw
-q 0.510 0.000 0.118 rg BT 124.78 190.85 Td ( or ) Tj ET Q
-BT /F4 4.00 Tf ET
-0.000 Tw
-q 1.000 0.741 0.047 rg BT 130.56 190.85 Td (justified) Tj ET Q
-BT /F3 4.00 Tf ET
-56.69 194.17 m 56.69 189.92 l S 396.85 194.17 m 396.85 189.92 l S 
-56.69 189.92 340.16 -4.25 re f 
-0 Tw
-q 0.510 0.000 0.118 rg BT 65.20 186.60 Td (  - Different ) Tj ET Q
-BT /F3 3.00 Tf ET
-0 Tw
-q 0.000 0.000 1.000 rg BT 86.09 186.90 Td (Font) Tj ET Q
-BT /F3 4.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 92.10 186.60 Td (, ) Tj ET Q
-BT /F6 5.00 Tf ET
-0 Tw
-q 0.000 0.000 0.471 rg BT 94.32 186.30 Td (Sizes) Tj ET Q
-BT /F3 4.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 107.10 186.60 Td (, ) Tj ET Q
-BT /F6 3.00 Tf ET
-0 Tw
-q 0.000 0.000 0.863 rg BT 109.33 186.90 Td (Styles) Tj ET Q
-BT /F3 4.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 118.17 186.60 Td (, ) Tj ET Q
-BT /F6 5.00 Tf ET
-0 Tw
-q 0.000 1.000 1.000 rg BT 120.39 186.30 Td (Colors) Tj ET Q
-BT /F3 4.00 Tf ET
-0 Tw
-q 0.510 0.000 0.118 rg BT 136.23 186.60 Td ( can be used) Tj ET Q
-56.69 189.92 m 56.69 185.67 l S 396.85 189.92 m 396.85 185.67 l S 
-56.69 185.67 340.16 -8.50 re f 56.69 185.67 m 56.69 177.17 l S 396.85 185.67 m 396.85 177.17 l S 56.69 177.17 m 396.85 177.17 l S 
-BT /F1 11.00 Tf ET
-BT /F5 7.00 Tf ET
-q 0.667 0.667 0.667 rg BT 277.40 20.58 Td (Page 2 / 3) Tj ET Q
-
-endstream
-endobj
-10 0 obj
-<</Type /Annot /Subtype /Link /Rect [56.69 803.79 105.14 797.79] /Border [0 0 0] /A <</S /URI /URI (mailto:office@interpid.eu)>>>>
-endobj
-11 0 obj
-<</Type /Annot /Subtype /Link /Rect [113.81 803.79 191.49 797.79] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu/fpdf/multicell)>>>>
-endobj
-12 0 obj
-<</Type /Annot /Subtype /Link /Rect [425.20 813.54 538.59 799.26] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu)>>>>
-endobj
-13 0 obj
-<</Type /Page
-/Parent 1 0 R
-/Resources 2 0 R
-/Annots [15 0 R 16 0 R 17 0 R ]
-/Contents 14 0 R>>
-endobj
-14 0 obj
-<</Length 10014>>
-stream
-2 J
-0.57 w
-BT /F1 11.00 Tf ET
-0.996 1.000 0.961 rg
-BT /F3 6.00 Tf ET
-BT /F1 11.00 Tf ET
-BT /F3 6.00 Tf ET
-0.000 Tw
-q 0.627 0.627 0.627 rg BT 56.69 807.49 Td (Fpdf Advanced Multicell) Tj ET Q
-BT /F1 11.00 Tf ET
-BT /F3 6.00 Tf ET
-0 Tw
-q 0.000 0.592 0.784 rg BT 56.69 798.99 Td (office@interpid.eu) Tj ET Q
-0 Tw
-q 0.627 0.627 0.627 rg BT 105.14 798.99 Td (  -  ) Tj ET Q
-0 Tw
-q 0.000 0.592 0.784 rg BT 113.81 798.99 Td (www.interpid.eu/fpdf/multicell) Tj ET Q
-BT /F1 11.00 Tf ET
-q 113.39 0 0 14.29 425.20 799.26 cm /I1 Do Q
-BT /F3 11.00 Tf ET
-56.69 785.20 283.46 -8.50 re f 56.69 785.20 m 56.69 776.69 l S 56.69 785.20 m 340.16 785.20 l S 340.16 785.20 m 340.16 776.69 l S 
-56.69 776.69 283.46 -14.17 re f 
-3.145 Tw
-q 0.510 0.000 0.118 rg BT 65.20 766.31 Td (Lorem ipsum dolor sit amet, consectetur adipiscing) Tj ET Q
-56.69 776.69 m 56.69 762.52 l S 340.16 776.69 m 340.16 762.52 l S 
-56.69 762.52 283.46 -14.17 re f 
-2.966 Tw
-q 0.510 0.000 0.118 rg BT 65.20 752.13 Td (elit, sed do eiusmod tempor incididunt ut labore et) Tj ET Q
-56.69 762.52 m 56.69 748.35 l S 340.16 762.52 m 340.16 748.35 l S 
-56.69 748.35 283.46 -14.17 re f 
-1.289 Tw
-q 0.510 0.000 0.118 rg BT 65.20 737.96 Td (dolore magna aliqua. Ut enim ad minim veniam, quis) Tj ET Q
-56.69 748.35 m 56.69 734.17 l S 340.16 748.35 m 340.16 734.17 l S 
-56.69 734.17 283.46 -14.17 re f 
-1.822 Tw
-q 0.510 0.000 0.118 rg BT 65.20 723.79 Td (nostrud exercitation ullamco laboris nisi ut aliquip ex) Tj ET Q
-56.69 734.17 m 56.69 720.00 l S 340.16 734.17 m 340.16 720.00 l S 
-56.69 720.00 283.46 -14.17 re f 
-4.614 Tw
-q 0.510 0.000 0.118 rg BT 65.20 709.61 Td (ea commodo consequat. Duis aute irure dolor in) Tj ET Q
-56.69 720.00 m 56.69 705.83 l S 340.16 720.00 m 340.16 705.83 l S 
-56.69 705.83 283.46 -14.17 re f 
-1.820 Tw
-q 0.510 0.000 0.118 rg BT 65.20 695.44 Td (reprehenderit in voluptate velit esse cillum dolore eu) Tj ET Q
-56.69 705.83 m 56.69 691.65 l S 340.16 705.83 m 340.16 691.65 l S 
-56.69 691.65 283.46 -14.17 re f 
-0.387 Tw
-q 0.510 0.000 0.118 rg BT 65.20 681.27 Td (fugiat nulla pariatur. Excepteur sint occaecat cupidatat) Tj ET Q
-56.69 691.65 m 56.69 677.48 l S 340.16 691.65 m 340.16 677.48 l S 
-56.69 677.48 283.46 -14.17 re f 
-1.667 Tw
-q 0.510 0.000 0.118 rg BT 65.20 667.09 Td (non proident, sunt in culpa qui officia deserunt mollit) Tj ET Q
-56.69 677.48 m 56.69 663.31 l S 340.16 677.48 m 340.16 663.31 l S 
-56.69 663.31 283.46 -14.17 re f 
-0 Tw
-q 0.510 0.000 0.118 rg BT 65.20 652.92 Td (anim id est laborum.) Tj ET Q
-56.69 663.31 m 56.69 649.13 l S 340.16 663.31 m 340.16 649.13 l S 
-56.69 649.13 283.46 -8.50 re f 56.69 649.13 m 56.69 640.63 l S 340.16 649.13 m 340.16 640.63 l S 56.69 640.63 m 340.16 640.63 l S 
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F3 10.00 Tf ET
-56.69 640.63 283.46 -8.50 re f 56.69 640.63 m 56.69 632.13 l S 56.69 640.63 m 340.16 640.63 l S 340.16 640.63 m 340.16 632.13 l S 
-56.69 632.13 283.46 -12.76 re f 
-0.517 Tw
-q 0.510 0.000 0.118 rg BT 65.20 622.75 Td (Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed) Tj ET Q
-56.69 632.13 m 56.69 619.37 l S 340.16 632.13 m 340.16 619.37 l S 
-56.69 619.37 283.46 -12.76 re f 
-2.390 Tw
-q 0.510 0.000 0.118 rg BT 65.20 609.99 Td (do eiusmod tempor incididunt ut labore et dolore magna) Tj ET Q
-56.69 619.37 m 56.69 606.61 l S 340.16 619.37 m 340.16 606.61 l S 
-56.69 606.61 283.46 -12.76 re f 
-0.935 Tw
-q 0.510 0.000 0.118 rg BT 65.20 597.24 Td (aliqua. Ut enim ad minim veniam, quis nostrud exercitation) Tj ET Q
-56.69 606.61 m 56.69 593.86 l S 340.16 606.61 m 340.16 593.86 l S 
-56.69 593.86 283.46 -12.76 re f 
-1.697 Tw
-q 0.510 0.000 0.118 rg BT 65.20 584.48 Td (ullamco laboris nisi ut aliquip ex ea commodo consequat.) Tj ET Q
-56.69 593.86 m 56.69 581.10 l S 340.16 593.86 m 340.16 581.10 l S 
-56.69 581.10 283.46 -12.76 re f 
-0.582 Tw
-q 0.510 0.000 0.118 rg BT 65.20 571.72 Td (Duis aute irure dolor in reprehenderit in voluptate velit esse) Tj ET Q
-56.69 581.10 m 56.69 568.35 l S 340.16 581.10 m 340.16 568.35 l S 
-56.69 568.35 283.46 -12.76 re f 
-5.671 Tw
-q 0.510 0.000 0.118 rg BT 65.20 558.97 Td (cillum dolore eu fugiat nulla pariatur. Excepteur sint) Tj ET Q
-56.69 568.35 m 56.69 555.59 l S 340.16 568.35 m 340.16 555.59 l S 
-56.69 555.59 283.46 -12.76 re f 
-2.248 Tw
-q 0.510 0.000 0.118 rg BT 65.20 546.21 Td (occaecat cupidatat non proident, sunt in culpa qui officia) Tj ET Q
-56.69 555.59 m 56.69 542.83 l S 340.16 555.59 m 340.16 542.83 l S 
-56.69 542.83 283.46 -12.76 re f 
-0 Tw
-q 0.510 0.000 0.118 rg BT 65.20 533.46 Td (deserunt mollit anim id est laborum.) Tj ET Q
-56.69 542.83 m 56.69 530.08 l S 340.16 542.83 m 340.16 530.08 l S 
-56.69 530.08 283.46 -8.50 re f 56.69 530.08 m 56.69 521.58 l S 340.16 530.08 m 340.16 521.58 l S 56.69 521.58 m 340.16 521.58 l S 
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F3 9.00 Tf ET
-56.69 521.58 283.46 -8.50 re f 56.69 521.58 m 56.69 513.07 l S 56.69 521.58 m 340.16 521.58 l S 340.16 521.58 m 340.16 513.07 l S 
-56.69 513.07 283.46 -11.34 re f 
-1.984 Tw
-q 0.510 0.000 0.118 rg BT 65.20 504.70 Td (Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do) Tj ET Q
-56.69 513.07 m 56.69 501.73 l S 340.16 513.07 m 340.16 501.73 l S 
-56.69 501.73 283.46 -11.34 re f 
-1.760 Tw
-q 0.510 0.000 0.118 rg BT 65.20 493.36 Td (eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut) Tj ET Q
-56.69 501.73 m 56.69 490.39 l S 340.16 501.73 m 340.16 490.39 l S 
-56.69 490.39 283.46 -11.34 re f 
-1.422 Tw
-q 0.510 0.000 0.118 rg BT 65.20 482.02 Td (enim ad minim veniam, quis nostrud exercitation ullamco laboris) Tj ET Q
-56.69 490.39 m 56.69 479.06 l S 340.16 490.39 m 340.16 479.06 l S 
-56.69 479.06 283.46 -11.34 re f 
-0.759 Tw
-q 0.510 0.000 0.118 rg BT 65.20 470.69 Td (nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in) Tj ET Q
-56.69 479.06 m 56.69 467.72 l S 340.16 479.06 m 340.16 467.72 l S 
-56.69 467.72 283.46 -11.34 re f 
-1.427 Tw
-q 0.510 0.000 0.118 rg BT 65.20 459.35 Td (reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla) Tj ET Q
-56.69 467.72 m 56.69 456.38 l S 340.16 467.72 m 340.16 456.38 l S 
-56.69 456.38 283.46 -11.34 re f 
-1.540 Tw
-q 0.510 0.000 0.118 rg BT 65.20 448.01 Td (pariatur. Excepteur sint occaecat cupidatat non proident, sunt in) Tj ET Q
-56.69 456.38 m 56.69 445.04 l S 340.16 456.38 m 340.16 445.04 l S 
-56.69 445.04 283.46 -11.34 re f 
-0 Tw
-q 0.510 0.000 0.118 rg BT 65.20 436.67 Td (culpa qui officia deserunt mollit anim id est laborum.) Tj ET Q
-56.69 445.04 m 56.69 433.70 l S 340.16 445.04 m 340.16 433.70 l S 
-56.69 433.70 283.46 -8.50 re f 56.69 433.70 m 56.69 425.20 l S 340.16 433.70 m 340.16 425.20 l S 56.69 425.20 m 340.16 425.20 l S 
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F3 7.00 Tf ET
-56.69 425.20 283.46 -8.50 re f 56.69 425.20 m 56.69 416.69 l S 56.69 425.20 m 340.16 425.20 l S 340.16 425.20 m 340.16 416.69 l S 
-56.69 416.69 283.46 -8.50 re f 
-1.907 Tw
-q 0.510 0.000 0.118 rg BT 65.20 410.34 Td (Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor) Tj ET Q
-56.69 416.69 m 56.69 408.19 l S 340.16 416.69 m 340.16 408.19 l S 
-56.69 408.19 283.46 -8.50 re f 
-0.745 Tw
-q 0.510 0.000 0.118 rg BT 65.20 401.84 Td (incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud) Tj ET Q
-56.69 408.19 m 56.69 399.69 l S 340.16 408.19 m 340.16 399.69 l S 
-56.69 399.69 283.46 -8.50 re f 
-0.354 Tw
-q 0.510 0.000 0.118 rg BT 65.20 393.33 Td (exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure) Tj ET Q
-56.69 399.69 m 56.69 391.18 l S 340.16 399.69 m 340.16 391.18 l S 
-56.69 391.18 283.46 -8.50 re f 
-1.390 Tw
-q 0.510 0.000 0.118 rg BT 65.20 384.83 Td (dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.) Tj ET Q
-56.69 391.18 m 56.69 382.68 l S 340.16 391.18 m 340.16 382.68 l S 
-56.69 382.68 283.46 -8.50 re f 
-1.550 Tw
-q 0.510 0.000 0.118 rg BT 65.20 376.33 Td (Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt) Tj ET Q
-56.69 382.68 m 56.69 374.17 l S 340.16 382.68 m 340.16 374.17 l S 
-56.69 374.17 283.46 -8.50 re f 
-0 Tw
-q 0.510 0.000 0.118 rg BT 65.20 367.82 Td (mollit anim id est laborum.) Tj ET Q
-56.69 374.17 m 56.69 365.67 l S 340.16 374.17 m 340.16 365.67 l S 
-56.69 365.67 283.46 -8.50 re f 56.69 365.67 m 56.69 357.17 l S 340.16 365.67 m 340.16 357.17 l S 56.69 357.17 m 340.16 357.17 l S 
-BT /F1 11.00 Tf ET
-BT /F3 11.00 Tf ET
-BT /F3 10.00 Tf ET
-BT /F3 9.00 Tf ET
-BT /F3 8.00 Tf ET
-BT /F3 7.00 Tf ET
-BT /F3 6.00 Tf ET
-BT /F3 5.00 Tf ET
-56.69 357.17 283.46 -8.50 re f 56.69 357.17 m 56.69 348.66 l S 56.69 357.17 m 340.16 357.17 l S 340.16 357.17 m 340.16 348.66 l S 
-56.69 348.66 283.46 -5.67 re f 
-0.602 Tw
-q 0.510 0.000 0.118 rg BT 65.20 344.33 Td (Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna) Tj ET Q
-56.69 348.66 m 56.69 342.99 l S 340.16 348.66 m 340.16 342.99 l S 
-56.69 342.99 283.46 -5.67 re f 
-0.537 Tw
-q 0.510 0.000 0.118 rg BT 65.20 338.66 Td (aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.) Tj ET Q
-56.69 342.99 m 56.69 337.32 l S 340.16 342.99 m 340.16 337.32 l S 
-56.69 337.32 283.46 -5.67 re f 
-1.240 Tw
-q 0.510 0.000 0.118 rg BT 65.20 332.99 Td (Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint) Tj ET Q
-56.69 337.32 m 56.69 331.65 l S 340.16 337.32 m 340.16 331.65 l S 
-56.69 331.65 283.46 -5.67 re f 
-0 Tw
-q 0.510 0.000 0.118 rg BT 65.20 327.32 Td (occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.) Tj ET Q
-56.69 331.65 m 56.69 325.98 l S 340.16 331.65 m 340.16 325.98 l S 
-56.69 325.98 283.46 -8.50 re f 56.69 325.98 m 56.69 317.48 l S 340.16 325.98 m 340.16 317.48 l S 56.69 317.48 m 340.16 317.48 l S 
-BT /F1 11.00 Tf ET
-BT /F5 7.00 Tf ET
-q 0.667 0.667 0.667 rg BT 277.40 20.58 Td (Page 3 / 3) Tj ET Q
-
-endstream
-endobj
-15 0 obj
-<</Type /Annot /Subtype /Link /Rect [56.69 803.79 105.14 797.79] /Border [0 0 0] /A <</S /URI /URI (mailto:office@interpid.eu)>>>>
-endobj
-16 0 obj
-<</Type /Annot /Subtype /Link /Rect [113.81 803.79 191.49 797.79] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu/fpdf/multicell)>>>>
-endobj
-17 0 obj
-<</Type /Annot /Subtype /Link /Rect [425.20 813.54 538.59 799.26] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu)>>>>
-endobj
-1 0 obj
-<</Type /Pages
-/Kids [3 0 R 8 0 R 13 0 R ]
-/Count 3
-/MediaBox [0 0 595.28 841.89]
->>
-endobj
-18 0 obj
-<</Type /Font
-/Subtype /Type0
-/BaseFont /MPDFAA+DejaVuSans
-/Encoding /Identity-H
-/DescendantFonts [19 0 R]
-/ToUnicode 20 0 R
->>
-endobj
-19 0 obj
-<</Type /Font
-/Subtype /CIDFontType2
-/BaseFont /MPDFAA+DejaVuSans
-/CIDSystemInfo 21 0 R
-/FontDescriptor 22 0 R
-/DW 600
-/W [ 32 [ 318 401 460 838 636 950 780 275 390 390 500 838 318 361 318 337 ]
- 48 57 636 58 59 337 60 62 838 63 [ 531 1000 684 686 698 770 632 575 775 752 295 295 656 557 863 748 787 603 787 695 635 611 732 684 989 685 611 685 390 337 390 838 500 500 613 635 550 635 615 352 635 634 278 278 579 278 974 634 612 635 635 411 521 392 634 592 818 592 592 525 636 337 636 838 ]
- ]
-/CIDToGIDMap 23 0 R
->>
-endobj
-20 0 obj
-<</Length 345>>
-stream
-/CIDInit /ProcSet findresource begin
-12 dict begin
-begincmap
-/CIDSystemInfo
-<</Registry (Adobe)
-/Ordering (UCS)
-/Supplement 0
->> def
-/CMapName /Adobe-Identity-UCS def
-/CMapType 2 def
-1 begincodespacerange
-<0000> <FFFF>
-endcodespacerange
-1 beginbfrange
-<0000> <FFFF> <0000>
-endbfrange
-endcmap
-CMapName currentdict /CMap defineresource pop
-end
-end
-endstream
-endobj
-21 0 obj
-<</Registry (Adobe)
-/Ordering (UCS)
-/Supplement 0
->>
-endobj
-22 0 obj
-<</Type /FontDescriptor
-/FontName /MPDFAA+DejaVuSans
- /Ascent 928
- /Descent -236
- /CapHeight 928
- /Flags 4
- /FontBBox [-1021 -463 1793 1232]
- /ItalicAngle 0
- /StemV 87
- /MissingWidth 600
-/FontFile2 24 0 R
->>
-endobj
-23 0 obj
-<</Length 156
-/Filter /FlateDecode
->>
-stream
-xúÌÃ1   ◊øÙB¯x@ í“µ                                                                                                                              ∞‚ˇÏ 
-endstream
-endobj
-24 0 obj
-<</Length 5923
-/Filter /FlateDecode
-/Length1 18316
->>
-stream
-xúÌ<x\eïˇÃôõî?MHJ®"¥¸D[ô&5*)∏ù$ìt⁄$f&iÎ.noÊﬁI¶ùô;ÃΩIŸ
- ÇÇè‚¢QëUñUpµÎ"TÎ>|†Î÷ÓCÆ´.ãàÆª¨ØU‘à7{˛sÔùG2	ÈÉÇﬂ∑ô&ÛøŒ˚Òü{2)Û1∆ÿıÿﬁhºΩcœ∆…ç∏Ú4~è$≥jû’≥∆|=8ﬂîú¥KØπÁ~€©¸XˆöWOÓcpŒÓSÕ<´≈úØÀLß~˝”Ô|ÁAú˜åÎ™∂Ú˚æGqû«˘e„∏Pˇ°ZÁ≈˘≈„YÎ@Ìnñ¬˘◊pæ"c$U÷Ç/xÁ5Yı@>`‘\ÉÛo„\‰‘¨~°1ú?Àÿï+ÚÜiÕΩâΩé±ÆÄ‹œÙ¸÷⁄ü‚∞Îb∆îqÊ4¯ne
-é7+ÔG	÷:ÔñÚØbÃ_W∞"‡˜~¿rs_gøù„Ô›`bÂP*¨±mLÃÕ’4€Õæ€k≥æ'˜2ﬂ‹„sÃ˘Ú°˛§&W≤ ªﬂ¯ísÑp~Œ=Asyí˘.eGÿ1|}û›ÀÓ›É3îô]É+w˘?≈nd∏ÚEﬂ1ﬂÕ˛ç∏v˚	{OæÖÉ{Ì∂W˚¶‚g?˜%ÿ˝à„r_≥ÔÚ⁄$;∏?	¸ púm	òÅ„ÅΩ”∑>¨å(˜‡˜Â ˙Uv!;‚{úôÏ≥CÿüÙÿ„pÓeO!©øcÏªõ]ãº4˚vùˇZWæ¢g∑„À¿˝„æ;}#wüı›¿eÔÉÄ;ªÌ˚y‹{Ü› 	ˇu®›Õ˛Úˇƒu·ogfÄ)è˙8≥˝ó‡rè¥FÈÁÿ®<JØü∞ÎêrÇ›]s§¶πˆ"§"5vèÔãæßkncw±á·‡¯ñÔ∆¿EÅè∂≥Cé`/;Ñ∏oó05)ﬂ4 ._◊JÏ˛©¿^ﬂΩÏáÅΩµ£à˚!)“ºﬂCâRÏs¯=U”à2mı›7#ßrw;^ª#–éà°ˆ JÕòó≤}8∫ñ}Ç}ämÑv1ëº5[îgÚé¿(Û!ﬂ;¸œ∞„–√6∞T‡G®k÷Ãÿc÷÷(˚XP4ˆ∑F¥√€Æ⁄-˛~œ∫ç¡yS—X+≥°√ı”‚»‹‹–Ó¿˘ û√ á°u≈·@ÎEO,∂˘ƒ∆‡Œ°›‚o√=.÷ﬁ\ãÔ∆°ú·2Æá{hO=¨¥‚ø»ﬁ√"9.niºÂ¢Œ[ıNô
-òü≠`~Ùc¿Q û	§îªq\À^∂me‡7¨Ê7æ u˛ kˇ“#Oøä5>ÚÙ#Oo:ßi]SÎ∫¶u© {÷ÑÛü} û©m¯’œ
-5(
-¸Ø?2ΩÔ∂Ëû}≈/ÿÖ+(,˛¬%œzÔø|ÏŸ˛Ü=g…_¡X1¬Xm÷^É… ˛Âc≥W5Ïq„©ÙÂGèO˘ﬂFc -H∞Kÿ8F¶ü5≤˜KåÅs˝´Ò]˙¯À|Ø-‚yüØ££uæ'›±ü|øv«¿Í“p‹Èé∂“ø◊◊0Óø¡Ø`MœŒ∏Ωõπ„˙U\ˇ:w‹¿^Ωu‘7≤∫≠üt«M,∞ı!ôUg!ÿ&¢.«>∂⁄wÃ£e|?v«ÄÎ∂;∞’˛w¨∞ó˙{›qkˆg›Ò
-÷‚ß;Æcù˛/π„˙÷NXÎéÿxÁØ‹q#[ΩıΩÓ∏â≠ÿzîuc‰Ÿ4+∞4C[L∞ı,âﬁ.X€ÑØÕ8≈Çu·#¿¬”:SYñq5¬rxæG!ñ¡ó`±".ìf:æÎ3â?5<…óAı≤"’RöDZ2ZsxZÚ°"ÃâQÏ¡—>Ñ¡º,ê“8é%6ù TíÔE\»Ÿ“Œ‡,â3ÈfÒÑ‹„åu˘ÈBzl‹ÎìD«¶Mõ≈Ë¥ËJ[¶U–’lPDr…6 dDLû2EL7ı¬§ÆµÒ†óI–Ñ:ô›g‰∆Dó:æ`èæOô¿†Vsc∫)‘Ç.“9ëüÕ§ìB3≤j:áúUä'1]π¿q5áì.∆`˚q`˚ó≤ú3#§mudê;PÁõŸ‹–f⁄»âé∂Õ[*QÕCTçVä∞96µ\èÛË¶å™»Bç3≤ªÖVÎdÌ¯“\ìà£a|/†%u¬W õ∑!^aÿ∏eÂ;€€5D:9—fÖ§û2
-cz[N«Ìﬁ2<Ò¸ta4»=Èw:˘Æéd∞)<+=ıÙ¯üƒ‘á;”xfú ”∏ó'π,Úu©µA»ËêX'Áiræ•¯ö®àØ≈§·¯™&ª„*é µ∂0“9€x
-/æ¨Ïq˙sVu{ódN„ßëE+“≥§Î˝∏f†ûã)Ÿ·À∂R4•âßq⁄”]π∆àJŒµz–µªc-áö„céøâ/É¨ü#¯º±±ZÆè•]/P	á£iÓ‚¥àã˘˛î§s“Ïy⁄·›ÒeùﬁÒΩñ2/i!ÀIXçﬁM‚+â0™+ß(H¢áf	ãE;û~R8 ∏ë¥æ»câÇÃZí˝◊Ò~I±§πíß®—êBí†=n4í¿"_≈]ãv|	
-A7öì»Ÿaqt2E>0NY…r5ì•µrâ<
-^Èp;A:ñYGé≥dO«÷º,Éò\Dé`QŒv  Ç0;Ò‡‡NªZ≠¥˛“R{ös∏Õ=⁄"æJ^WíhäÙë]/Rî’sÆÑzEç~JAzóöÿá'íÑœ9„ŸO˙q∆ÕlûÖíD[#é”.ßùù	ó;1îJ6(œE%,Ã9<oπ—`Vúıb•§±ÚP'Hfï8Áîõ+}Õ—Üsó®Kÿ”†[P∏∂œ“{),«›DÚfU]â⁄*4µ¨‘…¥{∑8‘•ŒSƒ£ÊzRÜ¸¥P\q8ï:’ l^Óuﬁ™“çò¶úë°/J§ß“^π2måU‹´%/á™‰=éÔz4ÊÎ«|Nô<.π+A…√T≤—Ú9®§3_’x∫ˆŒ\zëlŒã÷)PûU)Øîz+f—#Ωxô{Ënû”I
-è“I•|Kï˚∞•(˜|é{ﬁm€RÊeNÃÙœª_F)ﬁç2^'‹8¸dw”U4¶≥§Áú…y|9∑óJU/Bî€›·Ÿ[·U#eú2º†w”ÂQ'OZÃOº\W-wkt‰»ÓÂ˙™¶U^¶πrûl¨öî5Ωª∫m^$… !S¨=
-.D%∆<yÙ~¸9ÊZÃπ•WÒbV}>3’‚Rç∫1bπ˜a™®©Ì,Lt¢lgíNg	∂Î»ÌEpM`√ùúı‡jŸ%D;røÖ¢qé%∆(&\é˛î∏˜‡äƒ-h.g;Ò¸ ‚í∞a∂õhÑ[9ã‚X‚¿’~|ªÁ$D7Æ„\é˚ò¨BzÉï†ÿëpíá”Æó®Vr!äg8ã!˛ÌÓnqGü‰?Hıë∫|:öãv©#âY‚ÏFé˙i&WáÒ}œ≈Iü!íŸ·vêdË≈}Gñ0q‡X¬·®ﬂáê∂<—á|%HíR¬=$;Jyz^R›IßŒ¢ÆïÂ∏Ñ•Õ’•√á‘ˇHërú‰Ô«ó ˘∏í €Ñøá◊Ûù>¬ ˘Ê§çaí/DzàÖ.:'µ(ıŸ_Ù∏XôU∫I_“níÛ¢"çƒ´J‚a+∑N5Ô‡E
-}$_ò4’Oß„®«0ûèWåê¨›ÆÆúéﬂ;>—_¶›níQZˆ*§v}*D∫´îB⁄iÒ_í¬±@»˝Ÿ]¶≥íı]Îz¸$àr¢äVvQ,ÜÈTàl/∆H/≈ÔÄÀ˘p—√J9`ÿıœhë≥J˝zq‰ù[NÓppy¥+-ÿC˛‘Ôr/j√9¡ó¿Î‰Æ0ﬁkIzŒ±äyªÚÊ.ØK’hy›,ÀµÂïÄìÖ˚Ëlvﬁπ“™Û¥‰‹Y•gùÚ⁄≠⁄∂˜tÏ‘Ú^’[™>ú‹Ì<ïWΩ’ÁNh´ÉÍ@£XôL—nÈNœªΩ£‚9ORVÈÓiywQ	óSW™T-Hjfm.~CÒOÜy∫Ô*S4∂‹ D 7·ûïÎoò˜4Ïı⁄@TµÅ'Kµ °\ˇ≤wﬁ}ñJìÜe=ŸÊ‚-0Ôπ¨§©ßÔñùgıí˜Ilùl~WAÍ`¨åsçtÕô”√ì49Â+Ø«ı¬wùNwœ˙≈‘‚˝†˘ï◊Û◊‚U˚A‚˜É¯≤˙Aïï|≤åßRØ√;πºjµ¡˙JbA_âˇ_©¨ØTÍ0¸nˆïx≈˚¬ıïxïßµC_âWÌ+ï$:3}%æDø‡ÃÙï8;—æRÈ∑Nß≥ØTä∑ æ“b∑Ô‚›%Á˘‹©$^l›%Œ*ªK’ªg¶ªƒó–Æ(”‡ãªÀƒ…«V3gæÀƒ_ƒ]&>ØÀTz÷=ì]&˛ú]&q∆∫L¸∫L‚yÎ2q“¡b›A‹:⁄·˛ôÎÒ™6°zG|AÔHº`Ω#æhÔ®‘z˛{G¸zGK·}~{G^f]¸FYÿÒ·'—Ò)Ô“úŒé?•éœ¬g∂ìÎ¯≤éœR}á”—°±‡ﬂ∆JùNt‰¨ç±^˙Äñ¸®ö¸∞[ÒÛqbΩ©ÎbTœS⁄ƒ2>ÿ÷&˙2”˘qS§≥y£`ÈöHå¨ÙI˜C`˙ ›ÑÛA∫r2úó®èËU8¨?ç«7.˘≈~noŸ˘Û(ßMÆ
-´†jzV-ÏFj>ŒáÙB6m“áÊ“¶◊:“+®9=à≤£XÜ+åÈAaBÕMãº^0¿µPciTÅ*í»4«ì÷∏ÓÈ)ô4≤y<.X„àµ¨ÁL‘^©§e"”ÑjöF2≠"=Æ…â¨û≥TKÚìJg–HÎ%Fq#eM°˙[6'=_0¥â§Nh¥4
-ñù∞t…Ø ¢ôìô	Mr2ï∂∆ç	ô…¶]BíB¡Q%¢ù0Òº'(≤∫îöìÉò„¡2AI≥›(SG;‡È4≤Íä?è¥d—Ê•¢-Ó®éMç£c- êfHMrHP'@Õ¶ÊƒË>=i…)_ »†≥IÅíFNKK9ÃNŒàN5&uí¿Ò"b†Ë9√B3òŒ™¥Jæ‰Œû0«’LÜèÍÆ÷êåµBN#á~QY£†W[X”y=•"°6á© ›¨:ç—Ç‡Z:ïñé¶f,t= RU”HrGu2@’Ú5ëQ\“t3=ñ#6∆úXE È°jëò¬„«úOI¢‰HÄ¶f™#pa<>JÿêΩ\fZ§À‹úKq
-∫¸≥:+¶T§¥ã:˙ú^ †)£†ô¢•á-í∂∑¡[dÿ∂ê –2˝nºåÍIÎ⁄@Íd“H”X1BÕÁ1º‘—å.7Ÿ≥íQ∆UKå´&b‘s:ë^WÚnML‰4ó·´úòs$\ ™¶ëëQMfìFREFfåÔ`^MÓW«P0å√ú¡•´ûòSUê¬ÑÖ,Íôîdj{XÙF"ÌMÏ
-≈¬"C±ËH§'‹#ZBqú∑≈ÆHb{t8!D,4òÿ#¢Ω"4∏GÏåˆEx˜P,èÛhLDÜ˙#a\ãv˜˜D˚D¬F¢?2I “Dî@]Tëp\"«∫∑„4‘Èè$ˆyo$1à8ëπòâ°P,ÈÓ≈ƒ–pl(#éD;Ïç!ï@Ö@D›—°=±HﬂˆDÅ∏‰âX®'<äÌ
-DEëcÇé¥!óàCÑG$p|{®ø_tEÒD,êg•v˙£aﬁÏ	%"—A—FQB]˝aá7•ª?äû–@®Oä„ë«qJÍ‡†/<éÖ˙É">Óé»Í1w'Ë$Í5—OÏvG„·´Üqœy$Ç|◊ˆ0ë@B¯Øõ8#ÒQ\â'ç%ä¨Ïäƒ√AäE‚“"Ω±(≤+ÌÌ%F}J„∫¸J…µÖﬁÅß$¥+`O8‘è„í\‡g—ª¬ízﬁíæÌ∑ì)ç:π3H^Î$t·æÆ≥FCºñ0≤Ë÷q≤[È¬ñ◊q–IΩî>–ªÒ&rRØ6©c4e*1
-‹ê…d*mR§„ò5ú;Oòjâ!îå":ÖπRÕ òYd≥"†∏wÊiô*§-L&Bù¿’B˙Ó5\pØ)í@î$êTJ…¡·ø†õyº•“ìzf∫œ‰]Fú§s)£êuE'ı%≠NØT∞ƒ!◊ãÖ±6¡9U\ß\:-˜ONOƒù:HúLƒKuê8…:à/¨É‹$ü$L¶wgT)PK?ïZIxµq‘J‹±√ÛV+q'`O©V‚ß±V‚•ZIúd≠ƒ+ÍÇì®ï¯bµíX~≠ƒÀj•Ú≠(ó>«$q∫ %ÓñK‚î %^¡.=7ûÓíâÁq %?≠%wK&qÚ%ü_2âì)ôx’íIúH…ƒ°ëÅQ…vh˚IUGº$˘©TG‹´éƒ©TGºº:'UÒ™’ë8ïÍH:kE†æh·#N†·K>bÖß¬ß≤vxÓÇ∆ÚŒo£¢Å∑·[€©¸Õ`;ıÌˆ„w;ıŒ4˙≠^˝~5èkïø-\˙/€ß“˚”ÌiLV⁄Ú„˘v7cû‘ﬂrÇÛ–soîˇw¬¬Ø#˛Î∑Õ˝∆ÜŸf¯u+¸™~9œ4¿/l¯πˇ€
-?kÄüŒ¿OZ·«∑Ñî€£¯üxz˛{˛ÀÜv¬v¡l¯~<ıΩ∏Ú‘|~/O~∑]yræ€Oÿ6<ﬁˇﬁﬂôÅo€≠Uo·õG·_mxè?v}§OyÙ <“˝|Âaæ~>¸ãˇl√?Ÿè6üÅØ[´|ÕÜck·:‡´6|˘∆&ÂÀ¿C´·K6|—Ü/ÿy˛ŒÜøµ·ol¯k>g√Q>€üπ©U˘åG<™±·¡ÆV<
-^x‡”≠ WoõÉ∂>›
-˜€W3)˛“Ü√6|“ÜOhÒ˚ZïèkpﬂΩ´î˚Z·ﬁU1d˙c≥Q˛‹Ü{l¯≥Up∑˘pÉÚë¯p¸©w·ëªf‡C6‹˘¡ï ù6|p%‹ÒÅÛî;4¯¿Ìç ŒÉ€·˝ﬁg√{gÍï˜⁄0SÔA†˜Ã¿ªokPﬁΩnkÄ?ôÖw›zTyó∑∫Zπı(‹z}‡–;[ïCW√°mÅw∂¬;lx˚€⁄î∑€∂6∏≈º%7øµNππﬁZo¡Ö∑hpjÍ¶V∏±	˛ÿÜﬁ‹§‹`√õõ‡M6\o√u6lõ{„¡É m8x˛HÉkÁ*◊∂¬lò∂·@L≠ÑI6X≥`ŒBaÆôÖºÜ92Î`ø˚ö∫î}qH€0~∆pí≤A∑A≥!i√®j'ÏùÖ◊ØÑ´m¯}^g√û›\Ÿ3ª9ÏZ}û≤´FlF √]ê8‚æF%˛Rà5√U;ŒQÆ≤a®¢64*É64Bø;qgß;"ç és ≤¶^â4¬ˆzË≥°w¬3–cC∑£“=]G!¥∂Ÿ{6ºˆ U kõ· +ŒVÆ\Wl≠WÆÿ6w6l≠áN.∑·5[öï◊Ã¬ñÀï-ÕpŸ•u eçpiºz-lÆáéW’)6º™6µ◊)õÍ°Ω⁄6û•¥5¬∆≥ ÿóº≤UπDÉWnX•º≤6¨ÇıØhU÷á‡≠Ú÷:ÂÂgCk\l√E6¥úÎPŒu´@hp·,¨E÷j∞¶.@^`√˘≥≤.8'ÁŸR^Çözâ´hıypÆÕ6úc√*<∞ Ü&îµ©¬Ÿ4ÿPørµRo√J<Ωr5‘Ÿ¿·,V‡±6‘6Cç‹†ú∏
-6¯qÓﬂæF`6¯é¯¥ﬂ·ª‰w·ãΩ–,˘µÊˇ X$›
-endstream
-endobj
-25 0 obj
-<</Type /Font
-/Subtype /Type0
-/BaseFont /MPDFAA+DejaVuSans-Bold
-/Encoding /Identity-H
-/DescendantFonts [26 0 R]
-/ToUnicode 27 0 R
->>
-endobj
-26 0 obj
-<</Type /Font
-/Subtype /CIDFontType2
-/BaseFont /MPDFAA+DejaVuSans-Bold
-/CIDSystemInfo 28 0 R
-/FontDescriptor 29 0 R
-/DW 600
-/W [ 32 32 348 ]
-/CIDToGIDMap 30 0 R
->>
-endobj
-27 0 obj
-<</Length 345>>
-stream
-/CIDInit /ProcSet findresource begin
-12 dict begin
-begincmap
-/CIDSystemInfo
-<</Registry (Adobe)
-/Ordering (UCS)
-/Supplement 0
->> def
-/CMapName /Adobe-Identity-UCS def
-/CMapType 2 def
-1 begincodespacerange
-<0000> <FFFF>
-endcodespacerange
-1 beginbfrange
-<0000> <FFFF> <0000>
-endbfrange
-endcmap
-CMapName currentdict /CMap defineresource pop
-end
-end
-endstream
-endobj
-28 0 obj
-<</Registry (Adobe)
-/Ordering (UCS)
-/Supplement 0
->>
-endobj
-29 0 obj
-<</Type /FontDescriptor
-/FontName /MPDFAA+DejaVuSans-Bold
- /Ascent 928
- /Descent -236
- /CapHeight 928
- /Flags 262148
- /FontBBox [-1069 -415 1975 1174]
- /ItalicAngle 0
- /StemV 165
- /MissingWidth 600
-/FontFile2 31 0 R
->>
-endobj
-30 0 obj
-<</Length 156
-/Filter /FlateDecode
->>
-stream
-xúÌÃ1   ◊øÙB¯x@ í“µ                                                                                                                              ∞‚ˇÏ 
-endstream
-endobj
-31 0 obj
-<</Length 6349
-/Filter /FlateDecode
-/Length1 19032
->>
-stream
-xúÌ<x\eïˇùsoR˛ÊŸ¶Öæ“ø)©Ì2MKÀCRÅLíi:mö	ìÈA{3s'ôv^Œ‹$D¨ñUV]D¥b¡≤ËÆà]vW+≠
-¬. TE©¯b]tYP´"ªÚŸõ=ˇπ˜Œ#è“Ö›oÁ6˜˛èÛü˜˘ˇsO&e
-c¨ÜÌf¿∂˚V¨∫|ÀÕ√ë#¯≥9í‘3¨ömfLÈƒ˛ »∞).˘˙π”∞o2Ê	«2…∑zv>«<ÑÛwËπ´ƒã©8œ™£±_æ¸»˚∞ø˚›ÉÜ≠~Qπ˚èbˇÇA®˘Jeé1M≈˛ŸÉIÛ™ =,Ü˝•ÿüñHGt∂/¶≠ƒ~ERø*S—U±˚o∆æHÈI#€tÀ≥ÿﬂ ÿ≈Ág“9sÏv9cÌëÛô¨ëyó~€3ÿﬂ«XÂò¢~‹sêiøZ˚$J—h?·	ÛÃ@â¶O®P=ıñ˚˚Ô1~ˆˆe*UΩ1î	&∆∆*¨eoeR˘’v¶åçç1˚£†˛§&´ò „S≈KˆA‡}Ï)ÍKH¶ƒî’Jådø∆ˆ≈Ï6ñáÖÃÉWGÂÛN%å8»˙ÚıZ%åœ§z;Û‡¸{‘Cà≈£¨f˝ÏÿjVoW≤{ÿ”∏˙Â√⁄:Ìr	M¥$Æ¥˚ïÁ¥ã<±≠jRΩXΩ[ΩFΩ!Ü‘òz€á˜ã<è©∑™W´ﬂSØf[%gJ∑¸ë|∞Ω ze1€ÎŸ´t*sîNœ!vÒ©≤WY£=¢=¬≥√J/Bﬁ…F<\yPy^Y°lUÓ∆U/∞îÖÿ;ﬂsæÚ{Â‰¯fˆl’8€ÀnPf`Ô ;Ñ|?Õûg9TWå›†ˆú£f˜≥ßÿ8Œÿ≈É˜∞\;å◊sÏãljÊ)≈£Æh®\§∆</±# {=wx^R+ºf(QõoÉCÍvıAıÉ8ã⁄Q<∞B;ﬁØê⁄ae/rÒTELE8y]-Ωﬁsøg? ¯Mˆ$ Ö‘=WxÆˆÏeO*w)˜ «å]´‹•nØÏWÁ±Ω{’≠Ï˜R7Ï1œ!‘G/È„zv}≈πÏµÇ=› vıãRc¨YªOa ¢ ı3ÿe}Â{Q≤´YŒ>¨0Ì>˚B®iÿıMi‰›„ŸÂÍMeá<A?ªïÆõî˝Ï&∂üaÙ40XÚµ 
-Mè¬º¢nüß9›◊vŸVÒ–∂EÀΩ„∫¢ÆRÏcΩ˚™G≈˛±±ﬁ≠Í<m€>m˛>hû∂Om^¸‘TìO-˜nË›*ˆ+K˝ùZˇˆNÏ€äMŸ√a˜w“ú§∫Ok∆ÅÌ˚DdP\Ww›‚÷ÎÍå÷Â‰ô”òc§◊[{‘òv;∂+Ÿ¬ÉLUñ»`Wñ|Uô¶}–£≤<~‰\V˜¯ë«è¨úYø®æyQ˝¢ò ^…¡ºWû∂ˆT÷ºÙ|∂bô[ÃÛ∂˝g∑n{ÙÌµo˘[8ç¬‡áﬂ>Áe˜˘bˆïªjùa Ï4Ê~p]e“Z¿X›¢≥/Ø™=‰ƒjÒ„¡®ãy¶6ÌH6-ËaÁ∞´0Í=¨éµIå⁄Ô<ã)˜≥π %<7+´
-Ò?]˘ï”ˆ†∞/;m`u·¥Ul˜9mçUyﬁÌ¥+X≠ÁKN{´˜¸¬iOó‚¥´g|jÈ˚ùv;oÕNªéM_Ûsß]œ‘5œÀK=ZI‘e[a≥ïGú6ZH˘É”&Ài„vË9◊ikÏ,O‘iW∞FœıN{kÚp⁄”Y´ÁèNª∫π68Ì6∏¶Ÿi◊±Ÿkp⁄ıl⁄ögYK≥eYglêô∏˚.e∂ü´ÿJºVc´!kG„¿DhÉÈ,…º8`)Ño¡ñè%,T¿ï£ûÅO◊„=äê¸®^P†FJ√HkÆI!¥‰C«5«G±[;p›f6ÑÑ’	õA+tíH ñﬁ3”èx„'p}©Î4«ÎHgF≥ÒÅAS,ç,´VÆ\-˙GE{‹ÃôYCOzE iæDBÑ$TNÑåúë6¢-|¬“‰“∞>ú‹ëNàv}päÖù∆}Û∆∂û0rBœ"ûô°˛D<"¢È§O!gÂ"ˆëÄ∏i9ã˚Ùv⁄Qòäƒ⁄”âËTKD¨d±8·%õ…9‘`öÙª
--≤ö]àF6Oßƒ™ñ’ñcvÒ.èW¢]>'1Bn;ÄÈ∏ßÀK,ùB}öhFNb¢â[Ÿ
-º¢éaƒ—Çk”¯Ã¢Ÿ¬ó%iAºÆaÉ¶ôi]±"äHááZrÈ°lƒà•≥FK ¿Èµ%∏Â:ıƒ–ës“IrteL≥Ñïn}júUbÍ¬ôQÑ§ïqúÀê\&Ü‘ZñV»PíXá«irº≈`*∆©§·xM&ªÌ:∂Jµ6q[‡Ë'~Òc⁄jN˝7πΩã2«qÜSÀ§ÈÖI“ıNK£^ç)Y/·K∂bp≈âßAö3πàJ ±∫◊±ªm-õöÌc∂ø{âØ4Y?EÎ3N €“à’t|,ÓxÅN8lMsßI\å˜ß¡I?¥±ª$¥ÕªÌÀ≈øÌ{M%^“Dñìk£ÙÃ_\£;ÚqäÇzhí∞ò4„Í'Ü≠ÑIK<)»=MÚo¢ˇ⁄ﬁ/)u"G25Q§°’.7Qí¿$_Î«Yìfm¸(ºN4Gê≥!¬bÎdÑ|`êv%”—Lí∆J%re»ñy•ÕÌÈ–[bŸNí=m[Ûí$á´ΩS»·-»πÇvAòÌx∞q«≠ñ[ˇËRªö≥πÕ<⁄$æä^WîhÑÙë<&
-n4ƒhWO9%£tó4ºÙîöÿÅ¬g√∏ˆã—IdÔlÆÖ"D;J«N[):√w:bL”ŒP¥AÈ^T‘¿ƒù Ö¶π2X7Vä+›J◊	íY'Œ9ÌÕÂæfk√>KÙ£ÿ3Mß†plü§gqˇ8[òt…ìUw$j)”‘—÷Jùå:gãM]Í<F<FOJêüf#6ßRß—õózù{ÇÍt"∆iœHPè$äß“^©mîù´6%w’…{lﬂuiå◊OÓUerπ‰éE”…F«ŒA9ùÒ˙òå7ØcÔ≠ãO±õÛÇu≤¥œÍ¥ØÒ∫#πÇG∫Ò2˛Ù0ú}Œ )\J#$Uî÷7Mr6‰øÇ„ú{⁄6ïxô3›„Œó~ä˜t	ØCN∏~2å≥ÒI4f‡+©Èú1:Éó}zÈ¥£Ö•v∑yvG¯§ë2H;º†gŒ·— Oö O‹Ωn≤Ω;J'AäÏ^™Ø…¥ K4Wj√ç’úìøG7⁄‹HíôC¢ê{dùÂ3‰—;Ò>‡XÃ>•WÒ¬Æ˙ZÓTSK’ÔƒàÈúá±Ç¶÷1?—	≤ÏI:AÏÖŸÃ#C4¿1Åy\g6cØG;….>öëÛMç[∞-1Ÿ&¬e„·]‚ﬁÜ#∑†æÏm@¯ƒ%◊˙ŸV¢·Gl}»Y€˜FÌ∆ßﬂÅì+:pdˆeªã…,‘¶◊É´¬;rù‰≈Ê4å„E™Â\à¢ÀŸFÏÖˇ:g÷á∏ÑOÚÔ•¸H∂{>mÕÖª‘ëƒ,qv G›‘ì£õŸãp}§O…ls€C2¨≈y[?q`[¬Ê®üΩH[Bt!_a“Ç§v ΩdG)O'≠óT7îÕY–±≤l±¥8∫¥˘ê˙ﬂ\†‹GÚw„%H˛0éÑ…6>ƒÔ‚u}ßã0Hæ9ic…Á#=âB;¡I-J}v<.Tbï“ó¥õ‰ºì(˘H#}ìJ‚b+µŒdﬁ¡∫H>?i™õ†˚Pè~ÑFlê¨éÆmú∂ﬂ€>—]¢›íQZˆ2§Íw| G∫+óB⁄iÒ_î¬∂ÄœπwîË¨h˝«∫.?a¢ûD+[(˝Â#[˜bd-≈ÔFáÛM+Óõˇ8+◊ØG.‹±Ï6.óvπ;…ü∫˚
-⁄∞!¯Q⁄{óœµΩÁòÖ}ª¸‰.ÕãŸhiﬁÈ-ŸkK3{Ó"ÿ‰8∏‚®˝∂düY≈wù“‹m≤7l˜ÌÿŒÂ›¨∑ò}ÿ{∑˝NTöıF)?∑s¿\!+ISò.d&#4[<”3NÌ$]ˆû')Îtˆ{¥‹≥®àÀŒ+u $µ‹$⁄ú˙Ñ‚ﬁ3tﬁ€TF®m:ôâîo»Åï„Ô˜6Ï÷&⁄@LjWñ…2áR˝g…ﬁÁ]*Nñ˘dãÉ7À‹˜≤¢N§Ï∫[rú’ãﬁ'±µ≤ÒU©ÉÅŒ£§kŒÏû§…iørk\Ø’ÈT∏ﬂHı ^VüyΩvı >i=HúÊz?¶zPy&)·©XÎp!è≠Ç:YÖÖønu%1°ÆƒˇøÆTRW*V˛w÷ïxŸ	˚˙’ï¯$okoÑ∫ü¥ÆTîËÙ‘ï¯QÍßßÆƒŸÒ÷ïäøu:ïu•bºï◊ï¶:}ßÆ.ŸÔÁv&ÒF´.qV^]öº∫qz™K¸(⁄%|cWô8˘ÿƒlÊÙWô¯∏ ƒ«UôäÔ∫ß≥ ƒ_µ $N[ïâGïIºfU&N:ÿåX◊∑∂∂}8˙jG|Rõø^µ#>°v$^∑⁄ü≤vT¨Ωˆµ#~µ££·}mkGÓŒ:ıâ2±‚√O†‚SZ•9ï~RüâÔl'VÒ·%ü£’NEÖ∆úÄøç+úË»^ckÈZÚ{mÚõqÖ/”â•9√˝F"=≤¨E√∑‡ZDWb43òÒd&ù5ç®àe”I·À√Œó¿\Ù≠ª!˚[w•d8/Rﬂldua≥V¯Í_~‘ü¯%øc˛~†G9û„∫0≥z‘HÍŸù"èÖÛ^#õåÁË;tÒú4≤“»Í)›ã≤£X∏5ñ0º¬L=5*2F6á“˝&j,é*–EôÊiÆû"ët2É‡¿DÏ®e#ïCÌ5ëJöñ!≤®–sπt$Æ#=MGÜíF ‘M…O,û@#-ïiÅËK«ÃT”2‚$kd≤ÈËPƒ 4—8
-Ô2…/[‡E3GCQ……H‹Lô»L2Óí≤∂*ÌP·•8^ë4§‘ú$7Ë-°·ï4W§≥"g†:é¨:‚è#-ôC¥©hì€™#B#ÉËXH3ƒÜ≤)$h–¬hZ‰“^ëÍﬂaDL9"Âã•ËlR†H:çK9r≠úáùﬁü6H€ãàÅÇ§“&ö!gèJ´dä`œâ‹†ûH~√—≤ÅQ¢ó…ôN°_dE2ù5&[ò£#¶#°õ©ÚŸ§>ä—ÇÀ£ÒX\:öû0—ı∞ÅHıhî$∑U'Tœ"_C	=À%°®ëã§àç;VqëÙP=ÇHrrÖÀOn<%âí#RòûòÅ≥∆Â£àŸK%FEºƒÕπ'k»øo!XŸ»IEJª∏·a†œYZ4íŒFs¢©áMí∂;¡õdÿ6ë –2›NºÙIÎ⁄@Íd8/0f\ebƒ=ì¡“˚Üú∞eGÃ≤¡ãF‘M1®Á£ë*”âÙ∫¢wG≈P*Í0\dïs∂ÑG≥j.ùêQMfìF“EBÓ+.`FèÏ‘P0å√TöKW=>ß*#Ö≤h$bí©u~±6ÿ}¡µ·-æê_˙Do(∏9–ÈÔMæ>Ï7y≈ñ@x]pSX D»◊ﬁ&ÇkÖØgõÿËÈÙ
-ˇ÷ﬁêøØèC"∞±∑;‡«±@OG˜¶Œ@Oóh«u=¡∞ËlÑi8HKTüD∂—ÍXá]_{†;ﬁÊÂk·ƒâÃÖÑOÙ˙B·@«¶n_HÙn
-ı˚¸à£—ˆz÷Üêä£Ö@D¡ﬁm°@◊∫∞Öq–À√!_ß£/¥¡+YE	iA.áoñã˚÷˘∫ªE{ ‹˘}%¨‘NWOp£üØnÍÈÙÖ¡—ÓGQ|Ì›~õ7•£€ÿËùæçæ.)éKDÇŸ‚’¡ÂÇ.è?‰Îˆäæ^G@6PèÅêø#Lê®{‘D7±€ÏÈÛ_∂	Œ%·Â[÷˘â
-‡√ƒâﬂÉ‚J<·`(\`eK†œÔæP†OZdm(àÏJ{◊ílB}J„ı8¸J…±âﬁÅPrµ#`ßﬂ◊ç˚$8¿À`—ª¸WEåå)}€	n{k§m‘ﬁ;Ω‰µˆ&Ä.‹ï¬¿µ«®â«Fù:ˆÓV<∞ÂqÏµ∑^⁄>–ªÒ$≤∑ﬁË∞Å;`Nn%È,OÀÕd$û£H«#0ô∂œ<ë”HW…("(‹+ı.Àÿ,(ÓÜôlóåd„&n&B¬—l¸ùŒ1úué)í@%êTäõÉÕ÷»eîäâ—ÑÕ ≥å8âßbÈl“ù‘1[›T¡Ñ<ö6y:;–"8ßåÎ§Sßc˝˚àSìq;'íÒb$N0‚Û gìè¶ú{fLí†~2πíps%˛∆»ï∏má◊,W‚v¿ûTÆƒOaÆƒãπí8¡\âóÂ'ê+Ò©r%qÏπ/…ïJ√∑,]¬Û7âSï.q']'ï.Ò2vÈΩÒTßL<ï'ù2ÒSö2q'e'û2ÒÒ)ì8ëîâOö2â„Iôxÿ∑y„˙†d€∑ÓÑ≤#^î¸d≤#ÓfG‚d≤#^öâ é¯§Ÿë8ôÏH:kY†>e‚#é#Ò·GO|ƒ1$>úüÚ‹·’”Öo£§Å∑‡£Âd˛fp’Ìv‚œ
-™ùEÈ∑z-Ù˚’éïˇ∂Ëa∏b$æ3æ"éõ’U-ô¡Ã
-g«<°?¸§øD¶œÿªÂˇ„0Ò„{üg∑≤ÑYîfVè˜≥ïE® M9õÂ±∑òÕ∆{ì3÷Dp≤ä†˘ÖÏ ﬁë"(hv>õÉ˜y¨Ôsid›œ¢˚ôtüM˜YJ´A¨≥®'€†Ã§ˆ∫◊*5lŒ◊RO∂A©V™ÿáp¨ö∆™ŸΩLU™îÈlé…¿˚nõÆp∂«‰‡Ω«‰(g– itØdUtó+*Ó˛DãÊõ©Tê\›UÇí»C#
-›Y€ÿ.ª,^˘≥W{≈Ç?{!o¡À/ui/ÔÇó∫‡≈<º`¡ü,¯/˛Û <o¡-xŒÇ?4¬Ô-¯›Æ˝ŒÇ#é¥©ø˝◊~ª
-~√·◊yxˆ∆Ÿ⁄≥<ìáˇ»√”ÿy⁄Ç∑‡W¸“Çß,¯7~a¡øÊ·…üü•=Öüü?˚l£ˆ≥(¸Ù'Õ⁄OÛìf¯ÒcÕ⁄èÛƒè¥'f√è◊i?jÄ√u¯ßkè¯·t¯B¸ è!˛«ö·˚´“æøæ˜›Ì{K‡ªáfhﬂmÄC3‡Qú~t<“ ﬂy¯Äˆ~ËJÌ·nı°∂±õµáÆÑá⁄‘õ·_,¯Á(<ë:ÌÓüﬂ∂‡>Ó˝V´voæıÂy⁄∑Z·õﬂò´}s|„`Ωˆçπp@≠v∞‹S•®Ö{™‡ÎHÏÎÏ∑‡k≥‡´3‡ü,¯G˛¡ÇªœÑøü˚f√WœWÚp>Ó √ó˛ÀÛ‡N|‹πæd¡ﬂ-Åøµ‡ã|¡Ç;,¯∑[˘€j¥œ[p[‹÷¶~ıπ<|ó|∂>Éèœ‰·”(¸ßÁ√ß,∏ıñ⁄≠‹≤˜JÌñpÀnuÔÕ⁄ﬁ+aoõ˙InFÔ∏ŸÇO¥¿\∏ß±m>éK?.‡cUp›¥>äèèZp#Í·∆Ÿë:∏°˛⁄Ç[!Æ∑‡:>h¡ﬁﬂ¨}¿Ç˜7√_Yp≠Ô[Ô›i¡5ÏûÔ·nvY.ÆŒ√;Û0j¡»⁄à√w¿ê9O É9ry»ÓÇwXêI{µ¥RyHÊ!ëáùÏ∞ n¡`§J\ƒVÅÂöaAîC¥MçÙs-R˝ÙÌ≥4}lWÍµÌ≥‡Ìﬁf¡ï\Å˝+,xÎÂÛ¥∑Zp9ˆ.ü€,ÿöá-l∆~€ÿf6YnÑæ]6GÂ·2ú∏lÙÁhΩyˆ‘k¡9–S°{CÉ÷=6¨Ø◊64¿˙@ç∂æ5∞.]k¥ÆY∞∂¸yËÏ®—:k°£⁄}ÕZ{|à”◊mó÷jm\zIçvi-\Rø•Zªx6º•÷D°’Çã‡Õ\8.8ÆvA3ú^Év˛\8ˇ^ı<^≠ù◊ ÁÌVWØ™“V7¿Í6uUúªÚÌ\V"˛ïw¿ä*hô	ÀΩ≠⁄Ú<xg5kﬁV8'
-Öe,ùo:≥^{S#,–‹g/Fúsv#,Æá&V≠5ÂaQ-,jSE,‰–ÿÊœ—4√¸⁄ô⁄¸90?Ó7™Û™aÓú⁄‹]0âŒŸ gYpf=ÃFj≥Û0«f5CCf÷√Í±_oA]jkÍ¥⁄ôP{ØZS5ª’jú©ŒC’*òé¢Mü”w´ºxõzÜ”,®¥†B„ZÖ≠MUÛ Q‡*èÖªWµ¶‘´eøΩˆ√ 9ˇ7>Ïıf‡5¸,`ˇ4ÕÉ°
-endstream
-endobj
-32 0 obj
-<</Type /Font
-/BaseFont /Helvetica
-/Subtype /Type1
-/Encoding /WinAnsiEncoding
->>
-endobj
-33 0 obj
-<</Type /Font
-/BaseFont /Helvetica-Bold
-/Subtype /Type1
-/Encoding /WinAnsiEncoding
->>
-endobj
-34 0 obj
-<</Type /Font
-/BaseFont /Helvetica-Oblique
-/Subtype /Type1
-/Encoding /WinAnsiEncoding
->>
-endobj
-35 0 obj
-<</Type /Font
-/BaseFont /Helvetica-BoldOblique
-/Subtype /Type1
-/Encoding /WinAnsiEncoding
->>
-endobj
-36 0 obj
-<</Type /XObject
-/Subtype /Image
-/Width 1000
-/Height 126
-/ColorSpace [/Indexed /DeviceRGB 139 37 0 R]
-/BitsPerComponent 8
-/Filter /FlateDecode
-/DecodeParms <</Predictor 15 /Colors 1 /BitsPerComponent 8 /Columns 1000>>
-/Mask [139 139 ]
-/Length 3572>>
-stream
-x⁄Ï›ÁC€HÒXñeÂåç.¯L sd!@\ ùÙ∂%ª…ñ$ªŸΩm∑Ω∑€Îm˛Ès±•yUF£¯y>„ë–¯gïôy≈ÑøT∂/m¨ÌÏ<ÂÌ<›ŸY€∏¥ΩPÇËÊ„≥È¬ªãúı_|∑ê∆—EêòC?sı˛‹ ‰{ÿÁÓ_=É#å qÖ~Í˙ñÚ=Ï[◊O· #H¸†€ØH*ÔZør—∆qFêXAø∂6«»ô[ªÜ#ç ±Å^^‰ÃS¯b«Ab}€+Ûımm—˙ΩÃ€‘wÓ·x#à÷–O}‡ìyõ˙xè ˙B∑7`ﬁ¶æÅ'¢)Ùgeè¥‚˙Wg/‡†#àÜ–Ì∑]OÁ´ó?¸j·ÀÊﬂ~π’áóWùOÍo„§é ⁄AøÁv:π˘ﬁA∫ˆ{7œÏgÒPA4É˛wc~´œßn9RÁﬂ·¿#àF–+nóÌÓ¯‰ùéóÔX«ä ⁄@/^q9ù∂rƒÈ§~•àcè z@Oª‹ûﬂ~›±Ì◊o;›®cπ:Çh}}ﬁŸ˘„7\„±√ßÁ◊qÙ$zË]nœ_sØ*qÊ5ßıã8¸5t7Á´w$öø≥
-È¢1ÙKn≥d^ñjˇe«π3ó–%ÙÇõÛÂ»*?B:ÇË
-›’˘»ãíx—qí/†$*ËKÆ≥€_ëﬁ¬+Œ3ﬂó–Ù{ÛÆ+’§∑ÜÛä∂˘ÛËâ˙ôßÆãMˇDÿƒøúõzä⁄Ôt˚¥˚⁄ÛwõxŸ•≠”X∂ä Í°?î®1±@ÿƒ[n’(¢D5Ùœ%™FΩI⁄∆õnı•>G? àZËßÊ›ù≥À§m\vkn5#D)Ùäƒ:c/ë∂Òík{ß±<ATBØIs=G⁄∆9˜kË	Q=ÕCÄ˛°Dh¨NGe–Ì-ÕùmaåATA_ì|C–˜ËÕºãæ@5–O…æè%‡ßÓÌãw<yG5–Ô æY)ÿqÙNÓ¢3DÙmÈ¨;3Æ{J«ªöDÙ ìeÆ˚E…6∑0òé ·C/ﬁäJYΩvY∂Q°@ê–°€'–É[èﬁìbCê∞°_'ΩË<®
-3r˝Å ·B'ù–´áS:Ç(Ö^`¥¸"YˆJ£∏KGêP°Wû°Q◊˝ô<¡Éw	˙’y ojÈ‘ÑEê0°ﬂ%C˜˝Óµ~ŸAè Hx–op:tˆ¯-ó∆ﬂzLmíﬂ@ó Hh–◊òó¯y?˙Ä¨°K$,Ëˆú'Ël‰‹‡ßgïs#Zú√ÇÑΩÃºÊ¡≠ﬂz‡≠¡2˙ABÇ~‹3t6Új?Í∑^ÒÿﬁqÙ	ÇÑ˝gÃıØ∑Ìûô3∆è°S$ËÎÃgVoæ≥˛‚Bì®Ωﬁ;7W}µµéNAêP†?dÅd§ˇ≠‹Gß H–Ìy¶QÊÒ‹A¬Ä~íiïìË	zM/ËxkÇÑ}Q/Ëã=ª«•ìÍ~"%˘˜£y˙¡‚»·$E:Ë&≥©v¶í…‰l:Ì“M¶d∆3Õò¶iY’†∂ju?‰∂vq“≤rDË˛◊ÇOÔ õ¸ÆÌAó˝@vñù!á“ÑÚ∑°˘õ‹D?= ºô'Ü1ñYnX¬˜V˜†á≥è%s≥.˝ºßxˇ„Ø?sn˙≥Ø?~ﬂÔMzà–OŸÄÆ=Ù}©⁄¥≠˙.•Ò“dUWË=;Ÿ®K@‰Â∏Òìååüæ“ˆ#5–õ'ıi@èÙÓoÛlQ%Ù§ÒÂ∫Œ–;;9±“®∫@˜0ˇıÁdm¸≥ØY∞·Bg| ÙAouŸ—i≈–[å∆Ã™ﬁ–;{π\wÇ~Ç|∞ˇMò¶zå~˘>ß:c3y@èÙ&ıô≤jË-E•™Ó–;÷´É†…_ﬂè˛N9Ê?"˜dQt∆ìÄ/Ë-ÍiÂ–P◊zk73ì˝°”ü≈}Bª≥˝ÑºÅÛ
-°3>ZÙxAo]¿€ °'ç@où÷'˚A/êèÚß4Ëüí7PP	ù±l–c}ÔûK)ÙÑ±íãÙæ‘ôÿ†‚o®√œﬂP∑∞°˙˛˘–cΩ;d¢z"1ûãÙ÷|˝0tÚC˜o©–øı˛ÿ]ÙÊ∑&Ë1ÉŒx>ËÈ˙CoR7A?M=¿G®–èP∑pZ9t∆kÄ3Ë,[å zb<&–∆x˝ Ùπ–°ˇ∆˚¯ö2ËLfÚ;†kΩ’ÁÍ°À1ÅûHLÙ‹©3õÎù€Í°7∑:Ë·BÔ.WÈìQŒ=\û¶êÀ XkïàÈ’∏@Oç}Ë7ò~–Ÿç(†ªO~é†Ûd0IS†ßún1=[%·)
-9≥ﬂV-À,çñb=aîˆ†_”˙µH†ªN~û†∂–9(ËÌ…,©ø|Co'7I≤n‰BÖnX≥iöf)ì1<˝TÏ=íc'uÑ~2"Ë.ìﬂe˜f4%˘éÀ5ò˙[‹°a%¸úÚ| –õŸ#Ë˘Û°BÙsd5ñ«…⁄çÓ}:[“˙RT–õI˚áûñ;.<pñ©¯Cbä–[|! Ë"7.ﬂ“˜ë@ÔÏÊfiÇ(ΩÛÏù]“z!:ËNìﬂ]t „·‡†S§—AoﬂhåëŒÎcÌ9>¨ Ëœ¥=BËî.∫∞åx@ofítV7}–3ûY@ètû6ÉÉ.‚]T«)ÔUm°_ç˙†…ÔÄÆ‰“=K¯/Ü:ÈëB¢ËÉOÍi@◊ˇa‹— °[qÇ.rc¥S:.›I®ŸÄÆ˘mf\p„æ◊ :·w©˝Ø˙‡—¸Û=Ì;v–m“Ñ⁄\˜‡Ü◊˛£tQ"<x«ö#ÜŸÁz IΩòN%Õ=$Æ^sÇû3	œ±'Bû'ŸŸuBìuLòqûêVÙp°Áõó…d-ï íWµP◊£Ün-ìÜ´BûÎ.]ÆAòÎr“òÙ‡†˜{ìœÆÒ	Ωn5ñ©≥»'™ö@'Ï≈
-µP⁄ ›Ù CØwxôÍ∏«U™¶–∫EπI«2U◊oT–µÉMÿÓ…QË9Jõzû8>Ù£“kü˜'ø∫–£©Îﬁ≠$ï”:•ÕÍ–ñíJä§¥Ù›Å6@◊z4ojÈÇQPVzÜ∞*äCí°üV]§g§¸Ã∫&–y™ÏÒÅTÄ[b	˝∏~–è´ÅNòÖ’π'Ùà°Ûôö˙∑©ˆ<oﬂ1Üæ°ÙE–Öòñûà’ÕÙ(°Û—dﬁœìˇ”yNƒzA?Ëe–EQ∫†ØŸÄtûM%ßmüc…~ô´zõjX–œÎ˝º:ËBÃJo„,tÂ–oßj…t1àI#æ.⁄KÍﬁè.]~>üëÛ⁄‰–°+ymÚ~¡®¸hH ›?Ûá/ÂÉöÊ˝dæ2ôÛºUMÜ◊‚Ñn–ÁÑRË¬ÆÒ°É@]˜¢öKwŒSµi;*Ë∆XÈ∞rm†Vµåµ†◊˙q≈–õ_÷Ï–Aèb=zvˇΩ,TÌGÀ∂jËÜëYû¨˙›jà–'Â˜"”Ç˛H7ËèîCßUtﬂÖ'ä”‰∑≤dì∂ËÜaåeJ¶U‰Ü!DË+î=MËÁuÉæ≠∫≥Y@W[aÜ¯Vñu_‰åÅŸ]ÓR2Ms”≤]7t Tw´˝◊˙˛Lwï–Eqî∫JË≠z2¥CŒg¶}ê3˚óıÄNÿââ÷kìÖX‘˙¢à∫IËJ°”G<óbË9B±åRzM/Ëµ®†&øz0–Ö=E¸u=Ù"ù·ÖN®/”ºroC?,Ùg\ˇÉ÷˛…»†”øvÄÓªf‹,U˙Å¢ù√
-=W"‘ÃËˆ|∏–Kj~ﬁé:eÚ;†]î©?ÆŸÚ–CßΩ©e≥]‹◊	˙}%taß8†+Ö.Ú‘W^rËR1ÀåÿÖæÆÙıh°”Ø%›'t“gázÆA{õÍDu:mÄ-\ËΩÉk—@yømÄNÉ.lÍr>5§–´ì+ƒÇñFg⁄–i≥`√Ö˛Åà∫>'ø:zS:˜&}X†◊-´añ2‰≤µ∆§ËÅ^÷˙∫–}N~èÙTP˘K–ÖòÚ&˝yÑ˛LMjou©8ÔB∑ÁtÅ>ok›ﬂ‰˜·X¶⁄ÕÔÇÅNó>j?ü–]GøÎº]¨È}MËΩyïìtï–È√l-ÈÄÓ8Äæø0ß}ÅÎùü“∫è…ÔÄÓ∫'ÈÄÓT0£g%}∫∏¢Ù+BËﬁ'ø∫'ËÙa∂ô<†æloÙÓÚ.Ù%=†/i]‰g ]!t∫Ù’ø˙†bñ„ÏBØ<—˙ìä^–=N~tè–ÈÍˇÙ˛OÓØ™ﬂÖN®˙"ÙÇ–∫∑…ÔÄÓ:y@˝Ä.√º∫}"zË'l˝†{ô¸Ëû°SáŸ ΩœE{ø9{–≈ıË°_B˜Pe
-–}@ßIÙ√Uk˝ÎYÓCó>•á˝Ÿ∫–…ìﬂ›t“0†Pæ<∞¢Â>tq5jËWÖ¶–©ìﬂ›tät@ﬂ+}ô1Í÷ˆBØlE}´¢/tZï)@˜ù0ÃËÌ3˘äÈVª∂∫ÿÊQBÁÑ∆–Iìﬂ›'tyÈC›0&2≥aÂ$vπ∫∏ÀeÚ_*ÙW§öΩ+¥ÜNô¸Ë~°K®Ù÷J∂&ÔïV˙:aóô–:Úo€≠.Tñ¸˚4}gäƒ∑í˜œ…˛*ïìÍsÅﬁGR“Âö¸ﬂÔwÛ´È+∏Ø•eJg˜∏È7´ù∫«]˛ø  ?´ä
-endstream
-endobj
-37 0 obj
-<</Length 420>>
-stream
-?òπ¡¡¡n± qqq€ÎÚÔÔÔˆ˙¸≠”·˛˛˛∞ØØ»»»###˛ˇˇˆˆˆXXXÀÀÀ˚˚˚è√◊ûÀ‹«‡Í€€€ˇˇˇ˝˛˛∫–ØØØAAA˙¸˝ÎÙ¯àààúúúÊÊÊ???„ıŒŒŒaaa˝˝˝üÀ‹ıııtttQQQﬁﬁﬁ—ÊÓ   ∫⁄ÊÁÁÁö∂¿ÛÛÛöööJJJ◊◊◊¶¶¶Ò˜˙!N^¯¯¯@@@ÂÂÂ111µ¥¥ÍÍÍ···”””–––nnn^^^WWW«««ÒÒÒµµµ˜˜˜uttÚÚÚ"""ÒgggÏÏÏÓÓÓ†††œœœééé|||}||,,,```ÅÅÅ‰‰‰˜ˆˆ322˙˘˘∫∫∫:::999çççæΩΩ***îîî›››¿¿¿444mmmª∫∫∫ππIIIôôô˘˘˘¸˚˚æææ∑∂∂¸¸¸⁄⁄⁄ÔÔ===ååå√√√ì≈◊ÚÒÒRRRˇ˛˛FFFYYY∑ÿÂæ’›∏∏∏á¥ƒ$$$ÙÙÙiii(Uehhh---√ﬂÈ‘””Øº¿ˇˇˇ
-endstream
-endobj
-2 0 obj
-<<
-/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
-/Font <<
-/F1 18 0 R
-/F2 25 0 R
-/F3 32 0 R
-/F4 33 0 R
-/F5 34 0 R
-/F6 35 0 R
->>
-/XObject <<
-/I1 36 0 R
->>
->>
-endobj
-38 0 obj
-<<
-/Producer (tFPDF 1.33)
-/CreationDate (D:20240101010000+02'00')
->>
-endobj
-39 0 obj
-<<
-/Type /Catalog
-/Pages 1 0 R
->>
-endobj
-xref
-0 40
-0000000000 65535 f 
-0000068995 00000 n 
-0000089130 00000 n 
-0000000009 00000 n 
-0000000116 00000 n 
-0000026913 00000 n 
-0000027059 00000 n 
-0000027218 00000 n 
-0000027362 00000 n 
-0000027472 00000 n 
-0000057913 00000 n 
-0000058060 00000 n 
-0000058220 00000 n 
-0000058365 00000 n 
-0000058477 00000 n 
-0000068543 00000 n 
-0000068690 00000 n 
-0000068850 00000 n 
-0000069095 00000 n 
-0000069239 00000 n 
-0000069771 00000 n 
-0000070166 00000 n 
-0000070235 00000 n 
-0000070459 00000 n 
-0000070687 00000 n 
-0000076698 00000 n 
-0000076847 00000 n 
-0000077027 00000 n 
-0000077422 00000 n 
-0000077491 00000 n 
-0000077726 00000 n 
-0000077954 00000 n 
-0000084391 00000 n 
-0000084488 00000 n 
-0000084590 00000 n 
-0000084695 00000 n 
-0000084804 00000 n 
-0000088660 00000 n 
-0000089301 00000 n 
-0000089386 00000 n 
-trailer
-<<
-/Size 40
-/Root 39 0 R
-/Info 38 0 R
->>
-startxref
-89436
-%%EOF

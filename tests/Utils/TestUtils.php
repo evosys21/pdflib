@@ -68,7 +68,7 @@ class TestUtils
 
     public static function generateOn(bool $force = false): bool
     {
-        return $force || getenv('RESULT_WRITE');
+        return $force || (getenv('RESULT_WRITE'));
     }
 
     public static function copy($src, $dst): bool

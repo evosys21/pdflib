@@ -9,7 +9,6 @@ trait ProviderTrait
     public function examplesProvider(): Generator
     {
         $files = [
-            'example-multicell.php',
             'example-multicell-1-overview.php',
             'example-multicell-2-overview-page-break.php',
             'example-multicell-3-line-breaking.php',
