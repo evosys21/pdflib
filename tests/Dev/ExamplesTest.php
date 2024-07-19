@@ -1,8 +1,8 @@
 <?php
 
-namespace evosys21\PdfLib\Tests\Functional;
+namespace evosys21\PdfLib\Tests\Dev;
 
-use Generator;
+use evosys21\PdfLib\Tests\Feature\ProviderTrait;
 use PHPUnit\Framework\TestCase;
 
 class ExamplesTest extends TestCase

@@ -3,7 +3,6 @@
 namespace evosys21\PdfLib\Tests\Feature;
 
 use evosys21\PdfLib\Tests\BaseExamplesTestCase;
-use evosys21\PdfLib\Tests\Functional\ProviderTrait;
 
 /**
  */

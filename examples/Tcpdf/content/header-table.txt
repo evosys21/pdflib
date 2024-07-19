@@ -1,2 +1,0 @@
-<h1>TCPDF Advanced Table</h1>
-<p><h4 href='mailto:office@interpid.eu'>office@interpid.eu</h4>  -  <h4 href='http://www.interpid.eu/tcpdf/table'>www.interpid.eu/tcpdf/table</h4></p>

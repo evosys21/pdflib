@@ -1,2 +1,0 @@
-<h1>Fpdf Advanced Multicell</h1>
-<p><h4 href='mailto:office@interpid.eu'>office@interpid.eu</h4>  -  <h4 href='http://www.interpid.eu/fpdf/multicell'>www.interpid.eu/fpdf/multicell</h4></p>

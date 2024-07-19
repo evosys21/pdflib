@@ -1,6 +1,6 @@
 <?php
 
-namespace evosys21\PdfLib\Tests\Functional;
+namespace evosys21\PdfLib\Tests\Feature;
 
 use Generator;
 

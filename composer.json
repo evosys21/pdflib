@@ -1,5 +1,5 @@
 {
-    "name": "evosys21/pdflib",
+    "name": "evosys21/pdf-table",
     "description": "Fpdf Tcpdf Library",
     "type": "library",
     "authors": [
@@ -32,15 +32,5 @@
             "evosys21\\PdfLib\\Tests\\": "tests/",
             "evosys21\\PdfLib\\Examples\\": "examples/"
         }
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://gitlab-ci:YiVedS2532Vk5fXnVyxz@gitlab.interpid.eu/interpid/redmine.git"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/klodoma/php-redmine-api.git"
-        }
-    ]
+    }
 }

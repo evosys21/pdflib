@@ -30,7 +30,7 @@ class BaseTestCase extends TestCase
         return $pdf;
     }
 
-    public function assertComparePdf($expected, $generated, $message)
+    public function assertComparePdf($expected, $generated, $message): void
     {
         $shaGenerated = sha1_file($generated);
         $shaExpected = is_readable($expected) ? sha1_file($expected) : $shaGenerated;

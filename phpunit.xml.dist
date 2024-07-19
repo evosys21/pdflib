@@ -33,8 +33,7 @@
   </logging>
   <php>
     <env name="APP_ENV" value="testing"/>
-    <env name="APP_DEBUG" value="1"/>
-    <env name="FAILED_SCREENSHOTS" value="1"/>
+    <env name="FAILED_SCREENSHOTS" value="0"/>
     <env name="SCREENSHOTS" value="0"/>
     <env name="RESULT_WRITE" value="1"/>
   </php>

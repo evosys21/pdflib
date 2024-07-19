@@ -1,3 +1,0 @@
-<p>All table cells are fully functional <bi href='http://www.interpid.eu/tfpdf/multicell'>Fpdf Advanced UTF8 Multicells</bi>
-Visit <h1 href='http://www.interpid.eu/tfpdf/multicell'>http://www.interpid.eu/tfpdf/multicell</h1> for details</p>
-<p><b>UTF8 characters are supported:</b> <u8>¥ € ₡ ₢ ₤ ₥ ₦ ₧ ₩ ₪ ₫ ₭ ₮ ₯ ₹ Σ ε φ ά η</u8></p>
