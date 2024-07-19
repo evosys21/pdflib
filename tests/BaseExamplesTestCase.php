@@ -40,7 +40,7 @@ class BaseExamplesTestCase extends BaseTestCase
         require $require;
         $content = ob_get_clean();
 
-        $expectedFile = TEST_PATH . "/data/$folder/$name.pdf";
+        $expectedFile = TEST_PATH . "/_files/$folder/$name.pdf";
 
         $generatedFile = tempnam(sys_get_temp_dir(), 'pdf_test');
 

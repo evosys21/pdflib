@@ -80,7 +80,7 @@ class TestUtils
     {
         $dir = dirname($dst);
         if (!is_dir($dir)) {
-            mkdir($dir);
+            mkdir($dir, 0777, true);
         }
         return copy($src, $dst);
     }
