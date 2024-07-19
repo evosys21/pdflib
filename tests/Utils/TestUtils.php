@@ -93,8 +93,7 @@ class TestUtils
 
     public static function failPath(string $path): string
     {
-        $relative = static::relativePath($path);
-        return TEST_PATH . '/_fail/' . $relative;
+        return str_replace('_files', '_failed', $path);
     }
 
     public static function coreName(string $path): string
