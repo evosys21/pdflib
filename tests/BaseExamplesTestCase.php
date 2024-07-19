@@ -45,11 +45,16 @@ class BaseExamplesTestCase extends BaseTestCase
         $tmpFile = tempnam(sys_get_temp_dir(), 'pdf_test');
         $generatedFile  = TestUtils::generateOn() ? $expectedFile : $tmpFile;
 
-        //CreationDate (D:20170101010000)
-        $content = preg_replace("#CreationDate \(D:[0-9]+#", "CreationDate (D:20170101010000", $content);
-        $content = preg_replace("#LastModified \(D:[0-9]+#", "LastModified (D:20170101010000", $content);
+        //CreationDate (D:20240101010000)
+        $content = preg_replace("#CreationDate \(D:[0-9]+#", "CreationDate (D:20240101010000", $content);
+        $content = preg_replace("#LastModified \(D:[0-9]+#", "LastModified (D:20240101010000", $content);
 
-        TestUtils::toFile($expectedFile, $content);
+        $uuid = '00620d33-a584-cac6-0d9c-4c1aec6e67b8';
+        foreach (['DocumentID', 'InstanceID'] as $id) {
+            $content = preg_replace("#<xmpMM:$id>uuid:[0-9a-f-]+</xmpMM:$id>#", "<xmpMM:$id>uuid:$uuid</xmpMM:$id>", $content);
+        }
+
+        TestUtils::toFile($generatedFile, $content, true);
 
         $this->assertTrue(file_exists($generatedFile), $require);
         $this->assertComparePdf($expectedFile, $generatedFile, "FAILED: " . basename($expectedFile) . " / $require");

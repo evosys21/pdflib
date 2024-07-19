@@ -28,24 +28,25 @@ class TestUtils
      */
     public static function toFile(string $file, mixed $data, bool $force = false): void
     {
-        if (static::generateOn($force)) {
-            if (!static::$notified) {
-                print_r(PHP_EOL . str_repeat('x', 80));
-                print_r(PHP_EOL . "!!! TESTS_FILE_GENERATE - ON !!!");
-                print_r(PHP_EOL . str_repeat('x', 80));
-                print_r(PHP_EOL);
-                static::$notified = true;
-            }
-            $md5 = is_readable($file) ? md5_file($file) : null;
-            if (!is_string($data)) {
-                $data = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
-            }
-            file_put_contents($file, $data);
+        if (!static::generateOn($force)) {
+            return;
+        }
+        if (!static::$notified) {
+            print_r(PHP_EOL . str_repeat('x', 80));
+            print_r(PHP_EOL . "!!! TESTS_FILE_GENERATE - ON !!!");
+            print_r(PHP_EOL . str_repeat('x', 80));
+            print_r(PHP_EOL);
+            static::$notified = true;
+        }
+        $md5 = is_readable($file) ? md5_file($file) : null;
+        if (!is_string($data)) {
+            $data = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        }
+        file_put_contents($file, $data);
 
-            // check if the file changed
-            if ($md5 !== md5_file($file)) {
-                print_r(PHP_EOL . "Updated $file" . PHP_EOL);
-            }
+        // check if the file changed
+        if ($md5 !== md5_file($file)) {
+            print_r(PHP_EOL . "Updated $file" . PHP_EOL);
         }
     }
 
@@ -68,6 +69,15 @@ class TestUtils
     public static function generateOn(bool $force = false): bool
     {
         return $force || getenv('RESULT_WRITE');
+    }
+
+    public static function copy($src, $dst): bool
+    {
+        $dir = dirname($dst);
+        if (!is_dir($dir)) {
+            mkdir($dir);
+        }
+        return copy($src, $dst);
     }
 
 }

@@ -12,11 +12,11 @@
   </testsuites>
   <coverage>
     <include>
-      <directory>./library/interpid/PdfLib</directory>
+      <directory>src</directory>
     </include>
     <exclude>
-      <directory>./tests</directory>
-      <directory>./vendor</directory>
+      <directory>tests</directory>
+      <directory>vendor</directory>
     </exclude>
     <report>
       <html outputDirectory="build/coverage/html" lowUpperBound="50" highLowerBound="90"/>
@@ -25,14 +25,10 @@
     </report>
   </coverage>
   <logging>
-    <junit outputFile="build/junit.xml"/>
-    <testdoxHtml outputFile="build/testdox.html"/>
-    <testdoxText outputFile="build/testdox.txt"/>
-    <testdoxXml outputFile="build/testdox.xml"/>
-    <text outputFile="build/logfile.txt"/>
   </logging>
   <php>
     <env name="APP_ENV" value="testing"/>
+    <env name="TRACK_FAILED" value="1"/>
     <env name="FAILED_SCREENSHOTS" value="0"/>
     <env name="SCREENSHOTS" value="0"/>
     <env name="RESULT_WRITE" value="0"/>

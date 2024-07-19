@@ -1,9 +1,11 @@
 <?php
+
 namespace evosys21\PdfLib\Tests;
 
 use evosys21\PdfLib\Fpdf\Pdf;
 use evosys21\PdfLib\Examples\Fpdf\PdfFactory;
 use evosys21\PdfLib\Tests\Utils\Helper;
+use evosys21\PdfLib\Tests\Utils\TestUtils;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -30,28 +32,31 @@ class BaseTestCase extends TestCase
         return $pdf;
     }
 
-    public function assertComparePdf($expected, $generated, $message): void
+    public function assertComparePdf($pdfExpected, $pdfGenerated, $message): void
     {
-        $shaGenerated = sha1_file($generated);
-        $shaExpected = is_readable($expected) ? sha1_file($expected) : $shaGenerated;
+        $shaGenerated = sha1_file($pdfGenerated);
+        $shaExpected = is_readable($pdfExpected) ? sha1_file($pdfExpected) : $shaGenerated;
 
-        $basename = basename($expected);
+        $basename = basename($pdfExpected);
         $coreName = substr($basename, 0, strrpos($basename, "."));
 
-        if (($shaExpected !== $shaGenerated) && getenv('FAILED_SCREENSHOTS')) {
-            $screenshotExpect = dirname($expected) . "/expected/$coreName.png";
-            $screenshotIs = dirname($expected) . "/is/$coreName.png";
-            Helper::pdfScreenshot($expected, $screenshotExpect);
-            Helper::pdfScreenshot($generated, $screenshotIs);
-            copy($generated, dirname($expected) . "/is/" . basename($expected));
-            copy($expected, dirname($expected) . "/expected/" . basename($expected));
+        if (($shaExpected !== $shaGenerated) && getenv('TRACK_FAILED')) {
+            TestUtils::copy($pdfGenerated, dirname($pdfExpected) . "/is/" . basename($pdfExpected));
+            TestUtils::copy($pdfExpected, dirname($pdfExpected) . "/expected/" . basename($pdfExpected));
+            if (getenv('SCREENSHOTS')) {
+                $screenshotExpect = dirname($pdfExpected) . "/expected/$coreName.png";
+                $screenshotIs = dirname($pdfExpected) . "/is/$coreName.png";
+                Helper::pdfScreenshot($pdfExpected, $screenshotExpect);
+                Helper::pdfScreenshot($pdfGenerated, $screenshotIs);
+            }
         }
 
+        $this->assertSame(file_get_contents($pdfExpected), file_get_contents($pdfGenerated), $message);
         $this->assertSame($shaExpected, $shaGenerated, $message);
 
         if (getenv('SCREENSHOTS')) {
-            $screenshot = dirname($expected) . "/$coreName.png";
-            Helper::pdfScreenshot($generated, $screenshot);
+            $screenshot = dirname($pdfExpected) . "/$coreName.png";
+            Helper::pdfScreenshot($pdfGenerated, $screenshot);
         }
     }
 }
