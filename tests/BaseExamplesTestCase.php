@@ -32,7 +32,7 @@ class BaseExamplesTestCase extends BaseTestCase
 
     protected function runTestWithExample($require, $folder, $name): void
     {
-        echo "Running test for $require - $folder\n";
+//        echo "Running test for $require - $folder\n";
         //remove the .php extension
         $name = str_replace('.php', '', $name);
 

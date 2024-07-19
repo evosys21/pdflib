@@ -68,7 +68,7 @@ class PdfFactory
         $pdf->AddPage();
 
         //disable compression for unit-testing!
-        if (isset($_SERVER['ENVIRONMENT']) && 'test' == $_SERVER['ENVIRONMENT']) {
+        if (getenv('APP_ENV') === 'testing') {
             $pdf->SetCompression(false);
             $pdf->setDocCreationTimestamp(1420070400);
             $pdf->setDocModificationTimestamp(1420070400);

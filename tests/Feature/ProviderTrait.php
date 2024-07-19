@@ -35,4 +35,18 @@ trait ProviderTrait
             }
         }
     }
+
+    public function getDevSources(): Generator
+    {
+        $sources = array(
+            'test-multicell-align.php',
+            'test-multicell-shrinking.php',
+            'test-multicell-shrinking2.php',
+            'test-multicell-style.php',
+        );
+
+        foreach ($sources as $source) {
+            yield [$source];
+        }
+    }
 }
