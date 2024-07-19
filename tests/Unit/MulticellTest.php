@@ -2,7 +2,7 @@
 namespace evosys21\PdfLib\Tests\Unit;
 
 use evosys21\PdfLib\Multicell;
-use evosys21\PdfLib\Tests\Helper\Helper;
+use evosys21\PdfLib\Tests\Utils\Helper;
 use PHPUnit\Framework\TestCase;
 
 /**

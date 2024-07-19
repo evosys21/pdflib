@@ -115,9 +115,9 @@ class Multicell
     /**
      * Class constructor.
      *
-     * @param $pdf Instance of the pdf class
+     * @param $pdf Object of the pdf class
      */
-    public function __construct($pdf)
+    public function __construct( $pdf)
     {
         $this->pdf = $pdf;
         $this->pdfi = Factory::pdfInterface($pdf);

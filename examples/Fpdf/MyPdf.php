@@ -9,7 +9,6 @@ use evosys21\PdfLib\Multicell;
 /**
  * Custom PDF class extension for Header and Footer Definitions
  *
- * @package Interpid\PdfExamples
  * @SuppressWarnings(PHPMD.CamelCaseMethodName)
  * @SuppressWarnings(PHPMD.Superglobals)
  * phpcs:disable PSR1.Methods.CamelCapsMethodName.NotCamelCaps
