@@ -1,6 +1,9 @@
 {
     "name": "evosys21/pdflib",
     "description": "Fpdf Tcpdf Library",
+    "license": [
+        "MIT"
+    ],
     "type": "library",
     "authors": [
         {
