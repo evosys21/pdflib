@@ -1,4 +1,5 @@
-.idea/
+.idea
+.report
 build
 coverage
 vendor/
@@ -7,8 +8,5 @@ release
 .vscode
 .phpunit.result.cache
 *.iml
-fonts/
-/library/tfpdf/font/unifont/dejavusans*.php
-/library/tfpdf/font/unifont/dejavuserif*.php
 
 /tests/_failed
