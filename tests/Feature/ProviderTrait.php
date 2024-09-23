@@ -6,7 +6,7 @@ use Generator;
 
 trait ProviderTrait
 {
-    public function examplesProvider(): Generator
+    public function examplesProvider(): array
     {
         $files = [
             'example-multicell-1-overview.php',
@@ -28,24 +28,40 @@ trait ProviderTrait
             'Tcpdf',
         ];
 
+        $result = [];
+
         foreach ($dirs as $dir) {
             foreach ($files as $file) {
-                yield [$dir, $file];
+                $result["$dir - $file"] = [$dir, $file];
             }
         }
+
+        return $result;
     }
 
-    public function getDevSources(): Generator
+    public function getDevSources(): array
     {
-        $sources = array(
+        $files = [
             'test-multicell-align.php',
-            'test-multicell-shrinking.php',
-            'test-multicell-shrinking2.php',
-            'test-multicell-style.php',
-        );
+//            'test-multicell-shrinking.php',
+//            'test-multicell-shrinking2.php',
+//            'test-multicell-style.php',
+        ];
 
-        foreach ($sources as $source) {
-            yield [$source];
+        $contexts = [
+            'Fpdf',
+            'Tfpdf',
+            'Tcpdf',
+        ];
+
+        $result = [];
+
+        foreach ($contexts as $context) {
+            foreach ($files as $file) {
+                $result["$context - $file"] = [$context, $file];
+            }
         }
+
+        return $result;
     }
 }

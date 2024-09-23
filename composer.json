@@ -32,6 +32,7 @@
     },
     "autoload-dev": {
         "psr-4": {
+            "evosys21\\PdfLib\\Dev\\": "dev/",
             "evosys21\\PdfLib\\Tests\\": "tests/",
             "evosys21\\PdfLib\\Examples\\": "examples/"
         }

@@ -1,11 +1,12 @@
 <?php
 
-require_once 'Factory.php';
+use evosys21\PdfLib\Dev\DevFactory;
+
+require_once __DIR__ . '/autoload.php';
 
 $factory = new DevFactory();
 
-// Create the Advanced Multicell Object and inject the PDF object
-$multicell = DevFactory::multicell();
+$multicell = $factory->multicell();
 $pdf = $multicell->getPdfObject();
 
 $short = "Lorem ipsum dolor sit amet";
@@ -25,7 +26,6 @@ foreach (range(5,0) as $key => $padding) {
         $multicell->multiCell($width, 5, $txt, 1, 'J', 1, $padding, $padding, $padding, $padding);
     }
 }
-
 
 // output the pdf
 $pdf->Output();

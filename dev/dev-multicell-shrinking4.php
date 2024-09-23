@@ -5,8 +5,6 @@
 
 use Interpid\PdfExamples\PdfSettings;
 
-require_once 'Factory.php';
-
 $factory = new DevFactory();
 
 // Create the Advanced Multicell Object and inject the PDF object

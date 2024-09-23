@@ -139,9 +139,9 @@ class Multicell
     /**
      * Returns the PDF object
      *
-     * @return Pdf
+     * @return Object
      */
-    public function getPdfObject(): ?Pdf
+    public function getPdfObject(): ?Object
     {
         return $this->pdf;
     }
@@ -149,9 +149,9 @@ class Multicell
     /**
      * Returns the Pdf Interface Object
      *
-     * @return PdfInterface
+     * @return Object
      */
-    public function getPdfInterfaceObject(): PdfInterface
+    public function getPdfInterfaceObject(): Object
     {
         return $this->pdfi;
     }

@@ -2,34 +2,13 @@
 
 namespace evosys21\PdfLib\Tests;
 
-use evosys21\PdfLib\Examples\Tfpdf\MyPdf;
-use evosys21\PdfLib\Examples\Tfpdf\PdfFactory;
 use evosys21\PdfLib\Tests\Utils\TestUtils;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Class BaseExamplesTestCase\Tests
  */
 class BaseExamplesTestCase extends BaseTestCase
 {
-    /**
-     * Returns the pdf object
-     *
-     * @return MyPdf
-     */
-    protected function getPdfObject()
-    {
-        //create the pdf object and do some initialization
-        $pdf = new MyPdf();
-
-        $factory = PdfFactory::initPdf($pdf);
-
-        //disable compression for testing
-        $pdf->SetCompression(false);
-
-        return $pdf;
-    }
-
 
     protected function runTestWithExample($require, $folder, $name): void
     {

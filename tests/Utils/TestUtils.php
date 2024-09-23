@@ -42,6 +42,7 @@ class TestUtils
         if (!is_string($data)) {
             $data = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
         }
+        static::mkdir($file);
         file_put_contents($file, $data);
 
         // check if the file changed
@@ -78,11 +79,17 @@ class TestUtils
 
     public static function copy($src, $dst): bool
     {
-        $dir = dirname($dst);
-        if (!is_dir($dir)) {
-            mkdir($dir, 0777, true);
-        }
+        static::mkdir($dst);
         return copy($src, $dst);
+    }
+
+    public static function mkdir(string $dir): bool
+    {
+        $dir = dirname($dir);
+        if (!is_dir($dir)) {
+            return mkdir($dir, 0777, true);
+        }
+        return true;
     }
 
     public static function relativePath(string $path): string

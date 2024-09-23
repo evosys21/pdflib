@@ -73,7 +73,7 @@ class TableExamples2Test extends BaseTestCase
             "code-example-alignments.php",
         ];
         foreach ($files as $file) {
-            yield [\evosys21\PdfLib\Tests\Feature\APPLICATION_PATH . "/examples/Fpdf/table/$file"];
+            yield [APPLICATION_PATH . "/examples/Fpdf/table/$file"];
         }
     }
 }
