@@ -1,15 +1,15 @@
 <?php
-/**
- * Pdf Advanced Multicell - Example
- */
 
+use evosys21\PdfLib\Dev\DevFactory;
 use evosys21\PdfLib\Tools;
+
+require_once __DIR__ . '/autoload.php';
 
 $factory = new DevFactory();
 
-// Create the Advanced Multicell Object and inject the PDF object
-$multicell = DevFactory::multicell();
+$multicell = $factory->multicell();
 $pdf = $multicell->getPdfObject();
+
 
 $txt = <<<EOL
 <span style="color: #FF8000">More text</span> <span style="color: #0000BB; font-size: 12px">Initial text</span> <span style="color: #FF8000">More text</span>

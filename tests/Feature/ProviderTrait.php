@@ -43,9 +43,9 @@ trait ProviderTrait
     {
         $files = [
             'test-multicell-align.php',
-//            'test-multicell-shrinking.php',
-//            'test-multicell-shrinking2.php',
-//            'test-multicell-style.php',
+            'test-multicell-shrinking.php',
+            'test-multicell-shrinking2.php',
+            'test-multicell-style.php',
         ];
 
         $contexts = [
