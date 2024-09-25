@@ -1,74 +1,49 @@
 <?php
 
-/**
- * This file is part of the Interpid PDF Addon package.
- *
- * @author Interpid <office@interpid.eu>
- * @copyright (c) Interpid, http://www.interpid.eu
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
+namespace evosys21\PdfLib\Tests;
 
-namespace Interpid\PdfLib\Tests;
-
-use Interpid\PdfExamples\MyPdf;
-use Interpid\PdfExamples\PdfFactory;
-use PHPUnit\Framework\TestCase;
+use evosys21\PdfLib\Tests\Utils\TestUtils;
 
 /**
- * Class BaseExamplesTestCase
- * @package Interpid\PdfLib\Tests
+ * Class BaseExamplesTestCase\Tests
  */
 class BaseExamplesTestCase extends BaseTestCase
 {
-    /**
-     * Returns the pdf object
-     *
-     * @return MyPdf
-     */
-    protected function getPdfObject()
+    protected array $unlink = [];
+
+    public function __destruct()
     {
-        //create the pdf object and do some initialization
-        $pdf = new MyPdf();
-
-        $factory = PdfFactory::initPdf($pdf);
-
-        //disable compression for testing
-        $pdf->SetCompression(false);
-
-        return $pdf;
+        foreach ($this->unlink as $file) {
+            if (file_exists($file)) {
+                unlink($file);
+            }
+        }
     }
 
-
-    protected function runTestWithExample($require, $name)
+    protected function runTestWithExample($require, $expected): void
     {
-        //remove the .php extension
-        $name = str_replace('.php', '', $name);
+        $content = TestUtils::execRequire($require);
 
-        ob_start();
-        require $require;
-        $content = ob_get_clean();
+        $generated = TestUtils::tmpFile();
+        file_put_contents($generated, $content);
+        $this->unlink[] = $generated;
+        TestUtils::toFile($expected, $content);
 
-        $expectedFile = TEST_PATH . '/data/' . $name . '.pdf';
+        $this->assertTrue(file_exists($generated), $require);
+        $this->assertComparePdf($expected, $generated, "FAILED: " . basename($expected) . " / $require");
+    }
 
-        if (defined('GENERATE_RESULT_FILES')) {
-            $generatedFile = $expectedFile;
-        } else {
-            $generatedFile = tempnam(sys_get_temp_dir(), 'pdf_test');
-        }
+    protected function runTestPdf($pdf, $expected, $message): void
+    {
+        $generated = TestUtils::tmpFile();
 
-        //CreationDate (D:20170101010000)
-        $content = preg_replace("#CreationDate \(D:[0-9]+#", "CreationDate (D:20170101010000", $content);
-        $content = preg_replace("#LastModified \(D:[0-9]+#", "LastModified (D:20170101010000", $content);
+        //send the pdf to the browser
+        $pdf->saveToFile($generated);
+        $this->unlink[] = $generated;
 
-        file_put_contents($generatedFile, $content);
+        TestUtils::toFile($expected, $generated);
 
-        $this->assertTrue(file_exists($generatedFile), $require);
-        $this->assertComparePdf($expectedFile, $generatedFile, "FAILED: " . basename($expectedFile) . " / $require");
-
-        if (!defined('GENERATE_RESULT_FILES')) {
-            unlink($generatedFile);
-        }
+        $this->assertTrue(file_exists($generated), $message);
+        $this->assertComparePdf($expected, $generated, "FAILED: " . basename($expected) . " / $message");
     }
 }

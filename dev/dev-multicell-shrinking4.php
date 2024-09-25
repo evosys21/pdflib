@@ -1,12 +1,9 @@
 <?php
 /**
  * Pdf Advanced Multicell - Example
- * Copyright (c), Interpid, http://www.interpid.eu
  */
 
 use Interpid\PdfExamples\PdfSettings;
-
-require_once 'Factory.php';
 
 $factory = new DevFactory();
 
@@ -14,7 +11,7 @@ $factory = new DevFactory();
 $multicell = DevFactory::multicell();
 $pdf = $multicell->getPdfObject();
 
-$txt = file_get_contents(PDF_APPLICATION_PATH . '/content/multicell.txt');
+$txt = file_get_contents(CONTENT_PATH . '/multicell.txt');
 
 $txt = PdfSettings::$textExtraLong . "\n\n" . PdfSettings::$textSubSuperscript;
 

@@ -1,13 +1,12 @@
 <?php
 /**
  * Pdf Advanced Multicell - Example
- * Copyright (c), Interpid, http://www.interpid.eu
  */
 
 require_once __DIR__ . '/../autoload.php';
 
-use Interpid\PdfLib\Multicell;
-use Interpid\PdfLib\Pdf;
+use evosys21\PdfLib\Fpdf\Pdf;
+use evosys21\PdfLib\Multicell;
 
 // Pdf extends FPDF
 $pdf = new Pdf();

@@ -1,0 +1,1668 @@
+%PDF-1.3
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/Annots [5 0 R 6 0 R ]
+/Contents 4 0 R>>
+endobj
+4 0 obj
+<</Length 14534>>
+stream
+2 J
+0.57 w
+BT /F1 11.00 Tf ET
+0.996 1.000 0.961 rg
+BT /F3 6.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F3 6.00 Tf ET
+BT /F1 11.00 Tf ET
+BT /F3 6.00 Tf ET
+0.000 Tw
+q 0.627 0.627 0.627 rg BT 56.69 807.49 Td (FPDF / TCPDF / tFPDF Advanced Table) Tj ET Q
+BT /F1 11.00 Tf ET
+BT /F3 6.00 Tf ET
+0 Tw
+q 0.000 0.592 0.784 rg BT 56.69 798.99 Td (https://github.com/evosys21/pdflib) Tj ET Q
+BT /F1 11.00 Tf ET
+q 70.87 0 0 37.73 467.72 789.98 cm /I1 Do Q
+BT /F3 8.00 Tf ET
+0 Tw
+q 0.463 0.000 0.012 rg BT 56.69 777.13 Td (Example 1 - Very Simple Table) Tj ET Q
+BT /F1 11.00 Tf ET
+BT /F4 8.00 Tf ET
+BT /F3 6.00 Tf ET
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 771.02 113.39 -11.34 re B 
+BT /F4 8.00 Tf ET
+0 Tw
+q 0.863 0.902 0.941 rg BT 122.61 762.95 Td (Header #1) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+198.43 771.02 141.73 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 250.17 762.95 Td (Header #2) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+340.16 771.02 85.04 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 363.56 762.95 Td (Header #3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 759.69 113.39 -17.01 re B 
+BT /F3 6.00 Tf ET
+0 Tw
+q 0.000 g BT 87.87 749.38 Td (Line 1 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 759.69 141.73 -17.01 re B 
+0 Tw
+q 0.000 g BT 251.95 749.38 Td (Line 1 Text 2) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 759.69 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 387.68 749.38 Td (Line 1 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 742.68 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 87.87 732.37 Td (Line 2 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 742.68 141.73 -17.01 re B 
+0 Tw
+q 0.000 g BT 251.95 732.37 Td (Line 2 Text 2) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 742.68 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 387.68 732.37 Td (Line 2 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 725.67 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 87.87 715.37 Td (Line 3 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 725.67 141.73 -17.01 re B 
+0 Tw
+q 0.000 g BT 251.95 715.37 Td (Line 3 Text 2) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 725.67 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 387.68 715.37 Td (Line 3 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 708.66 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 87.87 698.36 Td (Line 4 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 708.66 141.73 -17.01 re B 
+0 Tw
+q 0.000 g BT 251.95 698.36 Td (Line 4 Text 2) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 708.66 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 387.68 698.36 Td (Line 4 Text 3) Tj ET Q
+0.000 0.361 0.694 RG
+0.85 w
+85.04 771.02 340.16 -79.37 re S
+BT /F3 8.00 Tf ET
+BT /F3 6.00 Tf ET
+BT /F3 8.00 Tf ET
+0.000 Tw
+q 0.463 0.000 0.012 rg BT 170.08 657.36 Td (Example 2 - More detailed Table) Tj ET Q
+BT /F3 6.00 Tf ET
+0.000 Tw
+0.000 Tw
+q 0.000 0.192 0.624 rg BT 198.43 650.88 Td (- Table Align = Center) Tj ET Q
+0.000 Tw
+0.000 Tw
+q 0.000 0.192 0.624 rg BT 198.43 643.79 Td (- The header has multiple lines) Tj ET Q
+0.000 Tw
+0.000 Tw
+q 0.000 0.192 0.624 rg BT 198.43 636.70 Td (- Colspanning Example) Tj ET Q
+0.000 Tw
+0.000 Tw
+q 0.000 0.192 0.624 rg BT 198.43 629.62 Td (- Rowspanning Example) Tj ET Q
+0.000 Tw
+0.000 Tw
+q 0.000 0.192 0.624 rg BT 198.43 622.53 Td (- Text Alignments) Tj ET Q
+0 Tw
+0 Tw
+q 0.000 0.192 0.624 rg BT 198.43 615.44 Td (- Properties overwriting) Tj ET Q
+BT /F4 8.00 Tf ET
+BT /F3 6.00 Tf ET
+BT /F3 10.00 Tf ET
+BT /F3 5.00 Tf ET
+BT /F3 6.00 Tf ET
+BT /F3 10.00 Tf ET
+BT /F3 5.00 Tf ET
+BT /F3 6.00 Tf ET
+BT /F5 7.00 Tf ET
+BT /F3 6.00 Tf ET
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 610.87 113.39 -11.34 re B 
+BT /F4 8.00 Tf ET
+0 Tw
+q 0.863 0.902 0.941 rg BT 122.61 602.80 Td (Header #1) Tj ET Q
+0.57 w
+0.337 0.608 0.882 rg
+0.000 0.361 0.694 RG
+198.43 610.87 226.77 -22.68 re B 
+0 Tw
+q 0.000 g BT 215.56 597.13 Td (Rowspan/Colspan can be made also in the header.) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 599.53 113.39 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 122.61 591.46 Td (Header #1) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 588.19 113.39 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 122.61 580.12 Td (Header #1) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+198.43 588.19 141.73 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 250.17 580.12 Td (Header #2) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+340.16 588.19 85.04 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 363.56 580.12 Td (Header #3) Tj ET Q
+0.28 w
+0.812 0.969 0.937 rg
+0.000 0.361 0.694 RG
+85.04 576.85 255.12 -17.01 re B 
+BT /F3 6.00 Tf ET
+0 Tw
+q 0.000 g BT 189.09 566.55 Td (Colspan Example) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 576.85 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 365.33 566.55 Td (Line 1 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 559.84 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 124.39 549.54 Td (Line 2 Text 1) Tj ET Q
+0.28 w
+0.965 0.827 0.812 rg
+0.000 0.361 0.694 RG
+198.43 559.84 141.73 -34.02 re B 
+0 Tw
+q 0.000 g BT 244.28 541.03 Td (Rowspan Example) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 559.84 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 365.33 549.54 Td (Line 2 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 542.83 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 124.39 532.53 Td (Line 3 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 542.83 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 365.33 532.53 Td (Line 3 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 525.83 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 124.39 515.52 Td (Line 4 Text 1) Tj ET Q
+0.28 w
+0.847 0.953 0.894 rg
+0.000 0.361 0.694 RG
+198.43 525.83 226.77 -34.02 re B 
+0 Tw
+q 0.000 g BT 269.13 507.02 Td (Rowspan and Colspan Example) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 508.82 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 124.39 498.52 Td (Line 5 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 491.81 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 124.39 481.51 Td (Line 6 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 491.81 141.73 -17.01 re B 
+0 Tw
+q 0.000 g BT 251.95 481.51 Td (Line 6 Text 2) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 491.81 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 365.33 481.51 Td (Line 6 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 474.80 113.39 -39.69 re B 
+0 Tw
+q 0.000 g BT 125.39 464.50 Td (More lines...) Tj ET Q
+0 Tw
+q 0.000 g BT 134.39 453.16 Td (Line2) Tj ET Q
+0 Tw
+q 0.000 g BT 134.39 441.82 Td (Line3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 474.80 141.73 -39.69 re B 
+0 Tw
+q 0.000 g BT 201.26 464.50 Td (Top Left Align) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 474.80 85.04 -39.69 re B 
+0 Tw
+q 0.000 g BT 372.68 441.82 Td (Bottom Right Align) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 435.12 113.39 -39.69 re B 
+0 Tw
+q 0.000 g BT 125.39 424.81 Td (More lines...) Tj ET Q
+0 Tw
+q 0.000 g BT 134.39 413.48 Td (Line2) Tj ET Q
+0 Tw
+q 0.000 g BT 134.39 402.14 Td (Line3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 435.12 141.73 -39.69 re B 
+0 Tw
+q 0.000 g BT 246.78 424.81 Td (Top Center Align) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 435.12 85.04 -39.69 re B 
+0 Tw
+q 0.000 g BT 355.83 402.14 Td (Bottom Center Align) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 395.43 113.39 -39.69 re B 
+0 Tw
+q 0.000 g BT 125.39 385.13 Td (More lines...) Tj ET Q
+0 Tw
+q 0.000 g BT 134.39 373.79 Td (Line2) Tj ET Q
+0 Tw
+q 0.000 g BT 134.39 362.45 Td (Line3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 395.43 226.77 -90.71 re B 
+0.463 Tw
+q 0.000 0.192 0.624 rg BT 201.26 361.32 Td (This is just a longer text, justified align, middle vertical align to demonstrate some) Tj ET Q
+0.000 Tw
+q 0.000 0.192 0.624 rg BT 201.26 354.80 Td (other capabilities. Test text. Test text.) Tj ET Q
+0.000 Tw
+0.000 Tw
+q 0.000 0.020 0.353 rg BT 229.61 348.28 Td (Settings:) Tj ET Q
+BT /F3 10.00 Tf ET
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 201.26 340.56 Td ( ) Tj ET Q
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 222.52 340.56 Td ( ) Tj ET Q
+BT /F3 5.00 Tf ET
+0.000 Tw
+q 0.549 0.047 0.047 rg BT 243.78 342.06 Td (- Rowspan=4) Tj ET Q
+BT /F3 6.00 Tf ET
+BT /F3 10.00 Tf ET
+0 Tw
+q 0.510 0.000 0.118 rg BT 201.26 334.04 Td ( ) Tj ET Q
+0 Tw
+q 0.510 0.000 0.118 rg BT 222.52 334.04 Td ( ) Tj ET Q
+BT /F3 5.00 Tf ET
+0 Tw
+q 0.549 0.047 0.047 rg BT 243.78 335.54 Td (- Colspan=2) Tj ET Q
+BT /F3 6.00 Tf ET
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 355.75 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 345.44 Td (Line 10 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 338.74 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 328.44 Td (Line 11 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 321.73 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 311.43 Td (Line 12 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 304.72 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 294.42 Td (Line 13 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 304.72 141.73 -17.01 re B 
+0 Tw
+q 0.000 g BT 250.28 294.42 Td (Line 13 Text 2) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 304.72 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 363.67 294.42 Td (Line 13 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 287.72 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 277.41 Td (Line 14 Text 1) Tj ET Q
+0.28 w
+0.941 0.941 0.820 rg
+0.392 0.392 0.784 RG
+198.43 287.72 141.73 -17.01 re B 
+BT /F5 7.00 Tf ET
+0 Tw
+q 0.000 g BT 213.40 277.11 Td (Cell Properties Overwriting Example) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 287.72 85.04 -17.01 re B 
+BT /F3 6.00 Tf ET
+0 Tw
+q 0.000 g BT 363.67 277.41 Td (Line 14 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 270.71 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 260.40 Td (Line 15 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 270.71 141.73 -17.01 re B 
+0 Tw
+q 0.000 g BT 250.28 260.40 Td (Line 15 Text 2) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 270.71 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 363.67 260.40 Td (Line 15 Text 3) Tj ET Q
+0.000 0.361 0.694 RG
+0.85 w
+85.04 610.87 340.16 -357.17 re S
+BT /F3 8.00 Tf ET
+BT /F3 6.00 Tf ET
+BT /F3 8.00 Tf ET
+0.000 Tw
+q 0.463 0.000 0.012 rg BT 170.08 226.50 Td (Example 3 - Table split end of the page) Tj ET Q
+BT /F3 6.00 Tf ET
+0.000 Tw
+0.000 Tw
+q 0.000 0.192 0.624 rg BT 198.43 220.01 Td (- This is the table from Example 2 at the end of the page) Tj ET Q
+0 Tw
+0 Tw
+q 0.000 0.192 0.624 rg BT 198.43 212.92 Td (- Splitting mode = ON, you can see that the cells are splitted) Tj ET Q
+BT /F4 8.00 Tf ET
+BT /F3 6.00 Tf ET
+BT /F3 10.00 Tf ET
+BT /F3 5.00 Tf ET
+BT /F3 6.00 Tf ET
+BT /F3 10.00 Tf ET
+BT /F3 5.00 Tf ET
+BT /F3 6.00 Tf ET
+BT /F5 7.00 Tf ET
+BT /F3 6.00 Tf ET
+BT /F4 8.00 Tf ET
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 208.35 113.39 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 122.61 200.28 Td (Header #1) Tj ET Q
+0.57 w
+0.337 0.608 0.882 rg
+0.000 0.361 0.694 RG
+198.43 208.35 226.77 -22.68 re B 
+0 Tw
+q 0.000 g BT 215.56 194.61 Td (Rowspan/Colspan can be made also in the header.) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 197.01 113.39 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 122.61 188.94 Td (Header #1) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 185.67 113.39 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 122.61 177.60 Td (Header #1) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+198.43 185.67 141.73 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 250.17 177.60 Td (Header #2) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+340.16 185.67 85.04 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 363.56 177.60 Td (Header #3) Tj ET Q
+0.28 w
+0.812 0.969 0.937 rg
+0.000 0.361 0.694 RG
+85.04 174.33 255.12 -17.01 re B 
+BT /F3 6.00 Tf ET
+0 Tw
+q 0.000 g BT 189.09 164.03 Td (Colspan Example) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 174.33 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 365.33 164.03 Td (Line 1 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 157.32 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 124.39 147.02 Td (Line 2 Text 1) Tj ET Q
+0.28 w
+0.965 0.827 0.812 rg
+0.000 0.361 0.694 RG
+198.43 157.32 141.73 -34.02 re B 
+0 Tw
+q 0.000 g BT 244.28 138.52 Td (Rowspan Example) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 157.32 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 365.33 147.02 Td (Line 2 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 140.32 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 124.39 130.01 Td (Line 3 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 140.32 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 365.33 130.01 Td (Line 3 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 123.31 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 124.39 113.00 Td (Line 4 Text 1) Tj ET Q
+0.28 w
+0.847 0.953 0.894 rg
+0.000 0.361 0.694 RG
+198.43 123.31 226.77 -34.02 re B 
+0 Tw
+q 0.000 g BT 269.13 104.50 Td (Rowspan and Colspan Example) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 106.30 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 124.39 96.00 Td (Line 5 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 89.29 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 124.39 78.99 Td (Line 6 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 89.29 141.73 -17.01 re B 
+0 Tw
+q 0.000 g BT 251.95 78.99 Td (Line 6 Text 2) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 89.29 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 365.33 78.99 Td (Line 6 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 72.28 113.39 -15.58 re B 
+0 Tw
+q 0.000 g BT 125.39 60.57 Td (More lines...) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 72.28 141.73 -15.58 re B 
+0 Tw
+q 0.000 g BT 201.26 61.98 Td (Top Left Align) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 72.28 85.04 -15.58 re B 
+0.000 0.361 0.694 RG
+0.85 w
+85.04 208.35 340.16 -151.65 re S
+BT /F6 7.00 Tf ET
+q 0.667 0.667 0.667 rg BT 277.40 20.58 Td (Page 1 / 3) Tj ET Q
+
+endstream
+endobj
+5 0 obj
+<</Type /Annot /Subtype /Link /Rect [56.69 803.79 147.07 797.79] /Border [0 0 0] /A <</S /URI /URI (https://github.com/evosys21/pdflib)>>>>
+endobj
+6 0 obj
+<</Type /Annot /Subtype /Link /Rect [467.72 827.72 538.59 789.98] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu)>>>>
+endobj
+7 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/Annots [9 0 R 10 0 R ]
+/Contents 8 0 R>>
+endobj
+8 0 obj
+<</Length 8766>>
+stream
+2 J
+0.85 w
+BT /F3 6.00 Tf ET
+0.000 0.361 0.694 RG
+1.000 1.000 1.000 rg
+0.000 Tw
+q 0.627 0.627 0.627 rg BT 56.69 807.49 Td (FPDF / TCPDF / tFPDF Advanced Table) Tj ET Q
+0 Tw
+q 0.000 0.592 0.784 rg BT 56.69 798.99 Td (https://github.com/evosys21/pdflib) Tj ET Q
+q 70.87 0 0 37.73 467.72 789.98 cm /I1 Do Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 785.20 113.39 -11.34 re B 
+BT /F4 8.00 Tf ET
+0 Tw
+q 0.863 0.902 0.941 rg BT 122.61 777.13 Td (Header #1) Tj ET Q
+0.57 w
+0.337 0.608 0.882 rg
+0.000 0.361 0.694 RG
+198.43 785.20 226.77 -22.68 re B 
+0 Tw
+q 0.000 g BT 215.56 771.46 Td (Rowspan/Colspan can be made also in the header.) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 773.86 113.39 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 122.61 765.79 Td (Header #1) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 762.52 113.39 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 122.61 754.45 Td (Header #1) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+198.43 762.52 141.73 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 250.17 754.45 Td (Header #2) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+340.16 762.52 85.04 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 363.56 754.45 Td (Header #3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 751.18 113.39 -25.51 re B 
+BT /F3 6.00 Tf ET
+0 Tw
+q 0.000 g BT 134.39 743.71 Td (Line2) Tj ET Q
+0 Tw
+q 0.000 g BT 134.39 732.37 Td (Line3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 751.18 141.73 -25.51 re B 
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 751.18 85.04 -25.51 re B 
+0 Tw
+q 0.000 g BT 372.68 732.37 Td (Bottom Right Align) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 725.67 113.39 -39.69 re B 
+0 Tw
+q 0.000 g BT 125.39 715.37 Td (More lines...) Tj ET Q
+0 Tw
+q 0.000 g BT 134.39 704.03 Td (Line2) Tj ET Q
+0 Tw
+q 0.000 g BT 134.39 692.69 Td (Line3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 725.67 141.73 -39.69 re B 
+0 Tw
+q 0.000 g BT 246.78 715.37 Td (Top Center Align) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 725.67 85.04 -39.69 re B 
+0 Tw
+q 0.000 g BT 355.83 692.69 Td (Bottom Center Align) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 685.98 113.39 -39.69 re B 
+0 Tw
+q 0.000 g BT 125.39 675.68 Td (More lines...) Tj ET Q
+0 Tw
+q 0.000 g BT 134.39 664.34 Td (Line2) Tj ET Q
+0 Tw
+q 0.000 g BT 134.39 653.00 Td (Line3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 685.98 226.77 -90.71 re B 
+0.463 Tw
+q 0.000 0.192 0.624 rg BT 201.26 651.87 Td (This is just a longer text, justified align, middle vertical align to demonstrate some) Tj ET Q
+0.000 Tw
+q 0.000 0.192 0.624 rg BT 201.26 645.35 Td (other capabilities. Test text. Test text.) Tj ET Q
+0.000 Tw
+0.000 Tw
+q 0.000 0.020 0.353 rg BT 229.61 638.83 Td (Settings:) Tj ET Q
+BT /F3 10.00 Tf ET
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 201.26 631.11 Td ( ) Tj ET Q
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 222.52 631.11 Td ( ) Tj ET Q
+BT /F3 5.00 Tf ET
+0.000 Tw
+q 0.549 0.047 0.047 rg BT 243.78 632.61 Td (- Rowspan=4) Tj ET Q
+BT /F3 6.00 Tf ET
+BT /F3 10.00 Tf ET
+0 Tw
+q 0.510 0.000 0.118 rg BT 201.26 624.59 Td ( ) Tj ET Q
+0 Tw
+q 0.510 0.000 0.118 rg BT 222.52 624.59 Td ( ) Tj ET Q
+BT /F3 5.00 Tf ET
+0 Tw
+q 0.549 0.047 0.047 rg BT 243.78 626.09 Td (- Colspan=2) Tj ET Q
+BT /F3 6.00 Tf ET
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 646.30 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 636.00 Td (Line 10 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 629.29 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 618.99 Td (Line 11 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 612.28 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 601.98 Td (Line 12 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 595.28 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 584.97 Td (Line 13 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 595.28 141.73 -17.01 re B 
+0 Tw
+q 0.000 g BT 250.28 584.97 Td (Line 13 Text 2) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 595.28 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 363.67 584.97 Td (Line 13 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 578.27 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 567.96 Td (Line 14 Text 1) Tj ET Q
+0.28 w
+0.941 0.941 0.820 rg
+0.392 0.392 0.784 RG
+198.43 578.27 141.73 -17.01 re B 
+BT /F5 7.00 Tf ET
+0 Tw
+q 0.000 g BT 213.40 567.66 Td (Cell Properties Overwriting Example) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 578.27 85.04 -17.01 re B 
+BT /F3 6.00 Tf ET
+0 Tw
+q 0.000 g BT 363.67 567.96 Td (Line 14 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 561.26 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 550.96 Td (Line 15 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 561.26 141.73 -17.01 re B 
+0 Tw
+q 0.000 g BT 250.28 550.96 Td (Line 15 Text 2) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 561.26 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 363.67 550.96 Td (Line 15 Text 3) Tj ET Q
+0.000 0.361 0.694 RG
+0.85 w
+85.04 785.20 340.16 -240.94 re S
+BT /F3 8.00 Tf ET
+BT /F3 6.00 Tf ET
+BT /F3 8.00 Tf ET
+0.000 Tw
+q 0.463 0.000 0.012 rg BT 170.08 226.50 Td (Example 4 - Table split end of the page) Tj ET Q
+BT /F3 6.00 Tf ET
+0.000 Tw
+0.000 Tw
+q 0.000 0.192 0.624 rg BT 198.43 220.01 Td (- This is the table from Example 2 at the end of the page) Tj ET Q
+0 Tw
+0 Tw
+q 0.000 0.192 0.624 rg BT 198.43 212.92 Td (- Splitting mode = OFF. In this case the cells are NOT splitted) Tj ET Q
+BT /F4 8.00 Tf ET
+BT /F3 6.00 Tf ET
+BT /F3 10.00 Tf ET
+BT /F3 5.00 Tf ET
+BT /F3 6.00 Tf ET
+BT /F3 10.00 Tf ET
+BT /F3 5.00 Tf ET
+BT /F3 6.00 Tf ET
+BT /F5 7.00 Tf ET
+BT /F3 6.00 Tf ET
+BT /F4 8.00 Tf ET
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 208.35 113.39 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 122.61 200.28 Td (Header #1) Tj ET Q
+0.57 w
+0.337 0.608 0.882 rg
+0.000 0.361 0.694 RG
+198.43 208.35 226.77 -22.68 re B 
+0 Tw
+q 0.000 g BT 215.56 194.61 Td (Rowspan/Colspan can be made also in the header.) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 197.01 113.39 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 122.61 188.94 Td (Header #1) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 185.67 113.39 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 122.61 177.60 Td (Header #1) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+198.43 185.67 141.73 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 250.17 177.60 Td (Header #2) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+340.16 185.67 85.04 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 363.56 177.60 Td (Header #3) Tj ET Q
+0.28 w
+0.812 0.969 0.937 rg
+0.000 0.361 0.694 RG
+85.04 174.33 255.12 -17.01 re B 
+BT /F3 6.00 Tf ET
+0 Tw
+q 0.000 g BT 189.09 164.03 Td (Colspan Example) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 174.33 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 365.33 164.03 Td (Line 1 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 157.32 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 124.39 147.02 Td (Line 2 Text 1) Tj ET Q
+0.28 w
+0.965 0.827 0.812 rg
+0.000 0.361 0.694 RG
+198.43 157.32 141.73 -34.02 re B 
+0 Tw
+q 0.000 g BT 244.28 138.52 Td (Rowspan Example) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 157.32 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 365.33 147.02 Td (Line 2 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 140.32 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 124.39 130.01 Td (Line 3 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 140.32 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 365.33 130.01 Td (Line 3 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 123.31 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 124.39 113.00 Td (Line 4 Text 1) Tj ET Q
+0.28 w
+0.847 0.953 0.894 rg
+0.000 0.361 0.694 RG
+198.43 123.31 226.77 -34.02 re B 
+0 Tw
+q 0.000 g BT 269.13 104.50 Td (Rowspan and Colspan Example) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 106.30 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 124.39 96.00 Td (Line 5 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 89.29 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 124.39 78.99 Td (Line 6 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 89.29 141.73 -17.01 re B 
+0 Tw
+q 0.000 g BT 251.95 78.99 Td (Line 6 Text 2) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 89.29 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 365.33 78.99 Td (Line 6 Text 3) Tj ET Q
+0.000 0.361 0.694 RG
+0.85 w
+85.04 208.35 340.16 -136.06 re S
+BT /F6 7.00 Tf ET
+q 0.667 0.667 0.667 rg BT 277.40 20.58 Td (Page 2 / 3) Tj ET Q
+
+endstream
+endobj
+9 0 obj
+<</Type /Annot /Subtype /Link /Rect [56.69 803.79 147.07 797.79] /Border [0 0 0] /A <</S /URI /URI (https://github.com/evosys21/pdflib)>>>>
+endobj
+10 0 obj
+<</Type /Annot /Subtype /Link /Rect [467.72 827.72 538.59 789.98] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu)>>>>
+endobj
+11 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/Annots [13 0 R 14 0 R ]
+/Contents 12 0 R>>
+endobj
+12 0 obj
+<</Length 5402>>
+stream
+2 J
+0.85 w
+BT /F3 6.00 Tf ET
+0.000 0.361 0.694 RG
+1.000 1.000 1.000 rg
+0.000 Tw
+q 0.627 0.627 0.627 rg BT 56.69 807.49 Td (FPDF / TCPDF / tFPDF Advanced Table) Tj ET Q
+0 Tw
+q 0.000 0.592 0.784 rg BT 56.69 798.99 Td (https://github.com/evosys21/pdflib) Tj ET Q
+q 70.87 0 0 37.73 467.72 789.98 cm /I1 Do Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 785.20 113.39 -11.34 re B 
+BT /F4 8.00 Tf ET
+0 Tw
+q 0.863 0.902 0.941 rg BT 122.61 777.13 Td (Header #1) Tj ET Q
+0.57 w
+0.337 0.608 0.882 rg
+0.000 0.361 0.694 RG
+198.43 785.20 226.77 -22.68 re B 
+0 Tw
+q 0.000 g BT 215.56 771.46 Td (Rowspan/Colspan can be made also in the header.) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 773.86 113.39 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 122.61 765.79 Td (Header #1) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+85.04 762.52 113.39 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 122.61 754.45 Td (Header #1) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+198.43 762.52 141.73 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 250.17 754.45 Td (Header #2) Tj ET Q
+0.57 w
+0.161 0.314 0.518 rg
+0.000 0.361 0.694 RG
+340.16 762.52 85.04 -11.34 re B 
+0 Tw
+q 0.863 0.902 0.941 rg BT 363.56 754.45 Td (Header #3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 751.18 113.39 -39.69 re B 
+BT /F3 6.00 Tf ET
+0 Tw
+q 0.000 g BT 125.39 740.88 Td (More lines...) Tj ET Q
+0 Tw
+q 0.000 g BT 134.39 729.54 Td (Line2) Tj ET Q
+0 Tw
+q 0.000 g BT 134.39 718.20 Td (Line3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 751.18 141.73 -39.69 re B 
+0 Tw
+q 0.000 g BT 201.26 740.88 Td (Top Left Align) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 751.18 85.04 -39.69 re B 
+0 Tw
+q 0.000 g BT 372.68 718.20 Td (Bottom Right Align) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 711.50 113.39 -39.69 re B 
+0 Tw
+q 0.000 g BT 125.39 701.19 Td (More lines...) Tj ET Q
+0 Tw
+q 0.000 g BT 134.39 689.85 Td (Line2) Tj ET Q
+0 Tw
+q 0.000 g BT 134.39 678.52 Td (Line3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 711.50 141.73 -39.69 re B 
+0 Tw
+q 0.000 g BT 246.78 701.19 Td (Top Center Align) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 711.50 85.04 -39.69 re B 
+0 Tw
+q 0.000 g BT 355.83 678.52 Td (Bottom Center Align) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 671.81 113.39 -39.69 re B 
+0 Tw
+q 0.000 g BT 125.39 661.51 Td (More lines...) Tj ET Q
+0 Tw
+q 0.000 g BT 134.39 650.17 Td (Line2) Tj ET Q
+0 Tw
+q 0.000 g BT 134.39 638.83 Td (Line3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 671.81 226.77 -90.71 re B 
+0.463 Tw
+q 0.000 0.192 0.624 rg BT 201.26 637.70 Td (This is just a longer text, justified align, middle vertical align to demonstrate some) Tj ET Q
+0.000 Tw
+q 0.000 0.192 0.624 rg BT 201.26 631.18 Td (other capabilities. Test text. Test text.) Tj ET Q
+0.000 Tw
+0.000 Tw
+q 0.000 0.020 0.353 rg BT 229.61 624.66 Td (Settings:) Tj ET Q
+BT /F3 10.00 Tf ET
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 201.26 616.94 Td ( ) Tj ET Q
+0.000 Tw
+q 0.510 0.000 0.118 rg BT 222.52 616.94 Td ( ) Tj ET Q
+BT /F3 5.00 Tf ET
+0.000 Tw
+q 0.549 0.047 0.047 rg BT 243.78 618.44 Td (- Rowspan=4) Tj ET Q
+BT /F3 6.00 Tf ET
+BT /F3 10.00 Tf ET
+0 Tw
+q 0.510 0.000 0.118 rg BT 201.26 610.42 Td ( ) Tj ET Q
+0 Tw
+q 0.510 0.000 0.118 rg BT 222.52 610.42 Td ( ) Tj ET Q
+BT /F3 5.00 Tf ET
+0 Tw
+q 0.549 0.047 0.047 rg BT 243.78 611.92 Td (- Colspan=2) Tj ET Q
+BT /F3 6.00 Tf ET
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 632.13 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 621.82 Td (Line 10 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 615.12 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 604.81 Td (Line 11 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 598.11 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 587.81 Td (Line 12 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 581.10 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 570.80 Td (Line 13 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 581.10 141.73 -17.01 re B 
+0 Tw
+q 0.000 g BT 250.28 570.80 Td (Line 13 Text 2) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 581.10 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 363.67 570.80 Td (Line 13 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 564.09 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 553.79 Td (Line 14 Text 1) Tj ET Q
+0.28 w
+0.941 0.941 0.820 rg
+0.392 0.392 0.784 RG
+198.43 564.09 141.73 -17.01 re B 
+BT /F5 7.00 Tf ET
+0 Tw
+q 0.000 g BT 213.40 553.49 Td (Cell Properties Overwriting Example) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 564.09 85.04 -17.01 re B 
+BT /F3 6.00 Tf ET
+0 Tw
+q 0.000 g BT 363.67 553.79 Td (Line 14 Text 3) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+85.04 547.09 113.39 -17.01 re B 
+0 Tw
+q 0.000 g BT 122.72 536.78 Td (Line 15 Text 1) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+198.43 547.09 141.73 -17.01 re B 
+0 Tw
+q 0.000 g BT 250.28 536.78 Td (Line 15 Text 2) Tj ET Q
+0.28 w
+1.000 1.000 1.000 rg
+0.000 0.361 0.694 RG
+340.16 547.09 85.04 -17.01 re B 
+0 Tw
+q 0.000 g BT 363.67 536.78 Td (Line 15 Text 3) Tj ET Q
+0.000 0.361 0.694 RG
+0.85 w
+85.04 785.20 340.16 -255.12 re S
+BT /F6 7.00 Tf ET
+q 0.667 0.667 0.667 rg BT 277.40 20.58 Td (Page 3 / 3) Tj ET Q
+
+endstream
+endobj
+13 0 obj
+<</Type /Annot /Subtype /Link /Rect [56.69 803.79 147.07 797.79] /Border [0 0 0] /A <</S /URI /URI (https://github.com/evosys21/pdflib)>>>>
+endobj
+14 0 obj
+<</Type /Annot /Subtype /Link /Rect [467.72 827.72 538.59 789.98] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu)>>>>
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 7 0 R 11 0 R ]
+/Count 3
+/MediaBox [0 0 595.28 841.89]
+>>
+endobj
+15 0 obj
+<</Type /Font
+/Subtype /Type0
+/BaseFont /MPDFAA+DejaVuSans
+/Encoding /Identity-H
+/DescendantFonts [16 0 R]
+/ToUnicode 17 0 R
+>>
+endobj
+16 0 obj
+<</Type /Font
+/Subtype /CIDFontType2
+/BaseFont /MPDFAA+DejaVuSans
+/CIDSystemInfo 18 0 R
+/FontDescriptor 19 0 R
+/DW 600
+/W [ 32 32 318 ]
+/CIDToGIDMap 20 0 R
+>>
+endobj
+17 0 obj
+<</Length 345>>
+stream
+/CIDInit /ProcSet findresource begin
+12 dict begin
+begincmap
+/CIDSystemInfo
+<</Registry (Adobe)
+/Ordering (UCS)
+/Supplement 0
+>> def
+/CMapName /Adobe-Identity-UCS def
+/CMapType 2 def
+1 begincodespacerange
+<0000> <FFFF>
+endcodespacerange
+1 beginbfrange
+<0000> <FFFF> <0000>
+endbfrange
+endcmap
+CMapName currentdict /CMap defineresource pop
+end
+end
+endstream
+endobj
+18 0 obj
+<</Registry (Adobe)
+/Ordering (UCS)
+/Supplement 0
+>>
+endobj
+19 0 obj
+<</Type /FontDescriptor
+/FontName /MPDFAA+DejaVuSans
+ /Ascent 928
+ /Descent -236
+ /CapHeight 928
+ /Flags 4
+ /FontBBox [-1021 -463 1793 1232]
+ /ItalicAngle 0
+ /StemV 87
+ /MissingWidth 600
+/FontFile2 21 0 R
+>>
+endobj
+20 0 obj
+<</Length 156
+/Filter /FlateDecode
+>>
+stream
+xœíÌ1   ×¿ôBøx@ ’Òµ                                                                                                                              °âÿì 
+endstream
+endobj
+21 0 obj
+<</Length 5923
+/Filter /FlateDecode
+/Length1 18316
+>>
+stream
+xœí<x\e•ÿÌ™›”?MHJ¨"´üD[™&5*)¸$“tÚ$f&ië.noæŞI¦™;Ì½IÙ
+Ê‚‚â¢Q‘U–Upµë"Të>| ëÖîC®«.‹ˆ®»¬¯UÔˆ7{şsïG2	éƒ‚ß·™&ó¿ÎûñŸ{2)ó1ÆØõØŞh¼½cÏÆÉ¸ò4~$³jÕ³Æ|=8ß”œ´K¯¹ç~Û©üXöšWOîcpÎîSÍ<«Åœ¯ËL§~ıÓï|çAœ÷Œëª¶òû¾GqÇùeã¸Pÿ¡ZçÅùÅãYë@ín–Âù×p¾"c$UÖ‚/xç5Yõ@>`Ô\ƒóoã\äÔ¬~¡1ğœ?ËØ•+ò†iÍ½‰½±®€ÜÏôüÖÚŸâ°ëbÆ”qæ4øne
+7+ïG	Ö:ïğ–ò¯bÌ_W°"à÷~Àrs_g¿ãïİ`båP*¬±mLÌÍÕ4ÛÍ¾Ûk³¾'÷2ßÜãsÌùò¡ş¤&W² »ßø’s„p~Î=Asy’ù.eGØ1|}İËîğİƒ3”™]ƒ+wù?Ånd¸òEß1ßÍş¸vû	{O¾…ƒ{í¶Wû¦âg?÷%Øıˆãr_³ïòÚ$;¸?	ü pœm	˜ã½Ó·>¬Œ(÷à÷åğÊúUv!;â{œ™ì³ğCØŸôØãpîeO!©¿cì»›]‹¼4ûvÿZW¾¢g·ãËÀıã¾;}#wŸõİÀeïƒ€;»íûyÜ{†İ 	ÿu¨İÍşòÿÄuáogf€)ú8³ı—àr´FéçØ¨<J¯Ÿ°ër‚İ]s¤¦¹ö"¤"5vï‹¾§kncw±‡áàø–ïÆÀE¶³C`/;„¸o—05)ß4Ê._×Jìş©À^ß½ì‡½µ£ˆû!)Ò¼ßC‰Rìsø=UÓˆ2mõİ7#§rw;^»#Ğğˆ¡ö JÍ˜—²}8º–}‚}Šm„v1‘¼5[”gòÀ(ó!ß;üÏ°ãĞÃ6°TàG¨kÖÌØcÖÖ(ğûXP4ö·F´ÃÛ®Ú-ş~ÏºÁySÑX+³¡ÃõÓâÈÜÜĞîÀùÊÃÊ‡¡uÅá@ëEO,¶ùÄÆàÎ¡İâğoÃ=.ÖğŞ\‹ïÆ¡œá2®‡{hO=¬´â¿ÈŞÃ"9.ni¼å¢Î[õN™
+˜Ÿ­`~ôcÀQÊ	¤”»q\Ë^¶meà7¬æ7¾Êuş kÿÒ#O¿Š5>òô#Oo:§i]Sëº¦u© {Ö„óŸ}Ê©møÕÏ
+5(
+ü¯?2½ï¶è}Å/Ø…+(,şÂ%Ïzï¿|ìÙş†=gÉ_ÁX1ÂXmÖ^ƒÉÊşåc³W5ìqã©ôåGOùßFcÊ-H°KØ8F¦Ÿ5²÷KŒsı«ñ]úøË|¯-âyŸ¯££u¾'İ±Ÿ|¿vÇÀêÒpÜé¶Ò¿××0î¿Á¯`MÏÎ¸½›¹ãúU\ÿ:wÜÀ^½uÔ7²º­ŸtÇM,°õ!™Ug!Ø&¢.Ç>¶ÚwÌ£e|?vÇ€ë¶;°Õşw¬°—ú{İqkögİñ
+Öâ§;®cş/¹ãúÖNXëØxç¯Üq#[½õ½î¸‰­Øz”ucäÙ4+°4C[L°õ,‰Ş.XÛ„¯Í8Å‚uá#ÀÂÓ:SY–q5Ârx¾G!–Á—`±".“f:¾ë3‰?5<É—Aõ²"ÕRšDZ2ZsxZò¡"Ì‰QìÁÑ>„Á¼,Ò8%6 T’ïE\ÈÙÒÎà,‰3éfñ„ÜãŒuùéBzlÜë“DÇ¦M›Åè´èJ[¦UĞÕlPDrÉ6ÊdDL2EL7õÂ¤®µñ —IĞ„:™İgäÆD—:¾`¾O™À Vscº)Ô‚.Ò9‘ŸÍ¤“B3²j:‡œUŠ'1]¹Àq5‡“.Æ`ûq`û—²œ3#¤mud;Pç›ÙÜĞfÚÈ‰¶Í[*QÍCTVŠ°96µ\óè¦ŒªÈB3²»…VëdíøÒ\“ˆ£a|/ %uÂW ›·!^aØ¸eå;ÛÛ5D:9Ñf…¤2
+cz[NÇíŞ2<ñüta4È=éw:ù®d°)<+=õôøŸÄÔ‡;Óxfœ Ó¸—'¹,òu©µAÈèX'çir¾¥øš¨ˆ¯Å¤áøª&»ã*Êµ¶0Ò9Ûx
+/¾¬ìqúsVu{—dNã§‘E+Ò³¤ëı¸f ‹)ÙáË¶R4¥‰§qÚÓ]¹ÆˆJÎµzĞµ»c-‡šãc¿‰/ƒ¬Ÿ#ø¼±±Z®¥]/P	‡£iîâ´ˆ‹ùş”¤sÒìyÚáİñeŞñ½–2/i!ËIXŞMâ+‰0ª+§(H¢‡f	‹E;~R8Ê¸‘´¾Èc‰‚ÌZ’ı×ñ~I±¤¹’§¨ÑB’ =n4’À"_Å]‹v|	
+A7š“ÈÙaqt2E>0NYÉr5“¥µr‰<
+^ép;A:–YG³dOÇÖ¼,ƒ˜\D`QÎvÊ ‚0;ñààN»Z­´şÒR{šs¸Í=Ú"¾J^W’hŠô‘]/R”Õs®„zE~JAz—šØ‡'’„Ï9ãÙOúqÆÍl…’D[#Ó.§	—;1”J6(ÏE%,Ì9<o¹Ñ`Vœõb¥¤±òP'Hf•8ç”›+}ÍÑ†s—¨KØÓ [P¸¶ÏÒ{),ÇİDòfU]‰Ú*4µ¬ÔÉ´{·8Ô¥ÎSÄ£æzR†ü´P\q8•:ÕÊl^îuŞªÒ˜¦œ‘¡/J¤§Ò^¹2mŒUÜ«%/‡ªä=ïz4æëÇ|N™<.¹+AÉÃT²Ñò9¨¤3_ÕxºöÎ\z‘lÎ‹Ö)PU)¯”ğz+fÑ#½x™{ènÓI
+ÒI¥|K•û°¥(÷|{ŞmÛRæeNÌôÏ»_F)Ş2^'Ü8ğüdwÓU4¦³¤çœÉy|9·—JU/B”ÛİáÙ[áU#eœ2¼ wÓåQ'OZÌO¼\W-wktäÈîåúª¦U^¦¹rl¬š”5½»ºm^$ÉÊ!S¬=
+.D%Æ<yô~ü9æZÌ¹¥WñbV}>3ÕâRº1b¹÷aª¨©í,Lt¢lg’Ng	¶ëÈíEpM`ÃœõàjÙ%D;r¿…¢q%Æ(&\ş”¸÷àŠÄ-h.g;ñü â’°a¶›h„[9‹âXâÀÕ~|»ç$D7®ã\û˜¬Bzƒ• Ø‘p’‡Ó®—¨Vr!Šg8‹!şíînqGŸä?Hõ‘º|:š‹v©#‰YâìFúi&W‡ñ}ÏÅIŸ!’ÙávdèÅ}G–0qàXÂá¨ß‡¶<Ñ‡|%H’RÂ=$;Jyz^RİI§Î¢®•å¸„¥ÍÕ¥Ã‡ÔÿH‘rœäïÇ— ù¸’ Û„¿‡×ó>Â ùæ¤a’/Dzˆ….:'µ(õÙ_ô¸X™UºI_Òn’ó¢"Ä«Jâa+·N5ïàE
+}$_˜4ÕO§ã¨Ç0WŒ¬İ®®œß;>Ñ_¦İn’QZö*¤v}*Dº«”BÚiñ_’Â±@ÈıÙ]¦³’õ]ëzü$ˆr¢ŠVvQ,†éTˆl/ÆH/Åï€ËùpÑÃJ9`ØõÏh‘³Jızqä[Nîppy´+-ØCşÔïr/jÃ9Á—Àëä®0ŞkIzÎ±Šy»òæ.¯KÕhyİ,Ëµå•€“…ûèlvŞ¹Òªó´äÜY¥gòÚ­Ú¶÷tìÔò^Õ[ª>œÜí<•W½ÕçNh«ƒê@£X™LÑnéNÏ»½£â9ORVéîiywQ	—SWªT-Hjfm.~CñO†yºï*S4¶ÜÊDÊ7á•ëo˜÷4ìõÚ@Tµ'KµÊ¡\ÿ²wŞ}–J“†e=Ùæâ-0ï¹¬¤©§ï–gõ’÷Ill~WAê`¬ŒstÍ™ÓÃ“49å+¯ÇõÂwNwÏúÅÔâı ù•×ó×âUûAâ÷ƒø²úA••|²Œ§R¯Ã;¹¼jµÁúJbA_‰ÿ_©¬¯Tê0ünö•xÅûÂõ•x•§µC_‰Wí+•$:3}%¾D¿àÌô•8;Ñ¾Ré·N§³¯TŠ·Ê¾Òb·ïâİ%çùÜ©$^lİ%Î*»KÕ»g¦»Ä—Ğ®(Óà‹»ËÄÉÇV3g¾ËÄ_Ä]&>¯ËTzÖ=“]&şœ]&qÆºLüºLâyë2qÒÁbİAÜ:Úáş™ëñª6¡zG|AïH¼`½#¾hï¨Ôzş{GüzGKá}~{G^f]üFYØñá'Ññ)ïÒœÎ?¥ÏÂg¶“ëøğ²ÏR}‡ÓÑ¡±àßÆJNtä¬±^ú€–ü¨šü°[ñóqb½©ëbTÏSÚÄ2>ØÖ&ú2ÓùqS¤³y£`éšHŒ¬ôI÷C`ú İ„óAºr2œ—¨èU8¬?Ç7.ùÅ~noÙùó(§M®
+« jzV-ìFj>Î‡ôB6mÒ‡æÒ¦×:Ò+¨9=ˆ²£X†+ŒéAaBÍM‹¼^0ÀµPciT*’È4Ç“Ö¸îé)™4²y<.Xãˆµ¬çLÔ^©¤e"Ó„jšF2­"=®É‰¬³TKò“JgĞHë%Fq#eM¡ú[6'=_0´‰¤Nh´4
+–°tÉ¯ ¢™“™	Mr2•¶Æ	™É¦]B’BÁQ%¢0ñ¼'(²º”š“ƒ˜ãÁ2AI³İ(SG;àé4²êŠ?´dÑæ¥¢-î¨M£c- fHMrHP'@Í¦æÄè>=iÉ)_ÊÈ ³I’FNKK9ÌNÎˆN5&u’Àñ"b è9ÃB3˜Îª´J¾äÎ0ÇÕL†ê®ÖŒµBN#‡~QY£ W[XÓy=¥"¡6‡©Êİ¬:Ñ‚àZ:•–¦f,t= RUÓHrGu2@Õò5‘Q\Òt3=–#6ÆœXE é¡j‘˜ÂãÇœOI¢äH€¦fª#pa<>JØ½\fZ¤ËÜœKq
+ºü³:+¦T¤´‹:úœ^  )£ ™¢¥‡-’¶·Á[dØ¶ÊĞ2ın¼ŒêIëÚ@êdÒHÓX1BÍç1¼ÔÑŒ.7Ù³ğ’QÆUKŒ«&bÔs:‘^WònMLä4—á«œ˜s$\Êª¦‘‘QMf“FREFfŒï`^MîWÇP0ŒÃœÁ¥«˜SUÂ„…,ê™”dj{XôF"íMì
+ÅÂ"C±èH¤'Ü#ZBqœ·Å®Hb{t8!ğD,4˜Ø#¢½"4¸GìŒöEx÷P,óhLD†ú#a\‹v÷÷DûDÂF¢?2I ÒD”@]T‘p\"Çº·ã4Ôé$öyo$1ˆ8‘¹˜‰¡P,éîÅÄĞpl(#D;ì!•ğ@…@DİÑ¡=±HßöD¸ä‰X¨'<Ší
+DE‘c‚´!—ˆC„G$p|{¨¿_tEñD,g¥vú£aŞì	%"ÑAÑFQB]ıa‡7¥»?ŠĞ@¨OŠã‘ÇqJêà /<…úƒ">îÈê1w'è$ê5ÑOìvGãá«†qÏy$‚|×ö0‘@Bø¯›8#ñQ\‰'%Š¬ìŠÄÃAŠEâÒ"½±(²+íí%F}JãºüJÉµ…Ş§$´+`O8Ôã’\àgÑ»Â’zŞ’¾í·“):¹3H^ë$tá¾®³FC¼–0²èÖq²[éÂ–×qĞI½”>Ğ»ñ&rR¯6©c4e*1
+ÜÉd*mR¤ã˜5œ;O˜j‰!”Œ":…¹RÍ ˜Yd³" ¸wæi™*¤-L&BÀÕBúî5\p¯)’@”$TJÉÁá¿ ›y¼¥Ò“zfºÏä]Fœ¤s)£uE'õ%­N¯T°Ä!×‹…±6Á9U\§\:-÷ONOÄ:HœLÄKu8É:ˆ/¬ƒÜ$Ÿ$L¦wgT)PK?•ZIxµqÔJÜ±ÃóV+q'`O©Vâ§±Vâ¥ZIœd­Ä+ê‚“¨•øbµ’X~­ÄËj¥òğ­(—ğ>Ç$qºÊ%î–Kâ”Ê%^Á.=7î’‰çqÊ%?­%wK&qò%Ÿ_2‰“)™xÕ’IœHÉÄ¡‘QÉvhûIUG¼$ù©TGÜ«Ä©TG¼¼:'UñªÕ‘8•êH:kE ¾há#N ğáK>b…§Â§²vxî‚ÆòÎo£¢·á[Û©üÍ`;õíöãw;õÎ4ú­^ı~5k•¿-\ú/Û§ÒûÓíiLVÚòãùv7cÔßr‚óĞso”ÿwÂÂ¯#şë·ÍıÆ†Ùføu+üª~9Ï4À/lø¹ÿÛ
+?k€ŸÎÀOZáÇ·„”Ûğ£øŸxzş{şË†vÂvÁlø~<õ½¸òÔ|~/O~·]yr¾ÛOØğ6<ŞÿŞß™oÛğ­Uğoá›Gá_mx?v}¤Oyô <Òı|åa¾~>ü‹ÿlÃ?Ùğ6Ÿ¯[«|Í†cká:à«6|ùÆ&åËÀC«áK6|Ñ†/ØğyşÎ†¿µáoløk>gÃQ>ÛŸ¹©UùŒG<ª±áÁ®V<
+^xàÓ­ÊWo›ƒ¶>İ
+÷ÛğW3ğ)şÒ†Ã6|Ò†OhğğñûZ•kpß½«”ûZáŞUğ1dúc³ğQşÜ†{lø³Up·ùpƒò‘øpü©wá‘»fàC6ÜùÁ•Ê6|p%Üñó”;4øÀíÊÎƒÛáıŞgÃ{gê•÷Ú0SïA ÷ÌÀ»okPŞ½nk€?™…wİzTy—·ºZ¹õ(Üz}àĞ;[•CWÃ¡mw¶Â;lxûÛÚ”·Ûğ¶6¸Å¼%7¿µN¹¹ŞZoÁ…·hpjê¦V¸±	şØ†ŞÜ¤Ü`Ã››àM6\oÃu6l›{ãÁƒÊm8xşHƒkç*×¶Âl˜¶á@L­„I6X³`ÎBa®™…¼†92ë`¿ûšº”}qHÛ0~Æp’²A·A³!iÃ¨j'ì…×¯„«mø}^gÃİ\Ù3»9ìZ}²«FlFÊÃ]8â¾F%şRˆ5ÃU;ÎQ®²a¨¢64*ƒ64B¿;qg§;"Ês ²¦^‰4Âözè³¡wÂ3ĞcC·£Ò=]G!´¶Ùğ{6¼öÊUÊk›áÊ+ÎV®\Wl­W®Ø6w6l­‡N.·á5[š•×ÌÂ–Ë•-ÍpÙ¥uÊepi¼z-l®‡WÕ)6¼ª6µ×)›ê¡½Ú6¥´5ÂÆ³ Ø—¼²U¹DƒWnX¥¼²6¬‚õ¯hUÖ‡à­ğòÖ:åågCk\lÃE6´œëPÎu«@hpá,¬EÖj°¦.@^`Ãù³ğ².8'çÙğR^‚šz‰«hõyp®Í6œcÃ*<°Ê†&”µ©ÂÙ4ØP¿rµRoÃJ<½r5ÔÙÀá,Và±6Ô6CÜ œ¸
+6øqîß¾F`6øø´ßá»äwá‹½Ğ,ùµæÿ X$İ
+endstream
+endobj
+22 0 obj
+<</Type /Font
+/Subtype /Type0
+/BaseFont /MPDFAA+DejaVuSans-Bold
+/Encoding /Identity-H
+/DescendantFonts [23 0 R]
+/ToUnicode 24 0 R
+>>
+endobj
+23 0 obj
+<</Type /Font
+/Subtype /CIDFontType2
+/BaseFont /MPDFAA+DejaVuSans-Bold
+/CIDSystemInfo 25 0 R
+/FontDescriptor 26 0 R
+/DW 600
+/W [ 32 32 348 ]
+/CIDToGIDMap 27 0 R
+>>
+endobj
+24 0 obj
+<</Length 345>>
+stream
+/CIDInit /ProcSet findresource begin
+12 dict begin
+begincmap
+/CIDSystemInfo
+<</Registry (Adobe)
+/Ordering (UCS)
+/Supplement 0
+>> def
+/CMapName /Adobe-Identity-UCS def
+/CMapType 2 def
+1 begincodespacerange
+<0000> <FFFF>
+endcodespacerange
+1 beginbfrange
+<0000> <FFFF> <0000>
+endbfrange
+endcmap
+CMapName currentdict /CMap defineresource pop
+end
+end
+endstream
+endobj
+25 0 obj
+<</Registry (Adobe)
+/Ordering (UCS)
+/Supplement 0
+>>
+endobj
+26 0 obj
+<</Type /FontDescriptor
+/FontName /MPDFAA+DejaVuSans-Bold
+ /Ascent 928
+ /Descent -236
+ /CapHeight 928
+ /Flags 262148
+ /FontBBox [-1069 -415 1975 1174]
+ /ItalicAngle 0
+ /StemV 165
+ /MissingWidth 600
+/FontFile2 28 0 R
+>>
+endobj
+27 0 obj
+<</Length 156
+/Filter /FlateDecode
+>>
+stream
+xœíÌ1   ×¿ôBøx@ ’Òµ                                                                                                                              °âÿì 
+endstream
+endobj
+28 0 obj
+<</Length 6349
+/Filter /FlateDecode
+/Length1 19032
+>>
+stream
+xœí<x\e•ÿsoRşæÙ¦…¾Ò¿)©í2MKËCRL’i:mš	“éA{3s'™v^ÎÜ$D¬–UV]D´bÁ²è®ˆ]vW+­
+Â. TE©øb]tYP«"»òÙ›=ÿ¹÷Î#Ò…İoç6÷şóŸ÷ùÿsO&e
+c¬†ífÀ¶ûV¬º|ËÍÃ‘#ø³9’Ô3¬šmfLéÄşÊÈ°).ùú¹Ó°o2æ	Ç2É·zv>Ç<„ówè¹«Ä‹©8Ïª£±_¾üÈû°¿ûİƒ†­~Q¹ûbÿ‚A¨ùJe1MÅşÙƒIóªÊ=,†ı¥ØŸ–HGt¶/¦­Ä~ER¿*SÑU±ûoÆ¾HéI#ÛtË³ØßÊØÅçgÒ9sìv9cí‘ó™¬‘y—~Û3ØßÇXå˜¢~Üsi¿Zû$JÑh?á	óÌ@‰¦O¨P=õ–ûûï1~ööe*U½1”	&ÆÆ*¬eoeRùÕv¦Œ1û£ ş¤&«˜ÊãSÅKöAà}ì)êKH¦Ä”ÕJŒd¿ÆöÅì6–‡…ÌƒWGåóN%Œ8ÈúòõZ%ŒÏ¤z;óàü{ÔCˆÅ£¬fıìØjVoW²{ØÓ¸úåÃÚ:ír	M´$®´û•ç´‹<±­jR½X½[½F½!†Ô˜zÛ‡÷‹<©·ªW«ßS¯f[%gJ·ü‘|°½Êze1ÛëÙ«t*s”NÏ!vñ©²WY£=¢=Â³ÃJ/BŞÉF<\yPy^Y¡lUîÆU/°”…Ø;ßs¾ò{åäøfölÕ8ÛËnPf`ï ;„|?Íg9TWŒİ öœ£f÷³§Ø8ÎØÅƒ÷°\;Œ×sì‹ljæ)Å£®h¨\¤Æ</±#Ê{=wx^R+¼f(Q›oƒCêvõAõƒ8‹ÚQ<°B;Ş¯Úae/rñTELE8y]-½Şs¿g?ÊøMö$Ê…Ô=Wx®öìeO*w)÷ ÇŒ]«Ü¥n¯ìWç±½{Õ­ì÷R7ì1Ï!ÔG/éãzv}Å¹ìµ‚=İÊvõ‹Rc¬Y»OaÊ¢Êõ3Øe}å{Q²«YÎ>¬0í>ûB¨iØõMğiäİãÙåêMe‡<A?»•®›”ıì&¶Ÿaô40XòµÊ
+MÂ¼¢nŸ§9İ×vÙVñĞ¶EË½ãº¢®Rìc½ûªGÅş±±Ş­ê<mÛ>mş>h¶Om^üÔT“O-÷nèİ*ö+KıZÿöNìÛŠMÙÃa÷wÒœ¤ºOkÆíûDdP\WwİâÖëêŒÖåä™Ó˜c¤×[{Ô˜v;¶+ÙÂƒLU–È`W–|U™¦}Ğ£²<~ä\V÷ø‘Ç¬œY¿¨¾yQı¢˜Ê^ÉÁ¼W¶öTÖ¼ô|¶b™[Ìó¶ıg·n{ôíµoù[8Âà‡ß>çe÷ùbö•»ja ì4æ~p]eÒZÀXİ¢³/¯ª=äÄjñãÁ¨‹y¦6íH6-èaç°«0ê=¬µIŒÚï<‹ğ)÷³¹Ê%<7+«
+ñ?]ù•Óö °/;m`uá´Ul÷9mUyŞí´+X­çKN{«÷üÂiO—â´«g|jéûv;oÍN»M_ós§]ÏÔ5ÏËK=ZIÔe[a³•Gœ6ZHùƒÓ&Ëiãvè9×ikì,OÔiW°FÏõN{kòpÚÓY«çN»º¹68í6¸¦Ùi×±ÙkpÚõlÚšgYK³eYgl™¸û.e¶Ÿ«ØJ¼Vc«!kGãÀDhƒé,É¼8`)„oÁ–%ğ,TÀ•£O×ã=Šü¨^P FJÃHk®I!´äCÇ5ÇG±[;pİf6„„Õ	›A+t’H –Ş3Óxã'p}©ë4ÇëHgF³ñAS,,«V®\-úGE{ÜÌ™YCOzE i¾DB„$TN„Œœ‘6¢-|ÂÒäÒ°>œÜ‘Nˆv}pŠ…Æ}óÆ¶0rBÏ"™¡şD<"¢é¤O!gå"ö‘€¸i9‹ûôvÚQ˜ŠÄÚÓ‰èTKD¬d±8á%›É9Ô`šô»
+-²š]ˆF6O§Äª–Õ–cvñ.W¢]>'1Bn;€é¸§ËK,B}šhFNb¢‰[Ù
+¼¢aÄÑ‚kÓøÌ¢ÙÂ—%iA¼®aƒ¦™i]±"ŠH‡‡Zré¡lÄˆ¥³FKÊÀéµ%¸å:õÄĞ‘sÒIrteL³„•n}jœUbêÂ™Q„¤•qœË\&†ÔZ–VÈP’X‡Çir¼Å`*Æ©¤áxM&»í:¶Jµ6q[àè'~ñcÚjNı7¹½‹2Çq†SË¤é…IÒõNK£^)Y/áK¶bpÅ‰§Aš3¹ˆJÊ±º×±»m-›šíc¶¿{‰¯4Y?Eë3N ÛÒˆÕt|,îxN8lMs§I\Œ÷§ÁI?´±»$´Í»íËÅ¿í{M%^ÒD–“k£ôÌ_\£;òqŠ‚zh’°˜4ãê'†­„IK<)È=Mòo¢ÿÚŞ/)u"G25Q¤¡Õ.7Q’À$_ëÇY“fmü(¼N4G³!Âbëd„|`v%ÓÑL’ÆJ%reÈ–y¥ÍíéĞ[bÙN’=m[ó’$‡«½SÈá-È¹‚vA˜íx°qÇ­–[ÿèR»š³¹Í<Ú$¾Š^W”h„ô‘<&
+n4ÄhWO9%£t—4¼ô”šØÂgÃ¸ö‹ÑIdïl®…"D;JÇN[):Ãw:bLÓÎP´Aé^TÔÀÄ …ğ¦¹2X7VŠ+İJ×	’Y'Î9íÍå¾fkÃ>Kô£Ø3M§ plŸ¤gqÿ8[˜tÉ“Uw$j)ÓÔÑÖJŒ:g‹M]ê<F<FOJŸf#6§R§Ñ›—z{‚êt"ÆiÏHP$Š§Ò^©m”«6%wÕÉ{lßuiŒ×OîUer¹äEÓÉFÇÎA9ñú˜Œ7¯cï­‹O±›ó‚u²´Ïê´¯ñº#¹‚Gºñ2şô0œ}Î )\J#$U”Ö7Mr6ä¿‚ãœ{Ú6•x™3İãÎ—~Š÷t	¯CN¸~2Œ³ñI4fà+©éœ1:ƒ—}zé´£…¥v·yvGø¤‘2H;¼ gÎáÑ OšÊOÜ½n²½;J'AŠì^ª¯É´ÊK4WjÃÕœ“¿G7ÚÜH’™C¢{då3äÑ;ñ>àXÌ>¥WñÂ®úZîTSKÕïÄˆéœ‡±‚¦Ö1?Ñ	²ìI:Aì…ÙÌ#C4À1y\g6c¯G;É.>š‘óM[°-1Ù&Âeãá]âŞ†#· ¾ìm@øÄ%×úÙV¢áGl}ÈYÛ÷FíÆ§ß“+:pdöe»‹É,Ô¦×ƒ«Â;räÅæ4ŒãEªå\ˆ¢ËÙFì…ÿ:gÖ‡¸„Oòï¥üH¶{>mÍ…»Ô‘Ä,qv GİÔ“£›ğÙ‹p}¤OÉlsÛC2¬Åy[?q`[Âæ¨Ÿ½H[Bt!_aÒ‚¤v ½dG)O'­—T7”ÍYĞ±²l±´8º´ùúß\ ÜGòwã%Hş0„É6>Äïâu}§‹0H¾9icÉç#=‰B;ÁI-J}v<.Tb•Ò—´›ä¼“(ùH#}“Jâb+µÎdŞÁºH>?iª› ûP~„Fl¬®mœ¶ßÛ>Ñ]¢İ’QZö2¤êw|ÊGº+—BÚiñ_”Â¶€Ï¹w”è¬hıÇº.?a¢D+[(ıå#[÷bd-ÅïF‡óM+î›ÿ8+×¯G.Ü±ì6.—v¹;ÉŸºû
+Ú°!øQğÚ{—Ïµ½ç˜…}»üä.Í‹ÙhiŞé-ÙkK3{î"Øä8¸â¨ı¶dŸYÅwÒÜm²7l÷íØÎåİ¬·˜}Ø{·ıNTšõF)?·sÀ\!+IS˜.d&#4[<Ó3Ní$]ö')ëtö{´Ü³¨ˆËÎ+uÊ$µÜ$Úœú„âŞ3tŞÛTF¨m:™‰”oÈ•ãï÷6ìÖ&Ú@LjW–É2‡RıgÉŞç]*N–ùd‹ƒ7ËÜ÷²¢N¤ìº[rœÕ‹Ş'±µ²ñU©ƒÎ£¤kÎì¤Éi¿rk\¯ÕéT¸ßHõ ^VŸy½võ >i=Hœæz?¦zPy&)á©Xëp!­‚:Y……¿nu%1¡®Äÿ¿®TRW*VşwÖ•xÙ	ûúÕ•ø$oko„ºŸ´®T”èôÔ•øQê§§®ÄÙñÖ•Š¿u:•u¥b¼•×•¦:}§®.Ùïçv&ñF«.qV^]š¼ºqzªKü(Ú%|cW™8ùØÄlæôW™ø¸ÊÄÇU™Šïº§³ÊÄ_µÊ$N[•‰G•I¼fU&N:ØŒX×·¶¶}8újG|R›¿^µ#>¡v$^·ÚŸ²vT¬½öµ#~µ££á}mkGîÎ:õ‰2±âÃO âSZ¥9•~RŸ‰ïl'Vñá%Ÿ£ÕNE…Æœ€¿+œèÈ^ckéZò{mò›q…/Ó‰¥9ÃıF"=²¬EÃ·àZDWb43˜ñd&5¨ˆeÓIáËÃÎ—À\ô­»!û[w¥d8/Rßldua³Vøê_~ÔŸø%¿cş~ G9ãº0³zÔHêÙ"…ó^#›Œçè;tñœ4²ÒÈê)İ‹²£X¸5–0¼ÂL=5*2F6‡Òı&j,*ĞE™æi®"‘t2ƒàÀDì¨e#•Cí5‘Jš–!²¨Ğs¹t$®#=MG†’FÊÔMÉO,@#-•ièKÇÌTÓ2â$kd²éèPÄ 4Ñ8
+ï2É/[àE3GCQÉÉHÜL™ÈL2î’²¶*íPá¥8^‘4¤Ôœ$7è-¡á•4W¤³"g :¬:â#-™C´©h“Ûª#B#ƒèXH3Ä†²)$hĞÂhZäÒ^‘êßaDL9"å‹¥èlR H:K9r­œ‡ŞŸ6HÛ‹ˆ‚¤Ò&š!gJ«dŠ`Ï‰Ü Hğ~ÃÑ²Q¢—É™N¡_dE25&[˜£#¦#¡›©òÙ¤>ŠÑ‚Ë£ñX\:š0Ñõ°Hõh”$·U'TÏ"_C	=Ë%¡¨‘‹¤ˆ;Vq‘ôP=‚Hrr…ËOn<%‰’#R˜˜³Æå£ˆÙK%FE¼ÄÍ¹'kÈ¿o!XÙÈIEJ»¸áa ÏYZ4’ÎFs¢©‡M’¶;Á›dØ6‘ÊĞ2İN¼ôIëÚ@êd8/0f\ebÄ=“ÁğÒû†œ°eGÌ²Á‹FÔM1¨ç£‘*Ó‰ôº¢wGÅP*ê0\d•s¶„G³j.QMf“FÒEBî+.`FìÔP0ŒÃTšKW=>§*#…²h$b’©u~±6Ø}Áµá-¾_úDo(¸9ĞéïM¾>ì7yÅ–@x]pSX DÈ×Ş&‚k…¯g›Øèéô
+ÿÖŞ¿¯C"°±·;àÇ±@OG÷¦Î@O—hÇu=Á°èl„i8HKTŸD¶ÑêX‡]_{ ;ŞæåkáÄ‰Ì…„OôúBá@Ç¦n_Hôn
+õûüˆ£ÑözÖ†Š£…@DÁŞm¡@×º°…qĞËÃ!_§£/´Á+YE	iA.‡ğo–‹ûÖùº»E{ Üù}%¬ÔNWOp£Ÿ¯nêéô…ÁÑîGQ|íİ~›7¥£ÛØè¾¾.)KD‚ÙâÕÁå‚.?äëöŠ¾^G@6P¿#L¨{ÔD7±Ûìéó_¶	Î%áå[Öù‰
+àÃÄ‰ßƒâJ<á`(\`eK Ïï¾P OZdm(ˆìJ{×’lB}Jãõ8üJÉ±‰ŞPrµ#`§ß×û$8ÀË`Ñ»üWEŒŒ)}Û	n{k¤mÔŞ;½äµö&€.Ü•ÂÀµÇ¨‰ÇF:öîV<°åqìµ·^Ú>Ğ»ñ$²·Şè°;`Nn%é,OËÍd$£HÇ#0™¶Ï<‘ÓHWÉ("(Ü+õ.ËØ,(î†™l—Œdã&n&BÂÑlüÎ1œu)’@%TŠ›ƒÍÖÈeğ”Š‰Ñ„ÍÊ³Œ8‰§bélÒÔ1[İTÁ„<š6y:;Ğ"8§Œë¤S§cıûˆS“q;'’ñb$N0âó g“¦œ{fL’ ~2¹’ps%şÆÈ•¸m‡×,WâvÀT®ÄOa®Ä‹¹’8Á\‰—å'+ñ©r%qì¹/É•JÃ·,]Âó7‰S•.q']'•.ñ2vé½ñT§L<•'2ñSš2q'e'2ññ)“8‘”‰Oš2‰ãI™xØ·yãú dÛ·î„²#^”üd²#îfGâd²#^š‰Êø¤Ù‘8™ìH:kY >eâ##ñáGO|Ä1$>œŸòÜáÕÓ…o£¤·à£ådşfpÕívâÏ
+ªEé·z-ôûÕ•ÿ¶ğèa¸b$¾3¾"›ÕU-™ÁÌ
+gÇ<¡?ü¤¿D¦ÏØ»åÿã0ñã{Ÿg·²„Y”fV÷³•E¨ M9›å±·˜ÍÆ{“3ÖDp²Š ù…ì Ş‘"(hv>›ƒ÷y¬ïsidİÏ¢û™tŸM÷YJ«A¬³¨'Û Ì¤öº×*5lÎ×RO¶A©VªØ‡p¬šÆªÙ½LUª”élÉÀûn›®p¶Çäà½Çä(gĞÊit¯dUt—+*îşD‹æ›©T\İU‚’ÈC#
+İYÛØ.»,^ù³W{Å‚?{!oÁË/ui/ï‚—ºàÅ<¼`ÁŸ,ø/şó <oÁ-xÎ‚?4Âï-øİ®ıÎ‚#´©¿ı×~»
+~Ãá×yxöÆÙÚ³<“‡ÿÈÃÓØyÚ‚·àWüÒ‚§,ø7~aÁ¿æáÉŸŸ¥=…ŸŸ?ûl£ö³(üô'ÍÚOóğ“føñcÍÚóğÄ´'fÃ×i?j€Ãuğø§køátøBü !şÇšáû«Ò¾¿¾÷İí{Kà»‡fhßm€C3àQœ~t<Ò ßyø€ö~èJíáğğnõ¡¶±›µ‡®„‡ÚÔ›á_,øç(<ğ‘:íîŸß¶à>îıV«vo¾õåyÚ·Zá›ß˜«}s|ã`½ö¹pğ@­v°ÜS¥¨…{ªàëHìëì·àk³à«3àŸ,øGşÁ‚»Ï„¿ŸûfÃWÏWòp>îÊÃ—şËóàN|Ü¹¾dÁß-¿µà‹|Á‚;,ø·[ğùÛj´Ï[p[ÜÖ¦~õ¹<|—|¶>ƒÏäáÓ(ü§çÃ§,¸õ–Ú­Ü²÷Jí–pËnuïÍÚŞ+ao›úInFï¸Ù‚O´À\¸§±m>K?.àcUpİ´>ŠZp#êáÆÙğ‘:¸¡şÚ‚[ğ!®·à:>hÁŞß¬}À‚÷7Ã_Yp­ï[ïİiÁ5ìïáğnvYğ.®ÎÃ;ó0jÁÈğÚˆÃwÀ9OÊƒ9ryÈî‚wXI{µ´RyHæ!‘‡ì° nÁ`¤J\ÄVåšaA”C´Môs-Rıôí³4}lWêµí³àíŞfÁ•\ı+,xëåó´·Zp9ö.ŸÛ,Øš‡-lÆ~ÛØf6Yn„¾]6Gåá2œ¸lôçh½yöÔkÁ9ĞS¡{CƒÖ=6¬¯×64Àú@¶¾5°.]k´®Y°¶üyèì¨Ñ:k¡£Ú}ÍZ{|ˆÓ×m—Öjm\zIvi-\R¿¥Z»x6¼¥ÖD¡Õ‚‹àÍ\8.8®vA3œ^ƒvş\8ÿ^õ<^­× çíVW¯ªÒV7Àê6uUœ»òí\V"ş•wÀŠ*h™	Ë½­Úò<xg5kŞV8'
+…e,o:³^{S#,ĞÜg/Fœsv#,®‡&V­5åaQ-,jSE,äĞØæÏÑ4ÃüÚ™Úü90?î7ªóªaîœÚÜ]0‰ÎÙ gYpf=ÌFj³ó0Çf5CCfÖÃê±_oA]jkê´Ú™P{¯ZS5»Õjœ©ÎCÕ*˜¢MŸÓw«¼x›z†Ó,¨´ BãZ…­MUó Qğà*…»Wµ¦Ô«e¿½öÃÊ9ÿ7>ìõfà5ü,`ÿ4Íƒ¡
+endstream
+endobj
+29 0 obj
+<</Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+>>
+endobj
+30 0 obj
+<</Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+>>
+endobj
+31 0 obj
+<</Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+>>
+endobj
+32 0 obj
+<</Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+>>
+endobj
+33 0 obj
+<</Type /XObject
+/Subtype /Image
+/Width 462
+/Height 246
+/ColorSpace /DeviceRGB
+/BitsPerComponent 8
+/Filter /DCTDecode
+/Length 16093>>
+stream
+ÿØÿà JFIF  ` `  ÿá hExif  MM *           >       F(       1       N       `      `   paint.net 4.2.14  ÿáªhttp://ns.adobe.com/xap/1.0/ <?xpacket begin="ï»¿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.0-c060 61.134777, 2010/02/12-17:32:00        ">
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmpMM:OriginalDocumentID="xmp.did:a79797d0-fb39-4ef7-8ed8-40bf8ed16aa5" xmpMM:DocumentID="xmp.did:450880F4523111E9818D87BA3132028F" xmpMM:InstanceID="xmp.iid:450880F3523111E9818D87BA3132028F" xmp:CreatorTool="Adobe Photoshop CC 2015 (Macintosh)">
+      <xmpMM:DerivedFrom stRef:instanceID="xmp.iid:c8dba062-2d34-4a4e-bd4a-8b118ac88f5b" stRef:documentID="adobe:docid:photoshop:91fe92ba-5e82-117c-b78f-901dddce945b" />
+    </rdf:Description>
+  </rdf:RDF>
+</x:xmpmeta>
+<?xpacket end="r"?>ÿÛ C 
+
+
+		
+%# , #&')*)-0-(0%()(ÿÛ C
+
+
+
+(((((((((((((((((((((((((((((((((((((((((((((((((((ÿÀ  öÎ! ÿÄ           	
+ÿÄ µ   } !1AQa"q2‘¡#B±ÁRÑğ$3br‚	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ        	
+ÿÄ µ  w !1AQaq"2B‘¡±Á	#3RğbrÑ
+$4á%ñ&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ   ? ú¦Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( ŸŞK¨ı¶ğ¾m^á£¶\q±>Rß‹?LVµ9+;Ğ›57×_“Ûğ
+) Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@axÓQ“OĞd‡ı:é–ÒØwóàÃ“øUE]¤aŠ¨éÑ”–öÓ×¡§¥ÙG¦é¶¶P«·c_|f­Rnîæ°‚„T@¢‘AE PE PE PE PE PE PE PE PE PE PE PE PE P\l²müFù­4H|×ô3È0£ğ\Ÿ®jáÕœxÇu
+Í%ø{ß¡ÙQPv Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@OYÔ"Ò´«»ûõVñ™õÇAõ'Æ¹Ï…öRÇáÖÔo9½Õ%kÉIôcòşçñ­là¨ùñò¦şû%ú}™ŞPE PE PE PE PE PE PE PE PE PE PE PE PE P|S¹}JóGğ½«%üË$øşÁÿ ëÿ  ¯@‚$‚â‰BÇ„U  V’Ò	vûLUj­¹]ş,}™è… Q@ Q@ Q@ Q@ Q@ Q@x÷¾5Â1â‹ıûí_ee_;í›7eC}ß,ã¯­vàp[›‡5¬¯ÜïËğ_]¨áÍk+ísş#ş¥ü¨öª?á¢?êWÿ Ê‡ÿ j¯Sûş~ğO_ı]ÿ §Ÿ‡üÿ †ˆÿ ©_ÿ *ıªøhú•ÿ ò¡ÿ Ú¨şÁÿ §Ÿ‡üÿ Wéçáÿ ?á¢?êWÿ Ê‡ÿ j£ş#ş¥ü¨öª?°éçáÿ ?ÕßúyøÁøhú•ÿ ò¡ÿ Ú¨ÿ †ˆÿ ©_ÿ *ıªìúyøÁõwş~ğI¬ÿ hX¥»‚;Ÿ`gU’Q}¸¢“ËcËÀçîÊÁÔ2ÊÃ ƒEyØüÁ¸û×¿•/1Ë	ÇŞ½ü­şbÑ^yæ…ã¾3øß‡¼M}¤Ûh¿n[GòÚµùy||ÃC‘×µbÃDÔ¯ÿ •şÕ^õ,‘Ô‚›®»Á>Š@êSŒİK]_oø$¶Ÿ´·wPÛ[xPÉ<Î±Æ‹¨rÌN ºõ¯wRJÃŒçÃÀ¬Šæ½ü­ú~c—¬Šæ½ïÒß«1<QâÍÂöşn·¨ClHÊEÒ?ûª9?^•ä> ı cWdğö\všõñÿ /ÿ Z`rÉâ}ùiÏĞ×/ÊgŠ\òÒ?Ÿ¡Ä_üjñ¥Óíµ˜ô‚Ùÿ ÇÃVoü-_Ğzûõÿ ^ì2¬,U¹oógĞÃ'ÂE[–ş­—,¾2xÚØú¤w
+?†khÿ ˜PZì´Ú
+éS^Ñ¡•:4¶nP}­œşb°¯“Qš½/uş>'"¡Q^—ºşôzß„|áß…M*ıEÑ6³.Qø¿ğkª¯›¯Bt&áQj|®#S7N¢³
+F!T–  2IíX˜eğüŸøëZñ$€›xÑísØtÈÿ €ß¯N­jé+v<Ì§Ş êÿ <¤ş÷şAEdzaE PE PE PE PE PE P_|kÿ ’¡¯×Tÿ Ñk^ÖGüyz~¨÷xıâ^Ÿª8Š+ê®
+( ¢€
+( ¯¯>x‡ş‡ö&Wİucş‡6O? Oâ¥yõÍxÙİ>j
+]™áçôù°ê}ŸæwÔWË ‘âíj?øgRÕ¦Á°³ªŸânŠ¿‹?ºpö“P]Y¥(:“ŒWcâ™åº¹–âáÌ“JæGsÕ˜œ“ùÔu÷éYY£¤’²=SöwğçöÇ´gMÖºZy¼ô2¶BÃæoø®ÿ â×ÅôÑf›GğÃG6¢¹Iîˆî¨ş&ûs<U®c½›øbµüÏÅĞúö`©¿†)_óün|é¨_]j7’İßÜKss)ÜòÊÅ™ÔÕz÷RQV[C¨¥ìSQ@GŠE’&du9VS‚¨5î?
+ş3O°é^0”ÍnÄ$Zƒ}øı£ı®£¾zÇ±4´ø–ßäyÙ	bé;|KoòùŸC#+¢º0eaÀä\Å}kûÂ7m¸¼ÿ G@?xÿ ß9üH¯§Í#óœÆ¯±ÂÔŸdËŸtì_ØÛºíEóåõÜÜàıá]-)»É²ğT½û%ù'HQ@ Q@ Q@ Q@ Q@ Q@ WÇŸÿ ä¨kßõÕ?ôZ×µ‘ÿ ^Ÿª=Şÿ x—§ê"¦³µ¸½¹ŞÎ	n.$;R(»1ô rkêI]Ÿ\ÚŠ»6áñOıZßş Kÿ ÄÑÿ _ŠèZÖÿ ğ_ş&¹ş¹‡ÿ Ÿ‹ïG7×pßóò?zøBüSÿ BÖ·ÿ €ÿ ñ4ÂâŸúµ¿ü —ÿ ‰£ë˜ùø¾ô]ÃÏÈıèdŞñ,0¼³x{X(Ô»»ÙHªªI$¯°ëZuaSXI?CZu©ÕÖœ“ôw
+õïÙ³ÄÙŞ.¸Ò&|A©EòxóS$~k»ô®lÂŸ´ÃMy_îÔåÌéûL,ãå»SéÊ+âO‚
+ğÏÚwÄ>NŸ¦ø~ÃÜ7Ú§ ÿ ğ€ıNOüW~YOŸÛ_¸ôrš~ÓÛ_¸ùâŠû3îb¹Ößá×ÂÛNo/ÄâË‰ï[ÄÃôb éó¸¯ëÖ¸°PÒU^òoîÙ8i:Ïy¶şKD IÀ&»Nãºğÿ ÂŸkq,Ğékr$¼aà'æÇ¾+¨_€#òÉmKHvPòùìş•åÖÍğô¥Ê®ı"¾w†¥.UyzZçÁ¿iQ´‰eükÔÙË¼ÿ ß$?€¯>¸†[iˆ)ítu*Ê}=+¯Œ¥ŠW¦ş]NÌ.6-^›ùu#¢ºN³ŞgŸ8™<-«ÌYa#ŸºG&,úwˆô®Åÿ 	wÅK!>{<şôu4ŸÈ/ÔWÊc¨{L¤¶jÿ ×ÌüÃŒ({:± ¶«(ı×»üQëÔWhPE PE PE PE PE PE P_|kÿ ’¡¯×Tÿ Ñk^ÖGüyz~¨÷xıâ^Ÿª8ŠëşÉJğÿ ı|äkè±?ÁŸ£ü§Å~ò>Ë¢¾üì( uWFGPÊÃHÈ"¾(ø…áöğÇŒu=/C¥¡'¼Mó'è@úƒ^îERÕ%êÿ wü9ô<=RÕ'Oº¿İÿ sµoGÔ'Òuk=BĞâ{Y–d>êsùWÒJ*IÅõ>¦QR‹‹ê}Ç£j0júM£hsÔ+2}gŞ®WÀJ.2q}Íç8¾€H “ÀM|[ñ3Äğ“xÛTÔU·[™<«~xò—åR>¸ÏÔšö²:w«)ö_Ÿü1ïpı;Õœû/Ïşåë¢ø£E­ø¢ÖÏ—O€5ÕãöH#œŸ¨üE}iòS”—D}5yºtå%ÑüY®Oâ?_j·9İq!eBÕ§EQìáY4éÁS‚‚èU(*pP]‰¬­g¾¼†ÖÒ'šâgÇ–bp ¯ª¾ü-Óü'kæ¥Wšë Í+Ëşì~ãûİ}0+ÊÎ1N•5N;Ëò<|ïèÒT õ—åÿ ôª+åO
+ä> xHñ¥‹-äK «ˆoc_`¼¾ÇğÁæ¶Ã×•
+Š¤zá±ÃÔU!Ğù#ÄÚ÷†õ«/T‹Ë¹„ã#•u=OpEe×İSš©8ìÏĞiÔH)Çf[ÒLËªZ½¬é"ºH½Pƒœ¦3_NüÓ]áÔµÛ¼´÷R‘Û©Üçñ$ß5ágrI%Ôüÿ Šæªæ¸jÉIüô_Š=JŠùÃœ( Š ( Š ( Š ( Š ( Š ( Š ( ¾<ø×ÿ %C^ÿ ®©ÿ ¢Ö½¬øòôıQîğÿ ûÄ½?TqÓ|3¾¶Ó|y¢Ş_ÌZÃpI¢ŒM}tåJIvgÔâ"åJQ[´ÿ #ê_øY^ÿ ¡‚Ëşú?áGü,¯ĞÁeÿ }ğ¯şÏÄÿ #>û3ÿ >ØÂÊğwı_÷Ñÿ 
+?áex;ş†/ûèÿ …ÙøŸäaı™Šÿ ŸlÔĞ|Y¡x‚âH4mNŞòhÓ{¤d’8ÏækÉißù¶zwˆ`_šöK‚?ºrPşpÿ 
+ß §‡ÅÆ5ßyÑ—)áq±EfôûÏ¨¯¯>Ôúoölñö‡„î4‰Ÿ3é²å<ùO’?&İúW¯×Åfı&kÎÿ ~§Áftı*qó¿ß©Ãügñü#¾ Ô%öİ]²AÎç${…Ü~ WÇµîd”ùh¹÷gĞdùhJ}ßäézĞ¾kšìƒmÎ³2iÖìzˆƒn|½µ‡ü»ñr÷cí/Æÿ ¡éc%hÆ=ä—ãĞóJ+¨ë=ÃöfğÊ]jŞ"º@Ëh~Ím‘œHF]¾¡Hğ#_EWÇæÕ9ñ2]´>'9«í1r]¬‚ŠóO(( ı¤|2š‡†"×`Oô­9‚H@å¡cÑˆ?‹WÌÕõÙ=N|2O£·ê}¦IWÚaR}_¯êt>²y¦2"vaj:’È¯±ü5¥¦‹ ØééÜDˆîİXş$“^FqSš­„ÆÕúÎy‰©Ò
+0_›üM*+È7
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¯>5ÿ ÉP×¿ëªèµ¯k#ş<½?T{¼?şñ/OÕEõ× Q@Ëû/Èİªÿ ×şÔZ÷ÿ è±x‹ÃZ“>İBP1şê­ø0ğ¯”Ìæéã9×K›MÓÇs®–gÄvòÙİMmr†9ávD=UÁE_VšjèûÓWG{ğGÄ?ğü@°2>Û[ßôI¹ãçû§ğ`¿†këÚùlîŸ-u.èùşŸ.!Oºü™¿i_ı¿Å6º4/˜tè÷Hüõpè»3^=^æ]OÙá ¼¯÷ê}YOÙá`¼¯÷ê[Òl'ÕuKKEİqu*Ã÷cŠ÷_ÚÊÀ>ÑmğKµGBÛ#Æì{î$ûšË;âhÓóoğ0ÆT¾.…?6ÿ çú+Ò=Së€–kiğ¿Je =ÃK3ã¹20¢Šô*ølcæÄMù¿Ìüû.lMGæÿ 0¢¹P¢€1¼kfš‡ƒõ»Y Û-”ËÏc°àş¾ ’ '€+é2){“^gÔğüíN¥öLöß‚~~$´.¹†Á>Ğç±áÿ Ç
+ú6¼llùê¶~”Mâ#W÷©9Kñ
++õÂŠ ( Š ( Š ( Š ( Š ( Š ( Š +ãÏòT5ïúêŸú-kÚÈÿ /OÕïÿ ¼KÓõGE}AõÁE P²şËßò7j¿õãÿ µ¾•¯‘Î?ŞŸ¢>+;ÿ {~ˆùcöˆğïö?¿´!M¶º¢yÜ«€ãÿ Aoøye}§´ÃÂ^_–‡ÔåÕ=¦òü´X«RCGQ_fxOÅÖúÃ›oŞHÅjdº#³ÆÌƒ¨¯?;¤çIw·ßÿ y™õ8S’ïo¿şøûZÔgÕõ{ÍFèæ{©šgö,s¥S¯j1QŠŠè{°Š„TWCØÿ f¿}¿Ä·:Üé˜täÙ=®ı?÷Ğ®§ö¤‡v…¡Íƒò\È™ì2 ÿ ìµàÕ©Í™ÅvÓğÿ ‚|íZ¼Ù´Wm?şgÎtW¾}!õ÷À»„¸ø[¢ìë–6„Jÿ Óñ®ò¾­^kÍşgç¸ÕlEEæÿ 0¢¹Î`¢€2üW:[x_XS„ŠÎgo Bkâ½ÛÏ¿V#ä‹ç?^ßçÚ½ìª\˜z²=‰ú¦S‹­ıÛ/V¬¿}UğcGşÎğ¯Û$\M~şg¾ÁÂæï«Åªï6ÏŸÊ©{,8ù_ïÔ(¬Ï@( Š ( Š ( Š ( Š ( Š ( Š ( ¾<ø×ÿ %C^ÿ ®©ÿ ¢Ö½¬øòôıQîğÿ ûÄ½?TqÓ|3±¶Ô¼y¢ÙßÂ“ÚÍpHß£}y8Ò“]™õ8‰8Ò”–é?Èú—ş¯ƒ¿è_²ÿ ¾OøÑÿ 
+×Áßô/Ùß'ükã¿´1?ÎÏ‡şÓÅÏÆğ­|ÿ Bı—ıòÆøV¾ÿ ¡~Ëşù?ãGö†'ùØiâ¿çã54	è^¸’}L·³šDØï •ÎqùŠÛ®z•gV\Ówg-Z³­.zìóÏŞşßğÔ¦ë½<ı®,HQóûç'ê|‘_M’Tæ ãÙŸYÔæÃ¸va]Fã»jw“{sÛûª>úş%cü­zu©*©'Ñ§÷3Õ¯EVI>?¹œ½©±öWÂÂ1à]:ÊDÛu*ı¦ã|Çäƒô_ø`~ÑZk_|8–t]ÆÊæ;ƒ¸9Cÿ ¡ş•ñÔ«sc•NòıO‡£_Ÿ0U;ËógÊ”WØŸp}	û1x…ËRğüÎ±¿Úàıå8WèBŸø¯v¯Í)òb¥ç©ğÙµ?g‹Ÿ¿xQ^yæ…æ´ˆGğÖHà]êl-ÑAçgW?L¿ğ!^á;8Äp‰+;‚ò‹¿€æ½Ì2tğWşgùÃüEWØdj›vö³KäµüÑôR|Kğ¶Ÿmµ£ÜÉ(±  P0>ö=)ğüUğÜ‡ç{¸½Şÿ "kÊú¼÷<…Ä8Ú	»zšoŒ¼=©0[]ZÛyè²?ƒbµ´ì?çú×şÿ /øÖn‹³G©G‡­zsMö‡üÿ Zÿ ßåÿ ?´ì?çö×şş¯øÔò¾Æ¿X¥üËïEº) É¦Š÷Ï"F™Æç`ëUÿ ´ì?çú×şÿ /øÓI½ŒåVv”’í;ùşµÿ ¿Ëş4ø/mg}\Á#ã;R@Çô£•ö¯NNÊKï"Ôµm?K~£{ol#Í)?AŞ¹‹¿‰¾·bòYÈÿ P¶?2\)J{#“šap–¬µìµeDø¯áÆl|ƒÔÂ?¡­m?â†oX*j‘DÇ´êÑãñaÖ©áæZ9ş
+«åråõGKÑ\D²ÛÈ’ÆÜ‡Fâ*JÄöSRWAE
+( ¢€
+( ¢€
+øóã_ü•{şº§ş‹Zö²?ãËÓõG»Ãÿ ïôıQÄW_ğ‹şJW‡ÿ ëä#_E‰şıä}>+ø3ô‘ö]ğgçaE P:«£#¨ea‚¤d_|BğûxcÆ:—‚!ŠRĞ“Ş&ù“ô }A¯w"©j’‡u»şú©j“§İ_îÿ ‡9Ú+éOª
+î>xsşOXC"n´µ?k¸ã¨Fú¶Ñô&°ÅTöte>Éœøº¾Ê„çÙ3ì*£¯ië:-ö›uş¦î…:nÈ÷ká¡').‡çĞ“„”—Cáí[OŸJÕ.ì/eÅ´­ƒİN?*©_)%%Ôı"2RŠ’êixoZ¼ğö·iªi¯²æİ÷.z0èTû~µö€¼g¦xÏH[½=Â\(âÕ›/{úFïõÈw‡rŠ­š?Ğùìÿ 
+å×MètÔWÍŸ,™â=wNğæ“.£«Ü,Ñ÷=\öUÉô«„%RJİ—NœªIB;³äox¦ïÇ¾,û\àÅú«x3‘cŸÌòIÿ WÕB¨U `
+ú,dBŠèÄ)ªRÃ`£öbßŞíú1h®óp¢€
+(è…>$şŞğêÃpû¯ì€Š\]…¿!ƒî­vµåÔ,š?QË±XÂÂ§uø­QPvñÄÿ Úº¸Ò­6vLwxyzË§×5çUéÒ,?2Í±XÅÎkkÙ|´
+ÔÑ5»­Ï&¶+¹WËóñ–Eî°'×¯¦*ä¹•™ÇF´¨ÍTëb…ÍÄ×S´×2É4ÎrÏ#cõ&¢¦D¤äï-ÂŠ	4t]oQÑ.<í.î[wîü­õSÁükÛ>üAÄR¦Ÿ¨D Ôö’¥).N?ºqØş}«š½%%Ì·>“ ÌåFªÃMŞ2ÛÉÿ “;ú+„û ¢€
+( ¢€
+( ¯>5ÿ ÉP×¿ëªèµ¯k#ş<½?T{¼?şñ/OÕE^Ğµ[WµÔ¬
+«gó#.»†}Å}4â§ÔúÉÁN./fzü.ÿ ÿ Ïk/üãGü.ÿ ÿ Ïk/üã^oö>³ûÏ+ûÙıáÿ ¿Æ?óÚËÿ ‡øÑÿ ¿Æ?óÚËÿ ‡øÑı†ìşğşÃÂöxÂïñüö²ÿ Àaş5ô—‚u+cÂ:>£xTÜİZÇ,…Fb2p+ËÍ04°ĞŒ©õg“›eôp´ã*]Yµ^ûNøwÍ³Ó¼CüĞŸ²\ıÓ’‡ğ;‡üW.WS“=<¦§³ÅÃÏO¼ùêŠû#îB¾Ÿıœ<9ı—áuyÓ:›år9&Bşgqúb¼¬æ§&—»Kõ<|ò§&Ç»Kõı[¢¾HøÃÁ¿h¿<ßñTé‘n(¡/‘G8,Ÿ‡Cíƒë_?WØåU½®+ªÓúùq”WöØX®±Óúù\ÒuKíú;İ.ê[[¨şì‘6ÓÜ{W¡(©'-éN*qq’ºg®ø{ãî­kÇ®i¶ú†8ób%Ï¹* +¨_ÚEòÉmQvPÈGçŸé_?[#¼¯JZyŸ7_‡ï+Ñ–f¹ûA]É&‰¢ÅtİJdÿ ÇTækÈ¼KâM_Ä×ßjÖïeº”p¡¸TŠ£øW~-†ó·y†*§„|íŞ_—¡?†-òÒ\0éò/õ®‚¸qÒæ¬üÆ8ßõŒâª[FÑû–¿‹aEr$§áıÿ _¼km2,Š†Fç ê}úsJME]šÑ£:õ:jí™Î¬ÈêU”à© Ói™½4fÿ ü@şñ½è-ösû¹Ôg¯åÁü+é¨eIáIb`ñÈ¡•‡B ×*:¦}¯b9¨Î‹èï÷ÿ Ã®KâW‰G‡<>ís˜­Çp{¿à?R+
+qæ’G»Ä}[:½—ãÓñ>qbY‰bI<’{ÒW¨~XPE PÖ–Ó^]EokK<¬FK_C|;ğl>°ó&	&©2şúQÈQıÅöõõ?…sbghò®§ÒğŞÚÖuå´võåşGaEpŸrPE PE ñçÆ¿ù*÷ıuOıµídÇ—§êw‡ÿ Ş%éú£ˆ¢¾ úà¢€
+( ¯´şÉ;ğçıxÅÿ  ŠğóßáGÔğ8‡øPõı²|[¢Åâ/j:Løu	@Çø[ª·àÀÂ¾rœİ9©®ŒùjStæ¦º;Ÿ]ÛËgu5µÊç…Ú9õV~u}úi«£ô„ÓWFŸ†4yµÿ iúU¶D—S,{±£»~'ğ¯¸4ûHtû{;T	ooÅáUòó¹íMaOæ|ÇÔ÷¡OÕ“Ñ_>|ØÙ#IcxåExÜeaÀõWÍ¾\éM«x^¸Ó/-ªÏoëÕ“õNkÔÊ±j…^Y|2ş‘ëäøÅ‡­Ë7îËóèxİõÇÚ P9é@7mYÛiöÿ e³Š.àe¾½ë¿øgàÕñEäÓ^»¦Ÿl@p‡#á°õ5ò˜ŠºÊgózö¶g)=§)7évÏnÓ¼5¢é±ìô»HÀÜcÇêÇ$ş&CÃZ.¡K½.Î@F2"
+ÃèÃW—í%{Üû¯¨a½Ÿ²ök—Ğó/|'™n¢“ÃM¾kÃ3€bŞz¯·_­zO„|9gá)lìÆç?4ÓóHŞ§ÛĞv­jVç‚G•—dËŠ_³ö~{ıÛañŸÂ¿d»şİ±NÛn@vNÍô?Ïë^[]TeÍ|¶s†ú¾2q[=WÏşW·|ñ'Û4çÑnŸ3Úğ~ôyä~şDzTâ#xğş#Øã^ÒÓõ_‘ésHÂòÊÁ#E,ÌÇ Ôšù£Ç"ø‚k¼‘jŸ»·CÙ©ê~¾Õ†7“‘íñ>#–Œh¯´ïòG;V,-'¿½‚ÒÑ“ÌáGrkµ»j|T"ç%îÈd]’2‚FGCM¦&lxOC›ÄZí¾üÂYä#;rOùï_@h~	Ğ4xU`ÓášQÖk…9>¼ğ?W&"£^ê>¯‡rêubñUìì¿ÌÔ¸Ñt»ˆÊO¦ÙH‡³@§úWã…¶WVò\xy~Ëv£p·-˜äöû§ôúu¬iÕpzì{y–SGIòÅ)­šü™¥ğÓÁ	áËo¶ê
+¯«J¸#‚ _îƒëêïİÔÔŸ<›:2ÜÁá£K®ï×úĞ(¬Îğ¢€
+( ¢€
+( ¯~%|(ñ6¿ãWTÓ¢´kK‡VŒ¼áO£‘õ½,³OUÊ¦Ö=L§OUÎ¦Í[ñG3ÿ 
+CÆ?óÆËÿ GøQÿ 
+CÆ?óÆËÿ GøW¹ı±†îşãè?·0½ßÜğ¤<cÿ <l¿ğ$…ğ¤<cÿ <l¿ğ$…ÛnïîíÌ/w÷ü)ÿ Ï/ü	áGü)ÿ Ï/ü	áGöÆ»ûƒûsİıÁÿ 
+CÆ?óÆËÿ GøWÒ^	Ón4èúuàQskkR9€ÁÁ¯/4ÇRÄÂ1§ÑNm˜QÅSŒitfÕâ	à?>k:×Œ®µ?GlmnÕd‘d—aYz7øêMr?ğ¤<cÿ <l¿ğ$…}>6¡QŒÛº]­ÃgXxQŒfİÒKcÑ>
+ü0Ô¼-¯]j¾ Kq*Cå[,roÁo¼ŞÜÀ{ExÙ†&8šÎpØğ³<TqUÜá¶–
++„óÂŠ óÏ|%ğ÷Šd’é#m7Q|“ql W>®Ô`ŸZñŸ|ñVšÌÚzÛêA†@ulsô&½ül •:ÿ 'şgÑå¹Ê„U,FİùœEÿ …<C§±º&¥»[>Ğã³~Åuÿ >Óÿ ß³^ü+Sš¼d™ôp¯J¢¼$ŸÌ¹eáİjøe¤j7ôò­¿­ÿ ø@µí"}G[°6V¦@¨%uŞí‚q°À®lN2•8¸ójú>}šQÁà+K™sr»zµeø–ëÔ¾
+ø’ÏM{½/P™`ûC‰!w8RØÁR{˜¯œ­(4Â2lDpøÈJnËo¼öª+Í?I
+(¾¡g¡c=¥ÜbH&B§¸5ó'‹tü9®Oaq–U;¢“ëôoñ÷º°²ÕÄùN(ÃsB×MÏoëÌÆ«ú©>‹«Úê‡÷°>ìg†Ôû‘ø×cWVgÈR¨éN5#ºwûPø§ãx.ü?ic¤KŸ·Æ³LAå#şá÷$r=½ëÈ+*å§©âÖ+Í’I~¨W´üğ¯Ùm·¯cıüÀ­²°û©İ¾§··Ö–"\°õ/ Ã{|d[Ú:ÿ —âxÃ©Gea†S‚=6·<W¦‡Qğã\‡Ãş*·º»$[:´2°Ú¿à@¯£ín!»·IíeI¡nWFÜ¬=pâbù¹·áœDeBToªwù2Z+˜ú`¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ªWÚ¥‘Äó(îOä)Æ.NÈÆ½zxxsÔvFqñEˆ<Gp}Âñ«Všõ…Ã˜Øô~½+GFI\ó©gXj“åÕzíùš”VG®Eus¬&[‡ƒ¹ªÛúgüüÿ ä6ÿ 
+¸ÂRWG|~.J²³ùş…û[˜®áÛ¶øÏ àç^ñ³Yûw‰#ÓâlÃb˜lÏFÁ?¦ÑùÖ¸xşó^‡—Ÿâ#õÁé6¿Ïô<îŠï>étkÚ"¬v—Îğ/HgbcĞg>„W{£üa‰°ºÆšè{ÉjÛ‡ıòßâk¦KXî}[ŸÔÃ%N¿½Å™ßè*Ñµî4Ûèä—0·Èãşy?…m×¢âìÏµÃâiâiª”ĞWñ;Âßğ‘èe­F×2B{¸îŸop)Ó—,“2Ì0ÿ YÃN—V´õéøŸ:°*Ä0 =©+Ô?-
+(ªøsá†ñ.¼‘Ê§ìø’á‡—ê–kéÑcR5
+Šª€ í\8™^Vì}Ïá¹0ò¬÷“üüŸ7üJÑ$Ñ<Yx¥¶¹sqv*Ç$~#òõ®Vºàù¢™ò8ê."tßFÿ àjè!Õt97iwÓ@	É@r‡ê§ƒùUJ*JÌÊ…z˜yª”š;ıâıÜ[SWÓâœt2@ÛëƒJï4/ˆ>Öcïì³·H®†ÃùıßÖ¸ªaÜu‰öywÓ¬Õ<G».ıù~GYEsJPE PE PE PE PE PE P7‰µ6±·Xà8^‡û£Ö¸†%˜–$“É'½uÑ£sãó¼C©_Ùôæ%±ã7„õ7ó¾Å3R3=ˆíô­ıSQƒN‡|Ç,~ê­\•!ïÙu>Ã/Æ¥‚ö•Ã§ù.¥¨O¨OæNxuERº¢”U‘ò•ëJ½GR{³¯Òï¢Ó<%-íÇú«t’F÷ÆxükÅ|5áCÇÅêÌ‘Ì§ÍÜãå’F$íÏn3úVtß'4ÙêcéK6Wş~G=¬i7Ú5Ù¶Ôí¤·”t8aêB=ÅP®¤ÓWGÊÕ¥:Stæ¬ĞQLÌtnÑº¼lUÔä2œkÕ>|I)âÓ|E/›±İ¹ù£>{~£¾{eZŸ<|Ï['Ì%ƒ®®ı×£ÿ ?‘ìÔWš~xwÆO
+ÿ gêÛVIş‰tØ™T«“×èßÏ>¢¼Ò½*2æ‚gæ™Æêø¹Ålõ_0©­-¦¼ºŠÚÚ6’iX""õbz
+Ôó£&¢·gÓ	ğô^Ğa²M­9ùç¿€è=…oW•)s6ÏÕp´Œi.ŠÆ'‹|7gâm,Ú^‚®§tS(ù£oQê=GzùûÅ^Õ|79Ğ¶Îæ1˜Ûñì}táª}†|ÇåÒ—û]5ëşæsôWañáE v^
+ñî£áÙ’îôŞ¶JT'§Ó§ó¯ 4»ûmRÂÛ)¶ó.äaşz×"Ÿ+æGÜğîa*ôŞ£Ö;zÀ-Q\ÇÒ… Q@ Q@ Q@ Q@ Q@ Q@¯‰4ËëÍ@Ë%âHaü³YÖzÛŞD—ò$E¾vô×‘QµÏ’ÅeØŠ˜§'u½üŞ8bŠ!qªÆ6Åq'¶†×T+n« r£ <ÿ …gE¾cÑÎèÁa“JÖjßägÙÊğ]E$#tŠÀ¨õ>”—WİLÒÎåİº“]6W¹òşÖ~ËÙô½şe‹M6k‹Y®q¶”¶â>ñ…R¡Jí¤:”%N1”¾Ö¦Ämcì¾²Ó"lIy+3ÿ <Õ³ú¶?#]ÇÃMûÂ6q:í¸œ}¢o]ÍĞ~ğ¬*û°·v{™gï±¼ßÉ¯¿_ó:BÂÓQ·0_ÛEq	ê’ aú×	­|'Ñn÷6,ö€1?#ÏëYÓ«*{¦a•PÇ+ÏIw_Ö§®|0×ôĞÏkz„ g0œÀO?–kˆš)!•£™9á‘Æ>â»©ÔE¡ğxüº¶|µgÑŒ¢´8¡¾ëRjŞHî´öOörOR §ò8ÿ €×m^]EË6Ô2Ú®¶œŞö_äQ×l Ô4kË[´±0eü8?Py¯”k§
+ôhù¾)‚S§.­?Âßæé_ìàŸÄ7—F[x3?ÂXàŸ®8ükjÎĞg“ÁOMK¿å©îTWš~–Ù%’EWF*Ã Š««3Öşø{SfxíŞÆfçu³m÷ÉÈü€®[øIªÚ†}*æä¿tÿ ©Çê+ª!­&|®eÃ±©z˜]nŸ.ß—¡Àjzmî—rmõY­¦Ã"‘Ÿqê=ÅT®ÄÓWGÇT§*rpš³A^¯ğ+Z‘/o4y\˜dO´Dğ°À`> ƒÿ ¬ë«ÁIUÒÆÃÏO¼öZ+Í?H
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+(7YÕ¢Óbç;•?©ö®æy.gy¦mÎç$×UYs3å3Ì_<Õíıà~´kM$ÇîáùØûöçÒ·n¼;o>£çîÛrñçëÚ•Jœ³Ğ×/Ë£‰Â®æ¿Ëf^Õ‘cÑ®’5
+« €8¯<§CfeŸ$ªA.Ç#¦Û7‹¾"[Z·ÏglpŞZOæÇğ*÷úX—ªGGAºSªú»|’
++˜ú0®?âG…lõİêçÊTÔmâi"™F¶ŒíoPJºrq’hãÇá£‰ÃÎœ»iëĞùÎŠõËO`ø ìS]B~P` {Ÿ3üzåyÕÿ ˆÏÑò|?ŸæÈo?ãÎúæßÊ¾I­°½OŠ·¥óı½Oà'ü…õ_úà¿úm[àg’¿SùşLöš+Í?I
+( ¢€3õİÇ\±{MJ–6>d>ª{ù‹^Ó›IÖ¯l·›yZ0ØÆàñ×…“Ö'ÈqF+’ºZ½èP®Çá²ü@Ó 8%ÜyL¥tÔøó™sÿ k¥ş%ùŸEÑ^YúQ@ Q@ Q@ Q@ Q@ Q@ V>¹­G§©Š,=É;/¹ÿ 
+¸G™ØäÆâ–‹¨÷éêq3K$ò´“1wc’Ozµ¥é³j3lˆaßsÑúõØÚŠ¹ñiOYAo'ÿ ÎïO³ŠÆÙa€p9$õcêjÍp·wv}õ*Q£N;"–µÿ  ›¿úäßÊ¼¯^½şÏÒnnÃ…ÚŸïtáö>_ˆªEùŸ´_³i:´ËûÛ¶òã'şy©äş-ŸûäV‡Äï¯‡í†œêÚ¬«Éê SüGı¯Aøıe¯iVÇMßÙÙLgÕ­=^«úò<ëÀ>?¹ğìÏÿ ™w§JåØg/¬¹ëàı~¾Ù¢øIÖãVÓoà˜Ÿùg»kªi×¤Óæ[f‘©Maª¿ymæ¿Í®ÊŠYØ*I' W|Fñîi¤İiÚ]Â]_N†"ÑÉ<[¡=xeJr=LÓ&NOŞjÉyEzgæg¶|³hô]Jñ†ó¬`úìÿ ÙëÔ+Í¬ï6~•’Ç“My~m²ÏøóŸş¹·ò¯’k|/SÃâ­é|ÿ @¯Sø	ÿ !}Wş¸/ş…[VøãdŸïÔş“=¦ŠóOÒL?x’ÓÃ:K]İÒ¶VAæFôö§µxVŸã­bÓÄòë//šó|²ÂN“²Lv?Ï'=t))E·ÔùL÷4•
+ôéÒzÇWş_wæ{O†üu¡ë±/•v–×$sopB0>Ç£~Ô‘‘È®iÁÁÙŸC„ÆRÆSU)?ó^§9âhş·ÜİG-Ğ%´LØûãîs_8ê·Òêz•ÕíÆ<Û‰FÇ@IÎuá ÒrgÊq.6eİùu~½Š•Şü³k$à|¶°<„údmÿ Ù«j®Ğg‹•Ç›Iy¯ÃSßè¯0ı<( Š ( Š ( Š ( Š ( Š ( Š Áñ¶,÷[Úóq™»'ÿ ^¸Öfv,ä³’IÉ5ÙFªçÆç8¿o[ÙÇhş}M]F—Q}ï˜íåûŸa]µ´[B±@zYVß*=\“ìéûyo-½?à’ÑXéKZÿ Mßıroå^ã.¥©éÚ-§2Í ${“…Ïêk¯³gÉq\ªBv­ø‹ãZxÃÖºu€W¾ˆíâ?Â£1¿~§ñ¯º¸šîæK‹™Y¤bÎîrXõ¦:s>§âTªG†ñÿ €¿R+ ùÒI&’A‰$wpÌMG@ÛoVgO³ŸQ¾‚ÒÎ3%ÄÎw&“vW ç%îÏ§ü1£Ç è6št$7’˜fï1åæMjW•'wsõz•Q¦º$¾âÏøóŸş¹·ò¯’k¯ÔùN*Ş—Ïô
+õ?€ŸòÕë‚ÿ èUµo6IşıOçù3Úk3ÄzİŸ‡ô©oïßlkÂ¨ûÒ7eæ¼è§'d~‰Z´hÓ•Iì•Ï›¼S¯ŞxV’öõ±Ÿ–8ùc^ÀMc×©¨«#òÌEyb*Ê¬÷náR	¤ì8N›wU&ÖÄtP ¯ ¾øm´M İ]¦ËÛâ$`z¢º¿^Iü}«Ÿ+BİÏ¡áºÓí:E~/Oó;ª+€ûĞ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+(€ñü†®¿ŞÈVmwÃáGçØ¿ãÏÕşe”¿»E
+—Sª€„Kı£{ÿ ?—?÷õ¿ÆHöŒÄ%eQıì’ÛP¼7wpAp2·¯Ö½¹ë¤­cèò:Õ*Æ~ÒMí»¿r–¶Bè÷„œOÒ¼§áE‰Ö¼]¨kÓ.a¶ÊCŸï0Àü—ùŠtİ©É‘˜Sö¹üşíOEñw…´ÿ Ùo“dÈ•:3ıGµxGŠü«ørGkˆLö`ü·0Œ¦?Úşéúşf¯VŞã8ø‡+rÿ k¤¿ÅşæsWañÁE ihz&£®]}.ÖIßøˆ*{±è?÷‡ş·ğÄ_h¸e¸Õ$\4 |±î§ø÷ö®\EK.T}?eÎ¥O­T^ìvóğ?3³¢¸·!¼ÿ 9ÿ ë›*ù&»0½Oâ­é|ÿ @¯Sø	ÿ !}Wş¸/ş…[VøãdŸïÔş“=¦ªjºu¦­c-¡
+Ío Ã+1è}ëÎM§t~RœjEÂjé!ã/†z’ïq¤¿±ëµFeŒ{âúÈWŸ0*ÅXAÁµzTê*Šçæ¹–_<gğ½Ÿø"QZpTÖ¶ÓŞ\$É4Îp±Æ¥˜ı  ¨ÅÉ¨Å]³×şü46“E©x‰U¥R+Lî
+{ìO·çé^¯^mjœòÓcôlŸ/ú––_Õÿ —È(¬X( Š ( Š ( Š ( Š ( Š ( Š ÁÔ<:·—’Ü–Bç;vg}j¿ü"‰ÿ ?mÿ |õëu]¥k\Š5')óîÛÛşÂ(Ÿóöß÷Çÿ ^øEş~Ûşøÿ ëÓúÃìGú½ùùøÁ…’9QşÔÇkŸızèë:•9ÏK€X%$¥{œwÅXi~ºU8šì‹dü~÷ş:æ*÷ÃİûÂ–v®»n|é½w·8?AøSÚŸ«2Šö™“—òA/›ä‚20y‘êœÖ­àoê¬Ïq¦D’Ÿùib9õùpâs“ü!Ğİ³Ş¡î7£ı·"qĞñ1Y.tœ_—ùÅø?£†¯õ;€Pìµ¯¦ü3ğÕ“{Y.˜t7“úÒœ±3{Pá¼%9sJòõÛğ:ëK[{8H"‚è‘ U€©«÷=èÅE(ÅY ¢‚€€Ad5‘ÿ Æÿ @=/ÿ #ÿ 
+jN;3¸z5­í`¥né0ÿ „c@ÿ  —ÿ €‘ÿ …ZÓô;Ngm>ÂÒÕœaŒ¬e‡¾79=",=9)ÂœS]REÚ*N¬gÃZ6³“©iÖó9ÿ –›v¿ıô0Zq“‹º1¯‡§ˆ‡³«£”¼øKáù‰0K}n{0š“úÕ_øSúGı/ÿ ñÏş&º&Gƒ>ÂÉŞ2kîÿ "ıÂ¯[°3Ë¯ifÀÿ Ç@®»JÑôí"2šm”Àõ1 ¾§©ük9Ö”ôg£‚Ê0Ø7ÍM^]Şåú+#Ó
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€<ÏÄiÿ 	GÅ;JûöZR}¢àv-ÁÁÿ ÇâkÓ+Zš(£ÌË×=JÕ»Êß(«˜QY˜Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@ Q@ T…ÜV67wÁHçØš¾„ÎJr}/áEŒ­§^ë×«ş™«NÓsÙ8™?†+»«ªï&qeqÂÂûµ¿_Ô(¨;ÂŠ ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( ¸ß‰’Iuca Ú±µÂÄHê±/Ìíøqøf®ŸÄ<Á¿«N+w§ß§êu¶–ñÚZÃon¡!…h£²€*Zƒ®1QJ+ Q@ÂŠ ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( ¹-"?íjz£so§/ö}·¦ÿ ½+}FBÕÇfÎLJæ8yßîMşv:Ú*°¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€(ë—ÿ ÙšEİæİíd¢}ú*ş$øÔ^Ó²tK[G;¦Uß3ÿ ~F;œşdÕ}“®lEû/Íÿ À4è©:Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ( Š ‚òÒÅnrÇ"Ê£8”ä|
+‹’¢“rêÂŠ
+
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+( ¢€
+(ÿÙ
+endstream
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 15 0 R
+/F2 22 0 R
+/F3 29 0 R
+/F4 30 0 R
+/F5 31 0 R
+/F6 32 0 R
+>>
+/XObject <<
+/I1 33 0 R
+>>
+>>
+endobj
+34 0 obj
+<<
+/Producer (FPDF - UNIT-TEST)
+/CreationDate (D:20240101010000)
+>>
+endobj
+35 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+>>
+endobj
+xref
+0 36
+0000000000 65535 f 
+0000030071 00000 n 
+0000061773 00000 n 
+0000000009 00000 n 
+0000000110 00000 n 
+0000014695 00000 n 
+0000014850 00000 n 
+0000014994 00000 n 
+0000015096 00000 n 
+0000023912 00000 n 
+0000024067 00000 n 
+0000024212 00000 n 
+0000024317 00000 n 
+0000029770 00000 n 
+0000029926 00000 n 
+0000030171 00000 n 
+0000030315 00000 n 
+0000030490 00000 n 
+0000030885 00000 n 
+0000030954 00000 n 
+0000031178 00000 n 
+0000031406 00000 n 
+0000037417 00000 n 
+0000037566 00000 n 
+0000037746 00000 n 
+0000038141 00000 n 
+0000038210 00000 n 
+0000038445 00000 n 
+0000038673 00000 n 
+0000045110 00000 n 
+0000045207 00000 n 
+0000045309 00000 n 
+0000045407 00000 n 
+0000045512 00000 n 
+0000061944 00000 n 
+0000062028 00000 n 
+trailer
+<<
+/Size 36
+/Root 35 0 R
+/Info 34 0 R
+>>
+startxref
+62078
+%%EOF

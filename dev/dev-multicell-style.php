@@ -1,12 +1,9 @@
 <?php
 /**
  * Pdf Advanced Multicell - Example
- * Copyright (c), Interpid, http://www.interpid.eu
  */
 
-use Interpid\PdfLib\Tools;
-
-require_once 'Factory.php';
+use evosys21\PdfLib\Tools;
 
 $factory = new DevFactory();
 

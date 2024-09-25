@@ -1,1 +1,0 @@
-php ./tests/approve.php

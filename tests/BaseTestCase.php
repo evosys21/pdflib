@@ -1,25 +1,15 @@
 <?php
 
-/**
- * This file is part of the Interpid PDF Addon package.
- *
- * @author Interpid <office@interpid.eu>
- * @copyright (c) Interpid, http://www.interpid.eu
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
+namespace evosys21\PdfLib\Tests;
 
-namespace Interpid\PdfLib\Tests;
-
-use Interpid\PdfExamples\PdfFactory;
-use Interpid\PdfLib\Pdf;
-use Interpid\PdfLib\Tests\Helper\Helper;
+use evosys21\PdfLib\Fpdf\Pdf;
+use evosys21\PdfLib\Examples\Fpdf\PdfFactory;
+use evosys21\PdfLib\Tests\Utils\Helper;
+use evosys21\PdfLib\Tests\Utils\TestUtils;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class BaseTestCase
- * @package Interpid\PdfLib
  */
 class BaseTestCase extends TestCase
 {
@@ -42,28 +32,34 @@ class BaseTestCase extends TestCase
         return $pdf;
     }
 
-    public function assertComparePdf($expected, $generated, $message)
+    public function assertComparePdf($pdfExpected, $pdfGenerated, $message): void
     {
-        $shaGenerated = sha1_file($generated);
-        $shaExpected = is_readable($expected) ? sha1_file($expected) : $shaGenerated;
-
-        $basename = basename($expected);
-        $coreName = substr($basename, 0, strrpos($basename, "."));
-
-        if (($shaExpected !== $shaGenerated) && getenv('FAILED_SCREENSHOTS')) {
-            $screenshotExpect = dirname($expected) . "/expected/$coreName.png";
-            $screenshotIs = dirname($expected) . "/is/$coreName.png";
-            Helper::pdfScreenshot($expected, $screenshotExpect);
-            Helper::pdfScreenshot($generated, $screenshotIs);
-            copy($generated, dirname($expected) . "/is/" . basename($expected));
-            copy($expected, dirname($expected) . "/expected/" . basename($expected));
+        if (!file_exists($pdfExpected)) {
+            TestUtils::toFile($pdfExpected, $pdfGenerated, true);
         }
 
+        $shaGenerated = sha1_file($pdfGenerated);
+        $shaExpected = is_readable($pdfExpected) ? sha1_file($pdfExpected) : null;
+
+        $basename = basename($pdfExpected);
+        $coreName = substr($basename, 0, strrpos($basename, "."));
+
+        if (($shaExpected !== $shaGenerated) && getenv('TRACK_FAILED')) {
+            $pdf = TestUtils::failPath($pdfExpected);
+            TestUtils::copy($pdfGenerated, $pdf);
+            if (getenv('SCREENSHOTS')) {
+                Helper::pdfScreenshot($pdf);
+            }
+        }
+
+        if (TestUtils::isDebug()){
+            $this->assertSame(file_get_contents($pdfExpected), file_get_contents($pdfGenerated), $message);
+        }
         $this->assertSame($shaExpected, $shaGenerated, $message);
 
         if (getenv('SCREENSHOTS')) {
-            $screenshot = dirname($expected) . "/$coreName.png";
-            Helper::pdfScreenshot($generated, $screenshot);
+            $screenshot = dirname($pdfExpected) . "/$coreName.png";
+            Helper::pdfScreenshot($pdfGenerated, $screenshot);
         }
     }
 }

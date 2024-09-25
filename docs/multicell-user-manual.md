@@ -1,4 +1,4 @@
-# FPDF Advanced Multicell User Manual
+# FPDF / TCPDF / tFPDF Advanced Multicell User Manual
 
 {{>toc}}
 
@@ -99,7 +99,7 @@ fonts etc... As these properties are not provided by setters and getters the FPD
 properties made public.
 
 ```php
-namespace Interpid\PdfLib;
+namespace evosys21\PdfLib;
 
 class Pdf extends \FPDF
 {

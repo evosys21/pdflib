@@ -1,10 +1,7 @@
 <?php
 /**
  * Pdf Advanced Multicell - Example
- * Copyright (c), Interpid, http://www.interpid.eu
  */
-
-require_once 'Factory.php';
 
 $factory = new DevFactory();
 
