@@ -1,1 +1,1 @@
-"C:\webkit\Php\7.4\php.exe" %*
+"C:\webkit\Php\8.3\php.exe" %*
