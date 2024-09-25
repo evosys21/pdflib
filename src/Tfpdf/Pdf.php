@@ -43,6 +43,7 @@ class Pdf extends tFPDF
 
     public $showHeader = true;
     public $showFooter = true;
+    public bool $drawMargins = false;
 
     public $unifontSubset;
 

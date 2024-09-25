@@ -2,6 +2,7 @@
 
 namespace evosys21\PdfLib\Tests\Feature;
 
+use evosys21\PdfLib\Dev\DevFactory;
 use evosys21\PdfLib\Tests\BaseExamplesTestCase;
 use evosys21\PdfLib\Tests\Utils\Helper;
 
@@ -38,10 +39,18 @@ class GenericTest extends BaseExamplesTestCase
         }
     }
 
-    protected function runTestModel1($require): void
+    /**
+     * @dataProvider codeSnippetsProvider
+     */
+    public function testMultiPageSnippets($context, $require): void
     {
-        $pdf = $this->getPdfObject1();
-        $name = str_replace('.php', '', basename($require));
+        $factory = new DevFactory($context);
+        $table = $factory->table();
+        global $pdf;
+        $pdf = $table->getPdfObject();
+        $pdf->drawMargins = true;
+
+        $name = pathinfo($require, PATHINFO_FILENAME);
 
         $height = $pdf->h - 60;
         $y = $pdf->GetY();
@@ -54,27 +63,11 @@ class GenericTest extends BaseExamplesTestCase
             require $require;
 
             $pdf->AddPage();
-            $y += 2;
+            $y += 5;
         }
 
-        $expected = TEST_PATH . '/data/' . $name . '.pdf';
+        $expected = TEST_PATH . "/_files/dev/$context/multi-page-$name.pdf";
 
-        if (getenv('RESULT_WRITE')) {
-            $generated = $expected;
-        } else {
-            $generated = tempnam(sys_get_temp_dir(), 'pdf_test');
-        }
-
-        //send the pdf to the browser
-        $pdf->saveToFile($generated);
-
-        $this->assertTrue(file_exists($generated));
-
-        // $this->assertFileEquals($sPdfFile, $sResultFile);
-        $this->assertComparePdf($expected, $generated, "FAILED: " . basename($expected) . " / $require");
-
-        if (!getenv('RESULT_WRITE')) {
-            unlink($generated);
-        }
+        $this->runTestPdf($pdf, $expected, $require);
     }
 }

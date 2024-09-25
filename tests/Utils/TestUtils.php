@@ -41,6 +41,10 @@ class TestUtils
         $md5 = is_readable($file) ? md5_file($file) : null;
         if (!is_string($data)) {
             $data = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        } else {
+            if (file_exists($data)) {
+                $data = file_get_contents($data);
+            }
         }
         static::mkdir($file);
         file_put_contents($file, $data);

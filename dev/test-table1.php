@@ -6,8 +6,8 @@ require_once __DIR__ . '/autoload.php';
 
 $factory = new DevFactory();
 
-$multicell = $factory->table();
-$pdf = $multicell->getPdfObject();
+$table = $factory->table();
+$pdf = $table->getPdfObject();
 
 require __DIR__ . '/table/draw-table-model1.php';
 

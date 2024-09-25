@@ -32,9 +32,9 @@ class Helper
     }
 
     /**
-     * @param Pdf $pdf
+     * @param Object $pdf
      */
-    public static function setFontStyle1($pdf)
+    public static function setFontStyle1(object $pdf): void
     {
         $pdf->SetFont('helvetica', 'I', 7);
         $pdf->SetTextColor(170, 170, 170);

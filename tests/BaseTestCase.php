@@ -34,8 +34,12 @@ class BaseTestCase extends TestCase
 
     public function assertComparePdf($pdfExpected, $pdfGenerated, $message): void
     {
+        if (!file_exists($pdfExpected)) {
+            TestUtils::toFile($pdfExpected, $pdfGenerated, true);
+        }
+
         $shaGenerated = sha1_file($pdfGenerated);
-        $shaExpected = is_readable($pdfExpected) ? sha1_file($pdfExpected) : $shaGenerated;
+        $shaExpected = is_readable($pdfExpected) ? sha1_file($pdfExpected) : null;
 
         $basename = basename($pdfExpected);
         $coreName = substr($basename, 0, strrpos($basename, "."));

@@ -32,4 +32,18 @@ class BaseExamplesTestCase extends BaseTestCase
         $this->assertTrue(file_exists($generated), $require);
         $this->assertComparePdf($expected, $generated, "FAILED: " . basename($expected) . " / $require");
     }
+
+    protected function runTestPdf($pdf, $expected, $message): void
+    {
+        $generated = TestUtils::tmpFile();
+
+        //send the pdf to the browser
+        $pdf->saveToFile($generated);
+        $this->unlink[] = $generated;
+
+        TestUtils::toFile($expected, $generated);
+
+        $this->assertTrue(file_exists($generated), $message);
+        $this->assertComparePdf($expected, $generated, "FAILED: " . basename($expected) . " / $message");
+    }
 }

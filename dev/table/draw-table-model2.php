@@ -2,8 +2,8 @@
 
 use evosys21\PdfLib\Table;
 
-if (!isset($bSplitMode)) {
-    $bSplitMode = true;
+if (!isset($splitMode)) {
+    $splitMode = true;
 }
 
 $tableConfig = require __DIR__ . '/table.config.php';
@@ -27,7 +27,7 @@ $pdf->Ln(30);
 //Initialize the table, 3 columns
 $table->initialize([20, 20, 20, 20], $tableConfig);
 
-$table->setSplitMode($bSplitMode);
+$table->setSplitMode($splitMode);
 
 $header = [];
 

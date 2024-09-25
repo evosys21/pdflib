@@ -48,11 +48,10 @@ class Pdf extends TCPDF
     public $tcpdf_version;
     public $svgunit;
 
-
-
     public bool $showHeader = true;
     public bool $showFooter = true;
-    
+    public bool $drawMargins = false;
+
     // phpcs:disable
     public function _out($s)
     {

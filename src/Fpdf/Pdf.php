@@ -43,6 +43,7 @@ class Pdf extends FPDF
 
     public bool $showHeader = true;
     public bool $showFooter = true;
+    public bool $drawMargins = false;
 
     // phpcs:disable
     public function _out($s)

@@ -65,6 +65,8 @@ class MyPdf extends Pdf
      */
     public function Footer()
     {
+        $this->drawMargins && $this->drawMarginLines();
+
         if (!$this->showFooter) return;
 
         $this->SetY(-10);
@@ -87,7 +89,7 @@ class MyPdf extends Pdf
      * Draws the margin lines.
      * It's helpful during development
      */
-    public function drawMarginLines()
+    public function drawMarginLines(): void
     {
         //draw the top and bottom margins
         $top = $this->tMargin;

@@ -47,13 +47,31 @@ trait ProviderTrait
         return $this->provideSamples($files, $contexts);
     }
 
+    public function codeSnippetsProvider(): array
+    {
+        $files = [
+            APP_PATH . '/dev/table/draw-table-model1.php',
+            APP_PATH . '/dev/table/draw-table-model2.php',
+            APP_PATH . '/dev/table/draw-table-model3.php',
+        ];
+
+        $contexts = [
+            'Fpdf',
+            'Tfpdf',
+            'Tcpdf',
+        ];
+
+        return $this->provideSamples($files, $contexts);
+    }
+
     protected function provideSamples($files, $contexts): array
     {
         $result = [];
 
         foreach ($contexts as $context) {
             foreach ($files as $file) {
-                $result["$context - $file"] = [$context, $file];
+                $name = str_replace(APP_PATH, '', $file);
+                $result["$context - $name"] = [$context, $file];
             }
         }
 
