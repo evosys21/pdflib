@@ -10,3 +10,4 @@ release
 *.iml
 
 /tests/_failed
+/tests/_dev
