@@ -1,6 +1,6 @@
 {
     "name": "evosys21/pdflib",
-    "description": "Fpdf Tcpdf Library",
+    "description": "Fpdf, TCPDF, tFpdf - Advanced Multicell and Table",
     "license": [
         "MIT"
     ],

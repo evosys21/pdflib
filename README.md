@@ -1,4 +1,4 @@
-Fpdf - TCPDF - tFpdf - Advanced Multicell and Table 
+Fpdf, TCPDF, tFpdf - Advanced Multicell and Table 
 =================================
 
 `evosys21/pdflib` is a collection of PHP classes facilitating developers to create [Advanced Multicells]() and [Tables]() in [FPDF](http://www.fpdf.org), [TCPDF](https://github.com/tecnickcom/TCPDF) or 
@@ -56,4 +56,3 @@ require_once('src/autoload.php');
 
 ```
 
-A full end-user documentation and API reference is available [here](...).
