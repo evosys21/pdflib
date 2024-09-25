@@ -12,10 +12,11 @@
         }
     ],
     "require": {
-        "ext-mbstring": "*",
-        "ext-json": "*"
+        "php": ">=8.0",
+        "ext-mbstring": "*"
     },
     "require-dev": {
+        "ext-json": "*",
         "setasign/fpdf": "^1.8.6",
         "tecnickcom/tcpdf": "^6.7.0",
         "setasign/tfpdf": "^1.33.0",
