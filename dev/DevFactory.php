@@ -13,8 +13,11 @@ use evosys21\PdfLib\Examples\Tfpdf\PdfSettings as TfpdfSettings;
 
 class DevFactory
 {
-    public function __construct(protected ?string $context = null)
+    protected $context = null;
+
+    public function __construct(?string $context = null)
     {
+        $this->context = $context;
         if (empty($this->context)) {
             $this->context = self::getGlobalContext();
         }
