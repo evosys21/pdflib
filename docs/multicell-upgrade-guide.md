@@ -1,4 +1,4 @@
-# FPDF Advanced Multicell Upgrade Guide
+# FPDF / TCPDF / tFPDF Advanced Multicell Upgrade Guide
 
 {{>toc}}
 

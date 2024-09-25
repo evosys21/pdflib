@@ -28,7 +28,7 @@ class DevTest extends BaseExamplesTestCase
 
     public function testDevSources()
     {
-        $context = 'Tfpdf';
+        $context = 'Tcpdf';
         $file = 'example-multicell-1-overview.php';
 
         $source = "examples/$context/example-multicell-1-overview.php";

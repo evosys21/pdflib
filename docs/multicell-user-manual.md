@@ -1,4 +1,4 @@
-# FPDF Advanced Multicell User Manual
+# FPDF / TCPDF / tFPDF Advanced Multicell User Manual
 
 {{>toc}}
 

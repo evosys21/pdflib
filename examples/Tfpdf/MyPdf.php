@@ -22,7 +22,7 @@ class MyPdf extends Pdf
     /**
      * Custom Header
      *
-     * @see Pdf::Header()
+     * @see          Pdf::Header()
      * @noinspection HttpUrlsUsage
      */
     public function Header()
@@ -43,12 +43,12 @@ class MyPdf extends Pdf
 
         $multicell->multiCell(100, 3, file_get_contents(CONTENT_PATH . '/' . $this->headerSource));
 
-        $width = 40;
+        $width = 25;
 
         $this->Image(
-            CONTENT_PATH . '/images/logo.png',
+            CONTENT_PATH . '/images/logo.jpg',
             $this->w - $this->rMargin - $width,
-            10,
+            5,
             $width,
             0,
             '',

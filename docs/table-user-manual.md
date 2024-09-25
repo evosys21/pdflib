@@ -111,7 +111,7 @@ $table = new Table($pdf);
 
 ## Styling
 
-All the table cells(header and rows) are fully functional FPDF Advanced Multicells. This adds a lot of flexibility when
+All the table cells(header and rows) are fully functional FPDF / TCPDF / tFPDF Advanced Multicells. This adds a lot of flexibility when
 creating your table. Please have a look at the multicell documentation for details about styling and text formatting.
 
 Examples:

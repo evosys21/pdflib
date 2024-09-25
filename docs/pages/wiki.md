@@ -6,7 +6,7 @@ Please go to your account on https://www.interpid.eu/my-account to download the 
 
 ## FPDF Add-ons
 
-### FPDF Advanced Multicell
+### FPDF / TCPDF / tFPDF Advanced Multicell
 
 * [[FPDF Multicell Examples|Examples]]
 * [[FPDF Multicell User Manual|User Manual]]
@@ -27,7 +27,7 @@ The UTF8 version of FPDF are identical with the FPDF Add-Ons with the major diff
 The main PDF class is based on the [tFPDF](http://www.fpdf.org/en/script/script92.php) script
 of [FPDF](http://www.fpdf.org).
 
-### FPDF Advanced Multicell UTF8
+### FPDF / TCPDF / tFPDF Advanced Multicell UTF8
 
 * [[tFPDF Multicell Examples|Examples]]
 * [[tFPDF Multicell User Manual|User Manual]]

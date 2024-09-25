@@ -1,1 +1,10 @@
 * text=auto eol=lf
+*.png binary
+*.jpg binary
+*.svg binary
+*.zip binary
+
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
