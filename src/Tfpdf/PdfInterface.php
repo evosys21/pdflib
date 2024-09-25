@@ -298,7 +298,7 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
         }
     }
 
-    public function getCharStringWidth($tag, $char, $fontFamily, $fontStyle, $fontSize): float|int
+    public function getCharStringWidth($tag, $char, $fontFamily, $fontStyle, $fontSize)
     {
         $fontInfo = &$this->fontInfo[$tag]; //font info array
         $cw = &$fontInfo['CurrentFont']['cw']; //character widths

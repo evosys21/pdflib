@@ -22,11 +22,11 @@ class TestUtils
      * Saves the $data in the specified file.
      *
      * @param string $file File to be saved to
-     * @param mixed $data Data to be written
+     * @param string|array $data Data to be written
      * @param bool $force Force write to file
      * @return void
      */
-    public static function toFile(string $file, mixed $data, bool $force = false): void
+    public static function toFile(string $file, $data, bool $force = false): void
     {
         if (!static::generateOn($force)) {
             return;
