@@ -255,8 +255,11 @@ class Tools
     public static function convertHighlight($content)
     {
         $content = preg_replace("#<br\s?/>#", "\n", $content);
+        $content = preg_replace("#</?pre>#", "", $content);
         $replacements = [
-            "&nbsp;" => " "
+            "&nbsp;" => " ",
+            '<code style="color: #000000">' => '<code><span style="color: #000000">' . "\n",
+            '</span></code>' => "</span>\n</span>\n</code>",
         ];
         return str_replace(array_keys($replacements), array_values($replacements), $content);
     }

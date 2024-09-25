@@ -2,12 +2,11 @@
 
 namespace evosys21\PdfLib\Tests\Dev;
 
+use evosys21\PdfLib\Tests\BaseExamplesTestCase;
 use evosys21\PdfLib\Tests\Feature\ProviderTrait;
-use PHPUnit\Framework\TestCase;
 
-class ExamplesTest extends TestCase
+class DevTest extends BaseExamplesTestCase
 {
-
     use ProviderTrait;
 
     /**
@@ -25,5 +24,21 @@ class ExamplesTest extends TestCase
         $this->assertNotFalse($response, 'Failed to fetch the PDF.');
         $this->assertEquals('%PDF-', substr($response, 0, 5), "Invalid Pdf $url");
 
+    }
+
+    public function testDevSources()
+    {
+
+        $context = 'Fpdf';
+        $file = 'test-multicell-style.php';
+
+        $source = "dev/$file";
+        global $pdfContext;
+        $pdfContext = $context;
+
+        $filename = pathinfo($file, PATHINFO_FILENAME);
+        $expected = TEST_PATH . "/_dev/$context/$filename.pdf";
+
+        $this->runTestWithExample($source, $expected);
     }
 }

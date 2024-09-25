@@ -22,6 +22,8 @@ $multicell->multiCell(0, 5, $txt, 1, 'J', 1, 3, 3, 3, 3);
 $txt = highlight_file(__DIR__ . '/samples/sample-test-code.php', true);
 $txt = Tools::convertHighlight($txt);
 
+file_put_contents(__DIR__ . '/highlight.txt', $txt);
+
 $multicell->multiCell(0, 5, $txt, 1, 'J', 1, 3, 3, 3, 3);
 
 // output the pdf
