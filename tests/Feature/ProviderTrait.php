@@ -2,8 +2,6 @@
 
 namespace evosys21\PdfLib\Tests\Feature;
 
-use Generator;
-
 trait ProviderTrait
 {
     public function examplesProvider(): array
@@ -22,21 +20,13 @@ trait ProviderTrait
             'example-table-5-row-height.php',
         ];
 
-        $dirs = [
+        $contexts = [
             'Fpdf',
             'Tfpdf',
             'Tcpdf',
         ];
 
-        $result = [];
-
-        foreach ($dirs as $dir) {
-            foreach ($files as $file) {
-                $result["$dir - $file"] = [$dir, $file];
-            }
-        }
-
-        return $result;
+        return $this->provideSamples($files, $contexts);
     }
 
     public function getDevSources(): array
@@ -54,6 +44,11 @@ trait ProviderTrait
             'Tcpdf',
         ];
 
+        return $this->provideSamples($files, $contexts);
+    }
+
+    protected function provideSamples($files, $contexts): array
+    {
         $result = [];
 
         foreach ($contexts as $context) {

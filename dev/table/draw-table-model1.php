@@ -3,8 +3,8 @@
 use evosys21\PdfLib\Table;
 global $pdf;
 
-if (!isset($splitMode)) {
-    $splitMode = true;
+if (!isset($bSplitMode)) {
+    $bSplitMode = true;
 }
 
 $tableConfig = require __DIR__ . '/table.config.php';
@@ -28,7 +28,7 @@ $pdf->Ln(30);
 //Initialize the table, 3 columns
 $table->initialize([20, 40, 20], $tableConfig);
 
-$table->setSplitMode($splitMode);
+$table->setSplitMode($bSplitMode);
 
 $header = [];
 
@@ -48,16 +48,16 @@ $header[2]['ROWSPAN'] = 2;
 $table->addHeader($header);
 $table->addHeader($header1);
 
-$defaultText = "Lorem ipsum;, dolor sit amet";
-$defaultText2 = "<p>Some Line</p>\n<b>Some text</b>";
-$defaultLongText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-$defaultLongText2 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur";
+$sDefaultText = "Lorem ipsum;, dolor sit amet";
+$sDefaultText2 = "<p>Some Line</p>\n<b>Some text</b>";
+$sDefaultLongText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+$sDefaultLongText2 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur";
 
 $aDefaultRow = [];
 for ($i = 0; $i < $columns; $i++) {
-    $aDefaultRow[$i]['TEXT'] = $defaultText;
+    $aDefaultRow[$i]['TEXT'] = $sDefaultText;
 }
-$aDefaultRow[0]['TEXT'] = $defaultText2;
+$aDefaultRow[0]['TEXT'] = $sDefaultText2;
 
 for ($i = 1; $i < 10; $i++) {
     $row = $aDefaultRow;
@@ -73,7 +73,7 @@ for ($i = 1; $i < 10; $i++) {
             $row[0]['PADDING_LEFT'] = 5;
             $row[0]['PADDING_RIGHT'] = 5;
             $row[0]['PADDING_TOP'] = 5;
-            $row[1]['TEXT'] = $defaultLongText;
+            $row[1]['TEXT'] = $sDefaultLongText;
             $row[1]['TEXT_ALIGN'] = 'J';
             $row[1]['VERTICAL_ALIGN'] = 'T';
             $row[2]['TEXT_ALIGN'] = 'R';

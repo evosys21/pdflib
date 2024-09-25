@@ -9,32 +9,27 @@ use evosys21\PdfLib\Tests\Utils\TestUtils;
  */
 class BaseExamplesTestCase extends BaseTestCase
 {
+    protected array $unlink = [];
 
-    protected function runTestWithExample($require, $folder, $name): void
+    public function __destruct()
     {
-//        echo "Running test for $require - $folder\n";
-        $name = str_replace('.php', '', $name);
-
-        ob_start();
-        require $require;
-        $content = ob_get_clean();
-
-        $expectedFile = TEST_PATH . "/_files/$folder/$name.pdf";
-
-        $generatedFile = tempnam(sys_get_temp_dir(), 'pdf_test');
-
-        //CreationDate (D:20240101010000)
-        $content = preg_replace("#CreationDate \(D:[0-9]+#", "CreationDate (D:20240101010000", $content);
-        $content = preg_replace("#LastModified \(D:[0-9]+#", "LastModified (D:20240101010000", $content);
-
-        file_put_contents($generatedFile, $content);
-        TestUtils::toFile($expectedFile, $content);
-
-        $this->assertTrue(file_exists($generatedFile), $require);
-        $this->assertComparePdf($expectedFile, $generatedFile, "FAILED: " . basename($expectedFile) . " / $require");
-
-        if (is_readable($generatedFile)) {
-            unlink($generatedFile);
+        foreach ($this->unlink as $file) {
+            if (file_exists($file)) {
+                unlink($file);
+            }
         }
+    }
+
+    protected function runTestWithExample($require, $expected): void
+    {
+        $content = TestUtils::execRequire($require);
+
+        $generated = TestUtils::tmpFile();
+        file_put_contents($generated, $content);
+        $this->unlink[] = $generated;
+        TestUtils::toFile($expected, $content);
+
+        $this->assertTrue(file_exists($generated), $require);
+        $this->assertComparePdf($expected, $generated, "FAILED: " . basename($expected) . " / $require");
     }
 }

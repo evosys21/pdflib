@@ -1814,9 +1814,9 @@ class Table
     /**
      * Returns the PDF object
      *
-     * @return Pdf|null
+     * @return Object|null
      */
-    public function getPdfObject(): ?Pdf
+    public function getPdfObject(): ?Object
     {
         return $this->pdf;
     }

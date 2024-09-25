@@ -16,7 +16,11 @@ class ExamplesTest extends BaseExamplesTestCase
     public function testExampleSources($dir, $file)
     {
         $source = "examples/$dir/$file";
-        $this->runTestWithExample($source, "src/$dir", $file);
+
+        $filename = pathinfo($file, PATHINFO_FILENAME);
+        $expected = TEST_PATH . "/_files/src/$dir/$filename.pdf";
+
+        $this->runTestWithExample($source, $expected);
     }
 
     /**
@@ -27,6 +31,10 @@ class ExamplesTest extends BaseExamplesTestCase
         $source = "dev/$file";
         global $pdfContext;
         $pdfContext = $context;
-        $this->runTestWithExample($source, "dev/$context", $file);
+
+        $filename = pathinfo($file, PATHINFO_FILENAME);
+        $expected = TEST_PATH . "/_files/dev/$context/$filename.pdf";
+
+        $this->runTestWithExample($source, $expected);
     }
 }

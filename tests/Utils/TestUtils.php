@@ -67,6 +67,11 @@ class TestUtils
         return $content;
     }
 
+    public static function tmpFile(string $prefix = 'pdf_test', string $suffix = ''): string
+    {
+        return tempnam(sys_get_temp_dir(), $prefix) . $suffix;
+    }
+
     public static function generateOn(bool $force = false): bool
     {
         return $force || (getenv('RESULT_WRITE'));
@@ -113,5 +118,18 @@ class TestUtils
     {
         $pathInfo = pathinfo($path);
         return $pathInfo['dirname'] . DIRECTORY_SEPARATOR . $pathInfo['filename'] . '.' . $ext;
+    }
+
+    public static function execRequire($require): string
+    {
+        ob_start();
+        require $require;
+        $content = ob_get_clean();
+
+        //CreationDate (D:20240101010000)
+        $content = preg_replace("#CreationDate \(D:[0-9]+#", "CreationDate (D:20240101010000", $content);
+        $content = preg_replace("#LastModified \(D:[0-9]+#", "LastModified (D:20240101010000", $content);
+
+        return $content;
     }
 }

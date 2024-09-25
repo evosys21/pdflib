@@ -1,5 +1,5 @@
 <?php
 
-$splitMode = false;
+$bSplitMode = false;
 
 require 'draw-table-model2.php';
