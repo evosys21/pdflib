@@ -1,6 +1,41 @@
 # FPDF / TCPDF / tFPDF Advanced Multicell User Manual
 
-{{>toc}}
+<!-- TOC -->
+* [FPDF / TCPDF / tFPDF Advanced Multicell User Manual](#fpdf--tcpdf--tfpdf-advanced-multicell-user-manual)
+  * [Installation](#installation)
+    * [Include the library into the project](#include-the-library-into-the-project)
+      * [Using "require_once"](#using-require_once)
+      * [With composer.json](#with-composerjson)
+  * [Download](#download)
+  * [Usage](#usage)
+  * [Why use the \evosys21\PdfLib\Fpdf\Pdf object instead of FPDF](#why-use-the-evosys21pdflibfpdfpdf-object-instead-of-fpdf)
+  * [Create the Pdf object](#create-the-pdf-object)
+  * [Create the Advanced Multicell object](#create-the-advanced-multicell-object)
+  * [Tag styling](#tag-styling)
+    * [Style Inheritance](#style-inheritance)
+  * [Text Formatting](#text-formatting)
+    * [No formatting](#no-formatting)
+    * [Simple formatting](#simple-formatting)
+    * [Nested tags](#nested-tags)
+    * [Subscripts and superscripts](#subscripts-and-superscripts)
+    * [Strikethrough](#strikethrough)
+    * [Links](#links)
+    * [Paragraphs](#paragraphs)
+  * [Tag Attributes](#tag-attributes)
+    * [href](#href)
+    * [width](#width)
+    * [align](#align)
+      * [Example with `width` and `align`](#example-with-width-and-align)
+    * [size](#size)
+    * [nowrap](#nowrap)
+  * [FEATURES](#features)
+    * [Height Limitations](#height-limitations)
+      * [Max Lines](#max-lines)
+      * [Max Height](#max-height)
+    * [Text shrinking](#text-shrinking)
+      * [Change shrinking units](#change-shrinking-units)
+    * [Apply features to all cells and reset](#apply-features-to-all-cells-and-reset)
+<!-- TOC -->
 
 ## Installation
 
