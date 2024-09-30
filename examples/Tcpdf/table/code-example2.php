@@ -39,7 +39,7 @@ $row[0]['TEXT'] = "Line <b>1</b>";
 
 $row[1] = PdfSettings::$imageCell;
 
-$row[2]['TEXT'] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='http://www.interpid.eu'>www.interpid.eu</bi></p>";
+$row[2]['TEXT'] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='https://github.com/evosys21/pdflib'>www.interpid.eu</bi></p>";
 $row[2]['ALIGN'] = 'L';
 
 //add the data row

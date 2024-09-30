@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\Interpid\PdfLib;
+namespace Tests\Unit\evosys21\PdfLib;
 namespace evosys21\PdfLib\Tests\Unit;
 
 use evosys21\PdfLib\Tools;

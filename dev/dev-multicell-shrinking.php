@@ -6,7 +6,7 @@
 $factory = new DevFactory();
 
 // Create the Advanced Multicell Object and inject the PDF object
-$multicell = DevFactory::multicell();
+$multicell = $factory->multicell();
 $pdf = $multicell->getPdfObject();
 
 $txt = <<<EOL

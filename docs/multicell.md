@@ -1,6 +1,42 @@
-# FPDF / TCPDF / tFPDF Advanced Multicell User Manual
+ FPDF / TCPDF / tFPDF Advanced Multicell User Manual
+ ======================================================
 
-{{>toc}}
+<!-- TOC -->
+* [FPDF / TCPDF / tFPDF Advanced Multicell User Manual](#fpdf--tcpdf--tfpdf-advanced-multicell-user-manual)
+  * [Installation](#installation)
+    * [Include the library into the project](#include-the-library-into-the-project)
+      * [Using "require_once"](#using-require_once)
+      * [With composer.json](#with-composerjson)
+  * [Download](#download)
+  * [Usage](#usage)
+  * [Why use the \evosys21\PdfLib\Fpdf\Pdf object instead of FPDF](#why-use-the-evosys21pdflibfpdfpdf-object-instead-of-fpdf)
+  * [Create the Pdf object](#create-the-pdf-object)
+  * [Create the Advanced Multicell object](#create-the-advanced-multicell-object)
+  * [Tag styling](#tag-styling)
+    * [Style Inheritance](#style-inheritance)
+  * [Text Formatting](#text-formatting)
+    * [No formatting](#no-formatting)
+    * [Simple formatting](#simple-formatting)
+    * [Nested tags](#nested-tags)
+    * [Subscripts and superscripts](#subscripts-and-superscripts)
+    * [Strikethrough](#strikethrough)
+    * [Links](#links)
+    * [Paragraphs](#paragraphs)
+  * [Tag Attributes](#tag-attributes)
+    * [href](#href)
+    * [width](#width)
+    * [align](#align)
+      * [Example with `width` and `align`](#example-with-width-and-align)
+    * [size](#size)
+    * [nowrap](#nowrap)
+  * [FEATURES](#features)
+    * [Height Limitations](#height-limitations)
+      * [Max Lines](#max-lines)
+      * [Max Height](#max-height)
+    * [Text shrinking](#text-shrinking)
+      * [Change shrinking units](#change-shrinking-units)
+    * [Apply features to all cells and reset](#apply-features-to-all-cells-and-reset)
+<!-- TOC -->
 
 ## Installation
 
@@ -13,7 +49,7 @@ Every add-on has multiple example files that cover the full functionality.
 
 ### Include the library into the project
 
-Normally, from the downloaded package you need only the files from `library\interpid\PdfLib` folder in order to run it.
+Normally, from the downloaded package you need only the files from `library\evosys21\PdfLib` folder in order to run it.
 
 #### Using "require_once"
 
@@ -68,8 +104,8 @@ To generate an "Advanced Multicell" the followings are required:
 * add the multicells to the pdf document
 
 ```php
-use Interpid\PdfLib\Multicell;
-use Interpid\PdfLib\Pdf; // Pdf extends FPDF
+use evosys21\PdfLib\Multicell;
+use evosys21\PdfLib\Fpdf\Pdf; // Pdf extends FPDF
 
 // create the Pdf Object
 $pdf = new Pdf();
@@ -92,7 +128,7 @@ $multicell->multiCell(0, 5, 'This is a simple cell');
 $multicell->multiCell(0, 5, '<p>This is a <b>BOLD</b> text</p>');
 ```
 
-## Why use the \Interpid\PdfLib\Pdf object instead of FPDF
+## Why use the \evosys21\PdfLib\Fpdf\Pdf object instead of FPDF
 
 To implement the FPDF Add-on, we need access to private/protected properties from the FPDF class like widths, margins,
 fonts etc... As these properties are not provided by setters and getters the FPDF class was extended and these
@@ -115,13 +151,13 @@ class Pdf extends \FPDF
 Please refer to the FPDF class manual in order to get this done correctly. Example:
 
 ```php
-use Interpid\PdfLib\Pdf;
+use evosys21\PdfLib\Fpdf\Pdf;
 
 // Pdf extends FPDF
 $pdf = new Pdf();
 
 // use the default FPDF configuration
-$pdf->SetAuthor('Interpid');
+$pdf->SetAuthor('EvoSys21');
 $pdf->SetMargins(20, 20, 20);
 $pdf->SetAutoPageBreak(true, 20);
 
@@ -138,7 +174,7 @@ $pdf->AddPage();
 
 ```php
 // Create the Advanced Multicell Object and inject the PDF object
-use Interpid\PdfLib\Multicell;
+use evosys21\PdfLib\Multicell;
 $multicell = new Multicell($pdf);
 ```
 

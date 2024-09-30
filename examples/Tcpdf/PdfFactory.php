@@ -55,7 +55,7 @@ class PdfFactory
         $pdf->showFooter = $footer;
         // use the default TCPDF configuration
         $pdf->SetCreator('TCPDF');
-        $pdf->SetAuthor('Interpid');
+        $pdf->SetAuthor('EvoSys21');
         $pdf->SetMargins(20, 20, 20);
         $pdf->SetAutoPageBreak(true, 20);
 

@@ -12,7 +12,7 @@ use evosys21\PdfLib\Table;
 $pdf = new Pdf();
 
 // use the default FPDF configuration
-$pdf->SetAuthor('Interpid');
+$pdf->SetAuthor('EvoSys21');
 $pdf->SetMargins(20, 20, 20);
 $pdf->SetAutoPageBreak(true, 20);
 

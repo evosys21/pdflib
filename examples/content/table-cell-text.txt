@@ -1,2 +1,2 @@
-<p>All table cells are fully functional <bi href='http://www.interpid.eu/fpdf/multicell'>FPDF / TCPDF / tFPDF Advanced Multicells</bi>
-Visit <h1 href='http://www.interpid.eu/fpdf/multicell'>http://www.interpid.eu/fpdf/multicell</h1> for details</p>
+<p>All table cells are fully functional <bi href='https://github.com/evosys21/pdflib'>FPDF / TCPDF / tFPDF Advanced Multicells</bi>
+Visit <h1 href='https://github.com/evosys21/pdflib'>https://github.com/evosys21/pdflib</h1> for details</p>
