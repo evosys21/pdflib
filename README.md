@@ -1,20 +1,17 @@
 <h1>Fpdf, TCPDF, tFpdf - Advanced Multicell and Table</h1>
 
-`evosys21/pdflib` is a collection of PHP classes facilitating developers to create [Advanced Multicells]() and [Tables]() in [FPDF](http://www.fpdf.org), [TCPDF](https://github.com/tecnickcom/TCPDF) or
-[tFPDF](http://fpdf.org/en/script/script92.php).
-
-[![Build status](https://github.com/evosys21/pdflib/workflows/build/badge.svg)](https://github.com/evosys21/pdflib/actions) [![Latest Stable Version](https://poser.pugx.org/evosys21/phplib/v/stable)](https://packagist.org/packages/evosys21/phplib)
-
-<h2>Content</h2>
+[![Build status](https://github.com/evosys21/pdflib/workflows/build/badge.svg)](https://github.com/evosys21/pdflib/actions) 
+[![Latest Stable Version](https://poser.pugx.org/evosys21/phplib/v/stable)](https://packagist.org/packages/evosys21/phplib)
 
 <!-- TOC -->
-  * [Installation](#installation)
+  * [Overview](#overview)
   * [Advanced Multicell](#advanced-multicell)
     * [Features:](#features)
     * [Examples:](#examples)
   * [Advanced table](#advanced-table)
+    * [Features:](#features-1)
     * [Examples:](#examples-1)
-  * [FAQ 🔮](#faq-)
+  * [FAQ](#faq)
     * [Where do I report issues?](#where-do-i-report-issues)
   * [Contribute](#contribute)
   * [License](#license)
@@ -22,30 +19,10 @@
 
 ---
 
-## Installation
+## Overview
 
-`evosys21/pdflib` can be used with FPDF, TCPDF or tFPDF. Because of this we haven't added a fixed dependency in the main composer.json file. You need to add the dependency to the PDF generation library of your choice yourself.
-
-To use `evosys21/pdflib` with FPDF, install it via Composer:
-
-```shell
-composer require evosys21/pdflib
-composer require setasign/fpdf
-```
-
-If you want to use TCPDF:
-
-```shell
-composer require evosys21/pdflib
-composer require tecnickcom/tcpdf
-```
-
-If you want to use tFPDF:
-
-```shell
-composer require evosys21/pdflib
-composer require setasign/tfpdf
-```
+`evosys21/pdflib` is a collection of PHP classes facilitating developers to create [Advanced Multicells]() and [Tables]() in [FPDF](http://www.fpdf.org), [TCPDF](https://github.com/tecnickcom/TCPDF) or
+[tFPDF](http://fpdf.org/en/script/script92.php).
 
 ## Advanced Multicell
 
@@ -107,7 +84,7 @@ In the [examples](examples) folder you will find more examples with preview and 
 
 A full end-user documentation for Advanced Multicell is available [here](docs/multicell.md).
 
-## FAQ 🔮
+## FAQ
 
 ### Where do I report issues?
 
