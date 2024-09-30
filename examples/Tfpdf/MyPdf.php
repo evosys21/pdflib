@@ -52,7 +52,7 @@ class MyPdf extends Pdf
             $width,
             0,
             '',
-            'http://www.interpid.eu'
+            'https://github.com/evosys21/pdflib'
         );
         $this->SetY($this->tMargin);
     }

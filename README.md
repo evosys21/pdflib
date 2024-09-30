@@ -8,47 +8,26 @@ Fpdf, TCPDF, tFpdf - Advanced Multicell and Table
 
 `evosys21/pdflib` can be used with FPDF, TCPDF or tFPDF we haven't added a fixed dependency in the main composer.json file. You need to add the dependency to the PDF generation library of your choice yourself.
 
-To use FPDI with FPDF include following in your composer.json file:
+To use `evosys21/pdflib` with FPDF, install it via Composer:
 
-```json
-{
-  "require": {
-    "setasign/fpdf": "1.8.*",
-    "evosys21/pdflib": "^1.0"
-  }
-}
+```shell
+composer require evosys21/pdflib
+composer require setasign/fpdf
 ```
 
-If you want to use TCPDF, you have to update your `composer.json` to:
+If you want to use TCPDF:
 
-```json
-{
-  "require": {
-    "tecnickcom/tcpdf": "6.6.*",
-    "evosys21/pdflib": "^1.0"
-  }
-}
+```shell
+composer require evosys21/pdflib
+composer require tecnickcom/tcpdf
 ```
 
-If you want to use tFPDF, you have to update your `composer.json` to:
+If you want to use tFPDF:
 
-```json
-{
-  "require": {
-    "setasign/tfpdf": "1.33.*",
-    "evosys21/pdflib": "^1.0"
-  }
-}
+```shell
+composer require evosys21/pdflib
+composer require setasign/tfpdf
 ```
-
-## Manual Installation
-
-If you do not use composer, just require the `autoload.php` in the /src folder:
-
-```php
-require_once('src/autoload.php');
-```
-
 
 ## Example and Documentation
 
