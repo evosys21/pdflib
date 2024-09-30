@@ -6,9 +6,7 @@ Fpdf, TCPDF, tFpdf - Advanced Multicell and Table
 
 ## Installation with Composer
 
-`evosys21/pdflib` can be used with FPDF, TCPDF or tFPDF we haven't added a fixed dependency in the main
-composer.json file. You need to add the dependency to the PDF generation library of your choice
-yourself.
+`evosys21/pdflib` can be used with FPDF, TCPDF or tFPDF we haven't added a fixed dependency in the main composer.json file. You need to add the dependency to the PDF generation library of your choice yourself.
 
 To use FPDI with FPDF include following in your composer.json file:
 
@@ -21,7 +19,7 @@ To use FPDI with FPDF include following in your composer.json file:
 }
 ```
 
-If you want to use TCPDF, you have to update your composer.json to:
+If you want to use TCPDF, you have to update your `composer.json` to:
 
 ```json
 {
@@ -32,7 +30,7 @@ If you want to use TCPDF, you have to update your composer.json to:
 }
 ```
 
-If you want to use tFPDF, you have to update your composer.json to:
+If you want to use tFPDF, you have to update your `composer.json` to:
 
 ```json
 {
@@ -45,7 +43,7 @@ If you want to use tFPDF, you have to update your composer.json to:
 
 ## Manual Installation
 
-If you do not use composer, just require the autoload.php in the /src folder:
+If you do not use composer, just require the `autoload.php` in the /src folder:
 
 ```php
 require_once('src/autoload.php');

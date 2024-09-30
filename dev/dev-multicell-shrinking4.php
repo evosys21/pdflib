@@ -3,12 +3,13 @@
  * Pdf Advanced Multicell - Example
  */
 
-use Interpid\PdfExamples\PdfSettings;
+use evosys21\PdfLib\Dev\DevFactory;
+use evosys21\PdfLib\Examples\Fpdf\PdfSettings;
 
 $factory = new DevFactory();
 
 // Create the Advanced Multicell Object and inject the PDF object
-$multicell = DevFactory::multicell();
+$multicell = $factory->multicell();
 $pdf = $multicell->getPdfObject();
 
 $txt = file_get_contents(CONTENT_PATH . '/multicell.txt');

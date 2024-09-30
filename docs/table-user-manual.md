@@ -1,10 +1,10 @@
-# FPDF Avanced Table User Manual
+# Fpdf, TCPDF, tFpdf - Advanced Table
 
 {{>toc}}
 
 ## Installation
 
-The PHP Pdf Addons will work right out of the box. All you need is a webserver with Php 5.5 (or greater). No further
+The PHP Pdf Addons will work right out of the box. All you need is a webserver with Php 7.4 (or greater). No further
 configurations are required.
 
 Just download the files, extract the content in a directory where your webserver is configured and call the url.
@@ -13,7 +13,7 @@ Every add-on has multiple example files that cover the full functionality.
 
 ### Include the library into the project
 
-Normally, from the downloaded package you need only the files from `library\interpid\PdfLib` folder in order to run it.
+Normally, from the downloaded package you need only the files from `library\evosys21\PdfLib` folder in order to run it.
 
 #### Using "require_once"
 
@@ -55,13 +55,9 @@ In `composer.json`
 
 then run `composer dump-autoload` to regenerate the autoload classmap.
 
-## Download
+## Why use the `evosys21\PdfLib\Fpdf\Pdf` object instead of FPDF?
 
-Please go to your account on https://www.interpid.eu/my-account to download the latest versions of the addons.
-
-## Why use the \Interpid\PdfLib\Pdf object instead of FPDF
-
-To implement the FPDF Add-on, we need access to private/protected properties from the FPDF class like widths, margins,
+To implement the PDF Add-ons, we need access to private/protected properties from the FPDF class like widths, margins,
 fonts etc... As these properties are not provided by setters and getters the FPDF class was extended and these
 properties made public.
 
@@ -82,7 +78,7 @@ class Pdf extends \FPDF
 Please refer to the FPDF class manual in order to get this done correctly. Example:
 
 ```php
-use Interpid\PdfLib\Pdf;
+use evosys21\PdfLib\Fpdf\Pdf;
 
 // Pdf extends FPDF
 $pdf = new Pdf();
@@ -105,7 +101,7 @@ $pdf->AddPage();
 
 ```php
 // Create the Advanced Multicell Object and inject the PDF object
-use Interpid\PdfLib\Table;
+use evosys21\PdfLib\Table;
 $table = new Table($pdf);
 ```
 
@@ -138,14 +134,14 @@ $table->initialize([50, 50, 40]);
 Optionally you can pass a configuration array to the table `initialize` function.
 
 ```php
-$config = array(
-    'TABLE' => array(
+$config = [
+    'TABLE' => [
         'TABLE_ALIGN' => 'L', //left align
         'BORDER_COLOR' => [0, 0, 0], //border color
         'BORDER_SIZE' => '0.5', //border size
-    ),
+    ],
 
-    'HEADER' => array(
+    'HEADER' => [
         'TEXT_COLOR' => [25, 60, 170], //text color
         'TEXT_SIZE' => 9, //font size
         'LINE_SIZE' => 6, //line size for one row
@@ -153,14 +149,14 @@ $config = array(
         'BORDER_SIZE' => 0.5, //border size
         'BORDER_TYPE' => 'B', //border type, can be: 0, 1 or a combination of: 'LRTB'
         'BORDER_COLOR' => [0, 0, 0], //border color
-    ),
+    ],
 
-    'ROW' => array(
+    'ROW' => [
         'TEXT_COLOR' => [225, 20, 0], //text color
         'TEXT_SIZE' => 6, //font size
         'BACKGROUND_COLOR' => [232, 255, 209], //background color
         'BORDER_COLOR' => [150, 255, 56], //border color
-    ),
+    ],
 );
 
 //Initialize the table, 3 columns
@@ -254,10 +250,10 @@ This array does not need to contain the complete configuration structure, only t
 //changing header text color and row text color and size
 $config = [
     'HEADER' => [
-        'TEXT_COLOR'        => array(25, 60, 170),  //text color
+        'TEXT_COLOR'        => [25, 60, 170],  //text color
     ],
     'ROW' => [
-        'TEXT_COLOR'        => array(225, 20, 0),   //text color
+        'TEXT_COLOR'        => [225, 20, 0],   //text color
         'TEXT_SIZE'         => 6,                   //font size
     ],
 );
@@ -479,7 +475,7 @@ $row = [
 Images are passed as objects
 
 ```php
-use Interpid\PdfLib\Table;
+use evosys21\PdfLib\Table;
 
 $imageCell = new Table\Cell\Image($pdf, 'blog.jpg', 10);
 $svgImageCell = new Table\Cell\ImageSVG($pdf, 'tiger.svg', 10);
@@ -510,10 +506,10 @@ $cell = new Table\Cell\ImageSVG($pdf, 'tiger.svg', 35, 35);
 All input values for cells are converted into objects. The following objects are available in the distributed package.
 
 ```php
-use Interpid\PdfLib\Table\Cell\EmptyCell;
-use Interpid\PdfLib\Table\Cell\Multicell;
-use Interpid\PdfLib\Table\Cell\Image;
-use Interpid\PdfLib\Table\Cell\ImageSVG;
+use evosys21\PdfLib\Table\Cell\EmptyCell;
+use evosys21\PdfLib\Table\Cell\Multicell;
+use evosys21\PdfLib\Table\Cell\Image;
+use evosys21\PdfLib\Table\Cell\ImageSVG;
 ```
 
 ## Finalize the table

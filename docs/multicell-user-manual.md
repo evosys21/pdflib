@@ -13,7 +13,7 @@ Every add-on has multiple example files that cover the full functionality.
 
 ### Include the library into the project
 
-Normally, from the downloaded package you need only the files from `library\interpid\PdfLib` folder in order to run it.
+Normally, from the downloaded package you need only the files from `library\evosys21\PdfLib` folder in order to run it.
 
 #### Using "require_once"
 
@@ -68,8 +68,8 @@ To generate an "Advanced Multicell" the followings are required:
 * add the multicells to the pdf document
 
 ```php
-use Interpid\PdfLib\Multicell;
-use Interpid\PdfLib\Pdf; // Pdf extends FPDF
+use evosys21\PdfLib\Multicell;
+use evosys21\PdfLib\Fpdf\Pdf; // Pdf extends FPDF
 
 // create the Pdf Object
 $pdf = new Pdf();
@@ -92,7 +92,7 @@ $multicell->multiCell(0, 5, 'This is a simple cell');
 $multicell->multiCell(0, 5, '<p>This is a <b>BOLD</b> text</p>');
 ```
 
-## Why use the \Interpid\PdfLib\Pdf object instead of FPDF
+## Why use the \evosys21\PdfLib\Fpdf\Pdf object instead of FPDF
 
 To implement the FPDF Add-on, we need access to private/protected properties from the FPDF class like widths, margins,
 fonts etc... As these properties are not provided by setters and getters the FPDF class was extended and these
@@ -115,7 +115,7 @@ class Pdf extends \FPDF
 Please refer to the FPDF class manual in order to get this done correctly. Example:
 
 ```php
-use Interpid\PdfLib\Pdf;
+use evosys21\PdfLib\Fpdf\Pdf;
 
 // Pdf extends FPDF
 $pdf = new Pdf();
@@ -138,7 +138,7 @@ $pdf->AddPage();
 
 ```php
 // Create the Advanced Multicell Object and inject the PDF object
-use Interpid\PdfLib\Multicell;
+use evosys21\PdfLib\Multicell;
 $multicell = new Multicell($pdf);
 ```
 
