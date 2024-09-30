@@ -68,7 +68,18 @@ The function is pretty similar to the Multicell function in the tcpdf base class
 
 ### Examples:
 
-#### Table overview.php
+#### Advanced Multicell
+
+|         | Multicell Example #1 - Overview                                                                                             | multicell Example #1 - Overview                                                                                               | 
+|---------|-----------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| Code    | [example-multicell-1-overview.php](examples/Tcpdf/example-multicell-1-overview.php)                                         | [example-multicell-6-shrinking.php](examples/Tcpdf/example-multicell-6-shrinking.php)                                         |
+| Preview | [<img src="examples/Tcpdf/example-multicell-1-overview.png" height="300">](examples/Tcpdf/example-multicell-1-overview.pdf) | [<img src="examples/Tcpdf/example-multicell-6-shrinking.png" height="300">](examples/Tcpdf/example-multicell-6-shrinking.pdf) |
+| Pdf     | [example-multicell-1-overview.pdf](examples/Tcpdf/example-multicell-1-overview.pdf)                                         | [example-multicell-1-overview.pdf](examples/Tcpdf/example-multicell-1-overview.pdf)                                           |      |
+
+In the [examples](examples) folder you will find more examples with preview and the associated code.
+
+
+#### Tables
 
 |         | Table Example #1 - Overview                                                                                         | Table Example #1 - Overview                                                                                         | 
 |---------|---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
@@ -76,7 +87,7 @@ The function is pretty similar to the Multicell function in the tcpdf base class
 | Preview | [<img src="examples/Tcpdf/example-table-1-overview.png" height="300">](examples/Tcpdf/example-table-1-overview.pdf) | [<img src="examples/Tcpdf/example-table-2-overview.png" height="300">](examples/Tcpdf/example-table-2-overview.pdf) |
 | Pdf     | [example-table-1-overview.pdf](examples/Tcpdf/example-table-1-overview.pdf)                                         | [example-table-1-overview.pdf](examples/Tcpdf/example-table-1-overview.pdf)                                         |      |
 
-More examples can be found in the [examples](examples) folder.
+In the [examples](examples) folder you will find more examples with preview and the associated code.
 
 A full end-user documentation for Advanced Multicell is available [here](docs/multicell.md).
 
