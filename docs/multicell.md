@@ -1,4 +1,5 @@
-# FPDF / TCPDF / tFPDF Advanced Multicell User Manual
+ FPDF / TCPDF / tFPDF Advanced Multicell User Manual
+ ======================================================
 
 <!-- TOC -->
 * [FPDF / TCPDF / tFPDF Advanced Multicell User Manual](#fpdf--tcpdf--tfpdf-advanced-multicell-user-manual)

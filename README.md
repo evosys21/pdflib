@@ -4,7 +4,7 @@
 [tFPDF](http://fpdf.org/en/script/script92.php).
 
 
-[![Build status](https://github.com/evosys21/pdflib/workflows/php/badge.svg)](https://github.com/elastic/elasticsearch-php/actions) [![Latest Stable Version](https://poser.pugx.org/elasticsearch/elasticsearch/v/stable)](https://packagist.org/packages/elasticsearch/elasticsearch) [![Total Downloads](https://poser.pugx.org/elasticsearch/elasticsearch/downloads)](https://packagist.org/packages/elasticsearch/elasticsearch)
+[![Build status](https://github.com/evosys21/pdflib/workflows/build/badge.svg)](https://github.com/evosys21/pdflib/actions) [![Latest Stable Version](https://poser.pugx.org/evosys21/phplib/v/stable)](https://packagist.org/packages/evosys21/phplib)
 
 ## Contents
 
@@ -19,7 +19,7 @@
 
 ## Installation with Composer
 
-`evosys21/pdflib` can be used with FPDF, TCPDF or tFPDF we haven't added a fixed dependency in the main composer.json file. You need to add the dependency to the PDF generation library of your choice yourself.
+`evosys21/pdflib` can be used with FPDF, TCPDF or tFPDF. Because of this we haven't added a fixed dependency in the main composer.json file. You need to add the dependency to the PDF generation library of your choice yourself.
 
 To use `evosys21/pdflib` with FPDF, install it via Composer:
 
@@ -44,3 +44,34 @@ composer require setasign/tfpdf
 
 ## Example and Documentation
 
+### Advanced Multicell
+
+A full end-user documentation for Advanced Multicell is available [here](docs/multicell.md).
+
+### Advanced table
+
+A full end-user documentation for Advanced Table is available [here](docs/table.md).
+
+## FAQ 🔮
+
+### Where do I report issues?
+
+If something is not working as expected, please check or open an 
+[issue](https://github.com/evosys21/pdflib/issues).
+
+If you would like to discuss your use case or ask a general question, please use the discussions board:
+[discussions](https://github.com/evosys21/pdflib/discussions).
+
+## Contribute 🚀
+
+We welcome contributors to the project.
+- Before opening a pull request, please create an issue to
+  [discuss the scope of your proposal](https://github.com/evosys21/pdflib/issues).
+- Never send PR to `main` unless you want to contribute to the development
+  version of the client (`main` represents the next major version).
+- Each PR should include a **unit test** using [PHPUnit](https://phpunit.de/).
+Thanks in advance for your contribution! :heart:
+
+## License 📗
+
+MIT see [LICENSE.TXT](LICENSE.TXT)

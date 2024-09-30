@@ -509,7 +509,7 @@ endobj
 <</Type /Annot /Subtype /Link /Rect [56.69 803.79 147.07 797.79] /Border [0 0 0] /A <</S /URI /URI (https://github.com/evosys21/pdflib)>>>>
 endobj
 6 0 obj
-<</Type /Annot /Subtype /Link /Rect [467.72 827.72 538.59 789.98] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu)>>>>
+<</Type /Annot /Subtype /Link /Rect [467.72 827.72 538.59 789.98] /Border [0 0 0] /A <</S /URI /URI (https://github.com/evosys21/pdflib)>>>>
 endobj
 7 0 obj
 <</Type /Annot /Subtype /Link /Rect [100.26 474.13 126.38 464.13] /Border [0 0 0] /A <</S /URI /URI (www.fpdf.org)>>>>
@@ -872,7 +872,7 @@ endobj
 <</Type /Annot /Subtype /Link /Rect [56.69 803.79 147.07 797.79] /Border [0 0 0] /A <</S /URI /URI (https://github.com/evosys21/pdflib)>>>>
 endobj
 11 0 obj
-<</Type /Annot /Subtype /Link /Rect [467.72 827.72 538.59 789.98] /Border [0 0 0] /A <</S /URI /URI (http://www.interpid.eu)>>>>
+<</Type /Annot /Subtype /Link /Rect [467.72 827.72 538.59 789.98] /Border [0 0 0] /A <</S /URI /URI (https://github.com/evosys21/pdflib)>>>>
 endobj
 12 0 obj
 <</Type /Annot /Subtype /Link /Rect [100.26 590.35 126.38 580.35] /Border [0 0 0] /A <</S /URI /URI (www.fpdf.org)>>>>
@@ -1148,26 +1148,26 @@ endobj
 xref
 0 21
 0000000000 65535 f 
-0000029059 00000 n 
-0000046623 00000 n 
+0000029083 00000 n 
+0000046647 00000 n 
 0000000009 00000 n 
 0000000116 00000 n 
 0000016114 00000 n 
 0000016269 00000 n 
-0000016413 00000 n 
-0000016547 00000 n 
-0000016657 00000 n 
-0000028623 00000 n 
-0000028779 00000 n 
-0000028924 00000 n 
-0000029152 00000 n 
-0000029877 00000 n 
-0000029992 00000 n 
-0000030112 00000 n 
-0000030235 00000 n 
-0000030362 00000 n 
-0000046772 00000 n 
-0000046856 00000 n 
+0000016425 00000 n 
+0000016559 00000 n 
+0000016669 00000 n 
+0000028635 00000 n 
+0000028791 00000 n 
+0000028948 00000 n 
+0000029176 00000 n 
+0000029901 00000 n 
+0000030016 00000 n 
+0000030136 00000 n 
+0000030259 00000 n 
+0000030386 00000 n 
+0000046796 00000 n 
+0000046880 00000 n 
 trailer
 <<
 /Size 21
@@ -1175,5 +1175,5 @@ trailer
 /Info 19 0 R
 >>
 startxref
-46906
+46930
 %%EOF
