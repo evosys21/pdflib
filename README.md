@@ -12,9 +12,8 @@
   * [Advanced Multicell](#advanced-multicell)
     * [Features:](#features)
     * [Examples:](#examples)
-      * [Advanced Multicell](#advanced-multicell-1)
-      * [Tables](#tables)
   * [Advanced table](#advanced-table)
+    * [Examples:](#examples-1)
   * [FAQ 🔮](#faq-)
     * [Where do I report issues?](#where-do-i-report-issues)
   * [Contribute](#contribute)
@@ -67,12 +66,23 @@ The function is pretty similar to the Multicell function in the tcpdf base class
 - Cell padding (left, right, top, bottom)
 - Controlled Tag Sizes can be used
 
+### Examples:
+
+|         | Multicell Example #1 - Overview                                                                                             | multicell Example #1 - Overview                                                                                               | 
+|---------|-----------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| Code    | [example-multicell-1-overview.php](examples/Tcpdf/example-multicell-1-overview.php)                                         | [example-multicell-6-shrinking.php](examples/Tcpdf/example-multicell-6-shrinking.php)                                         |
+| Preview | [<img src="examples/Tcpdf/example-multicell-1-overview.png" height="300">](examples/Tcpdf/example-multicell-1-overview.pdf) | [<img src="examples/Tcpdf/example-multicell-6-shrinking.png" height="300">](examples/Tcpdf/example-multicell-6-shrinking.pdf) |
+| Pdf     | [example-multicell-1-overview.pdf](examples/Tcpdf/example-multicell-1-overview.pdf)                                         | [example-multicell-1-overview.pdf](examples/Tcpdf/example-multicell-1-overview.pdf)                                           |      |
+
+In the [examples](examples) are more examples with preview and the associated code.
+
 ## Advanced table
 
 This addon class allows creation of an **Advanced Table for FPDF/TCPDF/tFPDF** in the pdf document in a very simple way.
-Features:
 
-- Every table cell is a fully featured Advanced Multicell
+### Features:
+
+- Every table cell is a fully featured [Advanced Multicell](#advanced-multicell)
 - The table cells can be aligned vertically and horizontally
 - Columns and rows can be spanned
 - The table splits automatically on page-break
@@ -84,20 +94,8 @@ Features:
 
 A full end-user documentation for Advanced Table is available [here](docs/table.md).
 
-## Examples:
 
-### Advanced Multicell
-
-|         | Multicell Example #1 - Overview                                                                                             | multicell Example #1 - Overview                                                                                               | 
-|---------|-----------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| Code    | [example-multicell-1-overview.php](examples/Tcpdf/example-multicell-1-overview.php)                                         | [example-multicell-6-shrinking.php](examples/Tcpdf/example-multicell-6-shrinking.php)                                         |
-| Preview | [<img src="examples/Tcpdf/example-multicell-1-overview.png" height="300">](examples/Tcpdf/example-multicell-1-overview.pdf) | [<img src="examples/Tcpdf/example-multicell-6-shrinking.png" height="300">](examples/Tcpdf/example-multicell-6-shrinking.pdf) |
-| Pdf     | [example-multicell-1-overview.pdf](examples/Tcpdf/example-multicell-1-overview.pdf)                                         | [example-multicell-1-overview.pdf](examples/Tcpdf/example-multicell-1-overview.pdf)                                           |      |
-
-In the [examples](examples) folder you will find more examples with preview and the associated code.
-
-
-#### Table
+### Examples:
 
 |         | Table Example #1 - Overview                                                                                         | Table Example #1 - Overview                                                                                         | 
 |---------|---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
