@@ -80,4 +80,4 @@ Thanks in advance for your contribution! :heart:
 
 ## License 📗
 
-MIT see [LICENSE.TXT](LICENSE.TXT)
+MIT License. For more information, please see the [LICENSE](LICENSE.TXT) file.
