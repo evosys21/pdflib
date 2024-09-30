@@ -1,25 +1,26 @@
 <h1>Fpdf, TCPDF, tFpdf - Advanced Multicell and Table</h1>
 
-`evosys21/pdflib` is a collection of PHP classes facilitating developers to create [Advanced Multicells]() and [Tables]() in [FPDF](http://www.fpdf.org), [TCPDF](https://github.com/tecnickcom/TCPDF) or 
+`evosys21/pdflib` is a collection of PHP classes facilitating developers to create [Advanced Multicells]() and [Tables]() in [FPDF](http://www.fpdf.org), [TCPDF](https://github.com/tecnickcom/TCPDF) or
 [tFPDF](http://fpdf.org/en/script/script92.php).
-
 
 [![Build status](https://github.com/evosys21/pdflib/workflows/build/badge.svg)](https://github.com/evosys21/pdflib/actions) [![Latest Stable Version](https://poser.pugx.org/evosys21/phplib/v/stable)](https://packagist.org/packages/evosys21/phplib)
 
 <h2>Content</h2>
 
 <!-- TOC -->
-  * [Installation](#installation)
-  * [Documentation](#documentation)
-    * [Advanced Multicell](#advanced-multicell)
-    * [Advanced table](#advanced-table)
-  * [FAQ 🔮](#faq-)
-    * [Where do I report issues?](#where-do-i-report-issues)
-  * [Contribute](#contribute)
-  * [License](#license)
+
+* [Installation](#installation)
+* [Documentation](#documentation)
+  * [Advanced Multicell](#advanced-multicell)
+  * [Advanced table](#advanced-table)
+* [FAQ 🔮](#faq-)
+  * [Where do I report issues?](#where-do-i-report-issues)
+* [Contribute](#contribute)
+* [License](#license)
+
 <!-- TOC -->
 
-***
+---
 
 ## Installation
 
@@ -49,7 +50,7 @@ composer require setasign/tfpdf
 ## Advanced Multicell
 
 This addon class allows creation of an **Advanced Multicell for FPDF/TCPDF/tFPDF** which uses as input a TAG based formatted
-string instead of a simple string. The use of tags allows to change the font, the style (bold, italic, underline), 
+string instead of a simple string. The use of tags allows to change the font, the style (bold, italic, underline),
 the size, and the color of characters and many other features.
 
 The function is pretty similar to the Multicell function in the tcpdf base class with some extended parameters.
@@ -67,7 +68,16 @@ The function is pretty similar to the Multicell function in the tcpdf base class
 
 ### Examples:
 
-#### example-table-1-overview.php
+#### Table overview.php
+
+
+
+|         | Table Example #1 - Overview                                                                                                         | Table Example #1 - Overview                                                                                                         | 
+|---------|-------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| Code    | [example-table-1-overview.php](examples/Tcpdf/example-table-1-overview.php)                                                         | [example-table-2-overview.php](examples/Tcpdf/example-table-2-overview.php)                                                         |
+| Preview | [<img src="tests/_files/src/Tcpdf/example-table-1-overview.png" height="300">](tests/_files/src/Tcpdf/example-table-1-overview.pdf) | [<img src="tests/_files/src/Tcpdf/example-table-2-overview.png" height="300">](tests/_files/src/Tcpdf/example-table-2-overview.pdf) |
+| Pdf     | [example-table-1-overview.pdf](tests/_files/src/Tcpdf/example-table-1-overview.pdf)                                                 | [example-table-1-overview.pdf](tests/_files/src/Tcpdf/example-table-1-overview.pdf)                                                 |      |
+
 Code: [example-table-1-overview.php](examples/Tcpdf/example-table-1-overview.php)
 
 [<img src="tests/_files/src/Tcpdf/example-table-1-overview.png" height="300">](tests/_files/src/Tcpdf/example-table-1-overview.pdf)
@@ -97,7 +107,7 @@ A full end-user documentation for Advanced Table is available [here](docs/table.
 
 ### Where do I report issues?
 
-If something is not working as expected, please check or open an 
+If something is not working as expected, please check or open an
 [issue](https://github.com/evosys21/pdflib/issues).
 
 If you would like to discuss your use case or ask a general question, please use the discussions board:
@@ -106,6 +116,7 @@ If you would like to discuss your use case or ask a general question, please use
 ## Contribute
 
 We welcome contributors to the project.
+
 - Before opening a pull request, please create an issue to
   [discuss the scope of your proposal](https://github.com/evosys21/pdflib/issues).
 - Never send PR to `main` unless you want to contribute to the development
