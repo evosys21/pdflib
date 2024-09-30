@@ -18,7 +18,7 @@ class ExamplesTest extends BaseExamplesTestCase
         $source = "examples/$dir/$file";
 
         $filename = pathinfo($file, PATHINFO_FILENAME);
-        $expected = TEST_PATH . "/_files/src/$dir/$filename.pdf";
+        $expected = "examples/$dir/$filename.pdf";
 
         $this->runTestWithExample($source, $expected);
     }
