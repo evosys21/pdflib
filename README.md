@@ -13,6 +13,12 @@
   * [Contents](#contents)
   * [Installation with Composer](#installation-with-composer)
   * [Example and Documentation](#example-and-documentation)
+    * [Advanced Multicell](#advanced-multicell)
+    * [Advanced table](#advanced-table)
+  * [FAQ 🔮](#faq-)
+    * [Where do I report issues?](#where-do-i-report-issues)
+  * [Contribute 🚀](#contribute-)
+  * [License 📗](#license-)
 <!-- TOC -->
 
 ***
