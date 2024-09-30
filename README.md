@@ -8,16 +8,17 @@
 <h2>Content</h2>
 
 <!-- TOC -->
-
-* [Installation](#installation)
-* [Documentation](#documentation)
+  * [Installation](#installation)
   * [Advanced Multicell](#advanced-multicell)
+    * [Features:](#features)
+    * [Examples:](#examples)
+      * [Advanced Multicell](#advanced-multicell-1)
+      * [Tables](#tables)
   * [Advanced table](#advanced-table)
-* [FAQ 🔮](#faq-)
-  * [Where do I report issues?](#where-do-i-report-issues)
-* [Contribute](#contribute)
-* [License](#license)
-
+  * [FAQ 🔮](#faq-)
+    * [Where do I report issues?](#where-do-i-report-issues)
+  * [Contribute](#contribute)
+  * [License](#license)
 <!-- TOC -->
 
 ---
@@ -66,31 +67,6 @@ The function is pretty similar to the Multicell function in the tcpdf base class
 - Cell padding (left, right, top, bottom)
 - Controlled Tag Sizes can be used
 
-### Examples:
-
-#### Advanced Multicell
-
-|         | Multicell Example #1 - Overview                                                                                             | multicell Example #1 - Overview                                                                                               | 
-|---------|-----------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| Code    | [example-multicell-1-overview.php](examples/Tcpdf/example-multicell-1-overview.php)                                         | [example-multicell-6-shrinking.php](examples/Tcpdf/example-multicell-6-shrinking.php)                                         |
-| Preview | [<img src="examples/Tcpdf/example-multicell-1-overview.png" height="300">](examples/Tcpdf/example-multicell-1-overview.pdf) | [<img src="examples/Tcpdf/example-multicell-6-shrinking.png" height="300">](examples/Tcpdf/example-multicell-6-shrinking.pdf) |
-| Pdf     | [example-multicell-1-overview.pdf](examples/Tcpdf/example-multicell-1-overview.pdf)                                         | [example-multicell-1-overview.pdf](examples/Tcpdf/example-multicell-1-overview.pdf)                                           |      |
-
-In the [examples](examples) folder you will find more examples with preview and the associated code.
-
-
-#### Tables
-
-|         | Table Example #1 - Overview                                                                                         | Table Example #1 - Overview                                                                                         | 
-|---------|---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Code    | [example-table-1-overview.php](examples/Tcpdf/example-table-1-overview.php)                                         | [example-table-2-overview.php](examples/Tcpdf/example-table-2-overview.php)                                         |
-| Preview | [<img src="examples/Tcpdf/example-table-1-overview.png" height="300">](examples/Tcpdf/example-table-1-overview.pdf) | [<img src="examples/Tcpdf/example-table-2-overview.png" height="300">](examples/Tcpdf/example-table-2-overview.pdf) |
-| Pdf     | [example-table-1-overview.pdf](examples/Tcpdf/example-table-1-overview.pdf)                                         | [example-table-1-overview.pdf](examples/Tcpdf/example-table-1-overview.pdf)                                         |      |
-
-In the [examples](examples) folder you will find more examples with preview and the associated code.
-
-A full end-user documentation for Advanced Multicell is available [here](docs/multicell.md).
-
 ## Advanced table
 
 This addon class allows creation of an **Advanced Table for FPDF/TCPDF/tFPDF** in the pdf document in a very simple way.
@@ -107,6 +83,31 @@ Features:
 - Images can be added to table cells
 
 A full end-user documentation for Advanced Table is available [here](docs/table.md).
+
+## Examples:
+
+### Advanced Multicell
+
+|         | Multicell Example #1 - Overview                                                                                             | multicell Example #1 - Overview                                                                                               | 
+|---------|-----------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| Code    | [example-multicell-1-overview.php](examples/Tcpdf/example-multicell-1-overview.php)                                         | [example-multicell-6-shrinking.php](examples/Tcpdf/example-multicell-6-shrinking.php)                                         |
+| Preview | [<img src="examples/Tcpdf/example-multicell-1-overview.png" height="300">](examples/Tcpdf/example-multicell-1-overview.pdf) | [<img src="examples/Tcpdf/example-multicell-6-shrinking.png" height="300">](examples/Tcpdf/example-multicell-6-shrinking.pdf) |
+| Pdf     | [example-multicell-1-overview.pdf](examples/Tcpdf/example-multicell-1-overview.pdf)                                         | [example-multicell-1-overview.pdf](examples/Tcpdf/example-multicell-1-overview.pdf)                                           |      |
+
+In the [examples](examples) folder you will find more examples with preview and the associated code.
+
+
+#### Table
+
+|         | Table Example #1 - Overview                                                                                         | Table Example #1 - Overview                                                                                         | 
+|---------|---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| Code    | [example-table-1-overview.php](examples/Tcpdf/example-table-1-overview.php)                                         | [example-table-2-overview.php](examples/Tcpdf/example-table-2-overview.php)                                         |
+| Preview | [<img src="examples/Tcpdf/example-table-1-overview.png" height="300">](examples/Tcpdf/example-table-1-overview.pdf) | [<img src="examples/Tcpdf/example-table-2-overview.png" height="300">](examples/Tcpdf/example-table-2-overview.pdf) |
+| Pdf     | [example-table-1-overview.pdf](examples/Tcpdf/example-table-1-overview.pdf)                                         | [example-table-1-overview.pdf](examples/Tcpdf/example-table-1-overview.pdf)                                         |      |
+
+In the [examples](examples) folder you will find more examples with preview and the associated code.
+
+A full end-user documentation for Advanced Multicell is available [here](docs/multicell.md).
 
 ## FAQ 🔮
 
