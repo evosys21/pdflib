@@ -1,13 +1,8 @@
- FPDF / TCPDF / tFPDF Advanced Multicell User Manual
- ======================================================
+
+<h1>FPDF / TCPDF / tFPDF Advanced Multicell User Manual</h1>
 
 <!-- TOC -->
-* [FPDF / TCPDF / tFPDF Advanced Multicell User Manual](#fpdf--tcpdf--tfpdf-advanced-multicell-user-manual)
   * [Installation](#installation)
-    * [Include the library into the project](#include-the-library-into-the-project)
-      * [Using "require_once"](#using-require_once)
-      * [With composer.json](#with-composerjson)
-  * [Download](#download)
   * [Usage](#usage)
   * [Why use the \evosys21\PdfLib\Fpdf\Pdf object instead of FPDF](#why-use-the-evosys21pdflibfpdfpdf-object-instead-of-fpdf)
   * [Create the Pdf object](#create-the-pdf-object)
@@ -40,60 +35,30 @@
 
 ## Installation
 
-The PHP Pdf Addons will work right out of the box. All you need is a webserver with Php 5.5 (or greater). No further
-configurations are required.
+`evosys21/pdflib` can be used with FPDF, TCPDF or tFPDF. Because of this we haven't 
+added a fixed dependency in the main composer.json file. 
+You need to add the dependency to the PDF generation library of your choice yourself.
 
-Just download the files, extract the content in a directory where your webserver is configured and call the url.
+To use `evosys21/pdflib` with FPDF, install it via Composer:
 
-Every add-on has multiple example files that cover the full functionality.
-
-### Include the library into the project
-
-Normally, from the downloaded package you need only the files from `library\evosys21\PdfLib` folder in order to run it.
-
-#### Using "require_once"
-
-In order to include the full interpid library, just include the `autoload.php` provided in the root folder. This will
-provide you the FPDF and all Interpid PdfLib library classes.
-
-Assuming you downloaded `fpdf-multicell-3.0.0` and placed in your project `libs` folder:
-
-```php
-<?php
-require_once 'libs/fpdf-multicell-3.0.0/autoload.php';
+```shell
+composer require evosys21/pdflib
+composer require setasign/fpdf
 ```
 
-#### With composer.json
+If you want to use TCPDF:
 
-If your project uses composer, then include the pdf library path to your composer file:
-
-In `composer.json`
-
-```json
-    "autoload": {
-"classmap": [
-"libs/fpdf-multicell-3.0.0/library/interpid"
-],
-},
+```shell
+composer require evosys21/pdflib
+composer require tecnickcom/tcpdf
 ```
 
-or you can use the PSR-4 autoload capabilities
+If you want to use tFPDF:
 
-In `composer.json`
-
-```json
-    "autoload": {
-"psr-4": {
-"Interpid\\PdfLib\\": "libs/fpdf-multicell-3.0.0/library/interpid/PdfLib/"
-}
-},
+```shell
+composer require evosys21/pdflib
+composer require setasign/tfpdf
 ```
-
-then run `composer dump-autoload` to regenerate the autoload classmap.
-
-## Download
-
-Please go to your account on https://www.interpid.eu/my-account to download the latest versions of the addons.
 
 ## Usage
 
