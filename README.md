@@ -6,12 +6,13 @@
 <!-- TOC -->
   * [Overview](#overview)
   * [Advanced Multicell](#advanced-multicell)
-    * [Features:](#features)
-    * [Examples:](#examples)
+    * [Features](#features)
+    * [Examples](#examples)
   * [Advanced table](#advanced-table)
-    * [Features:](#features-1)
-    * [Examples:](#examples-1)
+    * [Features](#features-1)
+    * [Examples](#examples-1)
   * [FAQ](#faq)
+    * [Why use the custom pdf class instead of `FPDF/TCPDF/tFPDF`](#why-use-the-custom-pdf-class-instead-of-fpdftcpdftfpdf)
     * [Where do I report issues?](#where-do-i-report-issues)
   * [Contribute](#contribute)
   * [License](#license)
@@ -32,18 +33,18 @@ the size, and the color of characters and many other features.
 
 The function is pretty similar to the Multicell function in the tcpdf base class with some extended parameters.
 
-### Features:
+### Features
 
-- Text can be aligned, centered or justified
-- Different Font, Sizes, Styles, Colors can be used
-- The cell block can be framed and the background painted
-- Links can be used in any tag
-- TAB spaces (t) can be used
-- Variable Y relative positions can be used for Subscript or Superscript
-- Cell padding (left, right, top, bottom)
-- Controlled Tag Sizes can be used
+- Text can be **aligned**, **centered**, or **justified**.
+- Different **fonts**, **sizes**, **styles**, and **colors** can be used.
+- The cell block can be **framed**, and the **background** can be **colored**.
+- **Links** can be used in any tag.
+- **TAB** spaces (`\t`) can be used.
+- Variable vertical positions can be used for **subscripts** or **superscripts**.
+- **Cell padding** (left, right, top, bottom) can be adjusted.
+- Controlled **tag sizes** can be used.
 
-### Examples:
+### Examples
 
 |         | Multicell Example #1 - Overview                                                                                             | multicell Example #1 - Overview                                                                                               | 
 |---------|-----------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
@@ -57,22 +58,21 @@ In the [examples](examples) are more examples with preview and the associated co
 
 This addon class allows creation of an **Advanced Table for FPDF/TCPDF/tFPDF** in the pdf document in a very simple way.
 
-### Features:
+### Features
 
-- Every table cell is a fully featured [Advanced Multicell](#advanced-multicell)
-- The table cells can be aligned vertically and horizontally
-- Columns and rows can be spanned
-- The table splits automatically on page-break
-- The header can be added automatically on every new page
-- Multiple default properties can be defined for headers and rows, which can be overridden for every single cell
-- Advanced split mode for cells can be enabled
-- Table can be transparent
-- Images can be added to table cells
+- Every table cell supports [Advanced Multicell](#advanced-multicell) functionality.
+- Table cells can be aligned both **vertically** and **horizontally**.
+- Cells can span multiple **columns** and **rows**.
+- The table automatically splits on **page breaks**.
+- The **header** is automatically added to every new page.
+- Default properties for **headers** and **rows** can be set but can be overridden per individual cell.
+- **Advanced cell-splitting mode** is available.
+- The table supports **transparency**.
+- **Images** can be inserted into table cells.
 
 A full end-user documentation for Advanced Table is available [here](docs/table.md).
 
-
-### Examples:
+### Examples
 
 |         | Table Example #1 - Overview                                                                                         | Table Example #1 - Overview                                                                                         | 
 |---------|---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
@@ -85,6 +85,20 @@ In the [examples](examples) folder you will find more examples with preview and 
 A full end-user documentation for Advanced Multicell is available [here](docs/multicell.md).
 
 ## FAQ
+
+### Why use the custom pdf class instead of `FPDF/TCPDF/tFPDF`
+
+The custom `evosys21\PdfLib\Fpdf\Pdf` object is used instead of `FPDF` because `FPDF`'s private/protected properties,
+like widths, margins, and fonts, need to be accessed to implement add-ons.  
+Since `FPDF` doesn't provide setters/getters for these properties, the class was extended to 
+access them.
+
+The same is valid for all 3 pdf classes: `FPDF/TCPDF/tFPDF`.
+
+For more details see: 
+ - [src/Fpdf/Pdf.php](src/Fpdf/Pdf.php)
+ - [src/Tcpdf/Pdf.php](src/Tcpdf/Pdf.php)
+ - [src/Tfpdf/Pdf.php](src/Tfpdf/Pdf.php)
 
 ### Where do I report issues?
 

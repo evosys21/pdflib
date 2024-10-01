@@ -4,7 +4,6 @@
 <!-- TOC -->
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Why use the \evosys21\PdfLib\Fpdf\Pdf object instead of FPDF](#why-use-the-evosys21pdflibfpdfpdf-object-instead-of-fpdf)
   * [Create the Pdf object](#create-the-pdf-object)
   * [Create the Advanced Multicell object](#create-the-advanced-multicell-object)
   * [Tag styling](#tag-styling)
@@ -64,7 +63,7 @@ composer require setasign/tfpdf
 
 To generate an "Advanced Multicell" the followings are required:
 
-* have a valid FPDF/PDF object
+* have a valid `PDF` object
 * create the advanced multicell object instance
 * add the multicells to the pdf document
 
@@ -83,7 +82,7 @@ $pdf = new Pdf();
 $multicell = new Multicell($pdf);
 
 // set the style definitions
-// `default` is applied to all tags
+// `default` is inherited by all other styles
 $multicell->setStyle('default', 11, '', '130,0,30', 'helvetica');
 $multicell->setStyle('p', 11, '', '130,0,30', 'helvetica');
 $multicell->setStyle('b', null, 'B', null, null);
@@ -93,47 +92,9 @@ $multicell->multiCell(0, 5, 'This is a simple cell');
 $multicell->multiCell(0, 5, '<p>This is a <b>BOLD</b> text</p>');
 ```
 
-## Why use the \evosys21\PdfLib\Fpdf\Pdf object instead of FPDF
-
-To implement the FPDF Add-on, we need access to private/protected properties from the FPDF class like widths, margins,
-fonts etc... As these properties are not provided by setters and getters the FPDF class was extended and these
-properties made public.
-
-```php
-namespace evosys21\PdfLib;
-
-class Pdf extends \FPDF
-{
-    public $images;
-    public $w;
-    public $tMargin;
-    ...
-}
-```
-
 ## Create the Pdf object
 
-Please refer to the FPDF class manual in order to get this done correctly. Example:
-
-```php
-use evosys21\PdfLib\Fpdf\Pdf;
-
-// Pdf extends FPDF
-$pdf = new Pdf();
-
-// use the default FPDF configuration
-$pdf->SetAuthor('EvoSys21');
-$pdf->SetMargins(20, 20, 20);
-$pdf->SetAutoPageBreak(true, 20);
-
-$pdf->SetFont('helvetica', '', 11);
-$pdf->SetTextColor(200, 10, 10);
-$pdf->SetFillColor(254, 255, 245);
-
-// add a page
-$pdf->AddPage();
-
-```
+Please refer to the `FPDF/TCPDF/tFPDF` class manual in order to get this done correctly. 
 
 ## Create the Advanced Multicell object
 
