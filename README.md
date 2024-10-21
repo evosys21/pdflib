@@ -22,7 +22,7 @@
 
 ## Overview
 
-`evosys21/pdflib` is a collection of PHP classes facilitating developers to create [Advanced Multicells]() and [Tables]() in [FPDF](http://www.fpdf.org), [TCPDF](https://github.com/tecnickcom/TCPDF) or
+`evosys21/pdflib` is a collection of PHP classes facilitating developers to create [Advanced Multicells](#advanced-multicell) and [Tables](#advanced-table) in [FPDF](http://www.fpdf.org), [TCPDF](https://github.com/tecnickcom/TCPDF) or
 [tFPDF](http://fpdf.org/en/script/script92.php).
 
 ## Advanced Multicell
@@ -43,7 +43,7 @@ The function is pretty similar to the Multicell function in the tcpdf base class
 - Variable vertical positions can be used for **subscripts** or **superscripts**.
 - **Cell padding** (left, right, top, bottom) can be adjusted.
 - Controlled **tag sizes** can be used.
-
+  
 ### Examples
 
 |         | Multicell Example #1 - Overview                                                                                             | multicell Example #1 - Overview                                                                                               | 
@@ -52,7 +52,11 @@ The function is pretty similar to the Multicell function in the tcpdf base class
 | Preview | [<img src="examples/Tcpdf/example-multicell-1-overview.png" height="300">](examples/Tcpdf/example-multicell-1-overview.pdf) | [<img src="examples/Tcpdf/example-multicell-6-shrinking.png" height="300">](examples/Tcpdf/example-multicell-6-shrinking.pdf) |
 | Pdf     | [example-multicell-1-overview.pdf](examples/Tcpdf/example-multicell-1-overview.pdf)                                         | [example-multicell-1-overview.pdf](examples/Tcpdf/example-multicell-1-overview.pdf)                                           |      |
 
-In the [examples](examples) are more examples with preview and the associated code.
+Check the [examples](examples) folder for more examples with preview and the associated code.
+
+### Usage and documentation
+
+[Click here](docs/multicell.md) for the end-user documentation for Advanced Multicell.
 
 ## Advanced table
 
@@ -80,9 +84,9 @@ A full end-user documentation for Advanced Table is available [here](docs/table.
 | Preview | [<img src="examples/Tcpdf/example-table-1-overview.png" height="300">](examples/Tcpdf/example-table-1-overview.pdf) | [<img src="examples/Tcpdf/example-table-2-overview.png" height="300">](examples/Tcpdf/example-table-2-overview.pdf) |
 | Pdf     | [example-table-1-overview.pdf](examples/Tcpdf/example-table-1-overview.pdf)                                         | [example-table-1-overview.pdf](examples/Tcpdf/example-table-1-overview.pdf)                                         |      |
 
-In the [examples](examples) folder you will find more examples with preview and the associated code.
+### Usage and documentation
 
-A full end-user documentation for Advanced Multicell is available [here](docs/multicell.md).
+[Click here](docs/table.md) for the end-user documentation for Advanced Table.
 
 ## FAQ
 
