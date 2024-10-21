@@ -4,19 +4,21 @@
 [![Latest Stable Version](https://poser.pugx.org/evosys21/phplib/v/stable)](https://packagist.org/packages/evosys21/phplib)
 
 <!-- TOC -->
-* [Overview](#overview)
-* [Advanced Multicell](#advanced-multicell)
+  * [Overview](#overview)
+  * [Advanced Multicell](#advanced-multicell)
     * [Features](#features)
     * [Examples](#examples)
-* [Advanced table](#advanced-table)
+    * [Usage and documentation](#usage-and-documentation)
+  * [Advanced table](#advanced-table)
     * [Features](#features-1)
     * [Examples](#examples-1)
-* [FAQ](#faq)
+    * [Usage and documentation](#usage-and-documentation-1)
+  * [FAQ](#faq)
     * [Why use the custom pdf class instead of `FPDF/TCPDF/tFPDF`](#why-use-the-custom-pdf-class-instead-of-fpdftcpdftfpdf)
     * [Where do I report issues?](#where-do-i-report-issues)
-* [Contribute](#contribute)
-* [License](#license)
-<!-- TOC -->
+  * [Contribute](#contribute)
+  * [License](#license)
+<!-- TOC --> 
 
 ---
 
