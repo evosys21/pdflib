@@ -1,37 +1,37 @@
 <h1>Fpdf, TCPDF, tFpdf - Advanced Multicell and Table</h1>
 
-[![Build status](https://github.com/evosys21/pdflib/workflows/build/badge.svg)](https://github.com/evosys21/pdflib/actions) 
+[![Build status](https://github.com/evosys21/pdflib/workflows/build/badge.svg)](https://github.com/evosys21/pdflib/actions)
 [![Latest Stable Version](https://poser.pugx.org/evosys21/phplib/v/stable)](https://packagist.org/packages/evosys21/phplib)
 
 <!-- TOC -->
-  * [Overview](#overview)
-  * [Advanced Multicell](#advanced-multicell)
+* [Overview](#overview)
+* [Advanced Multicell](#advanced-multicell)
     * [Features](#features)
     * [Examples](#examples)
-  * [Advanced table](#advanced-table)
+* [Advanced table](#advanced-table)
     * [Features](#features-1)
     * [Examples](#examples-1)
-  * [FAQ](#faq)
+* [FAQ](#faq)
     * [Why use the custom pdf class instead of `FPDF/TCPDF/tFPDF`](#why-use-the-custom-pdf-class-instead-of-fpdftcpdftfpdf)
     * [Where do I report issues?](#where-do-i-report-issues)
-  * [Contribute](#contribute)
-  * [License](#license)
+* [Contribute](#contribute)
+* [License](#license)
 <!-- TOC -->
 
 ---
 
 ## Overview
 
-`evosys21/pdflib` is a collection of PHP classes facilitating developers to create [Advanced Multicells](#advanced-multicell) and [Tables](#advanced-table) in [FPDF](http://www.fpdf.org), [TCPDF](https://github.com/tecnickcom/TCPDF) or
+`evosys21/pdflib` is a collection of PHP classes facilitating developers to create [Advanced Multicells](#advanced-multicell) and [Tables](#advanced-table) in [FPDF](http://www.fpdf.org), [TCPDF](https://github.com/tecnickcom/TCPDF), or
 [tFPDF](http://fpdf.org/en/script/script92.php).
 
 ## Advanced Multicell
 
-This addon class allows creation of an **Advanced Multicell for FPDF/TCPDF/tFPDF** which uses as input a TAG based formatted
-string instead of a simple string. The use of tags allows to change the font, the style (bold, italic, underline),
-the size, and the color of characters and many other features.
+This addon class allows the creation of an **Advanced Multicell for FPDF/TCPDF/tFPDF**, which uses as input a TAG-based formatted
+string instead of a simple string. The use of tags allows changing the font, style (bold, italic, underline),
+size, and color of characters and many other features.
 
-The function is pretty similar to the Multicell function in the tcpdf base class with some extended parameters.
+The function is similar to the Multicell function in the TCPDF base class with extended parameters.
 
 ### Features
 
@@ -94,15 +94,14 @@ A full end-user documentation for Advanced Table is available [here](docs/table.
 
 The custom `evosys21\PdfLib\Fpdf\Pdf` object is used instead of `FPDF` because `FPDF`'s private/protected properties,
 like widths, margins, and fonts, need to be accessed to implement add-ons.  
-Since `FPDF` doesn't provide setters/getters for these properties, the class was extended to 
-access them.
+Since `FPDF` doesn't provide setters/getters for these properties, the class was extended to access them.
 
 The same is valid for all 3 pdf classes: `FPDF/TCPDF/tFPDF`.
 
-For more details see: 
- - [src/Fpdf/Pdf.php](src/Fpdf/Pdf.php)
- - [src/Tcpdf/Pdf.php](src/Tcpdf/Pdf.php)
- - [src/Tfpdf/Pdf.php](src/Tfpdf/Pdf.php)
+For more details see:
+- [src/Fpdf/Pdf.php](src/Fpdf/Pdf.php)
+- [src/Tcpdf/Pdf.php](src/Tcpdf/Pdf.php)
+- [src/Tfpdf/Pdf.php](src/Tfpdf/Pdf.php)
 
 ### Where do I report issues?
 
