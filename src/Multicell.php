@@ -160,10 +160,10 @@ class Multicell
     /**
      * Returns the Singleton Instance of this class.
      *
-     * @param $pdf Instance of the pdf class
+     * @param $pdf Object of the pdf class
      * @return self
      */
-    public static function getInstance($pdf): self
+    public static function getInstance(object $pdf): self
     {
         $instance = &self::$_singleton[spl_object_hash($pdf)];
 

@@ -87,7 +87,7 @@ $multicell->setStyle('default', 11, '', '130,0,30', 'helvetica');
 $multicell->setStyle('p', 11, '', '130,0,30', 'helvetica');
 $multicell->setStyle('b', null, 'B', null, null);
 
-// create the advanced multicells
+// create the multicells
 $multicell->multiCell(0, 5, 'This is a simple cell');
 $multicell->multiCell(0, 5, '<p>This is a <b>BOLD</b> text</p>');
 ```
