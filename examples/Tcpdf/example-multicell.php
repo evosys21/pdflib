@@ -27,7 +27,7 @@ $pdf->AddPage();
 $multicell = new Multicell($pdf);
 
 // Set the styles for the advanced multicell
-$multicell->setStyle('default', 11, '', [0, 0, 77], 'helvetica');
+$multicell->setStyle('default', 11, '', [0, 0, 77], 'dejavusans');
 $multicell->setStyle('b', null, 'B');
 $multicell->setStyle('i', null, 'I');
 $multicell->setStyle('bi', null, 'BI');
@@ -46,7 +46,7 @@ $pdf->AddFont('dejavusans', '', 'DejaVuSans.ttf', true);
 $pdf->AddFont('dejavusans', 'B', 'DejaVuSans-Bold.ttf', true);
 
 // define the utf8 styles
-$multicell->setStyle('u8', null, '', [0, 45, 179], 'dejavusans');
+$multicell->setStyle('u8', null, '', [0, 45, 179], 'freeserif');
 $multicell->setStyle('u8b', null, 'B', null, null, 'u8');
 
 $utf8Text = file_get_contents(CONTENT_PATH . '/utf8-sample.txt');
@@ -75,7 +75,7 @@ This line is a simple text with no formatting(text-formatting from the pdf defau
 This line is a simple text with no formatting(text-formatting from the pdf defaults)
 HEREDOC;
 
-$multicell->multiCell(0, 5, $s);
+$multicell->multiCell(0, 5, $utf8Text);
 
 $pdf->ln(10);
 

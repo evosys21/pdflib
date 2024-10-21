@@ -298,7 +298,7 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
      * @param int|float|null $length
      * @return string
      */
-    public static function substr(string $str, int $start, $length = null): string
+    public function substr(string $str, int $start, $length = null): string
     {
         if (null === $length) {
             return substr($str, $start);
@@ -307,10 +307,15 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
         }
     }
 
+    public function strlen(string $s): int
+    {
+        return strlen($s);
+    }
+
     public function getCharStringWidth($tag, $char, $fontFamily, $fontStyle, $fontSize)
     {
         // apply the styles
-        if (strpos($fontSize, '%') !== false) {
+        if (str_contains($fontSize, '%')) {
             $fontSize = $this->pdf->FontSizePt * (((float)$fontSize) / 100);
         }
 
