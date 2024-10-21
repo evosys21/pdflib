@@ -10,8 +10,6 @@ use evosys21\PdfLib\Table;
 use evosys21\PdfLib\Examples\Tcpdf\PdfFactory;
 use evosys21\PdfLib\Examples\Tcpdf\PdfSettings;
 
-$factory = new PdfFactory();
-
 //get the PDF object
 $pdf = PdfFactory::newPdf('table');
 /**

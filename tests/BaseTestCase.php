@@ -22,9 +22,7 @@ class BaseTestCase extends TestCase
     {
         //create the pdf object and do some initialization
         $pdf = new Pdf();
-
-        $factory = new PdfFactory();
-        $factory->initPdf($pdf);
+        PdfFactory::initPdf($pdf);
 
         //disable compression for testing
         $pdf->SetCompression(false);

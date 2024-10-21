@@ -19,8 +19,7 @@ class TableExamples2Test extends BaseTestCase
         //create the pdf object and do some initialization
         $pdf = new TestPdf();
 
-        $factory = new PdfFactory();
-        $factory->initPdf($pdf);
+        PdfFactory::initPdf($pdf);
 
         //disable compression for testing
         $pdf->SetCompression(false);

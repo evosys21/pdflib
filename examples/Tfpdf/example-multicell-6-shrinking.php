@@ -9,8 +9,6 @@ use evosys21\PdfLib\Multicell;
 use evosys21\PdfLib\Examples\Tfpdf\PdfFactory;
 use evosys21\PdfLib\Examples\Tfpdf\PdfSettings;
 
-$factory = new PdfFactory();
-
 //get the PDF object
 $pdf = PdfFactory::newPdf('multicell');
 
