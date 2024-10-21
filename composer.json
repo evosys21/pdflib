@@ -28,14 +28,14 @@
     },
     "autoload": {
         "psr-4": {
-            "EvoSys21\\PdfLib\\": "src/"
+            "EvoSys21\\PdfLib\\": "src/",
+            "EvoSys21\\PdfLib\\Examples\\": "examples/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "EvoSys21\\PdfLib\\Dev\\": "dev/",
-            "EvoSys21\\PdfLib\\Tests\\": "tests/",
-            "EvoSys21\\PdfLib\\Examples\\": "examples/"
+            "EvoSys21\\PdfLib\\Tests\\": "tests/"
         }
     }
 }
