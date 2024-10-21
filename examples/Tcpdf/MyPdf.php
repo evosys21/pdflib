@@ -21,7 +21,6 @@ class MyPdf extends Pdf
      * Custom Header
      *
      * @see Pdf::Header()
-     * @noinspection HttpUrlsUsage
      */
     public function Header()
     {
