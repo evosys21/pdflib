@@ -103,8 +103,8 @@ Why? [Read here](../README.md#why-use-the-custom-pdf-class-instead-of-fpdftcpdft
 ```php
 # use one of the following classes
 use EvoSys21\PdfLib\Fpdf\Pdf; // Pdf extends FPDF
-use EvoSys21\PdfLib\TCPDF\Pdf; // Pdf extends TCPDF
-use EvoSys21\PdfLib\tFpdf\Pdf; // Pdf extends tFPDF
+// use EvoSys21\PdfLib\TCPDF\Pdf; // Pdf extends TCPDF
+// use EvoSys21\PdfLib\tFpdf\Pdf; // Pdf extends tFPDF
 
 // create the Pdf Object
 $pdf = new Pdf();
@@ -266,7 +266,7 @@ $multicell->multiCell(0, 5, $s);
 The `href` attribute will provide you a link in the pdf document.
 
 ```html
-<h1 href="www.interpid.eu">Visit our website</h1>
+<h1 href="www.evosys21.ch">Visit our website</h1>
 ```
 
 ### width

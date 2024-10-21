@@ -8,8 +8,6 @@ use EvoSys21\PdfLib\Tcpdf\Pdf;
 /**
  * Pdf Factory
  * Contains functions that creates and initializes the PDF class
- *
- * @package Interpid\PdfExamples
  */
 class PdfFactory
 {
