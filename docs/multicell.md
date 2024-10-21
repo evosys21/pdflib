@@ -40,14 +40,14 @@ You need to add the dependency to the PDF generation library of your choice your
 
 To use `evosys21/pdflib` with FPDF, install it via Composer:
 
-```shell
+```bash
 composer require evosys21/pdflib
 composer require setasign/fpdf
 ```
 
 If you want to use TCPDF:
 
-```shell
+```bash
 composer require evosys21/pdflib
 composer require tecnickcom/tcpdf
 ```
