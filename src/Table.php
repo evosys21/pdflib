@@ -1,18 +1,18 @@
 <?php
 /** @noinspection PhpUnused */
-namespace evosys21\PdfLib;
+namespace EvoSys21\PdfLib;
 
-use evosys21\PdfLib\Fpdf\Pdf as Fpdf;
-use evosys21\PdfLib\Fpdf\PdfInterface as FpdfInterface;
-use evosys21\PdfLib\Table\Cell\Image;
-use evosys21\PdfLib\Table\Cell\ImageSVG;
-use evosys21\PdfLib\Tcpdf\Pdf as Tcpdf;
-use evosys21\PdfLib\Tcpdf\PdfInterface as TcpdfInterface;
-use evosys21\PdfLib\Tfpdf\Pdf as Tfpdf;
-use evosys21\PdfLib\Tfpdf\PdfInterface as TfpdfInterface;
-use evosys21\PdfLib\Table\Cell\CellAbstract;
-use evosys21\PdfLib\Table\Cell\CellInterface;
-use evosys21\PdfLib\Table\Cell\EmptyCell;
+use EvoSys21\PdfLib\Fpdf\Pdf as Fpdf;
+use EvoSys21\PdfLib\Fpdf\PdfInterface as FpdfInterface;
+use EvoSys21\PdfLib\Table\Cell\Image;
+use EvoSys21\PdfLib\Table\Cell\ImageSVG;
+use EvoSys21\PdfLib\Tcpdf\Pdf as Tcpdf;
+use EvoSys21\PdfLib\Tcpdf\PdfInterface as TcpdfInterface;
+use EvoSys21\PdfLib\Tfpdf\Pdf as Tfpdf;
+use EvoSys21\PdfLib\Tfpdf\PdfInterface as TfpdfInterface;
+use EvoSys21\PdfLib\Table\Cell\CellAbstract;
+use EvoSys21\PdfLib\Table\Cell\CellInterface;
+use EvoSys21\PdfLib\Table\Cell\EmptyCell;
 
 /**
  * Pdf Table Class
@@ -288,7 +288,7 @@ class Table
 
     protected $typeMap = array(
         'EMPTY' => EmptyCell::class,
-        'MULTICELL' => \evosys21\PdfLib\Table\Cell\Multicell::class,
+        'MULTICELL' => \EvoSys21\PdfLib\Table\Cell\Multicell::class,
         'IMAGE' => Image::class,
         'IMAGESVG' => ImageSVG::class,
     );
@@ -805,7 +805,7 @@ class Table
     protected function getCellObject($data = null)
     {
         if (null === $data) {
-            $cell = new \evosys21\PdfLib\Table\Cell\Multicell($this->pdf);
+            $cell = new \EvoSys21\PdfLib\Table\Cell\Multicell($this->pdf);
         } elseif (is_object($data)) {
             $cell = $data;
         } else {
@@ -828,7 +828,7 @@ class Table
             $cell->setProperties($data);
         }
 
-        if ($cell instanceof \evosys21\PdfLib\Table\Cell\Multicell) {
+        if ($cell instanceof \EvoSys21\PdfLib\Table\Cell\Multicell) {
             $cell->attachMulticell($this->multicell);
         }
 
@@ -1657,9 +1657,6 @@ class Table
     public function setTableConfig(array $aConfig)
     {
         $this->configuration['TABLE'] = array_merge($this->configuration['TABLE'], $aConfig);
-
-        // update the Margin X
-        // @see https://tracker.interpid.eu/issues/896
         $this->markMarginX();
     }
 

@@ -1,15 +1,13 @@
 <?php
 /** @noinspection PhpUnused */
 
-namespace evosys21\PdfLib\Examples\Tcpdf;
+namespace EvoSys21\PdfLib\Examples\Tcpdf;
 
-use evosys21\PdfLib\Tcpdf\Pdf;
+use EvoSys21\PdfLib\Tcpdf\Pdf;
 
 /**
  * Pdf Factory
  * Contains functions that creates and initializes the PDF class
- *
- * @package Interpid\PdfExamples
  */
 class PdfFactory
 {

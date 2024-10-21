@@ -1,16 +1,16 @@
 <?php
 /** @noinspection PhpUnhandledExceptionInspection */
 /** @noinspection PhpDocMissingThrowsInspection */
-namespace evosys21\PdfLib;
+namespace EvoSys21\PdfLib;
 
 if (!defined('PARAGRAPH_STRING')) {
     define('PARAGRAPH_STRING', '~~~');
 }
 
-use evosys21\PdfLib\Fpdf\Pdf;
-use evosys21\PdfLib\Fpdf\PdfInterface;
-use evosys21\PdfLib\String\Tags;
-use evosys21\PdfLib\Utils\Arr;
+use EvoSys21\PdfLib\Fpdf\Pdf;
+use EvoSys21\PdfLib\Fpdf\PdfInterface;
+use EvoSys21\PdfLib\String\Tags;
+use EvoSys21\PdfLib\Utils\Arr;
 use Exception;
 
 /**
@@ -160,10 +160,10 @@ class Multicell
     /**
      * Returns the Singleton Instance of this class.
      *
-     * @param $pdf Instance of the pdf class
+     * @param $pdf Object of the pdf class
      * @return self
      */
-    public static function getInstance($pdf): self
+    public static function getInstance(object $pdf): self
     {
         $instance = &self::$_singleton[spl_object_hash($pdf)];
 
@@ -636,11 +636,11 @@ class Multicell
 
                             $temp = &$lineData[count($lineData) - 1];
 
-                            if (' ' == self::strChar($temp['text'], -1)) {
-                                $temp['text'] = self::substr(
+                            if (' ' == $this->strChar($temp['text'], -1)) {
+                                $temp['text'] = $this->substr(
                                     $temp['text'],
                                     0,
-                                    self::strlen($temp['text']) - 1
+                                    $this->strlen($temp['text']) - 1
                                 );
                                 $temp['width'] -= $this->mt_getCharWidth($temp['tag'], ord(' '));
                                 $temp['spaces']--;
@@ -665,10 +665,10 @@ class Multicell
             }
 
 
-            $str = self::substr($s, 0, $j);
+            $str = $this->substr($s, 0, $j);
 
             $sTmpStr = $this->dataInfo[0]['text'];
-            $sTmpStr = self::substr($sTmpStr, $i, self::strlen($sTmpStr));
+            $sTmpStr = $this->substr($sTmpStr, $i, $this->strlen($sTmpStr));
 
             if ($sTmpStr == '') {
                 array_shift($this->dataInfo);
@@ -713,8 +713,8 @@ class Multicell
             // first tag
             // If the first character is a space, then cut it off
             $temp = &$lineData[0];
-            if ((self::strlen($temp['text']) > 0) && (" " == self::strChar($temp['text'], 0))) {
-                $temp['text'] = self::substr($temp['text'], 1, self::strlen($temp['text']));
+            if (($this->strlen($temp['text']) > 0) && (" " == $this->strChar($temp['text'], 0))) {
+                $temp['text'] = $this->substr($temp['text'], 1, $this->strlen($temp['text']));
                 $temp['width'] -= $this->mt_getCharWidth($temp['tag'], ord(" "));
                 $temp['width_real'] -= $this->mt_getCharWidth($temp['tag'], ord(" "));
                 $temp['spaces']--;
@@ -722,8 +722,8 @@ class Multicell
 
             // If the last character is a space, then cut it off
             $temp = &$lineData[count($lineData) - 1];
-            if ((self::strlen($temp['text']) > 0) && (" " == self::strChar($temp['text'], -1))) {
-                $temp['text'] = self::substr($temp['text'], 0, self::strlen($temp['text']) - 1);
+            if (($this->strlen($temp['text']) > 0) && (" " == $this->strChar($temp['text'], -1))) {
+                $temp['text'] = $this->substr($temp['text'], 0, $this->strlen($temp['text']) - 1);
                 $temp['width'] -= $this->mt_getCharWidth($temp['tag'], ord(" "));
                 $temp['width_real'] -= $this->mt_getCharWidth($temp['tag'], ord(" "));
                 $temp['spaces']--;
@@ -1284,9 +1284,9 @@ class Multicell
      * @param int $position
      * @return string
      */
-    protected static function strChar(string $string, int $position): string
+    protected function strChar(string $string, int $position): string
     {
-        return self::substr($string, $position, 1);
+        return $this->substr($string, $position, 1);
     }
 
 
@@ -1296,9 +1296,9 @@ class Multicell
      * @param string $sStr
      * @return int
      */
-    public static function strlen(string $sStr): int
+    public function strlen(string $sStr): int
     {
-        return strlen($sStr);
+        return $this->pdfi->strlen($sStr);
     }
 
 
@@ -1310,9 +1310,9 @@ class Multicell
      * @param number $length
      * @return string
      */
-    public static function substr(string $str, $start, $length = null): string
+    public function substr(string $str, $start, $length = null): string
     {
-        return PdfInterface::substr($str, $start, $length);
+        return $this->pdfi->substr($str, $start, $length);
     }
 
 

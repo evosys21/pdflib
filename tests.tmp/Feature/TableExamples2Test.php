@@ -1,8 +1,8 @@
 <?php
 
-use evosys21\PdfLib\Examples\Tfpdf\PdfFactory;
-use evosys21\PdfLib\Tests\BaseTestCase;
-use evosys21\PdfLib\Tests\Utils\TestPdf;
+use EvoSys21\PdfLib\Examples\Tfpdf\PdfFactory;
+use EvoSys21\PdfLib\Tests\BaseTestCase;
+use EvoSys21\PdfLib\Tests\Utils\TestPdf;
 
 /**
  * Class TableExamples2Test\Tests\Functional
@@ -19,8 +19,7 @@ class TableExamples2Test extends BaseTestCase
         //create the pdf object and do some initialization
         $pdf = new TestPdf();
 
-        $factory = new PdfFactory();
-        $factory->initPdf($pdf);
+        PdfFactory::initPdf($pdf);
 
         //disable compression for testing
         $pdf->SetCompression(false);

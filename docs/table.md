@@ -1,84 +1,80 @@
 # Fpdf, TCPDF, tFpdf - Advanced Table
 
-{{>toc}}
+<!-- TOC -->
+* [Fpdf, TCPDF, tFpdf - Advanced Table](#fpdf-tcpdf-tfpdf---advanced-table)
+  * [Installation](#installation)
+    * [Include the library into the project](#include-the-library-into-the-project)
+      * [Using "require_once"](#using-require_once)
+      * [With composer.json](#with-composerjson)
+  * [Why use the `EvoSys21\PdfLib\Fpdf\Pdf` object instead of FPDF?](#why-use-the-evosys21pdflibfpdfpdf-object-instead-of-fpdf)
+  * [Create the Pdf object](#create-the-pdf-object)
+  * [Create the Advanced Table object](#create-the-advanced-table-object)
+  * [Styling](#styling)
+  * [Initialize the table](#initialize-the-table)
+  * [Table configuration](#table-configuration)
+    * [Default configuration File](#default-configuration-file)
+    * [Overwriting the default configuration values](#overwriting-the-default-configuration-values)
+  * [Table Header(s)](#table-headers)
+    * [No Header](#no-header)
+    * [Single Header row](#single-header-row)
+    * [Multiple Header rows](#multiple-header-rows)
+    * [Header configuration values](#header-configuration-values)
+  * [Table Row(s)](#table-rows)
+    * [Adding table rows](#adding-table-rows)
+    * [A simple row](#a-simple-row)
+    * [A more complex row](#a-more-complex-row)
+    * [Row cells are by default Advanced Multicells](#row-cells-are-by-default-advanced-multicells)
+    * [Row height](#row-height)
+  * [Table Cells](#table-cells)
+    * [Text](#text)
+    * [Images](#images)
+      * [Images as array](#images-as-array)
+    * [Objects](#objects)
+  * [Finalize the table](#finalize-the-table)
+<!-- TOC -->
+
 
 ## Installation
 
-The PHP Pdf Addons will work right out of the box. All you need is a webserver with Php 7.4 (or greater). No further
-configurations are required.
+`evosys21/pdflib` can be used with FPDF, TCPDF or tFPDF. Because of this we haven't
+added a fixed dependency in the main composer.json file.
+You need to add the dependency to the PDF generation library of your choice yourself.
 
-Just download the files, extract the content in a directory where your webserver is configured and call the url.
+To use `evosys21/pdflib` with FPDF, install it via Composer:
 
-Every add-on has multiple example files that cover the full functionality.
-
-### Include the library into the project
-
-Normally, from the downloaded package you need only the files from `library\evosys21\PdfLib` folder in order to run it.
-
-#### Using "require_once"
-
-In order to include the full interpid library, just include the `autoload.php` provided in the root folder. This will
-provide you the FPDF and all Interpid PdfLib library classes.
-
-Assuming you downloaded `fpdf-table-6.0.0` and placed in your project `libs` folder:
-
-```
-<?php
-require_once 'libs/fpdf-table-6.0.0/autoload.php';
+```bash
+composer require evosys21/pdflib
+composer require setasign/fpdf
 ```
 
-#### With composer.json
+If you want to use TCPDF:
 
-If your project uses composer, then include the pdf library path to your composer file:
-
-In `composer.json`
-
-```
-    "autoload": {
-        "classmap": [
-            "libs/fpdf-table-6.0.0/library/interpid"
-        ],
-    },
+```bash
+composer require evosys21/pdflib
+composer require tecnickcom/tcpdf
 ```
 
-or you can use the PSR-4 autoload capabilities
+If you want to use tFPDF:
 
-In `composer.json`
-
-```
-    "autoload": {
-        "psr-4": {
-            "Interpid\\PdfLib\\": "libs/fpdf-table-6.0.0/library/interpid/PdfLib/"
-        }
-    },
-```
-
-then run `composer dump-autoload` to regenerate the autoload classmap.
-
-## Why use the `evosys21\PdfLib\Fpdf\Pdf` object instead of FPDF?
-
-To implement the PDF Add-ons, we need access to private/protected properties from the FPDF class like widths, margins,
-fonts etc... As these properties are not provided by setters and getters the FPDF class was extended and these
-properties made public.
-
-```php
-namespace evosys21\PdfLib;
-
-class Pdf extends \FPDF
-{
-    public $images;
-    public $w;
-    public $tMargin;
-    ...
-}
+```shell
+composer require evosys21/pdflib
+composer require setasign/tfpdf
 ```
 
 ## Create the Pdf object
 
-Please refer to the FPDF class manual in order to get this done correctly. Example:
+Use the provided `Pdf` classes to create the PDF object.
+
+For example, if you want to use `FPDF`, use the `EvoSys21\PdfLib\Fpdf\Pdf` class.
+
+Why? [Read here](../README.md#why-use-the-custom-pdf-class-instead-of-fpdftcpdftfpdf)
 
 ```php
-use evosys21\PdfLib\Fpdf\Pdf;
+# use one of the following classes
+use EvoSys21\PdfLib\Fpdf\Pdf; // Pdf extends FPDF
+
+// use EvoSys21\PdfLib\TCPDF\Pdf; // Pdf extends TCPDF
+// use EvoSys21\PdfLib\tFpdf\Pdf; // Pdf extends tFPDF
 
 // Pdf extends FPDF
 $pdf = new Pdf();
@@ -101,7 +97,7 @@ $pdf->AddPage();
 
 ```php
 // Create the Advanced Multicell Object and inject the PDF object
-use evosys21\PdfLib\Table;
+use EvoSys21\PdfLib\Table;
 $table = new Table($pdf);
 ```
 
@@ -475,7 +471,7 @@ $row = [
 Images are passed as objects
 
 ```php
-use evosys21\PdfLib\Table;
+use EvoSys21\PdfLib\Table;
 
 $imageCell = new Table\Cell\Image($pdf, 'blog.jpg', 10);
 $svgImageCell = new Table\Cell\ImageSVG($pdf, 'tiger.svg', 10);
@@ -506,10 +502,10 @@ $cell = new Table\Cell\ImageSVG($pdf, 'tiger.svg', 35, 35);
 All input values for cells are converted into objects. The following objects are available in the distributed package.
 
 ```php
-use evosys21\PdfLib\Table\Cell\EmptyCell;
-use evosys21\PdfLib\Table\Cell\Multicell;
-use evosys21\PdfLib\Table\Cell\Image;
-use evosys21\PdfLib\Table\Cell\ImageSVG;
+use EvoSys21\PdfLib\Table\Cell\EmptyCell;
+use EvoSys21\PdfLib\Table\Cell\Multicell;
+use EvoSys21\PdfLib\Table\Cell\Image;
+use EvoSys21\PdfLib\Table\Cell\ImageSVG;
 ```
 
 ## Finalize the table

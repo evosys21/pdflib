@@ -1,9 +1,9 @@
 <?php
 
-namespace evosys21\PdfLib\Tests\Dev;
+namespace EvoSys21\PdfLib\Tests\Dev;
 
-use evosys21\PdfLib\Tests\BaseExamplesTestCase;
-use evosys21\PdfLib\Tests\Feature\ProviderTrait;
+use EvoSys21\PdfLib\Tests\BaseExamplesTestCase;
+use EvoSys21\PdfLib\Tests\Feature\ProviderTrait;
 
 class DevTest extends BaseExamplesTestCase
 {

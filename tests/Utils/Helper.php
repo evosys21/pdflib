@@ -1,9 +1,9 @@
 <?php
 
-namespace evosys21\PdfLib\Tests\Utils;
+namespace EvoSys21\PdfLib\Tests\Utils;
 
-use evosys21\PdfLib\Fpdf\Pdf;
-use evosys21\PdfLib\Examples\Tfpdf\PdfFactory;
+use EvoSys21\PdfLib\Fpdf\Pdf;
+use EvoSys21\PdfLib\Examples\Tfpdf\PdfFactory;
 use Symfony\Component\Process\Process;
 
 

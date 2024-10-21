@@ -1,15 +1,15 @@
 <?php
 
-namespace evosys21\PdfLib\Dev;
+namespace EvoSys21\PdfLib\Dev;
 
-use evosys21\PdfLib\Multicell;
-use evosys21\PdfLib\Table;
-use evosys21\PdfLib\Examples\Fpdf\PdfFactory as FpdfFactory;
-use evosys21\PdfLib\Examples\Fpdf\PdfSettings as FpdfSettings;
-use evosys21\PdfLib\Examples\Tcpdf\PdfFactory as TcpdfFactory;
-use evosys21\PdfLib\Examples\Tcpdf\PdfSettings as TcpdfSettings;
-use evosys21\PdfLib\Examples\Tfpdf\PdfFactory as TfpdfFactory;
-use evosys21\PdfLib\Examples\Tfpdf\PdfSettings as TfpdfSettings;
+use EvoSys21\PdfLib\Multicell;
+use EvoSys21\PdfLib\Table;
+use EvoSys21\PdfLib\Examples\Fpdf\PdfFactory as FpdfFactory;
+use EvoSys21\PdfLib\Examples\Fpdf\PdfSettings as FpdfSettings;
+use EvoSys21\PdfLib\Examples\Tcpdf\PdfFactory as TcpdfFactory;
+use EvoSys21\PdfLib\Examples\Tcpdf\PdfSettings as TcpdfSettings;
+use EvoSys21\PdfLib\Examples\Tfpdf\PdfFactory as TfpdfFactory;
+use EvoSys21\PdfLib\Examples\Tfpdf\PdfSettings as TfpdfSettings;
 
 class DevFactory
 {

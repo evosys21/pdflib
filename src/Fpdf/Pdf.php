@@ -1,7 +1,7 @@
 <?php
 /** @noinspection SpellCheckingInspection */
 
-namespace evosys21\PdfLib\Fpdf;
+namespace EvoSys21\PdfLib\Fpdf;
 
 use FPDF;
 

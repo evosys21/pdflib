@@ -1,9 +1,9 @@
 <?php
 
-namespace evosys21\PdfLib\Table\Cell;
+namespace EvoSys21\PdfLib\Table\Cell;
 
-use evosys21\PdfLib\Fpdf\Pdf;
-use evosys21\PdfLib\MulticellData;
+use EvoSys21\PdfLib\Fpdf\Pdf;
+use EvoSys21\PdfLib\MulticellData;
 
 /**
  * Pdf Table Cell Multicell\Table\Cell
@@ -23,7 +23,7 @@ class Multicell extends CellAbstract implements CellInterface
 
     /**
      *
-     * @var \evosys21\PdfLib\Multicell
+     * @var \EvoSys21\PdfLib\Multicell
      */
     protected $multicell;
 

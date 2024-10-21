@@ -1,15 +1,9 @@
- FPDF / TCPDF / tFPDF Advanced Multicell User Manual
- ======================================================
+
+<h1>FPDF / TCPDF / tFPDF Advanced Multicell User Manual</h1>
 
 <!-- TOC -->
-* [FPDF / TCPDF / tFPDF Advanced Multicell User Manual](#fpdf--tcpdf--tfpdf-advanced-multicell-user-manual)
   * [Installation](#installation)
-    * [Include the library into the project](#include-the-library-into-the-project)
-      * [Using "require_once"](#using-require_once)
-      * [With composer.json](#with-composerjson)
-  * [Download](#download)
   * [Usage](#usage)
-  * [Why use the \evosys21\PdfLib\Fpdf\Pdf object instead of FPDF](#why-use-the-evosys21pdflibfpdfpdf-object-instead-of-fpdf)
   * [Create the Pdf object](#create-the-pdf-object)
   * [Create the Advanced Multicell object](#create-the-advanced-multicell-object)
   * [Tag styling](#tag-styling)
@@ -40,72 +34,42 @@
 
 ## Installation
 
-The PHP Pdf Addons will work right out of the box. All you need is a webserver with Php 5.5 (or greater). No further
-configurations are required.
+`evosys21/pdflib` can be used with FPDF, TCPDF or tFPDF. Because of this we haven't 
+added a fixed dependency in the main composer.json file. 
+You need to add the dependency to the PDF generation library of your choice yourself.
 
-Just download the files, extract the content in a directory where your webserver is configured and call the url.
+To use `evosys21/pdflib` with FPDF, install it via Composer:
 
-Every add-on has multiple example files that cover the full functionality.
-
-### Include the library into the project
-
-Normally, from the downloaded package you need only the files from `library\evosys21\PdfLib` folder in order to run it.
-
-#### Using "require_once"
-
-In order to include the full interpid library, just include the `autoload.php` provided in the root folder. This will
-provide you the FPDF and all Interpid PdfLib library classes.
-
-Assuming you downloaded `fpdf-multicell-3.0.0` and placed in your project `libs` folder:
-
-```php
-<?php
-require_once 'libs/fpdf-multicell-3.0.0/autoload.php';
+```bash
+composer require evosys21/pdflib
+composer require setasign/fpdf
 ```
 
-#### With composer.json
+If you want to use TCPDF:
 
-If your project uses composer, then include the pdf library path to your composer file:
-
-In `composer.json`
-
-```json
-    "autoload": {
-"classmap": [
-"libs/fpdf-multicell-3.0.0/library/interpid"
-],
-},
+```bash
+composer require evosys21/pdflib
+composer require tecnickcom/tcpdf
 ```
 
-or you can use the PSR-4 autoload capabilities
+If you want to use tFPDF:
 
-In `composer.json`
-
-```json
-    "autoload": {
-"psr-4": {
-"Interpid\\PdfLib\\": "libs/fpdf-multicell-3.0.0/library/interpid/PdfLib/"
-}
-},
+```shell
+composer require evosys21/pdflib
+composer require setasign/tfpdf
 ```
-
-then run `composer dump-autoload` to regenerate the autoload classmap.
-
-## Download
-
-Please go to your account on https://www.interpid.eu/my-account to download the latest versions of the addons.
 
 ## Usage
 
 To generate an "Advanced Multicell" the followings are required:
 
-* have a valid FPDF/PDF object
+* have a valid `PDF` object
 * create the advanced multicell object instance
 * add the multicells to the pdf document
 
 ```php
-use evosys21\PdfLib\Multicell;
-use evosys21\PdfLib\Fpdf\Pdf; // Pdf extends FPDF
+use EvoSys21\PdfLib\Multicell;
+use EvoSys21\PdfLib\Fpdf\Pdf; // Pdf extends FPDF
 
 // create the Pdf Object
 $pdf = new Pdf();
@@ -118,63 +82,44 @@ $pdf = new Pdf();
 $multicell = new Multicell($pdf);
 
 // set the style definitions
-// `default` is applied to all tags
+// `default` is inherited by all other styles
 $multicell->setStyle('default', 11, '', '130,0,30', 'helvetica');
 $multicell->setStyle('p', 11, '', '130,0,30', 'helvetica');
 $multicell->setStyle('b', null, 'B', null, null);
 
-// create the advanced multicells
+// create the multicells
 $multicell->multiCell(0, 5, 'This is a simple cell');
 $multicell->multiCell(0, 5, '<p>This is a <b>BOLD</b> text</p>');
 ```
 
-## Why use the \evosys21\PdfLib\Fpdf\Pdf object instead of FPDF
-
-To implement the FPDF Add-on, we need access to private/protected properties from the FPDF class like widths, margins,
-fonts etc... As these properties are not provided by setters and getters the FPDF class was extended and these
-properties made public.
-
-```php
-namespace evosys21\PdfLib;
-
-class Pdf extends \FPDF
-{
-    public $images;
-    public $w;
-    public $tMargin;
-    ...
-}
-```
-
 ## Create the Pdf object
 
-Please refer to the FPDF class manual in order to get this done correctly. Example:
+Use the provided `Pdf` classes to create the PDF object.
+
+For example, if you want to use `FPDF`, use the `EvoSys21\PdfLib\Fpdf\Pdf` class.
+
+Why? [Read here](../README.md#why-use-the-custom-pdf-class-instead-of-fpdftcpdftfpdf)
 
 ```php
-use evosys21\PdfLib\Fpdf\Pdf;
+# use one of the following classes
+use EvoSys21\PdfLib\Fpdf\Pdf; // Pdf extends FPDF
+// use EvoSys21\PdfLib\TCPDF\Pdf; // Pdf extends TCPDF
+// use EvoSys21\PdfLib\tFpdf\Pdf; // Pdf extends tFPDF
 
-// Pdf extends FPDF
+// create the Pdf Object
 $pdf = new Pdf();
 
-// use the default FPDF configuration
-$pdf->SetAuthor('EvoSys21');
+// initialize your pdf
 $pdf->SetMargins(20, 20, 20);
-$pdf->SetAutoPageBreak(true, 20);
-
-$pdf->SetFont('helvetica', '', 11);
-$pdf->SetTextColor(200, 10, 10);
-$pdf->SetFillColor(254, 255, 245);
-
-// add a page
-$pdf->AddPage();
-
 ```
+
+Please refer to the `FPDF/TCPDF/tFPDF` class manual in order to do other initializations. 
 
 ## Create the Advanced Multicell object
 
 ```php
 // Create the Advanced Multicell Object and inject the PDF object
-use evosys21\PdfLib\Multicell;
+use EvoSys21\PdfLib\Multicell;
 $multicell = new Multicell($pdf);
 ```
 
@@ -182,17 +127,21 @@ $multicell = new Multicell($pdf);
 
 A tag style is used specify the text display properties. The following properties can be set:
 
-* size/font_size: `8`, `9`, `10` ...
-* style/font_style: one or a combination of the following values:
+* `size` (Font Size): `8`, `9`, `10` ...
+* `style` (Font Style): one or a combination of the following values:
     * `B` (Bold), `U` (Underline), `I` (Italic)
     * examples: ` "B" `, `"BI"`
-* color/text_color: specify a string or array: `'130,0,30'` or `[130,0,30]`
-* family/font_family: example `'Arial'`, `'helvetica'` or any other font family
-* inherit: the **style name** that will be inherited.
+* `color` (Text Color): specify a string or array: `'130,0,30'` or `[130,0,30]`
+* `family` (Font Family): example `'Arial'`, `'helvetica'` or any other font family
+* `inherit` (Style inherit): the **style name** that will be inherited.
 
 Examples:
 
 ```php
+
+// the `default`(if set) style is inherited by all other styles
+$multicell->setStyle('default', 11, '', [0, 0, 77], 'helvetica');
+
 // define a tag style using associative array
 $multicell->setStyleAssoc('p', ['size' => 11, 'style' => '', 'color' => '130,0,30', 'family' => 'helvetica']);
 
@@ -264,10 +213,9 @@ $multicell->multiCell(0, 5, $s);
 Subscript and superscripts can be adjusted with the y attribute. See example:
 
 ```php
-$s = "<p>The following is <s y='-1'>Subscript</s> and <s y='1'>Superscript</s></p>";
+$s = "<p>The following is <s y='-1'>Subscript</s> and <s y='1'>$multicell->setStyle('default', 11, '', [0, 0, 77], 'helvetica');</s></p>";
 ```
-
-![Sub-Superscript](https://tracker.interpid.eu/attachments/download/2560/text-sub-superscript.png)
+[<img src="images/text-sub-superscript.png" width="400">](images/text-sub-superscript.png)
 
 <br/><br/>
 
@@ -282,17 +230,17 @@ $s = "<p>The following is <n strike=''>Text Strikethrough</n> and <bi strike='.5
 $multicell->multiCell(0, 5, $s);
 ```
 
-<img src="https://tracker.interpid.eu/attachments/download/2561/text-strikethrough.png" width="500" alt=""/>
+[<img src="images/text-strikethrough.png" width="500">](images/text-strikethrough.png)
 
-<br/><br/>
+<br/>
 
 ### Links
 
 You can create links by using the href attribute in a tag.
 
 ```php
-$s = "<p>Created by <h1 href='mailto:office@interpid.eu'>Interpid Office</h1>
-<h1 href='www.interpid.eu'>www.interpid.eu</h1></p>";
+$s = "<p>Created by <h1 href='mailto:office@evosys21.ch'>EvoSys21 Office</h1>
+<h1 href='https://www.evosys21.ch'>www.evosys21.ch</h1></p>";
 $multicell->multiCell(0, 5, $s);
 ```
 
@@ -318,7 +266,7 @@ $multicell->multiCell(0, 5, $s);
 The `href` attribute will provide you a link in the pdf document.
 
 ```html
-<h1 href="www.interpid.eu">Visit our website</h1>
+<h1 href="www.evosys21.ch">Visit our website</h1>
 ```
 
 ### width

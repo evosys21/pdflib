@@ -1,7 +1,7 @@
 <?php
-namespace evosys21\PdfLib\Tests\Unit\Table;
+namespace EvoSys21\PdfLib\Tests\Unit\Table;
 
-use evosys21\PdfLib\Table\Cell\CellAbstract;
+use EvoSys21\PdfLib\Table\Cell\CellAbstract;
 
 /**
  * Class CellAbstractMock

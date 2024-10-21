@@ -1,15 +1,15 @@
 <?php
 
-namespace Tests\Unit\evosys21\PdfLib;
-namespace evosys21\PdfLib\Tests\Unit;
+namespace Tests\Unit\EvoSys21\PdfLib;
+namespace EvoSys21\PdfLib\Tests\Unit;
 
-use evosys21\PdfLib\Tools;
+use EvoSys21\PdfLib\Tools;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class ToolsTest.
  *
- * @covers \evosys21\PdfLib\Tools
+ * @covers \EvoSys21\PdfLib\Tools
  */
 class ToolsTest extends TestCase
 {

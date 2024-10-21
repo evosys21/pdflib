@@ -1,10 +1,10 @@
 <?php
 /** @noinspection PhpUnused */
 
-namespace evosys21\PdfLib\Examples\Fpdf;
+namespace EvoSys21\PdfLib\Examples\Fpdf;
 
-use evosys21\PdfLib\Multicell;
-use evosys21\PdfLib\Table;
+use EvoSys21\PdfLib\Multicell;
+use EvoSys21\PdfLib\Table;
 
 if (!defined('__DIR__')) {
     define('__DIR__', __DIR__ . '/../../..');

@@ -3,8 +3,8 @@
  * Pdf Advanced Multicell - Example
  */
 
-use evosys21\PdfLib\Dev\DevFactory;
-use evosys21\PdfLib\Examples\Fpdf\PdfSettings;
+use EvoSys21\PdfLib\Dev\DevFactory;
+use EvoSys21\PdfLib\Examples\Fpdf\PdfSettings;
 
 $factory = new DevFactory();
 

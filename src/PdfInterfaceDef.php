@@ -1,9 +1,9 @@
 <?php
 
-namespace evosys21\PdfLib;
+namespace EvoSys21\PdfLib;
 
-use evosys21\PdfLib\Fpdf\Pdf;
-use evosys21\PdfLib\Tools;
+use EvoSys21\PdfLib\Fpdf\Pdf;
+use EvoSys21\PdfLib\Tools;
 
 /**
  * Pdf Class Interface

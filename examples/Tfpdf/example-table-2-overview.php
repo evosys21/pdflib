@@ -5,11 +5,9 @@
 
 require_once __DIR__ . '/autoload.php';
 
-use evosys21\PdfLib\Table;
-use evosys21\PdfLib\Examples\Tfpdf\PdfFactory;
-use evosys21\PdfLib\Examples\Tfpdf\PdfSettings;
-
-$factory = new PdfFactory();
+use EvoSys21\PdfLib\Table;
+use EvoSys21\PdfLib\Examples\Tfpdf\PdfFactory;
+use EvoSys21\PdfLib\Examples\Tfpdf\PdfSettings;
 
 //get the PDF object
 $pdf = PdfFactory::newPdf('table');

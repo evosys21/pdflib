@@ -1,7 +1,7 @@
 <?php
 
-use evosys21\PdfLib\Dev\DevFactory;
-use evosys21\PdfLib\Tools;
+use EvoSys21\PdfLib\Dev\DevFactory;
+use EvoSys21\PdfLib\Tools;
 
 require_once __DIR__ . '/autoload.php';
 

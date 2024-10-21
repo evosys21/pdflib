@@ -1,8 +1,8 @@
 <?php
 
-use evosys21\PdfLib\Table;
-use evosys21\PdfLib\Examples\Fpdf\MyPdf;
-use evosys21\PdfLib\Examples\Fpdf\PdfSettings;
+use EvoSys21\PdfLib\Table;
+use EvoSys21\PdfLib\Examples\Fpdf\MyPdf;
+use EvoSys21\PdfLib\Examples\Fpdf\PdfSettings;
 
 if (!isset($pdf)) {
     $pdf = new MyPdf();
@@ -39,7 +39,7 @@ $row[0]['TEXT'] = "Line <b>1</b>";
 
 $row[1] = PdfSettings::$imageCell;
 
-$row[2]['TEXT'] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='https://github.com/evosys21/pdflib'>www.interpid.eu</bi></p>";
+$row[2]['TEXT'] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='https://github.com/evosys21/pdflib'>https://github.com/evosys21/pdflib</bi></p>";
 $row[2]['ALIGN'] = 'L';
 
 //add the data row
@@ -49,13 +49,13 @@ $table->addRow($row);
 $row = [];
 
 //alternatively you can create directly the cell object
-$row[0] = new \evosys21\PdfLib\Table\Cell\Image($pdf, CONTENT_PATH . '/images/blog.jpg', 10);
+$row[0] = new \EvoSys21\PdfLib\Table\Cell\Image($pdf, CONTENT_PATH . '/images/blog.jpg', 10);
 $row[1] = array(
     'TEXT' => "<p>This is another <b>Multicell</b></p>",
     'BACKGROUND_COLOR' => PdfSettings::$colors[0]
 );
 
-$row[2] = new \evosys21\PdfLib\Table\Cell\Image($pdf, CONTENT_PATH . '/images/pensil.jpg', 10);
+$row[2] = new \EvoSys21\PdfLib\Table\Cell\Image($pdf, CONTENT_PATH . '/images/pensil.jpg', 10);
 $row[2]->setAlign("R");
 
 //add the data row

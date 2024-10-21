@@ -4,11 +4,11 @@
 /** @noinspection PhpUnhandledExceptionInspection */
 /** @noinspection PhpDocMissingThrowsInspection */
 
-namespace evosys21\PdfLib\Tcpdf;
+namespace EvoSys21\PdfLib\Tcpdf;
 
-use evosys21\PdfLib\AbstractPdfUtils;
-use evosys21\PdfLib\PdfInterfaceDef;
-use evosys21\PdfLib\Tools;
+use EvoSys21\PdfLib\AbstractPdfUtils;
+use EvoSys21\PdfLib\PdfInterfaceDef;
+use EvoSys21\PdfLib\Tools;
 
 /**
  * Pdf Class Interface
@@ -306,7 +306,7 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
      * @param int|float|null $length
      * @return string
      */
-    public static function substr(string $str, int $start, $length = null): string
+    public function substr(string $str, int $start, $length = null): string
     {
         if (null === $length) {
             return mb_substr($str, $start);
@@ -314,4 +314,11 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
             return mb_substr($str, $start, $length);
         }
     }
+
+    
+    public function strlen(string $s): int
+    {
+        return mb_strlen($s);
+    }
+
 }

@@ -1,7 +1,7 @@
 <?php
 
-use evosys21\PdfLib\Table;
-use evosys21\PdfLib\Examples\Fpdf\MyPdf;
+use EvoSys21\PdfLib\Table;
+use EvoSys21\PdfLib\Examples\Fpdf\MyPdf;
 
 if (!isset($pdf)) {
     $pdf = new MyPdf();

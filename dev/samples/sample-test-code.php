@@ -5,8 +5,6 @@
 
 require_once __DIR__ . '/../autoload.php';
 
-$factory = new PdfFactory();
-
 //get the PDF object
 $pdf = PdfFactory::newPdf('multicell');
 
