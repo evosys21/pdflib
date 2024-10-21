@@ -1657,9 +1657,6 @@ class Table
     public function setTableConfig(array $aConfig)
     {
         $this->configuration['TABLE'] = array_merge($this->configuration['TABLE'], $aConfig);
-
-        // update the Margin X
-        // @see https://tracker.interpid.eu/issues/896
         $this->markMarginX();
     }
 

@@ -55,7 +55,7 @@ $row[0]['TEXT'] = "Line <b>1</b>";
 
 $row[1] = PdfSettings::$imageCell;
 
-$row[2]['TEXT'] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='https://github.com/evosys21/pdflib'>www.interpid.eu</bi></p>";
+$row[2]['TEXT'] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='https://github.com/evosys21/pdflib'>https://github.com/evosys21/pdflib</bi></p>";
 $row[2]['ALIGN'] = 'L';
 
 //add the data row
@@ -67,7 +67,7 @@ $row = [];
 //alternatively you can create directly the cell object
 $row[0] = new \EvoSys21\PdfLib\Table\Cell\Image($pdf, CONTENT_PATH . '/images/blog.jpg', 10);
 $row[1] = new \EvoSys21\PdfLib\Table\Cell\Multicell($pdf, "<p>This is another <b>Multicell</b></p>");
-$row[2]['TEXT'] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='https://github.com/evosys21/pdflib'>www.interpid.eu</bi></p>";
+$row[2]['TEXT'] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='https://github.com/evosys21/pdflib'>https://github.com/evosys21/pdflib</bi></p>";
 $row[2]['BACKGROUND_COLOR'] = PdfSettings::$colors[1];
 
 //add the data row

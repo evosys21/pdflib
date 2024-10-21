@@ -7,7 +7,7 @@
 /Contents 4 0 R>>
 endobj
 4 0 obj
-<</Length 18648>>
+<</Length 18705>>
 stream
 2 J
 0.57 w
@@ -203,7 +203,7 @@ BT /F1 7.00 Tf ET
 q 0.510 0.000 0.118 rg BT 229.61 624.07 Td (Details on ) Tj ET Q
 BT /F3 7.00 Tf ET
 0 Tw
-q 0.000 0.000 0.471 rg BT 262.67 624.07 Td (www.interpid.eu) Tj ET Q
+q 0.000 0.000 0.471 rg BT 262.67 624.07 Td (https://github.com/evosys21/pdflib) Tj ET Q
 BT /F1 6.00 Tf ET
 0.28 w
 1.000 1.000 1.000 rg
@@ -591,7 +591,7 @@ BT /F1 7.00 Tf ET
 q 0.510 0.000 0.118 rg BT 229.61 270.31 Td (Details on ) Tj ET Q
 BT /F3 7.00 Tf ET
 0 Tw
-q 0.000 0.000 0.471 rg BT 262.67 270.31 Td (www.interpid.eu) Tj ET Q
+q 0.000 0.000 0.471 rg BT 262.67 270.31 Td (https://github.com/evosys21/pdflib) Tj ET Q
 BT /F1 6.00 Tf ET
 0.28 w
 0.000 0.361 0.694 RG
@@ -625,10 +625,10 @@ BT /F3 7.00 Tf ET
 q 0.000 0.000 0.471 rg BT 358.45 247.07 Td (Advanced Multicells) Tj ET Q
 BT /F1 7.00 Tf ET
 0 Tw
-q 0.510 0.000 0.118 rg BT 296.59 235.73 Td (Details on ) Tj ET Q
+q 0.510 0.000 0.118 rg BT 265.86 235.73 Td (Details on ) Tj ET Q
 BT /F3 7.00 Tf ET
 0 Tw
-q 0.000 0.000 0.471 rg BT 329.66 235.73 Td (www.interpid.eu) Tj ET Q
+q 0.000 0.000 0.471 rg BT 298.93 235.73 Td (https://github.com/evosys21/pdflib) Tj ET Q
 BT /F1 6.00 Tf ET
 0.000 0.361 0.694 RG
 0.85 w
@@ -782,13 +782,13 @@ endobj
 <</Type /Annot /Subtype /Link /Rect [467.72 827.72 538.59 789.98] /Border [0 0 0] /A <</S /URI /URI (https://github.com/evosys21/pdflib)>>>>
 endobj
 7 0 obj
-<</Type /Annot /Subtype /Link /Rect [262.67 629.67 316.74 622.67] /Border [0 0 0] /A <</S /URI /URI (https://github.com/evosys21/pdflib)>>>>
+<</Type /Annot /Subtype /Link /Rect [262.67 629.67 378.20 622.67] /Border [0 0 0] /A <</S /URI /URI (https://github.com/evosys21/pdflib)>>>>
 endobj
 8 0 obj
-<</Type /Annot /Subtype /Link /Rect [262.67 275.91 316.74 268.91] /Border [0 0 0] /A <</S /URI /URI (https://github.com/evosys21/pdflib)>>>>
+<</Type /Annot /Subtype /Link /Rect [262.67 275.91 378.20 268.91] /Border [0 0 0] /A <</S /URI /URI (https://github.com/evosys21/pdflib)>>>>
 endobj
 9 0 obj
-<</Type /Annot /Subtype /Link /Rect [329.66 241.33 383.73 234.33] /Border [0 0 0] /A <</S /URI /URI (https://github.com/evosys21/pdflib)>>>>
+<</Type /Annot /Subtype /Link /Rect [298.93 241.33 414.45 234.33] /Border [0 0 0] /A <</S /URI /URI (https://github.com/evosys21/pdflib)>>>>
 endobj
 10 0 obj
 <</Type /Page
@@ -1523,31 +1523,31 @@ endobj
 xref
 0 26
 0000000000 65535 f 
-0000024391 00000 n 
-0000113718 00000 n 
+0000024448 00000 n 
+0000113775 00000 n 
 0000000009 00000 n 
 0000000128 00000 n 
-0000018827 00000 n 
-0000018982 00000 n 
-0000019138 00000 n 
-0000019294 00000 n 
-0000019450 00000 n 
-0000019606 00000 n 
-0000019711 00000 n 
-0000024078 00000 n 
-0000024234 00000 n 
-0000024485 00000 n 
-0000025210 00000 n 
-0000025325 00000 n 
-0000025445 00000 n 
-0000025572 00000 n 
-0000025695 00000 n 
-0000041956 00000 n 
-0000061226 00000 n 
-0000081825 00000 n 
-0000098261 00000 n 
-0000113911 00000 n 
-0000113995 00000 n 
+0000018884 00000 n 
+0000019039 00000 n 
+0000019195 00000 n 
+0000019351 00000 n 
+0000019507 00000 n 
+0000019663 00000 n 
+0000019768 00000 n 
+0000024135 00000 n 
+0000024291 00000 n 
+0000024542 00000 n 
+0000025267 00000 n 
+0000025382 00000 n 
+0000025502 00000 n 
+0000025629 00000 n 
+0000025752 00000 n 
+0000042013 00000 n 
+0000061283 00000 n 
+0000081882 00000 n 
+0000098318 00000 n 
+0000113968 00000 n 
+0000114052 00000 n 
 trailer
 <<
 /Size 26
@@ -1555,5 +1555,5 @@ trailer
 /Info 24 0 R
 >>
 startxref
-114045
+114102
 %%EOF

@@ -94,7 +94,26 @@ $multicell->multiCell(0, 5, '<p>This is a <b>BOLD</b> text</p>');
 
 ## Create the Pdf object
 
-Please refer to the `FPDF/TCPDF/tFPDF` class manual in order to get this done correctly. 
+Use the provided `Pdf` classes to create the PDF object.
+
+For example, if you want to use `FPDF`, use the `EvoSys21\PdfLib\Fpdf\Pdf` class.
+
+Why? [Read here](../README.md#why-use-the-custom-pdf-class-instead-of-fpdftcpdftfpdf)
+
+```php
+# use one of the following classes
+use EvoSys21\PdfLib\Fpdf\Pdf; // Pdf extends FPDF
+use EvoSys21\PdfLib\TCPDF\Pdf; // Pdf extends TCPDF
+use EvoSys21\PdfLib\tFpdf\Pdf; // Pdf extends tFPDF
+
+// create the Pdf Object
+$pdf = new Pdf();
+
+// initialize your pdf
+$pdf->SetMargins(20, 20, 20);
+```
+
+Please refer to the `FPDF/TCPDF/tFPDF` class manual in order to do other initializations. 
 
 ## Create the Advanced Multicell object
 
@@ -108,17 +127,21 @@ $multicell = new Multicell($pdf);
 
 A tag style is used specify the text display properties. The following properties can be set:
 
-* size/font_size: `8`, `9`, `10` ...
-* style/font_style: one or a combination of the following values:
+* `size` (Font Size): `8`, `9`, `10` ...
+* `style` (Font Style): one or a combination of the following values:
     * `B` (Bold), `U` (Underline), `I` (Italic)
     * examples: ` "B" `, `"BI"`
-* color/text_color: specify a string or array: `'130,0,30'` or `[130,0,30]`
-* family/font_family: example `'Arial'`, `'helvetica'` or any other font family
-* inherit: the **style name** that will be inherited.
+* `color` (Text Color): specify a string or array: `'130,0,30'` or `[130,0,30]`
+* `family` (Font Family): example `'Arial'`, `'helvetica'` or any other font family
+* `inherit` (Style inherit): the **style name** that will be inherited.
 
 Examples:
 
 ```php
+
+// the `default`(if set) style is inherited by all other styles
+$multicell->setStyle('default', 11, '', [0, 0, 77], 'helvetica');
+
 // define a tag style using associative array
 $multicell->setStyleAssoc('p', ['size' => 11, 'style' => '', 'color' => '130,0,30', 'family' => 'helvetica']);
 
@@ -190,10 +213,9 @@ $multicell->multiCell(0, 5, $s);
 Subscript and superscripts can be adjusted with the y attribute. See example:
 
 ```php
-$s = "<p>The following is <s y='-1'>Subscript</s> and <s y='1'>Superscript</s></p>";
+$s = "<p>The following is <s y='-1'>Subscript</s> and <s y='1'>$multicell->setStyle('default', 11, '', [0, 0, 77], 'helvetica');</s></p>";
 ```
-
-![Sub-Superscript](https://tracker.interpid.eu/attachments/download/2560/text-sub-superscript.png)
+[<img src="images/text-sub-superscript.png" width="400">](images/text-sub-superscript.png)
 
 <br/><br/>
 
@@ -208,17 +230,17 @@ $s = "<p>The following is <n strike=''>Text Strikethrough</n> and <bi strike='.5
 $multicell->multiCell(0, 5, $s);
 ```
 
-<img src="https://tracker.interpid.eu/attachments/download/2561/text-strikethrough.png" width="500" alt=""/>
+[<img src="images/text-strikethrough.png" width="500">](images/text-strikethrough.png)
 
-<br/><br/>
+<br/>
 
 ### Links
 
 You can create links by using the href attribute in a tag.
 
 ```php
-$s = "<p>Created by <h1 href='mailto:office@interpid.eu'>Interpid Office</h1>
-<h1 href='www.interpid.eu'>www.interpid.eu</h1></p>";
+$s = "<p>Created by <h1 href='mailto:office@evosys21.ch'>EvoSys21 Office</h1>
+<h1 href='https://www.evosys21.ch'>www.evosys21.ch</h1></p>";
 $multicell->multiCell(0, 5, $s);
 ```
 
