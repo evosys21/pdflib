@@ -1,6 +1,6 @@
 <?php
 
-namespace evosys21\PdfLib\Table\Cell;
+namespace EvoSys21\PdfLib\Table\Cell;
 
 /**
  * Pdf Table Cell SVG Image

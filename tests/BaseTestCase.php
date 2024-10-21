@@ -1,11 +1,11 @@
 <?php
 
-namespace evosys21\PdfLib\Tests;
+namespace EvoSys21\PdfLib\Tests;
 
-use evosys21\PdfLib\Fpdf\Pdf;
-use evosys21\PdfLib\Examples\Fpdf\PdfFactory;
-use evosys21\PdfLib\Tests\Utils\Helper;
-use evosys21\PdfLib\Tests\Utils\TestUtils;
+use EvoSys21\PdfLib\Fpdf\Pdf;
+use EvoSys21\PdfLib\Examples\Fpdf\PdfFactory;
+use EvoSys21\PdfLib\Tests\Utils\Helper;
+use EvoSys21\PdfLib\Tests\Utils\TestUtils;
 use PHPUnit\Framework\TestCase;
 
 /**

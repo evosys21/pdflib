@@ -5,8 +5,8 @@
 
 require_once __DIR__ . '/autoload.php';
 
-use evosys21\PdfLib\Tcpdf\Pdf;
-use evosys21\PdfLib\Multicell;
+use EvoSys21\PdfLib\Tcpdf\Pdf;
+use EvoSys21\PdfLib\Multicell;
 
 // Pdf extends TCPDF
 $pdf = new Pdf();

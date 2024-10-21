@@ -1,5 +1,5 @@
 <?php
-namespace evosys21\PdfLib\String;
+namespace EvoSys21\PdfLib\String;
 
 /**
  * String Tag extraction class

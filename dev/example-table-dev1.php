@@ -5,8 +5,8 @@
 
 require_once __DIR__ . '/../autoload.php';
 
-use evosys21\PdfLib\Fpdf\Pdf;
-use evosys21\PdfLib\Table;
+use EvoSys21\PdfLib\Fpdf\Pdf;
+use EvoSys21\PdfLib\Table;
 
 // Pdf extends FPDF
 $pdf = new Pdf();

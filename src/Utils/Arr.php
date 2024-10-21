@@ -1,6 +1,6 @@
 <?php
 
-namespace evosys21\PdfLib\Utils;
+namespace EvoSys21\PdfLib\Utils;
 
 use ArrayAccess;
 

@@ -1,6 +1,6 @@
 <?php
 
-use evosys21\PdfLib\Tests\BaseExamplesTestCase;
+use EvoSys21\PdfLib\Tests\BaseExamplesTestCase;
 
 /**
  * Class MulticellExamplesTest
@@ -15,7 +15,7 @@ class MulticellExamplesTest extends BaseExamplesTestCase
      */
     public function testExamples($source)
     {
-        $require = \evosys21\PdfLib\Tests\Feature\APPLICATION_PATH . '/examples/Fpdf/' . $source;
+        $require = \EvoSys21\PdfLib\Tests\Feature\APPLICATION_PATH . '/examples/Fpdf/' . $source;
         $this->runTestWithExample($require, basename($require));
     }
 
@@ -42,7 +42,7 @@ class MulticellExamplesTest extends BaseExamplesTestCase
      */
     public function testDevSamples($source)
     {
-        $require = \evosys21\PdfLib\Tests\Feature\APPLICATION_PATH . '/dev/' . $source;
+        $require = \EvoSys21\PdfLib\Tests\Feature\APPLICATION_PATH . '/dev/' . $source;
         $this->runTestWithExample($require, 'dev-' . basename($require));
     }
 

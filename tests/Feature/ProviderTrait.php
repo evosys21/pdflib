@@ -1,6 +1,6 @@
 <?php
 
-namespace evosys21\PdfLib\Tests\Feature;
+namespace EvoSys21\PdfLib\Tests\Feature;
 
 trait ProviderTrait
 {

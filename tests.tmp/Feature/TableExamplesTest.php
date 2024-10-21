@@ -1,6 +1,6 @@
 <?php
 
-use evosys21\PdfLib\Tests\BaseExamplesTestCase;
+use EvoSys21\PdfLib\Tests\BaseExamplesTestCase;
 
 
 /**
@@ -29,7 +29,7 @@ class TableExamplesTest extends BaseExamplesTestCase
         );
 
         foreach ($sources as $source) {
-            $source = \evosys21\PdfLib\Tests\Feature\APPLICATION_PATH . '/examples/Fpdf/' . $source;
+            $source = \EvoSys21\PdfLib\Tests\Feature\APPLICATION_PATH . '/examples/Fpdf/' . $source;
             yield [$source];
         }
     }

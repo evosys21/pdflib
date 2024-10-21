@@ -4,11 +4,11 @@
 /** @noinspection PhpUnhandledExceptionInspection */
 /** @noinspection PhpDocMissingThrowsInspection */
 
-namespace evosys21\PdfLib\Tcpdf;
+namespace EvoSys21\PdfLib\Tcpdf;
 
-use evosys21\PdfLib\AbstractPdfUtils;
-use evosys21\PdfLib\PdfInterfaceDef;
-use evosys21\PdfLib\Tools;
+use EvoSys21\PdfLib\AbstractPdfUtils;
+use EvoSys21\PdfLib\PdfInterfaceDef;
+use EvoSys21\PdfLib\Tools;
 
 /**
  * Pdf Class Interface

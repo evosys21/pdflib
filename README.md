@@ -94,7 +94,7 @@ A full end-user documentation for Advanced Table is available [here](docs/table.
 
 ### Why use the custom pdf class instead of `FPDF/TCPDF/tFPDF`
 
-The custom `evosys21\PdfLib\Fpdf\Pdf` object is used instead of `FPDF` because `FPDF`'s private/protected properties,
+The custom `EvoSys21\PdfLib\Fpdf\Pdf` object is used instead of `FPDF` because `FPDF`'s private/protected properties,
 like widths, margins, and fonts, need to be accessed to implement add-ons.  
 Since `FPDF` doesn't provide setters/getters for these properties, the class was extended to access them.
 

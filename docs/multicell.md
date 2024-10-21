@@ -68,8 +68,8 @@ To generate an "Advanced Multicell" the followings are required:
 * add the multicells to the pdf document
 
 ```php
-use evosys21\PdfLib\Multicell;
-use evosys21\PdfLib\Fpdf\Pdf; // Pdf extends FPDF
+use EvoSys21\PdfLib\Multicell;
+use EvoSys21\PdfLib\Fpdf\Pdf; // Pdf extends FPDF
 
 // create the Pdf Object
 $pdf = new Pdf();
@@ -100,7 +100,7 @@ Please refer to the `FPDF/TCPDF/tFPDF` class manual in order to get this done co
 
 ```php
 // Create the Advanced Multicell Object and inject the PDF object
-use evosys21\PdfLib\Multicell;
+use EvoSys21\PdfLib\Multicell;
 $multicell = new Multicell($pdf);
 ```
 

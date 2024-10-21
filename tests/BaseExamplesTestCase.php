@@ -1,8 +1,8 @@
 <?php
 
-namespace evosys21\PdfLib\Tests;
+namespace EvoSys21\PdfLib\Tests;
 
-use evosys21\PdfLib\Tests\Utils\TestUtils;
+use EvoSys21\PdfLib\Tests\Utils\TestUtils;
 
 /**
  * Class BaseExamplesTestCase\Tests

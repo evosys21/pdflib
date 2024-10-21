@@ -1,8 +1,8 @@
 <?php
 
-use evosys21\PdfLib\Examples\Tfpdf\PdfFactory;
-use evosys21\PdfLib\Tests\BaseTestCase;
-use evosys21\PdfLib\Tests\Utils\TestPdf;
+use EvoSys21\PdfLib\Examples\Tfpdf\PdfFactory;
+use EvoSys21\PdfLib\Tests\BaseTestCase;
+use EvoSys21\PdfLib\Tests\Utils\TestPdf;
 
 /**
  * Class TableExamples2Test\Tests\Functional

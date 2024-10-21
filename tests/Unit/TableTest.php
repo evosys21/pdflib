@@ -1,8 +1,8 @@
 <?php
-namespace evosys21\PdfLib\Tests\Unit;
+namespace EvoSys21\PdfLib\Tests\Unit;
 
-use evosys21\PdfLib\Table;
-use evosys21\PdfLib\Tests\Utils\Helper;
+use EvoSys21\PdfLib\Table;
+use EvoSys21\PdfLib\Tests\Utils\Helper;
 use PHPUnit\Framework\TestCase;
 
 /**

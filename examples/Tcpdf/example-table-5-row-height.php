@@ -5,10 +5,10 @@
 
 require_once __DIR__ . '/autoload.php';
 
-use evosys21\PdfLib\Multicell;
-use evosys21\PdfLib\Table;
-use evosys21\PdfLib\Examples\Tcpdf\PdfFactory;
-use evosys21\PdfLib\Examples\Tcpdf\PdfSettings;
+use EvoSys21\PdfLib\Multicell;
+use EvoSys21\PdfLib\Table;
+use EvoSys21\PdfLib\Examples\Tcpdf\PdfFactory;
+use EvoSys21\PdfLib\Examples\Tcpdf\PdfSettings;
 
 //get the PDF object
 $pdf = PdfFactory::newPdf('table');

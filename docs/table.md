@@ -13,7 +13,7 @@ Every add-on has multiple example files that cover the full functionality.
 
 ### Include the library into the project
 
-Normally, from the downloaded package you need only the files from `library\evosys21\PdfLib` folder in order to run it.
+Normally, from the downloaded package you need only the files from `library\EvoSys21\PdfLib` folder in order to run it.
 
 #### Using "require_once"
 
@@ -55,14 +55,14 @@ In `composer.json`
 
 then run `composer dump-autoload` to regenerate the autoload classmap.
 
-## Why use the `evosys21\PdfLib\Fpdf\Pdf` object instead of FPDF?
+## Why use the `EvoSys21\PdfLib\Fpdf\Pdf` object instead of FPDF?
 
 To implement the PDF Add-ons, we need access to private/protected properties from the FPDF class like widths, margins,
 fonts etc... As these properties are not provided by setters and getters the FPDF class was extended and these
 properties made public.
 
 ```php
-namespace evosys21\PdfLib;
+namespace EvoSys21\PdfLib;
 
 class Pdf extends \FPDF
 {
@@ -78,7 +78,7 @@ class Pdf extends \FPDF
 Please refer to the FPDF class manual in order to get this done correctly. Example:
 
 ```php
-use evosys21\PdfLib\Fpdf\Pdf;
+use EvoSys21\PdfLib\Fpdf\Pdf;
 
 // Pdf extends FPDF
 $pdf = new Pdf();
@@ -101,7 +101,7 @@ $pdf->AddPage();
 
 ```php
 // Create the Advanced Multicell Object and inject the PDF object
-use evosys21\PdfLib\Table;
+use EvoSys21\PdfLib\Table;
 $table = new Table($pdf);
 ```
 
@@ -475,7 +475,7 @@ $row = [
 Images are passed as objects
 
 ```php
-use evosys21\PdfLib\Table;
+use EvoSys21\PdfLib\Table;
 
 $imageCell = new Table\Cell\Image($pdf, 'blog.jpg', 10);
 $svgImageCell = new Table\Cell\ImageSVG($pdf, 'tiger.svg', 10);
@@ -506,10 +506,10 @@ $cell = new Table\Cell\ImageSVG($pdf, 'tiger.svg', 35, 35);
 All input values for cells are converted into objects. The following objects are available in the distributed package.
 
 ```php
-use evosys21\PdfLib\Table\Cell\EmptyCell;
-use evosys21\PdfLib\Table\Cell\Multicell;
-use evosys21\PdfLib\Table\Cell\Image;
-use evosys21\PdfLib\Table\Cell\ImageSVG;
+use EvoSys21\PdfLib\Table\Cell\EmptyCell;
+use EvoSys21\PdfLib\Table\Cell\Multicell;
+use EvoSys21\PdfLib\Table\Cell\Image;
+use EvoSys21\PdfLib\Table\Cell\ImageSVG;
 ```
 
 ## Finalize the table

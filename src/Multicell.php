@@ -1,16 +1,16 @@
 <?php
 /** @noinspection PhpUnhandledExceptionInspection */
 /** @noinspection PhpDocMissingThrowsInspection */
-namespace evosys21\PdfLib;
+namespace EvoSys21\PdfLib;
 
 if (!defined('PARAGRAPH_STRING')) {
     define('PARAGRAPH_STRING', '~~~');
 }
 
-use evosys21\PdfLib\Fpdf\Pdf;
-use evosys21\PdfLib\Fpdf\PdfInterface;
-use evosys21\PdfLib\String\Tags;
-use evosys21\PdfLib\Utils\Arr;
+use EvoSys21\PdfLib\Fpdf\Pdf;
+use EvoSys21\PdfLib\Fpdf\PdfInterface;
+use EvoSys21\PdfLib\String\Tags;
+use EvoSys21\PdfLib\Utils\Arr;
 use Exception;
 
 /**

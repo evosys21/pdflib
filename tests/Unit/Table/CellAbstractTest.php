@@ -1,9 +1,9 @@
 <?php
-namespace evosys21\PdfLib\Tests\Unit\Table;
+namespace EvoSys21\PdfLib\Tests\Unit\Table;
 
-use evosys21\PdfLib\Factory;
-use evosys21\PdfLib\Fpdf\PdfInterface;
-use evosys21\PdfLib\Tests\BaseTestCase;
+use EvoSys21\PdfLib\Factory;
+use EvoSys21\PdfLib\Fpdf\PdfInterface;
+use EvoSys21\PdfLib\Tests\BaseTestCase;
 
 /**
  * Class CellAbstractTest

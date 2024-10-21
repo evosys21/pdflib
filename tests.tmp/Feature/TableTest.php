@@ -1,8 +1,8 @@
 <?php
 
-use evosys21\PdfLib\Tests\BaseTestCase;
-use evosys21\PdfLib\Tests\Utils\Helper;
-use evosys21\PdfLib\Tests\Utils\TestPdf;
+use EvoSys21\PdfLib\Tests\BaseTestCase;
+use EvoSys21\PdfLib\Tests\Utils\Helper;
+use EvoSys21\PdfLib\Tests\Utils\TestPdf;
 
 /**
  * Class TableTest

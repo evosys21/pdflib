@@ -1,6 +1,6 @@
 <?php
 
-use evosys21\PdfLib\Table;
+use EvoSys21\PdfLib\Table;
 
 if (!isset($splitMode)) {
     $splitMode = true;

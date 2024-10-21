@@ -2,7 +2,7 @@
 
 /** @noinspection PhpUnused */
 
-namespace evosys21\PdfLib\Tests\Utils;
+namespace EvoSys21\PdfLib\Tests\Utils;
 
 
 use App\Utils\Json;

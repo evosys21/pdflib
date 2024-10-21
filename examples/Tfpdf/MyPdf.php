@@ -1,10 +1,10 @@
 <?php
 /** @noinspection PhpUnused */
 
-namespace evosys21\PdfLib\Examples\Tfpdf;
+namespace EvoSys21\PdfLib\Examples\Tfpdf;
 
-use evosys21\PdfLib\Tfpdf\Pdf;
-use evosys21\PdfLib\Multicell;
+use EvoSys21\PdfLib\Tfpdf\Pdf;
+use EvoSys21\PdfLib\Multicell;
 
 /**
  * Custom PDF class extension for Header and Footer Definitions

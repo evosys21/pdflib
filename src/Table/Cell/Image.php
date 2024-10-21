@@ -1,10 +1,10 @@
 <?php
 /** @noinspection PhpUnused */
-namespace evosys21\PdfLib\Table\Cell;
+namespace EvoSys21\PdfLib\Table\Cell;
 
-use evosys21\PdfLib\Fpdf\Pdf;
-use evosys21\PdfLib\Fpdf\PdfInterface;
-use evosys21\PdfLib\Tools;
+use EvoSys21\PdfLib\Fpdf\Pdf;
+use EvoSys21\PdfLib\Fpdf\PdfInterface;
+use EvoSys21\PdfLib\Tools;
 
 /**
  * Pdf Table Cell Image

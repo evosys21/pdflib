@@ -1,6 +1,6 @@
 <?php
 /** @noinspection PhpUnused */
-namespace evosys21\PdfLib;
+namespace EvoSys21\PdfLib;
 
 /**
  * Class Tools

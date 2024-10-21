@@ -1,7 +1,7 @@
 <?php
 /** @noinspection SpellCheckingInspection */
 
-namespace evosys21\PdfLib\Tcpdf;
+namespace EvoSys21\PdfLib\Tcpdf;
 
 use TCPDF;
 
