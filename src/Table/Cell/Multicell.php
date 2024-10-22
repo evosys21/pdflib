@@ -7,16 +7,20 @@ use EvoSys21\PdfLib\MulticellData;
 
 /**
  * Pdf Table Cell Multicell\Table\Cell
- * @property mixed|array TEXT_STRLINES
- * @property mixed|null TEXT_ALIGN
- * @property mixed|null LINE_SIZE
- * @property mixed|null TEXT_SIZE
- * @property mixed|null TEXT_TYPE
- * @property mixed|null TEXT_FONT
- * @property mixed|null TEXT_COLOR
- * @property int|null nLines
- * @property string TEXT
- * @property float|int V_OFFSET
+ * @property string|array $TEXT_STRLINES
+ * @property string|null $TEXT_ALIGN
+ * @property string|int $LINE_SIZE
+ * @property string|int $TEXT_SIZE
+ * @property string $TEXT_TYPE
+ * @property string $TEXT_FONT
+ * @property string|array $TEXT_COLOR
+ * @property int|null $nLines
+ * @property string $TEXT
+ * @property float|int $V_OFFSET
+ * @property string|int $PADDING_LEFT
+ * @property string|int $PADDING_TOP
+ * @property string|int $PADDING_RIGHT
+ * @property string|int $PADDING_BOTTOM
  */
 class Multicell extends CellAbstract implements CellInterface
 {

@@ -20,8 +20,8 @@ class MyPdf extends Pdf
 
     /**
      * Custom Header
-     *
-     * @see          Pdf::Header()
+     * @SuppressWarnings(PHPMD.CamelCaseMethodName)
+     * @see Pdf::Header()
      */
     public function Header()
     {

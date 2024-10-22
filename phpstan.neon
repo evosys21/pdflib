@@ -1,6 +1,6 @@
 parameters:
     bootstrapFiles:
-        - autoload.php
+        - tests/bootstrap.php
     level: 5
     paths:
         - src

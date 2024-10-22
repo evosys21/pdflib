@@ -258,26 +258,20 @@ class Table
 
     /**
      * Pdf Object
-     *
-     * @var Pdf
-     *
+     * @var object
      */
-    protected $pdf = null;
+    protected object $pdf;
 
     /**
      * PDF Interface Object
-     *
-     * @var PdfInterface
-     *
+     * @var object
      */
-    protected $pdfi;
+    protected object $pdfi;
 
     /**
      * Contains the Singleton Object
-     *
-     * @var object
      */
-    private static $singleton = []; //implements the Singleton Pattern
+    private static array $singleton = []; //implements the Singleton Pattern
 
 
     /**

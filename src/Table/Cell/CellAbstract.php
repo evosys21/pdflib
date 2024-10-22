@@ -12,12 +12,11 @@ use EvoSys21\PdfLib\Validate;
 
 /**
  * Pdf Table Cell Abstract Class
- *\Table\Cell
- * @property mixed|null HEIGHT_LEFT_RW
+ * @property string|int|float|null HEIGHT_LEFT_RW
  */
 abstract class CellAbstract implements CellInterface
 {
-    protected $aPropertyMethodMap = array(
+    protected array $propMap = [
         'ALIGN' => 'setAlign',
         'VERTICAL_ALIGN' => 'setAlignVertical',
         'COLSPAN' => 'setColSpan',
@@ -32,7 +31,7 @@ abstract class CellAbstract implements CellInterface
         'BORDER_SIZE' => 'setBorderSize',
         'BORDER_COLOR' => 'setBorderColor',
         'BACKGROUND_COLOR' => 'setBackgroundColor',
-    );
+    ];
 
     /**
      * Colspan
@@ -237,10 +236,10 @@ abstract class CellAbstract implements CellInterface
     {
         $this->markInternValueAsSet($key);
 
-        if (isset($this->aPropertyMethodMap[$key])) {
+        if (isset($this->propMap[$key])) {
             call_user_func_array(array(
                 $this,
-                $this->aPropertyMethodMap[$key]
+                $this->propMap[$key]
             ), Tools::makeArray($value));
 
             return;
@@ -490,23 +489,23 @@ abstract class CellAbstract implements CellInterface
     }
 
 
-    public function copyProperties(CellAbstract $oSource)
+    public function copyProperties(CellAbstract $source)
     {
-        $this->rowSpan = $oSource->getRowSpan();
-        $this->colSpan = $oSource->getColSpan();
+        $this->rowSpan = $source->getRowSpan();
+        $this->colSpan = $source->getColSpan();
 
-        $this->paddingTop = $oSource->getPaddingTop();
-        $this->paddingRight = $oSource->getPaddingRight();
-        $this->paddingBottom = $oSource->getPaddingBottom();
-        $this->paddingLeft = $oSource->getPaddingLeft();
+        $this->paddingTop = $source->getPaddingTop();
+        $this->paddingRight = $source->getPaddingRight();
+        $this->paddingBottom = $source->getPaddingBottom();
+        $this->paddingLeft = $source->getPaddingLeft();
 
-        $this->borderColor = $oSource->getBorderColor();
-        $this->borderSize = $oSource->getBorderSize();
-        $this->borderType = $oSource->getBorderType();
+        $this->borderColor = $source->getBorderColor();
+        $this->borderSize = $source->getBorderSize();
+        $this->borderType = $source->getBorderType();
 
-        $this->backgroundColor = $oSource->getBackgroundColor();
+        $this->backgroundColor = $source->getBackgroundColor();
 
-        $this->alignVertical = $oSource->getAlignVertical();
+        $this->alignVertical = $source->getAlignVertical();
     }
 
 

@@ -4,8 +4,6 @@ namespace EvoSys21\PdfLib\Table\Cell;
 
 /**
  * Pdf Table Cell EmptyCell
- *\Table\Cell
- * @property array aDefaultValues
  */
 class EmptyCell extends CellAbstract implements CellInterface
 {
@@ -15,18 +13,18 @@ class EmptyCell extends CellAbstract implements CellInterface
     }
 
 
-    public function render()
+    public function render(): void
     {
         $this->renderCellLayout();
     }
 
-    public function copyProperties(CellAbstract $oSource)
+    public function copyProperties(CellAbstract $source): void
     {
-        $aProps = array_keys($this->aDefaultValues);
+        $props = array_keys($this->propMap);
 
-        foreach ($aProps as $sProperty) {
-            if ($oSource->isPropertySet($sProperty)) {
-                $this->$sProperty = $oSource->$sProperty;
+        foreach ($props as $prop) {
+            if ($source->isPropertySet($prop)) {
+                $this->$prop = $source->$prop;
             }
         }
 

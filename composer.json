@@ -26,7 +26,8 @@
         "ext-fileinfo": "*",
         "symfony/process": "^5.3",
         "squizlabs/php_codesniffer": "*",
-        "phpstan/phpstan": "^1.12"
+        "phpstan/phpstan": "^1.12",
+        "phpmd/phpmd": "^2.15"
     },
     "autoload": {
         "psr-4": {

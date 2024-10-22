@@ -8,8 +8,8 @@ use EvoSys21\PdfLib\Table\Cell\CellAbstract;
  * Class CellAbstractMock
  * Mock class just to unit-test an abstract class
  *
- * @property string|int|null TEST2
- * @property string|int|null TEST
+ * @property string|int|null $TEST2
+ * @property string|int|null $TEST
  */
 class CellAbstractMock extends CellAbstract
 {

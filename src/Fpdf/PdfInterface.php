@@ -5,6 +5,7 @@
 /** @noinspection PhpMissingParamTypeInspection */
 /** @noinspection PhpUnhandledExceptionInspection */
 /** @noinspection PhpDocMissingThrowsInspection */
+//phpcs:disable PSR1.Methods.CamelCapsMethodName.NotCamelCaps
 
 namespace EvoSys21\PdfLib\Fpdf;
 
@@ -18,7 +19,7 @@ use EvoSys21\PdfLib\Tools;
  */
 class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
 {
-    const RAW = '__RAW__';
+    public const RAW = '__RAW__';
 
     /**
      * Pointer to the pdf object

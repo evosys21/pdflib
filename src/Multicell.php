@@ -97,10 +97,8 @@ class Multicell
 
     /**
      * Contains the Singleton Object
-     *
-     * @var object
      */
-    private static $_singleton = []; //implements the Singleton Pattern
+    private static array $singleton = []; //implements the Singleton Pattern
 
     protected $fill = true;
 
@@ -167,7 +165,7 @@ class Multicell
      */
     public static function getInstance(object $pdf): self
     {
-        $instance = &self::$_singleton[spl_object_hash($pdf)];
+        $instance = &self::$singleton[spl_object_hash($pdf)];
 
         if (!isset($instance)) {
             $instance = new self($pdf);

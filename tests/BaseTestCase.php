@@ -16,9 +16,9 @@ class BaseTestCase extends TestCase
     /**
      * Returns the pdf object
      *
-     * @return Pdf
+     * @return object
      */
-    protected function getPdfObject()
+    protected function getPdfObject(): object
     {
         //create the pdf object and do some initialization
         $pdf = new Pdf();

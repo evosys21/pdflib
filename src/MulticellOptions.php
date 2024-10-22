@@ -36,37 +36,34 @@ class MulticellOptions
 
     /**
      * Font shrink step
-     * @var boolean
      */
-    public $shrinkFontStep = 1;
+    public int|bool $shrinkFontStep = 1;
 
     /**
      * Cell Height shrink step
-     * @var boolean
      */
-    public $shrinkLineHeightStep = 0.5;
+    public bool|float $shrinkLineHeightStep = 0.5;
 
     /**
      * Apply options to next cell ONLY
-     * @var boolean
      */
-    public $applyAll = false;
+    public bool $applyAll = false;
 
     /**
      * Contains the line height value for a multicell
      * @var int|float
      */
-    public $lineHeight;
+    public int|float $lineHeight;
 
     /**
-     * @var Pdf
+     * @var object
      */
-    public $pdf;
+    public object $pdf;
 
     /**
-     * @var PdfInterface
+     * @var object
      */
-    public $pdfi;
+    public object $pdfi;
 
     public function __construct($pdfi)
     {

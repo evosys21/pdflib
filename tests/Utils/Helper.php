@@ -30,7 +30,7 @@ class Helper
     }
 
     /**
-     * @param Object $pdf
+     * @param object $pdf
      */
     public static function setFontStyle1(object $pdf): void
     {
