@@ -1,5 +1,7 @@
 <?php
+
 /** @noinspection PhpUnused */
+
 namespace EvoSys21\PdfLib;
 
 use EvoSys21\PdfLib\Fpdf\Pdf as Fpdf;
@@ -387,7 +389,9 @@ class Table
         $this->headerOnCurrentPage = false;
 
         foreach ($configuration as $key => $value) {
-            if (!in_array($key, ['TABLE', 'HEADER', 'ROW'])) continue;
+            if (!in_array($key, ['TABLE', 'HEADER', 'ROW'])) {
+                continue;
+            }
             $this->configuration[$key] = array_merge($this->configuration[$key], $value);
         }
 
@@ -998,10 +1002,11 @@ class Table
         for ($ix = $iStartIndex; $ix < $count; $ix++) {
             $val = &$aRefCache[$ix];
 
-            if (!in_array($val['DATATYPE'], array(
+            if (
+                !in_array($val['DATATYPE'], array(
                 'data',
                 'header'
-            ))
+                ))
             ) {
                 continue;
             }
@@ -1189,9 +1194,9 @@ class Table
                 //use this switch for flow control
                 switch (1) {
                     case 1:
-
                         //SITUATION 1:
-                        if ($isHeader or
+                        if (
+                            $isHeader or
                             (!$headerOnPage and !$this->dataOnCurrentPage and !$this->tableSplit and ($iLastDataKey > 0))
                         ) {
                             $count = $this->insertNewPage(
@@ -1813,7 +1818,7 @@ class Table
      *
      * @return Object|null
      */
-    public function getPdfObject(): ?Object
+    public function getPdfObject(): ?object
     {
         return $this->pdf;
     }

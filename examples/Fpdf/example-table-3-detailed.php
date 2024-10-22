@@ -1,8 +1,8 @@
 <?php
+
 /**
  * Pdf Advanced Table - Example
  */
-
 
 require_once __DIR__ . '/autoload.php';
 

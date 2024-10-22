@@ -1,4 +1,5 @@
 <?php
+
 namespace EvoSys21\PdfLib\Table\Cell;
 
 /**

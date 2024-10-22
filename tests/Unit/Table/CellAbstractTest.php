@@ -1,4 +1,5 @@
 <?php
+
 namespace EvoSys21\PdfLib\Tests\Unit\Table;
 
 use EvoSys21\PdfLib\Factory;

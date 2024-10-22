@@ -1,5 +1,7 @@
 <?php
+
 /** @noinspection PhpUnused */
+
 /** @noinspection PhpMissingParamTypeInspection */
 /** @noinspection PhpUnhandledExceptionInspection */
 /** @noinspection PhpDocMissingThrowsInspection */
@@ -16,7 +18,6 @@ use EvoSys21\PdfLib\Tools;
  */
 class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
 {
-
     const RAW = '__RAW__';
 
     /**
@@ -327,5 +328,4 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
 
         return $width[chr($char)] * $size / 1000;
     }
-
 }

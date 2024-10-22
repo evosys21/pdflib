@@ -1,4 +1,5 @@
 <?php
+
 namespace EvoSys21\PdfLib\Tests\Utils;
 
 use EvoSys21\PdfLib\Fpdf\Pdf;

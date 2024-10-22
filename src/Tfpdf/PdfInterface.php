@@ -1,5 +1,7 @@
 <?php
+
 /** @noinspection PhpUnused */
+
 /** @noinspection PhpMissingParamTypeInspection */
 /** @noinspection PhpUnhandledExceptionInspection */
 /** @noinspection PhpDocMissingThrowsInspection */
@@ -297,8 +299,8 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
             return mb_substr($str, $start, $length);
         }
     }
-    
-    
+
+
     public function strlen(string $s): int
     {
         return mb_strlen($s);

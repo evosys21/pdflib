@@ -1,4 +1,5 @@
 <?php
+
 /** @noinspection PhpUnused */
 
 namespace EvoSys21\PdfLib\Examples\Fpdf;
@@ -25,7 +26,9 @@ class MyPdf extends Pdf
      */
     public function Header()
     {
-        if (!$this->showHeader) return;
+        if (!$this->showHeader) {
+            return;
+        }
 
         $this->SetY(10);
 
@@ -65,7 +68,9 @@ class MyPdf extends Pdf
     {
         $this->drawMargins && $this->drawMarginLines();
 
-        if (!$this->showFooter) return;
+        if (!$this->showFooter) {
+            return;
+        }
 
         $this->SetY(-10);
         $this->SetFont('helvetica', 'I', 7);

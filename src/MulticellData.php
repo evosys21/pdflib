@@ -1,4 +1,5 @@
 <?php
+
 namespace EvoSys21\PdfLib;
 
 /**
@@ -95,5 +96,4 @@ class MulticellData
         $this->textWidth = $this->width - $this->paddingLeft - $this->paddingRight;
         return $this;
     }
-
 }

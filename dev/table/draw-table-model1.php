@@ -1,6 +1,7 @@
 <?php
 
 use EvoSys21\PdfLib\Table;
+
 global $pdf;
 
 if (!isset($splitMode)) {

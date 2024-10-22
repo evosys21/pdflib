@@ -8,7 +8,6 @@ namespace EvoSys21\PdfLib;
  */
 abstract class AbstractPdfUtils
 {
-
     /**
      * Tags Font Information
      *

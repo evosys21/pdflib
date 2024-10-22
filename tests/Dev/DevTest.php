@@ -23,7 +23,6 @@ class DevTest extends BaseExamplesTestCase
 
         $this->assertNotFalse($response, 'Failed to fetch the PDF.');
         $this->assertEquals('%PDF-', substr($response, 0, 5), "Invalid Pdf $url");
-
     }
 
     public function testDevSources()

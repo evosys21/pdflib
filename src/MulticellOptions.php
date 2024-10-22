@@ -1,5 +1,7 @@
 <?php
+
 /** @noinspection PhpUnused */
+
 namespace EvoSys21\PdfLib;
 
 use EvoSys21\PdfLib\Fpdf\Pdf;
@@ -92,7 +94,7 @@ class MulticellOptions
      * Save the TagStyles to a backup variable
      * @return self
      */
-    public function saveStyles():self
+    public function saveStyles(): self
     {
         $this->stylesBackup = $this->styles;
         return $this;

@@ -20,7 +20,6 @@ use EvoSys21\PdfLib\MulticellData;
  */
 class Multicell extends CellAbstract implements CellInterface
 {
-
     /**
      *
      * @var \EvoSys21\PdfLib\Multicell
@@ -320,8 +319,7 @@ class Multicell extends CellAbstract implements CellInterface
         $pad_top = 0,
         $pad_right = 0,
         $pad_bottom = 0
-    )
-    {
+    ) {
         $wh_Top = 0;
 
         if ($vtop > 0) { //if this parameter is set

@@ -1,5 +1,7 @@
 <?php
+
 /** @noinspection PhpUnhandledExceptionInspection */
+
 /** @noinspection PhpDocMissingThrowsInspection */
 namespace EvoSys21\PdfLib;
 
@@ -117,7 +119,7 @@ class Multicell
      *
      * @param $pdf Object of the pdf class
      */
-    public function __construct( $pdf)
+    public function __construct($pdf)
     {
         $this->pdf = $pdf;
         $this->pdfi = Factory::pdfInterface($pdf);
@@ -141,7 +143,7 @@ class Multicell
      *
      * @return Object
      */
-    public function getPdfObject(): ?Object
+    public function getPdfObject(): ?object
     {
         return $this->pdf;
     }
@@ -151,7 +153,7 @@ class Multicell
      *
      * @return Object
      */
-    public function getPdfInterfaceObject(): Object
+    public function getPdfInterfaceObject(): object
     {
         return $this->pdfi;
     }
@@ -206,7 +208,7 @@ class Multicell
      * @param string $inherit Tag to be inherited
      * @return self
      */
-    public function setStyle(string $tag, $fontSize = null, ?string $fontStyle = null, $color = null, ?string $fontFamily = null, string $inherit = ""):self
+    public function setStyle(string $tag, $fontSize = null, ?string $fontStyle = null, $color = null, ?string $fontFamily = null, string $inherit = ""): self
     {
         if ($tag == 'ttags') {
             $this->pdf->Error(">> ttags << is reserved TAG Name.");
@@ -590,8 +592,6 @@ class Multicell
 
                 //round these values to a precision of 5! should be enough
                 if (round($lineWith, 5) > round($maximumWidth, 5)) { //Automatic line break
-
-
                     $this->dataExtraInfo['CURRENT_LINE_BR'] = 'AUTO';
 
                     if ($totalChars == 0) {
@@ -632,8 +632,6 @@ class Multicell
                     } elseif (count($lineData) > 0) {
                         //we have elements in the last tag!!!!
                         if ($lastSeparator == ord(" ")) { //the last tag ends with a space, have to remove it
-
-
                             $temp = &$lineData[count($lineData) - 1];
 
                             if (' ' == $this->strChar($temp['text'], -1)) {
@@ -709,7 +707,6 @@ class Multicell
 
         // Check the first and last tag -> if first and last caracters are " " space remove them!!!"
         if ((count($lineData) > 0) && ($this->dataExtraInfo['LAST_LINE_BR'] == 'AUTO')) {
-
             // first tag
             // If the first character is a space, then cut it off
             $temp = &$lineData[0];
@@ -757,18 +754,17 @@ class Multicell
      * @param float $paddingBottom Bottom padding
      */
     public function multiCell(
-        float  $width,
-        float  $height,
-               $data,
-               $border = 0,
+        float $width,
+        float $height,
+        $data,
+        $border = 0,
         string $align = 'J',
-        int    $fill = 0,
-        float  $paddingLeft = 0,
-        float  $paddingTop = 0,
-        float  $paddingRight = 0,
-        float  $paddingBottom = 0
-    )
-    {
+        int $fill = 0,
+        float $paddingLeft = 0,
+        float $paddingTop = 0,
+        float $paddingRight = 0,
+        float $paddingBottom = 0
+    ) {
         $this->multicellData = new MulticellData($this->pdf);
         $this->multicellData->width = $width;
         $this->multicellData->lineHeight = $height;
@@ -1024,7 +1020,9 @@ class Multicell
 
             #1247 - limit the maximum number of lines
             if ($options->isHeightOverflow($lines, $height)) {
-                if ($shrinkRun++ > 20) break;   //avoid infinite loop
+                if ($shrinkRun++ > 20) {
+                    break;   //avoid infinite loop
+                }
                 if ($options->shrinkToFit) {
                     $parsedLines = [];
                     $lines = 0;
@@ -1449,5 +1447,4 @@ class Multicell
         $this->options->spacers = [];
         return $this;
     }
-
 }

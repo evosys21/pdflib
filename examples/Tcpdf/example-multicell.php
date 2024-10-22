@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Pdf Advanced Multicell - Example
  */
@@ -117,7 +118,7 @@ $pdf->AddPage();
 $multicell->multiCell(0, 10, "<title>No wrap:</title> text will not break on normal separators");
 
 $s = "The price is <b nowrap='1'>USD 5.344,23</b>";
-foreach ([40, 45, 50] as $width){
+foreach ([40, 45, 50] as $width) {
     $multicell->multiCell($width, 5, $s, 1, 'L');
     $pdf->ln(5);
 }

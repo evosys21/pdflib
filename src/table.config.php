@@ -1,4 +1,5 @@
 <?php
+
 /** @noinspection DuplicatedCode */
 
 /**
@@ -56,4 +57,3 @@ return [
         'PADDING_BOTTOM' => 1,
     ],
 ];
-

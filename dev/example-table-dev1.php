@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Pdf Advanced Table - Example
  */
@@ -68,7 +69,7 @@ $row = [
 
 //$table->addPageBreak();
 
-$row = [[    'TEXT'=> "Cell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\n", 'HEIGHT' => 60, 'PADDING_TOP' => 20]];
+$row = [[    'TEXT' => "Cell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\n", 'HEIGHT' => 60, 'PADDING_TOP' => 20]];
 
 $table->addRow($row);
 

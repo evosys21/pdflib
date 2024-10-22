@@ -50,7 +50,7 @@ class BaseTestCase extends TestCase
             }
         }
 
-        if (TestUtils::isDebug()){
+        if (TestUtils::isDebug()) {
             $this->assertSame(file_get_contents($pdfExpected), file_get_contents($pdfGenerated), $message);
         }
         $this->assertSame($shaExpected, $shaGenerated, $message);

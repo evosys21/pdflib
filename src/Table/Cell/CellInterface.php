@@ -1,5 +1,7 @@
 <?php
+
 /** @noinspection PhpUnused */
+
 namespace EvoSys21\PdfLib\Table\Cell;
 
 use EvoSys21\PdfLib\Fpdf\Pdf;

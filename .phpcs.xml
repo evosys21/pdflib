@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ruleset name="MyProject">
+    <rule ref="PSR12"/>
+    <file>dev/</file>
+    <file>examples/</file>
+    <file>src/</file>
+    <file>tests/</file>
+</ruleset>

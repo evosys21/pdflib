@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Pdf Advanced Multicell - Example
  */
@@ -30,7 +31,7 @@ This <b>TCPDF addon</b> allows creation of an <b>Advanced Multicell</b> which us
   - Different <font>Font</font>, <size>Sizes</size>, <style>Styles</style>, <color>Colors</color> can be used
 EOL;
 
-foreach(range(50, 10, 10) as $height){
+foreach (range(50, 10, 10) as $height) {
     $multicell->multiCell(130, 5, "Height: $height");
     $pdf->Ln(1);
     $multicell->maxHeight($height)->shrinkToFit();
@@ -40,7 +41,7 @@ foreach(range(50, 10, 10) as $height){
 
 $pdf->AddPage();
 
-foreach(range(50, 10, 10) as $height){
+foreach (range(50, 10, 10) as $height) {
     $width = 130 - $height;
     $multicell->multiCell(120, 5, "Height: <b>$height</b> Width: <b>$width</b>");
     $pdf->Ln(1);
@@ -55,7 +56,7 @@ $txt = <<<EOL
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 EOL;
 
-foreach(range(50, 10, 10) as $height){
+foreach (range(50, 10, 10) as $height) {
     $multicell->maxHeight($height)->shrinkToFit();
     $multicell->multiCell(100, 5, $txt, 1, 'J', 1, 3, 3, 3, 3);
 }

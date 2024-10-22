@@ -6,10 +6,8 @@ use EvoSys21\PdfLib\Fpdf\Pdf;
 use EvoSys21\PdfLib\Examples\Tfpdf\PdfFactory;
 use Symfony\Component\Process\Process;
 
-
 class Helper
 {
-
     /**
      * Returns the pdf object
      *

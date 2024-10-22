@@ -1,4 +1,5 @@
 <?php
+
 /** @noinspection PhpUnused */
 
 namespace EvoSys21\PdfLib\Examples\Fpdf;
@@ -12,7 +13,6 @@ if (!defined('__DIR__')) {
 
 class PdfSettings
 {
-
     public static $colors = [
         [234, 255, 218],
         [165, 250, 220],

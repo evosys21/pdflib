@@ -1,4 +1,5 @@
 <?php
+
 namespace EvoSys21\PdfLib\Tests\Unit;
 
 use EvoSys21\PdfLib\Table;
@@ -31,4 +32,3 @@ class TableTest extends TestCase
         $this->assertSame('B', $multicell->getTagFontStyle('b'));
     }
 }
-
