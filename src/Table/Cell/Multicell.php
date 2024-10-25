@@ -338,7 +338,6 @@ class Multicell extends CellAbstract implements CellInterface
         }
 
         $wh_T = match ($vAlign) {
-            'T' => $wh_Top,
             'M' => $wh_Top + $vh / 2,
             'B' => $wh_Top + $vh,
             default => $wh_Top,

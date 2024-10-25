@@ -139,7 +139,7 @@ class Multicell
     /**
      * Returns the PDF object
      *
-     * @return Object
+     * @return object|null
      */
     public function getPdfObject(): ?object
     {
@@ -214,8 +214,6 @@ class Multicell
         if ($tag == '') {
             $this->pdf->Error("Empty TAG Name.");
         }
-
-        $inherit = $inherit;
 
         //use case insensitive tags
         $tag = trim(strtoupper($tag));

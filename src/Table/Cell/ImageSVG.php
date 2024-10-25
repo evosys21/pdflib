@@ -48,14 +48,14 @@ class ImageSVG extends Image
         $oh = $h;
         $regs = [];
         // get original image width and height
-        preg_match('/<svg([^\>]*)>/si', $svgData, $regs);
+        preg_match('/<svg([^\>]*)>/i', $svgData, $regs);
         if (isset($regs[1]) and !empty($regs[1])) {
             $tmp = [];
-            if (preg_match('/[\s]+width[\s]*=[\s]*"([^"]*)"/si', $regs[1], $tmp)) {
+            if (preg_match('/[\s]+width[\s]*=[\s]*"([^"]*)"/i', $regs[1], $tmp)) {
                 $ow = $this->pdf->getHTMLUnitToUnits($tmp[1], 1, $this->pdf->svgunit, false);
             }
             $tmp = [];
-            if (preg_match('/[\s]+height[\s]*=[\s]*"([^"]*)"/si', $regs[1], $tmp)) {
+            if (preg_match('/[\s]+height[\s]*=[\s]*"([^"]*)"/i', $regs[1], $tmp)) {
                 $oh = $this->pdf->getHTMLUnitToUnits($tmp[1], 1, $this->pdf->svgunit, false);
             }
         }

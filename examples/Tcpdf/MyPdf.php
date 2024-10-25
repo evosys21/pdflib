@@ -157,7 +157,7 @@ class MyPdf extends Pdf
 
     /**
      * @param $s
-     * @return int|void
+     * @return void
      */
     public function _out($s)
     {

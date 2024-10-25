@@ -49,8 +49,6 @@ $header = array(
 //add the header row
 $table->addHeader($header);
 
-PdfSettings::$imageCell = PdfSettings::$imageCell;
-
 //row 1 - add data as Array
 $row = [];
 $row[0]['TEXT'] = "Line <b>1</b>";
