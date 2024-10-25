@@ -1,5 +1,5 @@
 <?php
-
+/** @noinspection PhpUnhandledExceptionInspection */
 /** @noinspection PhpUnused */
 
 namespace EvoSys21\PdfLib\Table\Cell;

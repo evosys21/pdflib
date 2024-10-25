@@ -1,5 +1,5 @@
 <?php
-
+/** @noinspection PhpComposerExtensionStubsInspection */
 /** @noinspection PhpUnused */
 
 namespace EvoSys21\PdfLib;

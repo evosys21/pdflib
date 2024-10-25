@@ -1,4 +1,5 @@
 <?php
+/** @noinspection PhpUnhandledExceptionInspection */
 
 namespace EvoSys21\PdfLib\Tests\Unit\Table;
 

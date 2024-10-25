@@ -131,10 +131,8 @@ class MyPdf extends Pdf
             if (!empty($this->creator)) {
                 $this->_out('/Creator ' . $this->_textstring($this->creator));
             }
-            return parent::_putinfo();
-        } else {
-            return parent::_putinfo();
         }
+        return parent::_putinfo();
     }
 
     protected function _textstring($s, $n = 0)
@@ -165,10 +163,8 @@ class MyPdf extends Pdf
     {
         if (static::isTesting()) {
             $s = static::_testReplace($s);
-            parent::_out($s);
-        } else {
-            parent::_out($s);
         }
+        parent::_out($s);
     }
 
     protected static function isTesting(): bool
