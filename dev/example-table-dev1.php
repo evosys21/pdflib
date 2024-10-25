@@ -29,13 +29,13 @@ $table = new Table($pdf);
 
 // Set the styles for the advanced table
 $table->setStyle('default', 11, '', [0, 0, 77], 'helvetica');
-$table->setStyle('p', null, null);
+$table->setStyle('p');
 $table->setStyle('b', null, 'B');
 $table->setStyle('i', null, 'I');
 $table->setStyle('bi', null, 'BI');
 $table->setStyle('u', null, 'U');
 $table->setStyle('h', null, 'B', '203,0,48');
-$table->setStyle('s', 8, null);
+$table->setStyle('s', 8);
 $table->setStyle('title', 14, null, [102, 0, 0], null, 'h');
 $table->setStyle('h1', 16, null, null, null, 'h');
 $table->setStyle('h2', 14, null, null, null, 'h');

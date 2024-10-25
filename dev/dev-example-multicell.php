@@ -34,7 +34,7 @@ $multicell->setStyle('i', null, 'I');
 $multicell->setStyle('bi', null, 'BI');
 $multicell->setStyle('u', null, 'U');
 $multicell->setStyle('h', null, 'B', '203,0,48');
-$multicell->setStyle('s', 8, null);
+$multicell->setStyle('s', 8);
 $multicell->setStyle('title', 14, null, [102, 0, 0], null, 'h');
 $multicell->setStyle('h1', 16, null, null, null, 'h');
 $multicell->setStyle('h2', 14, null, null, null, 'h');

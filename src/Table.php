@@ -599,24 +599,16 @@ class Table
         $tb_align = $this->getTableConfig('TABLE_ALIGN');
 
         //set the table align
-        switch ($tb_align) {
-            case 'C':
-                $this->tableStartX = $this->pdf->lMargin +
-                    $this->getTableConfig('TABLE_LEFT_MARGIN') +
-                    ($this->pageWidth() - $this->getWidth()) / 2;
-                break;
-            case 'R':
-                $this->tableStartX = $this->pdf->lMargin +
-                    $this->getTableConfig('TABLE_LEFT_MARGIN') +
-                    ($this->pageWidth() - $this->getWidth());
-                break;
-            case 'L':
-                $this->tableStartX = $this->pdf->lMargin + $this->getTableConfig('TABLE_LEFT_MARGIN');
-                break;
-            default:
-                $this->tableStartX = $this->pdf->getX();
-                break;
-        }
+        $this->tableStartX = match ($tb_align) {
+            'C' => $this->pdf->lMargin +
+                $this->getTableConfig('TABLE_LEFT_MARGIN') +
+                ($this->pageWidth() - $this->getWidth()) / 2,
+            'R' => $this->pdf->lMargin +
+                $this->getTableConfig('TABLE_LEFT_MARGIN') +
+                ($this->pageWidth() - $this->getWidth()),
+            'L' => $this->pdf->lMargin + $this->getTableConfig('TABLE_LEFT_MARGIN'),
+            default => $this->pdf->getX(),
+        };
     }
 
 
@@ -768,15 +760,10 @@ class Table
      */
     protected function applyDefaultValues(array $aData, string $sDataType): array
     {
-        switch ($sDataType) {
-            case 'header':
-                $aReference = $this->configuration['HEADER'];
-                break;
-
-            default:
-                $aReference = $this->configuration['ROW'];
-                break;
-        }
+        $aReference = match ($sDataType) {
+            'header' => $this->configuration['HEADER'],
+            default => $this->configuration['ROW'],
+        };
 
         return array_merge($aReference, $aData);
     }
@@ -790,13 +777,10 @@ class Table
      */
     protected function getDefaultValues(string $sDataType): array
     {
-        switch ($sDataType) {
-            case 'header':
-                return $this->configuration['HEADER'];
-
-            default:
-                return $this->configuration['ROW'];
-        }
+        return match ($sDataType) {
+            'header' => $this->configuration['HEADER'],
+            default => $this->configuration['ROW'],
+        };
     }
 
 

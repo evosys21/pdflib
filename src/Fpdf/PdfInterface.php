@@ -238,7 +238,7 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
     {
         $this->textColor = $color;
 
-        if (is_string($color) && strpos($color, self::RAW) === 0) {
+        if (is_string($color) && str_starts_with($color, self::RAW)) {
             $this->pdf->TextColor = substr($color, strlen(self::RAW));
             $this->pdf->ColorFlag = ($this->pdf->FillColor != $this->pdf->TextColor);
             return $this;
@@ -257,7 +257,7 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
     public function setDrawColor($color): self
     {
         $this->backupDrawColor = $this->pdf->DrawColor;
-        if (is_string($color) && strpos($color, self::RAW) === 0) {
+        if (is_string($color) && str_starts_with($color, self::RAW)) {
             $this->pdf->DrawColor = substr($color, strlen(self::RAW));
             return $this;
         }

@@ -215,7 +215,7 @@ class Multicell
             $this->pdf->Error("Empty TAG Name.");
         }
 
-        $inherit = strval($inherit);
+        $inherit = $inherit;
 
         //use case insensitive tags
         $tag = trim(strtoupper($tag));
@@ -427,7 +427,7 @@ class Multicell
             $fontSize = $this->getTagSize($tag);
         }
 
-        if (strpos($fontSize, '%') !== false) {
+        if (str_contains($fontSize, '%')) {
             $fontSize = $this->pdf->FontSizePt * (((float)$fontSize) / 100);
         }
 
@@ -518,7 +518,7 @@ class Multicell
             }
 
             $isParagraph = false;
-            if (($s == "\t") && (strpos($tag, 'pparg') !== false)) {
+            if (($s == "\t") && (str_contains($tag, 'pparg'))) {
                 $isParagraph = true;
                 $s = "\t"; //place instead a TAB
             }

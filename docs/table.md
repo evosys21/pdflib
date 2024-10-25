@@ -175,7 +175,7 @@ $table = new Table($pdf, 'path/to/my-table.config.php');
 
 If `PDF_TABLE_CONFIG_PATH` value is defined, then the `table.config.php` is being looked up in that folder too.
 
-The values specified in this file are used by default. The configuration file content looks like the following and it
+The values specified in this file are used by default. The configuration file content looks like the following, and it
 contains all the values that you can specify for a header/row.
 
 ```php

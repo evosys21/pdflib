@@ -1,6 +1,11 @@
 <?php
+/** @noinspection PhpUndefinedMethodInspection */
+/** @noinspection PhpUndefinedFieldInspection */
 
 namespace EvoSys21\PdfLib\Table\Cell;
+
+use TCPDF_IMAGES;
+use TCPDF_STATIC;
 
 /**
  * Pdf Table Cell SVG Image
@@ -9,7 +14,7 @@ class ImageSVG extends Image
 {
     public function isImageSVG($file): bool
     {
-        return \TCPDF_IMAGES::getImageFileType($file) == 'svg';
+        return TCPDF_IMAGES::getImageFileType($file) == 'svg';
     }
 
     public function setImage($file = '', $width = 0, $height = 0, $type = '', $link = '')
@@ -33,7 +38,7 @@ class ImageSVG extends Image
 
     private function getImageParamsSVG($file, $w = 0, $h = 0)
     {
-        $svgData = \TCPDF_STATIC::fileGetContents($file);
+        $svgData = TCPDF_STATIC::fileGetContents($file);
 
         if ($svgData === false) {
             $this->pdf->Error('SVG file not found: ' . $file);
@@ -90,17 +95,17 @@ class ImageSVG extends Image
         $y = $this->pdf->GetY() + $this->getBorderSize();
 
         //Horizontal Alignment
-        if (strpos($this->alignment, 'J') !== false) {
+        if (str_contains($this->alignment, 'J')) {
             //justified - image is fully stretched
 
             //var_dump($this->getCellDrawWidth());
 
             $x += $this->PADDING_LEFT;
             $this->setContentWidth($this->getCellDrawWidth() - 2 * $this->getBorderSize() - $this->getPaddingLeft() - $this->getPaddingRight());
-        } elseif (strpos($this->alignment, 'C') !== false) {
+        } elseif (str_contains($this->alignment, 'C')) {
             //center
             $x += ($this->getCellDrawWidth() - $this->getContentWidth()) / 2;
-        } elseif (strpos($this->alignment, 'R') !== false) {
+        } elseif (str_contains($this->alignment, 'R')) {
             //right
             $x += $this->getCellDrawWidth() - $this->getContentWidth() - $this->getPaddingRight();
         } else {
@@ -109,10 +114,10 @@ class ImageSVG extends Image
         }
 
         //Vertical Alignment
-        if (strpos($this->alignment, 'T') !== false) {
+        if (str_contains($this->alignment, 'T')) {
             //top
             $y += $this->getPaddingTop();
-        } elseif (strpos($this->alignment, 'B') !== false) {
+        } elseif (str_contains($this->alignment, 'B')) {
             //bottom
             $y += $this->getCellDrawHeight() - $this->getContentHeight() - $this->getPaddingBottom();
         } else {

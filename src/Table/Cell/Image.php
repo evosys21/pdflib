@@ -126,14 +126,14 @@ class Image extends CellAbstract implements CellInterface
         $y = $this->pdf->GetY() + $this->getBorderSize();
 
         //Horizontal Alignment
-        if (strpos($this->alignment, 'J') !== false) {
+        if (str_contains($this->alignment, 'J')) {
             //justified - image is fully stretched
             $x += $this->getPaddingLeft();
             $this->setContentWidth($this->getCellDrawWidth() - 2 * $this->getBorderSize() - $this->getPaddingLeft() - $this->getPaddingRight());
-        } elseif (strpos($this->alignment, 'C') !== false) {
+        } elseif (str_contains($this->alignment, 'C')) {
             //center
             $x += ($this->getCellDrawWidth() - $this->getContentWidth()) / 2;
-        } elseif (strpos($this->alignment, 'R') !== false) {
+        } elseif (str_contains($this->alignment, 'R')) {
             //right
             $x += $this->getCellDrawWidth() - $this->getContentWidth() - $this->getPaddingRight();
         } else {
@@ -142,10 +142,10 @@ class Image extends CellAbstract implements CellInterface
         }
 
         //Vertical Alignment
-        if (strpos($this->alignment, 'T') !== false) {
+        if (str_contains($this->alignment, 'T')) {
             //top
             $y += $this->getPaddingTop();
-        } elseif (strpos($this->alignment, 'B') !== false) {
+        } elseif (str_contains($this->alignment, 'B')) {
             //bottom
             $y += $this->getCellDrawHeight() - $this->getContentHeight() - $this->getPaddingBottom();
         } else {

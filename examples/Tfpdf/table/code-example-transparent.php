@@ -3,6 +3,8 @@
 use EvoSys21\PdfLib\Examples\Tfpdf\MyPdf;
 use EvoSys21\PdfLib\Table;
 use EvoSys21\PdfLib\Examples\Tfpdf\PdfSettings;
+use EvoSys21\PdfLib\Table\Cell\Image;
+use EvoSys21\PdfLib\Table\Cell\Multicell;
 
 if (!isset($pdf)) {
     $pdf = new MyPdf();
@@ -65,8 +67,8 @@ $table->addRow($row);
 $row = [];
 
 //alternatively you can create directly the cell object
-$row[0] = new \EvoSys21\PdfLib\Table\Cell\Image($pdf, CONTENT_PATH . '/images/blog.jpg', 10);
-$row[1] = new \EvoSys21\PdfLib\Table\Cell\Multicell($pdf, "<p>This is another <b>Multicell</b></p>");
+$row[0] = new Image($pdf, CONTENT_PATH . '/images/blog.jpg', 10);
+$row[1] = new Multicell($pdf, "<p>This is another <b>Multicell</b></p>");
 $row[2]['TEXT'] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='https://github.com/evosys21/pdflib'>https://github.com/evosys21/pdflib</bi></p>";
 $row[2]['BACKGROUND_COLOR'] = PdfSettings::$colors[1];
 

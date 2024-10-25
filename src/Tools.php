@@ -142,18 +142,12 @@ class Tools
     public static function getCellAlign($align): string
     {
         $align = strtoupper($align);
-        switch ($align) {
-            case 'L':
-            case 'LEFT':
-                return 'L';
-            case 'R':
-            case 'RIGHT':
-                return 'R';
-            case 'C':
-            case 'CENTER':
-                return 'C';
-        }
-        return $align;
+        return match ($align) {
+            'L', 'LEFT' => 'L',
+            'R', 'RIGHT' => 'R',
+            'C', 'CENTER' => 'C',
+            default => $align,
+        };
     }
 
     /**

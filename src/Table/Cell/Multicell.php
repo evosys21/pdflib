@@ -337,19 +337,12 @@ class Multicell extends CellAbstract implements CellInterface
             return;
         }
 
-        switch ($vAlign) {
-            case 'T':
-                $wh_T = $wh_Top; //Top width
-                break;
-            case 'M':
-                $wh_T = $wh_Top + $vh / 2;
-                break;
-            case 'B':
-                $wh_T = $wh_Top + $vh;
-                break;
-            default: //default is TOP ALIGN
-                $wh_T = $wh_Top; //Top width
-        }
+        $wh_T = match ($vAlign) {
+            'T' => $wh_Top,
+            'M' => $wh_Top + $vh / 2,
+            'B' => $wh_Top + $vh,
+            default => $wh_Top,
+        };
 
         $multicellData = new MulticellData($this->pdf);
         $multicellData->width = $w;
