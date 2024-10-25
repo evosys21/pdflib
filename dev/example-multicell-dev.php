@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Pdf Advanced Multicell - Example
  */
@@ -67,7 +68,7 @@ $multicell->setStyle('super', null, null, 8);
 
 $s = "The price is <b nowrap='1'>USD 5.344,23</b>";
 $s1 = "The price is <b>USD 5.344,23</b>";
-foreach ([40, 45, 50] as $width){
+foreach ([40, 45, 50] as $width) {
     $multicell->multiCell($width, 5, $s, 0, 'L');
     $multicell->multiCell($width, 5, $s1, 0, 'L');
     $pdf->ln(5);

@@ -1,4 +1,5 @@
 <?php
+
 namespace EvoSys21\PdfLib\String;
 
 /**
@@ -7,7 +8,6 @@ namespace EvoSys21\PdfLib\String;
  */
 class Tags
 {
-
     /**
      * Contains the Tag/String Correspondence
      *
@@ -187,7 +187,6 @@ class Tags
         $params = '';
 
         foreach ($reg as $val) {
-
             if ($val == '') {
                 continue;
             }

@@ -3,6 +3,7 @@
 use EvoSys21\PdfLib\Table;
 use EvoSys21\PdfLib\Examples\Fpdf\MyPdf;
 use EvoSys21\PdfLib\Examples\Fpdf\PdfSettings;
+use EvoSys21\PdfLib\Table\Cell\Image;
 
 if (!isset($pdf)) {
     $pdf = new MyPdf();
@@ -49,13 +50,13 @@ $table->addRow($row);
 $row = [];
 
 //alternatively you can create directly the cell object
-$row[0] = new \EvoSys21\PdfLib\Table\Cell\Image($pdf, CONTENT_PATH . '/images/blog.jpg', 10);
+$row[0] = new Image($pdf, CONTENT_PATH . '/images/blog.jpg', 10);
 $row[1] = array(
     'TEXT' => "<p>This is another <b>Multicell</b></p>",
     'BACKGROUND_COLOR' => PdfSettings::$colors[0]
 );
 
-$row[2] = new \EvoSys21\PdfLib\Table\Cell\Image($pdf, CONTENT_PATH . '/images/pensil.jpg', 10);
+$row[2] = new Image($pdf, CONTENT_PATH . '/images/pencil.jpg', 10);
 $row[2]->setAlign("R");
 
 //add the data row

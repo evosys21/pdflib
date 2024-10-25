@@ -1,4 +1,5 @@
 <?php
+
 /** @noinspection PhpUnused */
 
 namespace EvoSys21\PdfLib\Examples\Tcpdf;
@@ -24,7 +25,9 @@ class MyPdf extends Pdf
      */
     public function Header()
     {
-        if (!$this->showHeader) return;
+        if (!$this->showHeader) {
+            return;
+        }
 
         $this->SetY(10);
 
@@ -64,7 +67,9 @@ class MyPdf extends Pdf
     {
         $this->drawMargins && $this->drawMarginLines();
 
-        if (!$this->showFooter) return;
+        if (!$this->showFooter) {
+            return;
+        }
 
         $this->SetY(-10);
         $this->SetFont('helvetica', 'I', 7);
@@ -126,10 +131,8 @@ class MyPdf extends Pdf
             if (!empty($this->creator)) {
                 $this->_out('/Creator ' . $this->_textstring($this->creator));
             }
-            return parent::_putinfo();
-        } else {
-            return parent::_putinfo();
         }
+        return parent::_putinfo();
     }
 
     protected function _textstring($s, $n = 0)
@@ -154,16 +157,14 @@ class MyPdf extends Pdf
 
     /**
      * @param $s
-     * @return int|void
+     * @return void
      */
     public function _out($s)
     {
         if (static::isTesting()) {
             $s = static::_testReplace($s);
-            parent::_out($s);
-        } else {
-            parent::_out($s);
         }
+        parent::_out($s);
     }
 
     protected static function isTesting(): bool

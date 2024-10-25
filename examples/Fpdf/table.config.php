@@ -1,5 +1,7 @@
 <?php
+
 /** @noinspection DuplicatedCode */
+
 /**
  * Default configuration values for the PDF Advanced table
  */
@@ -56,4 +58,3 @@ return [
         'PADDING_BOTTOM' => 1,
     ],
 ];
-

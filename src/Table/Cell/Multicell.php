@@ -7,20 +7,23 @@ use EvoSys21\PdfLib\MulticellData;
 
 /**
  * Pdf Table Cell Multicell\Table\Cell
- * @property mixed|array TEXT_STRLINES
- * @property mixed|null TEXT_ALIGN
- * @property mixed|null LINE_SIZE
- * @property mixed|null TEXT_SIZE
- * @property mixed|null TEXT_TYPE
- * @property mixed|null TEXT_FONT
- * @property mixed|null TEXT_COLOR
- * @property int|null nLines
- * @property string TEXT
- * @property float|int V_OFFSET
+ * @property string|array $TEXT_STRLINES
+ * @property string|null $TEXT_ALIGN
+ * @property string|int $LINE_SIZE
+ * @property string|int $TEXT_SIZE
+ * @property string $TEXT_TYPE
+ * @property string $TEXT_FONT
+ * @property string|array $TEXT_COLOR
+ * @property int|null $nLines
+ * @property string $TEXT
+ * @property float|int $V_OFFSET
+ * @property string|int $PADDING_LEFT
+ * @property string|int $PADDING_TOP
+ * @property string|int $PADDING_RIGHT
+ * @property string|int $PADDING_BOTTOM
  */
 class Multicell extends CellAbstract implements CellInterface
 {
-
     /**
      *
      * @var \EvoSys21\PdfLib\Multicell
@@ -320,8 +323,7 @@ class Multicell extends CellAbstract implements CellInterface
         $pad_top = 0,
         $pad_right = 0,
         $pad_bottom = 0
-    )
-    {
+    ) {
         $wh_Top = 0;
 
         if ($vtop > 0) { //if this parameter is set
@@ -335,19 +337,11 @@ class Multicell extends CellAbstract implements CellInterface
             return;
         }
 
-        switch ($vAlign) {
-            case 'T':
-                $wh_T = $wh_Top; //Top width
-                break;
-            case 'M':
-                $wh_T = $wh_Top + $vh / 2;
-                break;
-            case 'B':
-                $wh_T = $wh_Top + $vh;
-                break;
-            default: //default is TOP ALIGN
-                $wh_T = $wh_Top; //Top width
-        }
+        $wh_T = match ($vAlign) {
+            'M' => $wh_Top + $vh / 2,
+            'B' => $wh_Top + $vh,
+            default => $wh_Top,
+        };
 
         $multicellData = new MulticellData($this->pdf);
         $multicellData->width = $w;

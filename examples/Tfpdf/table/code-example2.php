@@ -55,7 +55,7 @@ $row[1] = array(
     'BACKGROUND_COLOR' => PdfSettings::$colors[0]
 );
 
-$row[2] = new Table\Cell\Image($pdf, CONTENT_PATH . '/images/pensil.jpg', 10);
+$row[2] = new Table\Cell\Image($pdf, CONTENT_PATH . '/images/pencil.jpg', 10);
 $row[2]->setAlign("R");
 
 //add the data row

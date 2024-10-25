@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Pdf Advanced Multicell - Example
  */
@@ -33,7 +34,7 @@ $multicell->setStyle('i', null, 'I');
 $multicell->setStyle('bi', null, 'BI');
 $multicell->setStyle('u', null, 'U');
 $multicell->setStyle('h', null, 'B', '203,0,48');
-$multicell->setStyle('s', 8, null);
+$multicell->setStyle('s', 8);
 $multicell->setStyle('title', 14, null, [102, 0, 0], null, 'h');
 $multicell->setStyle('h1', 16, null, null, null, 'h');
 $multicell->setStyle('h2', 14, null, null, null, 'h');
@@ -117,7 +118,7 @@ $pdf->AddPage();
 $multicell->multiCell(0, 10, "<title>No wrap:</title> text will not break on normal separators");
 
 $s = "The price is <b nowrap='1'>USD 5.344,23</b>";
-foreach ([40, 45, 50] as $width){
+foreach ([40, 45, 50] as $width) {
     $multicell->multiCell($width, 5, $s, 1, 'L');
     $pdf->ln(5);
 }

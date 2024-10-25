@@ -1,4 +1,5 @@
 <?php
+
 namespace EvoSys21\PdfLib\Tests\Unit;
 
 use EvoSys21\PdfLib\Multicell;
@@ -29,4 +30,3 @@ class MulticellTest extends TestCase
         $this->assertSame('B', $multicell->getTagFontStyle('b'));
     }
 }
-

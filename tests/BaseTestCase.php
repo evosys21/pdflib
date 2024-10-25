@@ -16,9 +16,9 @@ class BaseTestCase extends TestCase
     /**
      * Returns the pdf object
      *
-     * @return Pdf
+     * @return object
      */
-    protected function getPdfObject()
+    protected function getPdfObject(): object
     {
         //create the pdf object and do some initialization
         $pdf = new Pdf();
@@ -50,7 +50,7 @@ class BaseTestCase extends TestCase
             }
         }
 
-        if (TestUtils::isDebug()){
+        if (TestUtils::isDebug()) {
             $this->assertSame(file_get_contents($pdfExpected), file_get_contents($pdfGenerated), $message);
         }
         $this->assertSame($shaExpected, $shaGenerated, $message);

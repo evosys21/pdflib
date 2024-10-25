@@ -2,14 +2,11 @@
 
 namespace EvoSys21\PdfLib\Tests\Utils;
 
-use EvoSys21\PdfLib\Fpdf\Pdf;
 use EvoSys21\PdfLib\Examples\Tfpdf\PdfFactory;
 use Symfony\Component\Process\Process;
 
-
 class Helper
 {
-
     /**
      * Returns the pdf object
      *
@@ -32,7 +29,7 @@ class Helper
     }
 
     /**
-     * @param Object $pdf
+     * @param object $pdf
      */
     public static function setFontStyle1(object $pdf): void
     {

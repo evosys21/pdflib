@@ -1,4 +1,5 @@
 <?php
+
 /** @noinspection SpellCheckingInspection */
 
 namespace EvoSys21\PdfLib\Tcpdf;

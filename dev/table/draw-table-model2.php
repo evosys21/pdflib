@@ -104,9 +104,6 @@ for ($i = 1; $i < 10; $i++) {
             $row[0]['ROWSPAN'] = 2;
             $row[0]['TEXT'] = $sDefaultLongText;
             break;
-
-        case 10:
-            break;
     }
 
     $table->addRow($row);

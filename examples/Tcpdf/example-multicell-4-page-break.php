@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Pdf Advanced Multicell - Example
  */
@@ -26,7 +27,7 @@ for ($i = 0; $i < 100; $i++) {
 $txt .= '</p>';
 
 //create an advanced multicell
-$multicell->multiCell(0, 5, $txt, 1, 'J', 1, 0, 0, 0, 0);
+$multicell->multiCell(0, 5, $txt, 1, 'J', 1);
 
 $pdf->Ln(10); // new line
 

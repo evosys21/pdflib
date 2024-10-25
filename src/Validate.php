@@ -1,4 +1,5 @@
 <?php
+
 namespace EvoSys21\PdfLib;
 
 /**
@@ -6,7 +7,6 @@ namespace EvoSys21\PdfLib;
  */
 class Validate
 {
-
     /**
      * Returns a positive(>0) integer value
      *

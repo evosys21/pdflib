@@ -75,4 +75,3 @@ class DevFactory
         return $table;
     }
 }
-

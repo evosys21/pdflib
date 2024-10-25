@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Default configuration values for the PDF Advanced table
  */

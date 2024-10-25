@@ -1,5 +1,7 @@
 <?php
+/** @noinspection PhpComposerExtensionStubsInspection */
 /** @noinspection PhpUnused */
+
 namespace EvoSys21\PdfLib;
 
 /**
@@ -64,7 +66,7 @@ class Tools
      * Get the next value from the array
      *
      * @param array $data
-     * @param number $index
+     * @param null|number $index
      * @return mixed
      */
     public static function getNextValue(array $data, &$index)
@@ -140,18 +142,12 @@ class Tools
     public static function getCellAlign($align): string
     {
         $align = strtoupper($align);
-        switch ($align) {
-            case 'L':
-            case 'LEFT':
-                return 'L';
-            case 'R':
-            case 'RIGHT':
-                return 'R';
-            case 'C':
-            case 'CENTER':
-                return 'C';
-        }
-        return $align;
+        return match ($align) {
+            'L', 'LEFT' => 'L',
+            'R', 'RIGHT' => 'R',
+            'C', 'CENTER' => 'C',
+            default => $align,
+        };
     }
 
     /**
@@ -233,13 +229,13 @@ class Tools
     {
         $values = str_replace('#', '', $hex_color);
         switch (strlen($values)) {
-            case 3;
+            case 3:
                 list($r, $g, $b) = sscanf($values, "%1s%1s%1s");
                 if (ctype_xdigit($r) && ctype_xdigit($g) && ctype_xdigit($b)) {
                     return [hexdec("$r$r"), hexdec("$g$g"), hexdec("$b$b")];
                 }
                 break;
-            case 6;
+            case 6:
                 return array_map('hexdec', sscanf($values, "%2s%2s%2s"));
         }
 

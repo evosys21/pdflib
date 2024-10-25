@@ -1,5 +1,7 @@
 <?php
+/** @noinspection PhpUnhandledExceptionInspection */
 /** @noinspection PhpUnused */
+
 namespace EvoSys21\PdfLib;
 
 use EvoSys21\PdfLib\Fpdf\Pdf as Fpdf;
@@ -256,26 +258,20 @@ class Table
 
     /**
      * Pdf Object
-     *
-     * @var Pdf
-     *
+     * @var object
      */
-    protected $pdf = null;
+    protected object $pdf;
 
     /**
      * PDF Interface Object
-     *
-     * @var PdfInterface
-     *
+     * @var object
      */
-    protected $pdfi;
+    protected object $pdfi;
 
     /**
      * Contains the Singleton Object
-     *
-     * @var object
      */
-    private static $singleton = []; //implements the Singleton Pattern
+    private static array $singleton = []; //implements the Singleton Pattern
 
 
     /**
@@ -387,7 +383,9 @@ class Table
         $this->headerOnCurrentPage = false;
 
         foreach ($configuration as $key => $value) {
-            if (!in_array($key, ['TABLE', 'HEADER', 'ROW'])) continue;
+            if (!in_array($key, ['TABLE', 'HEADER', 'ROW'])) {
+                continue;
+            }
             $this->configuration[$key] = array_merge($this->configuration[$key], $value);
         }
 
@@ -601,24 +599,16 @@ class Table
         $tb_align = $this->getTableConfig('TABLE_ALIGN');
 
         //set the table align
-        switch ($tb_align) {
-            case 'C':
-                $this->tableStartX = $this->pdf->lMargin +
-                    $this->getTableConfig('TABLE_LEFT_MARGIN') +
-                    ($this->pageWidth() - $this->getWidth()) / 2;
-                break;
-            case 'R':
-                $this->tableStartX = $this->pdf->lMargin +
-                    $this->getTableConfig('TABLE_LEFT_MARGIN') +
-                    ($this->pageWidth() - $this->getWidth());
-                break;
-            case 'L':
-                $this->tableStartX = $this->pdf->lMargin + $this->getTableConfig('TABLE_LEFT_MARGIN');
-                break;
-            default:
-                $this->tableStartX = $this->pdf->getX();
-                break;
-        }
+        $this->tableStartX = match ($tb_align) {
+            'C' => $this->pdf->lMargin +
+                $this->getTableConfig('TABLE_LEFT_MARGIN') +
+                ($this->pageWidth() - $this->getWidth()) / 2,
+            'R' => $this->pdf->lMargin +
+                $this->getTableConfig('TABLE_LEFT_MARGIN') +
+                ($this->pageWidth() - $this->getWidth()),
+            'L' => $this->pdf->lMargin + $this->getTableConfig('TABLE_LEFT_MARGIN'),
+            default => $this->pdf->getX(),
+        };
     }
 
 
@@ -770,15 +760,10 @@ class Table
      */
     protected function applyDefaultValues(array $aData, string $sDataType): array
     {
-        switch ($sDataType) {
-            case 'header':
-                $aReference = $this->configuration['HEADER'];
-                break;
-
-            default:
-                $aReference = $this->configuration['ROW'];
-                break;
-        }
+        $aReference = match ($sDataType) {
+            'header' => $this->configuration['HEADER'],
+            default => $this->configuration['ROW'],
+        };
 
         return array_merge($aReference, $aData);
     }
@@ -792,13 +777,10 @@ class Table
      */
     protected function getDefaultValues(string $sDataType): array
     {
-        switch ($sDataType) {
-            case 'header':
-                return $this->configuration['HEADER'];
-
-            default:
-                return $this->configuration['ROW'];
-        }
+        return match ($sDataType) {
+            'header' => $this->configuration['HEADER'],
+            default => $this->configuration['ROW'],
+        };
     }
 
 
@@ -998,10 +980,11 @@ class Table
         for ($ix = $iStartIndex; $ix < $count; $ix++) {
             $val = &$aRefCache[$ix];
 
-            if (!in_array($val['DATATYPE'], array(
+            if (
+                !in_array($val['DATATYPE'], array(
                 'data',
                 'header'
-            ))
+                ))
             ) {
                 continue;
             }
@@ -1189,9 +1172,9 @@ class Table
                 //use this switch for flow control
                 switch (1) {
                     case 1:
-
                         //SITUATION 1:
-                        if ($isHeader or
+                        if (
+                            $isHeader or
                             (!$headerOnPage and !$this->dataOnCurrentPage and !$this->tableSplit and ($iLastDataKey > 0))
                         ) {
                             $count = $this->insertNewPage(
@@ -1813,7 +1796,7 @@ class Table
      *
      * @return Object|null
      */
-    public function getPdfObject(): ?Object
+    public function getPdfObject(): ?object
     {
         return $this->pdf;
     }

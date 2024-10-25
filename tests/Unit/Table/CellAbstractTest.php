@@ -1,4 +1,6 @@
 <?php
+/** @noinspection PhpUnhandledExceptionInspection */
+
 namespace EvoSys21\PdfLib\Tests\Unit\Table;
 
 use EvoSys21\PdfLib\Factory;
@@ -60,13 +62,6 @@ class CellAbstractTest extends BaseTestCase
         $this->doTestFloatGT0('setCellHeight', 'getCellHeight');
     }
 
-
-//    public function testRowSpan() {
-//
-//        $this->doTestPositiveInteger( 'setRowSpan', 'getRowSpan' );
-//
-//    }
-
     public function testAlignVertical()
     {
         $pdf = $this->getPdfObject();
@@ -115,32 +110,6 @@ class CellAbstractTest extends BaseTestCase
             $this->assertEquals($get[3], $o->getPaddingLeft());
         }
     }
-
-
-//    public function testBackgroundColor() {
-//
-//        $this->doTestColor( 'setBackgroundColor', 'getBackgroundColor' );
-//
-//    }
-//
-//    public function testBorderColor() {
-//
-//        $this->doTestColor( 'setBorderColor', 'getBorderColor' );
-//
-//    }
-//
-//    public function testBorderSize() {
-//
-//        $this->doTestFloatGT0( 'setBorderSize', 'getBorderSize' );
-//
-//    }
-//
-//    public function testBorderType() {
-//
-//        $this->doTestAnyValue( 'setBorderType', 'getBorderType' );
-//
-//    }
-
 
     public function testSetColSpan1()
     {
@@ -283,7 +252,6 @@ class CellAbstractTest extends BaseTestCase
         error_reporting(0);
 
         $this->assertEquals(null, $mock->TEST2);
-
         error_reporting($error_level);
     }
 

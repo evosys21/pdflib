@@ -12,33 +12,6 @@ class GenericTest extends BaseExamplesTestCase
 {
     use ProviderTrait;
 
-    protected function runTestModelSimple($require, $name): void
-    {
-        $pdf = $this->getPdfObject1();
-
-        require $require;
-
-        $sResultFile = TEST_PATH . '/data/' . $name . '.pdf';
-
-        if (getenv('RESULT_WRITE')) {
-            $sPdfFile = $sResultFile;
-        } else {
-            $sPdfFile = tempnam(sys_get_temp_dir(), 'pdf_test');
-        }
-
-        //send the pdf to the browser
-        $pdf->saveToFile($sPdfFile);
-
-        $this->assertTrue(file_exists($sPdfFile));
-
-        // $this->assertFileEquals($sPdfFile, $sResultFile);
-        $this->assertComparePdf($sPdfFile, $sResultFile, "FAILED: " . basename($sResultFile) . " / $require");
-
-        if (!getenv('RESULT_WRITE')) {
-            unlink($sPdfFile);
-        }
-    }
-
     /**
      * @dataProvider codeSnippetsProvider
      */

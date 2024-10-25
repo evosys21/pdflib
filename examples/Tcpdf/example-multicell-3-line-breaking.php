@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Pdf Advanced Multicell - Example
  */
@@ -21,20 +22,20 @@ PdfSettings::setMulticellStyles($multicell);
 $txt = 'This is a demo of <b>NON BREAKING > S P>A C E EXAMPLE</b>';
 
 //create an advanced multicell
-$multicell->multiCell(0, 5, 'Default line breaking characters:  ,.:;', 0);
+$multicell->multiCell(0, 5, 'Default line breaking characters:  ,.:;');
 $multicell->multiCell(100, 5, $txt, 1, 'R', 0, 0, 1);
 $pdf->Ln(10); //new line
 
 
 //create an advanced multicell
-$multicell->multiCell(0, 5, 'Setting > as line breaking character', 0);
+$multicell->multiCell(0, 5, 'Setting > as line breaking character');
 $multicell->setLineBreakingCharacters('>');
 $multicell->multiCell(100, 5, $txt, 1);
 $pdf->Ln(10); //new line
 
 
 //create an advanced multicell
-$multicell->multiCell(0, 5, 'Reseting the line breaking characters', 0);
+$multicell->multiCell(0, 5, 'Reseting the line breaking characters');
 $multicell->resetLineBreakingCharacters();
 $multicell->multiCell(100, 5, $txt, 1);
 $pdf->Ln(10); //new line

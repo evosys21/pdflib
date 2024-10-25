@@ -1,5 +1,7 @@
 <?php
+
 /** @noinspection PhpUnused */
+
 /** @noinspection PhpMissingParamTypeInspection */
 /** @noinspection PhpUnhandledExceptionInspection */
 /** @noinspection PhpDocMissingThrowsInspection */
@@ -9,6 +11,7 @@ namespace EvoSys21\PdfLib\Tcpdf;
 use EvoSys21\PdfLib\AbstractPdfUtils;
 use EvoSys21\PdfLib\PdfInterfaceDef;
 use EvoSys21\PdfLib\Tools;
+use TCPDF_FONTS;
 
 /**
  * Pdf Class Interface
@@ -16,8 +19,7 @@ use EvoSys21\PdfLib\Tools;
  */
 class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
 {
-
-    const RAW = '__RAW__';
+    public const RAW = '__RAW__';
 
     /**
      * Pointer to the pdf object
@@ -108,7 +110,7 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
      */
     public function stringToArray($str)
     {
-        return \TCPDF_FONTS::UTF8StringToArray($str, $this->pdf->isunicode, $this->pdf->CurrentFont);
+        return TCPDF_FONTS::UTF8StringToArray($str, $this->pdf->isunicode, $this->pdf->CurrentFont);
     }
 
 
@@ -245,7 +247,7 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
     {
         $this->textColor = $color;
 
-        if (is_string($color) && strpos($color, self::RAW) === 0) {
+        if (is_string($color) && str_starts_with($color, self::RAW)) {
             $this->pdf->TextColor = substr($color, strlen(self::RAW));
             $this->pdf->ColorFlag = ($this->pdf->FillColor != $this->pdf->TextColor);
             return $this;
@@ -264,7 +266,7 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
     public function setDrawColor($color): self
     {
         $this->backupDrawColor = $this->pdf->DrawColor;
-        if (is_string($color) && strpos($color, self::RAW) === 0) {
+        if (is_string($color) && str_starts_with($color, self::RAW)) {
             $this->pdf->DrawColor = substr($color, strlen(self::RAW));
             return $this;
         }
@@ -315,10 +317,9 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
         }
     }
 
-    
+
     public function strlen(string $s): int
     {
         return mb_strlen($s);
     }
-
 }

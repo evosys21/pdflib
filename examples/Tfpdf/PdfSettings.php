@@ -1,4 +1,5 @@
 <?php
+
 /** @noinspection PhpUnused */
 
 namespace EvoSys21\PdfLib\Examples\Tfpdf;
@@ -12,7 +13,6 @@ if (!defined('__DIR__')) {
 
 class PdfSettings
 {
-
     public static $colors = [
         [234, 255, 218],
         [165, 250, 220],
@@ -114,11 +114,11 @@ class PdfSettings
         $multicell->setStyle('u8', null, '', [0, 45, 179], 'dejavusans');
         $multicell->setStyle('u8b', null, 'B', null, null, 'u8');
     }
-    
-    
+
+
     /**
      * Set the styles for the advanced table
-     * 
+     *
      * @param Table $table
      */
     public static function setTableStyles(Table $table)

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Pdf Advanced Table - Example
  */
