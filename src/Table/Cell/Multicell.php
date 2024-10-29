@@ -226,7 +226,7 @@ class Multicell extends CellAbstract implements CellInterface
 
     public function getText(): string
     {
-        return $this->TEXT;
+        return $this->TEXT ?? '';
     }
 
 
