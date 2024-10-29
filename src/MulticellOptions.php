@@ -14,6 +14,8 @@ class MulticellOptions
 {
     public $styles = [];
     public $spacers = [];
+
+    public bool $disablePageBreak = false;
     protected $stylesBackup = null;
 
     /**

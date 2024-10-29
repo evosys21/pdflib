@@ -1,0 +1,139 @@
+%PDF-1.3
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/Contents 4 0 R>>
+endobj
+4 0 obj
+<</Length 917>>
+stream
+2 J
+0.57 w
+BT /F1 11.00 Tf ET
+0.996 1.000 0.961 rg
+56.69 785.20 283.46 -8.50 re f 56.69 785.20 m 56.69 776.69 l S 56.69 785.20 m 340.16 785.20 l S 340.16 785.20 m 340.16 776.69 l S 
+56.69 776.69 283.46 -14.17 re f 
+3.145 Tw
+q 0.510 0.000 0.118 rg BT 65.20 766.31 Td (Lorem ipsum dolor sit amet, consectetur adipiscing) Tj ET Q
+56.69 776.69 m 56.69 762.52 l S 340.16 776.69 m 340.16 762.52 l S 
+56.69 762.52 283.46 -14.17 re f 
+2.966 Tw
+q 0.510 0.000 0.118 rg BT 65.20 752.13 Td (elit, sed do eiusmod tempor incididunt ut labore et) Tj ET Q
+56.69 762.52 m 56.69 748.35 l S 340.16 762.52 m 340.16 748.35 l S 
+56.69 748.35 283.46 -14.17 re f 
+0 Tw
+q 0.510 0.000 0.118 rg BT 65.20 737.96 Td (dolore magna aliqua.) Tj ET Q
+56.69 748.35 m 56.69 734.17 l S 340.16 748.35 m 340.16 734.17 l S 
+56.69 734.17 283.46 -90.71 re f 56.69 734.17 m 56.69 643.46 l S 340.16 734.17 m 340.16 643.46 l S 56.69 643.46 m 340.16 643.46 l S 
+
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R ]
+/Count 1
+/MediaBox [0 0 595.28 841.89]
+>>
+endobj
+5 0 obj
+<</Length 675>>
+stream
+/CIDInit /ProcSet findresource begin
+12 dict begin
+begincmap
+/CIDSystemInfo
+<</Registry (Adobe)
+/Ordering (UCS)
+/Supplement 0
+>> def
+/CMapName /Adobe-Identity-UCS def
+/CMapType 2 def
+1 begincodespacerange
+<00> <FF>
+endcodespacerange
+6 beginbfrange
+<00> <7F> <0000>
+<86> <87> <2020>
+<91> <92> <2018>
+<93> <94> <201C>
+<96> <97> <2013>
+<A0> <FF> <00A0>
+endbfrange
+19 beginbfchar
+<80> <20AC>
+<82> <201A>
+<83> <0192>
+<84> <201E>
+<85> <2026>
+<88> <02C6>
+<89> <2030>
+<8A> <0160>
+<8B> <2039>
+<8C> <0152>
+<8E> <017D>
+<95> <2022>
+<98> <02DC>
+<99> <2122>
+<9A> <0161>
+<9B> <203A>
+<9C> <0153>
+<9E> <017E>
+<9F> <0178>
+endbfchar
+endcmap
+CMapName currentdict /CMap defineresource pop
+end
+end
+endstream
+endobj
+6 0 obj
+<</Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/ToUnicode 5 0 R
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 6 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+7 0 obj
+<<
+/Producer (FPDF - UNIT-TEST)
+/CreationDate (D:20240101010000)
+>>
+endobj
+8 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000001053 00000 n 
+0000001977 00000 n 
+0000000009 00000 n 
+0000000087 00000 n 
+0000001140 00000 n 
+0000001864 00000 n 
+0000002081 00000 n 
+0000002164 00000 n 
+trailer
+<<
+/Size 9
+/Root 8 0 R
+/Info 7 0 R
+>>
+startxref
+2213
+%%EOF

@@ -36,6 +36,8 @@ trait ProviderTrait
             'test-multicell-shrinking.php',
             'test-multicell-shrinking2.php',
             'test-multicell-style.php',
+            'test-multicell-disable-pagebreak.php',
+            'test-multicell-min-height.php',
         ];
 
         $contexts = [

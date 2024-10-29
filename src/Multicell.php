@@ -759,7 +759,8 @@ class Multicell
         float $paddingLeft = 0,
         float $paddingTop = 0,
         float $paddingRight = 0,
-        float $paddingBottom = 0
+        float $paddingBottom = 0,
+	    float $minHeight = 0
     ) {
         $this->multicellData = new MulticellData($this->pdf);
         $this->multicellData->width = $width;
@@ -784,6 +785,15 @@ class Multicell
         $lines = $this->stringToLines($this->multicellData);
         $iCounter = 9999; //avoid infinite loop for any reasons
 
+        $linesCount = count($lines);
+        $cellHeight = $height * $linesCount + $paddingTop + $paddingBottom;
+
+        if ($cellHeight < $minHeight) {
+            $diff = $minHeight - $cellHeight;
+            $paddingBottom += $diff;
+            $this->multicellData->paddingBottom = $paddingBottom;
+        }
+
         $doBreak = false;
 
         do {
@@ -791,18 +801,20 @@ class Multicell
             $addPage = false;
 
             //Number of rows that have space on this page:
-            $iRows = floor($iLeftHeight / $height);
+            $rows = floor($iLeftHeight / $height);
             // Added check for 'AcceptPageBreak'
-            if (count($lines) > $iRows && $this->pdf->AcceptPageBreak()) {
-                $printLines = array_slice($lines, 0, $iRows);
-                $lines = array_slice($lines, $iRows);
+            if (count($lines) > $rows && $this->pdf->AcceptPageBreak() && !$this->options->disablePageBreak) {
+                $printLines = array_slice($lines, 0, $rows);
+                $lines = array_slice($lines, $rows);
                 $addPage = true;
             } else {
                 $printLines = &$lines;
                 $doBreak = true;
             }
 
-            $this->multiCellSec($this->multicellData, $printLines);
+            if (!is_null($this->multicellData)) {
+                $this->multiCellSec($this->multicellData, $printLines);
+            }
 
             if ($addPage) {
                 $this->beforeAddPage();
@@ -1443,4 +1455,11 @@ class Multicell
         $this->options->spacers = [];
         return $this;
     }
+
+    public function disablePageBreak(bool $disablePageBreak = true): self
+    {
+        $this->options->disablePageBreak = $disablePageBreak;
+        return $this;
+    }
+
 }
