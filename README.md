@@ -27,6 +27,8 @@
 `evosys21/pdflib` is a collection of PHP classes facilitating developers to create [Advanced Multicells](#advanced-multicell) and [Tables](#advanced-table) in [FPDF](http://www.fpdf.org), [TCPDF](https://github.com/tecnickcom/TCPDF), or
 [tFPDF](http://fpdf.org/en/script/script92.php).
 
+**This repository is the continuation of the PDF Addons previously hosted on https://www.interpid.eu**
+
 ## Advanced Multicell
 
 This addon class allows the creation of an **Advanced Multicell for FPDF/TCPDF/tFPDF**, which uses as input a TAG-based formatted

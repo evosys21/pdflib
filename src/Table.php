@@ -412,7 +412,7 @@ class Table
      *
      * @param $columnWidths array|null the width of columns, example: 50, 40, 40, 20
      */
-    public function setColumnsWidths(array $columnWidths = null)
+    public function setColumnsWidths(array|null $columnWidths = null)
     {
         if (is_array($columnWidths)) {
             $this->columnWidths = $columnWidths;

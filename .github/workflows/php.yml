@@ -21,7 +21,7 @@ jobs:
 
     strategy:
       matrix:
-        php-version: ['8.0', '8.1', '8.2', '8.3'] # Add the PHP versions you want to test
+        php-version: ['8.0', '8.1', '8.2', '8.3', '8.4'] # Add the PHP versions you want to test
 
     steps:
       - uses: actions/checkout@v4
@@ -45,7 +45,7 @@ jobs:
             ${{ runner.os }}-php-
 
       - name: Install dependencies
-        run: composer install --prefer-dist --no-progress
+        run: composer update --prefer-dist --no-progress
 
       - name: Run Tests
         run: ./vendor/bin/phpunit
