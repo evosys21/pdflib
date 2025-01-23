@@ -9,7 +9,7 @@ $factory = new DevFactory();
 $multicell = $factory->multicell();
 $pdf = $multicell->getPdfObject();
 
-$txt = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+$txt = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 
 $pdf->AutoPageBreak = false;
 $multicell->disablePageBreak();

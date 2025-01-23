@@ -3,7 +3,6 @@
 /**
  * Pdf Advanced Table - Example
  */
-
 require_once __DIR__ . '/../autoload.php';
 
 use EvoSys21\PdfLib\Fpdf\Pdf;
@@ -51,7 +50,7 @@ $row = [
     'I am cell 2',
     [
         'TEXT' => 'I am cell 3',
-        'TEXT_ALIGN' => 'R'
+        'TEXT_ALIGN' => 'R',
     ],
 ];
 
@@ -69,7 +68,7 @@ $row = [
 
 //$table->addPageBreak();
 
-$row = [[    'TEXT' => "Cell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\n", 'HEIGHT' => 60, 'PADDING_TOP' => 20]];
+$row = [['TEXT' => "Cell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\nCell\n", 'HEIGHT' => 60, 'PADDING_TOP' => 20]];
 
 $table->addRow($row);
 

@@ -12,7 +12,7 @@ $factory = new DevFactory();
 $multicell = $factory->multicell();
 $pdf = $multicell->getPdfObject();
 
-$txt = <<<EOL
+$txt = <<<'EOL'
 <code>
 <span style="color: #0000BB; font-size: 12px">&lt;?php<br /></span>
 <span style="color: #FF8000">/**<br />&nbsp;*&nbsp;Pdf&nbsp;Advanced&nbsp;Multicell&nbsp;-&nbsp;Example<br /></span>
