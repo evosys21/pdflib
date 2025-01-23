@@ -2,7 +2,7 @@
 
 use EvoSys21\PdfLib\Table;
 
-if (!isset($splitMode)) {
+if (! isset($splitMode)) {
     $splitMode = true;
 }
 
@@ -33,7 +33,7 @@ $header = [];
 
 //Table Header
 for ($i = 0; $i < $columns; $i++) {
-    $header[$i]['TEXT'] = "Header #" . ($i + 1);
+    $header[$i]['TEXT'] = 'Header #' . ($i + 1);
 }
 
 $header1 = $header;
@@ -47,10 +47,10 @@ $header[2]['ROWSPAN'] = 2;
 $table->addHeader($header);
 $table->addHeader($header1);
 
-$sDefaultText = "Lorem ipsum;, dolor sit amet";
+$sDefaultText = 'Lorem ipsum;, dolor sit amet';
 $sDefaultText2 = "<p>Some Line</p>\n<b>Some text</b>";
-$sDefaultLongText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-$sDefaultLongText2 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur";
+$sDefaultLongText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+$sDefaultLongText2 = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur';
 
 $aDefaultRow = [];
 for ($i = 0; $i < $columns; $i++) {
