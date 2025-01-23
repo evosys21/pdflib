@@ -4,11 +4,12 @@
 
 namespace EvoSys21\PdfLib\Examples\Tfpdf;
 
-use EvoSys21\PdfLib\Tfpdf\Pdf;
 use EvoSys21\PdfLib\Multicell;
+use EvoSys21\PdfLib\Tfpdf\Pdf;
 
 /**
  * Custom PDF class extension for Header and Footer Definitions
+ *
  * @SuppressWarnings(PHPMD.CamelCaseMethodName)
  * @SuppressWarnings(PHPMD.Superglobals)
  * phpcs:disable PSR1.Methods.CamelCapsMethodName.NotCamelCaps
@@ -20,12 +21,14 @@ class MyPdf extends Pdf
 
     /**
      * Custom Header
+     *
      * @SuppressWarnings(PHPMD.CamelCaseMethodName)
+     *
      * @see Pdf::Header()
      */
     public function Header()
     {
-        if (!$this->showHeader) {
+        if (! $this->showHeader) {
             return;
         }
 
@@ -57,7 +60,6 @@ class MyPdf extends Pdf
         $this->SetY($this->tMargin);
     }
 
-
     /**
      * Custom Footer
      *
@@ -67,7 +69,7 @@ class MyPdf extends Pdf
     {
         $this->drawMargins && $this->drawMarginLines();
 
-        if (!$this->showFooter) {
+        if (! $this->showFooter) {
             return;
         }
 
@@ -79,8 +81,6 @@ class MyPdf extends Pdf
 
     /**
      * Returns the default Font to be used
-     *
-     * @return string
      */
     public function getDefaultFont(): string
     {
@@ -105,7 +105,6 @@ class MyPdf extends Pdf
         $this->Line($this->w - $this->rMargin, 0, $this->w - $this->rMargin, $this->h);
     }
 
-
     /**
      * Disable the Producer and CreationDate. It breaks the functional unit-testing(date always changes)
      * phpcs:disable PSR2.Methods.MethodDeclaration.Underscore
@@ -125,16 +124,16 @@ class MyPdf extends Pdf
 
     protected static function isTesting(): bool
     {
-        return (getenv('APP_ENV') === 'testing');
+        return getenv('APP_ENV') === 'testing';
     }
 
     /**
-     * @param string $headerSource
      * @return $this
      */
     public function setHeaderSource(string $headerSource): self
     {
         $this->headerSource = $headerSource;
+
         return $this;
     }
 }

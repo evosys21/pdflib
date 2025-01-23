@@ -1,11 +1,11 @@
 <?php
 
-use EvoSys21\PdfLib\Table;
 use EvoSys21\PdfLib\Examples\Fpdf\MyPdf;
 use EvoSys21\PdfLib\Examples\Fpdf\PdfSettings;
+use EvoSys21\PdfLib\Table;
 use EvoSys21\PdfLib\Table\Cell\Image;
 
-if (!isset($pdf)) {
+if (! isset($pdf)) {
     $pdf = new MyPdf();
 }
 
@@ -20,13 +20,12 @@ $columns = 3;
 /**
  * Set the tag styles
  */
-
 $table->initialize([20, 30, 80]);
 
 $header = [
     ['TEXT' => 'Header #1'],
     ['TEXT' => 'Header #2'],
-    ['TEXT' => 'Header #3']
+    ['TEXT' => 'Header #3'],
 ];
 
 //add the header row
@@ -36,7 +35,7 @@ $imageCell = PdfSettings::$imageCell;
 
 //row 1 - add data as Array
 $row = [];
-$row[0]['TEXT'] = "Line <b>1</b>";
+$row[0]['TEXT'] = 'Line <b>1</b>';
 
 $row[1] = PdfSettings::$imageCell;
 
@@ -51,13 +50,13 @@ $row = [];
 
 //alternatively you can create directly the cell object
 $row[0] = new Image($pdf, CONTENT_PATH . '/images/blog.jpg', 10);
-$row[1] = array(
-    'TEXT' => "<p>This is another <b>Multicell</b></p>",
-    'BACKGROUND_COLOR' => PdfSettings::$colors[0]
-);
+$row[1] = [
+    'TEXT' => '<p>This is another <b>Multicell</b></p>',
+    'BACKGROUND_COLOR' => PdfSettings::$colors[0],
+];
 
 $row[2] = new Image($pdf, CONTENT_PATH . '/images/pencil.jpg', 10);
-$row[2]->setAlign("R");
+$row[2]->setAlign('R');
 
 //add the data row
 $table->addRow($row);

@@ -3,12 +3,11 @@
 /**
  * Pdf Advanced Multicell - Example
  */
-
 require_once __DIR__ . '/autoload.php';
 
-use EvoSys21\PdfLib\Multicell;
 use EvoSys21\PdfLib\Examples\Tcpdf\PdfFactory;
 use EvoSys21\PdfLib\Examples\Tcpdf\PdfSettings;
+use EvoSys21\PdfLib\Multicell;
 
 //get the PDF object
 $pdf = PdfFactory::newPdf('multicell');
@@ -26,7 +25,6 @@ $title = file_get_contents(CONTENT_PATH . '/multicell-title.txt');
 $multicell->multiCell(0, 5, $title, 1, 'J', 1, 3, 3, 3, 3);
 
 $pdf->Ln(10); //line break
-
 
 //read TAG formatted text from file
 $txt = file_get_contents(CONTENT_PATH . '/multicell.txt');

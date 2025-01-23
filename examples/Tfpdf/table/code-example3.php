@@ -4,7 +4,7 @@ use EvoSys21\PdfLib\Examples\Tfpdf\MyPdf;
 use EvoSys21\PdfLib\Examples\Tfpdf\PdfSettings;
 use EvoSys21\PdfLib\Table;
 
-if (!isset($pdf)) {
+if (! isset($pdf)) {
     $pdf = new MyPdf();
 }
 
@@ -21,7 +21,6 @@ $nColumns = 5;
 /**
  * Set the tag styles
  */
-
 $table->initialize([20, 30, 40, 50]);
 
 $header1 = PdfSettings::headerRow();
@@ -31,14 +30,13 @@ $header1[2]['COLSPAN'] = 2;
 $header2 = PdfSettings::headerRow();
 $header3 = PdfSettings::headerRow();
 
-$header2[1]['TEXT'] = "Colspan/Rowspan in Header";
+$header2[1]['TEXT'] = 'Colspan/Rowspan in Header';
 $header2[1]['COLSPAN'] = 2;
 $header2[1]['ROWSPAN'] = 2;
 
 $table->addHeader($header1);
 $table->addHeader($header2);
 $table->addHeader($header3);
-
 
 for ($i = 0; $i < 8; $i++) {
     $row = PdfSettings::dataRow();
@@ -67,7 +65,6 @@ for ($i = 0; $i < 8; $i++) {
         $row[1]['COLSPAN'] = 2;
         $row[1]['ROWSPAN'] = 2;
     }
-
 
     $table->addRow($row);
 }
