@@ -3,7 +3,6 @@
 /**
  * Pdf Advanced Multicell - Example
  */
-
 require_once __DIR__ . '/../autoload.php';
 
 //get the PDF object

@@ -3,13 +3,12 @@
 /**
  * Pdf Advanced Table - Example
  */
-
 require_once __DIR__ . '/autoload.php';
 
-use EvoSys21\PdfLib\Multicell;
-use EvoSys21\PdfLib\Table;
 use EvoSys21\PdfLib\Examples\Tcpdf\PdfFactory;
 use EvoSys21\PdfLib\Examples\Tcpdf\PdfSettings;
+use EvoSys21\PdfLib\Multicell;
+use EvoSys21\PdfLib\Table;
 
 //get the PDF object
 $pdf = PdfFactory::newPdf('table');
@@ -34,7 +33,6 @@ $table = new Table($pdf);
 // Set the styles for the advanced table
 PdfSettings::setTableStyles($table);
 
-
 //default text color
 $pdf->SetTextColor(118, 0, 3);
 
@@ -43,10 +41,10 @@ $multicell = Multicell::getInstance($pdf);
 $multicell->setStyle('s1', 8, '', '118,0,3', 'helvetica');
 $multicell->setStyle('s2', 6, '', '0,49,159', 'helvetica');
 
-$multicell->multiCell(100, 4, "<s1>Example 1 - Very Simple Table</s1>");
+$multicell->multiCell(100, 4, '<s1>Example 1 - Very Simple Table</s1>');
 $pdf->Ln(1);
 
-require('table_example1.php');
+require 'table_example1.php';
 
 $pdf->Ln(10);
 
@@ -55,7 +53,7 @@ $txt = "<s1>Example 2 - More detailed Table</s1>\n<s2>\t- Table Align = Center\n
 $pdf->SetX(60);
 $multicell->multiCell(100, 2.5, $txt);
 $pdf->Ln(1);
-require('table_example2.php');
+require 'table_example2.php';
 
 $pdf->Ln(10);
 
@@ -65,7 +63,7 @@ $pdf->SetXY(60, 215);
 $multicell->multiCell(100, 2.5, $txt);
 $pdf->Ln(1);
 $tableSplitMode = true;
-require('table_example2.php');
+require 'table_example2.php';
 
 $pdf->Ln(10);
 
@@ -75,7 +73,7 @@ $pdf->SetXY(60, 215);
 $multicell->multiCell(100, 2.5, $txt);
 $pdf->Ln(1);
 $tableSplitMode = false;
-require('table_example2.php');
+require 'table_example2.php';
 
 //send the pdf to the browser
 $pdf->Output();

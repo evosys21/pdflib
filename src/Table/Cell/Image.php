@@ -27,16 +27,10 @@ class Image extends CellAbstract implements CellInterface
      */
     protected $alignment = 'MC';
 
-
     /**
      * Image cell constructor
      *
      * @param Pdf|PdfInterface $pdf
-     * @param string $file
-     * @param int $width
-     * @param int $height
-     * @param string $type
-     * @param string $link
      */
     public function __construct($pdf, string $file = '', int $width = 0, int $height = 0, string $type = '', string $link = '')
     {
@@ -47,12 +41,10 @@ class Image extends CellAbstract implements CellInterface
         }
     }
 
-
     public function setProperties(array $values = []): CellInterface
     {
         //call the parent function
         parent::setProperties($values);
-
 
         $this->setImage(
             Tools::getValue($values, 'FILE'),
@@ -65,7 +57,6 @@ class Image extends CellAbstract implements CellInterface
         return $this;
     }
 
-
     public function setImage($file = '', $width = 0, $height = 0, $type = '', $link = '')
     {
         $this->file = $file;
@@ -75,12 +66,11 @@ class Image extends CellAbstract implements CellInterface
         //check if file exists etc...
         $this->doChecks();
 
-        list($width, $height) = $this->pdfi->getImageParams($file, $width, $height);
+        [$width, $height] = $this->pdfi->getImageParams($file, $width, $height);
 
         $this->setContentWidth($width);
         $this->setContentHeight($height);
     }
-
 
     /**
      * Set image alignment.
@@ -88,7 +78,6 @@ class Image extends CellAbstract implements CellInterface
      * Vertical values: TBM
      * Horizontal values: LRC
      *
-     * @param string $alignment
      * @todo: check if this function is REALLY used
      */
     public function setAlign(string $alignment)
@@ -96,24 +85,20 @@ class Image extends CellAbstract implements CellInterface
         $this->alignment = strtoupper($alignment);
     }
 
-
     public function isSplittable(): bool
     {
         return false;
     }
-
 
     public function getType(): string
     {
         return $this->type;
     }
 
-
     public function getLink(): string
     {
         return $this->link;
     }
-
 
     /**
      * Renders the image in the pdf Object
@@ -168,7 +153,6 @@ class Image extends CellAbstract implements CellInterface
         );
     }
 
-
     /**
      * Checks if the image file is set and it is accessible
      */
@@ -176,14 +160,13 @@ class Image extends CellAbstract implements CellInterface
     {
         //check if the image is set
         if (0 == strlen($this->file)) {
-            trigger_error("Image File not set!", E_USER_ERROR);
+            trigger_error('Image File not set!', E_USER_ERROR);
         }
 
-        if (!file_exists($this->file)) {
+        if (! file_exists($this->file)) {
             trigger_error("Image File Not found: $this->file!", E_USER_ERROR);
         }
     }
-
 
     public function processContent()
     {

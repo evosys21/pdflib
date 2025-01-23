@@ -9,9 +9,9 @@ $factory = new DevFactory();
 $multicell = $factory->multicell();
 $pdf = $multicell->getPdfObject();
 
-$short = "Lorem ipsum dolor sit amet";
+$short = 'Lorem ipsum dolor sit amet';
 
-$txt = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+$txt = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 
 foreach (range(5, 0) as $key => $padding) {
     if ($key) {

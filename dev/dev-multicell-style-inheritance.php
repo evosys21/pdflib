@@ -3,7 +3,6 @@
 /**
  * Pdf Advanced Multicell - Example
  */
-
 require_once __DIR__ . '/../autoload.php';
 
 use EvoSys21\PdfLib\Fpdf\Pdf;
@@ -23,7 +22,6 @@ $pdf->SetFillColor(254, 255, 245);
 
 // add a page
 $pdf->AddPage();
-
 
 // Create the Advanced Multicell Object and inject the PDF object
 $multicell = new Multicell($pdf);

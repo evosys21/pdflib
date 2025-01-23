@@ -4,11 +4,12 @@
 
 namespace EvoSys21\PdfLib\Examples\Tcpdf;
 
-use EvoSys21\PdfLib\Tcpdf\Pdf;
 use EvoSys21\PdfLib\Multicell;
+use EvoSys21\PdfLib\Tcpdf\Pdf;
 
 /**
  * Custom PDF class extension for Header and Footer Definitions
+ *
  * @SuppressWarnings(PHPMD.CamelCaseMethodName)
  * @SuppressWarnings(PHPMD.Superglobals)
  * phpcs:disable PSR1.Methods.CamelCapsMethodName.NotCamelCaps
@@ -25,7 +26,7 @@ class MyPdf extends Pdf
      */
     public function Header()
     {
-        if (!$this->showHeader) {
+        if (! $this->showHeader) {
             return;
         }
 
@@ -57,7 +58,6 @@ class MyPdf extends Pdf
         $this->SetY($this->tMargin);
     }
 
-
     /**
      * Custom Footer
      *
@@ -67,7 +67,7 @@ class MyPdf extends Pdf
     {
         $this->drawMargins && $this->drawMarginLines();
 
-        if (!$this->showFooter) {
+        if (! $this->showFooter) {
             return;
         }
 
@@ -79,8 +79,6 @@ class MyPdf extends Pdf
 
     /**
      * Returns the default Font to be used
-     *
-     * @return string
      */
     public function getDefaultFont(): string
     {
@@ -105,7 +103,6 @@ class MyPdf extends Pdf
         $this->Line($this->w - $this->rMargin, 0, $this->w - $this->rMargin, $this->h);
     }
 
-
     /**
      * Disable the Producer and CreationDate. It breaks the functional unit-testing(date always changes)
      * phpcs:disable PSR2.Methods.MethodDeclaration.Underscore
@@ -116,35 +113,36 @@ class MyPdf extends Pdf
             $this->file_id = '1234567890';
             $this->tcpdf_version = 'x.x.x';
 
-            if (!empty($this->title)) {
+            if (! empty($this->title)) {
                 $this->_out('/Title ' . $this->_textstring($this->title));
             }
-            if (!empty($this->subject)) {
+            if (! empty($this->subject)) {
                 $this->_out('/Subject ' . $this->_textstring($this->subject));
             }
-            if (!empty($this->author)) {
+            if (! empty($this->author)) {
                 $this->_out('/Author ' . $this->_textstring($this->author));
             }
-            if (!empty($this->keywords)) {
+            if (! empty($this->keywords)) {
                 $this->_out('/Keywords ' . $this->_textstring($this->keywords));
             }
-            if (!empty($this->creator)) {
+            if (! empty($this->creator)) {
                 $this->_out('/Creator ' . $this->_textstring($this->creator));
             }
         }
+
         return parent::_putinfo();
     }
 
     protected function _textstring($s, $n = 0)
     {
         $s = static::_testReplace($s);
+
         return parent::_textstring($s, $n);
     }
 
     /**
      * Static function to replace the TCPDF version in the unit-testing.
      *
-     * @param $s
      * @return string|string[]|null
      */
     protected static function _testReplace($s)
@@ -152,11 +150,11 @@ class MyPdf extends Pdf
         if (static::isTesting()) {
             $s = preg_replace("/TCPDF \d+\.\d+\.\d+ /", 'TCPDF x.x.x ', $s);
         }
+
         return $s;
     }
 
     /**
-     * @param $s
      * @return void
      */
     public function _out($s)
@@ -169,16 +167,16 @@ class MyPdf extends Pdf
 
     protected static function isTesting(): bool
     {
-        return (getenv('APP_ENV') === 'testing');
+        return getenv('APP_ENV') === 'testing';
     }
 
     /**
-     * @param string $headerSource
      * @return $this
      */
     public function setHeaderSource(string $headerSource): self
     {
         $this->headerSource = $headerSource;
+
         return $this;
     }
 }

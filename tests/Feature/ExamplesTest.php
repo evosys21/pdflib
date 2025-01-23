@@ -5,7 +5,7 @@ namespace EvoSys21\PdfLib\Tests\Feature;
 use EvoSys21\PdfLib\Tests\BaseExamplesTestCase;
 
 /**
-  * @covers \EvoSys21\PdfLib\Multicell
+ * @covers \EvoSys21\PdfLib\Multicell
  * @covers \EvoSys21\PdfLib\MulticellOptions
  * @covers \EvoSys21\PdfLib\Table
  */

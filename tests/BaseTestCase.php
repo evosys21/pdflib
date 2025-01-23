@@ -2,8 +2,8 @@
 
 namespace EvoSys21\PdfLib\Tests;
 
-use EvoSys21\PdfLib\Fpdf\Pdf;
 use EvoSys21\PdfLib\Examples\Fpdf\PdfFactory;
+use EvoSys21\PdfLib\Fpdf\Pdf;
 use EvoSys21\PdfLib\Tests\Utils\Helper;
 use EvoSys21\PdfLib\Tests\Utils\TestUtils;
 use PHPUnit\Framework\TestCase;
@@ -15,8 +15,6 @@ class BaseTestCase extends TestCase
 {
     /**
      * Returns the pdf object
-     *
-     * @return object
      */
     protected function getPdfObject(): object
     {
@@ -32,7 +30,7 @@ class BaseTestCase extends TestCase
 
     public function assertComparePdf($pdfExpected, $pdfGenerated, $message): void
     {
-        if (!file_exists($pdfExpected)) {
+        if (! file_exists($pdfExpected)) {
             TestUtils::toFile($pdfExpected, $pdfGenerated, true);
         }
 
@@ -40,7 +38,7 @@ class BaseTestCase extends TestCase
         $shaExpected = is_readable($pdfExpected) ? sha1_file($pdfExpected) : null;
 
         $basename = basename($pdfExpected);
-        $coreName = substr($basename, 0, strrpos($basename, "."));
+        $coreName = substr($basename, 0, strrpos($basename, '.'));
 
         if (($shaExpected !== $shaGenerated) && getenv('TRACK_FAILED')) {
             $pdf = TestUtils::failPath($pdfExpected);

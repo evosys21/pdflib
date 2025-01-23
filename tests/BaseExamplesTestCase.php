@@ -30,7 +30,7 @@ class BaseExamplesTestCase extends BaseTestCase
         TestUtils::toFile($expected, $content);
 
         $this->assertTrue(file_exists($generated), $require);
-        $this->assertComparePdf($expected, $generated, "FAILED: " . basename($expected) . " / $require");
+        $this->assertComparePdf($expected, $generated, 'FAILED: ' . basename($expected) . " / $require");
     }
 
     protected function runTestPdf($pdf, $expected, $message): void
@@ -44,6 +44,6 @@ class BaseExamplesTestCase extends BaseTestCase
         TestUtils::toFile($expected, $generated);
 
         $this->assertTrue(file_exists($generated), $message);
-        $this->assertComparePdf($expected, $generated, "FAILED: " . basename($expected) . " / $message");
+        $this->assertComparePdf($expected, $generated, 'FAILED: ' . basename($expected) . " / $message");
     }
 }

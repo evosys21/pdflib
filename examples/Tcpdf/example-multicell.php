@@ -3,11 +3,10 @@
 /**
  * Pdf Advanced Multicell - Example
  */
-
 require_once __DIR__ . '/autoload.php';
 
-use EvoSys21\PdfLib\Tcpdf\Pdf;
 use EvoSys21\PdfLib\Multicell;
+use EvoSys21\PdfLib\Tcpdf\Pdf;
 
 // Pdf extends TCPDF
 $pdf = new Pdf();
@@ -80,7 +79,7 @@ $multicell->multiCell(0, 5, $utf8Text);
 
 $pdf->ln(10);
 
-$s = <<<HEREDOC
+$s = <<<'HEREDOC'
 <title>Typography:</title>
 
 <h1>Heading 1</h1>
@@ -93,9 +92,9 @@ $multicell->multiCell(0, 7, $s);
 
 $pdf->ln(10);
 
-$multicell->multiCell(0, 10, "<title>Table of Content:</title>");
+$multicell->multiCell(0, 10, '<title>Table of Content:</title>');
 
-$s = <<<HEREDOC
+$s = <<<'HEREDOC'
 <p width='10'> </p><p> - Paragraph 1</p>
 <p width='10'> </p><p> - Paragraph 2</p>
 <p width='20'> </p><p> - Paragraph 2.1</p>
@@ -105,9 +104,9 @@ HEREDOC;
 $multicell->multiCell(0, 5, $s);
 
 $pdf->ln(10);
-$multicell->multiCell(0, 10, "<title>Tag width and alignment:</title>");
+$multicell->multiCell(0, 10, '<title>Tag width and alignment:</title>');
 
-$s = <<<HEREDOC
+$s = <<<'HEREDOC'
 <p width="100" align="left"> Align Left </p>
 <p width="100" align="center"> Align Center </p>
 <p width="100" align="right"> Align Right </p>
@@ -115,7 +114,7 @@ HEREDOC;
 $multicell->multiCell(100, 5, $s, 1, '', 1);
 
 $pdf->AddPage();
-$multicell->multiCell(0, 10, "<title>No wrap:</title> text will not break on normal separators");
+$multicell->multiCell(0, 10, '<title>No wrap:</title> text will not break on normal separators');
 
 $s = "The price is <b nowrap='1'>USD 5.344,23</b>";
 foreach ([40, 45, 50] as $width) {

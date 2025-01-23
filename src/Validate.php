@@ -9,9 +9,6 @@ class Validate
 {
     /**
      * Returns a positive(>0) integer value
-     *
-     * @param $value
-     * @return int
      */
     public static function intPositive($value): int
     {
@@ -23,7 +20,6 @@ class Validate
         return $value;
     }
 
-
     /**
      * Returns a float value.
      * If min and max are specified, then $value will have to be between $min and $max
@@ -31,7 +27,6 @@ class Validate
      * @param mixed $value
      * @param int|float|null $min
      * @param int|float|null $max
-     * @return float
      */
     public static function float($value, $min = null, $max = null): float
     {
@@ -54,12 +49,8 @@ class Validate
         return $value;
     }
 
-
     /**
      * Validates the align Vertical value
-     *
-     * @param $value
-     * @return string
      */
     public static function alignVertical($value): string
     {
@@ -67,7 +58,7 @@ class Validate
 
         $aValid = ['T', 'B', 'M'];
 
-        if (!in_array($value, $aValid)) {
+        if (! in_array($value, $aValid)) {
             return 'M';
         }
 

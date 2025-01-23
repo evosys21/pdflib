@@ -1,11 +1,11 @@
 <?php
 
 use EvoSys21\PdfLib\Examples\Tcpdf\MyPdf;
+use EvoSys21\PdfLib\Examples\Tcpdf\PdfSettings;
 use EvoSys21\PdfLib\Table;
 use EvoSys21\PdfLib\Tools;
-use EvoSys21\PdfLib\Examples\Tcpdf\PdfSettings;
 
-if (!isset($pdf)) {
+if (! isset($pdf)) {
     $pdf = new myPdf();
 }
 
@@ -20,7 +20,6 @@ $columns = 5;
 /**
  * Set the tag styles
  */
-
 $table->initialize([20, 30, 40, 50]);
 
 $table->addHeader(PdfSettings::headerRow());
@@ -52,7 +51,6 @@ for ($i = 0; $i < 6; $i++) {
         $row[3] = PdfSettings::$imageCell;
         $row[3]['ALIGN'] = Tools::getNextValue(PdfSettings::$alignments, $k);
     }
-
 
     $table->addRow($row);
 }

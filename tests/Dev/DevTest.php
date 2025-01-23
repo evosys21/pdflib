@@ -11,9 +11,6 @@ class DevTest extends BaseExamplesTestCase
 
     /**
      * @dataProvider examplesProvider
-     * @param string $dir
-     * @param string $file
-     * @return void
      */
     public function testExamples(string $dir, string $file): void
     {

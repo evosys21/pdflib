@@ -14,7 +14,6 @@ use TCPDF;
  * extended and these properties made public.
  *
  * In all subclasses we refer to Pdf class and not TCPDF.
- *
  */
 class Pdf extends TCPDF
 {

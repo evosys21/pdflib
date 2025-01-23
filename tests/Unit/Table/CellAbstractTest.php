@@ -1,10 +1,10 @@
 <?php
+
 /** @noinspection PhpUnhandledExceptionInspection */
 
 namespace EvoSys21\PdfLib\Tests\Unit\Table;
 
 use EvoSys21\PdfLib\Factory;
-use EvoSys21\PdfLib\Fpdf\PdfInterface;
 use EvoSys21\PdfLib\Tests\BaseTestCase;
 
 /**
@@ -93,16 +93,16 @@ class CellAbstractTest extends BaseTestCase
 
         $o = new CellAbstractMock($pdf);
 
-        $values = array(
+        $values = [
             [[0, 0, 0, 0], [0, 0, 0, 0]],
             [[-1, -1, -1, -1], [0, 0, 0, 0]],
             [[1, 1, 1, 1], [1, 1, 1, 1]],
             [[1.123, 1.2321, 1.1234, 1.123412], [1.123, 1.2321, 1.1234, 1.123412]],
             [[-1, 1, -1, 1], [0, 1, 0, 1]],
-        );
+        ];
 
         foreach ($values as $val) {
-            list($set, $get) = $val;
+            [$set, $get] = $val;
             $o->setPadding($set[0], $set[1], $set[2], $set[3]);
             $this->assertEquals($get[0], $o->getPaddingTop());
             $this->assertEquals($get[1], $o->getPaddingRight());
@@ -131,13 +131,12 @@ class CellAbstractTest extends BaseTestCase
         $this->assertEquals($aProps['COLSPAN'], $mock->getColSpan());
     }
 
-
     public function testSetProperties()
     {
         $pdf = $this->getPdfObject();
         $mock = new CellAbstractMock($pdf);
 
-        $aProps = array(
+        $aProps = [
             'ALIGN' => 'R',
             'VERTICAL_ALIGN' => 'T',
             'COLSPAN' => 5,
@@ -147,7 +146,7 @@ class CellAbstractTest extends BaseTestCase
             'BORDER_SIZE' => 2.5,
             'BORDER_COLOR' => [1, 2, 3],
             'BACKGROUND_COLOR' => [5, 6, 7],
-        );
+        ];
 
         $mock->setProperties($aProps);
         //$this->assertEquals($aProps['ALIGN'], $o->getAlignVertical())
@@ -179,15 +178,15 @@ class CellAbstractTest extends BaseTestCase
         $pdf = $this->getPdfObject();
         $mock = new CellAbstractMock($pdf);
 
-        $aProps = array(
+        $aProps = [
             'ALIGN' => 'R',
             'VERTICAL_ALIGN' => 'T',
             'COLSPAN' => 5,
             'ROWSPAN' => 6,
             'BACKGROUND_COLOR' => [5, 6, 7],
-        );
+        ];
 
-        $aDefault = array(
+        $aDefault = [
             'ALIGN' => 'M',
             'VERTICAL_ALIGN' => 'M',
             'COLSPAN' => 1,
@@ -197,8 +196,7 @@ class CellAbstractTest extends BaseTestCase
             'BORDER_SIZE' => 1,
             'BORDER_COLOR' => [2, 2, 2],
             'BACKGROUND_COLOR' => [3, 3, 3],
-        );
-
+        ];
 
         $mock->setProperties($aProps);
         $mock->setDefaultValues($aDefault);
@@ -255,7 +253,6 @@ class CellAbstractTest extends BaseTestCase
         error_reporting($error_level);
     }
 
-
     protected function doTestAnyValue($setter, $getter)
     {
         $pdf = $this->getPdfObject();
@@ -288,7 +285,6 @@ class CellAbstractTest extends BaseTestCase
         $this->assertEquals(2, $mock->$getter());
     }
 
-
     public function testRenderCellLayout()
     {
         $pdf = $this->getPdfObject();
@@ -318,7 +314,7 @@ class CellAbstractTest extends BaseTestCase
         $mock = new CellAbstractMock($pdf);
         $source = new CellAbstractMock($pdf);
 
-        $aProps = array(
+        $aProps = [
             'ALIGN' => 'R',
             'VERTICAL_ALIGN' => 'T',
             'COLSPAN' => 5,
@@ -328,7 +324,7 @@ class CellAbstractTest extends BaseTestCase
             'BORDER_SIZE' => 2.5,
             'BORDER_COLOR' => [1, 2, 3],
             'BACKGROUND_COLOR' => [5, 6, 7],
-        );
+        ];
 
         $source->setProperties($aProps);
         $mock->copyProperties($source);
@@ -353,12 +349,8 @@ class CellAbstractTest extends BaseTestCase
         $mock->processContent();
     }
 
-
     /**
      * Test float Greater Than 0
-     *
-     * @param $setter
-     * @param $getter
      */
     protected function doTestFloatGT0($setter, $getter)
     {
@@ -375,16 +367,12 @@ class CellAbstractTest extends BaseTestCase
         $mock->$setter(0.1);
         $this->assertEquals(0.1, $mock->$getter());
 
-
         $mock->$setter(1);
         $this->assertEquals(1, $mock->$getter());
     }
 
     /**
      * Test float Greater Than 0
-     *
-     * @param $setter
-     * @param $getter
      */
     protected function doTestBoolean($setter, $getter)
     {

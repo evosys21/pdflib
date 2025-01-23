@@ -1,18 +1,18 @@
 <?php
 
 use EvoSys21\PdfLib\Examples\Tcpdf\MyPdf;
-use EvoSys21\PdfLib\Table;
 use EvoSys21\PdfLib\Examples\Tcpdf\PdfSettings;
+use EvoSys21\PdfLib\Table;
 use EvoSys21\PdfLib\Table\Cell\Image;
 use EvoSys21\PdfLib\Table\Cell\Multicell;
 
-if (!isset($pdf)) {
+if (! isset($pdf)) {
     $pdf = new MyPdf();
 }
 
 $y = $pdf->GetY();
 $pdf->SetX(50);
-$pdf->Image(CONTENT_PATH . "/images/sample-pdf.jpg");
+$pdf->Image(CONTENT_PATH . '/images/sample-pdf.jpg');
 
 $pdf->SetY($y);
 
@@ -27,31 +27,29 @@ $columns = 3;
 /**
  * Set the tag styles
  */
-
 $table->initialize([20, 30, 80]);
-$table->setRowConfig(array(
-    'BACKGROUND_COLOR' => false
-));
+$table->setRowConfig([
+    'BACKGROUND_COLOR' => false,
+]);
 
-
-$header = array(
-    array(
-        'TEXT' => 'Header #1'
-    ),
-    array(
-        'TEXT' => 'Header #2'
-    ),
-    array(
-        'TEXT' => 'Header #3'
-    )
-);
+$header = [
+    [
+        'TEXT' => 'Header #1',
+    ],
+    [
+        'TEXT' => 'Header #2',
+    ],
+    [
+        'TEXT' => 'Header #3',
+    ],
+];
 
 //add the header row
 $table->addHeader($header);
 
 //row 1 - add data as Array
 $row = [];
-$row[0]['TEXT'] = "Line <b>1</b>";
+$row[0]['TEXT'] = 'Line <b>1</b>';
 
 $row[1] = PdfSettings::$imageCell;
 
@@ -66,7 +64,7 @@ $row = [];
 
 //alternatively you can create directly the cell object
 $row[0] = new Image($pdf, CONTENT_PATH . '/images/blog.jpg', 10);
-$row[1] = new Multicell($pdf, "<p>This is another <b>Multicell</b></p>");
+$row[1] = new Multicell($pdf, '<p>This is another <b>Multicell</b></p>');
 $row[2]['TEXT'] = "<p>All <b>table cells</b> are fully functional <bi>Advanced Multicells</bi>\nDetails on <bi href='https://github.com/evosys21/pdflib'>https://github.com/evosys21/pdflib</bi></p>";
 $row[2]['BACKGROUND_COLOR'] = PdfSettings::$colors[1];
 

@@ -3,7 +3,6 @@
 /**
  * Pdf Advanced Table - Example
  */
-
 require_once __DIR__ . '/../autoload.php';
 
 use EvoSys21\PdfLib\Fpdf\Pdf;
@@ -52,7 +51,7 @@ $row = [
     'I am cell 2',
     [
         'TEXT' => 'I am cell 3',
-        'TEXT_ALIGN' => 'R'
+        'TEXT_ALIGN' => 'R',
     ],
 ];
 
@@ -64,7 +63,7 @@ $row = [
     'I am cell 2',
     [
         'TEXT' => 'I am cell 3',
-        'TEXT_ALIGN' => 'R'
+        'TEXT_ALIGN' => 'R',
     ],
 ];
 
@@ -74,7 +73,7 @@ $table->addRow($row);
 $row = [
     new Image($pdf, CONTENT_PATH . '/images/blog.jpg', 10),
     "<p><b>Images</b> are supported\n<bi></bi></p>",
-    new Image($pdf, CONTENT_PATH . '/images/telescope.jpg', 35, 35)
+    new Image($pdf, CONTENT_PATH . '/images/telescope.jpg', 35, 35),
 ];
 
 //add the row to the table
@@ -88,7 +87,7 @@ $row = [
         'FILE' => CONTENT_PATH . '/images/telescope.jpg',
         'WIDTH' => 35,
         'HEIGHT' => 35,
-    ]
+    ],
 ];
 
 //add the data row
@@ -98,8 +97,8 @@ $row = [[
     'TEXT' => 'some text',
     'PADDING_TOP' => 0,
     'PADDING_BOTTOM' => 0,
-    'LINE_SIZE' => 42.3
-],[
+    'LINE_SIZE' => 42.3,
+], [
     'PADDING_TOP' => 0,
     'PADDING_BOTTOM' => 0,
     'TEXT' => '<h1>Second Column</h1>',
@@ -110,11 +109,10 @@ $table->addRow($row);
 $row = [[
     'TEXT' => 'some text',
     'PADDING_TOP' => 0,
-    'LINE_SIZE' => 20
+    'LINE_SIZE' => 20,
 ]];
 //add the data row
 $table->addRow($row);
-
 
 $table->close();
 

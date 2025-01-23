@@ -13,8 +13,7 @@ class Arr
     /**
      * Determine whether the given value is array accessible.
      *
-     * @param  mixed  $value
-     * @return bool
+     * @param mixed $value
      */
     public static function accessible($value): bool
     {
@@ -24,9 +23,8 @@ class Arr
     /**
      * Check if an item or items exist in an array using "dot" notation.
      *
-     * @param ArrayAccess|array  $array
-     * @param  string|array  $keys
-     * @return bool
+     * @param ArrayAccess|array $array
+     * @param string|array $keys
      */
     public static function has($array, $keys): bool
     {
@@ -58,9 +56,8 @@ class Arr
     /**
      * Determine if the given key exists in the provided array.
      *
-     * @param ArrayAccess|array  $array
-     * @param  string|int  $key
-     * @return bool
+     * @param ArrayAccess|array $array
+     * @param string|int $key
      */
     public static function exists($array, $key): bool
     {
@@ -74,9 +71,9 @@ class Arr
     /**
      * Get an item from an array using "dot" notation.
      *
-     * @param ArrayAccess|array  $array
-     * @param  string|int|null  $key
-     * @param  mixed  $default
+     * @param ArrayAccess|array $array
+     * @param string|int|null $key
+     * @param mixed $default
      * @return mixed
      */
     public static function get($array, $key, $default = null)
@@ -93,7 +90,7 @@ class Arr
             return $array[$key];
         }
 
-        if (!str_contains($key, '.')) {
+        if (! str_contains($key, '.')) {
             return $array[$key] ?? $default;
         }
 
@@ -111,7 +108,6 @@ class Arr
     /**
      * Returns the first found key value match in the input array
      *
-     * @param array $data
      * @param array|string $keys
      * @param mixed $default Default value
      * @return mixed

@@ -9,7 +9,7 @@ $header = [];
 
 //Table Header
 for ($i = 0; $i < $columns; $i++) {
-    $header[$i]['TEXT'] = "Header #" . ($i + 1);
+    $header[$i]['TEXT'] = 'Header #' . ($i + 1);
 }
 
 $table->addHeader($header);
@@ -56,21 +56,21 @@ for ($j = 1; $j <= 15; $j++) {
     }
 
     if ($j == 7) {
-        $row[1]['TEXT'] = "Top Left Align";
+        $row[1]['TEXT'] = 'Top Left Align';
         $row[1]['VERTICAL_ALIGN'] = 'T';
         $row[1]['TEXT_ALIGN'] = 'L';
 
-        $row[2]['TEXT'] = "Bottom Right Align";
+        $row[2]['TEXT'] = 'Bottom Right Align';
         $row[2]['VERTICAL_ALIGN'] = 'B';
         $row[2]['TEXT_ALIGN'] = 'R';
     }
 
     if ($j == 8) {
-        $row[1]['TEXT'] = "Top Center Align";
+        $row[1]['TEXT'] = 'Top Center Align';
         $row[1]['VERTICAL_ALIGN'] = 'T';
         $row[1]['TEXT_ALIGN'] = 'C';
 
-        $row[2]['TEXT'] = "Bottom Center Align";
+        $row[2]['TEXT'] = 'Bottom Center Align';
         $row[2]['VERTICAL_ALIGN'] = 'B';
         $row[2]['TEXT_ALIGN'] = 'C';
     }
@@ -94,7 +94,7 @@ for ($j = 1; $j <= 15; $j++) {
     }
 
     if ($j == 14) {
-        $row[1]['TEXT'] = "Cell Properties Overwriting Example";
+        $row[1]['TEXT'] = 'Cell Properties Overwriting Example';
         $row[1]['TEXT_FONT'] = 'Times';
         $row[1]['TEXT_SIZE'] = 7;
         $row[1]['TEXT_TYPE'] = 'B';

@@ -7,6 +7,7 @@ use EvoSys21\PdfLib\MulticellData;
 
 /**
  * Pdf Table Cell Multicell\Table\Cell
+ *
  * @property string|array $TEXT_STRLINES
  * @property string|null $TEXT_ALIGN
  * @property string|int $LINE_SIZE
@@ -25,7 +26,6 @@ use EvoSys21\PdfLib\MulticellData;
 class Multicell extends CellAbstract implements CellInterface
 {
     /**
-     *
      * @var \EvoSys21\PdfLib\Multicell
      */
     protected $multicell;
@@ -47,29 +47,26 @@ class Multicell extends CellAbstract implements CellInterface
         }
     }
 
-
     public function getDefaultValues(): array
     {
-        $values = array(
+        $values = [
             'TEXT' => '',
             'TEXT_COLOR' => [0, 0, 0], //text color
             'TEXT_SIZE' => 6, //font size
             'TEXT_FONT' => 'Arial', //font family
             'TEXT_ALIGN' => 'C', //horizontal alignment, possible values: LRC (left, right, center)
             'TEXT_TYPE' => '', //font type
-            'LINE_SIZE' => 4
-        ); //line size for one row
+            'LINE_SIZE' => 4,
+        ]; //line size for one row
 
         return array_merge(parent::getDefaultValues(), $values);
     }
-
 
     /**
      * Alignment - can be any combination of the following values:
      * Vertical values: TBMJ
      * Horizontal values: LRC
      *
-     * @param string $alignment
      * @see CellAbstract::setAlign()
      */
     public function setAlign(string $alignment)
@@ -94,21 +91,19 @@ class Multicell extends CellAbstract implements CellInterface
         }
     }
 
-
     public function attachMulticell($multicell)
     {
         $this->multicell = $multicell;
         $this->multicell->enableFill(false);
     }
 
-
     public function setCellDrawWidth($value): CellInterface
     {
         parent::setCellDrawWidth($value);
         $this->calculateContentWidth();
+
         return $this;
     }
-
 
     public function isSplittable(): bool
     {
@@ -119,13 +114,11 @@ class Multicell extends CellAbstract implements CellInterface
         return true;
     }
 
-
     /**
      * Splits the current cell
      *
      * @param int|float $rowHeight - the Height of the row that contains this cell
      * @param int|float $maxHeight - the Max height available
-     * @return array
      */
     public function split($rowHeight, $maxHeight): array
     {
@@ -214,32 +207,28 @@ class Multicell extends CellAbstract implements CellInterface
         $oCell2->calculateCellHeight();
         //$oCell2->setCellDrawHeight($rowHeight);
 
-
         $this->setCellDrawHeight($maxHeight);
 
-        return array(
+        return [
             $oCell2,
-            $splitHeight
-        );
+            $splitHeight,
+        ];
     }
-
 
     public function getText(): string
     {
         return $this->TEXT ?? '';
     }
 
-
     public function getLineSize()
     {
         return $this->LINE_SIZE;
     }
 
-
     public function processContent()
     {
         //Text Color = TEXT_COLOR
-        list($r, $g, $b) = $this->TEXT_COLOR;
+        [$r, $g, $b] = $this->TEXT_COLOR;
         $this->pdf->SetTextColor($r, $g, $b);
 
         //Set the font, font type and size
@@ -257,7 +246,6 @@ class Multicell extends CellAbstract implements CellInterface
         $this->calculateCellHeight();
     }
 
-
     public function calculateCellHeight()
     {
         $this->nLines = count($this->TEXT_STRLINES);
@@ -266,18 +254,14 @@ class Multicell extends CellAbstract implements CellInterface
         $this->setCellDrawHeight($this->cellHeight);
     }
 
-
-    /**
-     */
     public function calculateContentWidth()
     {
         $this->contentWidth = $this->getCellWidth() - $this->getPaddingLeft() - $this->getPaddingRight();
 
         if ($this->contentWidth < 0) {
-            trigger_error("Cell with negative value. Please check width, padding left and right");
+            trigger_error('Cell with negative value. Please check width, padding left and right');
         }
     }
-
 
     /**
      * Renders the image in the pdf Object at the specified position
@@ -287,7 +271,7 @@ class Multicell extends CellAbstract implements CellInterface
         $this->renderCellLayout();
 
         //Text Color = TEXT_COLOR
-        list($r, $g, $b) = $this->TEXT_COLOR;
+        [$r, $g, $b] = $this->TEXT_COLOR;
         $this->pdf->SetTextColor($r, $g, $b);
 
         //Set the font, font type and size
@@ -309,7 +293,6 @@ class Multicell extends CellAbstract implements CellInterface
             $this->getPaddingBottom()
         );
     }
-
 
     public function multiCellTbl(
         $w,

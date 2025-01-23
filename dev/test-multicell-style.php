@@ -10,8 +10,7 @@ $factory = new DevFactory();
 $multicell = $factory->multicell();
 $pdf = $multicell->getPdfObject();
 
-
-$txt = <<<EOL
+$txt = <<<'EOL'
 <span style="color: #FF8000">More text</span> <span style="color: #0000BB; font-size: 12px">Initial text</span> <span style="color: #FF8000">More text</span>
 EOL;
 

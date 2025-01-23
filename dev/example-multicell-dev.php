@@ -3,7 +3,6 @@
 /**
  * Pdf Advanced Multicell - Example
  */
-
 require_once __DIR__ . '/../autoload.php';
 
 use EvoSys21\PdfLib\Fpdf\Pdf;
@@ -23,7 +22,6 @@ $pdf->SetFillColor(254, 255, 245);
 
 // add a page
 $pdf->AddPage();
-
 
 // Create the Advanced Multicell Object and inject the PDF object
 $multicell = new Multicell($pdf);
@@ -67,7 +65,7 @@ $multicell->setStyle('super', null, null, 8);
 //$pdf->ln(10);
 
 $s = "The price is <b nowrap='1'>USD 5.344,23</b>";
-$s1 = "The price is <b>USD 5.344,23</b>";
+$s1 = 'The price is <b>USD 5.344,23</b>';
 foreach ([40, 45, 50] as $width) {
     $multicell->multiCell($width, 5, $s, 0, 'L');
     $multicell->multiCell($width, 5, $s1, 0, 'L');
@@ -90,7 +88,6 @@ foreach ([40, 45, 50] as $width) {
 //$s = "<p size='100'> ~~~</p> - Paragraph 2
 //<p width='50'>xxx</p><font> - Paragraph 2</font>";
 //$multicell->multiCell(0, 5, $s);
-
 
 // output the pdf
 $pdf->Output();

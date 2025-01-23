@@ -1,4 +1,5 @@
 <?php
+
 /** @noinspection PhpUndefinedMethodInspection */
 /** @noinspection PhpUndefinedFieldInspection */
 
@@ -27,7 +28,7 @@ class ImageSVG extends Image
             //check if file exists etc...
             $this->doChecks();
 
-            list($width, $height) = $this->getImageParamsSVG($file, $width, $height);
+            [$width, $height] = $this->getImageParamsSVG($file, $width, $height);
 
             $this->setContentWidth($width);
             $this->setContentHeight($height);
@@ -49,7 +50,7 @@ class ImageSVG extends Image
         $regs = [];
         // get original image width and height
         preg_match('/<svg([^\>]*)>/i', $svgData, $regs);
-        if (isset($regs[1]) and !empty($regs[1])) {
+        if (isset($regs[1]) and ! empty($regs[1])) {
             $tmp = [];
             if (preg_match('/[\s]+width[\s]*=[\s]*"([^"]*)"/i', $regs[1], $tmp)) {
                 $ow = $this->pdf->getHTMLUnitToUnits($tmp[1], 1, $this->pdf->svgunit, false);
@@ -76,16 +77,14 @@ class ImageSVG extends Image
             $h = $w * $oh / $ow;
         }
 
-        return array(
+        return [
             $w,
-            $h
-        );
+            $h,
+        ];
     }
-
 
     /**
      * Renders the image in the pdf Object at the specified position
-     *
      */
     public function render()
     {
