@@ -15,10 +15,10 @@ class Helper
     public static function pdfObject1()
     {
         //create the pdf object and do some initialization
-        $pdf = new TestPdf('P', 'mm', array(
+        $pdf = new TestPdf('P', 'mm', [
             130,
-            180
-        ));
+            180,
+        ]);
 
         PdfFactory::initPdf($pdf);
 
@@ -28,9 +28,6 @@ class Helper
         return $pdf;
     }
 
-    /**
-     * @param object $pdf
-     */
     public static function setFontStyle1(object $pdf): void
     {
         $pdf->SetFont('helvetica', 'I', 7);
@@ -47,24 +44,25 @@ class Helper
             '300',
             $pdf . "[$page]",
             '-flatten',
-            $dest
+            $dest,
         ]);
 
         // print_r($process->getCommandLine());
 
-        if (!$dest) {
+        if (! $dest) {
             $dest = TestUtils::replaceExtension($pdf, 'png');
         }
 
         $dir = dirname($dest);
-        if (!is_dir($dir)) {
+        if (! is_dir($dir)) {
             mkdir($dir);
         }
 
         $process->run();
-        if (!$process->isSuccessful()) {
+        if (! $process->isSuccessful()) {
             echo $process->getErrorOutput() . PHP_EOL;
         }
+
         return $dest;
     }
 }

@@ -6,8 +6,6 @@ use EvoSys21\PdfLib\Dev\DevFactory;
 use EvoSys21\PdfLib\Tests\BaseExamplesTestCase;
 use EvoSys21\PdfLib\Tests\Utils\Helper;
 
-/**
- */
 class GenericTest extends BaseExamplesTestCase
 {
     use ProviderTrait;
