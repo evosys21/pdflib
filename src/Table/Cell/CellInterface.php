@@ -19,7 +19,6 @@ interface CellInterface
      */
     public function __construct($pdf);
 
-
     /**
      * Returns true of the cell is splittable
      */
@@ -34,15 +33,10 @@ interface CellInterface
      */
     public function split($rowHeight, $maxHeight): array;
 
-
     /**
      * Set the default values
-     *
-     * @param array $values
-     * @return self
      */
     public function setDefaultValues(array $values = []): self;
-
 
     /**
      * Process the cell content
@@ -52,12 +46,10 @@ interface CellInterface
      */
     public function processContent();
 
-
     /**
      * Set the properties of the cell
      *
      * @param array $values key=>value pair
-     * @return self
      */
     public function setProperties(array $values = []): self;
 
@@ -65,34 +57,23 @@ interface CellInterface
 
     /**
      * Returns the colspan value
-     *
-     * @return integer
      */
     public function getColSpan(): int;
 
     /**
      * Sets the colspan value
-     *
-     * @param int $value
-     * @return self
      */
     public function setColSpan(int $value): self;
 
     /**
      * Returns the rowspan value
-     *
-     * @return int
      */
     public function getRowSpan(): int;
 
     /**
      * Sets the rowspan value
-     *
-     * @param int $value
-     * @return self
      */
     public function setRowSpan(int $value): self;
-
 
     /**
      * Sets the paddings
@@ -101,7 +82,6 @@ interface CellInterface
      * @param int|float $right Right padding
      * @param int|float $bottom Bottom padding
      * @param int|float $left Left padding
-     * @return self
      */
     public function setPadding($top = 0, $right = 0, $bottom = 0, $left = 0): self;
 
@@ -109,7 +89,6 @@ interface CellInterface
      * Sets the padding bottom
      *
      * @param int|float $paddingBottom
-     * @return self
      */
     public function setPaddingBottom($paddingBottom): self;
 
@@ -124,7 +103,6 @@ interface CellInterface
      * Sets the padding left
      *
      * @param int|float $paddingLeft
-     * @return self
      */
     public function setPaddingLeft($paddingLeft): self;
 
@@ -139,7 +117,6 @@ interface CellInterface
      * Sets the padding right
      *
      * @param int|float $paddingRight
-     * @return self
      */
     public function setPaddingRight($paddingRight): self;
 
@@ -154,7 +131,6 @@ interface CellInterface
      * Sets the padding top
      *
      * @param int|float $paddingTop
-     * @return self
      */
     public function setPaddingTop($paddingTop): self;
 
@@ -169,7 +145,6 @@ interface CellInterface
      * Sets the border Size
      *
      * @param int|float $borderSize
-     * @return self
      */
     public function setBorderSize($borderSize): self;
 
@@ -185,7 +160,6 @@ interface CellInterface
      * Can be: 0, 1 or a combination of: 'LRTB'
      *
      * @param int|string $borderType
-     * @return self
      */
     public function setBorderType($borderType): self;
 
@@ -201,9 +175,6 @@ interface CellInterface
      * If the value is set to FALSE, 0 or '0' then we assume transparency
      *
      * @param int|bool|array $r
-     * @param int|null $g
-     * @param int|null $b
-     * @return self
      */
     public function setBorderColor($r, ?int $g = null, ?int $b = null): self;
 
@@ -216,16 +187,11 @@ interface CellInterface
 
     /**
      * Sets the Align Vertical
-     *
-     * @param string $alignVertical
-     * @return self
      */
     public function setAlignVertical(string $alignVertical): self;
 
     /**
      * Returns the Align Vertical
-     *
-     * @return string
      */
     public function getAlignVertical(): string;
 
@@ -234,9 +200,6 @@ interface CellInterface
      * If the value is set to FALSE, 0 or '0' then we assume transparency
      *
      * @param int|bool|array $r
-     * @param int|null $g
-     * @param int|null $b
-     * @return self
      */
     public function setBackgroundColor($r, ?int $g = null, ?int $b = null): self;
 

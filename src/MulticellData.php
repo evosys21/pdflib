@@ -9,18 +9,21 @@ class MulticellData
 {
     /**
      * Contains the line height value for a multicell
+     *
      * @var int|float
      */
     public $lineHeight;
 
     /**
      * Contains the width of the multicell
+     *
      * @var int|float
      */
     public $width;
 
     /**
      * Contains the width of the text (without the paddings)
+     *
      * @var int|float
      */
     public $textWidth;
@@ -74,8 +77,6 @@ class MulticellData
 
     /**
      * Calculates the text width
-     *
-     * @return self
      */
     public function initialize(): self
     {
@@ -94,6 +95,7 @@ class MulticellData
 
         //read width of the text
         $this->textWidth = $this->width - $this->paddingLeft - $this->paddingRight;
+
         return $this;
     }
 }

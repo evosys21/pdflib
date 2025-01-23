@@ -12,7 +12,6 @@ class EmptyCell extends CellAbstract implements CellInterface
         return false;
     }
 
-
     public function render(): void
     {
         $this->renderCellLayout();

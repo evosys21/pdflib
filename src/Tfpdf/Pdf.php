@@ -14,7 +14,6 @@ use tFPDF;
  * extended and these properties made public.
  *
  * In all subclasses we refer to Pdf class and not tFPDF.
- *
  */
 class Pdf extends tFPDF
 {
@@ -84,7 +83,7 @@ class Pdf extends tFPDF
 
     public function saveToFile($fileName)
     {
-        $this->Output("F", $fileName);
+        $this->Output('F', $fileName);
     }
 
     public function UTF8StringToArray($str)
