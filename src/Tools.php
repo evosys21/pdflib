@@ -1,4 +1,5 @@
 <?php
+
 /** @noinspection PhpComposerExtensionStubsInspection */
 /** @noinspection PhpUnused */
 
@@ -32,8 +33,6 @@ class Tools
      * String with NULL Allowed
      *
      * @param mixed $value
-     * @param bool $trim
-     * @return string|null
      */
     public static function string($value, bool $trim = true): ?string
     {
@@ -44,6 +43,7 @@ class Tools
         if ($trim) {
             $value = trim($value);
         }
+
         return $value;
     }
 
@@ -58,14 +58,13 @@ class Tools
         if (is_array($value)) {
             return $value;
         }
+
         return static::string($value);
     }
-
 
     /**
      * Get the next value from the array
      *
-     * @param array $data
      * @param null|number $index
      * @return mixed
      */
@@ -75,7 +74,7 @@ class Tools
             $index++;
         }
 
-        if (!isset($index) || ($index >= count($data))) {
+        if (! isset($index) || ($index >= count($data))) {
             $index = 0;
         }
 
@@ -86,8 +85,6 @@ class Tools
      * Returns the color array of the 3 parameters or the 1st param if the others are not specified
      *
      * @param string|int $r
-     * @param int|null $g
-     * @param int|null $b
      * @return array|string
      */
     public static function getColor($r, ?int $g = null, ?int $b = null)
@@ -104,7 +101,6 @@ class Tools
      * Otherwise a array($value) will be returned;
      *
      * @param mixed $value
-     * @return array
      */
     public static function makeArray($value): array
     {
@@ -115,12 +111,10 @@ class Tools
         return [$value];
     }
 
-
     /**
      * Returns TRUE if value is FALSE(0, '0', FALSE)
      *
      * @param mixed $value
-     * @return bool
      */
     public static function isFalse($value): bool
     {
@@ -142,6 +136,7 @@ class Tools
     public static function getCellAlign($align): string
     {
         $align = strtoupper($align);
+
         return match ($align) {
             'L', 'LEFT' => 'L',
             'R', 'RIGHT' => 'R',
@@ -152,11 +147,6 @@ class Tools
 
     /**
      * Compares 2 float values by the specified precision
-     *
-     * @param float $value1
-     * @param float $value2
-     * @param int $precision
-     * @return bool
      */
     public static function compareFloats(float $value1, float $value2, int $precision = 5): bool
     {
@@ -165,10 +155,6 @@ class Tools
 
     /**
      * Parses array1 and sets all the null values from array2 if they exist
-     *
-     * @param array $array1
-     * @param array $array2
-     * @return array
      */
     public static function mergeNonNull(array $array1, array $array2): array
     {
@@ -177,26 +163,25 @@ class Tools
                 $array1[$key] = $array2[$key];
             }
         }
+
         return $array1;
     }
 
     /**
      * Parses html attributes and returns an associative array
      * color: #0000BB; font-size: 20px
-     *
-     * @param $value
-     * @return array
      */
     public static function parseHtmlAttribute($value): array
     {
-        $values = array_map('trim', explode(";", $value));
+        $values = array_map('trim', explode(';', $value));
         $result = [];
         foreach ($values as $entry) {
-            $entries = array_map('trim', explode(":", $entry));
+            $entries = array_map('trim', explode(':', $entry));
             if (isset($entries[0]) && isset($entries[1])) {
                 $result[$entries[0]] = $entries[1];
             }
         }
+
         return $result;
     }
 
@@ -208,7 +193,8 @@ class Tools
 
         if (preg_match("#\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*#", $color, $matches)) {
             array_shift($matches); //remove first element
-            return array_map("intval", $matches);
+
+            return array_map('intval', $matches);
         }
 
         $result = self::hex2rgb($color);
@@ -216,27 +202,24 @@ class Tools
             return $result;
         }
 
-        return array_map('trim', explode(",", $color));
+        return array_map('trim', explode(',', $color));
     }
 
     /**
      * Convert a hexa decimal color code to its RGB equivalent
-     *
-     * @param $hex_color
-     * @return array|null
      */
     public static function hex2rgb($hex_color): ?array
     {
         $values = str_replace('#', '', $hex_color);
         switch (strlen($values)) {
             case 3:
-                list($r, $g, $b) = sscanf($values, "%1s%1s%1s");
+                [$r, $g, $b] = sscanf($values, '%1s%1s%1s');
                 if (ctype_xdigit($r) && ctype_xdigit($g) && ctype_xdigit($b)) {
                     return [hexdec("$r$r"), hexdec("$g$g"), hexdec("$b$b")];
                 }
                 break;
             case 6:
-                return array_map('hexdec', sscanf($values, "%2s%2s%2s"));
+                return array_map('hexdec', sscanf($values, '%2s%2s%2s'));
         }
 
         return null;
@@ -245,18 +228,18 @@ class Tools
     /**
      * Converts code highlight for the Multicell Output
      *
-     * @param $content
      * @return string|string[]
      */
     public static function convertHighlight($content)
     {
         $content = preg_replace("#<br\s?/>#", "\n", $content);
-        $content = preg_replace("#</?pre>#", "", $content);
+        $content = preg_replace('#</?pre>#', '', $content);
         $replacements = [
-            "&nbsp;" => " ",
+            '&nbsp;' => ' ',
             '<code style="color: #000000">' => '<code><span style="color: #000000">' . "\n",
             '</span></code>' => "</span>\n</span>\n</code>",
         ];
+
         return str_replace(array_keys($replacements), array_values($replacements), $content);
     }
 }

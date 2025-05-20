@@ -15,10 +15,8 @@ class PdfFactory
     /**
      * Creates a new PDF Object and Initializes it
      *
-     * @param string $type
      * @param bool $header Show the header
      * @param bool $footer Show the footer
-     * @return MyPdf
      */
     public static function newPdf(string $type, bool $header = true, bool $footer = true): MyPdf
     {
@@ -43,9 +41,6 @@ class PdfFactory
      * Initializes the pdf object.
      * Set the margins, adds a page, adds default fonts etc...
      *
-     * @param Pdf $pdf
-     * @param bool $header
-     * @param bool $footer
      * @return Pdf $pdf
      */
     public static function initPdf(Pdf $pdf, bool $header = true, bool $footer = true): Pdf

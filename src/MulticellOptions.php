@@ -20,19 +20,22 @@ class MulticellOptions
 
     /**
      * The maximum number of lines allowed
+     *
      * @var int
      */
     public $maxLines = 0;
 
     /**
      * The maximum height allowed
+     *
      * @var int
      */
     public $maxHeight = 0;
 
     /**
      * Shrink text to fit
-     * @var boolean
+     *
+     * @var bool
      */
     public $shrinkToFit = false;
 
@@ -53,18 +56,11 @@ class MulticellOptions
 
     /**
      * Contains the line height value for a multicell
-     * @var int|float
      */
     public int|float $lineHeight;
 
-    /**
-     * @var object
-     */
     public object $pdf;
 
-    /**
-     * @var object
-     */
     public object $pdfi;
 
     public function __construct($pdfi)
@@ -85,56 +81,51 @@ class MulticellOptions
         if ($maxHeight > 0 && $height > $maxHeight) {
             return true;
         }
+
         return false;
     }
 
-
     /**
      * Save the TagStyles to a backup variable
-     * @return self
      */
     public function saveStyles(): self
     {
         $this->stylesBackup = $this->styles;
+
         return $this;
     }
 
     /**
      * Restore the used TagStyles from backup
-     *
-     * @return self
      */
     public function restoreStyles(): self
     {
         if ($this->stylesBackup) {
             $this->styles = $this->stylesBackup;
         }
+
         return $this;
     }
 
     /**
      * Shrink all font-sizes by the specified step
-     *
-     * @return self
      */
     public function shrinkStyleFonts(): self
     {
         foreach ($this->styles as &$style) {
-            if (!isset($style['size'])) {
+            if (! isset($style['size'])) {
                 continue;
             }
             $style['size'] = $this->shrinkValue($style['size'], $this->shrinkFontStep);
         }
         unset($style);
+
         return $this;
     }
 
     /**
      * Shrinks a value by the specified step, but not lower than the $minValue into account
      *
-     * @param $value
-     * @param $step
-     * @param int $minValue
      * @return int|mixed
      */
     public function shrinkValue($value, $step, int $minValue = 1)
@@ -143,13 +134,12 @@ class MulticellOptions
         if ($value < $minValue) {
             return $minValue;
         }
+
         return $value;
     }
 
     /**
      * Save the current pdf settings as "current" style
-     *
-     * @return self
      */
     public function saveCurrentStyle(): self
     {
@@ -159,6 +149,7 @@ class MulticellOptions
         $this->styles[$current]['style'] = $this->pdfi->getFontStyle();
         $this->styles[$current]['size'] = $this->pdfi->getFontSizePt();
         $this->styles[$current]['color'] = PdfInterface::RAW . $this->pdf->TextColor;
+
         return $this;
     }
 
@@ -170,6 +161,7 @@ class MulticellOptions
         $this->shrinkLineHeightStep = 0.5;
         $this->shrinkToFit = false;
         $this->applyAll = false;
+
         return $this;
     }
 }

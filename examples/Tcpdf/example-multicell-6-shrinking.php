@@ -3,12 +3,11 @@
 /**
  * Pdf Advanced Multicell - Example
  */
-
 require_once __DIR__ . '/autoload.php';
 
-use EvoSys21\PdfLib\Multicell;
 use EvoSys21\PdfLib\Examples\Tcpdf\PdfFactory;
 use EvoSys21\PdfLib\Examples\Tcpdf\PdfSettings;
+use EvoSys21\PdfLib\Multicell;
 
 //get the PDF object
 $pdf = PdfFactory::newPdf('multicell');
@@ -20,10 +19,10 @@ $multicell = new Multicell($pdf);
 PdfSettings::setMulticellStyles($multicell);
 
 $pdf->Ln(5); //line break
-$multicell->multiCell(120, 5, "<h1>Multicell text shrinking feature</h1>");
+$multicell->multiCell(120, 5, '<h1>Multicell text shrinking feature</h1>');
 $pdf->Ln(10); //line break
 
-$txt = <<<EOL
+$txt = <<<'EOL'
 This <b>TCPDF addon</b> allows creation of an <b>Advanced Multicell</b> which uses as input a <b>TAG based formatted string</b> instead of a simple string. The use of tags allows to change the font, the style (<b>bold</b>, <i>italic</i>, <u>underline</u>), the size, and the color of characters and many other features.
 
 <h3>Features:</h3>
@@ -52,7 +51,7 @@ foreach (range(50, 10, 10) as $height) {
 
 $pdf->AddPage();
 
-$txt = <<<EOL
+$txt = <<<'EOL'
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 EOL;
 

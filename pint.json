@@ -1,0 +1,20 @@
+{
+  "preset": "laravel",
+  "rules": {
+    "php_unit_method_casing": false,
+    "concat_space": {
+      "spacing": "one"
+    },
+    "binary_operator_spaces": {
+      "default": "single_space"
+    },
+    "phpdoc_align": {
+      "align": "left"
+    },
+      "class_attributes_separation": {
+        "elements": {
+          "method": "one"
+        }
+      }
+  }
+}

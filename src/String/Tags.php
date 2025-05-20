@@ -25,10 +25,9 @@ class Tags
     /**
      * The maximum number of chars for a tag
      *
-     * @var integer
+     * @var int
      */
     protected $maxLength;
-
 
     /**
      * Constructor
@@ -42,13 +41,11 @@ class Tags
         $this->maxLength = $maxLength;
     }
 
-
     /**
      * Returns TRUE if the specified tag name is an "<open tag>", (it is not already opened)
      *
      * @param string $tag - tag name
      * @param array $data - tag arrays
-     * @return boolean
      */
     protected function isOpenTag(string $tag, array $data): bool
     {
@@ -56,7 +53,7 @@ class Tags
         $hRef = &$this->hRef;
         $maxElem = &$this->maxLength;
 
-        if (!preg_match("/^<([a-zA-Z\d]{1,$maxElem}) *(.*)>$/i", $tag, $reg)) {
+        if (! preg_match("/^<([a-zA-Z\d]{1,$maxElem}) *(.*)>$/i", $tag, $reg)) {
             return false;
         }
 
@@ -81,12 +78,10 @@ class Tags
         return false;
     }
 
-
     /**
      * Returns true if $tag is a "<close tag>"
      *
      * @param string $tag tag name
-     * @return boolean
      */
     protected function isCloseTag(string $tag): bool
     {
@@ -94,7 +89,7 @@ class Tags
         $hRef = &$this->hRef;
         $maxElem = $this->maxLength;
 
-        if (!preg_match("/^<\/([a-zA-Z\d]{1,$maxElem})>$/i", $tag, $reg)) {
+        if (! preg_match("/^<\/([a-zA-Z\d]{1,$maxElem})>$/i", $tag, $reg)) {
             return false;
         }
 
@@ -110,12 +105,8 @@ class Tags
         return false;
     }
 
-
     /**
      * Expands the parameters that are kept in Href field
-     *
-     * @param array $data
-     * @return array
      */
     protected function expandParams(array $data): array
     {
@@ -130,7 +121,6 @@ class Tags
 
         return $data;
     }
-
 
     /**
      * Optimizes the result of the tag result array In the result array there can be strings that are consecutive and have the same tag, they are concatenated.
@@ -166,7 +156,6 @@ class Tags
 
         return $res_result;
     }
-
 
     /**
      * Parses a string and returns an array of TAG - STRING correspondent array

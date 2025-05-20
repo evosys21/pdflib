@@ -14,7 +14,6 @@ use FPDF;
  * extended and these properties made public.
  *
  * In all subclasses we refer to Pdf class and not FPDF.
- *
  */
 class Pdf extends FPDF
 {
@@ -82,7 +81,7 @@ class Pdf extends FPDF
 
     public function saveToFile($fileName)
     {
-        $this->Output("F", $fileName);
+        $this->Output('F', $fileName);
     }
 
     public function getRTL(): bool

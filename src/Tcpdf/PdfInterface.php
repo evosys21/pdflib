@@ -15,7 +15,6 @@ use TCPDF_FONTS;
 
 /**
  * Pdf Class Interface
- *
  */
 class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
 {
@@ -31,7 +30,6 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
     protected $backupDrawColor;
     public $textColor;
 
-
     public function __construct($pdf)
     {
         $this->pdf = $pdf;
@@ -39,23 +37,19 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
 
     /**
      * Returns the PDF object of the Interface
-     *
-     * @return Pdf
      */
     public function getPdfObject(): Pdf
     {
         return $this->pdf;
     }
 
-
     /**
      * Returns the page width
      */
     public function getPageWidth(): int
     {
-        return (int)$this->pdf->w - $this->pdf->rMargin - $this->pdf->lMargin;
+        return (int) $this->pdf->w - $this->pdf->rMargin - $this->pdf->lMargin;
     }
-
 
     /**
      * Returns the current X position
@@ -66,7 +60,6 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
     {
         return $this->pdf->GetX();
     }
-
 
     /**
      * Returns the remaining width to the end of the current line
@@ -84,7 +77,6 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
         return $n;
     }
 
-
     /**
      * Returns the character width for the specified input parameters
      *
@@ -96,11 +88,10 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
      */
     public function getCharStringWidth($tag, $char, $fontFamily, $fontStyle, $fontsize)
     {
-        return $this->pdf->GetArrStringWidth(array(
-            $char
-        ), $fontFamily, $fontStyle, $fontsize);
+        return $this->pdf->GetArrStringWidth([
+            $char,
+        ], $fontFamily, $fontStyle, $fontsize);
     }
-
 
     /**
      * Split string into array of equivalent codes and return the result array
@@ -113,7 +104,6 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
         return TCPDF_FONTS::UTF8StringToArray($str, $this->pdf->isunicode, $this->pdf->CurrentFont);
     }
 
-
     /**
      * Returns the active font family
      *
@@ -123,7 +113,6 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
     {
         return $this->pdf->FontFamily;
     }
-
 
     /**
      * Returns the active font style
@@ -135,7 +124,6 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
         return $this->pdf->FontStyle;
     }
 
-
     /**
      * Returns the active font size in PT
      *
@@ -145,7 +133,6 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
     {
         return $this->pdf->FontSizePt;
     }
-
 
     /**
      * Adds an image to the pdf document
@@ -162,7 +149,6 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
     {
         $this->pdf->Image($file, $x, $y, $w, $h, $type, $link);
     }
-
 
     /**
      * Returns the image width and height in PDF values!
@@ -205,15 +191,15 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
             $h = $w * $info['h'] / $info['w'];
         }
 
-        return array(
+        return [
             $w,
-            $h
-        );
+            $h,
+        ];
     }
 
     /**
      * Wrapper for the cell function
-     * @param $w
+     *
      * @param int $h
      * @param string $txt
      * @param int $border
@@ -229,8 +215,6 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
 
     /**
      * Returns true if unicode charset is being used
-     *
-     * @return bool
      */
     public function isUnicode(): bool
     {
@@ -240,7 +224,6 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
     /**
      * Sets the PDF TextColor
      *
-     * @param $color
      * @return $this
      */
     public function setTextColor($color): self
@@ -250,17 +233,18 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
         if (is_string($color) && str_starts_with($color, self::RAW)) {
             $this->pdf->TextColor = substr($color, strlen(self::RAW));
             $this->pdf->ColorFlag = ($this->pdf->FillColor != $this->pdf->TextColor);
+
             return $this;
         }
         $colorData = Tools::parseColor($color);
         call_user_func_array([$this->pdf, 'SetTextColor'], $colorData);
+
         return $this;
     }
 
     /**
      * Sets the PDF DrawColor
      *
-     * @param $color
      * @return $this
      */
     public function setDrawColor($color): self
@@ -268,15 +252,18 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
         $this->backupDrawColor = $this->pdf->DrawColor;
         if (is_string($color) && str_starts_with($color, self::RAW)) {
             $this->pdf->DrawColor = substr($color, strlen(self::RAW));
+
             return $this;
         }
         $colorData = Tools::parseColor($color);
         call_user_func_array([$this->pdf, 'SetDrawColor'], $colorData);
+
         return $this;
     }
 
     /**
      * Restores the DrawColor from the backup
+     *
      * @return $this
      */
     public function restoreDrawColor(): self
@@ -284,6 +271,7 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
         if ($this->backupDrawColor) {
             $this->pdf->DrawColor = $this->backupDrawColor;
         }
+
         return $this;
     }
 
@@ -303,10 +291,7 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
     /**
      * Returns the Available Width to draw the Text.
      *
-     * @param string $str
-     * @param int $start
      * @param int|float|null $length
-     * @return string
      */
     public function substr(string $str, int $start, $length = null): string
     {
@@ -316,7 +301,6 @@ class PdfInterface extends AbstractPdfUtils implements PdfInterfaceDef
             return mb_substr($str, $start, $length);
         }
     }
-
 
     public function strlen(string $s): int
     {

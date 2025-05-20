@@ -9,8 +9,7 @@ $factory = new DevFactory();
 $multicell = $factory->multicell();
 $pdf = $multicell->getPdfObject();
 
-
-$txt = <<<EOL
+$txt = <<<'EOL'
 This <b>TCPDF addon</b> allows creation of an <b>Advanced Multicell</b> which uses as input a <b>TAG based formatted string</b> instead of a simple string. The use of tags allows to change the font, the style (<b>bold</b>, <i>italic</i>, <u>underline</u>), the size, and the color of characters and many other features.
 
 <h3>Features:</h3>

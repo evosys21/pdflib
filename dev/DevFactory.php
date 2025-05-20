@@ -2,14 +2,14 @@
 
 namespace EvoSys21\PdfLib\Dev;
 
-use EvoSys21\PdfLib\Multicell;
-use EvoSys21\PdfLib\Table;
 use EvoSys21\PdfLib\Examples\Fpdf\PdfFactory as FpdfFactory;
 use EvoSys21\PdfLib\Examples\Fpdf\PdfSettings as FpdfSettings;
 use EvoSys21\PdfLib\Examples\Tcpdf\PdfFactory as TcpdfFactory;
 use EvoSys21\PdfLib\Examples\Tcpdf\PdfSettings as TcpdfSettings;
 use EvoSys21\PdfLib\Examples\Tfpdf\PdfFactory as TfpdfFactory;
 use EvoSys21\PdfLib\Examples\Tfpdf\PdfSettings as TfpdfSettings;
+use EvoSys21\PdfLib\Multicell;
+use EvoSys21\PdfLib\Table;
 
 class DevFactory
 {
@@ -24,6 +24,7 @@ class DevFactory
     protected function getGlobalContext()
     {
         global $pdfContext;
+
         return empty($pdfContext) ? 'fpdf' : $pdfContext;
     }
 
@@ -47,7 +48,6 @@ class DevFactory
 
     public function multicell(): Multicell
     {
-
         $factory = self::getFactory();
         $settings = self::getSettings();
 

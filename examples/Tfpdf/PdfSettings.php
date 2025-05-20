@@ -7,7 +7,7 @@ namespace EvoSys21\PdfLib\Examples\Tfpdf;
 use EvoSys21\PdfLib\Multicell;
 use EvoSys21\PdfLib\Table;
 
-if (!defined('__DIR__')) {
+if (! defined('__DIR__')) {
     define('__DIR__', __DIR__ . '/../../..');
 }
 
@@ -20,9 +20,8 @@ class PdfSettings
         [86, 155, 225],
         [207, 247, 239],
         [246, 211, 207],
-        [216, 243, 228]
+        [216, 243, 228],
     ];
-
 
     //top, right, bottom, left
     public static $paddings = [
@@ -43,28 +42,26 @@ class PdfSettings
         [5, 5, 5, 0],
         [0, 5, 5, 5],
         [5, 0, 5, 5],
-        [5, 5, 0, 5]
+        [5, 5, 0, 5],
     ];
-
 
     public static $alignments = ['TL', 'TC', 'TR', 'ML', 'MC', 'MR', 'BL', 'BC', 'BR'];
 
-
-    public static $textShort = "Hello world!";
-    public static $text = "Lorem ipsum dolor sit amet...";
+    public static $textShort = 'Hello world!';
+    public static $text = 'Lorem ipsum dolor sit amet...';
     public static $text2 = "<p>Simple text\n<b>Bold text</b></p>";
-    public static $textLong = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>";
-    public static $textExtraLong = "<p><s1><b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</s1><s2> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</s2></p>";
+    public static $textLong = '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>';
+    public static $textExtraLong = '<p><s1><b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</s1><s2> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</s2></p>';
     public static $textSubSuperscript = "<ss ypos='-0.8'>Subscript</ss> or <ss ypos='1.1'>Superscript</ss>";
 
     public static $columns = 5;
 
     //prepare some default row settings
-    public static array $imageCell = array(
+    public static array $imageCell = [
         'TYPE' => 'IMAGE',
         'FILE' => CONTENT_PATH . '/images/dice.jpg',
-        'WIDTH' => 10
-    );
+        'WIDTH' => 10,
+    ];
 
     public static function headerRow(): array
     {
@@ -72,6 +69,7 @@ class PdfSettings
         for ($i = 0; $i < static::$columns; $i++) {
             $headerRow[$i]['TEXT'] = "Header #$i";
         }
+
         return $headerRow;
     }
 
@@ -79,11 +77,11 @@ class PdfSettings
     {
         $dataRow = [];
         for ($i = 0; $i < static::$columns; $i++) {
-            $dataRow[$i]['TEXT'] = "Cool <b>cell</b>";
+            $dataRow[$i]['TEXT'] = 'Cool <b>cell</b>';
         }
+
         return $dataRow;
     }
-
 
     /**
      * Set the styles for the advanced multicell
@@ -115,11 +113,8 @@ class PdfSettings
         $multicell->setStyle('u8b', null, 'B', null, null, 'u8');
     }
 
-
     /**
      * Set the styles for the advanced table
-     *
-     * @param Table $table
      */
     public static function setTableStyles(Table $table)
     {
